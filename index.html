@@ -249,7 +249,6 @@ button{font-family:inherit}
 .modes button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 @media(max-width:760px){.brand .sub{display:none}.modes{margin-left:8px}.modes button{padding:7px 9px;font-size:12.5px}.btn-load .lbl-txt{display:none}}
 body.modo-anal .search,body.modo-anal .rail-list{display:none}
-body.modo-anal .rail{height:auto}
 /* Análisis */
 .an-grid{display:grid;grid-template-columns:1fr;gap:18px}
 @media(min-width:1180px){.an-grid.two{grid-template-columns:1fr 1fr}}
@@ -715,7 +714,7 @@ function renderAnal(){
   h+=`<div class="metrics">
     <div class="metric"><div class="k">Votos a partidos ${an}</div><div class="v num">${fmt(m23.validos)}</div>${dv(m19.validos,m23.validos)}</div>
     <div class="metric"><div class="k">Voto en blanco</div><div class="v num">${pct(m23.blanco)}</div>${dp(m19.blanco,m23.blanco)}</div>
-    <div class="metric"><div class="k">Fragmentación</div><div class="v num">${num1(m23.nep)}<small>partidos</small></div><div class="d flat">${ap}: ${num1(m19.nep)} efectivos</div></div>
+    <div class="metric"><div class="k">Fragmentación${u<0&&A.ambito!=="territorio"?" promedio":""}</div><div class="v num">${num1(m23.nep)}<small>partidos</small></div><div class="d flat">${ap}: ${num1(m19.nep)}${u<0&&A.ambito!=="territorio"?" · por "+uW:" efectivos"}</div></div>
     ${ex?`<div class="metric"><div class="k">Ganador ${an}</div><div class="v" style="font-size:15px;line-height:1.25">${esc(cap(gan))}</div>${gan19?`<div class="d flat">En ${ap}: ${esc(cap(gan19))}</div>`:""}</div>`
        :`<div class="metric"><div class="k">Voto solo por el logo</div><div class="v num">${pct(m23.logo)}</div>${dp(m19.logo,m23.logo)}</div>`}
   </div>`;
