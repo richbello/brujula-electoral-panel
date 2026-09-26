@@ -1,0 +1,28 @@
+{
+  "titulo": "Impacto del Gobierno Petro 2023→2026",
+  "fecha": "2026-09-26",
+  "resumen": "Análisis de cambio electoral en Bogotá y Cundinamarca durante gobierno Petro",
+  "bogota": {
+    "2023_concejo": {
+      "izquierda_pct": 1.2,
+      "derecha_pct": 9.8,
+      "centro_pct": 37.8
+    },
+    "2026_congreso": {
+      "izquierda_pct": 42.3,
+      "derecha_pct": 7.0,
+      "centro_pct": 20.6
+    },
+    "delta": {
+      "izquierda_cambio": 41.1,
+      "derecha_cambio": -2.8,
+      "centro_cambio": -17.2
+    }
+  },
+  "cundinamarca_2026": {
+    "izquierda_pct": 15.3,
+    "derecha_pct": 27.6,
+    "centro_pct": 23.4
+  },
+  "interpretacion": "Petro multiplicó por 40x el voto de izquierda en Bogotá (1-2% → 42%). Cambio masivo pero atomizado en múltiples partidos. Centro perdió 17pp. Fenómeno urbano: Bogotá 42% vs Cundinamarca 15%."
+}
