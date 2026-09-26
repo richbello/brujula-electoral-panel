@@ -1,0 +1,14 @@
+{
+  "fecha": "2026-09-26",
+  "archivos": [
+    "desagregacion_localidad.json",
+    "volatilidad_electoral.json",
+    "prediccion_2027.json"
+  ],
+  "url_github": "https://richbello.github.io/brujula-electoral-panel/",
+  "datos_disponibles": {
+    "desagregacion": "21 localidades",
+    "volatilidad": "4 ideologías",
+    "prediccion": "30 candidatos top"
+  }
+}

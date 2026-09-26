@@ -1,0 +1,44 @@
+{
+  "titulo": "Volatilidad Electoral 2023→2026",
+  "descripcion": "Cambio de voto por ideología + factores de volatilidad aplicables a 2027",
+  "datos": [
+    {
+      "ideologia": "IZQUIERDA",
+      "votos_2023": 103036,
+      "votos_2026": 660785,
+      "delta": 557749,
+      "cambio_pct": 541.3,
+      "factor": 6.413
+    },
+    {
+      "ideologia": "DERECHA",
+      "votos_2023": 847900,
+      "votos_2026": 474831,
+      "delta": -373069,
+      "cambio_pct": -44.0,
+      "factor": 0.56
+    },
+    {
+      "ideologia": "CENTRO",
+      "votos_2023": 3341573,
+      "votos_2026": 554987,
+      "delta": -2786586,
+      "cambio_pct": -83.4,
+      "factor": 0.166
+    },
+    {
+      "ideologia": "OTRO",
+      "votos_2023": 4444396,
+      "votos_2026": 804487,
+      "delta": -3639909,
+      "cambio_pct": -81.9,
+      "factor": 0.181
+    }
+  ],
+  "factores_2027": {
+    "IZQUIERDA": 6.4131468612911995,
+    "DERECHA": 0.5600082556905296,
+    "CENTRO": 0.1660855531212396,
+    "OTRO": 0.1810115480258735
+  }
+}

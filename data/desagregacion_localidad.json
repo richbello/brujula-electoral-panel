@@ -1,0 +1,174 @@
+{
+  "titulo": "Impacto Petro 2023→2026 por Localidad",
+  "descripcion": "Cambio de votos hacia la izquierda en Bogotá, municipio a municipio",
+  "localidades": [
+    {
+      "localidad": "LOCALIDAD 1 USAQUEN",
+      "%IZQ_2023": 1.0,
+      "%IZQ_2026": 48.2,
+      "DELTA": 47.2,
+      "VOTOS_2023": 719890,
+      "VOTOS_2026": 283405.0
+    },
+    {
+      "localidad": "LOCALIDAD 6 TUNJUELITO",
+      "%IZQ_2023": 0.8,
+      "%IZQ_2026": 46.7,
+      "DELTA": 45.900000000000006,
+      "VOTOS_2023": 236289,
+      "VOTOS_2026": 15925.0
+    },
+    {
+      "localidad": "LOCALIDAD 5 USME",
+      "%IZQ_2023": 0.8,
+      "%IZQ_2026": 45.6,
+      "DELTA": 44.800000000000004,
+      "VOTOS_2023": 349390,
+      "VOTOS_2026": 18322.0
+    },
+    {
+      "localidad": "LOCALIDAD 4 SAN CRISTOBAL",
+      "%IZQ_2023": 0.7,
+      "%IZQ_2026": 42.1,
+      "DELTA": 41.4,
+      "VOTOS_2023": 412098,
+      "VOTOS_2026": 11818.0
+    },
+    {
+      "localidad": "LOCALIDAD 7 BOSA",
+      "%IZQ_2023": 1.0,
+      "%IZQ_2026": 37.0,
+      "DELTA": 36.0,
+      "VOTOS_2023": 678391,
+      "VOTOS_2026": 28726.0
+    },
+    {
+      "localidad": "LOCALIDAD 19 CIUDAD BOLIVAR",
+      "%IZQ_2023": 0.9,
+      "%IZQ_2026": 36.3,
+      "DELTA": 35.4,
+      "VOTOS_2023": 595841,
+      "VOTOS_2026": 23547.0
+    },
+    {
+      "localidad": "LOCALIDAD 13 TEUSAQUILLO",
+      "%IZQ_2023": 2.0,
+      "%IZQ_2026": 35.1,
+      "DELTA": 33.1,
+      "VOTOS_2023": 272067,
+      "VOTOS_2026": 21343.0
+    },
+    {
+      "localidad": "LOCALIDAD 10 ENGATIVA",
+      "%IZQ_2023": 1.1,
+      "%IZQ_2026": 30.9,
+      "DELTA": 29.799999999999997,
+      "VOTOS_2023": 999456,
+      "VOTOS_2026": 14834.0
+    },
+    {
+      "localidad": "LOCALIDAD 16 PUENTE ARANDA",
+      "%IZQ_2023": 1.9,
+      "%IZQ_2026": 19.3,
+      "DELTA": 17.400000000000002,
+      "VOTOS_2023": 354111,
+      "VOTOS_2026": 26329.0
+    },
+    {
+      "localidad": "LOCALIDAD  8 KENNEDY",
+      "%IZQ_2023": 1.0,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 1108457,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 11 SUBA",
+      "%IZQ_2023": 1.2,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 1315026,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 12 BARRIOS UNIDOS",
+      "%IZQ_2023": 1.4,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 246712,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 14 MARTIRES",
+      "%IZQ_2023": 1.3,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 115716,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 15 ANTONIO NARIÑO",
+      "%IZQ_2023": 1.0,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 162872,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 17 CANDELARIA",
+      "%IZQ_2023": 1.4,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 66759,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 18 RAFAEL URIBE URIB",
+      "%IZQ_2023": 0.9,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 390020,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 2 CHAPINERO",
+      "%IZQ_2023": 1.5,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 248580,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 20 SUMAPAZ",
+      "%IZQ_2023": 0.2,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 10463,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 3 SANTA FE",
+      "%IZQ_2023": 1.5,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 125418,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "LOCALIDAD 9 FONTIBON",
+      "%IZQ_2023": 1.8,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 491171,
+      "VOTOS_2026": NaN
+    },
+    {
+      "localidad": "NACIONAL",
+      "%IZQ_2023": 1.0,
+      "%IZQ_2026": NaN,
+      "DELTA": NaN,
+      "VOTOS_2023": 54617,
+      "VOTOS_2026": NaN
+    }
+  ]
+}

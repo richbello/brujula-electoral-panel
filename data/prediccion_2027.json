@@ -1,0 +1,247 @@
+{
+  "titulo": "Predicción 2027 (Top 30 candidatos)",
+  "descripcion": "Proyección aplicando factores de volatilidad 2026 a candidatos 2023",
+  "candidatos": [
+    {
+      "candidato": "FELIPE ANDRES JIMENEZ CLAVIJO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 551,
+      "votos_2027_proyectado": 3534,
+      "delta": 2983
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 13070,
+      "votos_2027_proyectado": 2171,
+      "delta": -10899
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 12560,
+      "votos_2027_proyectado": 2086,
+      "delta": -10474
+    },
+    {
+      "candidato": "FREDDY VILLAQUIRAN LOSADA",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 293,
+      "votos_2027_proyectado": 1879,
+      "delta": 1586
+    },
+    {
+      "candidato": "JORGE ENRIQUE ROBLEDO CASTILLO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 286,
+      "votos_2027_proyectado": 1834,
+      "delta": 1548
+    },
+    {
+      "candidato": "PARTIDO CENTRO DEMOCRÁTICO",
+      "partido": "PARTIDO CENTRO DEMOCRÁTICO",
+      "ideologia": "DERECHA",
+      "votos": 3109,
+      "votos_2027_proyectado": 1741,
+      "delta": -1368
+    },
+    {
+      "candidato": "FELIPE ANDRES JIMENEZ CLAVIJO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 239,
+      "votos_2027_proyectado": 1533,
+      "delta": 1294
+    },
+    {
+      "candidato": "JORGE HUMBERTO VARGAS ROJAS",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 214,
+      "votos_2027_proyectado": 1372,
+      "delta": 1158
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 8100,
+      "votos_2027_proyectado": 1345,
+      "delta": -6755
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 8003,
+      "votos_2027_proyectado": 1329,
+      "delta": -6674
+    },
+    {
+      "candidato": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 205,
+      "votos_2027_proyectado": 1315,
+      "delta": 1110
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 7387,
+      "votos_2027_proyectado": 1227,
+      "delta": -6160
+    },
+    {
+      "candidato": "FELIPE ANDRES JIMENEZ CLAVIJO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 188,
+      "votos_2027_proyectado": 1206,
+      "delta": 1018
+    },
+    {
+      "candidato": "FELIPE ANDRES JIMENEZ CLAVIJO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 187,
+      "votos_2027_proyectado": 1199,
+      "delta": 1012
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 7137,
+      "votos_2027_proyectado": 1185,
+      "delta": -5952
+    },
+    {
+      "candidato": "JORGE ENRIQUE ROBLEDO CASTILLO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 177,
+      "votos_2027_proyectado": 1135,
+      "delta": 958
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6755,
+      "votos_2027_proyectado": 1122,
+      "delta": -5633
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6676,
+      "votos_2027_proyectado": 1109,
+      "delta": -5567
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6658,
+      "votos_2027_proyectado": 1106,
+      "delta": -5552
+    },
+    {
+      "candidato": "FELIPE ANDRES JIMENEZ CLAVIJO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 171,
+      "votos_2027_proyectado": 1097,
+      "delta": 926
+    },
+    {
+      "candidato": "JORGE ENRIQUE ROBLEDO CASTILLO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 170,
+      "votos_2027_proyectado": 1090,
+      "delta": 920
+    },
+    {
+      "candidato": "JORGE ENRIQUE ROBLEDO CASTILLO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 168,
+      "votos_2027_proyectado": 1077,
+      "delta": 909
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6418,
+      "votos_2027_proyectado": 1066,
+      "delta": -5352
+    },
+    {
+      "candidato": "FELIPE ANDRES JIMENEZ CLAVIJO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 166,
+      "votos_2027_proyectado": 1065,
+      "delta": 899
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6386,
+      "votos_2027_proyectado": 1061,
+      "delta": -5325
+    },
+    {
+      "candidato": "LUIS HERNANDO PARRA NOPE",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 165,
+      "votos_2027_proyectado": 1058,
+      "delta": 893
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6254,
+      "votos_2027_proyectado": 1039,
+      "delta": -5215
+    },
+    {
+      "candidato": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "partido": "PARTIDO POLÍTICO DIGNIDAD & COMPROMISO",
+      "ideologia": "IZQUIERDA",
+      "votos": 162,
+      "votos_2027_proyectado": 1039,
+      "delta": 877
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6160,
+      "votos_2027_proyectado": 1023,
+      "delta": -5137
+    },
+    {
+      "candidato": "CARLOS FERNANDO GALAN PACHON",
+      "partido": "PARTIDO NUEVO LIBERALISMO",
+      "ideologia": "CENTRO",
+      "votos": 6160,
+      "votos_2027_proyectado": 1023,
+      "delta": -5137
+    }
+  ],
+  "nota": "BETA: Requiere candidatos oficiales 2027 de Registraduría para refinamiento"
+}
