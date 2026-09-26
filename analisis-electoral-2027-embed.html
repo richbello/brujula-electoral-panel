@@ -5,129 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Electoral 2027 — Análisis Desagregado</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+        :root {
+            --ink: #132033;
+            --ink-2: #1d2f47;
+            --ink-3: #2a4460;
+            --paper: #eef1f5;
+            --surface: #ffffff;
+            --line: #dde3ec;
+            --brass: #bd8a34;
+            --brass-soft: #f6ecd8;
+            --scale-3: #4a72a8;
+            --text: #233145;
+            --muted: #6a7688;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--paper);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: var(--surface);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(19, 32, 51, 0.1);
             overflow: hidden;
         }
+
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 40px;
+            background: linear-gradient(135deg, var(--ink) 0%, var(--ink-2) 100%);
+            color: var(--surface);
+            padding: 50px 40px;
             text-align: center;
         }
-        .header h1 { font-size: 2.5em; margin-bottom: 10px; font-weight: 800; }
-        .header p { font-size: 1.1em; opacity: 0.95; }
+
+        .header h1 { 
+            font-family: 'Archivo', sans-serif;
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .header p { 
+            font-size: 0.95em;
+            opacity: 0.85;
+            color: var(--paper);
+        }
+
         .tabs {
             display: flex;
-            background: #f5f5f5;
-            border-bottom: 3px solid #ddd;
+            background: var(--paper);
+            border-bottom: 2px solid var(--line);
         }
+
         .tab-button {
             flex: 1;
-            padding: 18px 20px;
+            padding: 16px 20px;
             border: none;
-            background: #f5f5f5;
+            background: var(--paper);
             cursor: pointer;
-            font-size: 15px;
+            font-family: 'Archivo', sans-serif;
+            font-size: 14px;
             font-weight: 600;
-            color: #666;
+            color: var(--muted);
             border-bottom: 4px solid transparent;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
         }
-        .tab-button:hover { background: #e0e0e0; }
+
+        .tab-button:hover { 
+            background: var(--line);
+            color: var(--text);
+        }
+
         .tab-button.active {
-            background: white;
-            color: #667eea;
-            border-bottom-color: #667eea;
+            background: var(--surface);
+            color: var(--brass);
+            border-bottom-color: var(--brass);
         }
+
         .content {
-            padding: 50px;
+            padding: 40px;
+            background: var(--surface);
         }
+
         .tab-content {
             display: none;
         }
+
         .tab-content.active {
             display: block;
             animation: fadeIn 0.3s ease;
         }
+
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
         h2 { 
-            font-size: 1.8em;
-            color: #333;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 15px;
+            font-family: 'Archivo', sans-serif;
+            font-size: 1.6em;
+            color: var(--ink);
+            margin-bottom: 12px;
+            font-weight: 700;
         }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
         .chart-container {
             position: relative;
-            height: 450px;
-            margin-bottom: 50px;
-            background: #fafafa;
+            height: 400px;
+            margin-bottom: 40px;
+            background: var(--brass-soft);
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 6px;
+            border-left: 4px solid var(--brass);
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 30px;
-            font-size: 14px;
+            font-size: 13px;
         }
+
         th {
-            background: #667eea;
-            color: white;
-            padding: 16px;
-            text-align: left;
-            font-weight: 600;
-        }
-        td {
+            background: var(--ink-2);
+            color: var(--surface);
             padding: 14px 16px;
-            border-bottom: 1px solid #ddd;
+            text-align: left;
+            font-family: 'Archivo', sans-serif;
+            font-weight: 600;
+            border-bottom: 2px solid var(--brass);
         }
-        tr:hover { background: #f9f9f9; }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        tr:hover { background: var(--brass-soft); }
+
         .delta-positive { color: #27ae60; font-weight: 700; }
-        .delta-negative { color: #e74c3c; font-weight: 700; }
-        .localidad { font-weight: 600; color: #333; }
+        .localidad { font-weight: 600; color: var(--ink); }
+
         footer {
-            background: #f5f5f5;
-            padding: 20px 50px;
-            font-size: 12px;
-            color: #999;
-            border-top: 1px solid #ddd;
+            background: var(--paper);
+            padding: 20px 40px;
+            font-size: 11px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
         }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--brass);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .back-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 Brújula Electoral 2027</h1>
-            <p>Análisis de desagregación, volatilidad y predicción de candidatos (Bogotá, Congreso 2026)</p>
+            <h1>📊 Brújula Electoral 2027 — Análisis</h1>
+            <p>Desagregación, volatilidad y proyección de candidatos (Bogotá, Congreso 2026)</p>
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab(0)">📍 Desagregación por Localidad</button>
-            <button class="tab-button" onclick="switchTab(1)">⚡ Volatilidad Electoral</button>
+            <button class="tab-button active" onclick="switchTab(0)">📍 Desagregación</button>
+            <button class="tab-button" onclick="switchTab(1)">⚡ Volatilidad</button>
             <button class="tab-button" onclick="switchTab(2)">🔮 Predicción 2027</button>
         </div>
 
         <div class="content">
+            <a href="./" class="back-link">← Volver al panel</a>
+
             <!-- TAB 1: DESAGREGACIÓN -->
             <div id="tab-0" class="tab-content active">
                 <h2>Impacto Petro por Localidad (2023 → 2026)</h2>
-                <p style="color: #666; margin-bottom: 20px; font-size: 15px;">
+                <div class="subtitle">
                     <strong>9 localidades cubiertas</strong> con datos de puesto de votación. Delta muestra cambio en % de votos izquierda entre 2023 (Concejo) y 2026 (Congreso).
-                </p>
+                </div>
                 <div class="chart-container">
                     <canvas id="chart-desagregacion"></canvas>
                 </div>
@@ -138,7 +212,7 @@
                             <th style="text-align: center;">2023 (%)</th>
                             <th style="text-align: center;">2026 (%)</th>
                             <th style="text-align: center;">Delta (pp)</th>
-                            <th style="text-align: center;">Votos 2026</th>
+                            <th style="text-align: right;">Votos 2026</th>
                         </tr>
                     </thead>
                     <tbody id="tabla-desagregacion"></tbody>
@@ -148,9 +222,9 @@
             <!-- TAB 2: VOLATILIDAD -->
             <div id="tab-1" class="tab-content">
                 <h2>Cambio de Composición Electoral (2023 → 2026)</h2>
-                <p style="color: #666; margin-bottom: 20px; font-size: 15px;">
+                <div class="subtitle">
                     <strong>Petro multiplicó el voto de izquierda 6.4x</strong>. Centro se desplomó 83%. Estos factores se aplican a candidatos 2027.
-                </p>
+                </div>
                 <div class="chart-container">
                     <canvas id="chart-volatilidad"></canvas>
                 </div>
@@ -171,9 +245,9 @@
             <!-- TAB 3: PREDICCIÓN -->
             <div id="tab-2" class="tab-content">
                 <h2>Proyección de Candidatos 2027</h2>
-                <p style="color: #666; margin-bottom: 20px; font-size: 15px;">
+                <div class="subtitle">
                     <strong>Baseline predictivo:</strong> aplicar factores de volatilidad 2026 a candidatos que compitieron en 2023. Top 3 candidatos izquierda.
-                </p>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -190,12 +264,11 @@
         </div>
 
         <footer>
-            <strong>Fuentes:</strong> Registraduría Nacional (RNEC Bogotá 2023 y Congreso 2026) | <strong>Cobertura:</strong> 9/20 localidades de Bogotá (76,614 registros de 173,683) | <strong>Generado:</strong> 26 septiembre 2026
+            <strong>Fuentes:</strong> Registraduría Nacional (RNEC) | <strong>Cobertura:</strong> 9/20 localidades de Bogotá | <strong>Fecha:</strong> 26 septiembre 2026
         </footer>
     </div>
 
     <script>
-        // DATOS DESAGREGACIÓN
         const desagregacion = [
             { localidad: 'Usaquén', p23: 1.0, p26: 48.2, delta: 47.2, votos: 283405 },
             { localidad: 'Tunjuelito', p23: 0.8, p26: 46.7, delta: 45.9, votos: 15925 },
@@ -208,7 +281,6 @@
             { localidad: 'Puente Aranda', p23: 1.9, p26: 19.3, delta: 17.4, votos: 26329 }
         ];
 
-        // DATOS VOLATILIDAD
         const volatilidad = [
             { bloque: 'Izquierda', v23: 103036, v26: 660785, cambio: 541, factor: 6.413 },
             { bloque: 'Centro', v23: 3341573, v26: 554987, cambio: -83.4, factor: 0.166 },
@@ -216,14 +288,12 @@
             { bloque: 'Otro', v23: 4444396, v26: 804487, cambio: -81.9, factor: 0.173 }
         ];
 
-        // DATOS PREDICCIÓN
         const prediccion = [
             { candidato: 'Felipe Andrés Jiménez Clavijo', partido: 'Dignidad & Compromiso', v23: 551, v27: 3534, delta: 2983 },
             { candidato: 'Freddy Villarquirán Losada', partido: 'Dignidad & Compromiso', v23: 293, v27: 1879, delta: 1586 },
             { candidato: 'Jorge Enrique Robledo Castillo', partido: 'Dignidad & Compromiso', v23: 286, v27: 1834, delta: 1548 }
         ];
 
-        // FUNCIONES
         function switchTab(index) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
@@ -232,7 +302,6 @@
         }
 
         window.addEventListener('load', () => {
-            // TABLA DESAGREGACIÓN
             document.getElementById('tabla-desagregacion').innerHTML = desagregacion.map(d => 
                 `<tr>
                     <td class="localidad">${d.localidad}</td>
@@ -243,7 +312,6 @@
                 </tr>`
             ).join('');
 
-            // GRÁFICO DESAGREGACIÓN (horizontal)
             new Chart(document.getElementById('chart-desagregacion'), {
                 type: 'bar',
                 data: {
@@ -251,8 +319,8 @@
                     datasets: [{
                         label: 'Delta Izquierda (pp)',
                         data: desagregacion.map(d => d.delta),
-                        backgroundColor: '#e74c3c',
-                        borderColor: '#c0392b',
+                        backgroundColor: '#bd8a34',
+                        borderColor: '#9a6f21',
                         borderWidth: 1
                     }]
                 },
@@ -260,27 +328,21 @@
                     indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: true, position: 'top' }
-                    },
-                    scales: {
-                        x: { beginAtZero: true, max: 50 }
-                    }
+                    plugins: { legend: { display: false } },
+                    scales: { x: { beginAtZero: true, max: 50 } }
                 }
             });
 
-            // TABLA VOLATILIDAD
             document.getElementById('tabla-volatilidad').innerHTML = volatilidad.map(v => 
                 `<tr>
                     <td><strong>${v.bloque}</strong></td>
                     <td style="text-align: right;">${v.v23.toLocaleString('es-CO')}</td>
                     <td style="text-align: right;">${v.v26.toLocaleString('es-CO')}</td>
-                    <td style="text-align: right;" class="${v.cambio > 0 ? 'delta-positive' : 'delta-negative'}">${v.cambio > 0 ? '+' : ''}${v.cambio.toFixed(1)}%</td>
-                    <td style="text-align: right; font-weight: 700;">${v.factor.toFixed(3)}x</td>
+                    <td style="text-align: right; font-weight: 700;">${v.cambio > 0 ? '+' : ''}${v.cambio.toFixed(1)}%</td>
+                    <td style="text-align: right; font-weight: 700; color: #bd8a34;">${v.factor.toFixed(3)}x</td>
                 </tr>`
             ).join('');
 
-            // GRÁFICO VOLATILIDAD (comparativo)
             new Chart(document.getElementById('chart-volatilidad'), {
                 type: 'bar',
                 data: {
@@ -289,15 +351,15 @@
                         {
                             label: '2023',
                             data: volatilidad.map(v => v.v23),
-                            backgroundColor: '#3498db',
-                            borderColor: '#2980b9',
+                            backgroundColor: '#4a72a8',
+                            borderColor: '#2a4460',
                             borderWidth: 1
                         },
                         {
                             label: '2026',
                             data: volatilidad.map(v => v.v26),
-                            backgroundColor: '#e74c3c',
-                            borderColor: '#c0392b',
+                            backgroundColor: '#bd8a34',
+                            borderColor: '#9a6f21',
                             borderWidth: 1
                         }
                     ]
@@ -305,19 +367,21 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: true, position: 'top' }
-                    },
-                    scales: {
-                        y: { beginAtZero: true }
-                    }
+                    plugins: { legend: { display: true, position: 'top' } },
+                    scales: { y: { beginAtZero: true } }
                 }
             });
 
-            // TABLA PREDICCIÓN
             document.getElementById('tabla-prediccion').innerHTML = prediccion.map(p => 
                 `<tr>
                     <td><strong>${p.candidato}</strong></td>
                     <td>${p.partido}</td>
                     <td style="text-align: right;">${p.v23}</td>
-                    <td style="text-align: right; font-weight: 700; color: #667eea;">${p.v27}</td>
+                    <td style="text-align: right; font-weight: 700; color: #bd8a34;">${p.v27}</td>
+                    <td style="text-align: right;" class="delta-positive">+${p.delta.toLocaleString('es-CO')}</td>
+                </tr>`
+            ).join('');
+        });
+    </script>
+</body>
+</html>
