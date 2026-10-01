@@ -1,0 +1,92 @@
+{
+    "titulo":  "Pulso social en redes",
+    "candidatos":  {
+                       "GIOVANNI RAMIREZ MOYA":  {
+                                                     "alerta_toxicidad":  false,
+                                                     "posts":  3,
+                                                     "temas":  [
+                                                                   {
+                                                                       "tema":  "otro",
+                                                                       "score":  0.1,
+                                                                       "menciones":  2
+                                                                   },
+                                                                   {
+                                                                       "tema":  "infraestructura",
+                                                                       "score":  0.6,
+                                                                       "menciones":  1
+                                                                   }
+                                                               ],
+                                                     "sentimiento_promedio":  0.27,
+                                                     "serie":  [
+                                                                   {
+                                                                       "f":  "2026-10-01",
+                                                                       "s":  0.27
+                                                                   }
+                                                               ],
+                                                     "por_plataforma":  {
+                                                                            "facebook":  0.05,
+                                                                            "youtube":  0.7
+                                                                        }
+                                                 },
+                       "DANNY CAICEDO":  {
+                                             "alerta_toxicidad":  false,
+                                             "posts":  3,
+                                             "temas":  [
+                                                           {
+                                                               "tema":  "infraestructura",
+                                                               "score":  0.8,
+                                                               "menciones":  1
+                                                           },
+                                                           {
+                                                               "tema":  "otro",
+                                                               "score":  0.65,
+                                                               "menciones":  2
+                                                           }
+                                                       ],
+                                             "sentimiento_promedio":  0.7,
+                                             "serie":  [
+                                                           {
+                                                               "f":  "2026-10-01",
+                                                               "s":  0.7
+                                                           }
+                                                       ],
+                                             "por_plataforma":  {
+                                                                    "facebook":  0.65,
+                                                                    "youtube":  0.8
+                                                                }
+                                         },
+                       "JULIAN SANCHE PERICO":  {
+                                                    "alerta_toxicidad":  false,
+                                                    "posts":  3,
+                                                    "temas":  [
+                                                                  {
+                                                                      "tema":  "seguridad",
+                                                                      "score":  0.7,
+                                                                      "menciones":  1
+                                                                  },
+                                                                  {
+                                                                      "tema":  "otro",
+                                                                      "score":  -0.7,
+                                                                      "menciones":  1
+                                                                  },
+                                                                  {
+                                                                      "tema":  "educacion",
+                                                                      "score":  0.8,
+                                                                      "menciones":  1
+                                                                  }
+                                                              ],
+                                                    "sentimiento_promedio":  0.27,
+                                                    "serie":  [
+                                                                  {
+                                                                      "f":  "2026-10-01",
+                                                                      "s":  0.27
+                                                                  }
+                                                              ],
+                                                    "por_plataforma":  {
+                                                                           "facebook":  0.05,
+                                                                           "youtube":  0.7
+                                                                       }
+                                                }
+                   },
+    "actualizado":  "2026-10-01"
+}
