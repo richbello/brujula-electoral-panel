@@ -389,6 +389,7 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
         <button class="tab active" data-tab="fuerza">Mapa de fuerza</button>
         <button class="tab" data-tab="localidad" id="tabLoc">Por localidad</button>
         <button class="tab" data-tab="metas">Metas 2027</button>
+        <button class="tab" data-tab="pulso">Pulso social</button>
       </div>
 
       <section class="panel active" id="panel-fuerza">
@@ -424,6 +425,13 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
           <div id="metasList"></div>
         </div>
         <p class="footnote"><b>Nota:</b> este reparto asume que tu geografía se mantiene (supuesto validado con el backtest 2019→2023). En una campaña real se ajusta con encuestas y trabajo de territorio.</p>
+      </section>
+
+      <section class="panel" id="panel-pulso">
+        <div class="panel-head">
+          <div><h3>Pulso social en redes</h3><p>Sentimiento del público en redes sociales.</p></div>
+        </div>
+        <div id="pulsoContent" style="padding:20px;text-align:center;color:#93a0b2">Cargando análisis de redes...</div>
       </section>
     </div>
     <div id="anal" style="display:none"></div>
@@ -836,6 +844,54 @@ function applyMeta(){
   const n=lista().filter(c=>!c.ls).length;
   $("#metaPill").innerHTML=`<span><b>${esc(T().nombre)}</b> · ${S.meta.anio} · ${fmt(n)} candidatos en ${esc(corpLabel(corp).toLowerCase())}</span>`;
 }
+
+/* ============ Pulso Social ============ */
+async function loadSentimientos() {
+  try {
+    const resp = await fetch('./data/sentimiento.json');
+    if (!resp.ok) { console.log("No hay análisis de sentimientos aún"); return; }
+    const datos = await resp.json();
+    renderPulso(datos);
+  } catch (err) { console.log("Error cargando sentimientos:", err); }
+}
+
+function renderPulso(datos) {
+  const el = document.getElementById("pulsoContent");
+  el.innerHTML = "";
+  
+  let html = `<div style="max-width:800px;margin:0 auto">
+    <p style="font-size:12px;color:#93a0b2;margin-bottom:20px">Actualizado: ${datos.actualizado}</p>`;
+  
+  const cands = Object.entries(datos.candidatos).sort((a,b) => b[1].sentimiento_promedio - a[1].sentimiento_promedio);
+  
+  cands.forEach(([nombre, d]) => {
+    const score = d.sentimiento_promedio;
+    const color = score > 0.5 ? "#2f7d5b" : score < -0.5 ? "#a4503c" : "#93a0b2";
+    const anchoPct = Math.abs(score) * 100;
+    
+    html += `<div style="margin-bottom:22px;padding:14px;background:#f7f9fc;border-radius:10px;border-left:3px solid ${color}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <strong style="color:#2C3E2E">${esc(nombre)}</strong>
+        <span style="font-size:18px;font-weight:700;color:${color}">${score.toFixed(2)}</span>
+      </div>
+      <div style="height:8px;background:#e8eef6;border-radius:4px;overflow:hidden;margin-bottom:8px">
+        <i style="display:block;height:100%;width:${anchoPct}%;background:${color};border-radius:4px"></i>
+      </div>
+      <div style="font-size:12px;color:#93a0b2;margin-bottom:8px">${d.posts} posts analizados</div>`;
+    
+    if (d.temas && d.temas.length > 0) {
+      html += `<div style="font-size:11px">Temas: ${d.temas.map(t => `<span style="display:inline-block;background:#f0e2c2;padding:2px 6px;border-radius:3px;margin-right:4px">${esc(t.tema)} (${t.menciones})</span>`).join("")}</div>`;
+    }
+    
+    html += `</div>`;
+  });
+  
+  html += `</div>`;
+  el.innerHTML = html;
+}
+
+loadSentimientos();
+setInterval(loadSentimientos, 5 * 60 * 1000);
 
 /* ============ Inicio ============ */
 DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
