@@ -1,0 +1,139 @@
+{
+  "titulo": "Pulso social Soacha 2027",
+  "municipio": "Soacha",
+  "corporacion": "Concejo de Soacha 2027",
+  "actualizado": "2026-10-01",
+  "ventana_dias": 30,
+  "fuente": "demostracion",
+  "candidatos": {
+    "DANNY CAICEDO": {
+      "es_cliente": true,
+      "partido": "Movimiento Ciudadano Soacha",
+      "sentimiento_promedio": 0.70,
+      "tendencia": "sube",
+      "total_posts": 3,
+      "total_comentarios": 142,
+      "alerta_toxicidad": false,
+      "toxicidad_pct": 8,
+      "por_plataforma": {
+        "facebook": { "score": 0.72, "posts": 2, "comentarios": 98 },
+        "youtube":  { "score": 0.66, "posts": 1, "comentarios": 44 }
+      },
+      "temas": [
+        { "tema": "infraestructura", "score": 0.78, "menciones": 54 },
+        { "tema": "educacion",       "score": 0.65, "menciones": 32 },
+        { "tema": "seguridad",       "score": 0.40, "menciones": 28 },
+        { "tema": "otro",            "score": 0.55, "menciones": 28 }
+      ],
+      "serie": [
+        { "f": "2026-09-19", "s": 0.52 },
+        { "f": "2026-09-22", "s": 0.58 },
+        { "f": "2026-09-25", "s": 0.61 },
+        { "f": "2026-09-28", "s": 0.69 },
+        { "f": "2026-10-01", "s": 0.70 }
+      ],
+      "posts_destacados": [
+        {
+          "plataforma": "facebook",
+          "fecha": "2026-09-28",
+          "url": "https://facebook.com/dannycaicedo/posts/ejemplo1",
+          "resumen": "Inauguracion de via en el barrio San Mateo",
+          "comentarios": 54,
+          "score": 0.78,
+          "tema": "infraestructura",
+          "comentario_pos": "Por fin alguien que arregla las vias de San Mateo, gracias Danny",
+          "comentario_neg": "Y la pavimentacion del otro sector para cuando"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2026-09-25",
+          "url": "https://youtube.com/watch?v=ejemplo2",
+          "resumen": "Propuesta de colegios con jornada unica",
+          "comentarios": 44,
+          "score": 0.66,
+          "tema": "educacion",
+          "comentario_pos": "Excelente propuesta para los jovenes de Soacha",
+          "comentario_neg": "Prometen colegios pero no dicen con que plata"
+        }
+      ]
+    },
+    "JULIAN SANCHE PERICO": {
+      "es_cliente": false,
+      "partido": "Partido Alternativa Soacha",
+      "sentimiento_promedio": 0.27,
+      "tendencia": "estable",
+      "total_posts": 3,
+      "total_comentarios": 96,
+      "alerta_toxicidad": true,
+      "toxicidad_pct": 22,
+      "por_plataforma": {
+        "facebook": { "score": 0.20, "posts": 2, "comentarios": 61 },
+        "youtube":  { "score": 0.41, "posts": 1, "comentarios": 35 }
+      },
+      "temas": [
+        { "tema": "seguridad",  "score": 0.35, "menciones": 40 },
+        { "tema": "educacion",  "score": 0.30, "menciones": 24 },
+        { "tema": "otro",       "score": 0.15, "menciones": 32 }
+      ],
+      "serie": [
+        { "f": "2026-09-19", "s": 0.30 },
+        { "f": "2026-09-22", "s": 0.25 },
+        { "f": "2026-09-25", "s": 0.28 },
+        { "f": "2026-09-28", "s": 0.24 },
+        { "f": "2026-10-01", "s": 0.27 }
+      ],
+      "posts_destacados": [
+        {
+          "plataforma": "facebook",
+          "fecha": "2026-09-27",
+          "url": "https://facebook.com/juliansanche/posts/ejemplo3",
+          "resumen": "Debate sobre seguridad en comunas",
+          "comentarios": 38,
+          "score": 0.20,
+          "tema": "seguridad",
+          "comentario_pos": "Buen punto sobre la seguridad en la comuna 4",
+          "comentario_neg": "Puro discurso, ese ya estuvo y no hizo nada"
+        }
+      ]
+    },
+    "GIOVANNI RAMIREZ MOYA": {
+      "es_cliente": false,
+      "partido": "Coalicion Soacha Avanza",
+      "sentimiento_promedio": 0.27,
+      "tendencia": "baja",
+      "total_posts": 3,
+      "total_comentarios": 88,
+      "alerta_toxicidad": false,
+      "toxicidad_pct": 14,
+      "por_plataforma": {
+        "facebook": { "score": 0.31, "posts": 2, "comentarios": 60 },
+        "youtube":  { "score": 0.18, "posts": 1, "comentarios": 28 }
+      },
+      "temas": [
+        { "tema": "infraestructura", "score": 0.33, "menciones": 36 },
+        { "tema": "empleo",          "score": 0.29, "menciones": 22 },
+        { "tema": "otro",            "score": 0.20, "menciones": 30 }
+      ],
+      "serie": [
+        { "f": "2026-09-19", "s": 0.38 },
+        { "f": "2026-09-22", "s": 0.34 },
+        { "f": "2026-09-25", "s": 0.31 },
+        { "f": "2026-09-28", "s": 0.29 },
+        { "f": "2026-10-01", "s": 0.27 }
+      ],
+      "posts_destacados": [
+        {
+          "plataforma": "facebook",
+          "fecha": "2026-09-26",
+          "url": "https://facebook.com/giovanniramirez/posts/ejemplo4",
+          "resumen": "Plan de empleo juvenil",
+          "comentarios": 32,
+          "score": 0.31,
+          "tema": "empleo",
+          "comentario_pos": "Ojala si cumpla con el tema de empleo joven",
+          "comentario_neg": "Lo mismo de siempre en campana"
+        }
+      ]
+    }
+  }
+}
