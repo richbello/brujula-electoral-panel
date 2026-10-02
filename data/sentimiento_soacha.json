@@ -1,326 +1,193 @@
 {
-  "metadata": {
-    "generated_at": "2026-10-02T13:43:01.346803",
-    "source": "YouTube Data API v3",
-    "total_comments": 26,
-    "analysis_model": "claude-haiku-4-5-20251001"
+  "meta": {
+    "generado": "2026-10-02T13:51:31.963894",
+    "fuente": "YouTube Data API v3",
+    "ventana": "últimos 30 días",
+    "total_comentarios": 26,
+    "modelo": "claude-haiku-4-5-20251001"
   },
-  "candidates": {
-    "DANNY CAICEDO": [
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "ONSiExmphdQ",
-        "video_title": "Si no paga la extorsión, lo matan. Esa es la realidad que se vive hoy en #Soacha. 🚨",
-        "author": "@juanbuatistasierraolmos7809",
-        "text": "Señor presidente Abelardo  no hay gestión del alcalde de soacha solo palabras estamo inmersos por las bandas delicuenciales en todo soacha Necesitamos de su apoyo urgente.",
-        "likes": "0",
-        "published_at": "2026-10-01T15:54:17Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:42.639122"
+  "candidatos": {
+    "DANNY CAICEDO": {
+      "es_cliente": true,
+      "partido": "Concejal de oposición",
+      "sentimiento_promedio": -0.76,
+      "tendencia": "baja",
+      "total_posts": 2,
+      "total_comentarios": 21,
+      "toxicidad_pct": 95,
+      "alerta_toxicidad": true,
+      "por_plataforma": {
+        "youtube": {
+          "score": -0.76,
+          "posts": 2,
+          "comentarios": 21
+        }
       },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@fernandobraussini6875",
-        "text": "Eso de que tenga media Soacha empapelada....eso deja mucho que pensar cuantos favores políticos tienes que pagar señor Danny... Algo que dicen los abuelos...\"Nada es Gratis\"",
-        "likes": "14",
-        "published_at": "2023-10-09T13:30:01Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:43.238548"
+      "temas": [
+        {
+          "tema": "Gestión",
+          "score": -0.8,
+          "menciones": 5
+        },
+        {
+          "tema": "Corrupción",
+          "score": -0.9,
+          "menciones": 7
+        },
+        {
+          "tema": "Credibilidad",
+          "score": -0.75,
+          "menciones": 6
+        },
+        {
+          "tema": "Impuestos",
+          "score": -0.6,
+          "menciones": 3
+        },
+        {
+          "tema": "Obras Públicas",
+          "score": -0.7,
+          "menciones": 3
+        }
+      ],
+      "serie": [
+        {
+          "f": "02 Oct",
+          "s": -0.76
+        }
+      ],
+      "posts_destacados": [
+        {
+          "plataforma": "youtube",
+          "fecha": "2023-10-09",
+          "score": -0.8,
+          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
+          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "Eso de que tenga media Soacha empapelada....eso deja mucho que pensar cuantos favores políticos tienes que pagar señor Danny... Algo que dicen los abuelos...\"Na"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2023-09-23",
+          "score": -0.8,
+          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
+          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "A ese señor se le pierde todo, si Soacha lo elige va terminar perdiendo, no conozco los demás candidatos pero que tristeza ver este señor"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2023-09-19",
+          "score": -0.8,
+          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
+          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "Investiguen todas las denuncias que hay contra este señor"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2023-09-19",
+          "score": -0.8,
+          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
+          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "Genial el señor que le encanta constreñir al elector !"
+        }
+      ]
+    },
+    "JULIAN SANCHE PERICO": {
+      "es_cliente": false,
+      "partido": "Alcalde actual",
+      "sentimiento_promedio": -0.8,
+      "tendencia": "baja",
+      "total_posts": 2,
+      "total_comentarios": 5,
+      "toxicidad_pct": 100,
+      "alerta_toxicidad": true,
+      "por_plataforma": {
+        "youtube": {
+          "score": -0.8,
+          "posts": 2,
+          "comentarios": 5
+        }
       },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@fernandoolaya6023",
-        "text": "Genial el señor que le encanta constreñir al elector !",
-        "likes": "5",
-        "published_at": "2023-09-19T21:40:02Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:43.858558"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@juanpablangul1416",
-        "text": "Lo gracioso es que a los que hacen mas bulla les dan una entrevista privada pero los demas candidatos si les da igual",
-        "likes": "3",
-        "published_at": "2023-10-09T17:27:48Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:44.466688"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@ftunjano",
-        "text": "A ese señor se le pierde todo, si Soacha lo elige va terminar perdiendo, no conozco los demás candidatos pero que tristeza ver este señor",
-        "likes": "12",
-        "published_at": "2023-09-23T17:24:48Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:45.083648"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@claudiapb",
-        "text": "Investiguen todas las denuncias que hay contra este señor",
-        "likes": "11",
-        "published_at": "2023-09-19T16:28:52Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:45.654987"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@Luiiser",
-        "text": "Como que la plata de todos esos carteles se perdieron 😅",
-        "likes": "0",
-        "published_at": "2023-10-31T02:10:59Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:46.224204"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@lucitafoiz7842",
-        "text": "Ojo, persona de no fiar, por posible  falsedad de documento público, no le creo por los que están detrás en su apoyo.",
-        "likes": "2",
-        "published_at": "2023-09-28T18:24:00Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:46.819281"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@pedroalarcon5446",
-        "text": "A qué cualicion pertenece",
-        "likes": "0",
-        "published_at": "2023-10-17T01:51:49Z",
-        "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:42:47.397510"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@nubiapantanovargas6286",
-        "text": "Giovany..el que dice su campaña que avanzar mas😂😂 un chiste, que pasó con la plaza de mercado en soacha señor, las calles en San Mateo destruidas, la oscuridad e inseguridad en el último mes señor? Dónde hay colegios públicos? Hospitales? Transporte .. has y en San Mateo tampoco hay plaza señor? Avanzar mas 😂😂 4:26",
-        "likes": "0",
-        "published_at": "2023-10-25T00:24:41Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:48.006223"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@amprosierra1530",
-        "text": "dicen que el alcalde de ahora debería irse para Medellín porque no es soachuno  pero como se lleno ahora va a manejar al titere para seguir comiendo y guardando su tajada 😂😂😂😂😂😂😂",
-        "likes": "0",
-        "published_at": "2023-10-27T00:32:50Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:48.650924"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@luiscespedes1646",
-        "text": "Impuestos más altos",
-        "likes": "4",
-        "published_at": "2023-09-29T02:24:30Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:49.249301"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@ANN-v3i2c",
-        "text": "Espero que él no gane 😢",
-        "likes": "2",
-        "published_at": "2023-10-27T01:13:40Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:49.842077"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@viangelo4z595",
-        "text": "impuestos impuestos",
-        "likes": "1",
-        "published_at": "2023-10-06T23:44:51Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:50.536512"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@mariaemma1785",
-        "text": "Gueridos soachunos   da triztesa  pensar  gue cuando la gente trabaja critican   pero cuando roban al pueblo  calladitos  pero  el alcalde  atual a trabajado   hay si no les gusta   yo alcaldes pasados no hicieron nada",
-        "likes": "0",
-        "published_at": "2023-10-06T00:01:52Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:51.095550"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@andresgonzalez-qz9fm",
-        "text": "La despensa del alcalde jajajajajajajaja  corrupto.",
-        "likes": "1",
-        "published_at": "2023-10-07T19:55:32Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:51.827569"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@miguelbenitezgamers",
-        "text": "sos un picaro igual que saldarriaga",
-        "likes": "1",
-        "published_at": "2023-10-25T16:18:22Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:52.379829"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@Pedrohernandez-rx7lj",
-        "text": "Se le quemó asta las turmas por picados todas la familia ce creen de extracto. 8jjajjajaja",
-        "likes": "1",
-        "published_at": "2023-11-04T15:52:15Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:52.933575"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@FlormariaParra-cj4it",
-        "text": "Hablan tantas maravillas pero a la hora la verdad no hacen nada bueno en Soacha",
-        "likes": "0",
-        "published_at": "2023-10-27T06:11:03Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:53.484248"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@Alexisb612",
-        "text": "No le hagan campaña a ese Geti torcido,ese sobrado es peor que el actual",
-        "likes": "5",
-        "published_at": "2023-09-30T19:22:57Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:54.049587"
-      },
-      {
-        "candidate": "DANNY CAICEDO",
-        "video_id": "aTRjX2bXTP4",
-        "video_title": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-        "author": "@pedroalarcon5446",
-        "text": "Anda agasapao  no  dice aque lado pertenece surdo o derecha",
-        "likes": "0",
-        "published_at": "2023-10-17T01:55:36Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:54.612885"
-      }
-    ],
-    "JULIAN SANCHE PERICO": [
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@andresricardocontrerasduar7620",
-        "text": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La autopista sur sigue a oscuras y las fases II y III de Transmilenio se entregará después del metro. Desastroso.",
-        "likes": "2",
-        "published_at": "2025-12-24T00:00:11Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:58.281323"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@Canaldelady23bc-ym2gr",
-        "text": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no sean tan hp si hay muchos que no ganamos ni el mínimo 😢",
-        "likes": "0",
-        "published_at": "2026-02-20T09:55:20Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:58.867019"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@alexdrago7701",
-        "text": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto",
-        "likes": "0",
-        "published_at": "2025-12-23T22:21:46Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:42:59.449548"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@joseeliassalcedodulcey4113",
-        "text": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que trabajan humildemente y que son personas de bien y vienen a levantar les las casetas donde se rebuscan su plato de comida de verdad que tristeza",
-        "likes": "0",
-        "published_at": "2026-01-25T18:24:56Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:43:00.105937"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "9cNqEyj5ajg",
-        "video_title": "@𝐏𝐀𝐍𝐎𝐑𝐀𝐌𝐀 𝐒𝐏𝐎𝐑𝐓: Alcalde de Soacha Dr. Julian Sanchez Perico",
-        "author": "@Mauricio-q9f9u",
-        "text": "El alcalde que no ha hecho nada por Soacha, mucho bombo para elegirlo y nada de avance, el cambio de alcalde se dió pero el cambio que había antes ya no avanzo, ahí está su famoso perico alcalde, que no sirve para nada, bien por las que tienen su puesto en la alcaldía por ponerse su camiseta rosada y salir a arengar a su tal perico alcalde 🤦🏻‍♂️🤦🏻‍♂️🤷🏻‍♂️🤷🏻‍♂️",
-        "likes": "0",
-        "published_at": "2025-08-07T16:00:18Z",
-        "reply_count": "0",
-        "sentimiento": "NEGATIVO",
-        "timestamp": "2026-10-02T13:43:01.346803"
-      }
-    ]
+      "temas": [
+        {
+          "tema": "Gestión",
+          "score": -0.9,
+          "menciones": 5
+        },
+        {
+          "tema": "Infraestructura",
+          "score": -0.8,
+          "menciones": 4
+        },
+        {
+          "tema": "Obras Públicas",
+          "score": -0.85,
+          "menciones": 3
+        }
+      ],
+      "serie": [
+        {
+          "f": "02 Oct",
+          "s": -0.8
+        }
+      ],
+      "posts_destacados": [
+        {
+          "plataforma": "youtube",
+          "fecha": "2025-12-24",
+          "score": -0.8,
+          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La autopista s"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2026-02-20",
+          "score": -0.8,
+          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no sean tan "
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2025-12-23",
+          "score": -0.8,
+          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2026-01-25",
+          "score": -0.8,
+          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
+          "tema": "",
+          "comentarios": 1,
+          "comentario_pos": "",
+          "comentario_neg": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que trabajan h"
+        }
+      ]
+    }
   }
 }
