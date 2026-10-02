@@ -1,73 +1,11 @@
 {
   "metadata": {
-    "generated_at": "2026-10-02T13:35:16.035000",
+    "generated_at": "2026-10-02T13:36:36.280037",
     "source": "YouTube Data API v3",
     "total_comments": 26,
-    "analysis_model": "claude-haiku-4-5"
+    "analysis_model": "claude-opus-4-1"
   },
   "candidates": {
-    "JULIAN SANCHE PERICO": [
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@andresricardocontrerasduar7620",
-        "text": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La autopista sur sigue a oscuras y las fases II y III de Transmilenio se entregará después del metro. Desastroso.",
-        "likes": "2",
-        "published_at": "2025-12-24T00:00:11Z",
-        "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:09.692249"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@Canaldelady23bc-ym2gr",
-        "text": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no sean tan hp si hay muchos que no ganamos ni el mínimo 😢",
-        "likes": "0",
-        "published_at": "2026-02-20T09:55:20Z",
-        "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:09.968158"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@alexdrago7701",
-        "text": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto",
-        "likes": "0",
-        "published_at": "2025-12-23T22:21:46Z",
-        "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:10.238805"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "QEyuRopAgMg",
-        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-        "author": "@joseeliassalcedodulcey4113",
-        "text": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que trabajan humildemente y que son personas de bien y vienen a levantar les las casetas donde se rebuscan su plato de comida de verdad que tristeza",
-        "likes": "0",
-        "published_at": "2026-01-25T18:24:56Z",
-        "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:10.481758"
-      },
-      {
-        "candidate": "JULIAN SANCHE PERICO",
-        "video_id": "9cNqEyj5ajg",
-        "video_title": "@𝐏𝐀𝐍𝐎𝐑𝐀𝐌𝐀 𝐒𝐏𝐎𝐑𝐓: Alcalde de Soacha Dr. Julian Sanchez Perico",
-        "author": "@Mauricio-q9f9u",
-        "text": "El alcalde que no ha hecho nada por Soacha, mucho bombo para elegirlo y nada de avance, el cambio de alcalde se dió pero el cambio que había antes ya no avanzo, ahí está su famoso perico alcalde, que no sirve para nada, bien por las que tienen su puesto en la alcaldía por ponerse su camiseta rosada y salir a arengar a su tal perico alcalde 🤦🏻‍♂️🤦🏻‍♂️🤷🏻‍♂️🤷🏻‍♂️",
-        "likes": "0",
-        "published_at": "2025-08-07T16:00:18Z",
-        "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:10.709800"
-      }
-    ],
     "DANNY CAICEDO": [
       {
         "candidate": "DANNY CAICEDO",
@@ -79,7 +17,7 @@
         "published_at": "2026-10-01T15:54:17Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:10.972333"
+        "timestamp": "2026-10-02T13:36:29.994808"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -91,7 +29,7 @@
         "published_at": "2023-10-09T13:30:01Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:11.214399"
+        "timestamp": "2026-10-02T13:36:30.244874"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -103,7 +41,7 @@
         "published_at": "2023-09-19T21:40:02Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:11.452197"
+        "timestamp": "2026-10-02T13:36:30.521762"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -115,7 +53,7 @@
         "published_at": "2023-10-09T17:27:48Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:11.734386"
+        "timestamp": "2026-10-02T13:36:30.788768"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -127,7 +65,7 @@
         "published_at": "2023-09-23T17:24:48Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:11.975303"
+        "timestamp": "2026-10-02T13:36:31.023986"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -139,7 +77,7 @@
         "published_at": "2023-09-19T16:28:52Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:12.215447"
+        "timestamp": "2026-10-02T13:36:31.265208"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -151,7 +89,7 @@
         "published_at": "2023-10-31T02:10:59Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:12.451173"
+        "timestamp": "2026-10-02T13:36:31.508831"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -163,7 +101,7 @@
         "published_at": "2023-09-28T18:24:00Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:12.725663"
+        "timestamp": "2026-10-02T13:36:31.753251"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -175,7 +113,7 @@
         "published_at": "2023-10-17T01:51:49Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:12.980755"
+        "timestamp": "2026-10-02T13:36:32.050494"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -187,7 +125,7 @@
         "published_at": "2023-10-25T00:24:41Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:13.298141"
+        "timestamp": "2026-10-02T13:36:32.309421"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -199,7 +137,7 @@
         "published_at": "2023-10-27T00:32:50Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:13.547106"
+        "timestamp": "2026-10-02T13:36:32.531142"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -211,7 +149,7 @@
         "published_at": "2023-09-29T02:24:30Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:13.782414"
+        "timestamp": "2026-10-02T13:36:32.774067"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -223,7 +161,7 @@
         "published_at": "2023-10-27T01:13:40Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:14.043142"
+        "timestamp": "2026-10-02T13:36:33.000042"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -235,7 +173,7 @@
         "published_at": "2023-10-06T23:44:51Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:14.279599"
+        "timestamp": "2026-10-02T13:36:33.246138"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -247,7 +185,7 @@
         "published_at": "2023-10-06T00:01:52Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:14.517362"
+        "timestamp": "2026-10-02T13:36:33.497981"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -259,7 +197,7 @@
         "published_at": "2023-10-07T19:55:32Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:14.761393"
+        "timestamp": "2026-10-02T13:36:33.778452"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -271,7 +209,7 @@
         "published_at": "2023-10-25T16:18:22Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:15.034815"
+        "timestamp": "2026-10-02T13:36:34.029866"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -283,7 +221,7 @@
         "published_at": "2023-11-04T15:52:15Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:15.268363"
+        "timestamp": "2026-10-02T13:36:34.269483"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -295,7 +233,7 @@
         "published_at": "2023-10-27T06:11:03Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:15.517760"
+        "timestamp": "2026-10-02T13:36:34.514357"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -307,7 +245,7 @@
         "published_at": "2023-09-30T19:22:57Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:15.789152"
+        "timestamp": "2026-10-02T13:36:34.748848"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -319,7 +257,69 @@
         "published_at": "2023-10-17T01:55:36Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:35:16.035000"
+        "timestamp": "2026-10-02T13:36:34.992567"
+      }
+    ],
+    "JULIAN SANCHE PERICO": [
+      {
+        "candidate": "JULIAN SANCHE PERICO",
+        "video_id": "QEyuRopAgMg",
+        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+        "author": "@andresricardocontrerasduar7620",
+        "text": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La autopista sur sigue a oscuras y las fases II y III de Transmilenio se entregará después del metro. Desastroso.",
+        "likes": "2",
+        "published_at": "2025-12-24T00:00:11Z",
+        "reply_count": "0",
+        "sentimiento": "NEUTRAL",
+        "timestamp": "2026-10-02T13:36:35.261838"
+      },
+      {
+        "candidate": "JULIAN SANCHE PERICO",
+        "video_id": "QEyuRopAgMg",
+        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+        "author": "@Canaldelady23bc-ym2gr",
+        "text": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no sean tan hp si hay muchos que no ganamos ni el mínimo 😢",
+        "likes": "0",
+        "published_at": "2026-02-20T09:55:20Z",
+        "reply_count": "0",
+        "sentimiento": "NEUTRAL",
+        "timestamp": "2026-10-02T13:36:35.530256"
+      },
+      {
+        "candidate": "JULIAN SANCHE PERICO",
+        "video_id": "QEyuRopAgMg",
+        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+        "author": "@alexdrago7701",
+        "text": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto",
+        "likes": "0",
+        "published_at": "2025-12-23T22:21:46Z",
+        "reply_count": "0",
+        "sentimiento": "NEUTRAL",
+        "timestamp": "2026-10-02T13:36:35.785211"
+      },
+      {
+        "candidate": "JULIAN SANCHE PERICO",
+        "video_id": "QEyuRopAgMg",
+        "video_title": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
+        "author": "@joseeliassalcedodulcey4113",
+        "text": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que trabajan humildemente y que son personas de bien y vienen a levantar les las casetas donde se rebuscan su plato de comida de verdad que tristeza",
+        "likes": "0",
+        "published_at": "2026-01-25T18:24:56Z",
+        "reply_count": "0",
+        "sentimiento": "NEUTRAL",
+        "timestamp": "2026-10-02T13:36:36.049321"
+      },
+      {
+        "candidate": "JULIAN SANCHE PERICO",
+        "video_id": "9cNqEyj5ajg",
+        "video_title": "@𝐏𝐀𝐍𝐎𝐑𝐀𝐌𝐀 𝐒𝐏𝐎𝐑𝐓: Alcalde de Soacha Dr. Julian Sanchez Perico",
+        "author": "@Mauricio-q9f9u",
+        "text": "El alcalde que no ha hecho nada por Soacha, mucho bombo para elegirlo y nada de avance, el cambio de alcalde se dió pero el cambio que había antes ya no avanzo, ahí está su famoso perico alcalde, que no sirve para nada, bien por las que tienen su puesto en la alcaldía por ponerse su camiseta rosada y salir a arengar a su tal perico alcalde 🤦🏻‍♂️🤦🏻‍♂️🤷🏻‍♂️🤷🏻‍♂️",
+        "likes": "0",
+        "published_at": "2025-08-07T16:00:18Z",
+        "reply_count": "0",
+        "sentimiento": "NEUTRAL",
+        "timestamp": "2026-10-02T13:36:36.279034"
       }
     ]
   }
