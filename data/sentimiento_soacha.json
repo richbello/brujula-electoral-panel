@@ -1,59 +1,54 @@
 {
   "meta": {
-    "generado": "2026-10-02T13:51:31.963894",
-    "fuente": "YouTube Data API v3",
+    "generado": "2026-10-02T14:59:14.217853",
+    "fuente": "YouTube + TikTok (Apify Scraper)",
     "ventana": "últimos 30 días",
-    "total_comentarios": 26,
+    "total_comentarios": 32,
     "modelo": "claude-haiku-4-5-20251001"
   },
   "candidatos": {
     "DANNY CAICEDO": {
       "es_cliente": true,
       "partido": "Concejal de oposición",
-      "sentimiento_promedio": -0.76,
+      "sentimiento_promedio": -0.7,
       "tendencia": "baja",
-      "total_posts": 2,
-      "total_comentarios": 21,
-      "toxicidad_pct": 95,
+      "total_posts": 3,
+      "total_comentarios": 23,
+      "toxicidad_pct": 91,
       "alerta_toxicidad": true,
       "por_plataforma": {
         "youtube": {
-          "score": -0.76,
+          "score": -0.69,
           "posts": 2,
           "comentarios": 21
+        },
+        "tiktok": {
+          "score": -0.8,
+          "posts": 1,
+          "comentarios": 2
         }
       },
       "temas": [
         {
-          "tema": "Gestión",
+          "tema": "Seguridad",
           "score": -0.8,
-          "menciones": 5
+          "menciones": 1
         },
         {
           "tema": "Corrupción",
-          "score": -0.9,
-          "menciones": 7
+          "score": -0.8,
+          "menciones": 8
         },
         {
-          "tema": "Credibilidad",
-          "score": -0.75,
-          "menciones": 6
-        },
-        {
-          "tema": "Impuestos",
-          "score": -0.6,
-          "menciones": 3
-        },
-        {
-          "tema": "Obras Públicas",
-          "score": -0.7,
-          "menciones": 3
+          "tema": "Infraestructura",
+          "score": -0.8,
+          "menciones": 2
         }
       ],
       "serie": [
         {
           "f": "02 Oct",
-          "s": -0.76
+          "s": -0.7
         }
       ],
       "posts_destacados": [
@@ -61,21 +56,19 @@
           "plataforma": "youtube",
           "fecha": "2023-10-09",
           "score": -0.8,
-          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
-          "tema": "",
-          "comentarios": 1,
+          "resumen": "Eso de que tenga media Soacha empapelada....eso deja mucho que pensar cuantos favores políticos tienes que pagar señor Danny... Algo que dicen los abu",
+          "tema": "Corrupción",
+          "comentarios": 0,
           "comentario_pos": "",
-          "comentario_neg": "Eso de que tenga media Soacha empapelada....eso deja mucho que pensar cuantos favores políticos tienes que pagar señor Danny... Algo que dicen los abuelos...\"Na"
+          "comentario_neg": "Eso de que tenga media Soacha empapelada....eso deja mucho que pensar cuantos favores políticos tienes que pagar señor Danny... Algo que dicen los abu"
         },
         {
           "plataforma": "youtube",
           "fecha": "2023-09-23",
           "score": -0.8,
-          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
-          "tema": "",
-          "comentarios": 1,
+          "resumen": "A ese señor se le pierde todo, si Soacha lo elige va terminar perdiendo, no conozco los demás candidatos pero que tristeza ver este señor",
+          "tema": "Gestión",
+          "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "A ese señor se le pierde todo, si Soacha lo elige va terminar perdiendo, no conozco los demás candidatos pero que tristeza ver este señor"
         },
@@ -83,57 +76,45 @@
           "plataforma": "youtube",
           "fecha": "2023-09-19",
           "score": -0.8,
-          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
-          "tema": "",
-          "comentarios": 1,
+          "resumen": "Investiguen todas las denuncias que hay contra este señor",
+          "tema": "Corrupción",
+          "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "Investiguen todas las denuncias que hay contra este señor"
-        },
-        {
-          "plataforma": "youtube",
-          "fecha": "2023-09-19",
-          "score": -0.8,
-          "resumen": "Danny Caicedo, candidato a la Alcaldía de Soacha, en la Plaza Caracol",
-          "url": "https://youtube.com/watch?v=aTRjX2bXTP4",
-          "tema": "",
-          "comentarios": 1,
-          "comentario_pos": "",
-          "comentario_neg": "Genial el señor que le encanta constreñir al elector !"
         }
       ]
     },
-    "JULIAN SANCHE PERICO": {
+    "GIOVANNI RAMIREZ MOYA": {
       "es_cliente": false,
-      "partido": "Alcalde actual",
+      "partido": "Concejal",
       "sentimiento_promedio": -0.8,
       "tendencia": "baja",
-      "total_posts": 2,
-      "total_comentarios": 5,
+      "total_posts": 1,
+      "total_comentarios": 2,
       "toxicidad_pct": 100,
       "alerta_toxicidad": true,
       "por_plataforma": {
         "youtube": {
+          "score": 0,
+          "posts": 0,
+          "comentarios": 0
+        },
+        "tiktok": {
           "score": -0.8,
-          "posts": 2,
-          "comentarios": 5
+          "posts": 1,
+          "comentarios": 2
         }
       },
       "temas": [
         {
           "tema": "Gestión",
-          "score": -0.9,
-          "menciones": 5
-        },
-        {
-          "tema": "Infraestructura",
           "score": -0.8,
-          "menciones": 4
+          "menciones": 1
         },
         {
-          "tema": "Obras Públicas",
-          "score": -0.85,
-          "menciones": 3
+          "tema": "Corrupción",
+          "score": -0.8,
+          "menciones": 1
         }
       ],
       "serie": [
@@ -144,48 +125,101 @@
       ],
       "posts_destacados": [
         {
+          "plataforma": "tiktok",
+          "fecha": "2024-09-16",
+          "score": -0.8,
+          "resumen": "y las obras ? o el sancocho soluciona la problemática del municipio",
+          "tema": "Gestión",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "y las obras ? o el sancocho soluciona la problemática del municipio"
+        },
+        {
+          "plataforma": "tiktok",
+          "fecha": "2024-09-16",
+          "score": -0.8,
+          "resumen": "no falta el que regala por un sancocho",
+          "tema": "Corrupción",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "no falta el que regala por un sancocho"
+        }
+      ]
+    },
+    "JULIAN SANCHE PERICO": {
+      "es_cliente": false,
+      "partido": "Alcalde actual",
+      "sentimiento_promedio": -0.8,
+      "tendencia": "baja",
+      "total_posts": 3,
+      "total_comentarios": 7,
+      "toxicidad_pct": 100,
+      "alerta_toxicidad": true,
+      "por_plataforma": {
+        "youtube": {
+          "score": -0.8,
+          "posts": 2,
+          "comentarios": 5
+        },
+        "tiktok": {
+          "score": -0.8,
+          "posts": 1,
+          "comentarios": 2
+        }
+      },
+      "temas": [
+        {
+          "tema": "Infraestructura",
+          "score": -0.8,
+          "menciones": 4
+        },
+        {
+          "tema": "Gestión",
+          "score": -0.8,
+          "menciones": 2
+        },
+        {
+          "tema": "Seguridad",
+          "score": -0.8,
+          "menciones": 1
+        }
+      ],
+      "serie": [
+        {
+          "f": "02 Oct",
+          "s": -0.8
+        }
+      ],
+      "posts_destacados": [
+        {
+          "plataforma": "tiktok",
+          "fecha": "2026-09-24",
+          "score": -0.8,
+          "resumen": "No han acabado con las calles de Soacha que están sin pavimentar ahora cuántos años más en esa obra y aparte un peaje",
+          "tema": "Infraestructura",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "No han acabado con las calles de Soacha que están sin pavimentar ahora cuántos años más en esa obra y aparte un peaje"
+        },
+        {
           "plataforma": "youtube",
           "fecha": "2025-12-24",
           "score": -0.8,
-          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
-          "tema": "",
-          "comentarios": 1,
+          "resumen": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La a",
+          "tema": "Infraestructura",
+          "comentarios": 0,
           "comentario_pos": "",
-          "comentario_neg": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La autopista s"
+          "comentario_neg": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La a"
         },
         {
           "plataforma": "youtube",
           "fecha": "2026-02-20",
           "score": -0.8,
-          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
-          "tema": "",
-          "comentarios": 1,
+          "resumen": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no",
+          "tema": "Infraestructura",
+          "comentarios": 0,
           "comentario_pos": "",
-          "comentario_neg": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no sean tan "
-        },
-        {
-          "plataforma": "youtube",
-          "fecha": "2025-12-23",
-          "score": -0.8,
-          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
-          "tema": "",
-          "comentarios": 1,
-          "comentario_pos": "",
-          "comentario_neg": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto"
-        },
-        {
-          "plataforma": "youtube",
-          "fecha": "2026-01-25",
-          "score": -0.8,
-          "resumen": "Entrevista a Julián Sánchez &#39;Perico&#39; – alcalde de Soacha | Especiales AHORA",
-          "url": "https://youtube.com/watch?v=QEyuRopAgMg",
-          "tema": "",
-          "comentarios": 1,
-          "comentario_pos": "",
-          "comentario_neg": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que trabajan h"
+          "comentario_neg": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no"
         }
       ]
     }

@@ -1,0 +1,41 @@
+﻿# === SECRETOS — NUNCA subir ===
+.env
+*.key
+*_secret*
+*apikey*
+
+# Scraper con msToken de TikTok hardcodeado
+tiktok_scraper_soacha.py
+
+# === Datos crudos (no van a producción) ===
+yt_comments_raw.csv
+tiktok_comments_raw.csv
+tiktok_comments.json
+data/_comentarios_*.csv
+data/_raw_comentarios.json
+data/_analizado.json
+
+# === Scripts de desarrollo / versiones viejas ===
+18_scraper_sentimiento.ps1
+19_analisis_sentimiento.ps1
+20_export_sentimiento_json.ps1
+21_youtube_sentimiento_pipeline.ps1
+21_youtube_sentimiento_v4.py
+21_youtube_sentimiento_v5.py
+helpers.ps1
+run-sentimiento.ps1
+
+# === Python ===
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# === Sistema ===
+.DS_Store
+Thumbs.db
+
+yt_scraper_soacha.py
+yt_scraper_soacha_v3.py
+
+22_youtube_sentimiento_formato_pagina.py
