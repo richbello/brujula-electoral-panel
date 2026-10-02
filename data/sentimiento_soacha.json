@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "generated_at": "2026-10-02T13:37:51.061140",
+    "generated_at": "2026-10-02T13:43:01.346803",
     "source": "YouTube Data API v3",
     "total_comments": 26,
-    "analysis_model": "claude-3-5-sonnet-20241022"
+    "analysis_model": "claude-haiku-4-5-20251001"
   },
   "candidates": {
     "DANNY CAICEDO": [
@@ -16,8 +16,8 @@
         "likes": "0",
         "published_at": "2026-10-01T15:54:17Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:44.756093"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:42.639122"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -28,8 +28,8 @@
         "likes": "14",
         "published_at": "2023-10-09T13:30:01Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:44.997507"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:43.238548"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -40,8 +40,8 @@
         "likes": "5",
         "published_at": "2023-09-19T21:40:02Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:45.233160"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:43.858558"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -52,8 +52,8 @@
         "likes": "3",
         "published_at": "2023-10-09T17:27:48Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:45.467788"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:44.466688"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -64,8 +64,8 @@
         "likes": "12",
         "published_at": "2023-09-23T17:24:48Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:45.704972"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:45.083648"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -76,8 +76,8 @@
         "likes": "11",
         "published_at": "2023-09-19T16:28:52Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:45.952015"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:45.654987"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -88,8 +88,8 @@
         "likes": "0",
         "published_at": "2023-10-31T02:10:59Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:46.185842"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:46.224204"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -100,8 +100,8 @@
         "likes": "2",
         "published_at": "2023-09-28T18:24:00Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:46.420376"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:46.819281"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -113,7 +113,7 @@
         "published_at": "2023-10-17T01:51:49Z",
         "reply_count": "0",
         "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:46.703532"
+        "timestamp": "2026-10-02T13:42:47.397510"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -124,8 +124,8 @@
         "likes": "0",
         "published_at": "2023-10-25T00:24:41Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:46.945814"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:48.006223"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -136,8 +136,8 @@
         "likes": "0",
         "published_at": "2023-10-27T00:32:50Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:47.197372"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:48.650924"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -148,8 +148,8 @@
         "likes": "4",
         "published_at": "2023-09-29T02:24:30Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:47.460996"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:49.249301"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -160,8 +160,8 @@
         "likes": "2",
         "published_at": "2023-10-27T01:13:40Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:47.717938"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:49.842077"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -172,8 +172,8 @@
         "likes": "1",
         "published_at": "2023-10-06T23:44:51Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:47.954203"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:50.536512"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -184,8 +184,8 @@
         "likes": "0",
         "published_at": "2023-10-06T00:01:52Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:48.190280"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:51.095550"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -196,8 +196,8 @@
         "likes": "1",
         "published_at": "2023-10-07T19:55:32Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:48.423314"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:51.827569"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -208,8 +208,8 @@
         "likes": "1",
         "published_at": "2023-10-25T16:18:22Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:48.677005"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:52.379829"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -220,8 +220,8 @@
         "likes": "1",
         "published_at": "2023-11-04T15:52:15Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:48.969686"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:52.933575"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -232,8 +232,8 @@
         "likes": "0",
         "published_at": "2023-10-27T06:11:03Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:49.212939"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:53.484248"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -244,8 +244,8 @@
         "likes": "5",
         "published_at": "2023-09-30T19:22:57Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:49.453229"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:54.049587"
       },
       {
         "candidate": "DANNY CAICEDO",
@@ -256,8 +256,8 @@
         "likes": "0",
         "published_at": "2023-10-17T01:55:36Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:49.711814"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:54.612885"
       }
     ],
     "JULIAN SANCHE PERICO": [
@@ -270,8 +270,8 @@
         "likes": "2",
         "published_at": "2025-12-24T00:00:11Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:49.958795"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:58.281323"
       },
       {
         "candidate": "JULIAN SANCHE PERICO",
@@ -282,8 +282,8 @@
         "likes": "0",
         "published_at": "2026-02-20T09:55:20Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:50.215927"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:58.867019"
       },
       {
         "candidate": "JULIAN SANCHE PERICO",
@@ -294,8 +294,8 @@
         "likes": "0",
         "published_at": "2025-12-23T22:21:46Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:50.476469"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:42:59.449548"
       },
       {
         "candidate": "JULIAN SANCHE PERICO",
@@ -306,8 +306,8 @@
         "likes": "0",
         "published_at": "2026-01-25T18:24:56Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:50.789804"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:43:00.105937"
       },
       {
         "candidate": "JULIAN SANCHE PERICO",
@@ -318,8 +318,8 @@
         "likes": "0",
         "published_at": "2025-08-07T16:00:18Z",
         "reply_count": "0",
-        "sentimiento": "NEUTRAL",
-        "timestamp": "2026-10-02T13:37:51.060168"
+        "sentimiento": "NEGATIVO",
+        "timestamp": "2026-10-02T13:43:01.346803"
       }
     ]
   }
