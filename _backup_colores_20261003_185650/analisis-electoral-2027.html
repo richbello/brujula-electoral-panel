@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brújula Electoral 2027 - Análisis Impacto Petro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .tab-button {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            background: #f5f5f5;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #666;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .tab-button:hover {
+            background: #eee;
+        }
+        
+        .tab-button.active {
+            background: white;
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 40px;
+            animation: fadeIn 0.3s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 30px 0;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .metric {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .metric-value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .metric-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .delta-positive {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .delta-negative {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #ddd;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 24px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .nota {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗳️ Brújula Electoral 2027</h1>
+            <p>Análisis del impacto Petro 2023→2026 y predicción para elecciones 2027</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab(0)">📍 Desagregación Localidades</button>
+            <button class="tab-button" onclick="switchTab(1)">📊 Volatilidad Electoral</button>
+            <button class="tab-button" onclick="switchTab(2)">🎯 Predicción 2027</button>
+        </div>
+        
+        <!-- TAB 1: DESAGREGACIÓN LOCALIDADES -->
+        <div id="tab-0" class="tab-content active">
+            <h2>Impacto Petro 2023→2026 por Localidad</h2>
+            <p>Cambio de votos hacia la izquierda, municipio a municipio en Bogotá.</p>
+            
+            <div class="chart-container">
+                <canvas id="chart1"></canvas>
+            </div>
+            
+            <table id="table-desagregacion">
+                <thead>
+                    <tr>
+                        <th>Localidad</th>
+                        <th>% IZQ 2023</th>
+                        <th>% IZQ 2026</th>
+                        <th>Delta (pp)</th>
+                        <th>Votos 2026</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5" class="loading">Cargando datos...</td></tr>
+                </tbody>
+            </table>
+            
+            <div class="nota">
+                📌 <strong>Nota:</strong> Cobertura 9/20 localidades (44% de registros). Localidades faltantes: Kennedy, Suba, Barrios Unidos, etc.
+            </div>
+        </div>
+        
+        <!-- TAB 2: VOLATILIDAD ELECTORAL -->
+        <div id="tab-1" class="tab-content">
+            <h2>Volatilidad Electoral 2023→2026</h2>
+            <p>Cambio de voto por ideología y factores aplicables a 2027.</p>
+            
+            <div class="metrics-grid" id="metrics-volatilidad"></div>
+            
+            <div class="chart-container">
+                <canvas id="chart2"></canvas>
+            </div>
+            
+            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Factores de volatilidad 2027</h3>
+            <table id="table-volatilidad">
+                <thead>
+                    <tr>
+                        <th>Ideología</th>
+                        <th>Votos 2023</th>
+                        <th>Votos 2026</th>
+                        <th>Delta</th>
+                        <th>Cambio %</th>
+                        <th>Factor 2027</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="6" class="loading">Cargando datos...</td></tr>
+                </tbody>
+            </table>
+            
+            <div class="nota">
+                🔥 <strong>Interpretación:</strong> Un candidato de izquierda que sacó 500 votos en 2023 espera ~3,207 en 2027. Un candidato de centro que sacó 5,000 espera sólo 830.
+            </div>
+        </div>
+        
+        <!-- TAB 3: PREDICCIÓN 2027 -->
+        <div id="tab-2" class="tab-content">
+            <h2>Predicción 2027 (Top 30 Candidatos)</h2>
+            <p>Proyección aplicando factores de volatilidad 2026 a candidatos 2023.</p>
+            
+            <table id="table-prediccion">
+                <thead>
+                    <tr>
+                        <th>Candidato</th>
+                        <th>Partido</th>
+                        <th>Ideología</th>
+                        <th>Votos 2023</th>
+                        <th>Proyectados 2027</th>
+                        <th>Delta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="6" class="loading">Cargando datos...</td></tr>
+                </tbody>
+            </table>
+            
+            <div class="nota">
+                📌 <strong>BETA:</strong> Proyección requiere candidatos oficiales 2027 de Registraduría para refinamiento. Cuando se publique lista oficial, se refinarán proyecciones con coeficientes por candidato.
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Brújula Electoral IA | Análisis predictivo de voto por puesto 2027</p>
+            <p>Datos: RNEC (Registraduría Nacional de Estado Civil)</p>
+            <p>Última actualización: 26 de septiembre de 2026</p>
+        </div>
+    </div>
+    
+    <script>
+        let charts = {};
+        
+        function switchTab(tabIndex) {
+            // Ocultar todos los tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Mostrar tab activo
+            document.getElementById(`tab-${tabIndex}`).classList.add('active');
+            document.querySelectorAll('.tab-button')[tabIndex].classList.add('active');
+            
+            // Redibujar gráficos si es necesario
+            if (charts[`chart${tabIndex + 1}`]) {
+                setTimeout(() => charts[`chart${tabIndex + 1}`].resize(), 100);
+            }
+        }
+        
+        // Cargar datos
+        async function loadData() {
+            try {
+                // Cargar desagregación
+                const desagRes = await fetch('./data/desagregacion_localidad.json');
+                const desagData = await desagRes.json();
+                populateDesagregacion(desagData);
+                
+                // Cargar volatilidad
+                const volRes = await fetch('./data/volatilidad_electoral.json');
+                const volData = await volRes.json();
+                populateVolatilidad(volData);
+                
+                // Cargar predicción
+                const predRes = await fetch('./data/prediccion_2027.json');
+                const predData = await predRes.json();
+                populatePrediccion(predData);
+            } catch (error) {
+                console.error('Error cargando datos:', error);
+                document.body.innerHTML = `<div style="padding: 40px; text-align: center; color: red;">
+                    <h2>Error al cargar datos</h2>
+                    <p>Asegúrate de que los archivos JSON estén en la carpeta <code>/data/</code></p>
+                    <p>${error.message}</p>
+                </div>`;
+            }
+        }
+        
+        function populateDesagregacion(data) {
+            const tbody = document.querySelector('#table-desagregacion tbody');
+            tbody.innerHTML = '';
+            
+            const sorted = data.localidades.sort((a, b) => (b.DELTA || 0) - (a.DELTA || 0));
+            
+            sorted.forEach(loc => {
+                const deltaClass = (loc.DELTA || 0) > 0 ? 'delta-positive' : 'delta-negative';
+                const row = `
+                    <tr>
+                        <td>${loc.localidad}</td>
+                        <td>${loc['%IZQ_2023'].toFixed(1)}%</td>
+                        <td>${(loc['%IZQ_2026'] || 'N/A').toFixed ? loc['%IZQ_2026'].toFixed(1) + '%' : 'N/A'}</td>
+                        <td class="${deltaClass}">${(loc.DELTA || 'N/A').toFixed ? loc.DELTA.toFixed(1) + 'pp' : 'N/A'}</td>
+                        <td>${loc.VOTOS_2026 ? loc.VOTOS_2026.toLocaleString('es-CO') : 'N/A'}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+            
+            // Gráfico
+            const labels = sorted.filter(l => l.DELTA).map(l => l.localidad);
+            const deltas = sorted.filter(l => l.DELTA).map(l => l.DELTA);
+            
+            const ctx = document.getElementById('chart1').getContext('2d');
+            charts.chart1 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Delta Izquierda (pp)',
+                        data: deltas,
+                        backgroundColor: deltas.map(d => d > 0 ? '#e74c3c' : '#27ae60'),
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+        }
+        
+        function populateVolatilidad(data) {
+            // Métricas
+            const metricsHtml = data.datos.map(d => `
+                <div class="metric">
+                    <div class="metric-value">${d.factor}x</div>
+                    <div class="metric-label">${d.ideologia}</div>
+                </div>
+            `).join('');
+            document.getElementById('metrics-volatilidad').innerHTML = metricsHtml;
+            
+            // Tabla
+            const tbody = document.querySelector('#table-volatilidad tbody');
+            tbody.innerHTML = data.datos.map(d => `
+                <tr>
+                    <td><strong>${d.ideologia}</strong></td>
+                    <td>${d.votos_2023.toLocaleString('es-CO')}</td>
+                    <td>${d.votos_2026.toLocaleString('es-CO')}</td>
+                    <td class="${d.delta > 0 ? 'delta-positive' : 'delta-negative'}">${d.delta > 0 ? '+' : ''}${d.delta.toLocaleString('es-CO')}</td>
+                    <td class="${d.cambio_pct > 0 ? 'delta-positive' : 'delta-negative'}">${d.cambio_pct > 0 ? '+' : ''}${d.cambio_pct}%</td>
+                    <td><strong>${d.factor}x</strong></td>
+                </tr>
+            `).join('');
+            
+            // Gráfico
+            const ctx = document.getElementById('chart2').getContext('2d');
+            charts.chart2 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.datos.map(d => d.ideologia),
+                    datasets: [
+                        {
+                            label: 'Votos 2023',
+                            data: data.datos.map(d => d.votos_2023),
+                            backgroundColor: '#667eea'
+                        },
+                        {
+                            label: 'Votos 2026',
+                            data: data.datos.map(d => d.votos_2026),
+                            backgroundColor: '#764ba2'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+        }
+        
+        function populatePrediccion(data) {
+            const tbody = document.querySelector('#table-prediccion tbody');
+            tbody.innerHTML = data.candidatos.map(c => {
+                const deltaClass = c.delta > 0 ? 'delta-positive' : 'delta-negative';
+                return `
+                    <tr>
+                        <td><strong>${c.candidato}</strong></td>
+                        <td>${c.partido}</td>
+                        <td>${c.ideologia}</td>
+                        <td>${c.votos.toLocaleString('es-CO')}</td>
+                        <td><strong>${c.votos_2027_proyectado.toLocaleString('es-CO')}</strong></td>
+                        <td class="${deltaClass}">${c.delta > 0 ? '+' : ''}${c.delta.toLocaleString('es-CO')}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        // Cargar al iniciar
+        loadData();
+    </script>
+</body>
+</html>

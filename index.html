@@ -10,26 +10,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#2C3E2E;          /* verde truffle, estructura */
-  --ink-2:#1F2E20;
-  --ink-3:#1F2E20;
-  --paper:#eef1f5;        /* fondo de trabajo */
+  --ink:#0F1C2E;          /* verde truffle, estructura */
+  --ink-2:#0A1626;
+  --ink-3:#0A1626;
+  --paper:#F4F6F9;        /* fondo de trabajo */
   --surface:#ffffff;
-  --line:#dde3ec;
-  --line-strong:#c4cedb;
-  --text:#233145;
-  --muted:#6a7688;
-  --muted-2:#93a0b2;
-  --brass:#C9A961;        /* la aguja de la brújula: oro mate */
-  --brass-deep:#A88A4F;
-  --brass-soft:#f5f3ed;
+  --line:#E2E8F0;
+  --line-strong:#CBD5E1;
+  --text:#1C2A3F;
+  --muted:#6B7A90;
+  --muted-2:#94A3B8;
+  --brass:#C8A560;        /* la aguja de la brújula: oro mate */
+  --brass-deep:#A98841;
+  --brass-soft:#F4EDDA;
   --scale-0:#e8eef6;      /* escala de fuerza (azul secuencial) */
   --scale-1:#b9cbe4;
   --scale-2:#7c9cc9;
   --scale-3:#4a72a8;
   --scale-4:#274d80;
-  --ok:#2f7d5b;
-  --down:#a4503c;
+  --ok:#2E9E7B;
+  --down:#C0485A;
   --radius:10px;
   --shadow:0 1px 2px rgba(19,32,51,.06), 0 8px 24px rgba(19,32,51,.05);
   font-variant-numeric:tabular-nums;
@@ -320,9 +320,9 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
 <div class="topbar">
   <div class="brand">
     <svg class="compass" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="24" cy="24" r="21" stroke="#C9A961" stroke-width="2.5"/>
+      <circle cx="24" cy="24" r="21" stroke="#C8A560" stroke-width="2.5"/>
       <circle cx="24" cy="24" r="3" fill="#fff"/>
-      <path d="M24 7 L28 22 L24 24 L20 22 Z" fill="#C9A961"/>
+      <path d="M24 7 L28 22 L24 24 L20 22 Z" fill="#C8A560"/>
       <path d="M24 41 L20 26 L24 24 L28 26 Z" fill="#f2f5f9"/>
     </svg>
     <div>
@@ -431,7 +431,7 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
         <div class="panel-head">
           <div><h3>Pulso social en redes</h3><p>Sentimiento del público en redes sociales.</p></div>
         </div>
-        <div id="pulsoContent" style="padding:20px;text-align:center;color:#93a0b2">Cargando análisis de redes...</div>
+        <div id="pulsoContent" style="padding:20px;text-align:center;color:#94A3B8">Cargando análisis de redes...</div>
       </section>
     </div>
     <div id="anal" style="display:none"></div>
@@ -661,7 +661,7 @@ function renderPuestos(c){
     r.innerHTML=`<div class="rank num">${k+1}</div><div class="pinfo"><div class="pn">${esc(p.n)}</div><div class="pl">${esc(uNom(p.l))}</div></div>
       <div class="pmet"><div class="pv num">${fmt(v)}</div><div class="ps num">${(v/c.v*100).toFixed(1)}%</div></div>
       <div class="pbar"><i style="width:${(t*100).toFixed(1)}%;background:${scaleColor(t)}"></i></div>`;el.appendChild(r);});
-  if(c.p.length>60){const d=document.createElement("div");d.style.cssText="padding:12px 16px;font-size:12.5px;color:#93a0b2";d.textContent="Y "+(c.p.length-60)+" puestos más con votos.";el.appendChild(d);}
+  if(c.p.length>60){const d=document.createElement("div");d.style.cssText="padding:12px 16px;font-size:12.5px;color:#94A3B8";d.textContent="Y "+(c.p.length-60)+" puestos más con votos.";el.appendChild(d);}
 }
 function renderUnidades(c,porU){
   const el=$("#locList");el.innerHTML="";const max=porU[0].v;
@@ -860,24 +860,24 @@ function renderPulso(datos) {
   el.innerHTML = "";
   
   let html = `<div style="max-width:800px;margin:0 auto">
-    <p style="font-size:12px;color:#93a0b2;margin-bottom:20px">Actualizado: ${datos.actualizado}</p>`;
+    <p style="font-size:12px;color:#94A3B8;margin-bottom:20px">Actualizado: ${datos.actualizado}</p>`;
   
   const cands = Object.entries(datos.candidatos).sort((a,b) => b[1].sentimiento_promedio - a[1].sentimiento_promedio);
   
   cands.forEach(([nombre, d]) => {
     const score = d.sentimiento_promedio;
-    const color = score > 0.5 ? "#2f7d5b" : score < -0.5 ? "#a4503c" : "#93a0b2";
+    const color = score > 0.5 ? "#2E9E7B" : score < -0.5 ? "#C0485A" : "#94A3B8";
     const anchoPct = Math.abs(score) * 100;
     
     html += `<div style="margin-bottom:22px;padding:14px;background:#f7f9fc;border-radius:10px;border-left:3px solid ${color}">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <strong style="color:#2C3E2E">${esc(nombre)}</strong>
+        <strong style="color:#0F1C2E">${esc(nombre)}</strong>
         <span style="font-size:18px;font-weight:700;color:${color}">${score.toFixed(2)}</span>
       </div>
       <div style="height:8px;background:#e8eef6;border-radius:4px;overflow:hidden;margin-bottom:8px">
         <i style="display:block;height:100%;width:${anchoPct}%;background:${color};border-radius:4px"></i>
       </div>
-      <div style="font-size:12px;color:#93a0b2;margin-bottom:8px">${d.posts} posts analizados</div>`;
+      <div style="font-size:12px;color:#94A3B8;margin-bottom:8px">${d.posts} posts analizados</div>`;
     
     if (d.temas && d.temas.length > 0) {
       html += `<div style="font-size:11px">Temas: ${d.temas.map(t => `<span style="display:inline-block;background:#f0e2c2;padding:2px 6px;border-radius:3px;margin-right:4px">${esc(t.tema)} (${t.menciones})</span>`).join("")}</div>`;
@@ -901,7 +901,7 @@ DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
 <div style="position: fixed; top: 100px; right: 20px; z-index: 998;">
     <a href="soacha-2027.html" style="
         display: inline-block;
-        background: #C9A961;
+        background: #C8A560;
         color: white;
         padding: 12px 18px;
         border-radius: 6px;
@@ -911,7 +911,7 @@ DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
         box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
         transition: all 0.3s ease;
         font-family: 'Archivo', sans-serif;
-    " onmouseover="this.style.background='#A88A4F'" onmouseout="this.style.background='#C9A961'">
+    " onmouseover="this.style.background='#A98841'" onmouseout="this.style.background='#C8A560'">
         Electoral 2027
     </a>
 </div><script src="js/analisis-soacha.js" defer></script>

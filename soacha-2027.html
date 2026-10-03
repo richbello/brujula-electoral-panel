@@ -10,14 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#2C3E2E; --ink-2:#1F2E20;
-  --paper:#eef1f5; --surface:#ffffff;
-  --line:#dde3ec; --line-strong:#c4cedb;
-  --text:#233145; --muted:#6a7688; --muted-2:#93a0b2;
-  --brass:#C9A961; --brass-deep:#A88A4F; --brass-soft:#f5f3ed;
-  --ok:#2f7d5b; --ok-soft:#e7f1ea;
-  --warn:#b5852a; --warn-soft:#f7efd9;
-  --down:#a4503c; --down-soft:#f3e4df;
+  --ink:#0F1C2E; --ink-2:#0A1626;
+  --paper:#F4F6F9; --surface:#ffffff;
+  --line:#E2E8F0; --line-strong:#CBD5E1;
+  --text:#1C2A3F; --muted:#6B7A90; --muted-2:#94A3B8;
+  --brass:#C8A560; --brass-deep:#A98841; --brass-soft:#F4EDDA;
+  --ok:#2E9E7B; --ok-soft:#E4F3EC;
+  --warn:#BE8A2C; --warn-soft:#F7EFDA;
+  --down:#C0485A; --down-soft:#F6E3E6;
   --radius:12px;
   --shadow:0 1px 2px rgba(19,32,51,.06), 0 8px 24px rgba(19,32,51,.05);
   font-variant-numeric:tabular-nums;
@@ -184,7 +184,7 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
   </div>
 
   <div class="banner" id="demoBanner" style="display:none">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b5852a" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE8A2C" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
     <div><b>Datos de demostración.</b> Estás viendo resultados de prueba. Cuando conectemos las APIs reales de Facebook y YouTube, estas cifras se reemplazan solas con la conversación real de cada candidato.</div>
   </div>
 
@@ -208,11 +208,11 @@ const PLAT_ICON = {
 
 // Verde (positivo) → ámbar (neutro) → rojo (negativo), según score -1..1
 function scoreColor(s){
-  if(s >= 0.6) return '#2f7d5b';
+  if(s >= 0.6) return '#2E9E7B';
   if(s >= 0.35) return '#6a9f4f';
-  if(s >= 0.1) return '#b5852a';
+  if(s >= 0.1) return '#BE8A2C';
   if(s >= -0.2) return '#c6763f';
-  return '#a4503c';
+  return '#C0485A';
 }
 function pct(s){ return Math.round(((s+1)/2)*100); } // -1..1 → 0..100
 function fmt(s){ return (s>=0?'+':'') + s.toFixed(2); }
@@ -290,7 +290,7 @@ function postBlock(p){
 
 function candCard([nombre,d]){
   const s=d.sentimiento_promedio, col=scoreColor(s);
-  const toxCol = d.alerta_toxicidad ? '#a4503c' : (d.toxicidad_pct>15?'#b5852a':'#2f7d5b');
+  const toxCol = d.alerta_toxicidad ? '#C0485A' : (d.toxicidad_pct>15?'#BE8A2C':'#2E9E7B');
   const serieFirst = d.serie&&d.serie.length?d.serie[0].f:'';
   const serieLast  = d.serie&&d.serie.length?d.serie[d.serie.length-1].f:'';
   return `<div class="cand ${d.es_cliente?'client':''}">

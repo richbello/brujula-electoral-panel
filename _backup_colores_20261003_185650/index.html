@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Brújula Electoral IA — Panel de fuerza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2C3E2E;          /* verde truffle, estructura */
+  --ink-2:#1F2E20;
+  --ink-3:#1F2E20;
+  --paper:#eef1f5;        /* fondo de trabajo */
+  --surface:#ffffff;
+  --line:#dde3ec;
+  --line-strong:#c4cedb;
+  --text:#233145;
+  --muted:#6a7688;
+  --muted-2:#93a0b2;
+  --brass:#C9A961;        /* la aguja de la brújula: oro mate */
+  --brass-deep:#A88A4F;
+  --brass-soft:#f5f3ed;
+  --scale-0:#e8eef6;      /* escala de fuerza (azul secuencial) */
+  --scale-1:#b9cbe4;
+  --scale-2:#7c9cc9;
+  --scale-3:#4a72a8;
+  --scale-4:#274d80;
+  --ok:#2f7d5b;
+  --down:#a4503c;
+  --radius:10px;
+  --shadow:0 1px 2px rgba(19,32,51,.06), 0 8px 24px rgba(19,32,51,.05);
+  font-variant-numeric:tabular-nums;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{
+  margin:0;min-height:100%;
+  background:var(--paper);
+  color:var(--text);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:15px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+h1,h2,h3,h4{font-family:"Archivo",system-ui,sans-serif;margin:0;color:var(--ink);letter-spacing:-.01em}
+button{font-family:inherit}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* ---------- Barra superior ---------- */
+.topbar{
+  position:sticky;top:0;z-index:40;
+  display:flex;align-items:center;gap:14px;
+  padding:calc(12px + env(safe-area-inset-top,0px)) 22px 12px;
+  background:var(--ink);color:#fff;
+  border-bottom:1px solid #0c1523;
+}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.compass{width:30px;height:30px;flex:0 0 auto;filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
+.brand .name{font-family:"Archivo";font-weight:800;font-size:17px;color:#fff;letter-spacing:-.02em;white-space:nowrap}
+.brand .name b{color:var(--brass)}
+.brand .sub{font-size:12px;color:#9fb0c6;margin-top:-2px;white-space:nowrap}
+.topbar .spacer{flex:1}
+.meta-pill{
+  display:none;align-items:center;gap:7px;font-size:12.5px;color:#b7c4d6;
+  padding:5px 11px;border:1px solid #33445c;border-radius:99px;
+}
+.meta-pill b{color:#fff;font-weight:600}
+@media(min-width:820px){.meta-pill{display:inline-flex}}
+.btn-load{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--brass);color:#231802;border:none;cursor:pointer;
+  font-weight:600;font-size:13.5px;padding:9px 15px;border-radius:8px;
+  transition:background .15s;
+}
+.btn-load:hover{background:#cf9a41}
+.btn-load svg{width:15px;height:15px}
+
+/* ---------- Estructura ---------- */
+.shell{display:grid;grid-template-columns:1fr}
+@media(min-width:900px){.shell{grid-template-columns:300px 1fr}}
+.main-inner{max-width:1180px}
+
+/* ---------- Rail de candidatos ---------- */
+.rail{
+  background:var(--ink);color:#e8edf4;
+  border-right:1px solid #0c1523;
+  display:flex;flex-direction:column;
+  max-height:none;
+}
+@media(min-width:900px){.rail{position:sticky;top:55px;height:calc(100vh - 55px)}}
+.rail-head{padding:16px 16px 12px;border-bottom:1px solid #223349}
+.rail-head .lbl{font-size:11.5px;color:#8fa0b7;text-transform:none;font-weight:600;letter-spacing:.02em}
+.rail-head h2{color:#fff;font-size:15px;font-weight:600;margin-top:1px}
+.search{position:relative;margin-top:11px}
+.search input{
+  width:100%;background:#0e1a2b;border:1px solid #2a3d55;color:#fff;
+  padding:9px 12px 9px 33px;border-radius:8px;font-size:13.5px;font-family:inherit;
+}
+.search input::placeholder{color:#6b7d95}
+.search input:focus{outline:2px solid var(--brass);outline-offset:0;border-color:transparent}
+.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:#6b7d95}
+.rail-list{overflow-y:auto;flex:1;padding:6px 8px 20px}
+.rail-list::-webkit-scrollbar{width:9px}
+.rail-list::-webkit-scrollbar-thumb{background:#2a3d55;border-radius:9px;border:2px solid var(--ink)}
+.cand{
+  display:block;width:100%;text-align:left;cursor:pointer;
+  background:transparent;border:none;border-left:3px solid transparent;
+  padding:9px 11px;border-radius:0 7px 7px 0;color:#cdd7e4;margin:1px 0;
+  transition:background .12s;
+}
+.cand:hover{background:#1b2b40}
+.cand.active{background:#20344c;border-left-color:var(--brass)}
+.cand .cn{font-size:13.5px;font-weight:600;color:#fff;line-height:1.25;
+  display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.cand .cp{font-size:11.5px;color:#93a4bb;margin-top:2px;
+  display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.cand .cv{font-size:11.5px;color:var(--brass);font-weight:600;margin-top:2px}
+.cand.active .cv{color:#e0b45f}
+
+/* ---------- Área principal ---------- */
+.main{padding:22px;min-width:0}
+@media(max-width:600px){.main{padding:16px}}
+
+.hero-empty{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:46px 34px;text-align:center;box-shadow:var(--shadow);max-width:640px;margin:30px auto;
+}
+.hero-empty .big{width:56px;height:56px;margin:0 auto 18px;color:var(--brass)}
+.hero-empty h2{font-size:23px;margin-bottom:10px}
+.hero-empty p{color:var(--muted);max-width:440px;margin:0 auto 22px}
+
+/* Cabecera del candidato */
+.cand-head{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.cand-head .id{flex:1;min-width:220px}
+.cand-head h1{font-size:26px;font-weight:800;line-height:1.05}
+.cand-head .party{display:inline-flex;align-items:center;gap:7px;margin-top:7px;
+  font-size:13px;color:var(--muted);font-weight:500}
+.cand-head .party .dot{width:8px;height:8px;border-radius:50%;background:var(--brass)}
+
+/* Tira de métricas */
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}
+@media(min-width:720px){.metrics{grid-template-columns:repeat(4,1fr)}}
+.metric{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:15px 16px;box-shadow:var(--shadow)}
+.metric .k{font-size:12px;color:var(--muted);font-weight:500;margin-bottom:7px}
+.metric .v{font-family:"Archivo";font-weight:700;font-size:25px;color:var(--ink);line-height:1}
+.metric .v small{font-size:14px;color:var(--muted-2);font-weight:600;margin-left:3px}
+.metric .d{font-size:12px;margin-top:6px;font-weight:600}
+.metric .d.up{color:var(--ok)} .metric .d.down{color:var(--down)}
+.metric .d.flat{color:var(--muted-2)}
+
+/* Tabs */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:20px;flex-wrap:wrap}
+.tab{background:none;border:none;cursor:pointer;padding:11px 15px;font-size:14px;font-weight:600;
+  color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .12s}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--ink);border-bottom-color:var(--brass)}
+
+.panel{display:none;animation:fade .25s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.panel-head h3{font-size:17px;font-weight:700}
+.panel-head p{font-size:13px;color:var(--muted);margin:0}
+
+/* Tabla de puestos */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.rowlist{display:flex;flex-direction:column}
+.prow{display:grid;grid-template-columns:26px 1fr auto;gap:12px;align-items:center;
+  padding:11px 16px;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:none}
+.prow .rank{font-family:"Archivo";font-weight:700;font-size:13px;color:var(--muted-2);text-align:right}
+.prow .pinfo{min-width:0}
+.prow .pn{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.2;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prow .pl{font-size:11.5px;color:var(--muted);margin-top:1px}
+.prow .pbar{grid-column:1/-1;height:6px;background:var(--scale-0);border-radius:4px;overflow:hidden;margin-top:2px}
+.prow .pbar > i{display:block;height:100%;border-radius:4px}
+.prow .pmet{text-align:right;white-space:nowrap}
+.prow .pv{font-family:"Archivo";font-weight:700;font-size:15px;color:var(--ink)}
+.prow .ps{font-size:11.5px;color:var(--muted);margin-top:1px}
+
+/* Localidades */
+.loc-row{display:grid;grid-template-columns:130px 1fr 76px;gap:12px;align-items:center;padding:9px 16px;border-bottom:1px solid var(--line)}
+.loc-row:last-child{border-bottom:none}
+.loc-row .ln{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.loc-row .lbar{height:20px;background:var(--scale-0);border-radius:5px;overflow:hidden;position:relative}
+.loc-row .lbar > i{display:block;height:100%;background:linear-gradient(90deg,var(--scale-3),var(--scale-4));border-radius:5px}
+.loc-row .lv{text-align:right;font-family:"Archivo";font-weight:700;font-size:14px;color:var(--ink)}
+.loc-row .lp{font-size:11px;color:var(--muted);font-weight:500}
+
+/* Metas */
+.metas-ctrl{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);margin-bottom:16px}
+.metas-ctrl .row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.metas-ctrl label{font-size:13px;color:var(--muted);font-weight:600;flex:0 0 auto}
+.metas-ctrl input[type=range]{flex:1;min-width:160px;accent-color:var(--brass)}
+.metas-ctrl .target{display:flex;align-items:baseline;gap:6px}
+.metas-ctrl .target input[type=number]{width:120px;font-family:"Archivo";font-weight:700;font-size:20px;
+  color:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:6px 10px;text-align:right}
+.metas-ctrl .target input:focus{outline:2px solid var(--brass);border-color:transparent}
+.metas-ctrl .hint{font-size:12.5px;color:var(--muted-2);margin-top:10px}
+.metas-ctrl .quick{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.chip{background:var(--brass-soft);color:var(--brass-deep);border:1px solid #e7d4a8;cursor:pointer;
+  font-size:12px;font-weight:600;padding:5px 11px;border-radius:99px}
+.chip:hover{background:#f0e2c2}
+.meta-row{display:grid;grid-template-columns:26px 1fr 92px 92px;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+.meta-row:last-child{border-bottom:none}
+.meta-row.h{background:#f7f9fc;position:sticky;top:0}
+.meta-row.h span{font-size:11px;color:var(--muted);font-weight:600;text-align:right}
+.meta-row.h span:nth-child(2){text-align:left}
+.meta-row .rank{font-family:"Archivo";font-weight:700;font-size:12px;color:var(--muted-2);text-align:right}
+.meta-row .pn{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meta-row .pl{font-size:11px;color:var(--muted)}
+.meta-row .goal{text-align:right;font-family:"Archivo";font-weight:700;font-size:15px;color:var(--brass-deep)}
+.meta-row .base{text-align:right;font-size:13px;color:var(--muted)}
+
+.footnote{font-size:12px;color:var(--muted-2);margin-top:16px;line-height:1.5;max-width:720px}
+.footnote b{color:var(--muted)}
+
+.empty-inline{padding:40px 20px;text-align:center;color:var(--muted)}
+
+/* Selector de corporación y localidad */
+.seg{display:flex;flex-wrap:wrap;gap:2px;background:#0e1a2b;border:1px solid #2a3d55;border-radius:9px;padding:3px;margin-top:10px}
+.seg button{flex:1 1 auto;background:none;border:none;color:#9fb0c6;font-size:13px;font-weight:600;padding:7px 6px;border-radius:6px;cursor:pointer}
+.seg button:hover{color:#fff}
+.seg button.on{background:var(--brass);color:#231802}
+#segTerr button.on{background:#e8edf4;color:var(--ink)}
+#segTerr:empty,#segCorp:empty{display:none}
+.seg button:disabled{opacity:.4;cursor:not-allowed}
+.seg button:focus-visible,.cand:focus-visible,.tab:focus-visible,.chip:focus-visible,.btn-load:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.locsel{width:100%;margin-top:9px;background:#0e1a2b;border:1px solid #2a3d55;color:#fff;border-radius:8px;
+  padding:8px 10px;font-family:inherit;font-size:13.5px}
+.locsel:focus{outline:2px solid var(--brass);border-color:transparent}
+.rail-sec{padding:14px 11px 5px;font-size:11.5px;font-weight:600;color:#8fa0b7;border-top:1px solid #223349;margin-top:8px}
+.rail-sec:first-child{border-top:none;margin-top:0;padding-top:6px}
+.rail-sec small{display:block;font-weight:400;color:#6b7d95;margin-top:1px}
+.cand.lista .cn{color:#cdd7e4}
+
+/* Modos: candidatos / análisis */
+.modes{display:flex;gap:2px;background:#0e1a2b;border:1px solid #2a3d55;border-radius:9px;padding:3px;margin-left:20px}
+.modes button{background:none;border:none;color:#9fb0c6;font-size:13px;font-weight:600;padding:7px 13px;border-radius:6px;cursor:pointer;white-space:nowrap}
+.modes button:hover{color:#fff}
+.modes button.on{background:#e8edf4;color:var(--ink)}
+.modes button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+@media(max-width:760px){.brand .sub{display:none}.modes{margin-left:8px}.modes button{padding:7px 9px;font-size:12.5px}.btn-load .lbl-txt{display:none}}
+body.modo-anal .search,body.modo-anal .rail-list{display:none}
+/* Análisis */
+.an-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:1180px){.an-grid.two{grid-template-columns:1fr 1fr}}
+.card-h{padding:15px 18px 11px;border-bottom:1px solid var(--line)}
+.card-h h3{font-size:16px;font-weight:700}
+.card-h p{margin:3px 0 0;font-size:12.5px;color:var(--muted)}
+.card-h .ctrl{margin-top:10px}
+.psel{font-family:inherit;font-size:13.5px;padding:7px 10px;border:1px solid var(--line-strong);border-radius:8px;color:var(--ink);background:#fff;max-width:100%}
+.psel:focus{outline:2px solid var(--brass);border-color:transparent}
+.party{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;width:100%;text-align:left;
+  background:none;border:none;border-bottom:1px solid var(--line);border-left:3px solid transparent;padding:11px 16px;cursor:pointer;font-family:inherit}
+.party:last-child{border-bottom:none}
+.party:hover{background:#f7f9fc}
+.party.sel{border-left-color:var(--brass);background:#fbf7ee}
+.party.static{cursor:default}.party.static:hover{background:none}
+.party .pn{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.25}
+.party .ps{font-size:11.5px;color:var(--muted);margin-top:2px}
+.party .pv{text-align:right;white-space:nowrap}
+.party .pv b{font-family:"Archivo";font-size:16px;color:var(--ink)}
+.party .bar{grid-column:1/-1;height:7px;background:var(--scale-0);border-radius:4px;overflow:hidden}
+.party .bar i{display:block;height:100%;border-radius:4px;background:var(--scale-3)}
+.tag-new{display:inline-block;font-size:10.5px;font-weight:700;color:var(--brass-deep);background:var(--brass-soft);border-radius:4px;padding:1px 6px;margin-right:6px}
+.dl{font-size:11.5px;font-weight:600;display:block;margin-top:1px}
+.dl.up{color:var(--ok)}.dl.down{color:var(--down)}.dl.flat{color:var(--muted-2)}
+.div-row{display:grid;grid-template-columns:minmax(120px,210px) 1fr 64px;gap:12px;align-items:center;padding:8px 16px;border-bottom:1px solid var(--line)}
+.div-row:last-child{border-bottom:none}
+.div-row .nm{font-size:12.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.div-track{position:relative;height:16px;background:linear-gradient(90deg,transparent calc(50% - .5px),var(--line-strong) calc(50% - .5px),var(--line-strong) calc(50% + .5px),transparent calc(50% + .5px))}
+.div-track i{position:absolute;top:2px;height:12px;border-radius:3px}
+.div-track i.pos{left:50%;background:var(--ok)}
+.div-track i.neg{right:50%;background:var(--down)}
+.div-row .vv{text-align:right;font-family:"Archivo";font-weight:700;font-size:13px}
+.note-block{padding:12px 16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);line-height:1.55}
+.note-block b{color:var(--ink);font-weight:600}
+.urow{display:grid;grid-template-columns:minmax(110px,170px) 1fr 58px 64px;gap:12px;align-items:center;padding:8px 16px;border-bottom:1px solid var(--line)}
+.urow:last-child{border-bottom:none}
+.urow .nm{font-size:12.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.urow .tr{height:14px;background:var(--scale-0);border-radius:4px;overflow:hidden}
+.urow .tr i{display:block;height:100%;border-radius:4px}
+.urow .v{text-align:right;font-family:"Archivo";font-weight:700;font-size:13px}
+.urow .d{text-align:right;font-size:11.5px;font-weight:600}
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
+@media(min-width:720px){.vgrid{grid-template-columns:repeat(5,1fr)}}
+.vt{background:#fff;padding:13px 15px}
+.vt .k{font-size:11.5px;color:var(--muted);font-weight:500}
+.vt .v{font-family:"Archivo";font-weight:700;font-size:20px;color:var(--ink);margin-top:4px}
+.vt .f{font-size:11.5px;color:var(--muted-2);margin-top:2px}
+.insights{padding:14px 18px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line)}
+.insights p{margin:0;font-size:13.5px;color:var(--text);line-height:1.55;padding-left:12px;border-left:2px solid var(--brass)}
+.mini{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border-top:1px solid var(--line)}
+@media(min-width:720px){.mini{grid-template-columns:1fr 1fr}}
+.mini > div{background:#fff;padding:12px 16px}
+.mini h4{font-size:12.5px;font-weight:700;margin-bottom:6px}
+.mini .r{display:flex;justify-content:space-between;font-size:12.5px;padding:3px 0;color:var(--text)}
+.mini .r b{font-family:"Archivo";color:var(--ink)}
+
+/* file input hidden */
+#file{display:none}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;
+  padding:12px 20px;border-radius:10px;font-size:13.5px;box-shadow:0 8px 30px rgba(0,0,0,.25);
+  opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:60}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(-4px)}
+.toast.err{background:var(--down)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <svg class="compass" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="24" cy="24" r="21" stroke="#C9A961" stroke-width="2.5"/>
+      <circle cx="24" cy="24" r="3" fill="#fff"/>
+      <path d="M24 7 L28 22 L24 24 L20 22 Z" fill="#C9A961"/>
+      <path d="M24 41 L20 26 L24 24 L28 26 Z" fill="#f2f5f9"/>
+    </svg>
+    <div>
+      <div class="name">Brújula <b>Electoral</b></div>
+      <div class="sub">Panel de fuerza por puesto de votación</div>
+    </div>
+  </div>
+  <nav class="modes" aria-label="Vista">
+    <button data-m="cand" class="on">Candidatos</button>
+    <button data-m="anal">Partidos y tendencias</button>
+  </nav>
+  <div class="spacer"></div>
+  <div class="meta-pill" id="metaPill"><span>Datos de demostración</span></div>
+  <button class="btn-load" id="loadBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    <span class="lbl-txt">Cargar mis datos</span>
+  </button>
+  <input type="file" id="file" accept=".json,application/json" multiple>
+</div>
+
+<div class="shell">
+  <aside class="rail">
+    <div class="rail-head">
+      <div class="lbl" id="corpTitle">Concejo de Bogotá 2023</div>
+      <h2><span id="candCount">0</span> <span id="candWord">candidatos</span></h2>
+      <div class="seg" id="segTerr" role="group" aria-label="Territorio"></div>
+      <div class="seg" id="segCorp" role="group" aria-label="Corporación"></div>
+      <select class="locsel" id="locSel" aria-label="Filtrar por localidad" style="display:none"></select>
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="searchInput" type="text" placeholder="Buscar candidato o partido…" autocomplete="off">
+      </div>
+    </div>
+    <div class="rail-list" id="railList"></div>
+  </aside>
+
+  <main class="main" id="main"><div class="main-inner">
+    <div class="hero-empty" id="hero">
+      <svg class="big" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="M24 7 L28 22 L24 24 L20 22 Z" fill="currentColor"/></svg>
+      <h2>Elige un candidato para ver su mapa</h2>
+      <p>Cada candidato tiene una huella geográfica propia: dónde están sus votos, en qué localidades pesa y cuáles son sus puestos más fuertes. Selecciona un nombre en la lista de la izquierda.</p>
+      <button class="btn-load" id="loadBtn2" style="margin:0 auto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Cargar mis datos reales
+      </button>
+    </div>
+
+    <div id="dash" style="display:none">
+      <div class="cand-head">
+        <div class="id">
+          <h1 id="dName">—</h1>
+          <div class="party"><span class="dot"></span><span id="dParty">—</span></div>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><div class="k">Votos <span id="mAnio">2023</span></div><div class="v num" id="mVotos">—</div><div class="d" id="mDelta"></div></div>
+        <div class="metric"><div class="k">Puestos con votos</div><div class="v num" id="mPuestos">—</div><div class="d flat" id="mPuestosSub"></div></div>
+        <div class="metric"><div class="k">Concentración top 20</div><div class="v num" id="mConc">—<small>%</small></div><div class="d flat">de tus votos</div></div>
+        <div class="metric"><div class="k" id="mLocK">Localidad principal</div><div class="v" id="mLoc" style="font-size:17px">—</div><div class="d flat" id="mLocSub"></div></div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="fuerza">Mapa de fuerza</button>
+        <button class="tab" data-tab="localidad" id="tabLoc">Por localidad</button>
+        <button class="tab" data-tab="metas">Metas 2027</button>
+        <button class="tab" data-tab="pulso">Pulso social</button> 
+      </div>
+
+      <section class="panel active" id="panel-fuerza">
+        <div class="panel-head">
+          <div><h3>Tus puestos más fuertes</h3><p>Ordenados por votos obtenidos. La barra muestra tu concentración relativa.</p></div>
+        </div>
+        <div class="card"><div class="rowlist" id="puestosList"></div></div>
+        <p class="footnote"><b>Cómo leerlo:</b> el porcentaje es la parte de tus votos totales que salió de ese puesto. Un candidato con pocos puestos concentrados tiene una base territorial clara; uno muy repartido depende del arrastre general.</p>
+      </section>
+
+      <section class="panel" id="panel-localidad">
+        <div class="panel-head">
+          <div><h3 id="locH">Distribución por localidad</h3><p id="locP">Dónde está tu base electoral dentro de la ciudad.</p></div>
+        </div>
+        <div class="card"><div id="locList"></div></div>
+      </section>
+
+      <section class="panel" id="panel-metas">
+        <div class="metas-ctrl">
+          <div class="row">
+            <label for="targetInput">Meta de votos 2027</label>
+            <div class="target"><input class="num" type="number" id="targetInput" min="0" step="100"></div>
+            <input type="range" id="targetRange" min="0" step="100">
+          </div>
+          <div class="quick" id="quickChips"></div>
+          <div class="hint">La meta se reparte por puesto según tu geografía real de <span id="metaBaseAnio">2023</span>. Así sabes cuántos votos necesitas defender en cada puesto para llegar a tu objetivo.</div>
+        </div>
+        <div class="panel-head">
+          <div><h3>Meta por puesto</h3><p>Votos a asegurar en cada puesto para alcanzar tu objetivo.</p></div>
+        </div>
+        <div class="card">
+          <div class="meta-row h"><span class="rank">#</span><span>Puesto</span><span>Meta 2027</span><span id="baseHdr">Base 2023</span></div>
+          <div id="metasList"></div>
+        </div>
+        <p class="footnote"><b>Nota:</b> este reparto asume que tu geografía se mantiene (supuesto validado con el backtest 2019→2023). En una campaña real se ajusta con encuestas y trabajo de territorio.</p>
+      </section>
+
+      <section class="panel" id="panel-pulso">
+        <div class="panel-head">
+          <div><h3>Pulso social en redes</h3><p>Sentimiento del público en redes sociales.</p></div>
+        </div>
+        <div id="pulsoContent" style="padding:20px;text-align:center;color:#93a0b2">Cargando análisis de redes...</div>
+      </section>
+    </div>
+    <div id="anal" style="display:none"></div>
+  </div></main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ Estado ============ */
+let DATA=null, ANAL=null, modo="cand", terr=null, corp=null, uFiltro=-1, sel=null, filtro="", curTarget=null, pSel=0;
+const $=q=>document.querySelector(q);
+const fmt=n=>(n==null?"—":Math.round(n).toLocaleString("es-CO"));
+const pct=(x,d=1)=>x==null?"—":(x*100).toLocaleString("es-CO",{minimumFractionDigits:d,maximumFractionDigits:d})+"%";
+const num1=x=>x==null?"—":x.toLocaleString("es-CO",{minimumFractionDigits:1,maximumFractionDigits:1});
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MIN=new Set(["de","del","la","las","los","y","el"]);
+const cap=t=>String(t).toLowerCase().split(" ").map((w,i)=>i>0&&MIN.has(w)?w:w.charAt(0).toUpperCase()+w.slice(1)).join(" ");
+const scaleColor=t=>{const c=["#b9cbe4","#7c9cc9","#4a72a8","#274d80","#132033"];return c[Math.min(c.length-1,Math.floor(t*c.length))];};
+const src=()=>modo==="anal"?ANAL:DATA;
+const T=()=>src().territorios[terr];
+const C=()=>T().corp[corp];
+const lista=()=>C().candidatos;
+const amb=()=>C().ambito;
+const esMuni=()=>T().unidad==="municipio";
+const uNom=i=>cap(T().unidades[i]||"");
+const EJEC=new Set(["ALCALDE","GOBERNADOR"]);
+const ORDEN=["GOBERNADOR","ASAMBLEA","ALCALDE","CONCEJO","JAL"];
+function corpLabel(c){return {CONCEJO:esMuni()?"Concejos":"Concejo",JAL:"Ediles (JAL)",ASAMBLEA:"Asamblea",
+  ALCALDE:esMuni()?"Alcaldías":"Alcaldía",GOBERNADOR:"Gobernación"}[c]||cap(c);}
+function corpTitulo(){
+  if(terr==="BOGOTA")return {CONCEJO:"Concejo de Bogotá",JAL:"Juntas Administradoras Locales",ALCALDE:"Alcaldía de Bogotá"}[corp]||cap(corp);
+  return {ASAMBLEA:"Asamblea de Cundinamarca",CONCEJO:"Concejos municipales",JAL:"JAL de Cundinamarca",
+    ALCALDE:"Alcaldías municipales",GOBERNADOR:"Gobernación de Cundinamarca"}[corp]||cap(corp);
+}
+function toast(m,err){const t=$("#toast");t.textContent=m;t.className="toast show"+(err?" err":"");clearTimeout(t._t);t._t=setTimeout(()=>t.className="toast",3200);}
+
+/* ============ Datos de demostración ============ */
+function demoData(){
+  let s=12345;const rnd=()=>{s=(s*1103515245+12345)&0x7fffffff;return s/0x7fffffff;};
+  const nom=["Central","El Porvenir","La Esperanza","San José","Nueva Colombia","Los Comuneros","El Rosario","Villa Clara"];
+  function mk(puestos,n,pt,tot,g,pesar,universo){
+    const w=universo.map(i=>{let b=.15+rnd()*.5;if(pesar(puestos[i]))b+=1.6+rnd()*1.4;return b;});
+    const sum=w.reduce((a,b)=>a+b,0);const p=[];
+    universo.forEach((pi,k)=>{const v=Math.round(tot*w[k]/sum);if(v>0)p.push([pi,v]);});
+    p.sort((a,b)=>b[1]-a[1]);return {n,pt,v:p.reduce((a,b)=>a+b[1],0),v19:g?Math.round(p.reduce((a,b)=>a+b[1],0)/g):null,p};
+  }
+  const partidos=["PARTIDO ALIANZA VERDE","PARTIDO LIBERAL COLOMBIANO","PARTIDO CENTRO DEMOCRÁTICO","COALICIÓN CIUDADANA","PARTIDO CAMBIO RADICAL"];
+  const personas=["ANA LUCÍA TORRES","PEDRO NEL CASAS","YENNY PAOLA RUIZ","WILSON ARIAS DUQUE","SANDRA MILENA OTÁLORA"];
+  // Bogotá
+  const locs=["USAQUEN","CHAPINERO","SANTA FE","SAN CRISTOBAL","USME","TUNJUELITO","BOSA","KENNEDY","FONTIBON","ENGATIVA","SUBA","BARRIOS UNIDOS","TEUSAQUILLO","LOS MARTIRES","ANTONIO NARIÑO","PUENTE ARANDA","LA CANDELARIA","RAFAEL URIBE URIBE","CIUDAD BOLIVAR"];
+  const pb=[];locs.forEach((l,li)=>{const k=3+Math.floor(rnd()*3);for(let j=1;j<=k;j++)pb.push({n:"Colegio "+nom[Math.floor(rnd()*8)]+" sede "+j,l:li});});
+  const tb=pb.map((_,i)=>i);
+  const CB=[mk(pb,"MARÍA ELENA VÁSQUEZ RÍOS",partidos[0],18400,1.14,p=>[10,9,0,11].includes(p.l),tb),
+    mk(pb,"CARLOS ANDRÉS ROJAS MEJÍA",partidos[2],22100,.93,p=>[0,1,12].includes(p.l),tb),
+    mk(pb,"DIANA PATRICIA MORENO SILVA",partidos[3],26750,2.3,p=>[18,6,4,3].includes(p.l),tb),
+    mk(pb,"JORGE LUIS CASTELLANOS PÉREZ",partidos[1],15900,.88,p=>[7,8,5].includes(p.l),tb)];
+  const lb=mk(pb,partidos[0],partidos[0],8200,1.2,p=>[1,12].includes(p.l),tb);lb.ls=1;CB.push(lb);CB.sort((a,b)=>b.v-a.v);
+  const JB=[];locs.forEach((l,li)=>{const U=tb.filter(i=>pb[i].l===li);
+    personas.forEach((n,k)=>{const c=mk(pb,n,partidos[k],600+Math.round(rnd()*2600),.7+rnd()*.8,()=>rnd()<.4,U);c.l=li;JB.push(c);});});
+  JB.sort((a,b)=>b.v-a.v);
+  // Cundinamarca
+  const mun=["CAJICA","CHIA","FACATATIVA","FUSAGASUGA","GIRARDOT","MOSQUERA","SOACHA","ZIPAQUIRA"];
+  const pc=[];mun.forEach((m,mi)=>{const k=m==="SOACHA"?8:3+Math.floor(rnd()*3);for(let j=1;j<=k;j++)pc.push({n:"Escuela "+nom[Math.floor(rnd()*8)]+" "+j,l:mi});});
+  const tc=pc.map((_,i)=>i);
+  const AC=[mk(pc,"LAURA INÉS BELTRÁN GIL",partidos[1],21400,1.1,p=>[6,5].includes(p.l),tc),
+    mk(pc,"ÓSCAR DAVID PINZÓN RUBIO",partidos[2],17800,.9,p=>[1,0,7].includes(p.l),tc),
+    mk(pc,"GLORIA ESTELA MURCIA",partidos[0],12900,1.3,p=>[3,4].includes(p.l),tc)];AC.sort((a,b)=>b.v-a.v);
+  const CC=[];mun.forEach((m,mi)=>{const U=tc.filter(i=>pc[i].l===mi);
+    personas.forEach((n,k)=>{const c=mk(pc,n,partidos[k],200+Math.round(rnd()*(m==="SOACHA"?5000:1500)),.7+rnd()*.8,()=>rnd()<.4,U);c.l=mi;CC.push(c);});});
+  CC.sort((a,b)=>b.v-a.v);
+  return {version:3,meta:{anio:2023,anio_previo:2019,demo:true},territorios:{
+    BOGOTA:{nombre:"Bogotá D.C.",unidad:"localidad",unidades:locs,puestos:pb,corp:{CONCEJO:{ambito:"territorio",candidatos:CB},JAL:{ambito:"unidad",candidatos:JB}}},
+    CUNDINAMARCA:{nombre:"Cundinamarca",unidad:"municipio",unidades:mun,puestos:pc,corp:{ASAMBLEA:{ambito:"territorio",candidatos:AC},CONCEJO:{ambito:"unidad",candidatos:CC}}}}};
+}
+
+
+function demoAnal(){
+  let s=777;const rnd=()=>{s=(s*1103515245+12345)&0x7fffffff;return s/0x7fffffff;};
+  const P=[["PACTO HISTÓRICO",0,.21],["PARTIDO ALIANZA VERDE",.24,.13],["PARTIDO CENTRO DEMOCRÁTICO",.11,.14],
+    ["PARTIDO LIBERAL COLOMBIANO",.12,.10],["NUEVO LIBERALISMO",0,.08],["PARTIDO CAMBIO RADICAL",.09,.07],
+    ["COLOMBIA HUMANA",.10,0],["PARTIDO CONSERVADOR COLOMBIANO",.05,.05],["PARTIDO POLO DEMOCRÁTICO ALTERNATIVO",.07,.03]];
+  const met=(b,n,l)=>({validos:Math.round(20000+rnd()*90000),tarjetas:0,blanco:b+rnd()*.02,nulo:.015+rnd()*.01,nomarcado:.02+rnd()*.015,logo:l+rnd()*.08,nep:n+rnd()*1.5});
+  function corpDemo(nU,ambito,T19,T23){
+    const us=[...Array(nU).keys()];
+    const partidos=P.map(([n,a,b])=>{const u=us.map(i=>{const k=.4+rnd()*1.3;return [i,a?+(a*k).toFixed(4):0,b?+(b*(.4+rnd()*1.3)).toFixed(4):0,Math.round(b*T23/nU*k)];});
+      return {n,v:[Math.round(a*T19),Math.round(b*T23)],s:[a,b],cand:Math.round(8+rnd()*40),logo:+(.1+rnd()*.5).toFixed(3),u};});
+    const unidades=us.map(i=>{const g=(k)=>partidos.reduce((m,p)=>p.u[i][k]>m.u[i][k]?p:m,partidos[0]).n;
+      return {i,m19:met(.025,5.5,.22),m23:met(.035,6.5,.3),ped:.18+rnd()*.3,g19:g(1),g23:g(2)};});
+    return {ambito,total:{"2019":met(.028,6,.24),"2023":met(.037,7.1,.31)},partidos,unidades};
+  }
+  return {tipo:"analisis",meta:{anio:2023,anio_previo:2019,demo:true},territorios:{
+    BOGOTA:{nombre:"Bogotá D.C.",unidad:"localidad",unidades:DATA.territorios.BOGOTA.unidades,
+      corp:{CONCEJO:corpDemo(19,"territorio",3141527,2982506),JAL:corpDemo(19,"unidad",3062571,2846118)}},
+    CUNDINAMARCA:{nombre:"Cundinamarca",unidad:"municipio",unidades:DATA.territorios.CUNDINAMARCA.unidades,
+      corp:{ASAMBLEA:corpDemo(8,"territorio",1287085,1384856),CONCEJO:corpDemo(8,"unidad",1293976,1401259)}}}};
+}
+
+/* ============ Compatibilidad con archivos anteriores ============ */
+function normalizar(j){
+  if(j.territorios)return j;
+  if(!j.corp&&j.candidatos)j.corp={CONCEJO:j.candidatos};
+  if(!j.corp||!j.puestos||!j.localidades)throw new Error("estructura");
+  const corp={};for(const k in j.corp)corp[k]={ambito:k==="JAL"?"unidad":"territorio",candidatos:j.corp[k]};
+  return {version:3,meta:j.meta||{},territorios:{BOGOTA:{nombre:"Bogotá D.C.",unidad:"localidad",unidades:j.localidades,puestos:j.puestos,corp}}};
+}
+
+/* ============ Modo, territorio y corporación ============ */
+function botones(el,items,activo,onpick){
+  el.innerHTML="";if(items.length<2&&el.id==="segTerr")return;
+  items.forEach(([k,lbl])=>{const b=document.createElement("button");b.textContent=lbl;b.className=k===activo?"on":"";
+    b.setAttribute("aria-pressed",k===activo);b.onclick=()=>onpick(k);el.appendChild(b);});
+}
+const corpsOrden=()=>Object.keys(T().corp).sort((a,b)=>ORDEN.indexOf(a)-ORDEN.indexOf(b));
+function setModo(m){
+  modo=m;document.body.classList.toggle("modo-anal",m==="anal");
+  document.querySelectorAll(".modes button").forEach(b=>{b.classList.toggle("on",b.dataset.m===m);b.setAttribute("aria-pressed",b.dataset.m===m);});
+  if(m==="anal"&&!ANAL){$("#hero").style.display="none";$("#dash").style.display="none";renderAnalVacio();return;}
+  const S=src();setTerr(S.territorios[terr]?terr:Object.keys(S.territorios)[0],corp);
+}
+function setTerr(t,preferida){
+  terr=t;uFiltro=-1;
+  botones($("#segTerr"),Object.keys(src().territorios).map(k=>[k,src().territorios[k].nombre]),terr,x=>setTerr(x));
+  const cs=corpsOrden();
+  setCorp(preferida&&cs.includes(preferida)?preferida:(cs.find(c=>!EJEC.has(c))||cs[0]));
+}
+function setCorp(c){
+  corp=c;sel=null;curTarget=null;uFiltro=-1;pSel=0;
+  botones($("#segCorp"),corpsOrden().map(k=>[k,corpLabel(k)]),corp,setCorp);
+  $("#corpTitle").textContent=corpTitulo()+" "+(src().meta.anio||"");
+  buildUSel();applyMeta();render();
+}
+function buildUSel(){
+  const sl=$("#locSel");
+  let idx;
+  if(modo==="anal"){idx=C().unidades.map(u=>u.i);if(idx.length<2){sl.style.display="none";return;}}
+  else{if(amb()==="territorio"){sl.style.display="none";return;}idx=[...new Set(lista().map(c=>c.l))];}
+  sl.style.display="";
+  const ord=idx.sort((a,b)=>uNom(a).localeCompare(uNom(b),"es"));
+  const todos=modo==="anal"?(esMuni()?"Todo el departamento":"Toda la ciudad"):(esMuni()?"Todos los municipios":"Todas las localidades");
+  sl.innerHTML=`<option value="-1">${todos}</option>`+ord.map(i=>`<option value="${i}">${esc(uNom(i))}</option>`).join("");
+  sl.setAttribute("aria-label",esMuni()?"Filtrar por municipio":"Filtrar por localidad");sl.value="-1";
+}
+function render(){
+  if(modo==="anal"){$("#hero").style.display="none";$("#dash").style.display="none";$("#anal").style.display="";renderAnal();}
+  else{$("#anal").style.display="none";renderRail();renderDash();}
+}
+
+/* ============ Lista de candidatos ============ */
+function subCand(c){
+  if(amb()==="territorio")return c.pt;
+  if(uFiltro>=0&&amb()==="unidad")return c.pt;
+  const donde=amb()==="sub"?C().circs[c.c]:uNom(c.l);
+  return donde+" · "+c.pt;
+}
+function renderRail(){
+  const el=$("#railList");el.innerHTML="";
+  const f=filtro.trim().toUpperCase();
+  const items=lista().map((c,i)=>({c,i})).filter(({c})=>
+    (!f||c.n.toUpperCase().includes(f)||c.pt.toUpperCase().includes(f))&&(uFiltro<0||c.l===uFiltro));
+  const per=items.filter(x=>!x.c.ls),lis=items.filter(x=>x.c.ls);
+  $("#candCount").textContent=fmt(per.length);$("#candWord").textContent=per.length===1?"candidato":"candidatos";
+  if(!items.length){el.innerHTML='<div style="padding:20px;color:#7d8ea6;font-size:13px">Ningún resultado. Prueba otro nombre o cambia el filtro.</div>';return;}
+  const MAX=400;
+  const sec=(t,sub)=>{const d=document.createElement("div");d.className="rail-sec";d.innerHTML=esc(t)+(sub?`<small>${esc(sub)}</small>`:"");el.appendChild(d);};
+  const btn=({c,i})=>{const b=document.createElement("button");b.className="cand"+(c.ls?" lista":"")+(i===sel?" active":"");
+    b.innerHTML=`<div class="cn">${esc(c.n)}</div><div class="cp">${esc(subCand(c))}</div><div class="cv num">${fmt(c.v)} votos</div>`;
+    b.onclick=()=>{sel=i;curTarget=null;renderRail();renderDash();if(window.innerWidth<900)$("#main").scrollIntoView({behavior:"smooth"});};
+    el.appendChild(b);};
+  if(per.length){sec("Candidatos");per.slice(0,MAX).forEach(btn);
+    if(per.length>MAX)sec("Y "+fmt(per.length-MAX)+" candidatos más","Usa la búsqueda o el filtro para encontrarlos");}
+  if(lis.length){sec("Votos por lista","Marcaron solo el logo del partido");lis.slice(0,MAX).forEach(btn);}
+}
+
+/* ============ Panel del candidato ============ */
+function rivales(c){
+  const a=amb();
+  return lista().filter(x=>!!x.ls===!!c.ls&&(a==="sub"?x.c===c.c:x.l===c.l)).sort((x,y)=>y.v-x.v);
+}
+function renderDash(){
+  if(sel==null){$("#hero").style.display="";$("#dash").style.display="none";return;}
+  $("#hero").style.display="none";$("#dash").style.display="";
+  const c=lista()[sel],a=amb(),anio=DATA.meta.anio,aprev=DATA.meta.anio_previo;
+  $("#dName").textContent=c.n;
+  const donde=a==="territorio"?"":(a==="sub"?" · "+C().circs[c.c]:(esMuni()?" · Municipio de ":" · Localidad de ")+uNom(c.l));
+  $("#dParty").textContent=c.ls?"Votos solo por el logo de "+c.pt+donde:c.pt+donde;
+  $("#mAnio").textContent=anio;$("#mVotos").textContent=fmt(c.v);
+  const md=$("#mDelta");
+  if(c.v19){const dp=(c.v-c.v19)/c.v19*100,up=dp>=0;md.className="d "+(Math.abs(dp)<1?"flat":(up?"up":"down"));
+    md.textContent=(up?"▲ ":"▼ ")+Math.abs(dp).toFixed(0)+"% vs "+aprev+" ("+fmt(c.v19)+")";}
+  else{md.className="d flat";md.textContent="No compitió en "+aprev;}
+  $("#mPuestos").textContent=fmt(c.p.length);
+  const P=T().puestos;
+  $("#mPuestosSub").textContent=a==="territorio"
+    ?"de "+fmt(P.length)+(esMuni()?" en el departamento":" en la ciudad")
+    :"de "+fmt(P.filter(p=>p.l===c.l).length)+(esMuni()?" en el municipio":" en la localidad");
+  const top20=c.p.slice(0,20).reduce((s,x)=>s+x[1],0);
+  $("#mConc").innerHTML=Math.round(top20/c.v*100)+"<small>%</small>";
+  const tab=$("#tabLoc");
+  if(a==="territorio"){
+    const porU=agrUnidad(c);
+    $("#mLocK").textContent=esMuni()?"Municipio principal":"Localidad principal";
+    $("#mLoc").textContent=uNom(porU[0].li);$("#mLoc").style.fontSize="17px";
+    $("#mLocSub").textContent=Math.round(porU[0].v/c.v*100)+"% de tus votos";
+    tab.style.display="";tab.textContent=esMuni()?"Por municipio":"Por localidad";
+    $("#locH").textContent=esMuni()?"Distribución por municipio":"Distribución por localidad";
+    $("#locP").textContent=esMuni()?"Dónde está tu base electoral dentro del departamento.":"Dónde está tu base electoral dentro de la ciudad.";
+    renderUnidades(c,porU);
+  }else{
+    const r=rivales(c),pos=r.indexOf(c)+1;
+    const ambTxt=a==="sub"?"su comuna":(esMuni()?"su municipio":"su localidad");
+    $("#mLocK").textContent=c.ls?"Posición entre listas":"Posición en "+ambTxt;
+    $("#mLoc").innerHTML="#"+pos+"<small> de "+r.length+"</small>";$("#mLoc").style.fontSize="25px";
+    const ant=r[pos-2],sig=r[pos];
+    $("#mLocSub").textContent=ant?"A "+fmt(ant.v-c.v)+" votos del #"+(pos-1):(sig?"Ventaja de "+fmt(c.v-sig.v)+" sobre el #2":"");
+    tab.style.display="none";
+    if(tab.classList.contains("active"))document.querySelector('.tab[data-tab="fuerza"]').click();
+  }
+  renderPuestos(c);setupMetas(c);
+}
+function agrUnidad(c){const m={};c.p.forEach(([pi,v])=>{const li=T().puestos[pi].l;m[li]=(m[li]||0)+v;});
+  return Object.entries(m).map(([li,v])=>({li:+li,v})).sort((a,b)=>b.v-a.v);}
+function renderPuestos(c){
+  const el=$("#puestosList");el.innerHTML="";const max=c.p.length?c.p[0][1]:1;
+  c.p.slice(0,60).forEach(([pi,v],k)=>{const p=T().puestos[pi],t=v/max;
+    const r=document.createElement("div");r.className="prow";
+    r.innerHTML=`<div class="rank num">${k+1}</div><div class="pinfo"><div class="pn">${esc(p.n)}</div><div class="pl">${esc(uNom(p.l))}</div></div>
+      <div class="pmet"><div class="pv num">${fmt(v)}</div><div class="ps num">${(v/c.v*100).toFixed(1)}%</div></div>
+      <div class="pbar"><i style="width:${(t*100).toFixed(1)}%;background:${scaleColor(t)}"></i></div>`;el.appendChild(r);});
+  if(c.p.length>60){const d=document.createElement("div");d.style.cssText="padding:12px 16px;font-size:12.5px;color:#93a0b2";d.textContent="Y "+(c.p.length-60)+" puestos más con votos.";el.appendChild(d);}
+}
+function renderUnidades(c,porU){
+  const el=$("#locList");el.innerHTML="";const max=porU[0].v;
+  porU.forEach(o=>{const r=document.createElement("div");r.className="loc-row";
+    r.innerHTML=`<div class="ln">${esc(uNom(o.li))}</div><div class="lbar"><i style="width:${(o.v/max*100).toFixed(1)}%"></i></div>
+      <div><div class="lv num">${fmt(o.v)}</div><div class="lp num">${(o.v/c.v*100).toFixed(1)}%</div></div>`;el.appendChild(r);});
+}
+
+/* ============ Metas ============ */
+function setupMetas(c){
+  const r=$("#targetRange"),inp=$("#targetInput");
+  r.min=Math.round(c.v*.6);r.max=Math.round(c.v*2.2);
+  if(curTarget==null)curTarget=c.v;r.value=curTarget;inp.value=curTarget;
+  $("#metaBaseAnio").textContent=DATA.meta.anio;$("#baseHdr").textContent="Base "+DATA.meta.anio;
+  const q=$("#quickChips");q.innerHTML="";
+  [["Mantener",1],["+15%",1.15],["+30%",1.3],["+50%",1.5]].forEach(([l,f])=>{const b=document.createElement("button");b.className="chip";b.textContent=l;
+    b.onclick=()=>{curTarget=Math.round(c.v*f);r.value=curTarget;inp.value=curTarget;renderMetas(c);};q.appendChild(b);});
+  r.oninput=()=>{curTarget=+r.value;inp.value=curTarget;renderMetas(c);};
+  inp.oninput=()=>{curTarget=+inp.value||0;r.value=curTarget;renderMetas(c);};
+  renderMetas(c);
+}
+function renderMetas(c){
+  const el=$("#metasList");el.innerHTML="";const f=curTarget/c.v;
+  c.p.slice(0,60).forEach(([pi,v],k)=>{const p=T().puestos[pi];const r=document.createElement("div");r.className="meta-row";
+    r.innerHTML=`<div class="rank num">${k+1}</div><div><div class="pn">${esc(p.n)}</div><div class="pl">${esc(uNom(p.l))}</div></div>
+      <div class="goal num">${fmt(v*f)}</div><div class="base num">${fmt(v)}</div>`;el.appendChild(r);});
+}
+
+
+/* ============ Partidos y tendencias ============ */
+const dpp=(a,b)=>{if(a==null||b==null)return {t:"",c:"flat"};const v=(b-a)*100;
+  return {t:(Math.abs(v)<.05?"= ":(v>0?"▲ ":"▼ "))+Math.abs(v).toLocaleString("es-CO",{maximumFractionDigits:1})+" pp",c:Math.abs(v)<.05?"flat":(v>0?"up":"down")};};
+function renderAnalVacio(){
+  const el=$("#anal");el.style.display="";
+  el.innerHTML=`<div class="hero-empty"><svg class="big" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="M24 7 L28 22 L24 24 L20 22 Z" fill="currentColor"/></svg>
+    <h2>Falta el archivo de análisis</h2><p>Genera <b>brujula_analisis.json</b> con el script 08_exportar_analisis.py y cárgalo junto con tus datos. Puedes seleccionar los dos archivos a la vez.</p>
+    <button class="btn-load" style="margin:0 auto" onclick="document.querySelector('#file').click()">Cargar archivo de análisis</button></div>`;
+  $("#candCount").textContent="0";$("#candWord").textContent="partidos";$("#segCorp").innerHTML="";$("#segTerr").innerHTML="";$("#locSel").style.display="none";
+  $("#corpTitle").textContent="Partidos y tendencias";
+}
+function renderAnal(){
+  const A=C(),u=uFiltro,ex=EJEC.has(corp),an=ANAL.meta.anio,ap=ANAL.meta.anio_previo;
+  const uni=u>=0?A.unidades.find(x=>x.i===u):null;
+  const m19=u>=0?uni.m19:A.total[ap],m23=u>=0?uni.m23:A.total[an];
+  const P=A.partidos.map((p,k)=>{let s19=p.s[0],s23=p.s[1];
+      if(u>=0){const r=p.u.find(x=>x[0]===u);if(!r)return null;s19=r[1];s23=r[2];}
+      return {k,p,s19:p.v[0]===0?null:(s19||0),s23:s23||0,nuevo:p.v[0]===0};})
+    .filter(x=>x&&(x.s23>0||(x.s19||0)>0)).sort((a,b)=>b.s23-a.s23);
+  $("#candCount").textContent=fmt(P.length);$("#candWord").textContent=P.length===1?"partido":"partidos";
+  const donde=u>=0?uNom(u):T().nombre;
+  const hayU=A.unidades.length>1;
+  const uW=esMuni()?"municipio":"localidad",uWs=esMuni()?"municipios":"localidades";
+  let h=`<div class="cand-head"><div class="id"><h1>${esc(corpTitulo())}${u>=0?" · "+esc(uNom(u)):""}</h1>
+    <div class="party"><span class="dot"></span><span>Partidos y tendencias ${ap} → ${an}${ANAL.meta.demo?" · datos de demostración":""}</span></div></div></div>`;
+  const dv=(a,b)=>{if(!a||!b)return "";const v=(b-a)/a*100;return `<div class="d ${Math.abs(v)<1?"flat":v>0?"up":"down"}">${v>0?"▲":"▼"} ${Math.abs(v).toFixed(0)}% vs ${ap}</div>`;};
+  const dp=(a,b)=>{const d=dpp(a,b);return `<div class="d ${d.c}">${d.t} vs ${ap}</div>`;};
+  const gan=u>=0?uni.g23:(P[0]?P[0].p.n:"—"),gan19=u>=0?uni.g19:null;
+  h+=`<div class="metrics">
+    <div class="metric"><div class="k">Votos a partidos ${an}</div><div class="v num">${fmt(m23.validos)}</div>${dv(m19.validos,m23.validos)}</div>
+    <div class="metric"><div class="k">Voto en blanco</div><div class="v num">${pct(m23.blanco)}</div>${dp(m19.blanco,m23.blanco)}</div>
+    <div class="metric"><div class="k">Fragmentación${u<0&&A.ambito!=="territorio"?" promedio":""}</div><div class="v num">${num1(m23.nep)}<small>partidos</small></div><div class="d flat">${ap}: ${num1(m19.nep)}${u<0&&A.ambito!=="territorio"?" · por "+uW:" efectivos"}</div></div>
+    ${ex?`<div class="metric"><div class="k">Ganador ${an}</div><div class="v" style="font-size:15px;line-height:1.25">${esc(cap(gan))}</div>${gan19?`<div class="d flat">En ${ap}: ${esc(cap(gan19))}</div>`:""}</div>`
+       :`<div class="metric"><div class="k">Voto solo por el logo</div><div class="v num">${pct(m23.logo)}</div>${dp(m19.logo,m23.logo)}</div>`}
+  </div>`;
+
+  // 1. Fuerza por partido
+  const maxS=Math.max(...P.map(x=>x.s23),.0001);
+  h+=`<div class="an-grid"><div class="card"><div class="card-h"><h3>Fuerza por partido en ${esc(donde)}</h3>
+    <p>Porcentaje de los votos a partidos en ${an}, y su cambio frente a ${ap}.${u<0&&hayU?"Haz clic en un partido para ver dónde es fuerte.":""}</p></div>`;
+  P.slice(0,20).forEach(x=>{const d=dpp(x.s19,x.s23);
+    const wins=u<0&&hayU?A.unidades.filter(z=>z.g23===x.p.n).length:0;
+    const sub=[x.nuevo?`<span class="tag-new">Nuevo en ${an}</span>`:"",
+      !ex&&x.p.cand?fmt(x.p.cand)+" candidatos":"",
+      !ex&&x.p.logo!=null?pct(x.p.logo,0)+" de sus votos por logo":"",
+      u<0&&hayU&&wins?"primero en "+wins+" de "+A.unidades.length+" "+uWs:""].filter(Boolean).join(" · ");
+    h+=`<button class="party${u<0&&hayU?"":" static"}${u<0&&x.k===pSel?" sel":""}" data-k="${x.k}">
+      <div><div class="pn">${esc(cap(x.p.n))}</div><div class="ps">${sub}</div></div>
+      <div class="pv"><b>${pct(x.s23)}</b><span class="dl ${d.c}">${x.nuevo?"nuevo":d.t}</span></div>
+      <div class="bar"><i style="width:${(x.s23/maxS*100).toFixed(1)}%"></i></div></button>`;});
+  if(P.length>20)h+=`<div class="note-block">Y ${P.length-20} partidos más con menos votos.</div>`;
+  h+=`</div>`;
+
+  // 2. Quién sube y quién baja
+  const M=P.filter(x=>x.s19!=null&&x.s19>0&&x.s23>0).map(x=>({...x,d:x.s23-x.s19})).sort((a,b)=>b.d-a.d);
+  const maxD=Math.max(...M.map(x=>Math.abs(x.d)),.0001);
+  const nuevos=P.filter(x=>x.nuevo&&x.s23>=.005),idos=A.partidos.map((p,k)=>{
+      let s19=p.s[0],s23=p.s[1];if(u>=0){const r=p.u.find(z=>z[0]===u);s19=r?r[1]:0;s23=r?r[2]:0;}return {p,s19,s23};})
+    .filter(x=>(x.s19||0)>=.01&&!(x.s23>0));
+  h+=`<div class="an-grid two"><div class="card"><div class="card-h"><h3>Quién sube y quién baja</h3>
+    <p>Cambio en puntos porcentuales entre ${ap} y ${an}, entre partidos que compitieron las dos veces.</p></div>`;
+  if(!M.length)h+=`<div class="note-block">No hay partidos que hayan competido con el mismo nombre en los dos años.</div>`;
+  M.forEach(x=>{const w=Math.abs(x.d)/maxD*50;const d=dpp(x.s19,x.s23);
+    h+=`<div class="div-row"><div class="nm" title="${esc(cap(x.p.n))}">${esc(cap(x.p.n))}</div>
+      <div class="div-track"><i class="${x.d>=0?"pos":"neg"}" style="width:${w.toFixed(1)}%"></i></div>
+      <div class="vv dl ${d.c}" style="margin:0">${d.t.replace(/^[▲▼=] /,x.d>=0?"+":"−")}</div></div>`;});
+  if(nuevos.length||idos.length){h+=`<div class="note-block">`;
+    if(nuevos.length)h+=`<b>Nuevos en ${an}:</b> ${nuevos.map(x=>esc(cap(x.p.n))+" ("+pct(x.s23)+")").join(", ")}.<br>`;
+    if(idos.length)h+=`<b>No compitieron con ese nombre en ${an}:</b> ${idos.map(x=>esc(cap(x.p.n))+" (tenía "+pct(x.s19)+")").join(", ")}.`;
+    h+=`<br><span style="font-size:11.5px">Muchas etiquetas cambiaron por coaliciones: un "nuevo" puede heredar votos de uno que "no compitió".</span></div>`;}
+  h+=`</div>`;
+
+  // 3. Dónde es fuerte
+  if(u<0&&hayU){
+    const psel=A.partidos[pSel]||A.partidos[0];
+    const rows=psel.u.filter(r=>r[2]!=null).sort((a,b)=>b[2]-a[2]);
+    const mx=Math.max(...rows.map(r=>r[2]),.0001);
+    const opts=P.map(x=>`<option value="${x.k}"${x.k===pSel?" selected":""}>${esc(cap(x.p.n))}</option>`).join("");
+    h+=`<div class="card"><div class="card-h"><h3>Dónde es fuerte</h3><p>Porcentaje del partido en cada ${uW} en ${an} y su cambio frente a ${ap}.</p>
+      <div class="ctrl"><select class="psel" id="pSel" aria-label="Elegir partido">${opts}</select></div></div>`;
+    rows.slice(0,25).forEach(r=>{const d=psel.v[0]===0?{t:"nuevo",c:"flat"}:dpp(r[1]||0,r[2]);
+      h+=`<div class="urow"><div class="nm">${esc(uNom(r[0]))}</div><div class="tr"><i style="width:${(r[2]/mx*100).toFixed(1)}%;background:${scaleColor(r[2]/mx)}"></i></div>
+        <div class="v">${pct(r[2])}</div><div class="d dl ${d.c}" style="margin:0">${d.t}</div></div>`;});
+    if(rows.length>25)h+=`<div class="note-block">Y ${rows.length-25} ${uWs} más.</div>`;
+    const best=rows[0],grow=psel.v[0]===0?null:rows.filter(r=>r[1]!=null).map(r=>({r,d:r[2]-(r[1]||0)})).sort((a,b)=>b.d-a.d)[0];
+    if(best)h+=`<div class="insights"><p>Su ${uW} más fuerte es <b>${esc(uNom(best[0]))}</b>, con ${pct(best[2])} de los votos${grow&&grow.d>0.005?`. Donde más creció fue <b>${esc(uNom(grow.r[0]))}</b> (+${(grow.d*100).toFixed(1)} pp)`:""}.</p></div>`;
+    h+=`</div>`;
+  }
+  h+=`</div>`;
+
+  // 4. Cómo vota la gente
+  const tile=(k,a,b,f,nota)=>{const d=f==="n"?{t:(b-a>=0?"▲ ":"▼ ")+Math.abs(b-a).toFixed(1),c:"flat"}:dpp(a,b);
+    return `<div class="vt"><div class="k">${k}</div><div class="v">${f==="n"?num1(b):pct(b)}</div><div class="f">${ap}: ${f==="n"?num1(a):pct(a)} <span class="dl ${d.c}" style="display:inline">${d.t}</span></div>${nota?`<div class="f">${nota}</div>`:""}</div>`;};
+  h+=`<div class="card"><div class="card-h"><h3>Cómo vota la gente${u>=0?" en "+esc(uNom(u)):""}</h3><p>Señales del comportamiento del votante, ${ap} frente a ${an}.</p></div>
+    <div class="vgrid">${tile("Voto en blanco",m19.blanco,m23.blanco)}${tile("Votos nulos",m19.nulo,m23.nulo)}${tile("Tarjetas no marcadas",m19.nomarcado,m23.nomarcado)}
+    ${tile("Fragmentación",m19.nep,m23.nep,"n","partidos efectivos")}${ex?`<div class="vt"><div class="k">Votos a partidos</div><div class="v">${fmt(m23.validos)}</div><div class="f">${ap}: ${fmt(m19.validos)}</div></div>`:tile("Voto solo por logo",m19.logo,m23.logo)}</div>`;
+  const ins=[];
+  if(m19.blanco!=null&&m23.blanco!=null){const d=(m23.blanco-m19.blanco)*100;
+    ins.push(Math.abs(d)<.2?`El voto en blanco se mantuvo estable, alrededor de ${pct(m23.blanco)}.`
+      :`El voto en blanco ${d>0?"subió":"bajó"} ${Math.abs(d).toFixed(1)} puntos, hasta ${pct(m23.blanco)}${d>0?": una señal de descontento con la oferta de candidatos.":"."}`);}
+  if(m19.nep&&m23.nep){const d=m23.nep-m19.nep;
+    ins.push(`El voto equivale a ${num1(m23.nep)} partidos de tamaño similar (en ${ap} eran ${num1(m19.nep)}). ${Math.abs(d)<.3?"El nivel de competencia se mantuvo.":d>0?"Hay más competencia: se necesita una base territorial más precisa para ganar.":"El voto se concentró en menos partidos."}`);}
+  if(!ex&&m19.logo!=null&&m23.logo!=null){const d=(m23.logo-m19.logo)*100;
+    ins.push(`El ${pct(m23.logo,0)} de los votos fue solo por el logo del partido (${pct(m19.logo,0)} en ${ap}). ${d>2?"El votante confía más en la marca que en el nombre: pesa más el partido que elija el candidato.":d<-2?"El votante elige más por la persona: la trayectoria propia del candidato pesa más.":""}`);}
+  if(u<0&&hayU){
+    const vol=A.unidades.filter(z=>z.ped!=null).sort((a,b)=>b.ped-a.ped).slice(0,5);
+    const bl=A.unidades.filter(z=>z.m23.blanco!=null).sort((a,b)=>b.m23.blanco-a.m23.blanco).slice(0,5);
+    if(vol[0])ins.push(`La ${uW} donde más cambió el voto fue ${esc(uNom(vol[0].i))}: el ${pct(vol[0].ped,0)} de los votos cambió de partido. Es terreno en disputa.`);
+    h+=`<div class="insights">${ins.map(t=>`<p>${t}</p>`).join("")}</div><div class="mini">
+      <div><h4>Donde más cambió el voto</h4>${vol.map(z=>`<div class="r"><span>${esc(uNom(z.i))}</span><b>${pct(z.ped,0)}</b></div>`).join("")}</div>
+      <div><h4>Donde más se vota en blanco</h4>${bl.map(z=>`<div class="r"><span>${esc(uNom(z.i))}</span><b>${pct(z.m23.blanco)}</b></div>`).join("")}</div></div>`;
+  }else h+=`<div class="insights">${ins.map(t=>`<p>${t}</p>`).join("")}</div>`;
+  h+=`</div>`;
+  h+=`<p class="footnote"><b>Cómo se calcula:</b> los partidos se emparejan por nombre entre ${ap} y ${an}, así que las coaliciones nuevas aparecen como "nuevas". Los porcentajes de partido se calculan sobre los votos a partidos; blanco, nulo y no marcado, sobre el total de tarjetas. La fragmentación es el número efectivo de partidos. "Cambió el voto" es la volatilidad de Pedersen: la parte del voto que pasó de unos partidos a otros.</p>`;
+
+  const el=$("#anal");el.innerHTML=h;
+  el.querySelectorAll(".party:not(.static)").forEach(b=>b.onclick=()=>{pSel=+b.dataset.k;renderAnal();
+    const c=$("#pSel");if(c)c.closest(".card").scrollIntoView({behavior:"smooth",block:"start"});});
+  const ps=$("#pSel");if(ps)ps.onchange=e=>{pSel=+e.target.value;renderAnal();};
+}
+
+/* ============ Pestañas, carga y búsqueda ============ */
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));
+  t.classList.add("active");$("#panel-"+t.dataset.tab).classList.add("active");});
+document.querySelectorAll(".modes button").forEach(b=>b.onclick=()=>setModo(b.dataset.m));
+$("#locSel").onchange=e=>{uFiltro=+e.target.value;sel=null;render();};
+$("#searchInput").oninput=e=>{filtro=e.target.value;renderRail();};
+const pick=()=>$("#file").click();
+$("#loadBtn").onclick=pick;$("#loadBtn2").onclick=pick;
+const leerTexto=f=>new Promise((ok,mal)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=()=>mal(r.error);r.readAsText(f);});
+$("#file").onchange=async e=>{
+  const files=[...e.target.files];e.target.value="";if(!files.length)return;
+  const leidos=[];let nuevoDatos=null,nuevoAnal=null;
+  for(const f of files){
+    try{const j=JSON.parse(await leerTexto(f));
+      if(j.tipo==="analisis"){if(!j.territorios)throw 0;nuevoAnal=j;leidos.push("análisis");}
+      else{nuevoDatos=normalizar(j);leidos.push("candidatos");}}
+    catch(err){toast("No pude leer "+f.name+". Usa los archivos que generan los exportadores 07 y 08.",true);return;}
+  }
+  if(nuevoDatos){DATA=nuevoDatos;filtro="";$("#searchInput").value="";if(!nuevoAnal&&ANAL&&ANAL.meta.demo)ANAL=null;}
+  if(nuevoAnal)ANAL=nuevoAnal;
+  corp=null;setModo(modo);
+  toast("Cargado: "+leidos.join(" y "));
+};
+function applyMeta(){
+  const S=src();
+  if(S.meta.demo){$("#metaPill").innerHTML="<span>Datos de demostración</span>";return;}
+  if(modo==="anal"){$("#metaPill").innerHTML=`<span><b>${esc(T().nombre)}</b> · ${S.meta.anio_previo} → ${S.meta.anio} · ${C().partidos.length} partidos</span>`;return;}
+  const n=lista().filter(c=>!c.ls).length;
+  $("#metaPill").innerHTML=`<span><b>${esc(T().nombre)}</b> · ${S.meta.anio} · ${fmt(n)} candidatos en ${esc(corpLabel(corp).toLowerCase())}</span>`;
+}
+
+/* ============ Pulso Social ============ */
+async function loadSentimientos() {
+  try {
+    const resp = await fetch('./data/sentimiento.json');
+    if (!resp.ok) { console.log("No hay análisis de sentimientos aún"); return; }
+    const datos = await resp.json();
+    renderPulso(datos);
+  } catch (err) { console.log("Error cargando sentimientos:", err); }
+}
+
+function renderPulso(datos) {
+  const el = document.getElementById("pulsoContent");
+  el.innerHTML = "";
+  
+  let html = `<div style="max-width:800px;margin:0 auto">
+    <p style="font-size:12px;color:#93a0b2;margin-bottom:20px">Actualizado: ${datos.actualizado}</p>`;
+  
+  const cands = Object.entries(datos.candidatos).sort((a,b) => b[1].sentimiento_promedio - a[1].sentimiento_promedio);
+  
+  cands.forEach(([nombre, d]) => {
+    const score = d.sentimiento_promedio;
+    const color = score > 0.5 ? "#2f7d5b" : score < -0.5 ? "#a4503c" : "#93a0b2";
+    const anchoPct = Math.abs(score) * 100;
+    
+    html += `<div style="margin-bottom:22px;padding:14px;background:#f7f9fc;border-radius:10px;border-left:3px solid ${color}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <strong style="color:#2C3E2E">${esc(nombre)}</strong>
+        <span style="font-size:18px;font-weight:700;color:${color}">${score.toFixed(2)}</span>
+      </div>
+      <div style="height:8px;background:#e8eef6;border-radius:4px;overflow:hidden;margin-bottom:8px">
+        <i style="display:block;height:100%;width:${anchoPct}%;background:${color};border-radius:4px"></i>
+      </div>
+      <div style="font-size:12px;color:#93a0b2;margin-bottom:8px">${d.posts} posts analizados</div>`;
+    
+    if (d.temas && d.temas.length > 0) {
+      html += `<div style="font-size:11px">Temas: ${d.temas.map(t => `<span style="display:inline-block;background:#f0e2c2;padding:2px 6px;border-radius:3px;margin-right:4px">${esc(t.tema)} (${t.menciones})</span>`).join("")}</div>`;
+    }
+    
+    html += `</div>`;
+  });
+  
+  html += `</div>`;
+  el.innerHTML = html;
+}
+
+loadSentimientos();
+setInterval(loadSentimientos, 5 * 60 * 1000);
+
+/* ============ Inicio ============ */
+DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
+</script>
+<script src="js/analisis-modal.js"></script>
+<!-- Link a Dashboard Electoral 2027 -->
+<div style="position: fixed; top: 100px; right: 20px; z-index: 998;">
+    <a href="soacha-2027.html" style="
+        display: inline-block;
+        background: #C9A961;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 12px;
+        box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+        transition: all 0.3s ease;
+        font-family: 'Archivo', sans-serif;
+    " onmouseover="this.style.background='#A88A4F'" onmouseout="this.style.background='#C9A961'">
+        Electoral 2027
+    </a>
+</div><script src="js/analisis-soacha.js" defer></script>
+</body>
+</html>

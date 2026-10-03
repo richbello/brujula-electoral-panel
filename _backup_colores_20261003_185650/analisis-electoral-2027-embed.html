@@ -10,17 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --ink: #0F1C2E;
-            --ink-2: #0A1626;
-            --ink-3: #1E3A57;
-            --paper: #F4F6F9;
+            --ink: #2C3E2E;
+            --ink-2: #1F2E20;
+            --ink-3: #3A5A3F;
+            --paper: #F9F8F4;
             --surface: #FFFFFF;
-            --line: #E2E8F0;
-            --accent: #C8A560;
-            --accent-soft: #F4EDDA;
-            --olive: #5E8ABF;
-            --text: #0F1C2E;
-            --muted: #6B7A90;
+            --line: #E8E4DB;
+            --accent: #C9A961;
+            --accent-soft: #F5F3ED;
+            --olive: #6B8E23;
+            --text: #2C3E2E;
+            --muted: #7A8A7B;
         }
 
         * { 
@@ -112,33 +112,33 @@
         }
 
         #btn-conservative {
-            border-color: #5E8ABF;
-            color: #5E8ABF;
+            border-color: #6B8E23;
+            color: #6B8E23;
         }
 
         #btn-conservative.active {
-            background: #5E8ABF;
+            background: #6B8E23;
             color: white;
         }
 
         #btn-base {
-            border-color: #C8A560;
+            border-color: #C9A961;
             color: white;
-            background: #C8A560;
+            background: #C9A961;
         }
 
         #btn-base.active {
-            background: #A98841;
-            border-color: #A98841;
+            background: #A88A4F;
+            border-color: #A88A4F;
         }
 
         #btn-optimista {
-            border-color: #0F1C2E;
-            color: #0F1C2E;
+            border-color: #2C3E2E;
+            color: #2C3E2E;
         }
 
         #btn-optimista.active {
-            background: #0F1C2E;
+            background: #2C3E2E;
             color: white;
         }
 
@@ -264,7 +264,7 @@
         }
 
         .delta-positive { 
-            color: #5E8ABF; 
+            color: #6B8E23; 
             font-weight: 700; 
         }
 
@@ -538,7 +538,7 @@
                 `<tr>
                     <td class="localidad">${p.candidato}</td>
                     <td style="text-align: right;">${p.v23}</td>
-                    <td style="text-align: right; font-weight: 700; color: #C8A560;">${p.v27}</td>
+                    <td style="text-align: right; font-weight: 700; color: #C9A961;">${p.v27}</td>
                     <td style="text-align: right;" class="delta-positive">+${p.delta}</td>
                 </tr>`
             ).join('');
@@ -565,8 +565,8 @@
                     datasets: [{
                         label: 'Delta (pp)',
                         data: desagregacion.map(d => d.delta),
-                        backgroundColor: '#C8A560',
-                        borderColor: '#A98841',
+                        backgroundColor: '#C9A961',
+                        borderColor: '#A88A4F',
                         borderWidth: 1
                     }]
                 },
@@ -585,7 +585,7 @@
                     <td><strong>${v.bloque}</strong></td>
                     <td style="text-align: right;">${v.v23.toLocaleString('es-CO')}</td>
                     <td style="text-align: right;">${v.v26.toLocaleString('es-CO')}</td>
-                    <td style="text-align: right; font-weight: 700; color: #C8A560;">${v.factor.toFixed(2)}x</td>
+                    <td style="text-align: right; font-weight: 700; color: #C9A961;">${v.factor.toFixed(2)}x</td>
                 </tr>`
             ).join('');
 
@@ -597,12 +597,12 @@
                         {
                             label: '2023',
                             data: volatilidad.map(v => v.v23),
-                            backgroundColor: '#5E8ABF'
+                            backgroundColor: '#6B8E23'
                         },
                         {
                             label: '2026',
                             data: volatilidad.map(v => v.v26),
-                            backgroundColor: '#C8A560'
+                            backgroundColor: '#C9A961'
                         }
                     ]
                 },
