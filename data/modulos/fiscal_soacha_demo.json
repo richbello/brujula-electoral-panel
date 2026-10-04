@@ -1,0 +1,52 @@
+﻿{
+    "periodo":  "2023",
+    "municipio":  "Soacha",
+    "hallazgos_auditoria":  [
+                                {
+                                    "descripcion":  "Contratación directa",
+                                    "codigo":  "F001",
+                                    "riesgo":  "alto",
+                                    "monto":  78000000000
+                                },
+                                {
+                                    "descripcion":  "Facturas sin soporte",
+                                    "codigo":  "F002",
+                                    "riesgo":  "alto",
+                                    "monto":  34500000000
+                                },
+                                {
+                                    "descripcion":  "Incumplimiento PDM",
+                                    "codigo":  "F003",
+                                    "riesgo":  "medio",
+                                    "monto":  28700000000
+                                },
+                                {
+                                    "descripcion":  "Variaciones injustificadas",
+                                    "codigo":  "F004",
+                                    "riesgo":  "medio",
+                                    "monto":  12300000000
+                                }
+                            ],
+    "presupuesto":  {
+                        "porcentaje_ejecucion":  73,
+                        "total":  850000000000,
+                        "ejecutado":  620700000000
+                    },
+    "top_proveedores":  [
+                            {
+                                "nombre":  "CONSTRUCTORA ANDINA SA",
+                                "participacion":  0.394,
+                                "monto":  244494000000
+                            },
+                            {
+                                "nombre":  "SERVICIOS INTEGRALES CUNDINAMARCA",
+                                "participacion":  0.251,
+                                "monto":  155595700000
+                            },
+                            {
+                                "nombre":  "CONSULTORA PÚBLICA LTDA",
+                                "participacion":  0.145,
+                                "monto":  89901500000
+                            }
+                        ]
+}

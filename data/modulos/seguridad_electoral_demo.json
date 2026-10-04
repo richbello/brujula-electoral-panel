@@ -1,0 +1,25 @@
+﻿{
+    "municipio":  "Soacha",
+    "total_puestos":  287,
+    "integridad":  0.78,
+    "puestos_riesgo":  [
+                           {
+                               "nombre":  "IE Prado Veraniego",
+                               "score":  0.89
+                           },
+                           {
+                               "nombre":  "El Bosque",
+                               "score":  0.78
+                           },
+                           {
+                               "nombre":  "J. Martí",
+                               "score":  0.75
+                           }
+                       ],
+    "puestos_vulnerables":  12,
+    "electoral_bio":  {
+                          "testigos_entrenados":  120,
+                          "version":  "0.1",
+                          "fecha_piloto":  "2027-03-15"
+                      }
+}
