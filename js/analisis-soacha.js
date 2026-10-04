@@ -1,5 +1,5 @@
 /*!
- * Brújula Electoral IA — Módulo "Análisis territorial" (Soacha)
+ * Estrategia Electoral 2027 IA — Módulo "Análisis territorial" (Soacha)
  * Uso: <script src="js/analisis-soacha.js" defer> (cerrar la etiqueta script) antes de </body>.
  * Se integra como tercera pestaña junto a "Candidatos | Partidos y tendencias".
  * Si no encuentra esa barra, crea un botón flotante. API: window.BrujulaTerritorial.open()/close()
@@ -333,7 +333,7 @@
       <button class="bt-close" data-close>Cerrar análisis</button></div>
       <div class="bt-nav" role="tablist">${VISTAS.map(v => `<button role="tab" data-vista="${v[0]}" aria-selected="${v[0] === actual}">${v[1]}</button>`).join('')}</div></div>
       <div class="bt-main"><div class="bt-wrap"><div id="bt-body"></div>
-      <div class="bt-src">Fuentes: base Brújula Electoral (resultados de preconteo de la Registraduría, territoriales 2019 y 2023) y boletín 38 de la Registraduría para Alcaldía 2023. Las curules se calculan con la regla de cifra repartidora; en ediles, el voto en blanco por comuna no está en la base: puede excluirse o estimarse con la proporción municipal de JAL (${pct(D.jal_blanco_ratio, 0)} sobre votos a listas). Un puesto (Colegio Bolívar Primaria) no tiene comuna asignada en la base.</div></div></div>`;
+      <div class="bt-src">Fuentes: base Estrategia Electoral 2027 (resultados de preconteo de la Registraduría, territoriales 2019 y 2023) y boletín 38 de la Registraduría para Alcaldía 2023. Las curules se calculan con la regla de cifra repartidora; en ediles, el voto en blanco por comuna no está en la base: puede excluirse o estimarse con la proporción municipal de JAL (${pct(D.jal_blanco_ratio, 0)} sobre votos a listas). Un puesto (Colegio Bolívar Primaria) no tiene comuna asignada en la base.</div></div></div>`;
     document.body.appendChild(root);
     root.addEventListener('click', onClick);
     root.addEventListener('input', onInput);
