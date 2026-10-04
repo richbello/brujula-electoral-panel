@@ -6,7 +6,7 @@
 <title>Fiscal, Seguridad y Scoring · Estrategia Electoral 2027</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0F1C2E;--gold:#C8A560;--bg:#F4F6F9;--muted:#5B6B80;--line:#E2E7EE;--ok:#2E9E7B;--bad:#C0485A;--warn:#B7791F}
+:root{--navy:#0F1C2E;--gold:#C8A560;--bg:#F4F6F9;--muted:#5B6B80;--line:#E2E7EE;--ok:#2E9E7B;--bad:#C0485A;--warn:#B7791F;--crit:#8B0000}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
 header{background:var(--navy);color:#fff}
@@ -41,16 +41,18 @@ tr:last-child td{border-bottom:0}
 .meter{height:6px;width:110px;background:#EEF1F5;border-radius:3px;overflow:hidden}
 .meter i{display:block;height:100%;background:var(--gold)}
 .pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px}
-.alto{background:#F9E5E8;color:var(--bad)}.medio{background:#FBF1E0;color:var(--warn)}
+.ok-p{background:#E6F4EF;color:var(--ok)}.alto{background:#F9E5E8;color:var(--bad)}.medio{background:#FBF1E0;color:var(--warn)}.crit{background:#FFE6E6;color:var(--crit)}
 .note{font-size:13px;color:var(--muted);line-height:1.6;margin-top:14px}
-@media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main{padding-left:18px;padding-right:18px}}
+.alert{background:#FFE6E6;border-left:4px solid var(--crit);padding:12px 16px;margin-bottom:20px;border-radius:6px;font-size:13px}
+.alert b{color:var(--crit)}
+@media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main{padding-left:18px;padding-right:18px}.tabs{gap:12px}}
 </style>
 </head>
 <body>
-<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Seguridad · Scoring integral</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Vigilancia · Seguridad · Scoring</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
 <main>
 <div class="demo"><strong>Datos de demostración.</strong> Las cifras de este módulo son ilustrativas y todavía no provienen de SECOP II, Contraloría ni Registraduría.</div>
-<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="seguridad">Seguridad electoral</button><button data-t="scoring">Scoring integral</button></nav>
+<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="seguridad">Seguridad electoral</button><button data-t="scoring">Scoring integral</button></nav>
 
 <section class="pane" id="fiscal">
 <h2>Análisis fiscal</h2><p class="sub">Municipio de Soacha · vigencia 2023 · cifras en millones de pesos</p>
@@ -77,6 +79,44 @@ tr:last-child td{border-bottom:0}
 </div>
 </section>
 
+<section class="pane" id="vigilancia">
+<h2>Vigilancia fiscal</h2><p class="sub">Análisis de riesgo contractual · cruzamiento SECOP II × Boletín Responsables Fiscales</p>
+<div class="alert"><b>Riesgo crítico:</b> 2 terceros activos en lista de responsables fiscales con contratos en ejecución.</div>
+<div class="kpis">
+<div class="kpi"><small>Terceros analizados</small><b>1.247</b></div>
+<div class="kpi"><small>Riesgo crítico</small><b>2</b></div>
+<div class="kpi"><small>Riesgo alto</small><b>18</b></div>
+<div class="kpi"><small>Casos de fraccionamiento</small><b>34</b></div>
+</div>
+<div class="cols">
+<div class="panel"><h3>Terceros en nivel crítico</h3><table>
+<tr><th>Tercero</th><th>NIT</th><th>Riesgo</th><th class="r">Valor en curso</th></tr>
+<tr><td>ETB S.A.</td><td>860.001.022</td><td><span class="pill crit">Crítico</span></td><td class="r">$245.000 M</td></tr>
+<tr><td>CONSORCIO KLEAN BOGOTÁ</td><td>900.456.128</td><td><span class="pill crit">Crítico</span></td><td class="r">$89.500 M</td></tr>
+</table></div>
+<div class="panel"><h3>Indicadores de riesgo</h3><table>
+<tr><th>Indicador</th><th class="r">Valor</th></tr>
+<tr><td>Fraccionamiento de contratación (mismos terceros, múltiples órdenes)</td><td class="r">34 casos</td></tr>
+<tr><td>Terceros activos en múltiples entidades (red de contratación)</td><td class="r">156 terceros</td></tr>
+<tr><td>Objetos contractuales repetidos (auditable)</td><td class="r">67 patrones</td></tr>
+<tr><td>Contratistas con responsable fiscal sin depuración</td><td class="r">22 casos</td></tr>
+</table></div>
+</div>
+<div class="panel"><h3>Top 10 terceros de alto riesgo</h3><table>
+<tr><th>Tercero</th><th>Riesgo</th><th class="r">Contratos</th><th class="r">Valor total</th></tr>
+<tr><td>Transportes Bogotá Express</td><td><span class="pill alto">Alto</span></td><td class="r">23</td><td class="r">$45.200 M</td></tr>
+<tr><td>Consultoría Integral Distrital</td><td><span class="pill alto">Alto</span></td><td class="r">19</td><td class="r">$38.900 M</td></tr>
+<tr><td>Servicios Integrales Cundinamarca</td><td><span class="pill alto">Alto</span></td><td class="r">15</td><td class="r">$155.596 M</td></tr>
+<tr><td>Grupo de Inversiones PRC</td><td><span class="pill alto">Alto</span></td><td class="r">12</td><td class="r">$28.400 M</td></tr>
+<tr><td>Fiduprevisora S.A.</td><td><span class="pill alto">Alto</span></td><td class="r">18</td><td class="r">$95.200 M</td></tr>
+<tr><td>Constructora Andina S.A.</td><td><span class="pill medio">Medio</span></td><td class="r">8</td><td class="r">$244.494 M</td></tr>
+<tr><td>SOFASA (Soc. Fin. de Autos S.A.)</td><td><span class="pill medio">Medio</span></td><td class="r">6</td><td class="r">$12.800 M</td></tr>
+<tr><td>Consorcio Mantenimiento Vial</td><td><span class="pill medio">Medio</span></td><td class="r">14</td><td class="r">$34.500 M</td></tr>
+<tr><td>Consultoría de Proyectos Bogotá</td><td><span class="pill ok-p">Bajo</span></td><td class="r">4</td><td class="r">$8.900 M</td></tr>
+<tr><td>Mantenimiento Infraestructura Local</td><td><span class="pill ok-p">Bajo</span></td><td class="r">5</td><td class="r">$11.200 M</td></tr>
+</table></div>
+</section>
+
 <section class="pane" id="seguridad">
 <h2>Seguridad electoral</h2><p class="sub">Soacha · preparación para la jornada electoral 2027</p>
 <div class="kpis">
@@ -95,7 +135,7 @@ tr:last-child td{border-bottom:0}
 </table></div>
 <div class="panel"><h3>Puestos de mayor riesgo</h3><table>
 <tr><th>Puesto</th><th>Factor</th><th class="r">Índice</th></tr>
-<tr><td>IE Prado Veraniego</td><td>Vigilancia insuficiente</td><td class="r"><span class="pill alto">0,89</span></td></tr>
+<tr><td>IE Prado Veraniego</td><td>Vigilancia insuficiente</td><td class="r"><span class="pill crit">0,89</span></td></tr>
 <tr><td>El Bosque</td><td>Conflictividad histórica</td><td class="r"><span class="pill alto">0,78</span></td></tr>
 <tr><td>J. Martí</td><td>Infraestructura precaria</td><td class="r"><span class="pill medio">0,75</span></td></tr>
 </table></div>
