@@ -1,108 +1,125 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estrategia Electoral 2027 - 3 Módulos Integrados</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #0F1C2E 0%, #1a2d4a 100%); color: #333; padding: 20px; }
-        .header { text-align: center; color: white; margin-bottom: 30px; }
-        .header h1 { font-size: 28px; margin-bottom: 5px; }
-        .tabs-container { background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); overflow: hidden; max-width: 1400px; margin: 0 auto; }
-        .tabs { display: flex; background: #f5f5f5; border-bottom: 2px solid #ddd; }
-        .tab-button { flex: 1; padding: 16px; border: none; background: none; cursor: pointer; font-size: 14px; font-weight: 600; color: #666; transition: all 0.3s; border-bottom: 3px solid transparent; }
-        .tab-button:hover { background: #f0f0f0; color: #0F1C2E; }
-        .tab-button.active { color: white; background: linear-gradient(135deg, #0F1C2E, #1a2d4a); border-bottom-color: #C8A560; }
-        .tab-button.fiscal.active { background: linear-gradient(135deg, #2E9E7B, #27ae60); }
-        .tab-button.social.active { background: linear-gradient(135deg, #C0485A, #e74c3c); }
-        .tab-button.integral.active { background: linear-gradient(135deg, #C8A560, #d4af5c); color: #0F1C2E; }
-        .tab-content { display: none; padding: 30px; animation: fadeIn 0.3s; }
-        .tab-content.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
-        .kpi { background: #f9f9f9; padding: 15px; border-radius: 6px; border-left: 4px solid #C8A560; }
-        .kpi-value { font-size: 24px; font-weight: bold; color: #0F1C2E; }
-        .kpi-label { font-size: 12px; color: #666; margin-top: 5px; }
-        .scoring-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-        .candidate-card { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 2px solid #ddd; }
-        .score-badge { display: inline-block; background: #2E9E7B; color: white; padding: 10px 20px; border-radius: 50px; font-size: 16px; font-weight: bold; margin: 10px 0; }
-        .score-badge.low { background: #e74c3c; }
-        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #f5f5f5; font-weight: bold; }
-        .alert-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 15px 0; border-radius: 4px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiscal, Seguridad y Scoring · Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1C2E;--gold:#C8A560;--bg:#F4F6F9;--muted:#5B6B80;--line:#E2E7EE;--ok:#2E9E7B;--bad:#C0485A;--warn:#B7791F}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff}
+.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#AEB9C8;margin-top:2px}
+.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px}
+.back:hover{border-color:var(--gold);color:var(--gold)}
+main{max-width:1200px;margin:0 auto;padding:32px}
+.demo{background:#FBF1E0;color:#8A5A12;border:1px solid #F0DDB8;border-radius:8px;padding:12px 16px;font-size:13px;margin-bottom:24px}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button.on{color:var(--navy);border-color:var(--gold)}
+.pane{display:none}.pane.on{display:block}
+h2{font-size:22px;margin-bottom:4px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:8px}
+.kpi b{font-size:24px;font-weight:700}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:20px;overflow-x:auto}
+.panel h3{font-size:15px;margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:12px 10px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+.r{text-align:right;white-space:nowrap}
+.pct{display:flex;align-items:center;gap:10px}
+.meter{height:6px;width:110px;background:#EEF1F5;border-radius:3px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--gold)}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px}
+.alto{background:#F9E5E8;color:var(--bad)}.medio{background:#FBF1E0;color:var(--warn)}
+.note{font-size:13px;color:var(--muted);line-height:1.6;margin-top:14px}
+@media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main{padding-left:18px;padding-right:18px}}
+</style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎯 Estrategia Electoral 2027</h1>
-        <p>3 Módulos Integrados: Fiscal + Social + Seguridad Electoral</p>
-    </div>
-    <div class="tabs-container">
-        <div class="tabs">
-            <button class="tab-button fiscal active" onclick="showTab('fiscal')">💰 FISCAL</button>
-            <button class="tab-button social" onclick="showTab('social')">📱 SOCIAL</button>
-            <button class="tab-button" onclick="showTab('seguridad')">🔒 SEGURIDAD</button>
-            <button class="tab-button integral" onclick="showTab('integral')">🎯 SCORING</button>
-        </div>
-        <div id="fiscal" class="tab-content active">
-            <h2>💰 Análisis Fiscal - Soacha 2023</h2>
-            <div class="kpi-row">
-                <div class="kpi"><div class="kpi-value">$620.7B</div><div class="kpi-label">Presupuesto Ejecutado</div></div>
-                <div class="kpi"><div class="kpi-value">73%</div><div class="kpi-label">Porcentaje Ejecución</div></div>
-                <div class="kpi"><div class="kpi-value">79%</div><div class="kpi-label">Concentración Top 3</div></div>
-                <div class="kpi"><div class="kpi-value">$156B</div><div class="kpi-label">Ahorro Potencial</div></div>
-            </div>
-            <h3>Top 3 Proveedores</h3>
-            <table><tr><th>Proveedor</th><th>Participación</th><th>Monto</th></tr><tr><td>CONSTRUCTORA ANDINA SA</td><td>39.4%</td><td>$244.5B</td></tr><tr><td>SERVICIOS INTEGRALES CUNDINAMARCA</td><td>25.1%</td><td>$155.6B</td></tr><tr><td>CONSULTORA PÚBLICA LTDA</td><td>14.5%</td><td>$89.9B</td></tr></table>
-            <h3>Hallazgos de Auditoría</h3>
-            <div class="alert-box"><strong>F001:</strong> Contratación directa - $78B</div>
-            <div class="alert-box"><strong>F002:</strong> Facturas sin soporte - $34.5B</div>
-            <div class="alert-box"><strong>F003:</strong> Incumplimiento PDM - $28.7B</div>
-            <div class="alert-box"><strong>F004:</strong> Variaciones injustificadas - $12.3B</div>
-        </div>
-        <div id="social" class="tab-content">
-            <h2>📱 Análisis Social - Sentimiento</h2>
-            <div class="kpi-row">
-                <div class="kpi"><div class="kpi-value">+68%</div><div class="kpi-label">Sentimiento Danny</div></div>
-                <div class="kpi"><div class="kpi-value">+35%</div><div class="kpi-label">Sentimiento Perico</div></div>
-                <div class="kpi"><div class="kpi-value">245</div><div class="kpi-label">Videos YouTube</div></div>
-                <div class="kpi"><div class="kpi-value">12.4K</div><div class="kpi-label">Comentarios analizados</div></div>
-            </div>
-            <h3>Distribución de Menciones</h3>
-            <table><tr><th>Red Social</th><th>Menciones</th><th>Sentimiento</th></tr><tr><td>YouTube</td><td>245</td><td>+72%</td></tr><tr><td>TikTok</td><td>89</td><td>+65%</td></tr><tr><td>Twitter/X</td><td>⏳ Próximo</td><td>-</td></tr></table>
-        </div>
-        <div id="seguridad" class="tab-content">
-            <h2>🔒 Seguridad Electoral Digital</h2>
-            <div class="kpi-row">
-                <div class="kpi"><div class="kpi-value">287</div><div class="kpi-label">Puestos de votación</div></div>
-                <div class="kpi"><div class="kpi-value">78%</div><div class="kpi-label">Score Integridad</div></div>
-                <div class="kpi"><div class="kpi-value">120</div><div class="kpi-label">Testigos entrenados</div></div>
-                <div class="kpi"><div class="kpi-value">3</div><div class="kpi-label">Dominios falsos desactivados</div></div>
-            </div>
-            <h3>ElectoralBio v0.1</h3>
-            <table><tr><th>Parámetro</th><th>Valor</th></tr><tr><td>Tecnología</td><td>OCR E-14 + GPS</td></tr><tr><td>Fecha Piloto</td><td>2027-03-15</td></tr><tr><td>Puestos Cubiertos</td><td>45 / 287 (15.7%)</td></tr></table>
-            <h3>Puestos de Máximo Riesgo</h3>
-            <table><tr><th>Institución</th><th>Score Riesgo</th><th>Hallazgos</th></tr><tr><td>IE Prado Veraniego</td><td><span class="score-badge low" style="padding:5px 10px;font-size:12px">0.89</span></td><td>Vigilancia insuficiente</td></tr><tr><td>El Bosque</td><td><span class="score-badge low" style="padding:5px 10px;font-size:12px">0.78</span></td><td>Conflictividad histórica</td></tr><tr><td>J. Martí</td><td><span class="score-badge low" style="padding:5px 10px;font-size:12px">0.75</span></td><td>Infraestructura precaria</td></tr></table>
-        </div>
-        <div id="integral" class="tab-content">
-            <h2>🎯 Scoring Integral 2027</h2>
-            <p style="margin-bottom:20px; color:#666"><strong>Fórmula:</strong> 40% Electoral + 35% Fiscal + 25% Social</p>
-            <div class="scoring-grid">
-                <div class="candidate-card" style="border-color:#2E9E7B"><h3>✅ Danny Caicedo</h3><div class="score-badge">72 / 100</div><table style="font-size:12px"><tr><td>Electoral (40%)</td><td><strong>65/100</strong></td></tr><tr><td>Fiscal (35%)</td><td><strong>38/100</strong></td></tr><tr><td>Social (25%)</td><td><strong>68/100</strong></td></tr></table><p style="margin-top:15px; font-size:11px; color:#2E9E7B; font-weight:bold">✅ CANDIDATO VIABLE - Requiere alianza Pacto Histórico</p></div>
-                <div class="candidate-card" style="border-color:#e74c3c"><h3>❌ Perico López</h3><div class="score-badge low">48 / 100</div><table style="font-size:12px"><tr><td>Electoral (40%)</td><td><strong>35/100</strong></td></tr><tr><td>Fiscal (35%)</td><td><strong>38/100</strong></td></tr><tr><td>Social (25%)</td><td><strong>35/100</strong></td></tr></table><p style="margin-top:15px; font-size:11px; color:#e74c3c; font-weight:bold">❌ NO VIABLE - Déficit electoral y social</p></div>
-            </div>
-            <div class="alert-box" style="margin-top:30px; background:#e8f4f8; border-left-color:#0F1C2E"><strong>⚠️ RIESGO CRÍTICO:</strong> Si Pacto Histórico no respalda a Danny, score cae a 45.<br><strong>Acción inmediata:</strong> Negociar alianza antes de inscripciones Registraduría (90-120 días).</div>
-        </div>
-    </div>
-    <script>
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Seguridad · Scoring integral</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
+<main>
+<div class="demo"><strong>Datos de demostración.</strong> Las cifras de este módulo son ilustrativas y todavía no provienen de SECOP II, Contraloría ni Registraduría.</div>
+<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="seguridad">Seguridad electoral</button><button data-t="scoring">Scoring integral</button></nav>
+
+<section class="pane" id="fiscal">
+<h2>Análisis fiscal</h2><p class="sub">Municipio de Soacha · vigencia 2023 · cifras en millones de pesos</p>
+<div class="kpis">
+<div class="kpi"><small>Presupuesto definitivo</small><b>$850.000 M</b></div>
+<div class="kpi"><small>Ejecutado</small><b>$620.700 M</b></div>
+<div class="kpi"><small>Porcentaje de ejecución</small><b>73 %</b></div>
+<div class="kpi"><small>Concentración top 3 contratistas</small><b>79 %</b></div>
+</div>
+<div class="cols">
+<div class="panel"><h3>Principales contratistas</h3><table>
+<tr><th>Contratista</th><th>Participación</th><th class="r">Valor</th></tr>
+<tr><td>Constructora Andina S.A.</td><td><div class="pct"><div class="meter"><i style="width:39.4%"></i></div>39,4 %</div></td><td class="r">$244.494 M</td></tr>
+<tr><td>Servicios Integrales Cundinamarca</td><td><div class="pct"><div class="meter"><i style="width:25.1%"></i></div>25,1 %</div></td><td class="r">$155.596 M</td></tr>
+<tr><td>Consultora Pública Ltda.</td><td><div class="pct"><div class="meter"><i style="width:14.5%"></i></div>14,5 %</div></td><td class="r">$89.902 M</td></tr>
+</table></div>
+<div class="panel"><h3>Hallazgos de auditoría</h3><table>
+<tr><th>Código</th><th>Hallazgo</th><th>Riesgo</th><th class="r">Valor</th></tr>
+<tr><td>F001</td><td>Contratación directa sin justificación</td><td><span class="pill alto">Alto</span></td><td class="r">$78.000 M</td></tr>
+<tr><td>F002</td><td>Facturas sin soporte documental</td><td><span class="pill alto">Alto</span></td><td class="r">$34.500 M</td></tr>
+<tr><td>F003</td><td>Incumplimiento de metas del PDM</td><td><span class="pill medio">Medio</span></td><td class="r">$28.700 M</td></tr>
+<tr><td>F004</td><td>Variaciones presupuestales no justificadas</td><td><span class="pill medio">Medio</span></td><td class="r">$12.300 M</td></tr>
+</table></div>
+</div>
+</section>
+
+<section class="pane" id="seguridad">
+<h2>Seguridad electoral</h2><p class="sub">Soacha · preparación para la jornada electoral 2027</p>
+<div class="kpis">
+<div class="kpi"><small>Puestos de votación</small><b>287</b></div>
+<div class="kpi"><small>Índice de integridad</small><b>78 %</b></div>
+<div class="kpi"><small>Puestos vulnerables</small><b>12</b></div>
+<div class="kpi"><small>Testigos capacitados</small><b>120</b></div>
+</div>
+<div class="cols">
+<div class="panel"><h3>ElectoralBio · piloto v0.1</h3><table>
+<tr><th>Parámetro</th><th class="r">Valor</th></tr>
+<tr><td>Tecnología</td><td class="r">OCR de E-14 + GPS</td></tr>
+<tr><td>Puestos en piloto</td><td class="r">45 de 287 (15,7 %)</td></tr>
+<tr><td>Fecha del piloto</td><td class="r">15 de marzo de 2027</td></tr>
+<tr><td>Dominios falsos desactivados</td><td class="r">3</td></tr>
+</table></div>
+<div class="panel"><h3>Puestos de mayor riesgo</h3><table>
+<tr><th>Puesto</th><th>Factor</th><th class="r">Índice</th></tr>
+<tr><td>IE Prado Veraniego</td><td>Vigilancia insuficiente</td><td class="r"><span class="pill alto">0,89</span></td></tr>
+<tr><td>El Bosque</td><td>Conflictividad histórica</td><td class="r"><span class="pill alto">0,78</span></td></tr>
+<tr><td>J. Martí</td><td>Infraestructura precaria</td><td class="r"><span class="pill medio">0,75</span></td></tr>
+</table></div>
+</div>
+</section>
+
+<section class="pane" id="scoring">
+<h2>Scoring integral</h2><p class="sub">Índice = 0,40 × electoral + 0,35 × fiscal + 0,25 × social (escala 0 a 100)</p>
+<div class="panel"><table>
+<tr><th>Candidato</th><th>Electoral (40 %)</th><th>Fiscal (35 %)</th><th>Social (25 %)</th><th class="r">Índice</th></tr>
+<tbody id="sc"></tbody>
+</table>
+<p class="note">El componente social de este escenario es ilustrativo. Antes de presentarlo debe alimentarse con el módulo Pulso Social en Redes, y la comparación debe hacerse contra los candidatos inscritos para 2027.</p>
+</div>
+</section>
+</main>
+<script>
+const W={e:.40,f:.35,s:.25};
+const C=[{n:'Danny Caicedo',e:65,f:38,s:68},{n:'Julián Sánchez "Perico"',e:35,f:38,s:35}];
+const fmt=v=>v.toFixed(1).replace('.',',');
+document.getElementById('sc').innerHTML=C.map(c=>{const t=c.e*W.e+c.f*W.f+c.s*W.s;return `<tr><td><b>${c.n}</b></td><td>${c.e}</td><td>${c.f}</td><td>${c.s}</td><td class="r"><b>${fmt(t)}</b></td></tr>`}).join('');
+function show(id){if(!document.getElementById(id))id='fiscal';document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));history.replaceState(null,'','#'+id)}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.t));
+show(location.hash.slice(1));
+</script>
 </body>
 </html>
