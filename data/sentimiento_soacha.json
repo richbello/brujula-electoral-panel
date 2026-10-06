@@ -1,54 +1,170 @@
 {
   "meta": {
-    "generado": "2026-10-02T14:59:14.217853",
-    "fuente": "YouTube + TikTok (Apify Scraper)",
-    "ventana": "últimos 30 días",
-    "total_comentarios": 32,
+    "generado": "2026-10-05T19:36:17.794943",
+    "fuente": "YouTube + TikTok + Facebook",
+    "total_comentarios": 36,
     "modelo": "claude-haiku-4-5-20251001"
   },
   "candidatos": {
-    "DANNY CAICEDO": {
-      "es_cliente": true,
-      "partido": "Concejal de oposición",
-      "sentimiento_promedio": -0.7,
+    "JULIAN SANCHE PERICO": {
+      "es_cliente": false,
+      "partido": "Alcalde actual",
+      "sentimiento_promedio": -0.8,
       "tendencia": "baja",
       "total_posts": 3,
-      "total_comentarios": 23,
-      "toxicidad_pct": 91,
+      "total_comentarios": 7,
+      "toxicidad_pct": 100,
       "alerta_toxicidad": true,
       "por_plataforma": {
         "youtube": {
-          "score": -0.69,
+          "score": -0.8,
           "posts": 2,
-          "comentarios": 21
+          "comentarios": 5
         },
         "tiktok": {
           "score": -0.8,
           "posts": 1,
           "comentarios": 2
+        },
+        "facebook": {
+          "score": 0,
+          "posts": 0,
+          "comentarios": 0
+        }
+      },
+      "temas": [
+        {
+          "tema": "Infraestructura",
+          "score": -0.8,
+          "menciones": 4
+        },
+        {
+          "tema": "Gestión",
+          "score": -0.8,
+          "menciones": 2
+        },
+        {
+          "tema": "Seguridad",
+          "score": -0.8,
+          "menciones": 1
+        }
+      ],
+      "serie": [
+        {
+          "f": "05 Oct",
+          "s": -0.8
+        }
+      ],
+      "posts_destacados": [
+        {
+          "plataforma": "tiktok",
+          "fecha": "2026-09-24",
+          "score": -0.8,
+          "resumen": "No han acabado con las calles de Soacha que están sin pavimentar ahora cuántos años más en esa obra y aparte un peaje",
+          "tema": "Infraestructura",
+          "objetivo": "JULIAN SANCHE PERICO",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "No han acabado con las calles de Soacha que están sin pavimentar ahora cuántos años más en esa obra y aparte un peaje"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2025-12-24",
+          "score": -0.8,
+          "resumen": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La a",
+          "tema": "Infraestructura",
+          "objetivo": "JULIAN SANCHE PERICO",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La a"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2026-02-20",
+          "score": -0.8,
+          "resumen": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no",
+          "tema": "Infraestructura",
+          "objetivo": "JULIAN SANCHE PERICO",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2025-12-23",
+          "score": -0.8,
+          "resumen": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto",
+          "tema": "Infraestructura",
+          "objetivo": "JULIAN SANCHE PERICO",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2026-01-25",
+          "score": -0.8,
+          "resumen": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que ",
+          "tema": "Gestión",
+          "objetivo": "JULIAN SANCHE PERICO",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que "
+        }
+      ]
+    },
+    "DANNY CAICEDO": {
+      "es_cliente": true,
+      "partido": "Concejal de oposición",
+      "sentimiento_promedio": -0.74,
+      "tendencia": "baja",
+      "total_posts": 9,
+      "total_comentarios": 27,
+      "toxicidad_pct": 96,
+      "alerta_toxicidad": true,
+      "por_plataforma": {
+        "youtube": {
+          "score": -0.72,
+          "posts": 2,
+          "comentarios": 19
+        },
+        "tiktok": {
+          "score": -0.8,
+          "posts": 1,
+          "comentarios": 2
+        },
+        "facebook": {
+          "score": -0.8,
+          "posts": 6,
+          "comentarios": 6
         }
       },
       "temas": [
         {
           "tema": "Seguridad",
           "score": -0.8,
-          "menciones": 1
+          "menciones": 2
         },
         {
           "tema": "Corrupción",
           "score": -0.8,
-          "menciones": 8
+          "menciones": 11
         },
         {
-          "tema": "Infraestructura",
+          "tema": "Propuestas",
           "score": -0.8,
           "menciones": 2
         }
       ],
       "serie": [
         {
-          "f": "02 Oct",
-          "s": -0.7
+          "f": "05 Oct",
+          "s": -0.74
         }
       ],
       "posts_destacados": [
@@ -58,6 +174,8 @@
           "score": -0.8,
           "resumen": "Eso de que tenga media Soacha empapelada....eso deja mucho que pensar cuantos favores políticos tienes que pagar señor Danny... Algo que dicen los abu",
           "tema": "Corrupción",
+          "objetivo": "DANNY CAICEDO",
+          "idioma": "en",
           "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "Eso de que tenga media Soacha empapelada....eso deja mucho que pensar cuantos favores políticos tienes que pagar señor Danny... Algo que dicen los abu"
@@ -68,6 +186,8 @@
           "score": -0.8,
           "resumen": "A ese señor se le pierde todo, si Soacha lo elige va terminar perdiendo, no conozco los demás candidatos pero que tristeza ver este señor",
           "tema": "Gestión",
+          "objetivo": "DANNY CAICEDO",
+          "idioma": "en",
           "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "A ese señor se le pierde todo, si Soacha lo elige va terminar perdiendo, no conozco los demás candidatos pero que tristeza ver este señor"
@@ -78,9 +198,35 @@
           "score": -0.8,
           "resumen": "Investiguen todas las denuncias que hay contra este señor",
           "tema": "Corrupción",
+          "objetivo": "DANNY CAICEDO",
+          "idioma": "en",
           "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "Investiguen todas las denuncias que hay contra este señor"
+        },
+        {
+          "plataforma": "tiktok",
+          "fecha": "2026-09-28",
+          "score": -0.8,
+          "resumen": "en San Mateo empezaron una obra para arreglar una calle y quedo a medias ya abandonaron eso.",
+          "tema": "Infraestructura",
+          "objetivo": "DANNY CAICEDO",
+          "idioma": "en",
+          "comentarios": 2,
+          "comentario_pos": "",
+          "comentario_neg": "en San Mateo empezaron una obra para arreglar una calle y quedo a medias ya abandonaron eso."
+        },
+        {
+          "plataforma": "tiktok",
+          "fecha": "2026-09-28",
+          "score": -0.8,
+          "resumen": "en elecciones, todos son apasionados por ayudar!!",
+          "tema": "Corrupción",
+          "objetivo": "DANNY CAICEDO",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "en elecciones, todos son apasionados por ayudar!!"
         }
       ]
     },
@@ -103,6 +249,11 @@
           "score": -0.8,
           "posts": 1,
           "comentarios": 2
+        },
+        "facebook": {
+          "score": 0,
+          "posts": 0,
+          "comentarios": 0
         }
       },
       "temas": [
@@ -119,7 +270,7 @@
       ],
       "serie": [
         {
-          "f": "02 Oct",
+          "f": "05 Oct",
           "s": -0.8
         }
       ],
@@ -130,6 +281,8 @@
           "score": -0.8,
           "resumen": "y las obras ? o el sancocho soluciona la problemática del municipio",
           "tema": "Gestión",
+          "objetivo": "GIOVANNI RAMIREZ MOYA",
+          "idioma": "en",
           "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "y las obras ? o el sancocho soluciona la problemática del municipio"
@@ -140,86 +293,11 @@
           "score": -0.8,
           "resumen": "no falta el que regala por un sancocho",
           "tema": "Corrupción",
+          "objetivo": "GIOVANNI RAMIREZ MOYA",
+          "idioma": "en",
           "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "no falta el que regala por un sancocho"
-        }
-      ]
-    },
-    "JULIAN SANCHE PERICO": {
-      "es_cliente": false,
-      "partido": "Alcalde actual",
-      "sentimiento_promedio": -0.8,
-      "tendencia": "baja",
-      "total_posts": 3,
-      "total_comentarios": 7,
-      "toxicidad_pct": 100,
-      "alerta_toxicidad": true,
-      "por_plataforma": {
-        "youtube": {
-          "score": -0.8,
-          "posts": 2,
-          "comentarios": 5
-        },
-        "tiktok": {
-          "score": -0.8,
-          "posts": 1,
-          "comentarios": 2
-        }
-      },
-      "temas": [
-        {
-          "tema": "Infraestructura",
-          "score": -0.8,
-          "menciones": 4
-        },
-        {
-          "tema": "Gestión",
-          "score": -0.8,
-          "menciones": 2
-        },
-        {
-          "tema": "Seguridad",
-          "score": -0.8,
-          "menciones": 1
-        }
-      ],
-      "serie": [
-        {
-          "f": "02 Oct",
-          "s": -0.8
-        }
-      ],
-      "posts_destacados": [
-        {
-          "plataforma": "tiktok",
-          "fecha": "2026-09-24",
-          "score": -0.8,
-          "resumen": "No han acabado con las calles de Soacha que están sin pavimentar ahora cuántos años más en esa obra y aparte un peaje",
-          "tema": "Infraestructura",
-          "comentarios": 0,
-          "comentario_pos": "",
-          "comentario_neg": "No han acabado con las calles de Soacha que están sin pavimentar ahora cuántos años más en esa obra y aparte un peaje"
-        },
-        {
-          "plataforma": "youtube",
-          "fecha": "2025-12-24",
-          "score": -0.8,
-          "resumen": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La a",
-          "tema": "Infraestructura",
-          "comentarios": 0,
-          "comentario_pos": "",
-          "comentario_neg": "Un alcalde que poco o nada ha hecho. Echó a la basura la avenida las torres (zona de ciudad verde), la nueva plaza de mercado municipal y el CAM. La a"
-        },
-        {
-          "plataforma": "youtube",
-          "fecha": "2026-02-20",
-          "score": -0.8,
-          "resumen": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no",
-          "tema": "Infraestructura",
-          "comentarios": 0,
-          "comentario_pos": "",
-          "comentario_neg": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no"
         }
       ]
     }
