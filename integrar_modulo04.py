@@ -1,52 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fiscal, Seguridad y Scoring · Estrategia Electoral 2027</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00C97B;--bad:#FF2D6F;--warn:#EA6A0A;--crit:#C8003C}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
-header{background:var(--navy);color:#fff}
-.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
-.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
-.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
-.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
-.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
-.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px}
-.back:hover{border-color:var(--gold);color:var(--gold)}
-main{max-width:1200px;margin:0 auto;padding:32px}
-.demo{background:#FFF0CC;color:#B45309;border:1px solid #FFE3A3;border-radius:8px;padding:12px 16px;font-size:13px;margin-bottom:24px}
-.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
-.tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
-.tabs button.on{color:var(--navy);border-color:var(--gold)}
-.pane{display:none}.pane.on{display:block}
-h2{font-size:22px;margin-bottom:4px}
-.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
-.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
-.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:8px}
-.kpi b{font-size:24px;font-weight:700}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:20px;overflow-x:auto}
-.panel h3{font-size:15px;margin-bottom:14px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line)}
-td{padding:12px 10px;border-bottom:1px solid var(--line)}
-tr:last-child td{border-bottom:0}
-.r{text-align:right;white-space:nowrap}
-.pct{display:flex;align-items:center;gap:10px}
-.meter{height:6px;width:110px;background:#EFEBFF;border-radius:3px;overflow:hidden}
-.meter i{display:block;height:100%;background:var(--gold)}
-.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px}
-.ok-p{background:#D6FBEC;color:var(--ok)}.alto{background:#FFDCE7;color:var(--bad)}.medio{background:#FFF0CC;color:var(--warn)}.crit{background:#FFDEE8;color:var(--crit)}
-.note{font-size:13px;color:var(--muted);line-height:1.6;margin-top:14px}
-.alert{background:#FFDEE8;border-left:4px solid var(--crit);padding:12px 16px;margin-bottom:20px;border-radius:6px;font-size:13px}
-.alert b{color:var(--crit)}
-@media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main{padding-left:18px;padding-right:18px}.tabs{gap:12px}}
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Integrar módulo 04 (Estado de Cuenta) en modulos-3-integrados.html
+Crea una pestaña adicional dentro de Análisis Fiscal
+"""
+import re
 
+# Leer el archivo actual
+with open('modulos-3-integrados.html', 'r', encoding='utf-8') as f:
+    html = f.read()
+
+# ===============================
+# PASO 1: Expandir <style> con CSS adicional para el módulo 04
+# ===============================
+
+css_adicional = """
 /* ==================== MÓDULO 04 - ESTADO DE CUENTA ==================== */
 .upload-area{border:2px dashed var(--gold);border-radius:6px;padding:20px;text-align:center;cursor:pointer;transition:all 0.3s ease;background:rgba(255,176,32,.05)}
 .upload-area:hover{border-color:#FFB020;background:rgba(255,176,32,.1)}
@@ -80,112 +48,36 @@ tr:last-child td{border-bottom:0}
 .info-box{background:rgba(124,77,255,.05);border-left:4px solid var(--gold);padding:15px;border-radius:4px;margin-bottom:20px;font-size:13px;color:var(--navy)}
 .mod04-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
 @media(max-width:800px){.mod04-grid{grid-template-columns:1fr}.button-group{grid-template-columns:1fr}}
-</style>
-</head>
-<body>
-<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Vigilancia · Seguridad · Scoring</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
-<main>
-<div class="demo"><strong>Datos de demostración.</strong> Las cifras de este módulo son ilustrativas y todavía no provienen de SECOP II, Contraloría ni Registraduría.</div>
-<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="seguridad">Seguridad electoral</button><button data-t="scoring">Scoring integral</button><button data-t="generador">Generador de Estado de Cuenta</button></nav>
+"""
 
-<section class="pane" id="fiscal">
-<h2>Análisis fiscal</h2><p class="sub">Municipio de Soacha · vigencia 2023 · cifras en millones de pesos</p>
-<div class="kpis">
-<div class="kpi"><small>Presupuesto definitivo</small><b>$850.000 M</b></div>
-<div class="kpi"><small>Ejecutado</small><b>$620.700 M</b></div>
-<div class="kpi"><small>Porcentaje de ejecución</small><b>73 %</b></div>
-<div class="kpi"><small>Concentración top 3 contratistas</small><b>79 %</b></div>
-</div>
-<div class="cols">
-<div class="panel"><h3>Principales contratistas</h3><table>
-<tr><th>Contratista</th><th>Participación</th><th class="r">Valor</th></tr>
-<tr><td>Constructora Andina S.A.</td><td><div class="pct"><div class="meter"><i style="width:39.4%"></i></div>39,4 %</div></td><td class="r">$244.494 M</td></tr>
-<tr><td>Servicios Integrales Cundinamarca</td><td><div class="pct"><div class="meter"><i style="width:25.1%"></i></div>25,1 %</div></td><td class="r">$155.596 M</td></tr>
-<tr><td>Consultora Pública Ltda.</td><td><div class="pct"><div class="meter"><i style="width:14.5%"></i></div>14,5 %</div></td><td class="r">$89.902 M</td></tr>
-</table></div>
-<div class="panel"><h3>Hallazgos de auditoría</h3><table>
-<tr><th>Código</th><th>Hallazgo</th><th>Riesgo</th><th class="r">Valor</th></tr>
-<tr><td>F001</td><td>Contratación directa sin justificación</td><td><span class="pill alto">Alto</span></td><td class="r">$78.000 M</td></tr>
-<tr><td>F002</td><td>Facturas sin soporte documental</td><td><span class="pill alto">Alto</span></td><td class="r">$34.500 M</td></tr>
-<tr><td>F003</td><td>Incumplimiento de metas del PDM</td><td><span class="pill medio">Medio</span></td><td class="r">$28.700 M</td></tr>
-<tr><td>F004</td><td>Variaciones presupuestales no justificadas</td><td><span class="pill medio">Medio</span></td><td class="r">$12.300 M</td></tr>
-</table></div>
-</div>
-</section>
+# Buscar dónde termina el <style>
+style_end = html.rfind('</style>')
+if style_end > 0:
+    html = html[:style_end] + css_adicional + html[style_end:]
+    print("✓ CSS adicional integrado")
 
-<section class="pane" id="vigilancia">
-<h2>Vigilancia fiscal</h2><p class="sub">Análisis de riesgo contractual · cruzamiento SECOP II × Boletín Responsables Fiscales</p>
-<div class="alert"><b>Riesgo crítico:</b> 2 terceros activos en lista de responsables fiscales con contratos en ejecución.</div>
-<div class="kpis">
-<div class="kpi"><small>Terceros analizados</small><b>1.247</b></div>
-<div class="kpi"><small>Riesgo crítico</small><b>2</b></div>
-<div class="kpi"><small>Riesgo alto</small><b>18</b></div>
-<div class="kpi"><small>Casos de fraccionamiento</small><b>34</b></div>
-</div>
-<div class="cols">
-<div class="panel"><h3>Terceros en nivel crítico</h3><table>
-<tr><th>Tercero</th><th>NIT</th><th>Riesgo</th><th class="r">Valor en curso</th></tr>
-<tr><td>ETB S.A.</td><td>860.001.022</td><td><span class="pill crit">Crítico</span></td><td class="r">$245.000 M</td></tr>
-<tr><td>CONSORCIO KLEAN BOGOTÁ</td><td>900.456.128</td><td><span class="pill crit">Crítico</span></td><td class="r">$89.500 M</td></tr>
-</table></div>
-<div class="panel"><h3>Indicadores de riesgo</h3><table>
-<tr><th>Indicador</th><th class="r">Valor</th></tr>
-<tr><td>Fraccionamiento de contratación (mismos terceros, múltiples órdenes)</td><td class="r">34 casos</td></tr>
-<tr><td>Terceros activos en múltiples entidades (red de contratación)</td><td class="r">156 terceros</td></tr>
-<tr><td>Objetos contractuales repetidos (auditable)</td><td class="r">67 patrones</td></tr>
-<tr><td>Contratistas con responsable fiscal sin depuración</td><td class="r">22 casos</td></tr>
-</table></div>
-</div>
-<div class="panel"><h3>Top 10 terceros de alto riesgo</h3><table>
-<tr><th>Tercero</th><th>Riesgo</th><th class="r">Contratos</th><th class="r">Valor total</th></tr>
-<tr><td>Transportes Bogotá Express</td><td><span class="pill alto">Alto</span></td><td class="r">23</td><td class="r">$45.200 M</td></tr>
-<tr><td>Consultoría Integral Distrital</td><td><span class="pill alto">Alto</span></td><td class="r">19</td><td class="r">$38.900 M</td></tr>
-<tr><td>Servicios Integrales Cundinamarca</td><td><span class="pill alto">Alto</span></td><td class="r">15</td><td class="r">$155.596 M</td></tr>
-<tr><td>Grupo de Inversiones PRC</td><td><span class="pill alto">Alto</span></td><td class="r">12</td><td class="r">$28.400 M</td></tr>
-<tr><td>Fiduprevisora S.A.</td><td><span class="pill alto">Alto</span></td><td class="r">18</td><td class="r">$95.200 M</td></tr>
-<tr><td>Constructora Andina S.A.</td><td><span class="pill medio">Medio</span></td><td class="r">8</td><td class="r">$244.494 M</td></tr>
-<tr><td>SOFASA (Soc. Fin. de Autos S.A.)</td><td><span class="pill medio">Medio</span></td><td class="r">6</td><td class="r">$12.800 M</td></tr>
-<tr><td>Consorcio Mantenimiento Vial</td><td><span class="pill medio">Medio</span></td><td class="r">14</td><td class="r">$34.500 M</td></tr>
-<tr><td>Consultoría de Proyectos Bogotá</td><td><span class="pill ok-p">Bajo</span></td><td class="r">4</td><td class="r">$8.900 M</td></tr>
-<tr><td>Mantenimiento Infraestructura Local</td><td><span class="pill ok-p">Bajo</span></td><td class="r">5</td><td class="r">$11.200 M</td></tr>
-</table></div>
-</section>
+# ===============================
+# PASO 2: Agregar pestaña "Generador de Estado de Cuenta" en nav
+# ===============================
 
-<section class="pane" id="seguridad">
-<h2>Seguridad electoral</h2><p class="sub">Soacha · preparación para la jornada electoral 2027</p>
-<div class="kpis">
-<div class="kpi"><small>Puestos de votación</small><b>287</b></div>
-<div class="kpi"><small>Índice de integridad</small><b>78 %</b></div>
-<div class="kpi"><small>Puestos vulnerables</small><b>12</b></div>
-<div class="kpi"><small>Testigos capacitados</small><b>120</b></div>
-</div>
-<div class="cols">
-<div class="panel"><h3>ElectoralBio · piloto v0.1</h3><table>
-<tr><th>Parámetro</th><th class="r">Valor</th></tr>
-<tr><td>Tecnología</td><td class="r">OCR de E-14 + GPS</td></tr>
-<tr><td>Puestos en piloto</td><td class="r">45 de 287 (15,7 %)</td></tr>
-<tr><td>Fecha del piloto</td><td class="r">15 de marzo de 2027</td></tr>
-<tr><td>Dominios falsos desactivados</td><td class="r">3</td></tr>
-</table></div>
-<div class="panel"><h3>Puestos de mayor riesgo</h3><table>
-<tr><th>Puesto</th><th>Factor</th><th class="r">Índice</th></tr>
-<tr><td>IE Prado Veraniego</td><td>Vigilancia insuficiente</td><td class="r"><span class="pill crit">0,89</span></td></tr>
-<tr><td>El Bosque</td><td>Conflictividad histórica</td><td class="r"><span class="pill alto">0,78</span></td></tr>
-<tr><td>J. Martí</td><td>Infraestructura precaria</td><td class="r"><span class="pill medio">0,75</span></td></tr>
-</table></div>
-</div>
-</section>
+# Buscar la navegación de pestañas
+nav_pattern = r'(<nav class="tabs">)(.*?)(<\/nav>)'
+def add_gen_tab(match):
+    nav_open = match.group(1)
+    tabs = match.group(2)
+    nav_close = match.group(3)
+    # Agregar la nueva pestaña antes del cierre de nav
+    new_tab = '<button data-t="generador">Generador de Estado de Cuenta</button>'
+    return nav_open + tabs + new_tab + nav_close
 
-<section class="pane" id="scoring">
-<h2>Scoring integral</h2><p class="sub">Índice = 0,40 × electoral + 0,35 × fiscal + 0,25 × social (escala 0 a 100)</p>
-<div class="panel"><table>
-<tr><th>Candidato</th><th>Electoral (40 %)</th><th>Fiscal (35 %)</th><th>Social (25 %)</th><th class="r">Índice</th></tr>
-<tbody id="sc"></tbody>
-</table>
-<p class="note">El componente social de este escenario es ilustrativo. Antes de presentarlo debe alimentarse con el módulo Pulso Social en Redes, y la comparación debe hacerse contra los candidatos inscritos para 2027.</p>
-</div>
-</section>
-<section class="pane" id="generador">
+html = re.sub(nav_pattern, add_gen_tab, html, flags=re.DOTALL)
+print("✓ Pestaña 'Generador' agregada a nav")
+
+# ===============================
+# PASO 3: Agregar la sección "Generador de Estado de Cuenta"
+# ===============================
+
+gen_section = '''<section class="pane" id="generador">
 <h2>Generador de Estado de Cuenta</h2>
 <p class="sub">Procesa datos de pagos del histórico · todo se ejecuta en tu navegador</p>
 <div class="mod04-grid">
@@ -243,18 +135,20 @@ tr:last-child td{border-bottom:0}
 <button class="btn-reset" id="resetBtn">🔄 Limpiar</button>
 </div>
 </div>
-</section>
+</section>'''
 
-</main>
-<script>
-const W={e:.40,f:.35,s:.25};
-const C=[{n:'Danny Caicedo',e:65,f:38,s:68},{n:'Julián Sánchez "Perico"',e:35,f:38,s:35}];
-const fmt=v=>v.toFixed(1).replace('.',',');
-document.getElementById('sc').innerHTML=C.map(c=>{const t=c.e*W.e+c.f*W.f+c.s*W.s;return `<tr><td><b>${c.n}</b></td><td>${c.e}</td><td>${c.f}</td><td>${c.s}</td><td class="r"><b>${fmt(t)}</b></td></tr>`}).join('');
-function show(id){if(!document.getElementById(id))id='fiscal';document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));history.replaceState(null,'','#'+id)}
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.t));
-show(location.hash.slice(1));
-</script>
+# Buscar dónde está la última sección </section> antes de </main>
+main_end = html.rfind('</main>')
+last_section = html.rfind('</section>', 0, main_end)
+if last_section > 0:
+    html = html[:last_section+10] + '\n' + gen_section + '\n' + html[last_section+10:]
+    print("✓ Sección generador integrada")
+
+# ===============================
+# PASO 4: Agregar script XLSX y lógica del módulo 04
+# ===============================
+
+script_adicional = '''
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
 // ========== MÓDULO 04 - ESTADO DE CUENTA ==========
@@ -436,6 +330,20 @@ if (document.getElementById('plantillaUploadArea')) {
         enableGenerateBtn();
     });
 }
-</script>
-</body>
-</html>
+</script>'''
+
+# Buscar el script existente que está antes de </body>
+body_end = html.rfind('</body>')
+# Buscar el último <script> existente
+last_script_end = html.rfind('</script>')
+if last_script_end > 0 and last_script_end < body_end:
+    # Insertar nuevo script después del último script existente
+    html = html[:last_script_end+9] + script_adicional + html[last_script_end+9:]
+    print("✓ Script XLSX y lógica del módulo 04 integrados")
+
+# Guardar el archivo actualizado
+with open('modulos-3-integrados.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+
+print("✓ Archivo modulos-3-integrados.html actualizado exitosamente")
+print("✓ Nueva pestaña 'Generador de Estado de Cuenta' disponible")
