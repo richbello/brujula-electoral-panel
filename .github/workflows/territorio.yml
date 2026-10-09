@@ -1,0 +1,87 @@
+name: Actualizar territorio y obras
+
+# Genera data/modulos/territorio.json a partir de SECOP II: obras cuya fecha
+# de fin ya paso y siguen en ejecucion, y valor por lugar nombrado en el
+# objeto contractual.
+#
+# Se ejecuta a mano desde la pestana Actions, y tambien el primer dia de cada
+# mes, porque las obras vencidas envejecen solas: un contrato que hoy lleva
+# un mes de atraso manana lleva dos.
+
+on:
+  workflow_dispatch:
+    inputs:
+      municipio:
+        description: "Municipio (como aparece en el campo ciudad de SECOP)"
+        required: true
+        default: "Soacha"
+      desde:
+        description: "Desde que fecha de firma"
+        required: true
+        default: "2020-01-01"
+      minimo:
+        description: "Valor minimo en pesos para listar una obra vencida"
+        required: false
+        default: "20000000"
+  schedule:
+    # dia 3 de cada mes, 11:10 UTC = 6:10 a.m. en Bogota
+    - cron: "10 11 3 * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: territorio
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install --quiet requests
+      - name: Verificar la logica
+        run: python test_etl_territorio.py
+      - name: Generar el corte
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+          MUNICIPIO: ${{ github.event.inputs.municipio || 'Soacha' }}
+          DESDE: ${{ github.event.inputs.desde || '2020-01-01' }}
+          MINIMO: ${{ github.event.inputs.minimo || '20000000' }}
+        run: python etl_territorio.py --municipio "$MUNICIPIO" --desde "$DESDE" --minimo "$MINIMO"
+      - name: Resumen del corte
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          d = json.loads(pathlib.Path("data/modulos/territorio.json").read_text("utf-8"))
+          m, k, c = d["meta"], d["kpis"], d["meta"]["cobertura"]
+          print(f"## Territorio y obras — {m['municipio']}\n")
+          print("| Indicador | Valor |")
+          print("|---|---:|")
+          print(f"| Contratos | {k['contratos']:,} |")
+          print(f"| Valor contratado | ${k['valor_total']:,.0f} |")
+          print(f"| Obras vencidas y abiertas | {k['obras_vencidas']:,} |")
+          print(f"| Valor vencido | ${k['valor_vencido']:,.0f} |")
+          print(f"| Saldo sin pagar | ${k['pendiente_vencido']:,.0f} |")
+          print(f"| Sectores nombrados | {k['sectores']:,} |")
+          print(f"\n> Cobertura: el **{c['pct_valor']}%** del valor nombra un lugar. "
+                f"El resto son contratos de alcance municipal o sin lugar en el objeto, "
+                f"asi que el desglose por sector es parcial.")
+          PY
+      - name: Publicar el corte
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/modulos/territorio.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios."; exit 0
+          fi
+          git commit -m "Corte de territorio y obras $(date -u +%Y-%m-%d)
+
+          Generado por el workflow Actualizar territorio y obras. Fuente: SECOP II (jbjy-vk9h)."
+          git push

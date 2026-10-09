@@ -108,6 +108,22 @@ tr:last-child td{border-bottom:0}
 .vf-vacio code{background:#F3F1FF;border:1px solid var(--line);border-radius:4px;padding:3px 7px;font-size:12.5px;color:var(--navy)}
 .vf-vacio pre{background:var(--navy);color:#E8E2FF;border-radius:8px;padding:14px 16px;font-size:12.5px;overflow-x:auto;margin:12px 0;line-height:1.5}
 
+/* ==================== TERRITORIO Y OBRAS ==================== */
+.terr-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.terr-tab{padding:9px 18px;border-radius:9px;font:700 13px Inter,"Segoe UI",sans-serif;cursor:pointer;border:1.5px solid var(--line);background:#fff;color:var(--muted)}
+.terr-tab:hover{border-color:var(--gold)}
+.terr-tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.terr-aviso{background:#FFF0CC;border:1px solid #FFE3A3;border-left:4px solid var(--warn);border-radius:10px;padding:16px 20px;margin-bottom:18px;font-size:13px;line-height:1.65;color:#8A5A00}
+.terr-aviso b{color:#7A4E00}
+.terr-aviso p{margin:8px 0 0}
+.terr-barra{height:12px;border-radius:6px;background:#F0D9A8;overflow:hidden;margin-top:14px}
+.terr-barra-in{height:100%;background:linear-gradient(90deg,#EA6A0A,#FFB020)}
+.terr-barra-txt{display:flex;justify-content:space-between;gap:12px;font-size:12px;margin-top:6px;flex-wrap:wrap}
+#terr-tabla tbody tr{cursor:pointer}
+#terr-tabla tbody tr:hover{background:#FAF9FF}
+#terr-tabla tbody tr.abierta{background:#F8F6FF}
+.terr-ej{font-size:11.5px;color:var(--muted);line-height:1.75;padding:0 0 10px 4px;border-bottom:1px solid var(--line)}
+
 /* ==================== FINANCIADORES Y CONTRATOS ==================== */
 #fin-contenido .kpis{grid-template-columns:repeat(auto-fit,minmax(155px,1fr))}
 #fin-contenido .kpi b{font-size:21px}
@@ -138,7 +154,7 @@ table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-
 <header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Vigilancia de la contratación pública</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
 <main>
 <div class="demo" id="aviso"></div>
-<nav class="tabs"><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="financiadores">Financiadores y contratos</button></nav>
+<nav class="tabs"><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="financiadores">Financiadores y contratos</button><button data-t="territorio">Territorio y obras</button></nav>
 
 
 
@@ -181,6 +197,13 @@ table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-
 <div id="fin-contenido" hidden></div>
 </section>
 
+<section class="pane" id="territorio">
+<h2>Territorio y obras inconclusas</h2>
+<p class="sub">Obras vencidas que siguen abiertas, y el valor por los lugares que nombra el contrato</p>
+<div id="terr-estado" class="vfi-msg">Cargando el último corte…</div>
+<div id="terr-contenido" hidden></div>
+</section>
+
 
 
 </main>
@@ -188,6 +211,7 @@ table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-
 // Cada pestaña declara de dónde salen sus cifras. Si una deja de ser
 // demostración, se cambia aquí y el aviso deja de mentir.
 const ORIGEN = {
+  territorio: {real:true, txt:'<strong>Datos reales.</strong> Contratos de SECOP II cuya fecha de fin ya pasó y siguen en ejecución, más el valor por lugar nombrado en el objeto. La cobertura de los sectores es parcial y la pestaña la muestra.'},
   financiadores: {real:true, txt:'<strong>Datos reales.</strong> Cruce de los aportes reportados al CNE contra los contratos obtenidos después. Señala posibles inhabilidades del artículo 2 de la Ley 1474 de 2011, que deben verificarse caso por caso.'},
   vigilancia: {real:true, txt:'<strong>Datos reales.</strong> Cruce en vivo de SECOP II contra SIRI (Procuraduría) y el Boletín de Responsables Fiscales (Contraloría). Las coincidencias requieren verificación antes de hacerse públicas.'}
 };
@@ -842,6 +866,239 @@ show(location.hash.slice(1));
   siToca();
   window.addEventListener("hashchange", siToca);
   const btn = document.querySelector('.tabs button[data-t="financiadores"]');
+  if (btn) btn.addEventListener("click", cargar);
+})();
+
+/* ============================================================
+   TERRITORIO Y OBRAS INCONCLUSAS
+   Lee data/modulos/territorio.json, que produce etl_territorio.py.
+   Dos miradas con confiabilidad distinta, y la pagina lo dice:
+   las obras vencidas cubren el 100% de los contratos; los sectores
+   solo los que nombran un lugar en el objeto.
+   ============================================================ */
+(function () {
+  "use strict";
+  const FUENTE = "data/modulos/territorio.json";
+  const DIAS_VIEJO = 30;
+  let cargado = false, DATOS = null, abierta = null, vista = "vencidas";
+
+  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const plata = v => new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",
+    maximumFractionDigits:0}).format(Number(v)||0);
+  const corto = v => { v=Number(v)||0; const a=Math.abs(v);
+    if(a>=1e12) return "$"+(v/1e12).toFixed(1)+" B";
+    if(a>=1e9)  return "$"+(v/1e9).toFixed(1)+" MM";
+    if(a>=1e6)  return "$"+(v/1e6).toFixed(1)+" M";
+    return plata(v); };
+  const miles = n => Number(n||0).toLocaleString("es-CO");
+  const fecha = iso => { const d=new Date(iso);
+    return isNaN(d)?String(iso||"—"):d.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"}); };
+  const anios = d => { d=Number(d)||0;
+    return d>=365 ? (d/365).toFixed(1).replace(".",",")+" años" : miles(d)+" días"; };
+  const $ = id => document.getElementById(id);
+
+  async function cargar() {
+    if (cargado) return;
+    cargado = true;
+    const caja = $("terr-estado"), cont = $("terr-contenido");
+    try {
+      const r = await fetch(FUENTE, { cache: "no-store" });
+      if (r.status === 404) return vacio(caja);
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      DATOS = await r.json();
+      if (!DATOS || !DATOS.meta || !DATOS.kpis) throw new Error("El archivo no tiene la estructura esperada.");
+      pintar();
+      cont.hidden = false;
+      caja.style.display = "none";
+    } catch (err) {
+      cargado = false;
+      caja.className = "vfi-msg";
+      caja.innerHTML = "<b>No se pudo cargar el corte de territorio.</b>" + esc(err.message) +
+        "<br><br>Si abrió el archivo con doble clic, el navegador bloquea la lectura de " +
+        "datos locales. Levante un servidor: <code>python -m http.server</code>.";
+    }
+  }
+
+  function vacio(caja) {
+    caja.className = "vf-vacio";
+    caja.innerHTML =
+      "<b>Todavía no hay un corte generado.</b>" +
+      "Esta pestaña muestra dos cosas: los contratos cuya fecha de fin ya pasó y siguen " +
+      "en ejecución, y el valor agrupado por los lugares que nombra el objeto contractual. " +
+      "Para generarlo:" +
+      "<pre>python etl_territorio.py --municipio Soacha --desde 2020-01-01</pre>" +
+      "También puede ejecutarlo desde la pestaña <b style=\"display:inline\">Actions</b> " +
+      "del repositorio, sin instalar nada.";
+  }
+
+  function pintar() {
+    const m = DATOS.meta, k = DATOS.kpis, c = m.cobertura || {};
+    const dias = Math.floor((Date.now() - new Date(m.generado_en).getTime())/86400000);
+    const viejo = !isNaN(dias) && dias > DIAS_VIEJO;
+    let h = "";
+
+    h += '<div class="vf-corte'+(viejo?" viejo":"")+'">' +
+      "<b>Corte: " + esc(fecha(m.generado_en)) + "</b>" +
+      "<span>" + esc(m.municipio||"") + "</span>" +
+      "<span>Contratos firmados entre " + esc((m.ventana||{}).desde) + " y " + esc((m.ventana||{}).hasta) + "</span>" +
+      (viejo ? '<span style="color:var(--warn);font-weight:600">Corte de hace '+dias+' días</span>' : "") +
+      "</div>";
+
+    h += '<div class="kpis">' +
+      kpi("Contratos", miles(k.contratos)) +
+      kpi("Valor contratado", corto(k.valor_total)) +
+      kpi("Obras vencidas", miles(k.obras_vencidas)) +
+      kpi("Valor vencido", corto(k.valor_vencido)) +
+      kpi("Saldo sin pagar", corto(k.pendiente_vencido)) +
+      kpi("Sectores nombrados", miles(k.sectores)) +
+      "</div>";
+
+    h += '<div class="terr-tabs">' +
+      '<button class="terr-tab'+(vista==="vencidas"?" on":"")+'" data-v="vencidas">' +
+        "Obras vencidas · " + miles(k.obras_vencidas) + "</button>" +
+      '<button class="terr-tab'+(vista==="sectores"?" on":"")+'" data-v="sectores">' +
+        "Por sector · " + miles(k.sectores) + "</button>" +
+      "</div><div id='terr-vista'></div>";
+
+    h += '<div class="vf-fuentes"><b>Fuente de este corte</b><br>' +
+      (m.fuentes||[]).map(f => "· " + esc(f.nombre) + " — " + esc(f.entidad) +
+        ", dataset <code>" + esc(f.dataset) + "</code>, " + miles(f.registros) + " registros" +
+        (f.url ? ' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener">ver dataset</a>' : "")
+      ).join("<br>") +
+      "<br>Generado por <code>etl_territorio.py</code> el " + esc(fecha(m.generado_en)) + ".</div>";
+
+    $("terr-contenido").innerHTML = h;
+    $("terr-contenido").querySelectorAll(".terr-tab").forEach(b =>
+      b.addEventListener("click", () => { vista = b.dataset.v; abierta = null; pintar(); }));
+    pintarVista();
+  }
+
+  const kpi = (t,v) => '<div class="kpi"><small>'+esc(t)+"</small><b>"+esc(v)+"</b></div>";
+
+  function pintarVista() {
+    $("terr-vista").innerHTML = vista === "vencidas" ? vistaVencidas() : vistaSectores();
+    if (vista === "vencidas") {
+      document.querySelectorAll("#terr-vista .terr-f").forEach(tr =>
+        tr.addEventListener("click", () => {
+          const i = Number(tr.dataset.i);
+          abierta = (abierta === i) ? null : i;
+          pintarVista();
+        }));
+    }
+    const bi = $("terr-busca");
+    if (bi) bi.addEventListener("input", () => { abierta = null; pintarVista(); });
+  }
+
+  /* ---------- obras vencidas: el dato firme ---------- */
+  function vistaVencidas() {
+    const todas = DATOS.obras_vencidas || [];
+    const q = (($("terr-busca")||{}).value || "").toLowerCase().trim();
+    const filas = todas.filter(o => !q ||
+      [o.contratista, o.entidad, o.objeto, o.referencia]
+        .some(v => String(v||"").toLowerCase().includes(q)));
+
+    let h = '<div class="panel">' +
+      '<p class="note" style="margin:0 0 12px">Contratos cuya fecha de terminación ya pasó y ' +
+      "que siguen figurando en ejecución en SECOP. Cubre el <b>100 % de los contratos</b> del " +
+      "período: no depende de que el objeto nombre un lugar. Que un contrato aparezca aquí " +
+      "puede deberse a una obra parada, a una prórroga no registrada o a que la entidad no " +
+      "actualizó el estado; conviene confirmarlo antes de afirmarlo.</p>" +
+      '<input id="terr-busca" value="'+esc(q)+'" placeholder="Buscar por contratista, entidad u objeto…" ' +
+      'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;' +
+      'font-size:13px;box-sizing:border-box;margin-bottom:14px;font-family:inherit">';
+
+    if (!filas.length) {
+      h += '<div class="vfi-vacio">' + (todas.length
+        ? "Sin resultados para esa búsqueda."
+        : "Ningún contrato del período está vencido y abierto a la vez. Es un resultado posible y bueno.") +
+        "</div></div>";
+      return h;
+    }
+
+    h += '<div style="overflow-x:auto"><table id="terr-tabla"><thead><tr>' +
+      '<th style="width:28px"></th><th>Objeto</th><th>Contratista</th>' +
+      '<th class="r">Valor</th><th class="r">Sin pagar</th><th class="r">Vencida hace</th>' +
+      "</tr></thead><tbody>";
+    filas.forEach((o, i) => {
+      const ab = abierta === i;
+      const grave = o.dias_vencido >= 730;
+      h += '<tr class="terr-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
+        '<td style="color:var(--muted)">'+(ab?"▼":"▶")+"</td>" +
+        "<td><b>"+esc(o.objeto.slice(0,90))+(o.objeto.length>90?"…":"")+"</b>" +
+          '<span class="vf-sub">'+esc(o.entidad)+" · "+esc(o.referencia)+"</span></td>" +
+        "<td>"+esc(o.contratista)+"</td>" +
+        '<td class="vfi-mono">'+esc(corto(o.valor))+"</td>" +
+        '<td class="vfi-mono">'+esc(corto(o.pendiente))+"</td>" +
+        '<td class="vfi-mono"><span class="vfi-nivel" style="background:'+
+          (grave?"#C8003C":"#EA6A0A")+'">'+esc(anios(o.dias_vencido))+"</span></td></tr>";
+      if (ab) {
+        h += '<tr class="vfi-det"><td colspan="6"><div class="vfi-campos">' +
+          campo("Objeto completo", o.objeto) +
+          campo("Entidad", o.entidad) +
+          campo("Contratista", o.contratista + (o.documento ? " · " + o.documento : "")) +
+          campo("Tipo", o.tipo) +
+          campo("Inicio", o.inicio) +
+          campo("Fin pactado", o.fin, true) +
+          campo("Estado en SECOP", o.estado) +
+          campo("Valor", plata(o.valor)) +
+          campo("Pagado", plata(o.pagado)) +
+          campo("Saldo sin pagar", plata(o.pendiente), true) +
+          ((o.lugares||[]).length
+            ? campo("Lugar nombrado en el objeto",
+                o.lugares.map(l => l.tipo + ": " + l.nombre).join(" · "))
+            : "") +
+          (o.url ? '<div class="vfi-campo"><div class="k">SECOP</div><div class="v">' +
+            '<a href="'+esc(o.url)+'" target="_blank" rel="noopener">ver el proceso</a></div></div>' : "") +
+          "</div></td></tr>";
+      }
+    });
+    return h + "</tbody></table></div></div>";
+  }
+
+  const campo = (k, v, rojo) => !v ? "" :
+    '<div class="vfi-campo"><div class="k">'+esc(k)+'</div>' +
+    '<div class="v'+(rojo?" rojo":"")+'">'+esc(v)+"</div></div>";
+
+  /* ---------- sectores: parcial, y se dice ---------- */
+  function vistaSectores() {
+    const m = DATOS.meta, c = m.cobertura || {}, sec = DATOS.sectores || [];
+    const pct = Number(c.pct_valor) || 0;
+
+    let h = '<div class="terr-aviso"><b>Esto no es un mapa de la inversión, y la cobertura es parcial.</b>' +
+      "<p>" + esc(m.advertencia_mapa || "") + "</p>" +
+      "<p>" + esc(m.advertencia_cobertura || "") + "</p>" +
+      '<div class="terr-barra"><div class="terr-barra-in" style="width:'+Math.max(2,Math.min(100,pct))+'%"></div></div>' +
+      '<div class="terr-barra-txt"><span><b>'+esc(String(pct).replace(".",","))+' %</b> del valor nombra un lugar · ' +
+        esc(corto(c.valor_con_lugar)) + "</span><span>" +
+        esc(String(Math.round((100-pct)*10)/10).replace(".",",")) + " % sin ubicar · " +
+        esc(corto(c.valor_sin_lugar)) + "</span></div>" +
+      "<p style=\"margin-top:10px\">" + esc(m.reparto || "") + "</p></div>";
+
+    if (!sec.length) return h + '<div class="panel"><div class="vfi-vacio">Ningún objeto contractual del período nombra un lugar identificable.</div></div>';
+
+    const max = Math.max(...sec.map(s => s.valor)) || 1;
+    h += '<div class="panel"><table><thead><tr><th>Lugar</th><th>Participación del valor ubicado</th>' +
+      '<th class="r">Contratos</th><th class="r">Valor</th></tr></thead><tbody>';
+    sec.forEach(s => {
+      h += "<tr><td><b>"+esc(s.nombre)+"</b><span class=\"vf-sub\">"+esc(s.tipo)+"</span></td>" +
+        '<td><div class="pct"><div class="meter" style="width:140px"><i style="width:'+
+          Math.max(2, s.valor/max*100)+'%"></i></div></div></td>' +
+        '<td class="r">'+miles(s.contratos)+"</td>" +
+        '<td class="vfi-mono">'+esc(corto(s.valor))+"</td></tr>";
+      if ((s.ejemplos||[]).length) {
+        h += '<tr><td colspan="4" style="padding-top:0"><div class="terr-ej">' +
+          s.ejemplos.map(e => "· " + esc(e.objeto) + " <b>" + esc(corto(e.valor)) + "</b>").join("<br>") +
+          "</div></td></tr>";
+      }
+    });
+    return h + "</tbody></table></div>";
+  }
+
+  const siToca = () => { if (location.hash.slice(1) === "territorio") cargar(); };
+  siToca();
+  window.addEventListener("hashchange", siToca);
+  const btn = document.querySelector('.tabs button[data-t="territorio"]');
   if (btn) btn.addEventListener("click", cargar);
 })();
 </script>
