@@ -163,6 +163,19 @@ for objeto, esperado in [
     got = {l["nombre"] for l in etl.extraer_lugares(objeto)}
     check(f"'{esperado}' se conserva", esperado in got, str(got))
 
+print("\n[10] Adjetivos de seleccion no son lugares")
+for objeto, malo in [
+  ("DOTACION DE INSTITUCIONES EDUCATIVAS FOCALIZADAS", "Focalizadas"),
+  ("OBRAS EN LOS BARRIOS ELEGIDOS POR LA COMUNIDAD", "Elegidos"),
+  ("MANTENIMIENTO EN EL SECTOR SUSCRITO", "Suscrito"),
+  ("INTERVENCION EN LOS SECTORES PRIORIZADOS", "Priorizados"),
+]:
+    got = {l["nombre"] for l in etl.extraer_lugares(objeto)}
+    check(f"descarta '{malo}'", malo not in got, str(got))
+check("pero 'Danubio' y 'Prado Vegas' sobreviven",
+      {"Danubio","Prado Vegas"} <= {l["nombre"] for l in
+        etl.extraer_lugares("PAVIMENTACION EN LOS SECTORES DANUBIO; PRADO VEGAS")})
+
 print("\n" + "=" * 60)
 if fallos:
     print(f"FALLARON {len(fallos)}:")

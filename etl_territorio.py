@@ -107,7 +107,14 @@ BASURA = {"", "OFICIAL", "OFICIALES", "PUBLICA", "PUBLICO", "MUNICIPAL", "DISTRI
           "CIUDAD", "MUNICIPIO", "SOACHA", "CUNDINAMARCA", "COLOMBIA", "SECTOR",
           "SECTORES", "BARRIO", "BARRIOS", "COMUNA", "COMUNAS", "VEREDA", "URBANA",
           "URBANAS", "RURAL", "RURALES", "NUEVA", "NUEVO", "VIAS", "VIA", "TODOS",
-          "VARIOS", "DIFERENTES", "LAS", "LOS", "DEL", "UNA", "UNO"}
+          "VARIOS", "DIFERENTES", "LAS", "LOS", "DEL", "UNA", "UNO",
+          "SUSCRITO", "SUSCRITA", "VIGENTE", "VIGENTES", "RESPECTIVO", "RESPECTIVA"}
+
+# Un participio suelto describe una seleccion, no nombra un lugar:
+# "instituciones educativas FOCALIZADAS", "barrios ELEGIDOS".
+# La raiz debe tener al menos 4 letras, para no confundir nombres cortos:
+# "Vida" termina en -ida y "Prado" en -ado, pero no son participios.
+PARTICIPIO = re.compile(r"^[A-Za-zÁÉÍÓÚÑáéíóúñ]{4,}(AD[OA]S?|ID[OA]S?)$")
 
 
 def _limpiar_nombre(txt: str) -> str:
@@ -136,6 +143,8 @@ def _limpiar_nombre(txt: str) -> str:
     utiles = [w for w in nombre.split()
               if sin_tildes(w).upper() not in BASURA and len(w) > 2]
     if not utiles or len(nombre) < 3:
+        return ""
+    if len(utiles) == 1 and PARTICIPIO.match(sin_tildes(utiles[0]).upper()):
         return ""
     return nombre
 
