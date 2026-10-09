@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generado_en": "2026-10-09T22:11:19+00:00",
+  "generado_en": "2026-10-09T22:20:42+00:00",
   "municipio": "Soacha",
   "ventana": {
    "desde": "2020-01-01",
@@ -8,15 +8,15 @@
   },
   "minimo_obra": 20000000.0,
   "cobertura": {
-   "contratos_con_lugar": 1055,
-   "contratos_sin_lugar": 36699,
-   "valor_con_lugar": 606300250021.5198,
-   "valor_sin_lugar": 2955133033823.7876,
-   "pct_contratos": 2.8,
-   "pct_valor": 17.0
+   "contratos_con_lugar": 501,
+   "contratos_sin_lugar": 37253,
+   "valor_con_lugar": 479729884891.94,
+   "valor_sin_lugar": 3096144135661.027,
+   "pct_contratos": 1.3,
+   "pct_valor": 13.4
   },
   "advertencia_mapa": "Esto NO es un mapa de la inversion. SECOP trae un campo de direccion de ejecucion, pero contiene la direccion de la entidad contratante, no la del sitio de la obra, asi que no se usa. El lugar solo aparece en el texto del objeto y solo en una parte de los contratos.",
-  "advertencia_cobertura": "El 17.0% del valor contratado nombra un lugar. El 83.0% restante corresponde a contratos de alcance municipal o sin lugar en el objeto. Un sector que no aparece puede no haber recibido nada, o haber recibido sin que el objeto lo nombre: con estos datos no se puede distinguir.",
+  "advertencia_cobertura": "El 13.4% del valor contratado nombra un lugar. El 86.6% restante corresponde a contratos de alcance municipal o sin lugar en el objeto. Un sector que no aparece puede no haber recibido nada, o haber recibido sin que el objeto lo nombre: con estos datos no se puede distinguir.",
   "reparto": "Cuando un objeto nombra varios lugares, el valor se reparte en partes iguales entre ellos, para que la suma por sector no supere el total contratado.",
   "fuentes": [
    {
@@ -30,14 +30,31 @@
  },
  "kpis": {
   "contratos": 37754,
-  "valor_total": 3561433283845.31,
-  "obras_vencidas": 1898,
-  "valor_vencido": 192737912994.58,
-  "pendiente_vencido": 180962011438.59,
-  "sectores": 257,
-  "cobertura_valor": 17.0
+  "valor_total": 3575874020552.97,
+  "obras_vencidas": 1907,
+  "valor_vencido": 207358611379.58,
+  "pendiente_vencido": 195544520126.59,
+  "sectores": 127,
+  "cobertura_valor": 13.4
  },
  "obras_vencidas": [
+  {
+   "referencia": "1183-2025",
+   "entidad": "MUNICIPIO DE SOACHA.",
+   "contratista": "CAJA DE COMPENSACION FAMILIAR COMPENSAR",
+   "documento": "860066942",
+   "objeto": "AUNAR ESFUERZOSY RECURSOS DE LA LEY 633 DE 2000; ENTRE LA CIUDAD DE SOACHA Y LA CAJA DE COMPENSACIÓN FAMILIAR COMPENSAR; PARA LA ATENCIÓN INTEGRAL A LA PRIMERA INFANCIA DE LOS NIÑOS Y NIÑASDE 0 A 5 AÑOSY 11 MESES; PARALA OPERACIÓN DE DOS CENTROS DE DESARROLLO INFANTIL; EN LA CIUDAD DE SOACHA CUNDINA",
+   "tipo": "Otro",
+   "valor": 8981600000.0,
+   "pagado": 0.0,
+   "pendiente": 8981600000.0,
+   "inicio": "2025-01-30",
+   "fin": "2025-12-31",
+   "dias_vencido": 282,
+   "estado": "En ejecución",
+   "lugares": [],
+   "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.7468287&isFromPublicArea=True&isModal=true&asPopupView=true"
+  },
   {
    "referencia": "1183-2025",
    "entidad": "MUNICIPIO DE SOACHA.",
@@ -124,6 +141,23 @@
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.7467267&isFromPublicArea=True&isModal=true&asPopupView=true"
   },
   {
+   "referencia": "1185-2025",
+   "entidad": "MUNICIPIO DE SOACHA.",
+   "contratista": "CAJA DE COMPENSACION FAMILIAR COMPENSAR",
+   "documento": "860066942",
+   "objeto": "AUNAR ESFUERZOS Y RECURSOS DE LA LEY 633 DE 2000; ENTRE LA CIUDAD DE SOACHA Y LA CAJA DE COMPENSACIÓN FAMILIAR COMPENSAR; PARA LA ATENCIÓN INTEGRAL A LA PRIMERA INFANCIA DE LOS NIÑOS Y NIÑAS DE 0 A 3 AÑOS Y 11 MESES; EN MODALIDAD FAMILIAR; EN LA CIUDAD DE SOACHA CUNDINAMARCA.",
+   "tipo": "Otro",
+   "valor": 5073800000.0,
+   "pagado": 0.0,
+   "pendiente": 5073800000.0,
+   "inicio": "2025-01-30",
+   "fin": "2025-12-31",
+   "dias_vencido": 282,
+   "estado": "En ejecución",
+   "lugares": [],
+   "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.7467267&isFromPublicArea=True&isModal=true&asPopupView=true"
+  },
+  {
    "referencia": "4648-2023",
    "entidad": "MUNICIPIO DE SOACHA.",
    "contratista": "JOSE DANIEL GONZALEZ NIÑO",
@@ -154,12 +188,7 @@
    "fin": "2025-12-14",
    "dias_vencido": 299,
    "estado": "En ejecución",
-   "lugares": [
-    {
-     "tipo": "Institución educativa",
-     "nombre": "Ciudad De Soacha"
-    }
-   ],
+   "lugares": [],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.7638847&isFromPublicArea=True&isModal=true&asPopupView=true"
   },
   {
@@ -247,7 +276,7 @@
    "lugares": [
     {
      "tipo": "Institución educativa",
-     "nombre": "Focalizadas Por La Secretaría De"
+     "nombre": "Focalizadas"
     }
    ],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.7755628&isFromPublicArea=True&isModal=true&asPopupView=true"
@@ -286,7 +315,7 @@
    "lugares": [
     {
      "tipo": "Institución educativa",
-     "nombre": "Focalizadas Por El Municipio"
+     "nombre": "Focalizadas"
     }
    ],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.4413356&isFromPublicArea=True&isModal=true&asPopupView=true"
@@ -543,12 +572,7 @@
    "fin": "2025-12-31",
    "dias_vencido": 282,
    "estado": "En ejecución",
-   "lugares": [
-    {
-     "tipo": "Institución educativa",
-     "nombre": "Ciudad De Soacha"
-    }
-   ],
+   "lugares": [],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.8208622&isFromPublicArea=True&isModal=true&asPopupView=true"
   },
   {
@@ -616,12 +640,7 @@
    "fin": "2021-12-18",
    "dias_vencido": 1756,
    "estado": "En ejecución",
-   "lugares": [
-    {
-     "tipo": "Institución educativa",
-     "nombre": "Fortalecimiento De Sus Habilidades Comunic"
-    }
-   ],
+   "lugares": [],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.1973850&isFromPublicArea=True&isModal=true&asPopupView=true"
   },
   {
@@ -794,7 +813,7 @@
    "lugares": [
     {
      "tipo": "Institución educativa",
-     "nombre": "A Través De Acciones De"
+     "nombre": "A Través De Acciones"
     }
    ],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.1945362&isFromPublicArea=True&isModal=true&asPopupView=true"
@@ -816,7 +835,7 @@
    "lugares": [
     {
      "tipo": "Vereda",
-     "nombre": "Panamá En El Sector El"
+     "nombre": "Panamá"
     }
    ],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.8065831&isFromPublicArea=True&isModal=true&asPopupView=true"
@@ -835,12 +854,7 @@
    "fin": "2023-10-31",
    "dias_vencido": 1074,
    "estado": "En ejecución",
-   "lugares": [
-    {
-     "tipo": "Institución educativa",
-     "nombre": "Mejoramiento Y Fortalecimiento D"
-    }
-   ],
+   "lugares": [],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.4092683&isFromPublicArea=True&isModal=true&asPopupView=true"
   },
   {
@@ -976,12 +990,7 @@
    "fin": "2023-11-05",
    "dias_vencido": 1069,
    "estado": "En ejecución",
-   "lugares": [
-    {
-     "tipo": "Institución educativa",
-     "nombre": "Comunidad Educativa De Soacha"
-    }
-   ],
+   "lugares": [],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.4582795&isFromPublicArea=True&isModal=true&asPopupView=true"
   },
   {
@@ -1172,6 +1181,23 @@
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.4565047&isFromPublicArea=True&isModal=true&asPopupView=true"
   },
   {
+   "referencia": "2747-2023",
+   "entidad": "MUNICIPIO DE SOACHA.",
+   "contratista": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+   "documento": "860007336",
+   "objeto": "PRESTACIÓN DE SERVICIOS PARA EL DESARROLLO DE LAS ACTIVIDADES ENMARCADAS EN EL PLAN DE BIENESTAR DOCENTE; DIRECTIVOS DOCENTES Y ADMINISTRATIVOS DE LA SECRETARÍA DE EDUCACIÓN DEL MUNICIPIO DE SOACHA",
+   "tipo": "Prestación de servicios",
+   "valor": 400000000.0,
+   "pagado": 0.0,
+   "pendiente": 400000000.0,
+   "inicio": "2023-06-16",
+   "fin": "2023-12-31",
+   "dias_vencido": 1013,
+   "estado": "En ejecución",
+   "lugares": [],
+   "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.4565047&isFromPublicArea=True&isModal=true&asPopupView=true"
+  },
+  {
    "referencia": "2419-2023",
    "entidad": "MUNICIPIO DE SOACHA.",
    "contratista": "JESUS SAAVEDRA",
@@ -1256,7 +1282,7 @@
    "lugares": [
     {
      "tipo": "Institución educativa",
-     "nombre": "Publicas La Ciudad De Soacha"
+     "nombre": "Publicas"
     }
    ],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.8403951&isFromPublicArea=True&isModal=true&asPopupView=true"
@@ -1396,57 +1422,6 @@
    "estado": "En ejecución",
    "lugares": [],
    "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.7748678&isFromPublicArea=True&isModal=true&asPopupView=true"
-  },
-  {
-   "referencia": "4097-2023",
-   "entidad": "MUNICIPIO DE SOACHA.",
-   "contratista": "INTEGRAL DE SUMINISTROS LTDA",
-   "documento": "832007469",
-   "objeto": "CONTRATAR LA PRESTACIÓN DE SERVICIOS DE UN OPERADOR LOGÍSTICO PARA APOYAR A LA REGISTRADURÍA DEL ESTADO CIVIL ESPECIAL DE SOACHA EN LA REALIZACIÓN DEL PROCESO DE ELECCIONES DE AUTORIDADES TERRITORIALES A DESARROLLARSE EN VIGENCIA 2023",
-   "tipo": "Prestación de servicios",
-   "valor": 293618529.0,
-   "pagado": 0.0,
-   "pendiente": 293618529.0,
-   "inicio": "2023-10-23",
-   "fin": "2023-11-05",
-   "dias_vencido": 1069,
-   "estado": "En ejecución",
-   "lugares": [],
-   "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.5029458&isFromPublicArea=True&isModal=true&asPopupView=true"
-  },
-  {
-   "referencia": "2422-2023",
-   "entidad": "MUNICIPIO DE SOACHA.",
-   "contratista": "PABLO ENRIQUE MELO GARCIA",
-   "documento": "194477",
-   "objeto": "COMPRA DEL PREDIO IDENTIFICADO CON FOLIO DE MATRICULA 051-31317; EN CUMPLIMIENTO A LO DISPUESTO EN LA SENTENCIA PROFERIDA POR EL TRIBUNAL ADMINISTRATIVO DE CUNDINAMARCA; SECCION PRIMERA DE FECHA 25 DE JULIO DE 2013; MODIFICADA POR EL CONCEJO DE ESTADO MEDIANTE SENTENCIA DE SEGUNDA INSTANCIA DE FECHA",
-   "tipo": "Otro",
-   "valor": 291163620.0,
-   "pagado": 0.0,
-   "pendiente": 291163620.0,
-   "inicio": "2023-06-23",
-   "fin": "2023-12-31",
-   "dias_vencido": 1013,
-   "estado": "En ejecución",
-   "lugares": [],
-   "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.4527513&isFromPublicArea=True&isModal=true&asPopupView=true"
-  },
-  {
-   "referencia": "2155-2026",
-   "entidad": "MUNICIPIO DE SOACHA.",
-   "contratista": "GSLR SOFTWARE Y SOLUCIONES SAS",
-   "documento": "901488321",
-   "objeto": "IMPLEMENTACIÓN DE UNA SOLUCIÓN TEGNOLÓGICA EN LA NUBE PARA LA INTEGRACIÓN Y SISTEMATIZACIÓN DE LOS PROCESOS ACADÉMICOS Y FINANCIEROS DE LAS INSTITUCIONES EDUCATIVAS OFICIALES DE SOACHA - 2026SE0282",
-   "tipo": "Prestación de servicios",
-   "valor": 290000000.0,
-   "pagado": 0.0,
-   "pendiente": 290000000.0,
-   "inicio": "2026-07-27",
-   "fin": "2026-08-26",
-   "dias_vencido": 44,
-   "estado": "En ejecución",
-   "lugares": [],
-   "url": "https://community.secop.gov.co/Public/Tendering/OpportunityDetail/Index?noticeUID=CO1.NTC.10504321&isFromPublicArea=True&isModal=true&asPopupView=true"
   }
  ],
  "sectores": [
@@ -1503,7 +1478,7 @@
   },
   {
    "tipo": "Vía",
-   "nombre": "Avenida Torres Entre La Calle 46B",
+   "nombre": "Avenida Torres",
    "valor": 50900711696.37,
    "contratos": 13,
    "ejemplos": [
@@ -1529,9 +1504,9 @@
      "firma": "2025-11-04"
     },
     {
-     "referencia": "2232-2025",
-     "objeto": "CONTRATO DE PROMESA DE COMPRAVENTA SUSCRITO ENTRE ANA ISABEL ALARCON EN CALIDAD DE LA PROMITENTE VENDEDORA Y EL MUNICIPIO DE SOACHA EN CALIDAD DE PROMITENTE COMPRADOR; RESPECTO DEL",
-     "valor": 62009250.0,
+     "referencia": "2311-2025",
+     "objeto": "CONTRATO DE PROMESA DE COMPRAVENTA SUSCRITO ENTRE MARCO TULIO CARDENAS OROZCO EN CALIDAD DE PROMITENTE VENDEDOR Y EL MUNICIPIO DE SOACHA EN CALIDAD DE PROMITENTE COMPRADOR; RESPECT",
+     "valor": 338682634.0,
      "entidad": "MUNICIPIO DE SOACHA.",
      "firma": "2025-11-04"
     }
@@ -1539,10 +1514,17 @@
   },
   {
    "tipo": "Parque",
-   "nombre": "Locos Del Municipio De Soacha",
+   "nombre": "Locos",
    "valor": 49804197513.3,
-   "contratos": 1,
+   "contratos": 2,
    "ejemplos": [
+    {
+     "referencia": "1870-2025",
+     "objeto": "LA SECRETARÍA GENERAL DE LA ALCALDÍA DE SOACHA; ENTREGA PARCIALMENTE AL INSTITUTO MUNICIPAL PARA LA RECREACIÓN Y EL DEPORTE DE SOACHA (IMRDS); Y ESTE RECIBE A TÍTULO DE COMODATO EL",
+     "valor": 0.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-07-01"
+    },
     {
      "referencia": "3436-2021",
      "objeto": "CONSTRUCCIÓN DE PARQUE DE LOS LOCOS DEL MUNICIPIO DE SOACHA CUNDINAMARCA",
@@ -1554,7 +1536,7 @@
   },
   {
    "tipo": "Plazoleta",
-   "nombre": "Sueños En La Ciudad De",
+   "nombre": "Sueños",
    "valor": 39845337881.0,
    "contratos": 3,
    "ejemplos": [
@@ -1634,7 +1616,7 @@
   },
   {
    "tipo": "Institución educativa",
-   "nombre": "Liceo Mayor De Soacha Bienestar",
+   "nombre": "Liceo Mayor",
    "valor": 34901042613.0,
    "contratos": 1,
    "ejemplos": [
@@ -1644,93 +1626,6 @@
      "valor": 34901042613.0,
      "entidad": "MUNICIPIO DE SOACHA.",
      "firma": "2022-12-23"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Vivir Mejor",
-   "valor": 34901042613.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "4191-2022",
-     "objeto": "CONTRATO PARA LA ADMINISTRACIÓN DEL SERVICIO EDUCATIVO DE LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA. (GRUPO 3 - Institución Educativa Soacha para Vivir Mejor)",
-     "valor": 34901042613.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2022-12-23"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Actualización Y",
-   "valor": 32162900000.0,
-   "contratos": 4,
-   "ejemplos": [
-    {
-     "referencia": "4556-2023",
-     "objeto": "PRESTAR SERVICIOS PROFESIONALES ESPECIALIZADOS PARA ACOMPAÑAR A LAS\nINSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE SOACHA EN LA ACTUALIZACIÓN Y/O\nRESIGNIFICACIÓN DE LOS PROYECTOS EDUCAT",
-     "valor": 6600000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-12-01"
-    },
-    {
-     "referencia": "4555-2023",
-     "objeto": "PRESTAR SERVICIOS PROFESIONALES ESPECIALIZADOS PARA ACOMPAÑAR A LAS\nINSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE SOACHA EN LA ACTUALIZACIÓN Y/O\nRESIGNIFICACIÓN DE LOS PROYECTOS EDUCAT",
-     "valor": 9900000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-12-01"
-    },
-    {
-     "referencia": "2347-2023",
-     "objeto": "PRESTAR SERVICIOS PROFESIONALES ESPECIALIZADOS PARA ACOMPAÑAR A LAS\nINSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE SOACHA EN LA ACTUALIZACIÓN Y/O\nRESIGNIFICACIÓN DE LOS PROYECTOS EDUCAT",
-     "valor": 32120000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-06-15"
-    },
-    {
-     "referencia": "0652-2023",
-     "objeto": "PRESTAR SERVICIOS PROFESIONALES ESPECIALIZADOS PARA ACOMPAÑAR A LAS \nINSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE SOACHA EN LA ACTUALIZACIÓN Y/O \nRESIGNIFICACIÓN DE LOS PROYECTOS EDUC",
-     "valor": 26400000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-02-08"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Ciudad De Soacha",
-   "valor": 13234200377.0,
-   "contratos": 163,
-   "ejemplos": [
-    {
-     "referencia": "3618-2026",
-     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN ADMINISTRATIVA Y CONTABLE EN LAS INSTITUCIONES EDUCATIVAS OFICIALES DE LA CIUDAD DE SOACHA - 2026SE0335",
-     "valor": 7462400.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-09-24"
-    },
-    {
-     "referencia": "3603-2026",
-     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTION EN LAS ACTIVIDADES DE MANTENIMIENTO GENERAL DE LAS INSTITUCIONES EDUCATIVAS OFICIALES DE LA CIUDAD DE SOACHA - 2026SE0286",
-     "valor": 7833333.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-09-18"
-    },
-    {
-     "referencia": "3604-2026",
-     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA EL FORTALECIMIENTO DEL BILINGUISMO EN LAS INSTITUCIONES EDUCATIVAS DE LA CIUDAD DE SOACHA - 2026SE0453",
-     "valor": 17166667.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-09-18"
-    },
-    {
-     "referencia": "3560-2026",
-     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN ADMINISTRATIVA Y CONTABLE EN LAS INSTITUCIONES EDUCATIVAS OFICIALES DE LA CIUDAD DE SOACHA - 2026SE0289",
-     "valor": 8904000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-09-15"
     }
    ]
   },
@@ -1772,38 +1667,81 @@
   },
   {
    "tipo": "Institución educativa",
-   "nombre": "Ciudad De Soacha Se20250288",
-   "valor": 10669888132.04,
-   "contratos": 1,
+   "nombre": "Focalizadas",
+   "valor": 9682346447.0,
+   "contratos": 5,
    "ejemplos": [
     {
-     "referencia": "2560-2025",
-     "objeto": "PRESTACIÓN DEL SERVICIO DE VIGILANCIA; SEGURIDAD PRIVADA Y SEGURIDAD INTEGRAL PARA LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL CIUDAD DE SOACHA SE20250288",
-     "valor": 10669888132.04,
+     "referencia": "1449-2025",
+     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMENTARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN ",
+     "valor": 2428000000.0,
      "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-11-20"
+     "firma": "2025-03-07"
+    },
+    {
+     "referencia": "0965-2024",
+     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMENTARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN ",
+     "valor": 2400000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-04-12"
+    },
+    {
+     "referencia": "1894-2023",
+     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMENTARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN ",
+     "valor": 2154346447.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2023-05-15"
+    },
+    {
+     "referencia": "1978-2022",
+     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMETARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN D",
+     "valor": 2700000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-02-02"
     }
    ]
   },
   {
-   "tipo": "Institución educativa",
-   "nombre": "2026Se0288",
-   "valor": 8765484546.0,
+   "tipo": "Sector",
+   "nombre": "Suscrito",
+   "valor": 9132075472.0,
+   "contratos": 2,
+   "ejemplos": [
+    {
+     "referencia": "1714-150-2025",
+     "objeto": "INTERVENTORIA INTEGRAL DEL CONTRATO DE CUYO OBJETO ES PLANEACION; DIAGNOSTICO Y EJECUCIÓN DEL PROYECTO DE MEJORAMIENTOS DE VIVIENDA URBANA EN LOS SECTORES DEL MUNICIPIO DE SOACHA-C",
+     "valor": 580821476.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-09-05"
+    },
+    {
+     "referencia": "1714-151-2025",
+     "objeto": "PLANEACION; DIAGNOSTICO TECNICO Y EJECUCIÓN DEL PROYECTO DE MEJORAMIENTOS DE VIVIENDA URBANA EN LOS SECTORES DEL MUNICIPIO DE SOACHA - CUNDINAMARCA; EN EL MARCO DEL CONTRATO INTERA",
+     "valor": 8551253996.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-09-05"
+    }
+   ]
+  },
+  {
+   "tipo": "Barrio",
+   "nombre": "Elegidos",
+   "valor": 8985237552.0,
    "contratos": 1,
    "ejemplos": [
     {
-     "referencia": "1971-2026",
-     "objeto": "PRESTACIÓN DEL SERVICIO DE VIGILANCIA; SEGURIDAD PRIVADA Y SEGURIDAD INTEGRAL PARA LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA 2026SE0288",
-     "valor": 8765484546.0,
+     "referencia": "3676 - 2026",
+     "objeto": "GERENCIA INTEGRAL PARA LA PLANEACIÓN; ADMINISTRACIÓN Y EJECUCION DE LA CONVOCATORIA MEJORA TU BARRIO; ASI COMO PARA LA EJECUCION DE LOS PROYECTOS DE MEJORAMIENTO INTEGRAL DE BARRIO",
+     "valor": 8985237552.0,
      "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-06-18"
+     "firma": "2026-10-07"
     }
    ]
   },
   {
    "tipo": "Comuna",
    "nombre": "Comuna 6",
-   "valor": 8233686579.41,
+   "valor": 8243186579.41,
    "contratos": 11,
    "ejemplos": [
     {
@@ -1837,53 +1775,9 @@
    ]
   },
   {
-   "tipo": "Institución educativa",
-   "nombre": "Focalizadas Por El Municipio",
-   "valor": 7254346447.0,
-   "contratos": 3,
-   "ejemplos": [
-    {
-     "referencia": "0965-2024",
-     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMENTARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN ",
-     "valor": 2400000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2024-04-12"
-    },
-    {
-     "referencia": "1894-2023",
-     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMENTARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN ",
-     "valor": 2154346447.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-05-15"
-    },
-    {
-     "referencia": "1978-2022",
-     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMETARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN D",
-     "valor": 2700000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2022-02-02"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "2025Se0246",
-   "valor": 6660992781.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "1869-2025",
-     "objeto": "PRESTACIÓN DEL SERVICIO DE VIGILANCIA; SEGURIDAD PRIVADA Y SEGURIDAD INTEGRAL PARA LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA 2025SE0246",
-     "valor": 6660992781.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-06-18"
-    }
-   ]
-  },
-  {
    "tipo": "Sector",
    "nombre": "Danubio",
-   "valor": 4870950730.13,
+   "valor": 5389160043.68,
    "contratos": 3,
    "ejemplos": [
     {
@@ -1912,7 +1806,7 @@
   {
    "tipo": "Sector",
    "nombre": "Villaluz",
-   "valor": 4870950730.13,
+   "valor": 5389160043.68,
    "contratos": 3,
    "ejemplos": [
     {
@@ -1941,7 +1835,7 @@
   {
    "tipo": "Sector",
    "nombre": "Prado Vegas",
-   "valor": 4870950730.13,
+   "valor": 5389160043.68,
    "contratos": 3,
    "ejemplos": [
     {
@@ -1969,8 +1863,8 @@
   },
   {
    "tipo": "Sector",
-   "nombre": "Olivos Tercer Sector Y La",
-   "valor": 4870950730.13,
+   "nombre": "Olivos Tercer Sector",
+   "valor": 5389160043.68,
    "contratos": 3,
    "ejemplos": [
     {
@@ -1993,100 +1887,13 @@
      "valor": 11192453903.68,
      "entidad": "MUNICIPIO DE SOACHA.",
      "firma": "2024-11-01"
-    }
-   ]
-  },
-  {
-   "tipo": "Barrio",
-   "nombre": "Danubio Y Villa Rosita Fase",
-   "valor": 4624470992.23,
-   "contratos": 5,
-   "ejemplos": [
-    {
-     "referencia": "4197-202-2025",
-     "objeto": "OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA - FASE 1 ETAPA 2 EN EL MUNICIPIO DE SOACHA - CUNDINAMARCA",
-     "valor": 872344152.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-12-02"
-    },
-    {
-     "referencia": "4197-197-2025",
-     "objeto": "INTERVENTORÍA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL Y AMBIENTAL PARA LA OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA - FASE 1 ",
-     "valor": 64036020.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-11-28"
-    },
-    {
-     "referencia": "039-2023",
-     "objeto": "INTERVENTORÍA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL Y AMBIENTAL PARA LA OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA-FASE I EN",
-     "valor": 116798500.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2023-07-04"
-    },
-    {
-     "referencia": "033-2023",
-     "objeto": "OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA-FASE I EN EL MUNICIPIO DE SOACHA; CUNDINAMARCA",
-     "valor": 1168217225.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2023-06-16"
-    }
-   ]
-  },
-  {
-   "tipo": "Sector",
-   "nombre": "Marco Del Contrato Interadministrativo 1714",
-   "valor": 4566037736.0,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "1714-151-2025",
-     "objeto": "PLANEACION; DIAGNOSTICO TECNICO Y EJECUCIÓN DEL PROYECTO DE MEJORAMIENTOS DE VIVIENDA URBANA EN LOS SECTORES DEL MUNICIPIO DE SOACHA - CUNDINAMARCA; EN EL MARCO DEL CONTRATO INTERA",
-     "valor": 8551253996.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-09-05"
-    },
-    {
-     "referencia": "1714-150-2025",
-     "objeto": "INTERVENTORIA INTEGRAL DEL CONTRATO DE CUYO OBJETO ES PLANEACION; DIAGNOSTICO Y EJECUCIÓN DEL PROYECTO DE MEJORAMIENTOS DE VIVIENDA URBANA EN LOS SECTORES DEL MUNICIPIO DE SOACHA-C",
-     "valor": 580821476.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-09-05"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Administración",
-   "valor": 4528469402.0,
-   "contratos": 3,
-   "ejemplos": [
-    {
-     "referencia": "0278-2024",
-     "objeto": "PRESTACIÓN DEL SERVICIO DE CONECTIVIDAD PARA LAS INSTITUCIONES EDUCATIVAS OFICIALES Y ADMINISTRACIÓN; MANTENIMIENTO Y MEJORAMIENTO DE LA PLATAFORMA DE COMUNICACIONES Y SEGURIDAD; Q",
-     "valor": 1999587784.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2024-02-16"
-    },
-    {
-     "referencia": "1153-2023",
-     "objeto": "PRESTACIÓN DEL SERVICIO DE CONECTIVIDAD PARA LAS INSTITUCIONES EDUCATIVAS OFICIALES Y ADMINISTRACIÓN; MANTENIMIENTO Y MEJORAMIENTO DE LA PLATAFORMA DE COMUNICACIONES Y SEGURIDAD; Q",
-     "valor": 1946961768.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-02-22"
-    },
-    {
-     "referencia": "3786-2022",
-     "objeto": "PRESTACIÓN DEL SERVICIO DE CONECTIVIDAD PARA LAS INSTITUCIONES EDUCATIVAS OFICIALES Y ADMINISTRACIÓN; MANTENIMIENTO Y MEJORAMIENTO DE LA PLATAFORMA DE COMUNICACIONES Y SEGURIDAD; Q",
-     "valor": 581919850.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2022-09-27"
     }
    ]
   },
   {
    "tipo": "Comuna",
    "nombre": "Comuna 4",
-   "valor": 4520762146.25,
+   "valor": 4718226740.33,
    "contratos": 5,
    "ejemplos": [
     {
@@ -2121,52 +1928,43 @@
   },
   {
    "tipo": "Barrio",
-   "nombre": "Elegidos En El Marco De",
-   "valor": 4492618776.0,
-   "contratos": 1,
+   "nombre": "Danubio",
+   "valor": 4624470992.23,
+   "contratos": 5,
    "ejemplos": [
     {
-     "referencia": "3676 - 2026",
-     "objeto": "GERENCIA INTEGRAL PARA LA PLANEACIÓN; ADMINISTRACIÓN Y EJECUCION DE LA CONVOCATORIA MEJORA TU BARRIO; ASI COMO PARA LA EJECUCION DE LOS PROYECTOS DE MEJORAMIENTO INTEGRAL DE BARRIO",
-     "valor": 8985237552.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-10-07"
-    }
-   ]
-  },
-  {
-   "tipo": "Barrio",
-   "nombre": "Zona Urbana Del Municipio De",
-   "valor": 4492618776.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "3676 - 2026",
-     "objeto": "GERENCIA INTEGRAL PARA LA PLANEACIÓN; ADMINISTRACIÓN Y EJECUCION DE LA CONVOCATORIA MEJORA TU BARRIO; ASI COMO PARA LA EJECUCION DE LOS PROYECTOS DE MEJORAMIENTO INTEGRAL DE BARRIO",
-     "valor": 8985237552.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-10-07"
-    }
-   ]
-  },
-  {
-   "tipo": "Sector",
-   "nombre": "Suscrito Entre La Secr",
-   "valor": 4275626998.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "1714-151-2025",
-     "objeto": "PLANEACION; DIAGNOSTICO TECNICO Y EJECUCIÓN DEL PROYECTO DE MEJORAMIENTOS DE VIVIENDA URBANA EN LOS SECTORES DEL MUNICIPIO DE SOACHA - CUNDINAMARCA; EN EL MARCO DEL CONTRATO INTERA",
-     "valor": 8551253996.0,
+     "referencia": "4197-202-2025",
+     "objeto": "OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA - FASE 1 ETAPA 2 EN EL MUNICIPIO DE SOACHA - CUNDINAMARCA",
+     "valor": 872344152.0,
      "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-09-05"
+     "firma": "2025-12-02"
+    },
+    {
+     "referencia": "4197-197-2025",
+     "objeto": "INTERVENTORÍA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL Y AMBIENTAL PARA LA OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA - FASE 1 ",
+     "valor": 64036020.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-11-28"
+    },
+    {
+     "referencia": "039-2023",
+     "objeto": "INTERVENTORÍA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL Y AMBIENTAL PARA LA OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA-FASE I EN",
+     "valor": 116798500.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2023-07-04"
+    },
+    {
+     "referencia": "033-2023",
+     "objeto": "OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA-FASE I EN EL MUNICIPIO DE SOACHA; CUNDINAMARCA",
+     "valor": 1168217225.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2023-06-16"
     }
    ]
   },
   {
    "tipo": "Parque",
-   "nombre": "Automotor De La Alcaldía De",
+   "nombre": "Automotor De La Alcaldía",
    "valor": 3570655667.0,
    "contratos": 4,
    "ejemplos": [
@@ -2202,16 +2000,30 @@
   },
   {
    "tipo": "Parque",
-   "nombre": "Principal Del Municipio De Soacha",
-   "valor": 3410992802.02,
-   "contratos": 2,
+   "nombre": "Principal",
+   "valor": 3469881083.95,
+   "contratos": 4,
    "ejemplos": [
+    {
+     "referencia": "138-2025",
+     "objeto": "PRESTACION DE SERVICIOS PARA EL DESMONTE; TRASLADO Y REINSTALACIÓN DE LAS CASETAS CONTAINER QUE SE ENCUENTRAN UBICADOS EN EL PARQUE PRINCIPAL DE SOACHA",
+     "valor": 58888281.93,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-08-21"
+    },
     {
      "referencia": "101-2025",
      "objeto": "PRESTACION DE SERVICIOS PARA LA EJECUCIÓN DE ACTIVIDADES DE MANTENIMIENTO Y REHABILITACIÓN DEL PARQUE PRINCIPAL DEL MUNICIPIO DE SOACHA - CUNDINAMARCA",
      "valor": 18854570.0,
      "entidad": "EPUXUA E.I.C.E.",
      "firma": "2025-06-12"
+    },
+    {
+     "referencia": "CD-029-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE ADMINISTRACIÓN DE LOS CONTENEDORES DEL PARQUE PRINCIPAL - PLAZA ALFONSO LÓPEZ PUMAREJO SOACHA (CUNDINAMARCA)",
+     "valor": 0.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2024-02-14"
     },
     {
      "referencia": "CD-029-2022",
@@ -2223,89 +2035,109 @@
    ]
   },
   {
+   "tipo": "Parque",
+   "nombre": "Automotor",
+   "valor": 2048875469.42,
+   "contratos": 41,
+   "ejemplos": [
+    {
+     "referencia": "CTO-082-2026",
+     "objeto": "SERVICIO DE PARQUEADERO LAS 24 HORAS PARA EL PARQUE AUTOMOTOR DE LA EMPRESA SOCIAL DEL ESTADO REGIÓN DE SALUD SOACHA.",
+     "valor": 27027000.0,
+     "entidad": "empresa social del estado región de salud soacha.",
+     "firma": "2026-09-14"
+    },
+    {
+     "referencia": "2738-2026",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES RELACIONADOS CON LOS PROCESOS ADMINISTRATIVOS Y FINANCIEROS DEL PARQUE AUTOMOTOR Y PROGRAMA DE SEGUROS DE LA ALCALDIA DE SOACHA.SG_152",
+     "valor": 19570000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-08-05"
+    },
+    {
+     "referencia": "2012-2026",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES PARA REALIZAR LAS ACTIVIDADES RELACIONADAS CON LA MAQUINARIA AMARILLA; PESADA Y AGRICOLA DEL PARQUE AUTOMOTOR DE SOACHA.SG_151",
+     "valor": 29526667.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-07-08"
+    },
+    {
+     "referencia": "2027-2026",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES PARA DESARROLLAR LAS ACTIVIDADES RELACIONADAS CON LOS VEHICULOS LIVIANOS Y MOTOS DEL PARQUE AUTOMOTOR DE SOACHA.SG_154",
+     "valor": 29526667.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-07-08"
+    }
+   ]
+  },
+  {
+   "tipo": "Parque",
+   "nombre": "Automotor De La Alcaldia",
+   "valor": 1965585097.0,
+   "contratos": 13,
+   "ejemplos": [
+    {
+     "referencia": "3282-2026",
+     "objeto": "PRESTACION DE SERVICIOS DE APOYO PARA LOS PROCESOS DE GESTION DOCUMENTAL Y ACTIVIDADES ADMINISTRATIVAS RELACIONADAS CON EL PARQUE AUTOMOTOR DE LA ALCALDIA DE SOACHA.SG_150",
+     "valor": 10183333.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-08-21"
+    },
+    {
+     "referencia": "2890-2026",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES PARA LOS PROCESOS ADMINISTRATIVOS RELACIONADOS CON EL PARQUE AUTOMOTOR DE LA ALCALDIA DE SOACHA.SG_155",
+     "valor": 19048133.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-08-05"
+    },
+    {
+     "referencia": "1711-2026",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES PARA LOS PROCESOS ADMINISTRATIVOS RELACIONADOS CON EL PARQUE AUTOMOTOR DE LA ALCALDIA DE SOACHA.SG_50",
+     "valor": 23484000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-01-30"
+    },
+    {
+     "referencia": "0779-2026",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO PARA LOS PROCESOS DE GESTIÒN DOCUMENTAL Y ACTIVIDADES ADMINISTRATIVAS RELACIONADAS CON EL PARQUE AUTOMOTOR DE LA ALCALDIA DE SOACHA.SG_45.",
+     "valor": 12720000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-01-09"
+    }
+   ]
+  },
+  {
    "tipo": "Institución educativa",
-   "nombre": "Fortalecimiento De Sus Habilidades Comunic",
-   "valor": 3009162554.6,
+   "nombre": "Priorizadas",
+   "valor": 1830018706.31,
    "contratos": 3,
    "ejemplos": [
     {
-     "referencia": "CO1.PCCNTR.3529711",
-     "objeto": "AUNAR ESFUERZOS PARA LA FORMACIÓN BILINGÜE DE DOCENTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES PARA EL FORTALECIMIENTO DE SUS HABILIDADES COMUNICATIVAS DESTINADAS A LA APLICACIÓN",
-     "valor": 1108943150.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2022-02-02"
+     "referencia": "025-2023",
+     "objeto": "INTERVENTORÍA TECNICA; JURIDICA; ADMINISTRATIVA Y FINANCIERA PARA LA ADECUACIÓN DE INFRAESTRUCTURA A LAS INSTITUCIONES EDUCATIVAS PRIORIZADAS POR LA SECRETARÍA DE EDUCACIÓN COMO ES",
+     "valor": 120335786.31,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2023-06-15"
     },
     {
-     "referencia": "1624-2021",
-     "objeto": "FORMACIÓN BILINGÜE DE LOS ESTUDIANTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES PARA EL FORTALECIMIENTO DE SUS HABILIDADES COMUNICATIVAS Y SUS CAPACIDADES PARA INGRESAR AL MERCADO ",
-     "valor": 900000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2021-06-04"
+     "referencia": "025-2023",
+     "objeto": "INTERVENTORÍA TECNICA; JURIDICA; ADMINISTRATIVA Y FINANCIERA PARA LA ADECUACIÓN DE INFRAESTRUCTURA A LAS INSTITUCIONES EDUCATIVAS PRIORIZADAS POR LA SECRETARÍA DE EDUCACIÓN COMO ES",
+     "valor": 100454682.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2023-05-30"
     },
     {
-     "referencia": "1419-2021",
-     "objeto": "AUNAR ESFUERZOS PARA LA FORMACIÓN BILINGÜE DE DOCENTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES PARA EL FORTALECIMIENTO DE SUS HABILIDADES COMUNICATIVAS DESTINADAS A LA APLICACIÓN",
-     "valor": 1000219404.6,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2021-05-13"
+     "referencia": "C -024 -2023",
+     "objeto": "ADECUACIÓN DE INFRAESTRUCTURA A LAS INSTITUCIONES EDUCATIVAS PRIORIZADAS POR LA SECRETARIA DE EDUCACION COMO ESTRATEGIA DE PERMANENCIA EDUCATIVA EN EL MUNICIPIO DE SOACHA",
+     "valor": 1609228238.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2023-05-29"
     }
    ]
   },
   {
    "tipo": "Institución educativa",
-   "nombre": "Focalizadas Por La Secretaría De",
-   "valor": 2428000000.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "1449-2025",
-     "objeto": "AUNAR ESFUERZOS PARA ADELANTAR ACCIONES CONJUNTAS QUE; DESDE EL PROGRAMA JORNADA ESCOLAR COMPLEMENTARIA; FAVOREZCAN EL DESARROLLO DE HABILIDADES Y APRENDIZAJES VITALES; CON EL FIN ",
-     "valor": 2428000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-03-07"
-    }
-   ]
-  },
-  {
-   "tipo": "Sector",
-   "nombre": "Marco Del Contrato Interadministrativo 3279",
-   "valor": 2200000000.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "097-2025",
-     "objeto": "DIAGNOSTICO; ESTUDIOS Y DISEÑOS DE LAS REDES DE ACUEDUCTO; ALCANTARILLADO SANITARIO Y PLUVIAL PARA DIVERSOS SECTORES DEL MUNICIPIO DE SOACHA-CUNDINAMARCA; EN EL MARCO DEL CONTRATO ",
-     "valor": 2200000000.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-05-23"
-    }
-   ]
-  },
-  {
-   "tipo": "Sector",
-   "nombre": "Marco",
-   "valor": 2072837254.21,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "074-2025",
-     "objeto": "ESTUDIOS; DISEÑOS Y CONSTRUCCIÓN PARA EL MEJORAMIENTO Y PAVIMENTACIÓN DE VIAS URBANAS EN LOS SECTORES DANUBIO; VILLALUZ; PRADO VEGAS; OLIVOS TERCER SECTOR Y LA ESPERANZA - VILLA SA",
-     "valor": 9708354085.59,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-04-16"
-    },
-    {
-     "referencia": "078-2025",
-     "objeto": "INTERVENTORIA INTEGRAL DEL CONTRATO DE CUYO OBJETO ES ESTUDIOS; DISEÑOS Y CONSTRUCCIÓN PARA EL MEJORAMIENTO Y PAVIMENTACIÓN DE VÍAS URBANAS EN LOS SECTORES DANUBIO; VILLALUZ; PRADO",
-     "valor": 655832185.44,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-04-16"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Ofciales Y Administracion Mantenimiento Y",
+   "nombre": "Ofciales",
    "valor": 1745759817.0,
    "contratos": 1,
    "ejemplos": [
@@ -2319,250 +2151,10 @@
    ]
   },
   {
-   "tipo": "Institución educativa",
-   "nombre": "Priorizadas Por La Secretaria De",
-   "valor": 1609228238.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "C -024 -2023",
-     "objeto": "ADECUACIÓN DE INFRAESTRUCTURA A LAS INSTITUCIONES EDUCATIVAS PRIORIZADAS POR LA SECRETARIA DE EDUCACION COMO ESTRATEGIA DE PERMANENCIA EDUCATIVA EN EL MUNICIPIO DE SOACHA",
-     "valor": 1609228238.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2023-05-29"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Girardot",
-   "valor": 1553946708.56,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "979-100-2026",
-     "objeto": "INTERVENTORIA INTEGRAL DEL CONTRATO CUYO OBJETO ES: ADECUACION Y MEJORAMIENTO DE LAS INSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE GIRARDOT - CUNDINAMARCA EN EL MARCO DEL CONTRATO INTE",
-     "valor": 119401592.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2026-03-06"
-    },
-    {
-     "referencia": "979-099-2026",
-     "objeto": "ADECUACION Y MEJORAMIENTO DE LAS INSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE GIRARDOT - CUNDINAMARCA EN EL MARCO DEL CONTRATO INTERADMINISTRATIVO NO. 979 - 2025 SUSCRITO ENTRE EL MUN",
-     "valor": 1434545116.56,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2026-03-06"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Que Atienden Población Con Discapacidad",
-   "valor": 1527981327.0,
-   "contratos": 64,
-   "ejemplos": [
-    {
-     "referencia": "3617-2026",
-     "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES PARA EL SEGUIMIENTO Y ACOMPAÑAMIENTO EN EL MARCO DE LA EDUCACIÓN INCLUSIVA DE ACUERDO A LA NORMATIVIDAD VIGENTE EN LAS INSTITUCIONES EDUCATIVAS ",
-     "valor": 11742000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-09-24"
-    },
-    {
-     "referencia": "3473-2026",
-     "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES PARA EL SEGUIMIENTO Y ACOMPAÑAMIENTO EN EL MARCO DE LA EDUCACIÓN INCLUSIVA DE ACUERDO A LA NORMATIVIDAD VIGENTE EN LAS INSTITUCIONES EDUCATIVAS ",
-     "valor": 14351333.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-09-07"
-    },
-    {
-     "referencia": "3427-2026",
-     "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES PARA EL SEGUIMIENTO Y ACOMPAÑAMIENTO EN EL MARCO DE LA EDUCACIÓN INCLUSIVA DE ACUERDO A LA NORMATIVIDAD VIGENTE EN LAS INSTITUCIONES EDUCATIVAS ",
-     "valor": 12263867.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-09-03"
-    },
-    {
-     "referencia": "3289-2026",
-     "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES PARA EL SEGUIMIENTO Y ACOMPAÑAMIENTO EN EL MARCO DE LA EDUCACIÓN INCLUSIVA DE ACUERDO A LA NORMATIVIDAD VIGENTE EN LAS INSTITUCIONES EDUCATIVAS ",
-     "valor": 12394333.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2026-08-21"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Comunidad Educativa De Soacha",
-   "valor": 1243351349.0,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "2988-2023",
-     "objeto": "IMPLEMENTACIÓN DE ESTRATEGIAS DE FORMACIÓN; FORO EDUCATIVO; INVESTIGACIÓN; INCENTIVOS; RECONOCIMIENTOS Y ESTÍMULOS PARA DOCENTES Y DIRECTIVOS DOCENTES DE LAS INSTITUCIONES EDUCATIV",
-     "valor": 516000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-06-16"
-    },
-    {
-     "referencia": "2829-2022*",
-     "objeto": "MPLEMENTACIÓN DE ESTRATEGIAS DE FORMACIÓN; FORO EDUCATIVO; INVESTIGACIÓN; INCENTIVOS; RECONOCIMIENTOS Y ESTÍMULOS PARA DOCENTES Y DIRECTIVOS DOCENTES DE LAS INSTITUCIONES EDUCATIVA",
-     "valor": 727351349.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2022-08-17"
-    }
-   ]
-  },
-  {
-   "tipo": "Parque",
-   "nombre": "Automotor De La Empresa Social",
-   "valor": 1021499600.0,
-   "contratos": 12,
-   "ejemplos": [
-    {
-     "referencia": "CTO-082-2026",
-     "objeto": "SERVICIO DE PARQUEADERO LAS 24 HORAS PARA EL PARQUE AUTOMOTOR DE LA EMPRESA SOCIAL DEL ESTADO REGIÓN DE SALUD SOACHA.",
-     "valor": 27027000.0,
-     "entidad": "empresa social del estado región de salud soacha.",
-     "firma": "2026-09-14"
-    },
-    {
-     "referencia": "CTO-048-2026",
-     "objeto": "SERVICIO DE PARQUEADERO LAS 24 HORAS PARA EL PARQUE AUTOMOTOR DE LA EMPRESA SOCIAL DEL ESTADO REGIÓN DE SALUD SOACHA",
-     "valor": 10810800.0,
-     "entidad": "empresa social del estado región de salud soacha.",
-     "firma": "2026-05-04"
-    },
-    {
-     "referencia": "CTO-033-2026",
-     "objeto": "PRESTAR EL SERVICIO DE MANTENIMIENTO PREVENTIVO Y CORRECTIVO CON SUMINISTRO DE REPUESTOS; LLANTAS; LUBRICANTES Y SERVICIO MECÁNICO; REVISIÓN TECNO MECÁNICA Y EMISIÓN DE GASES AMBIE",
-     "valor": 246000000.0,
-     "entidad": "empresa social del estado región de salud soacha.",
-     "firma": "2026-03-16"
-    },
-    {
-     "referencia": "CTO- 083-2025",
-     "objeto": "PRESTAR EL SERVICIO DE RASTREO SATELITAL CON LOS RECEPTORES GPS; CONSISTENTE AL MONITOREO Y CONTROL; SEGUIMIENTO Y ADMINISTRACIÓN INSTALADOS A LOS VEHÍCULOS QUE CONFORMAN EL PARQUE",
-     "valor": 13072800.0,
-     "entidad": "empresa social del estado región de salud soacha.",
-     "firma": "2025-10-07"
-    }
-   ]
-  },
-  {
-   "tipo": "Parque",
-   "nombre": "Automotor De La Alcaldia Incluido",
-   "valor": 1020850000.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "2205-2022",
-     "objeto": "PRESTACION DEL SERVICIO DE MANTENIMIENTO PREVENTIVO Y CORRECTIVO PARA VEHICULOS; MOTOCICLETAS; EQUIPOS Y MAQUINARIA MULTIMARCAS QUE HACEN PARTE DEL PARQUE AUTOMOTOR DE LA ALCALDIA ",
-     "valor": 1020850000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2022-03-31"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Oficiales",
-   "valor": 930512099.92,
-   "contratos": 41,
-   "ejemplos": [
-    {
-     "referencia": "2559-2025",
-     "objeto": "COMPRA DE PRENDAS INSTITUCIONALES PARA LOS ESTUDIANTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES - IEO",
-     "valor": 388049433.59,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-11-20"
-    },
-    {
-     "referencia": "2897-2024",
-     "objeto": "PRESTAR SERVICIOS PROFESIONALES PARA EL DISEÑO; IMPLEMENTACIÓN Y SEGUIMIENTO DE ACCIONES ORIENTADAS AL FORTALECIMIENTO DE LA CONVIVENCIA ESCOLAR EN EL MARCO DE LAS RUTAS DE ATENCIÓ",
-     "valor": 6460000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2024-10-09"
-    },
-    {
-     "referencia": "2874-2024",
-     "objeto": "PRESTAR SERVICIOS PROFESIONALES PARA EL DISEÑO; IMPLEMENTACIÓN Y SEGUIMIENTO DE ACCIONES ORIENTADAS AL FORTALECIMIENTO DE LA CONVIVENCIA ESCOLAR EN EL MARCO DE LAS RUTAS DE ATENCIÓ",
-     "valor": 5573333.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2024-10-08"
-    },
-    {
-     "referencia": "2747-2024",
-     "objeto": "PRESTAR SERVICIOS PROFESIONALES PARA EL DISEÑO; IMPLEMENTACIÓN Y SEGUIMIENTO DE ACCIONES ORIENTADAS AL FORTALECIMIENTO DE LA CONVIVENCIA ESCOLAR EN EL MARCO DE LAS RUTAS DE ATENCIÓ",
-     "valor": 4686667.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2024-10-07"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Oficiales Del Municipio De Soacha",
-   "valor": 859870001.0,
-   "contratos": 54,
-   "ejemplos": [
-    {
-     "referencia": "4488-2023",
-     "objeto": "O: PRESTACIÓN DE SERVICIOS DE APOYO EN LAS ACTIVIDADES DE MANTENIMIENTO GENERAL; \nOPERATIVAS Y LOGÍSTICAS DE LA SECRETARÍA DE EDUCACIÓN Y DE LAS INSTITUCIONES EDUCATIVAS \nOFICIALES",
-     "valor": 2886667.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-11-29"
-    },
-    {
-     "referencia": "4491-2023",
-     "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES PARA EL DISEÑO; EJECUCIÓN Y SEGUIMIENTO A\nLOS PROCESOS DE EDUCACION INCLUSIVA EN ESTUDIANTES CON DISCAPACIDAD; O CON\nCAPACIDADES O TALENTOS EXCE",
-     "valor": 5000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-11-28"
-    },
-    {
-     "referencia": "4449-2023",
-     "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES PARA EL DISEÑO; EJECUCIÓN Y SEGUIMIENTO A\nLOS PROCESOS DE EDUCACION INCLUSIVA EN ESTUDIANTES CON DISCAPACIDAD; O CON\nCAPACIDADES O TALENTOS EXCE",
-     "valor": 5000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-11-27"
-    },
-    {
-     "referencia": "4447-2023",
-     "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES PARA EL DISEÑO; EJECUCIÓN Y SEGUIMIENTO A\nLOS PROCESOS DE EDUCACION INCLUSIVA EN ESTUDIANTES CON DISCAPACIDAD; O CON\nCAPACIDADES O TALENTOS EXCE",
-     "valor": 5000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-11-24"
-    }
-   ]
-  },
-  {
-   "tipo": "Parque",
-   "nombre": "Automotor De La Alcaldia Del",
-   "valor": 788152965.0,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "4078-2023",
-     "objeto": "SUMINISTRO DE LLANTAS PARA EL PARQUE AUTOMOTOR DE LA ALCALDIA DEL \nMUNICIPIO DE SOACHA",
-     "valor": 588152965.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-10-10"
-    },
-    {
-     "referencia": "4031-2022",
-     "objeto": "SUMINISTRO DE  LLANTAS  SELLOMATIC   PARA EL PARQUE AUTOMOTOR    DE  LA  ALCALDIA  DEL MUNICIPIO DE  SOACHA",
-     "valor": 200000000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2022-11-15"
-    }
-   ]
-  },
-  {
    "tipo": "Corregimiento",
-   "nombre": "Municipales De Policia Adscritas A",
-   "valor": 773806666.0,
-   "contratos": 89,
+   "nombre": "Municipales De Policia Adscritas",
+   "valor": 759286666.0,
+   "contratos": 88,
    "ejemplos": [
     {
      "referencia": "2035-2025",
@@ -2586,17 +2178,105 @@
      "firma": "2025-01-20"
     },
     {
-     "referencia": "0363-2025",
-     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN  PARA LA REALIZACIÓN DE ACTIVIDADES Y ASUNTOS DE CARÁCTER ADMINISTRATIVO Y OPERATIVO  QUE SE REQUIEREN EN LAS INSPECCIONES Y CORREGIMI",
-     "valor": 16200000.0,
+     "referencia": "3102-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS COMO TÉCNICO ADMINISTRATIVO EN EL DESARROLLO DE LAS ACTIVIDADES QUE SE REQUIEREN EN LAS INSPECCIONES Y CORREGIMIENTOS MUNICIPALES DE POLICIA ADSCRITAS A LA ",
+     "valor": 4160000.0,
      "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-01-11"
+     "firma": "2024-11-07"
+    }
+   ]
+  },
+  {
+   "tipo": "Institución educativa",
+   "nombre": "Bosque",
+   "valor": 751858376.33,
+   "contratos": 2,
+   "ejemplos": [
+    {
+     "referencia": "027 2022",
+     "objeto": "SUMINISTRO E INSTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA; CUNDINAMARCA (INSTITUCIÓN EDUCATIVA EL BOSQUE EN LA",
+     "valor": 2057606368.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2022-05-31"
+    },
+    {
+     "referencia": "023-2022",
+     "objeto": "INTERVENTORIA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL; AMBIENTAL Y JURÍDICA; PARA EL SUMINISTRO E INTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVA",
+     "valor": 197968761.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2022-05-12"
+    }
+   ]
+  },
+  {
+   "tipo": "Institución educativa",
+   "nombre": "San Mateo Sede Principal",
+   "valor": 751858376.33,
+   "contratos": 2,
+   "ejemplos": [
+    {
+     "referencia": "027 2022",
+     "objeto": "SUMINISTRO E INSTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA; CUNDINAMARCA (INSTITUCIÓN EDUCATIVA EL BOSQUE EN LA",
+     "valor": 2057606368.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2022-05-31"
+    },
+    {
+     "referencia": "023-2022",
+     "objeto": "INTERVENTORIA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL; AMBIENTAL Y JURÍDICA; PARA EL SUMINISTRO E INTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVA",
+     "valor": 197968761.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2022-05-12"
+    }
+   ]
+  },
+  {
+   "tipo": "Parque",
+   "nombre": "Futuro",
+   "valor": 715413341.64,
+   "contratos": 2,
+   "ejemplos": [
+    {
+     "referencia": "066-2025",
+     "objeto": "REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DEL MUNICIPIO DE GIRARDOT CUNDINA",
+     "valor": 1363472683.28,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-03-19"
+    },
+    {
+     "referencia": "068-2025",
+     "objeto": "INTERVENTORIA INTEGRAL PARA LA REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DE",
+     "valor": 67354000.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-03-18"
+    }
+   ]
+  },
+  {
+   "tipo": "Vía",
+   "nombre": "Avenida",
+   "valor": 715413341.64,
+   "contratos": 2,
+   "ejemplos": [
+    {
+     "referencia": "066-2025",
+     "objeto": "REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DEL MUNICIPIO DE GIRARDOT CUNDINA",
+     "valor": 1363472683.28,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-03-19"
+    },
+    {
+     "referencia": "068-2025",
+     "objeto": "INTERVENTORIA INTEGRAL PARA LA REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DE",
+     "valor": 67354000.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-03-18"
     }
    ]
   },
   {
    "tipo": "Vereda",
-   "nombre": "Panamá En El Sector El",
+   "nombre": "Panamá",
    "valor": 700000000.0,
    "contratos": 1,
    "ejemplos": [
@@ -2611,7 +2291,7 @@
   },
   {
    "tipo": "Institución educativa",
-   "nombre": "A Través De Acciones De",
+   "nombre": "A Través De Acciones",
    "valor": 700000000.0,
    "contratos": 1,
    "ejemplos": [
@@ -2625,25 +2305,10 @@
    ]
   },
   {
-   "tipo": "Institución educativa",
-   "nombre": "Mejoramiento Y Fortalecimiento D",
-   "valor": 699448777.0,
-   "contratos": 1,
-   "ejemplos": [
-    {
-     "referencia": "1236-2023",
-     "objeto": "RESIGNIFACIÓN; ACTUALIZACIÓN O AJUSTE DE LOS PROYECTOS EDUCATIVOS INSTITUCIONALES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES DE SOACHA PARA EL MEJORAMIENTO Y FORTALECIMIENTO DE ESTR",
-     "valor": 699448777.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2023-03-02"
-    }
-   ]
-  },
-  {
    "tipo": "Corregimiento",
-   "nombre": "Secretaria De Gobierno Del Municip",
-   "valor": 600279933.0,
-   "contratos": 25,
+   "nombre": "Secretaria De Gobierno",
+   "valor": 682719933.0,
+   "contratos": 28,
    "ejemplos": [
     {
      "referencia": "3640-2026",
@@ -2667,9 +2332,9 @@
      "firma": "2026-07-29"
     },
     {
-     "referencia": "0753-2026",
-     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES COMO ABOGADO PARA APOYAR EN ACTIVIDADES REQUERIDAS EN LOS TEMAS RELACIONADOS CON LAS JAC Y LAS JAL DE LAS COMUNAS Y CORREGIMIENTOS DE LA SECRE",
-     "valor": 22440266.0,
+     "referencia": "1042-2026",
+     "objeto": "PRESTACIÓN DE SERVICIOS JURIDICOS ESPECIALIZADOS PARA LA PROYECCIÓN DE ACTOS ADMINISTRATIVOS Y DEMÁS ACTIVIDADES REQUERIDAS EN  TEMAS RELACIONADOS CON LAS JAC Y LAS JAL DE LAS COMU",
+     "valor": 37080000.0,
      "entidad": "MUNICIPIO DE SOACHA.",
      "firma": "2026-01-12"
     }
@@ -2677,73 +2342,29 @@
   },
   {
    "tipo": "Institución educativa",
-   "nombre": "Bosque En La Comuna 4",
-   "valor": 563893782.25,
+   "nombre": "Publicas",
+   "valor": 658625000.0,
    "contratos": 2,
    "ejemplos": [
     {
-     "referencia": "027 2022",
-     "objeto": "SUMINISTRO E INSTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA; CUNDINAMARCA (INSTITUCIÓN EDUCATIVA EL BOSQUE EN LA",
-     "valor": 2057606368.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2022-05-31"
+     "referencia": "1978-2026",
+     "objeto": "ANUAR ESFUERZOS PARA LA REALIZACIÓN DE CURSOS PREPARATORIOS PARA LA TRANSICIÓN DE ESTUDIANTES DE LA MEDIA EDUCACIÓN A EDUCACIÓN SUPERIOR DE LAS INSTITUCIONES EDUCATIVAS PUBLICAS EN",
+     "valor": 313625000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-06-30"
     },
     {
-     "referencia": "023-2022",
-     "objeto": "INTERVENTORIA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL; AMBIENTAL Y JURÍDICA; PARA EL SUMINISTRO E INTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVA",
-     "valor": 197968761.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2022-05-12"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "Ciudad Latina Sede Principal",
-   "valor": 563893782.25,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "027 2022",
-     "objeto": "SUMINISTRO E INSTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA; CUNDINAMARCA (INSTITUCIÓN EDUCATIVA EL BOSQUE EN LA",
-     "valor": 2057606368.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2022-05-31"
-    },
-    {
-     "referencia": "023-2022",
-     "objeto": "INTERVENTORIA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL; AMBIENTAL Y JURÍDICA; PARA EL SUMINISTRO E INTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVA",
-     "valor": 197968761.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2022-05-12"
-    }
-   ]
-  },
-  {
-   "tipo": "Institución educativa",
-   "nombre": "San Mateo Sede Principal E",
-   "valor": 563893782.25,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "027 2022",
-     "objeto": "SUMINISTRO E INSTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA; CUNDINAMARCA (INSTITUCIÓN EDUCATIVA EL BOSQUE EN LA",
-     "valor": 2057606368.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2022-05-31"
-    },
-    {
-     "referencia": "023-2022",
-     "objeto": "INTERVENTORIA TÉCNICA; ADMINISTRATIVA; FINANCIERA; SOCIAL; AMBIENTAL Y JURÍDICA; PARA EL SUMINISTRO E INTALACION DE CUBIERTAS TERMOACÚSTICAS PARA CUATRO (4) INSTITUCIONES EDUCATIVA",
-     "valor": 197968761.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2022-05-12"
+     "referencia": "1943-2025",
+     "objeto": "AUNAR ESFUERZO PARA LA REALIZACION DE CURSOS PREPARATORIOS PARA LA TRANSICION DE ESTUDIANTES DE LA MEDIA A EDUCACIÓN SUPERIOR DE LAS INSTITUCIONES EDUCATIVAS PUBLICAS LA CIUDAD DE ",
+     "valor": 345000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-07-10"
     }
    ]
   },
   {
    "tipo": "Parque",
-   "nombre": "Infantiles Y De Calistenia Del",
+   "nombre": "Infantiles",
    "valor": 495049920.0,
    "contratos": 1,
    "ejemplos": [
@@ -2753,108 +2374,6 @@
      "valor": 495049920.0,
      "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
      "firma": "2026-09-24"
-    }
-   ]
-  },
-  {
-   "tipo": "Corregimiento",
-   "nombre": "Demás En Las Que Se",
-   "valor": 476998000.0,
-   "contratos": 39,
-   "ejemplos": [
-    {
-     "referencia": "2274-2025",
-     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN PARA LA ATENCIÓN Y SEGUIMIENTO A LAS JAC DE LAS COMUNAS Y CORREGIMIENTOS Y LAS DEMÁS EN LAS QUE SE REQUIERA SU APOYO DE LA DIRECCIÓN D",
-     "valor": 10350000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-09-05"
-    },
-    {
-     "referencia": "2221-2025",
-     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN PARA LA ATENCIÓN Y SEGUIMIENTO A LAS JAC DE LAS COMUNAS Y CORREGIMIENTOS Y LAS DEMÁS EN LAS QUE SE REQUIERA SU APOYO DE LA DIRECCIÓN D",
-     "valor": 10800000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-09-01"
-    },
-    {
-     "referencia": "2189-2025",
-     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN PARA LA ATENCIÓN Y SEGUIMIENTO A LAS JAC DE LAS COMUNAS Y CORREGIMIENTOS Y LAS DEMÁS EN LAS QUE SE REQUIERA SU APOYO DE LA DIRECCIÓN D",
-     "valor": 11700000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-08-25"
-    },
-    {
-     "referencia": "2188-2025",
-     "objeto": "Descripción\tPRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN PARA LA ATENCIÓN Y SEGUIMIENTO A LAS JAC DE LAS COMUNAS Y CORREGIMIENTOS Y LAS DEMÁS EN LAS QUE SE REQUIERA SU APOYO DE LA",
-     "valor": 11160000.0,
-     "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-08-25"
-    }
-   ]
-  },
-  {
-   "tipo": "Parque",
-   "nombre": "Futuro Ubicada En La Calle",
-   "valor": 476942227.76,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "066-2025",
-     "objeto": "REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DEL MUNICIPIO DE GIRARDOT CUNDINA",
-     "valor": 1363472683.28,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-03-19"
-    },
-    {
-     "referencia": "068-2025",
-     "objeto": "INTERVENTORIA INTEGRAL PARA LA REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DE",
-     "valor": 67354000.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-03-18"
-    }
-   ]
-  },
-  {
-   "tipo": "Parque",
-   "nombre": "Futuro En El Marco Del",
-   "valor": 476942227.76,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "066-2025",
-     "objeto": "REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DEL MUNICIPIO DE GIRARDOT CUNDINA",
-     "valor": 1363472683.28,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-03-19"
-    },
-    {
-     "referencia": "068-2025",
-     "objeto": "INTERVENTORIA INTEGRAL PARA LA REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DE",
-     "valor": 67354000.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-03-18"
-    }
-   ]
-  },
-  {
-   "tipo": "Vía",
-   "nombre": "Avenida 24 Esquina Del Municipio De",
-   "valor": 476942227.76,
-   "contratos": 2,
-   "ejemplos": [
-    {
-     "referencia": "066-2025",
-     "objeto": "REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DEL MUNICIPIO DE GIRARDOT CUNDINA",
-     "valor": 1363472683.28,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-03-19"
-    },
-    {
-     "referencia": "068-2025",
-     "objeto": "INTERVENTORIA INTEGRAL PARA LA REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DE",
-     "valor": 67354000.0,
-     "entidad": "EPUXUA E.I.C.E.",
-     "firma": "2025-03-18"
     }
    ]
   },
@@ -2881,47 +2400,90 @@
    ]
   },
   {
-   "tipo": "Parque",
-   "nombre": "Automotor",
-   "valor": 461807610.0,
-   "contratos": 8,
+   "tipo": "Corregimiento",
+   "nombre": "Policia",
+   "valor": 456869999.0,
+   "contratos": 35,
    "ejemplos": [
     {
-     "referencia": "CTO-006-2026",
-     "objeto": "SUMINISTRO DE COMBUSTIBLE PARA LOS VEHÍCULOS DEL PARQUE AUTOMOTOR (AMBULANCIAS Y VEHÍCULOS DE APOYO LOGÍSTICO) Y PLANTAS ELÉCTRICAS DE LA EMPRESA SOCIAL DEL ESTADO REGIÓN DE SALUD ",
-     "valor": 91569566.0,
-     "entidad": "empresa social del estado región de salud soacha.",
-     "firma": "2026-01-28"
-    },
-    {
-     "referencia": "1721-2025",
-     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES COMO INGENIERO MECANICO PARA REALIZAR LAS ACTIVIDADES RELACIONADAS CON EL MANTENIMIENTO DEL PARQUE AUTOMOTOR; EL EQUIPO Y MAQUINARIA A CARGO D",
-     "valor": 41333333.0,
+     "referencia": "1377-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA BRINDAR APOYO EN LAS ACTIVIDADES OPERATIVAS; TECNICAS Y LOGISTICAS QUE SE REQUIERAN AL INTERIOR DE LA INSPECCIÓN Y/O CORREGIMIENTO DE POL",
+     "valor": 7600000.0,
      "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-04-22"
+     "firma": "2024-05-31"
     },
     {
-     "referencia": "CTO-004-2025",
-     "objeto": "SUMINISTRO DE COMBUSTIBLE PARA LOS VEHÍCULOS DEL PARQUE AUTOMOTOR (AMBULANCIAS Y VEHÍCULOS DE APOYO LOGÍSTICO) Y PLANTAS ELÉCTRICAS DE LA EMPRESA SOCIAL DEL ESTADO REGIÓN DE SALUD ",
-     "valor": 108581616.0,
-     "entidad": "empresa social del estado región de salud soacha.",
-     "firma": "2025-02-05"
-    },
-    {
-     "referencia": "0080-2025",
-     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA LOS PROCESOS ADMINISTRATIVOS Y FINANCIEROS RELACIONADOS CON EL PARQUE AUTOMOTOR; ASI COMO DEL PROGRAMA DE SEGUROS DE LA ALCALDIA DE SOACH",
-     "valor": 45093333.0,
+     "referencia": "1380-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA BRINDAR APOYO EN LAS ACTIVIDADES OPERATIVAS; TECNICAS Y LOGISTICAS QUE SE REQUIERAN AL INTERIOR DE LA INSPECCIÓN Y/O CORREGIMIENTO DE POL",
+     "valor": 7600000.0,
      "entidad": "MUNICIPIO DE SOACHA.",
-     "firma": "2025-01-05"
+     "firma": "2024-05-30"
+    },
+    {
+     "referencia": "1317-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA BRINDAR APOYO EN LAS ACTIVIDADES OPERATIVAS; TECNICAS Y LOGISTICAS QUE SE REQUIERAN AL INTERIOR DE LA INSPECCIÓN Y/O CORREGIMIENTO DE POL",
+     "valor": 7600000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-05-29"
+    },
+    {
+     "referencia": "1379-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA BRINDAR APOYO EN LAS ACTIVIDADES OPERATIVAS; TECNICAS Y LOGISTICAS QUE SE REQUIERAN AL INTERIOR DE LA INSPECCIÓN Y/O CORREGIMIENTO DE POL",
+     "valor": 7600000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-05-29"
+    }
+   ]
+  },
+  {
+   "tipo": "Salón comunal",
+   "nombre": "Junta De Accion Comunal",
+   "valor": 437000000.0,
+   "contratos": 12,
+   "ejemplos": [
+    {
+     "referencia": "3524-2021",
+     "objeto": "AUNAR ESFUERZOS PARA EL MEJORAMIENTO DE INFRAESTRUCTURA DEL SALON COMUNAL DE LA JUNTA DE ACCION COMUNAL EL CARDAL DEL MUNICIPIO DE SOACHA",
+     "valor": 37000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2021-12-23"
+    },
+    {
+     "referencia": "3520-2021",
+     "objeto": "AUNAR ESFUERZOS PARA EL MEJORAMIENTO DE INFRAESTRUCTURA DEL SALON COMUNAL DE LA JUNTA DE ACCION COMUNAL DE LA CIUDADELA SUCRE II SECTOR DEL MUNICIPIO DE SOACHA",
+     "valor": 50000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2021-12-23"
+    },
+    {
+     "referencia": "3528-2021",
+     "objeto": "AUNAR ESFUERZOS PARA EL MEJORAMIENTO DE INFRAESTRUCTURA DEL SALON COMUNAL DE LA JUNTA DE ACCION COMUNAL DE  LA URBANIZACION PORTALEGRE DEL MUNICIPIO DE SOACHA",
+     "valor": 46000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2021-12-23"
+    },
+    {
+     "referencia": "3525-2021",
+     "objeto": "AUNAR ESFUERZOS PARA EL MEJORAMIENTO DE INFRAESTRUCTURA DEL SALON COMUNAL DE LA JUNTA DE ACCION COMUNAL LA VEREDITA DEL MUNICIPIO DE SOACHA",
+     "valor": 50000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2021-12-23"
     }
    ]
   },
   {
    "tipo": "Barrio",
-   "nombre": "Compartir Del Municipio De Soacha",
+   "nombre": "Compartir",
    "valor": 385467990.05,
-   "contratos": 2,
+   "contratos": 3,
    "ejemplos": [
+    {
+     "referencia": "4147-2022",
+     "objeto": "EL MUNICIPIO DE SOACHA - SEC. GRAL ENTREGA A LA JUNTA DE ACCIÓN COMUNAL DEL BARRIO COMPARTIR Y ESTE RECIBE A TÍTULO DE COMODATO O PRÉSTAMO DE USO; PARA EL CUMPLIMIENTO DE SUS FUNCI",
+     "valor": 0.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-12-02"
+    },
     {
      "referencia": "4014-2022",
      "objeto": "REPARACIÓN DE LAS REDES DE ALCANTARILLADO EN LA CALLE 21 B SUR ENTRE CARRERA 14 F A LA NO. 14F-14 Y CALLE 22 SUR ENTRE LA 14F-21 A LA 14 B; EN EL BARRIO COMPARTIR DEL MUNICIPIO DE ",
@@ -2935,6 +2497,510 @@
      "valor": 98186000.0,
      "entidad": "EPUXUA E.I.C.E.",
      "firma": "2022-10-20"
+    }
+   ]
+  },
+  {
+   "tipo": "Parque",
+   "nombre": "Bolsillo",
+   "valor": 314972334.0,
+   "contratos": 35,
+   "ejemplos": [
+    {
+     "referencia": "679-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS DE APOYO A LA GESTION DE UN TECNICO PARA LA ADECUACION DE PARQUES DE BOLSILLO YESCENARIOS DEL IMRDS.5.",
+     "valor": 3000000.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-11-16"
+    },
+    {
+     "referencia": "677-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS DE APOYO A LA GESTION DE UN TECNICO PARA LA ADECUACION DE PARQUES DE BOLSILLO Y ESCENARIOS DEL IMRDS 4",
+     "valor": 3000000.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-11-15"
+    },
+    {
+     "referencia": "651-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS DE APOYO A LA GESTION DE UN TECNICO\nPARA LA ADECUACION DE PARQUES DE BOLSILLO Y ESCENARIOS DEL\nIMRDS 1.",
+     "valor": 3066667.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-11-14"
+    },
+    {
+     "referencia": "534-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS DE APOYO A LA GESTION (AUXILIAR) PARA\nLA ADECUACION DE PARQUES DE BOLSILLO Y ESCENARIOS DEL IMRDS.",
+     "valor": 10800000.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-06-23"
+    }
+   ]
+  },
+  {
+   "tipo": "Institución educativa",
+   "nombre": "2025Se0289",
+   "valor": 300000000.0,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "2650-2025",
+     "objeto": "ADQUISICION DE KITS ESCOLARES CON DESTINO A LOS ESTUDIANTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES 2025SE0289",
+     "valor": 300000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-12-19"
+    }
+   ]
+  },
+  {
+   "tipo": "Parque",
+   "nombre": "Automotor Del Servicio Nacional",
+   "valor": 276892354.94,
+   "contratos": 2,
+   "ejemplos": [
+    {
+     "referencia": "CO1.PCCNTR.6498006",
+     "objeto": "CONTRATAR LA COMPRA DE INSUMOS; REPUESTOS; HERRAMIENTA PARA REALIZAR EL MANTENIMIENTO AL PARQUE AUTOMOTOR DEL SERVICIO NACIONAL DE APRENDIZAJE SENA _LOTE 2",
+     "valor": 221506545.0,
+     "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+     "firma": "2024-07-08"
+    },
+    {
+     "referencia": "CO1.PCCNTR.6492233",
+     "objeto": "CONTRATAR LA COMPRA DE INSUMOS; REPUESTOS; HERRAMIENTA PARA REALIZAR EL MANTENIMIENTO AL PARQUE AUTOMOTOR DEL SERVICIO NACIONAL DE APRENDIZAJE SENA _LOTE 1",
+     "valor": 55385809.94,
+     "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+     "firma": "2024-07-05"
+    }
+   ]
+  },
+  {
+   "tipo": "Institución educativa",
+   "nombre": "Cazucá",
+   "valor": 275100000.0,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "C 019 - 2022",
+     "objeto": "EJECUCIÓN DEL ANÁLISIS DE VULNERABILIDAD SÍSMICA DE DOS (2) INSTITUCIONES EDUCATIVAS OFICIALES I.E.O; 1). INSTITUCIÓN EDUCATIVA CAZUCÁ EN LA COMUNA CUATRO (04); 2). INSTITUCIÓN EDU",
+     "valor": 275100000.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2022-03-04"
+    }
+   ]
+  },
+  {
+   "tipo": "Barrio",
+   "nombre": "Santa Helena",
+   "valor": 264119622.0,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "067-2025",
+     "objeto": "ESTUDIOS Y DISEÑOS PARA LA CONSTRUCCIÓN DE LAS OBRAS QUE SEAN NECESARIAS PARA LA MITIGACION DEL RIESGO DEL SECTOR UBICADO ENTRE LA CARRERA 15 CON CALLE 15 DEL BARRIO LAS SANTA HELE",
+     "valor": 264119622.0,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2025-03-18"
+    }
+   ]
+  },
+  {
+   "tipo": "Barrio",
+   "nombre": "A Cargo",
+   "valor": 230259667.0,
+   "contratos": 6,
+   "ejemplos": [
+    {
+     "referencia": "2299-2026",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES ESPECIALIZADOS PARA IMPLEMENTAR LAS ESTRATEGIAS DE CULTURA CIUDADANA Y DE CULTURA POPULAR AL BARRIO A CARGO DE LA SECRETARÍA DE CULTURA Y TURI",
+     "valor": 37389000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-07-17"
+    },
+    {
+     "referencia": "0593-2026",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES ESPECIALIZADOS PARA IMPLEMENTAR LAS ESTRATEGIAS DE CULTURA CIUDADANA Y DE CULTURA POPULAR AL BARRIO A CARGO DE LA SECRETARIA DE CULTURA Y TURI",
+     "valor": 40788000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-01-08"
+    },
+    {
+     "referencia": "0605-2026",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA EL DESARROLLO DE LAS ESTRATEGIAS DE CULTURA CIUDADANA Y CULTURA POPULAR AL BARRIO A CARGO DE LA SECRETARÍA DE CULTURA Y TURISMO. SCT 5",
+     "valor": 15656000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-01-08"
+    },
+    {
+     "referencia": "1261-2025",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA EL DESARROLLO DE LAS ESTRATEGIAS DE CULTURA CIUDADANA Y CULTURA POPULAR AL BARRIO A CARGO DE LA SECRETARÍA DE CULTURA Y TURISMO. SCT 5",
+     "valor": 41166667.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-02-04"
+    }
+   ]
+  },
+  {
+   "tipo": "Institución educativa",
+   "nombre": "Luis Henríquez",
+   "valor": 193547346.11,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "005-2026",
+     "objeto": "EJECUTAR LAS OBRAS DE ADECUACIÓN PARA CERRAMIENTO Y CUBIERTA DE ESPACIOS EDUCATIVOS- AULAS DE CLASE EN LA INSTITUCIÓN EDUCATIVA LUIS HENRÍQUEZ DEL MUNICIPIO DE SOACHA",
+     "valor": 193547346.11,
+     "entidad": "IE LUIS HENRIQUEZ",
+     "firma": "2026-05-05"
+    }
+   ]
+  },
+  {
+   "tipo": "Parque",
+   "nombre": "Automotor A Cargo",
+   "valor": 186066666.0,
+   "contratos": 7,
+   "ejemplos": [
+    {
+     "referencia": "1042-2025",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES COMO INGENIERO MECANICO EN LAS ACTIVIDADES RELACIONADAS CON EL MANTENIMIENTO DEL PARQUE AUTOMOTOR A CARGO DE LA SECRETARÍA GENERAL. SG_061",
+     "valor": 56333333.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-01-22"
+    },
+    {
+     "referencia": "CD-85-PSAG-63-2023",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN ADMINISTRATIVA Y CONDUCCIÓN DEL PARQUE AUTOMOTOR A CARGO DEL CONCEJO MUNICIPAL DE SOACHA",
+     "valor": 11333333.0,
+     "entidad": "Concejo Municipal de Soacha",
+     "firma": "2023-06-15"
+    },
+    {
+     "referencia": "CD-85-PSAG-63-2023",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN ADMINISTRATIVA Y CONDUCCIÓN DEL PARQUE AUTOMOTOR A CARGO DEL CONCEJO MUNICIPAL DE SOACHA",
+     "valor": 11333333.0,
+     "entidad": "Concejo Municipal de Soacha",
+     "firma": "2023-06-15"
+    },
+    {
+     "referencia": "CD-21-PSAG-13-2023",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTIÓN ADMINISTRATIVA Y CONDUCCIÓN DEL PARQUE AUTOMOTOR A CARGO DEL CONCEJO MUNICIPAL DE SOACHA",
+     "valor": 10000000.0,
+     "entidad": "Concejo Municipal de Soacha",
+     "firma": "2023-01-31"
+    }
+   ]
+  },
+  {
+   "tipo": "Corregimiento",
+   "nombre": "Comisarias",
+   "valor": 185633334.0,
+   "contratos": 12,
+   "ejemplos": [
+    {
+     "referencia": "2496-2025",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTION COMO AUXILIAR PARA LAS ACTIVIDADES REQUERIDAS EN CASAS DE JUSTICIA INSPECCIONES CORREGIMIENTOS COMISARIAS Y DIRECCIÓN DE APOYO A LA JU",
+     "valor": 3333333.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-11-12"
+    },
+    {
+     "referencia": "2339-2025",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTION COMO AUXILIAR PARA LAS ACTIVIDADES REQUERIDAS EN CASAS DE JUSTICIA INSPECCIONES CORREGIMIENTOS COMISARIAS Y DIRECCIÓN DE APOYO A LA JU",
+     "valor": 6666667.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-09-22"
+    },
+    {
+     "referencia": "2290-2025",
+     "objeto": "PRESTACIÓN DE SERVICIOS DE APOYO A LA GESTION COMO AUXILIAR PARA LAS ACTIVIDADES REQUERIDAS EN CASAS DE JUSTICIA INSPECCIONES CORREGIMIENTOS COMISARIAS Y DIRECCIÓN DE APOYO A LA JU",
+     "valor": 7666667.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-09-10"
+    },
+    {
+     "referencia": "2090-2025",
+     "objeto": "PRESTACIÓN DE SERVICIOS COMO INTERPRETE Y APOYO ADMINISTRATIVO EN EL DESARROLLO DE LAS ACTIVIDADES QUE SE REQUIEREN EN LAS INSPECCIONES DE POLICIA CORREGIMIENTOS COMISARIAS Y CASAS",
+     "valor": 13500000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-07-31"
+    }
+   ]
+  },
+  {
+   "tipo": "Barrio",
+   "nombre": "Siete De Agosto",
+   "valor": 177643528.67,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "CO1.PCCNTR.5860759",
+     "objeto": "Contratar el arrendamiento de un bien inmueble ubicado en Bogota Distrito Capital; en el Barrio Siete de Agosto; el cual cuenta con talleres especializados en inyección diésel con ",
+     "valor": 532930586.0,
+     "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+     "firma": "2024-02-01"
+    }
+   ]
+  },
+  {
+   "tipo": "Barrio",
+   "nombre": "Cual Cuenta",
+   "valor": 177643528.67,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "CO1.PCCNTR.5860759",
+     "objeto": "Contratar el arrendamiento de un bien inmueble ubicado en Bogota Distrito Capital; en el Barrio Siete de Agosto; el cual cuenta con talleres especializados en inyección diésel con ",
+     "valor": 532930586.0,
+     "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+     "firma": "2024-02-01"
+    }
+   ]
+  },
+  {
+   "tipo": "Barrio",
+   "nombre": "Delhi",
+   "valor": 177643528.67,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "CO1.PCCNTR.5860759",
+     "objeto": "Contratar el arrendamiento de un bien inmueble ubicado en Bogota Distrito Capital; en el Barrio Siete de Agosto; el cual cuenta con talleres especializados en inyección diésel con ",
+     "valor": 532930586.0,
+     "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+     "firma": "2024-02-01"
+    }
+   ]
+  },
+  {
+   "tipo": "Sector",
+   "nombre": "A Traves Del Sistema",
+   "valor": 168259559.85,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "025-2022",
+     "objeto": "NTERVENTORIA TECNICA; ADMINISTRATIVA; JURIDICA; FINANCIERA; SOCIAL Y AMBIENTAL PARA LA CONSTRUCCION; REHABILITACION DE LAS VIAS Y OBRAS DE URBANISMO EN DIFERENTES SECTORES DEL MUNI",
+     "valor": 336519119.7,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2022-05-17"
+    }
+   ]
+  },
+  {
+   "tipo": "Sector",
+   "nombre": "Sin Formula De Ajuste",
+   "valor": 168259559.85,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "025-2022",
+     "objeto": "NTERVENTORIA TECNICA; ADMINISTRATIVA; JURIDICA; FINANCIERA; SOCIAL Y AMBIENTAL PARA LA CONSTRUCCION; REHABILITACION DE LAS VIAS Y OBRAS DE URBANISMO EN DIFERENTES SECTORES DEL MUNI",
+     "valor": 336519119.7,
+     "entidad": "EPUXUA E.I.C.E.",
+     "firma": "2022-05-17"
+    }
+   ]
+  },
+  {
+   "tipo": "Institución educativa",
+   "nombre": "San Mateo",
+   "valor": 144300000.0,
+   "contratos": 3,
+   "ejemplos": [
+    {
+     "referencia": "2797-2022",
+     "objeto": "ARRENDAMIENTO DE INMUEBLE Y MOBILIARIO PARA PRESTAR EL SERVICIO EDUCATIVO A LOS ESTUDIANTES MATRICULADOS EN BASICA PRIMARIA Y SECUNDARIA EN LA INSTITUCION EDUCATIVA SAN MATEO DEL M",
+     "valor": 19733333.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-08-03"
+    },
+    {
+     "referencia": "2209-2022",
+     "objeto": "ARRENDAMIENTO DE INMUEBLE Y MOBILIARIO PARA PRESTAR EL SERVICIO EDUCATIVO A LOS ESTUDIANTES MATRICULADOS EN BÁSICA PRIMARIA Y SECUNDARIA EN LA INSTITUCIÓN EDUCATIVA SAN MATEO DEL M",
+     "valor": 60566667.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-04-11"
+    },
+    {
+     "referencia": "2206-2022",
+     "objeto": "ARRENDAMIENTO DE INMUEBLE Y MOBILIARIO PARA PRESTAR EL SERVICIO EDUCATIVO A LOS ESTUDIANTES MATRICULADOS EN BÁSICA PRIMARIA Y SECUNDARIA EN LA INSTITUCIÓN EDUCATIVA SAN MATEO DEL M",
+     "valor": 64000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-04-01"
+    }
+   ]
+  },
+  {
+   "tipo": "Parque",
+   "nombre": "Automotor De La Administracion",
+   "valor": 123053333.0,
+   "contratos": 8,
+   "ejemplos": [
+    {
+     "referencia": "0789-2024",
+     "objeto": "PRESTACION DE SERVICIOS DE APOYO A LA GESTION PARA LOS PROCESOS DE GESTION DOCUMENTAL Y ACTIVIDADES ADMINISTRATIVAS EN EL PARQUE AUTOMOTOR DE LA ADMINISTRACION MUNCIPAL DE SOACHA.",
+     "valor": 12000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-03-22"
+    },
+    {
+     "referencia": "0509-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES COMO INGENIERO MECANICO PARA APOYAR LAS ACTIVIDADES RELACIONADAS CON EL MANTENIMIENTO DEL PARQUE AUTOMOTOR DE LA ADMINISTRACION MUNICIPAL.",
+     "valor": 30000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-03-05"
+    },
+    {
+     "referencia": "4764 -2023",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA EL DESARROLLO DE ACTIVIDADES  ADMINISTRATIVAS  Y FINANCIERAS DEL PARQUE AUTOMOTOR DE LA ADMINISTRACION MUNICIPAL DE SOACHA.",
+     "valor": 2533333.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2023-12-11"
+    },
+    {
+     "referencia": "2495 -2023",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA EL DESARROLLO DE ACTIVIDADES  ADMINISTRATIVAS  Y FINANCIERAS DEL PARQUE AUTOMOTOR DE LA ADMINISTRACION MUNICIPAL DE SOACHA.",
+     "valor": 22800000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2023-06-07"
+    }
+   ]
+  },
+  {
+   "tipo": "Parque",
+   "nombre": "Imrds",
+   "valor": 109813000.0,
+   "contratos": 9,
+   "ejemplos": [
+    {
+     "referencia": "707-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS PARA EL APOYO EN LA EJECUCIÓN DE LAS ACTIVIDADES PROPIAS DEL MANTENIMIENTO DE ESCENARIOS Y PARQUES DEL IMRDS.",
+     "valor": 3860000.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-11-17"
+    },
+    {
+     "referencia": "649-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS DE UN PROFESIONAL PARA LA EJECUCION DE LAS ACTIVIDADES PROPIAS DEL MANTENIMIENTO DE ESCENARIOS Y PARQUES DEL IMRDS",
+     "valor": 6387333.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-11-09"
+    },
+    {
+     "referencia": "537-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS DE UN ARQUITECTO PARA EL APOYO EN LA\nEJECUCION DE ACTIVIDADES PROPIAS DEL MANTENIMIENTO DE\nESCENARIOS Y PARQUES DEL IMRDS.",
+     "valor": 18300000.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-06-23"
+    },
+    {
+     "referencia": "500-2023",
+     "objeto": "CONTRATAR LOS SERVICIOS PROFESIONALES COMO ARQUITECTO PARA\nEL APOYO EN LA EJECUCION DE ACTIVIDADES PROPIAS DEL\nMANTENIMIENTO DE ESCENARIOS Y PARQUES DEL IMRDS.",
+     "valor": 14740000.0,
+     "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+     "firma": "2023-06-22"
+    }
+   ]
+  },
+  {
+   "tipo": "Corregimiento",
+   "nombre": "Uno De Policia",
+   "valor": 101701166.66,
+   "contratos": 9,
+   "ejemplos": [
+    {
+     "referencia": "3861-2022",
+     "objeto": "39479 - CONTRATAR LOS SERVICIOS DE UN PROFESIONAL EN DERECHO QUE BRINDE APOYO PROFESIONAL EN LOS TRAMITES Y GESTIONES QUE SE DESARROLLAN EN EL CORREGIMIENTO UNO DE POLICIA DEL MUNI",
+     "valor": 12250000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-10-07"
+    },
+    {
+     "referencia": "3507-2022",
+     "objeto": "39479 - CONTRATAR LOS SERVICIOS DE UNA PERSONA QUE BRINDE APOYO ADMINISTRATIVO EN EL DESARROLLO DE ACTIVIDADES QUE SE REQUIEREN EN EL CORREGIMIENTO UNO DE POLICIA DE LA SECRETARIA ",
+     "valor": 7260000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-09-02"
+    },
+    {
+     "referencia": "2992-2022",
+     "objeto": "39479 - CONTRATAR LOS SERVICIOS DE UNA PERSONA QUE BRINDE APOYO ADMINISTRATIVO EN EL DESARROLLO DE ACTIVIDADES QUE SE REQUIEREN EN EL CORREGIMIENTO UNO DE POLICIA DE LA SECRETARIA ",
+     "valor": 8772500.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-08-12"
+    },
+    {
+     "referencia": "2085-2022",
+     "objeto": "CONTRATAR LOS SERVICIOS DE UNA PERSONA QUE BRINDE APOYO ADMINISTATIVO EN EL DESARROLLO DE ACTIVIDADES QUE SE REQUIERAN EN EL CORREGIMIENTO UNO DE POLICIA DE LA SECRETARIA DE GOBIER",
+     "valor": 10890000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2022-01-28"
+    }
+   ]
+  },
+  {
+   "tipo": "Vereda",
+   "nombre": "Chacua",
+   "valor": 99949138.0,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "1881-2025",
+     "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE LA VEREDA CHACUA (SOACHA) AL SECTOR ALTO DE CABRERA DEL MUNICIPIO DE SOACHA; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ",
+     "valor": 99949138.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2025-06-25"
+    }
+   ]
+  },
+  {
+   "tipo": "Comuna",
+   "nombre": "Comuna 3",
+   "valor": 97350981.0,
+   "contratos": 8,
+   "ejemplos": [
+    {
+     "referencia": "1912-2024",
+     "objeto": "LEVANTAMIENTO TOPOGRAFICO Y ESTUDIO DE SUELOS; PARA PROYECTOS CAPS COMUNA 1 QUINTAS DE LA LAGUNA; COMUNA 2 LAS VEGAS; COMUNA 3 CIUDAD VERDE; DE LA ESE MUNICIPAL JULIO CESAR PEÑALOZ",
+     "valor": 128700000.0,
+     "entidad": "ESE MUNICIPAL DE SOACHA JULIO CESAR PEÑALOZA*",
+     "firma": "2024-11-13"
+    },
+    {
+     "referencia": "0987-2024",
+     "objeto": "CONTRATAR EL ARRENDAMIENTO DE UN BIEN INMUEBLE PARA EL FUNCIONAMIENTO DE LA SEDE DE LA JUNTA ADMINISTRADORA LOCAL DE LA COMUNA 3 DEL MUNICIPIO DE SOACHA.",
+     "valor": 9440000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-04-12"
+    },
+    {
+     "referencia": "1021-2024",
+     "objeto": "PRESTACION DE SERVICIOS PROFESIONALES EN PSICOLOGIA PARA GARANTIZAR LA ATENCION DEL PROGRAMA DE NIÑOS; NIÑAS Y ADOLESCENTES CON ENFOQUE EN LAS COMUNAS 2 Y 3 DEL MUNICIPIO DE SOACHA",
+     "valor": 11400000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-04-12"
+    },
+    {
+     "referencia": "0231-2024",
+     "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES EN TRABAJO SOCIAL PARA GARANTIZAR LA ATENCIÓN DE NIÑOS NIÑAS; ADOLESCENTES Y HACER SEGUIMIENTO EN LAS COMUNAS 2 Y 3 DEL MUNICIPIO DE SOACHA CU",
+     "valor": 19000000.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2024-02-15"
+    }
+   ]
+  },
+  {
+   "tipo": "Vereda",
+   "nombre": "Fusungá",
+   "valor": 94248306.0,
+   "contratos": 1,
+   "ejemplos": [
+    {
+     "referencia": "1982 - 2026",
+     "objeto": "Mejoramiento de la vía que comunica la vereda Fusungá con la vereda San Jorge en el sector de la escuela Eugenio Díaz Castro; sede San Jorge del municipio de Soacha; Cundinamarca e",
+     "valor": 94248306.0,
+     "entidad": "MUNICIPIO DE SOACHA.",
+     "firma": "2026-07-27"
     }
    ]
   }
