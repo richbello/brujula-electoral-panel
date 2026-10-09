@@ -982,7 +982,7 @@ show(location.hash.slice(1));
       kpi("Valor contratado", corto(k.valor_total)) +
       kpi("Obras vencidas", miles(k.obras_vencidas)) +
       kpi("Valor vencido", corto(k.valor_vencido)) +
-      kpi("Saldo sin pagar", corto(k.pendiente_vencido)) +
+      kpi("Con pago reportado", miles(k.vencidas_con_pago_reportado ?? 0) + " de " + miles(k.obras_vencidas)) +
       kpi("Sectores nombrados", miles(k.sectores)) +
       "</div>";
 
@@ -1036,6 +1036,9 @@ show(location.hash.slice(1));
       "período: no depende de que el objeto nombre un lugar. Que un contrato aparezca aquí " +
       "puede deberse a una obra parada, a una prórroga no registrada o a que la entidad no " +
       "actualizó el estado; conviene confirmarlo antes de afirmarlo.</p>" +
+      (DATOS.meta.advertencia_pagos
+        ? '<p class="note" style="margin:0 0 12px"><b>Sobre la columna de pagos.</b> ' +
+          esc(DATOS.meta.advertencia_pagos) + "</p>" : "") +
       '<input id="terr-busca" value="'+esc(q)+'" placeholder="Buscar por contratista, entidad u objeto…" ' +
       'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;' +
       'font-size:13px;box-sizing:border-box;margin-bottom:14px;font-family:inherit">';
@@ -1050,7 +1053,7 @@ show(location.hash.slice(1));
 
     h += '<div style="overflow-x:auto"><table id="terr-tabla"><thead><tr>' +
       '<th style="width:28px"></th><th>Objeto</th><th>Contratista</th>' +
-      '<th class="r">Valor</th><th class="r">Sin pagar</th><th class="r">Vencida hace</th>' +
+      '<th class="r">Valor</th><th class="r">Falta por pagar</th><th class="r">Vencida hace</th>' +
       "</tr></thead><tbody>";
     filas.forEach((o, i) => {
       const ab = abierta === i;
@@ -1061,7 +1064,9 @@ show(location.hash.slice(1));
           '<span class="vf-sub">'+esc(o.entidad)+" · "+esc(o.referencia)+"</span></td>" +
         "<td>"+esc(o.contratista)+"</td>" +
         '<td class="vfi-mono">'+esc(corto(o.valor))+"</td>" +
-        '<td class="vfi-mono">'+esc(corto(o.pendiente))+"</td>" +
+        '<td class="vfi-mono">'+(o.pago_reportado
+            ? esc(corto(o.pendiente))
+            : '<span style="color:var(--muted);font-weight:400;font-size:11.5px">no reportado</span>')+"</td>" +
         '<td class="vfi-mono"><span class="vfi-nivel" style="background:'+
           (grave?"#C8003C":"#EA6A0A")+'">'+esc(anios(o.dias_vencido))+"</span></td></tr>";
       if (ab) {
@@ -1074,8 +1079,8 @@ show(location.hash.slice(1));
           campo("Fin pactado", o.fin, true) +
           campo("Estado en SECOP", o.estado) +
           campo("Valor", plata(o.valor)) +
-          campo("Pagado", plata(o.pagado)) +
-          campo("Saldo sin pagar", plata(o.pendiente), true) +
+          campo("Pagado", o.pago_reportado ? plata(o.pagado) : "SECOP no reporta pagos de este contrato") +
+          (o.pago_reportado ? campo("Falta por pagar", plata(o.pendiente), true) : "") +
           ((o.lugares||[]).length
             ? campo("Lugar nombrado en el objeto",
                 o.lugares.map(l => l.tipo + ": " + l.nombre).join(" · "))
@@ -1308,11 +1313,13 @@ show(location.hash.slice(1));
       campo("Contratos", miles(t.contratos)) +
       campo("Entidades", miles(t.entidades) + (t.nombres_entidades?.length
         ? " · " + esc(t.nombres_entidades.slice(0,2).join(" · ")) : "")) +
-      campo("Pagado", plata(t.pagado)) +
+      campo("Pagado", t.contratos_con_pago
+        ? plata(t.pagado) + " (en " + miles(t.contratos_con_pago) + " de " + miles(t.contratos) + " contratos)"
+        : "SECOP no reporta pagos de estos contratos") +
       campo("Primer contrato", t.primero || "—") +
       campo("Último contrato", t.ultimo || "—") +
       (t.vencidos ? campo("Obras vencidas y abiertas", miles(t.vencidos), true) : "") +
-      (t.pendiente_vencido ? campo("Saldo vencido sin pagar", plata(t.pendiente_vencido), true) : "") +
+      (t.vencidos_con_pago ? campo("Falta por pagar en lo vencido", plata(t.pendiente_vencido), true) : "") +
       "</div>";
     if ((t.mayores||[]).length) {
       h += '<table class="fin-mini"><tr><th>Objeto</th><th>Entidad</th><th>Firma</th>' +

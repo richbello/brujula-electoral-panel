@@ -188,8 +188,13 @@ if idx:
     # sigue estando vencido. El indice no debe heredar ese umbral.
     check("cuenta los vencidos sin aplicar el umbral de presentacion",
           f["vencidos"] == 2, str(f["vencidos"]))
-    check("acumula el saldo vencido sin pagar", f["pendiente_vencido"] == 505000000.0,
-          str(f["pendiente_vencido"]))
+    # Solo suma el saldo del contrato cuyo pago SI fue reportado (A, 900M-400M).
+    # El otro vencido tiene valor_pagado en cero, asi que su saldo es desconocido
+    # y no se inventa restando.
+    check("el saldo solo suma donde el pago fue reportado",
+          f["pendiente_vencido"] == 500000000.0, str(f["pendiente_vencido"]))
+    check("y cuenta cuantos vencidos tienen pago reportado",
+          f["vencidos_con_pago"] == 1, str(f["vencidos_con_pago"]))
     check("la lista visible si aplica el umbral y muestra solo 1",
           len(etl.obras_vencidas(contratos, HOY, minimo=20_000_000)) == 1)
     check("registra primera y ultima firma", f["primero"] == "2022-01-05" and f["ultimo"] == "2025-02-05",
@@ -199,6 +204,33 @@ if idx:
 check("un contrato sin documento no entra",
       etl.indice_contratistas([{"documento_proveedor": "", "valor_del_contrato": "1"}], HOY) == [])
 check("el JSON publica el indice", "contratistas" in d and isinstance(d["contratistas"], list))
+
+print("\n[12] Pago no reportado no es saldo pendiente")
+sin_pago = [dict(base, referencia_del_contrato="SP", valor_del_contrato="900000000",
+                 valor_pagado="", fecha_de_fin_del_contrato="2024-06-30T00:00:00.000",
+                 estado_contrato="En ejecucion", fecha_de_firma="2022-01-05T00:00:00.000")]
+con_pago = [dict(sin_pago[0], referencia_del_contrato="CP", valor_pagado="300000000")]
+a = etl.obras_vencidas(sin_pago, HOY, minimo=20_000_000)[0]
+b2 = etl.obras_vencidas(con_pago, HOY, minimo=20_000_000)[0]
+check("sin pago reportado, pendiente queda indefinido", a["pendiente"] is None, str(a["pendiente"]))
+check("y se marca que el pago no fue reportado", a["pago_reportado"] is False)
+check("NO presenta el valor del contrato como saldo",
+      a["pendiente"] != a["valor"])
+check("con pago reportado si calcula el saldo", b2["pendiente"] == 600000000.0, str(b2["pendiente"]))
+check("y lo marca como reportado", b2["pago_reportado"] is True)
+idx2 = etl.indice_contratistas(sin_pago, HOY)[0]
+check("el indice no acumula saldo de pagos no reportados",
+      idx2["pendiente_vencido"] == 0.0, str(idx2["pendiente_vencido"]))
+check("pero si cuenta la obra como vencida", idx2["vencidos"] == 1)
+etl.consultar = lambda *a, **k: sin_pago + con_pago
+dp = etl.construir("Soacha", "2020-01-01", "2026-10-09", token=None,
+                   minimo=20_000_000, limite=None, hoy=HOY)
+check("el corte declara que pocos contratos reportan pago",
+      "valor pagado" in dp["meta"]["advertencia_pagos"])
+check("y publica el porcentaje con pago",
+      dp["kpis"]["pct_contratos_con_pago"] == 50.0, str(dp["kpis"]["pct_contratos_con_pago"]))
+check("ya no publica un saldo vencido global falso",
+      "pendiente_vencido" not in dp["kpis"])
 
 print("\n" + "=" * 60)
 if fallos:

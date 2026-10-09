@@ -236,6 +236,10 @@ def obras_vencidas(contratos: list[dict], hoy: dt.date, *, minimo: float) -> lis
         if valor < minimo:
             continue
         pagado = a_numero(c.get("valor_pagado"))
+        # SECOP deja valor_pagado en blanco en la gran mayoria de los
+        # contratos. Restarlo del valor no da un saldo: da el valor otra vez.
+        # Por eso el pendiente solo existe si el pago fue reportado.
+        reportado = pagado > 0
         salida.append({
             "referencia": c.get("referencia_del_contrato") or c.get("id_contrato") or "",
             "entidad": c.get("nombre_entidad") or "",
@@ -245,7 +249,8 @@ def obras_vencidas(contratos: list[dict], hoy: dt.date, *, minimo: float) -> lis
             "tipo": c.get("tipo_de_contrato") or "",
             "valor": valor,
             "pagado": pagado,
-            "pendiente": max(valor - pagado, 0.0),
+            "pago_reportado": reportado,
+            "pendiente": max(valor - pagado, 0.0) if reportado else None,
             "inicio": str(c.get("fecha_de_inicio_del_contrato") or "")[:10],
             "fin": fin.isoformat(),
             "dias_vencido": (hoy - fin).days,
@@ -280,14 +285,19 @@ def indice_contratistas(contratos: list[dict], hoy: dt.date, *, tope: int = 1500
             "primero": None,
             "ultimo": None,
             "vencidos": 0,
+            "vencidos_con_pago": 0,
             "valor_vencido": 0.0,
             "pendiente_vencido": 0.0,
+            "contratos_con_pago": 0,
             "mayores": [],
         })
         valor = a_numero(c.get("valor_del_contrato"))
         f["contratos"] += 1
         f["valor"] += valor
-        f["pagado"] += a_numero(c.get("valor_pagado"))
+        pagado_c = a_numero(c.get("valor_pagado"))
+        f["pagado"] += pagado_c
+        if pagado_c > 0:
+            f["contratos_con_pago"] += 1
         if c.get("nombre_entidad"):
             f["entidades"].add(c["nombre_entidad"])
 
@@ -304,7 +314,10 @@ def indice_contratistas(contratos: list[dict], hoy: dt.date, *, tope: int = 1500
                 and any(t in estado for t in ABIERTOS)):
             f["vencidos"] += 1
             f["valor_vencido"] += valor
-            f["pendiente_vencido"] += max(valor - a_numero(c.get("valor_pagado")), 0.0)
+            pag = a_numero(c.get("valor_pagado"))
+            if pag > 0:
+                f["pendiente_vencido"] += max(valor - pag, 0.0)
+                f["vencidos_con_pago"] += 1
 
         f["mayores"].append({
             "referencia": c.get("referencia_del_contrato") or c.get("id_contrato") or "",
@@ -404,6 +417,8 @@ def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
 
     valor_total = sum(a_numero(c.get("valor_del_contrato")) for c in contratos)
     valor_vencido = sum(v["valor"] for v in vencidas)
+    con_pago = sum(1 for c in contratos if a_numero(c.get("valor_pagado")) > 0)
+    pct_pago = round(con_pago / len(contratos) * 100, 1) if contratos else 0.0
 
     return {
         "meta": {
@@ -426,6 +441,12 @@ def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
                 "que no aparece puede no haber recibido nada, o haber recibido sin "
                 "que el objeto lo nombre: con estos datos no se puede distinguir."
             ),
+            "advertencia_pagos": (
+                f"SECOP reporta valor pagado en apenas el {pct_pago}% de los contratos de este "
+                "corte. Donde no lo reporta, no se puede calcular cuanto falta por pagar: el "
+                "modulo muestra 'no reportado' en vez de restar y presentar el valor del "
+                "contrato como si fuera un saldo pendiente."
+            ),
             "reparto": ("Cuando un objeto nombra varios lugares, el valor se reparte en "
                         "partes iguales entre ellos, para que la suma por sector no "
                         "supere el total contratado."),
@@ -436,7 +457,8 @@ def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
             "valor_total": valor_total,
             "obras_vencidas": len(vencidas),
             "valor_vencido": valor_vencido,
-            "pendiente_vencido": sum(v["pendiente"] for v in vencidas),
+            "vencidas_con_pago_reportado": sum(1 for v in vencidas if v["pago_reportado"]),
+            "pct_contratos_con_pago": pct_pago,
             "sectores": len(sectores),
             "cobertura_valor": cobertura["pct_valor"],
             "contratistas": len(contratistas),
@@ -479,6 +501,8 @@ def main() -> int:
     print(f"  Contratos            {k['contratos']:,}")
     print(f"  Valor total          ${k['valor_total']:,.0f}")
     print(f"  Obras vencidas       {k['obras_vencidas']:,}  (${k['valor_vencido']:,.0f})")
+    print(f"  Con pago reportado   {k['vencidas_con_pago_reportado']:,} de esas  "
+          f"(SECOP reporta pagos en el {k['pct_contratos_con_pago']}% de los contratos)")
     print(f"  Sectores nombrados   {k['sectores']:,}")
     print(f"  Contratistas         {k['contratistas']:,}  (indice para la ficha)")
     print(f"  Cobertura            {c['pct_valor']}% del valor nombra un lugar "
