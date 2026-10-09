@@ -186,34 +186,30 @@ tr:last-child td{border-bottom:0}
 </div>
 </section>
 <section class="pane" id="generador">
-<h2>Generador de Estado de Cuenta</h2>
-<p class="sub">Procesa datos de pagos del histórico · todo se ejecuta en tu navegador</p>
 <div class="mod04-grid">
-<div class="panel"><h3>Paso 1: Plantilla</h3><p style="font-size:13px;color:var(--muted);margin-bottom:15px">Sube el formato oficial en blanco (formato_estadocuenta.xlsx)</p>
+<div class="panel">
 <div class="upload-area" id="plantillaUploadArea">
-<div class="upload-area-text">📤 Arrastra o haz clic</div>
+<div class="upload-area-text">📤 Plantilla</div>
 <div class="upload-area-hint">formato_estadocuenta.xlsx</div>
 <input type="file" id="plantillaFile" accept=".xlsx,.xls">
 <div class="file-name" id="plantillaName"></div>
 </div>
 </div>
-<div class="panel"><h3>Paso 2: Histórico</h3><p style="font-size:13px;color:var(--muted);margin-bottom:15px">Sube el histórico de pagos con todas las vigencias</p>
+<div class="panel">
 <div class="upload-area" id="historicoUploadArea">
-<div class="upload-area-text">📤 Arrastra o haz clic</div>
-<div class="upload-area-hint">Histórico de Pagos (Excel completo)</div>
+<div class="upload-area-text">📤 Histórico de Pagos</div>
+<div class="upload-area-hint">Excel con todas las vigencias</div>
 <input type="file" id="historicoFile" accept=".xlsx,.xls">
 <div class="file-name" id="historicoName"></div>
 </div>
 </div>
 </div>
 <div class="panel">
-<h3>Paso 3: Generar Estado de Cuenta</h3>
-<div class="info-box">ℹ️ Ingresa el número de contrato tal como aparece en el histórico (ej: 233-2026, 054-2026)</div>
 <div class="form-group">
 <label for="contrato">Número de Contrato</label>
 <input type="text" id="contrato" placeholder="Ej: 233-2026" autocomplete="off">
 </div>
-<div class="loading" id="loading"><span class="spinner"></span>Procesando... esto puede tomar un momento</div>
+<div class="loading" id="loading"><span class="spinner"></span>Procesando...</div>
 <div class="error" id="error"></div>
 <div class="result" id="result">
 <h2><span style="font-size:24px">✓</span> ¡Éxito!</h2>
