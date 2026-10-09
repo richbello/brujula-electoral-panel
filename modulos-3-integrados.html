@@ -260,6 +260,10 @@ function show(id){
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.t));
 show(location.hash.slice(1));
+// Sin barra de pestañas la navegación es el ancla, así que el panel debe
+// seguir al hash: de otro modo el botón atrás del navegador, o un enlace a
+// otro módulo desde esta misma página, cambian la URL sin cambiar lo que se ve.
+window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
 
 /* ============================================================
    VIGILANCIA FISCAL IA — puerto del Módulo 09 de
