@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fiscal, Seguridad y Scoring · Estrategia Electoral 2027</title>
+<title>Fiscal, Vigilancia y Presupuestal CRP · Estrategia Electoral 2027</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00C97B;--bad:#FF2D6F;--warn:#EA6A0A;--crit:#C8003C}
@@ -53,10 +53,11 @@ tr:last-child td{border-bottom:0}
 </style>
 </head>
 <body>
-<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Vigilancia · Seguridad · Scoring</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Vigilancia · Presupuestal CRP</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
 <main>
-<div class="demo"><strong>Datos de demostración.</strong> Las cifras de este módulo son ilustrativas y todavía no provienen de SECOP II, Contraloría ni Registraduría.</div>
-<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="seguridad">Seguridad electoral</button><button data-t="scoring">Scoring integral</button><button data-t="generador">Análisis Presupuestal CRP</button></nav>
+<div class="demo" id="aviso-demo"><strong>Datos de demostración.</strong> Las cifras de esta pestaña están escritas a mano en el código y todavía no provienen de SECOP II, Contraloría ni Registraduría.</div>
+<div class="demo" id="aviso-real" style="display:none;background:#D6FBEC;color:#047857;border-color:#A7F3D0"><strong>Datos reales.</strong> Esta pestaña no trae cifras propias: calcula todo a partir del reporte CRP que usted cargue, así que su fecha de corte es la del archivo.</div>
+<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="generador">Análisis Presupuestal CRP</button></nav>
 
 <section class="pane" id="fiscal">
 <h2>Análisis fiscal</h2><p class="sub">Municipio de Soacha · vigencia 2023 · cifras en millones de pesos</p>
@@ -121,40 +122,6 @@ tr:last-child td{border-bottom:0}
 </table></div>
 </section>
 
-<section class="pane" id="seguridad">
-<h2>Seguridad electoral</h2><p class="sub">Soacha · preparación para la jornada electoral 2027</p>
-<div class="kpis">
-<div class="kpi"><small>Puestos de votación</small><b>287</b></div>
-<div class="kpi"><small>Índice de integridad</small><b>78 %</b></div>
-<div class="kpi"><small>Puestos vulnerables</small><b>12</b></div>
-<div class="kpi"><small>Testigos capacitados</small><b>120</b></div>
-</div>
-<div class="cols">
-<div class="panel"><h3>ElectoralBio · piloto v0.1</h3><table>
-<tr><th>Parámetro</th><th class="r">Valor</th></tr>
-<tr><td>Tecnología</td><td class="r">OCR de E-14 + GPS</td></tr>
-<tr><td>Puestos en piloto</td><td class="r">45 de 287 (15,7 %)</td></tr>
-<tr><td>Fecha del piloto</td><td class="r">15 de marzo de 2027</td></tr>
-<tr><td>Dominios falsos desactivados</td><td class="r">3</td></tr>
-</table></div>
-<div class="panel"><h3>Puestos de mayor riesgo</h3><table>
-<tr><th>Puesto</th><th>Factor</th><th class="r">Índice</th></tr>
-<tr><td>IE Prado Veraniego</td><td>Vigilancia insuficiente</td><td class="r"><span class="pill crit">0,89</span></td></tr>
-<tr><td>El Bosque</td><td>Conflictividad histórica</td><td class="r"><span class="pill alto">0,78</span></td></tr>
-<tr><td>J. Martí</td><td>Infraestructura precaria</td><td class="r"><span class="pill medio">0,75</span></td></tr>
-</table></div>
-</div>
-</section>
-
-<section class="pane" id="scoring">
-<h2>Scoring integral</h2><p class="sub">Índice = 0,40 × electoral + 0,35 × fiscal + 0,25 × social (escala 0 a 100)</p>
-<div class="panel"><table>
-<tr><th>Candidato</th><th>Electoral (40 %)</th><th>Fiscal (35 %)</th><th>Social (25 %)</th><th class="r">Índice</th></tr>
-<tbody id="sc"></tbody>
-</table>
-<p class="note">El componente social de este escenario es ilustrativo. Antes de presentarlo debe alimentarse con el módulo Pulso Social en Redes, y la comparación debe hacerse contra los candidatos inscritos para 2027.</p>
-</div>
-</section>
 <section class="pane" id="generador">
 <h2>Análisis Presupuestal CRP</h2>
 <p class="sub">Carga el reporte SAP Distrital (hoja "Data") para análisis automático de presupuesto y ejecución</p>
@@ -173,11 +140,16 @@ tr:last-child td{border-bottom:0}
 
 </main>
 <script>
-const W={e:.40,f:.35,s:.25};
-const C=[{n:'Danny Caicedo',e:65,f:38,s:68},{n:'Julián Sánchez "Perico"',e:35,f:38,s:35}];
-const fmt=v=>v.toFixed(1).replace('.',',');
-document.getElementById('sc').innerHTML=C.map(c=>{const t=c.e*W.e+c.f*W.f+c.s*W.s;return `<tr><td><b>${c.n}</b></td><td>${c.e}</td><td>${c.f}</td><td>${c.s}</td><td class="r"><b>${fmt(t)}</b></td></tr>`}).join('');
-function show(id){if(!document.getElementById(id))id='fiscal';document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));history.replaceState(null,'','#'+id)}
+function show(id){
+  if(!document.getElementById(id))id='fiscal';
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));
+  // el aviso depende del origen de los datos de cada pestaña
+  const real = id==='generador';
+  document.getElementById('aviso-demo').style.display = real?'none':'block';
+  document.getElementById('aviso-real').style.display = real?'block':'none';
+  history.replaceState(null,'','#'+id);
+}
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.t));
 show(location.hash.slice(1));
 </script>
