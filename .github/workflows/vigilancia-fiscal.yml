@@ -3,11 +3,18 @@ name: Actualizar vigilancia fiscal
 # Genera data/modulos/vigilancia_fiscal.json consultando SECOP II y el
 # Boletin de Responsables Fiscales, y lo publica en el sitio.
 #
-# Se puede disparar de dos formas:
-#   - a mano, desde la pestana Actions del repositorio (boton "Run workflow")
-#   - automaticamente, todos los lunes
+# ESTADO: en pausa.
 #
-# No requiere instalar nada en el computador del usuario.
+# La pestana "Vigilancia fiscal" del panel ya no lee este JSON: ahora consulta
+# en vivo el backend de sistema-gestion-contractual, que ademas cruza contra
+# SIRI (Procuraduria). Este ETL queda disponible por dos razones:
+#   - genera un corte propio, sin depender de que el backend este despierto
+#   - no requiere servidor: el JSON lo sirve GitHub Pages como archivo estatico
+#
+# Por eso se desactivo la ejecucion automatica semanal, que estaria publicando
+# un archivo que nadie lee. Se sigue pudiendo ejecutar a mano desde la pestana
+# Actions con el boton "Run workflow". Para reactivar el automatico, descomente
+# el bloque "schedule" de abajo.
 
 on:
   workflow_dispatch:
@@ -28,9 +35,11 @@ on:
         description: "Contratos minimos dentro de la ventana"
         required: false
         default: "3"
-  schedule:
-    # lunes 11:00 UTC = 6:00 a.m. en Bogota
-    - cron: "0 11 * * 1"
+  # Desactivado: la pestana ya no lee este JSON (ver nota arriba).
+  # Para reactivar el corte semanal, descomente estas tres lineas.
+  # schedule:
+  #   # lunes 11:00 UTC = 6:00 a.m. en Bogota
+  #   - cron: "0 11 * * 1"
 
 # Necesario para que el workflow pueda hacer commit del corte generado.
 permissions:
