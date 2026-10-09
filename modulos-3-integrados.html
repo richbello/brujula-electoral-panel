@@ -178,10 +178,51 @@ show(location.hash.slice(1));
 
   const API = "https://sistema-gestion-contractual.onrender.com/api/vfi";
 
+  // Cada entrada es [etiqueta visible, texto que se busca].
+  // El backend hace  upper(nombre_entidad) like upper('%<texto>%')  contra
+  // SECOP II, asi que el valor es una subcadena, no el nombre exacto. Se
+  // eligieron subcadenas verificadas contra los nombres reales del dataset,
+  // que vienen con acentos inconsistentes y puntuacion sobrante:
+  //   - "FACATATIV" cubre FACATATIVA y FACATATIVÁ
+  //   - "MUNICIPAL DE GIRARDOT" evita cruzarse con Girardota (Antioquia)
+  //   - "ALCALDIA MUNICIPIO MOSQUERA" evita Mosquera (Nariño)
   const ENTIDADES = [
-    { grupo: "Alcaldías Locales", items: ["USAQUEN","CHAPINERO","SANTA FE","SAN CRISTOBAL","USME","TUNJUELITO","BOSA","KENNEDY","FONTIBON","ENGATIVA","SUBA","BARRIOS UNIDOS","TEUSAQUILLO","LOS MARTIRES","ANTONIO NARINO","PUENTE ARANDA","CANDELARIA","RAFAEL URIBE","CIUDAD BOLIVAR","SUMAPAZ"] },
-    { grupo: "Secretarías Distritales", items: ["SECRETARIA DE EDUCACION","SECRETARIA DE SALUD","SECRETARIA DE MOVILIDAD","SECRETARIA DE INTEGRACION SOCIAL","SECRETARIA DE GOBIERNO","SECRETARIA DE HACIENDA","SECRETARIA DE PLANEACION","SECRETARIA DE AMBIENTE","SECRETARIA DE CULTURA","SECRETARIA DE DESARROLLO ECONOMICO","SECRETARIA DE SEGURIDAD","SECRETARIA DE HABITAT","SECRETARIA DE LA MUJER","SECRETARIA GENERAL","SECRETARIA JURIDICA"] },
-    { grupo: "Entidades y Establecimientos", items: ["IDU","UAESP","IDRD","TRANSMILENIO","UNIDAD DE MANTENIMIENTO VIAL","IDARTES","IDIGER","IPES","IDPAC","JARDIN BOTANICO","CANAL CAPITAL","LOTERIA DE BOGOTA","EAAB ACUEDUCTO","CATASTRO","DADEP","IDPC","EMPRESA DE RENOVACION"] }
+    { grupo: "Soacha", items: [
+      ["Todas las entidades de Soacha", "SOACHA"],
+      ["Alcaldía · Municipio de Soacha", "MUNICIPIO DE SOACHA"],
+      ["Concejo Municipal", "CONCEJO MUNICIPAL DE SOACHA"],
+      ["Personería Municipal", "PERSONERIA MUNICIPAL DE SOACHA"],
+      ["IMRD · Recreación y Deporte", "RECREACION Y EL DEPORTE DE SOACHA"],
+      ["ESE Región de Salud Soacha", "SALUD SOACHA"],
+      ["ESE Julio César Peñaloza", "JULIO CESAR"],
+      ["EPUXUA E.I.C.E.", "EPUXUA"]
+    ]},
+    { grupo: "Cundinamarca · departamento", items: [
+      ["Todo el departamento", "CUNDINAMARCA"],
+      ["Departamento de Cundinamarca", "DEPARTAMENTO DE CUNDINAMARCA"],
+      ["Asamblea Departamental", "ASAMBLEA DEPARTAMENTAL DE CUNDINAMARCA"]
+    ]},
+    { grupo: "Cundinamarca · municipios", items: [
+      ["Chía", "MUNICIPAL DE CHIA"],
+      ["Girardot", "MUNICIPAL DE GIRARDOT"],
+      ["Mosquera", "ALCALDIA MUNICIPIO MOSQUERA"],
+      ["Zipaquirá", "ZIPAQUIRA"],
+      ["Facatativá", "FACATATIV"],
+      ["Cajicá", "CAJICA"],
+      ["Cota", "MUNICIPAL COTA"],
+      ["Funza", "FUNZA"],
+      ["Madrid", "MADRID CUNDINAMARCA"],
+      ["Tocancipá", "TOCANCIPA"],
+      ["Tenjo", "TENJO"],
+      ["La Calera", "LA CALERA"],
+      ["El Colegio", "DE EL COLEGIO"],
+      ["Anolaima", "ANOLAIMA"],
+      ["Puerto Salgar", "PUERTO SALGAR"],
+      ["El Rosal", "MUNICIPIO DE EL ROSAL"]
+    ]},
+    { grupo: "Bogotá · Alcaldías Locales", items: ["USAQUEN","CHAPINERO","SANTA FE","SAN CRISTOBAL","USME","TUNJUELITO","BOSA","KENNEDY","FONTIBON","ENGATIVA","SUBA","BARRIOS UNIDOS","TEUSAQUILLO","LOS MARTIRES","ANTONIO NARINO","PUENTE ARANDA","CANDELARIA","RAFAEL URIBE","CIUDAD BOLIVAR","SUMAPAZ"].map(x=>[x,x]) },
+    { grupo: "Bogotá · Secretarías Distritales", items: ["SECRETARIA DE EDUCACION","SECRETARIA DE SALUD","SECRETARIA DE MOVILIDAD","SECRETARIA DE INTEGRACION SOCIAL","SECRETARIA DE GOBIERNO","SECRETARIA DE HACIENDA","SECRETARIA DE PLANEACION","SECRETARIA DE AMBIENTE","SECRETARIA DE CULTURA","SECRETARIA DE DESARROLLO ECONOMICO","SECRETARIA DE SEGURIDAD","SECRETARIA DE HABITAT","SECRETARIA DE LA MUJER","SECRETARIA GENERAL","SECRETARIA JURIDICA"].map(x=>[x,x]) },
+    { grupo: "Bogotá · Entidades y Establecimientos", items: ["IDU","UAESP","IDRD","TRANSMILENIO","UNIDAD DE MANTENIMIENTO VIAL","IDARTES","IDIGER","IPES","IDPAC","JARDIN BOTANICO","CANAL CAPITAL","LOTERIA DE BOGOTA","EAAB ACUEDUCTO","CATASTRO","DADEP","IDPC","EMPRESA DE RENOVACION"].map(x=>[x,x]) }
   ];
 
   const COLOR = { CRITICA:"#C8003C", ALTA:"#EA6A0A", MEDIA:"#CA8A04", INFO:"#5C4F82" };
@@ -207,14 +248,14 @@ show(location.hash.slice(1));
   ENTIDADES.forEach(g => {
     const og = document.createElement("optgroup");
     og.label = g.grupo;
-    g.items.forEach(it => {
+    g.items.forEach(([etiqueta, busca]) => {
       const o = document.createElement("option");
-      o.value = it; o.textContent = it;
+      o.value = busca; o.textContent = etiqueta;
       og.appendChild(o);
     });
     sel.appendChild(og);
   });
-  sel.value = "USME";
+  sel.value = "SOACHA";
 
   $("vfi-analizar").addEventListener("click", analizar);
   $("vfi-buscar").addEventListener("click", buscarDoc);
