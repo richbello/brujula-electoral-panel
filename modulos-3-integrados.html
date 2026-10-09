@@ -47,46 +47,16 @@ tr:last-child td{border-bottom:0}
 .alert b{color:var(--crit)}
 @media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main{padding-left:18px;padding-right:18px}.tabs{gap:12px}}
 
-/* ==================== MÓDULO 04 - ESTADO DE CUENTA ==================== */
-.upload-area{border:2px dashed var(--gold);border-radius:6px;padding:20px;text-align:center;cursor:pointer;transition:all 0.3s ease;background:rgba(255,176,32,.05)}
-.upload-area:hover{border-color:#FFB020;background:rgba(255,176,32,.1)}
-.upload-area input{display:none}
-.upload-area-text{color:var(--gold);font-weight:500;margin-bottom:8px;font-size:14px}
-.upload-area-hint{color:var(--muted);font-size:12px}
-.file-name{color:var(--ok);font-size:13px;margin-top:10px;font-weight:500}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;color:var(--navy);font-weight:500;margin-bottom:8px;font-size:14px}
-.form-group input{width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;font-size:14px;transition:border-color 0.3s ease}
-.form-group input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,176,32,.1)}
-.button-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
-.btn-primary{padding:12px 20px;border:none;border-radius:4px;font-size:14px;font-weight:500;cursor:pointer;transition:all 0.3s ease;background:var(--gold);color:var(--navy);grid-column:1 / -1}
-.btn-primary:hover:not(:disabled){box-shadow:0 4px 12px rgba(255,176,32,.4);transform:translateY(-2px)}
-.btn-primary:disabled{background:#ccc;cursor:not-allowed}
-.btn-reset{background:#f0f0f0;color:#333;border:none;border-radius:4px;padding:12px 20px;cursor:pointer}
-.btn-reset:hover{background:#e0e0e0}
-.loading{display:none;text-align:center;color:var(--gold);font-weight:500;margin:20px 0}
-.loading.active{display:block}
-.spinner{display:inline-block;width:20px;height:20px;border:3px solid #f3f3f3;border-top:3px solid var(--gold);border-radius:50%;animation:spin 1s linear infinite;margin-right:10px;vertical-align:middle}
-@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.error{background:#FFDEE8;border:1px solid #FFD5DF;border-radius:4px;padding:15px;color:var(--crit);margin-top:15px;display:none}
-.error.active{display:block}
-.result{background:#fff;border:1px solid var(--line);border-radius:10px;padding:25px;display:none;margin-top:20px}
-.result.active{display:block}
-.result h2{color:var(--ok);font-size:20px;margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.result-item{display:grid;grid-template-columns:150px 1fr;margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid var(--line)}
-.result-item:last-child{border-bottom:none}
-.result-label{font-weight:500;color:var(--muted)}
-.result-value{color:var(--navy);font-weight:500}
-.info-box{background:rgba(124,77,255,.05);border-left:4px solid var(--gold);padding:15px;border-radius:4px;margin-bottom:20px;font-size:13px;color:var(--navy)}
-.mod04-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
-@media(max-width:800px){.mod04-grid{grid-template-columns:1fr}.button-group{grid-template-columns:1fr}}
+/* ==================== MÓDULO 06 - ANÁLISIS PRESUPUESTAL CRP ==================== */
+#dash-06 canvas{max-height:260px}
+@media(max-width:800px){#dash-06 > div[style*="1fr 1fr"]{grid-template-columns:1fr !important}}
 </style>
 </head>
 <body>
 <header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Vigilancia · Seguridad · Scoring</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
 <main>
 <div class="demo"><strong>Datos de demostración.</strong> Las cifras de este módulo son ilustrativas y todavía no provienen de SECOP II, Contraloría ni Registraduría.</div>
-<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="seguridad">Seguridad electoral</button><button data-t="scoring">Scoring integral</button><button data-t="generador">Generador de Estado de Cuenta</button></nav>
+<nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="seguridad">Seguridad electoral</button><button data-t="scoring">Scoring integral</button><button data-t="generador">Análisis Presupuestal CRP</button></nav>
 
 <section class="pane" id="fiscal">
 <h2>Análisis fiscal</h2><p class="sub">Municipio de Soacha · vigencia 2023 · cifras en millones de pesos</p>
@@ -186,45 +156,19 @@ tr:last-child td{border-bottom:0}
 </div>
 </section>
 <section class="pane" id="generador">
-<div style="background:#C8003C;border-radius:16px;padding:40px;color:white;text-align:center;max-width:600px;margin:60px auto">
-<div style="margin-bottom:40px">
+<h2>Análisis Presupuestal CRP</h2>
+<p class="sub">Carga el reporte SAP Distrital (hoja "Data") para análisis automático de presupuesto y ejecución</p>
+<div style="background:#C8003C;border-radius:16px;padding:40px;color:white;text-align:center;max-width:600px;margin:20px auto">
+<div style="margin-bottom:20px">
 <div style="font-size:48px;margin-bottom:20px">📊</div>
-<h2 style="color:white;font-size:28px;margin-bottom:10px">Análisis Presupuestal CRP</h2>
-<p style="color:rgba(255,255,255,.9);font-size:14px">Carga el reporte SAP con variables presupuestales</p>
-</div>
-
-<div style="background:rgba(255,255,255,.1);border:2px dashed rgba(255,255,255,.5);border-radius:12px;padding:30px;margin-bottom:20px;cursor:pointer" id="plantillaUploadArea">
-<div style="font-size:16px;margin-bottom:8px">📤 Plantilla</div>
-<div style="font-size:12px;opacity:.9">formato_estadocuenta.xlsx</div>
-<input type="file" id="plantillaFile" accept=".xlsx,.xls" style="display:none">
-<div id="plantillaName" style="font-size:12px;margin-top:10px;color:rgba(255,255,255,.8)"></div>
-</div>
-
-<div style="background:rgba(255,255,255,.1);border:2px dashed rgba(255,255,255,.5);border-radius:12px;padding:30px;margin-bottom:20px;cursor:pointer" id="historicoUploadArea">
-<div style="font-size:16px;margin-bottom:8px">📤 Histórico</div>
-<div style="font-size:12px;opacity:.9">Excel con todas las vigencias</div>
-<input type="file" id="historicoFile" accept=".xlsx,.xls" style="display:none">
-<div id="historicoName" style="font-size:12px;margin-top:10px;color:rgba(255,255,255,.8)"></div>
-</div>
-
-<input type="text" id="contrato" placeholder="Ej: 233-2026" autocomplete="off" style="width:100%;padding:12px;border:none;border-radius:8px;font-size:14px;margin-bottom:20px">
-
-<div class="loading" id="loading" style="color:white"><span class="spinner" style="border-top-color:white"></span>Procesando...</div>
-<div class="error" id="error" style="background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.3);color:white"></div>
-<div class="result" id="result" style="background:rgba(255,255,255,.15);border-radius:8px;padding:20px;text-align:left;color:white;display:none">
-<h3 style="color:white;margin-bottom:15px">✓ ¡Éxito!</h3>
-<div style="font-size:13px;margin-bottom:12px"><span style="opacity:.8">Contrato:</span> <strong id="resultContrato"></strong></div>
-<div style="font-size:13px;margin-bottom:12px"><span style="opacity:.8">Contratista:</span> <strong id="resultContratista"></strong></div>
-<div style="font-size:13px;margin-bottom:12px"><span style="opacity:.8">Transacciones:</span> <strong id="resultTransacciones"></strong></div>
-<div style="font-size:13px;margin-bottom:12px"><span style="opacity:.8">Valor Inicial:</span> <strong id="resultValor"></strong></div>
-<div style="font-size:13px"><span style="opacity:.8">Saldo Final:</span> <strong id="resultSaldo"></strong></div>
-</div>
-
-<div style="display:grid;grid-template-columns:1fr;gap:10px">
-<button id="generarBtn" disabled style="background:#FFB020;color:#C8003C;border:none;padding:12px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px;opacity:.7">🎯 Generar Estado de Cuenta</button>
-<button id="resetBtn" style="background:rgba(255,255,255,.2);color:white;border:none;padding:12px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px">🔄 Limpiar</button>
+<label style="cursor:pointer;display:block">
+<div style="font-size:16px;margin-bottom:8px">📤 Cargar Reporte CRP</div>
+<div style="font-size:12px;opacity:.9">Archivo SAP Distrital (.xlsx)</div>
+<input type="file" id="carga-06" accept=".xlsx,.xls" style="display:none">
+</label>
 </div>
 </div>
+<div id="vista-presupuestal" style="margin-top:20px"></div>
 </section>
 
 </main>
@@ -238,186 +182,313 @@ document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.datase
 show(location.hash.slice(1));
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 <script>
-// ========== MÓDULO 04 - ESTADO DE CUENTA ==========
+/* ============================================================
+   MÓDULO 06 — Análisis Presupuestal CRP
+   Lee el Reporte CRP (SAP Distrital, hoja "Data") y muestra
+   KPIs, gráficas y tabla con datos REALES.
+   ============================================================ */
+(function () {
+  "use strict";
 
-function formatCurrency(value) {
-    return new Intl.NumberFormat('es-CO', {
-        style: 'currency',
-        currency: 'COP',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
-    }).format(value);
-}
+  let DATOS = [];
+  const GRAF = {};
 
-function showError(msg) {
-    const el = document.getElementById('error');
-    el.textContent = msg;
-    el.classList.add('active');
-}
+  document.addEventListener("DOMContentLoaded", init);
+  if (document.readyState !== "loading") init();
 
-function clearError() {
-    const el = document.getElementById('error');
-    el.classList.remove('active');
-}
+  function init() {
+    const input = document.getElementById("carga-06");
+    if (!input || input.dataset.ligado === "1") return;
+    input.dataset.ligado = "1";
+    input.addEventListener("change", (e) => leerExcel(e.target.files[0]));
+  }
 
-function showLoading(show) {
-    document.getElementById('loading').classList.toggle('active', show);
-}
-
-function showResult(data) {
-    document.getElementById('resultContrato').textContent = data.contrato;
-    document.getElementById('resultContratista').textContent = data.contratista;
-    document.getElementById('resultTransacciones').textContent = data.pagos_encontrados;
-    document.getElementById('resultValor').textContent = formatCurrency(data.valor_contrato);
-    document.getElementById('resultSaldo').textContent = formatCurrency(data.saldo_final);
-    document.getElementById('result').classList.add('active');
-}
-
-function enableGenerateBtn() {
-    const plantilla = document.getElementById('plantillaFile').files[0];
-    const historico = document.getElementById('historicoFile').files[0];
-    const contrato = document.getElementById('contrato').value.trim();
-    document.getElementById('generarBtn').disabled = !(plantilla && historico && contrato);
-}
-
-function setupUploadArea(areaId, inputId, nameId) {
-    const area = document.getElementById(areaId);
-    const input = document.getElementById(inputId);
-    const nameEl = document.getElementById(nameId);
-
-    area.addEventListener('click', () => input.click());
-    area.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        area.style.borderColor = '#FFB020';
-        area.style.background = 'rgba(255,176,32,.1)';
-    });
-    area.addEventListener('dragleave', () => {
-        area.style.borderColor = '#FFB020';
-        area.style.background = 'rgba(255,176,32,.05)';
-    });
-    area.addEventListener('drop', (e) => {
-        e.preventDefault();
-        area.style.borderColor = '#FFB020';
-        area.style.background = 'rgba(255,176,32,.05)';
-        if (e.dataTransfer.files.length) {
-            input.files = e.dataTransfer.files;
-            input.dispatchEvent(new Event('change'));
+  /* ---------- lectura del archivo ---------- */
+  function leerExcel(archivo) {
+    if (!archivo) return;
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      try {
+        const wb = XLSX.read(evt.target.result, { cellDates: true });
+        // usa la hoja "Data" si existe, si no la primera
+        const nombreHoja = wb.SheetNames.includes("Data") ? "Data" : wb.SheetNames[0];
+        const filas = XLSX.utils.sheet_to_json(wb.Sheets[nombreHoja], { defval: "" });
+        DATOS = filas.filter((r) => r["Ejercicio"] || r["Valor CRP"]);
+        if (DATOS.length === 0) {
+          alert("El archivo no contiene datos reconocibles de CRP.");
+          return;
         }
+        render(archivo.name);
+      } catch (err) {
+        console.error(err);
+        alert("No se pudo leer el archivo: " + err.message);
+      }
+    };
+    reader.readAsArrayBuffer(archivo);
+  }
+
+  /* ---------- utilidades ---------- */
+  const num = (x) => {
+    const n = parseFloat(String(x).replace(/[^\d.-]/g, ""));
+    return isNaN(n) ? 0 : n;
+  };
+  const money = (v) =>
+    new Intl.NumberFormat("es-CO", {
+      style: "currency",
+      currency: "COP",
+      maximumFractionDigits: 0,
+    }).format(v);
+  const moneyCorto = (v) => {
+    if (Math.abs(v) >= 1e9) return "$" + (v / 1e9).toFixed(1) + "MM";
+    if (Math.abs(v) >= 1e6) return "$" + (v / 1e6).toFixed(1) + "M";
+    if (Math.abs(v) >= 1e3) return "$" + (v / 1e3).toFixed(0) + "K";
+    return "$" + v.toFixed(0);
+  };
+
+  /* ---------- render principal ---------- */
+  function render(nombreArchivo) {
+    const vista = document.getElementById("vista-presupuestal");
+    if (!vista) return;
+
+    // ocultar la pantalla de carga decorativa si sigue visible
+    const cargaDecor = document.getElementById("pantalla-carga-crp");
+    if (cargaDecor) cargaDecor.style.display = "none";
+
+    // eliminar dashboard previo si el usuario recarga otro archivo
+    const previo = document.getElementById("dash-06");
+    if (previo) previo.remove();
+
+    // totales
+    let crp = 0, giro = 0, pend = 0, anul = 0, rein = 0;
+    DATOS.forEach((r) => {
+      crp += num(r["Valor CRP"]);
+      giro += num(r["Autorizacion giro"]);
+      pend += num(r["Com.Sin.Aut.Giro"]);
+      anul += num(r["Anulaciones"]);
+      rein += num(r["Reintegros"]);
+    });
+    const ejec = crp ? (giro / crp) * 100 : 0;
+
+    // construir dashboard
+    const dash = document.createElement("div");
+    dash.id = "dash-06";
+    dash.style.cssText = "padding:0 4px;";
+    dash.innerHTML = `
+      <div style="background:linear-gradient(135deg,#1a2742,#1e3a6e);border-radius:12px;padding:18px 22px;margin:18px 0;color:#fff;">
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8fb8e8;">Reporte CRP · ${nombreArchivo}</div>
+        <div style="font-size:22px;font-weight:700;margin-top:4px;">${DATOS.length.toLocaleString("es-CO")} registros analizados</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px;">
+        ${kpi("Valor CRP", money(crp), "#667eea")}
+        ${kpi("Girado", money(giro), "#28a745")}
+        ${kpi("Pendiente de giro", money(pend), "#ffc107")}
+        ${kpi("Anulaciones", money(anul), "#dc3545")}
+        ${kpi("% Ejecución", ejec.toFixed(1) + "%", "#17a2b8")}
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px;">
+        <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);">
+          <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:#1a2742;">CRP vs Girado por período</div>
+          <canvas id="c06-periodo"></canvas>
+        </div>
+        <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);">
+          <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:#1a2742;">Ejecución del presupuesto</div>
+          <canvas id="c06-ejec"></canvas>
+        </div>
+        <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);">
+          <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:#1a2742;">Distribución por modalidad</div>
+          <canvas id="c06-modalidad"></canvas>
+        </div>
+        <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);">
+          <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:#1a2742;">Top 10 beneficiarios (Valor CRP)</div>
+          <canvas id="c06-benef"></canvas>
+        </div>
+        <div style="background:#fff;padding:16px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);grid-column:1/-1;">
+          <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:#1a2742;">Valor CRP por rubro (Top 10)</div>
+          <canvas id="c06-rubro"></canvas>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-bottom:15px;">
+        <input id="c06-busca" placeholder="🔎 Buscar beneficiario, CRP, CDP o compromiso…"
+          style="flex:1;padding:11px;border:1.5px solid #e8edf2;border-radius:8px;font-size:13px;">
+        <button id="c06-btn-tabla" style="padding:11px 18px;background:#667eea;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600;">Ver tabla</button>
+      </div>
+      <div id="c06-tabla-wrap" style="display:none;background:#fff;border-radius:12px;padding:14px;box-shadow:0 2px 10px rgba(0,0,0,.06);overflow-x:auto;"></div>
+    `;
+
+    // insertar justo después del panel de carga
+    vista.appendChild(dash);
+
+    // gráficas
+    graficaPeriodo();
+    graficaEjecucion(giro, pend, anul);
+    graficaModalidad();
+    graficaBeneficiarios();
+    graficaRubro();
+
+    // interacción tabla / búsqueda
+    document.getElementById("c06-btn-tabla").addEventListener("click", () => {
+      const w = document.getElementById("c06-tabla-wrap");
+      w.style.display = w.style.display === "none" ? "block" : "none";
+      if (w.style.display === "block") pintarTabla(DATOS.slice(0, 200));
+    });
+    document.getElementById("c06-busca").addEventListener("input", (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      const w = document.getElementById("c06-tabla-wrap");
+      w.style.display = "block";
+      if (!q) return pintarTabla(DATOS.slice(0, 200));
+      const filtr = DATOS.filter((r) =>
+        [r["Nombre BP Beneficiario"], r["Número de CRP"], r["Número de CDP"], r["No. Compromiso"]]
+          .some((v) => String(v).toLowerCase().includes(q))
+      );
+      pintarTabla(filtr.slice(0, 200));
     });
 
-    input.addEventListener('change', () => {
-        if (input.files[0]) {
-            nameEl.textContent = `✓ ${input.files[0].name}`;
-            enableGenerateBtn();
-        }
+    dash.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function kpi(label, valor, color) {
+    return `<div style="background:${color};color:#fff;padding:16px;border-radius:10px;text-align:center;">
+      <div style="font-size:11px;opacity:.85;text-transform:uppercase;letter-spacing:.04em;">${label}</div>
+      <div style="font-size:20px;font-weight:700;margin-top:4px;line-height:1.1;">${valor}</div>
+    </div>`;
+  }
+
+  /* ---------- gráficas ---------- */
+  function agrupar(campo, valor) {
+    const m = {};
+    DATOS.forEach((r) => {
+      const k = String(r[campo] || "—");
+      m[k] = (m[k] || 0) + (valor ? num(r[valor]) : 1);
     });
-}
+    return m;
+  }
 
-if (document.getElementById('plantillaUploadArea')) {
-    setupUploadArea('plantillaUploadArea', 'plantillaFile', 'plantillaName');
-    setupUploadArea('historicoUploadArea', 'historicoFile', 'historicoName');
-    document.getElementById('contrato').addEventListener('input', enableGenerateBtn);
-
-    document.getElementById('generarBtn').addEventListener('click', async () => {
-        clearError();
-        showLoading(true);
-
-        try {
-            const plantillaFile = document.getElementById('plantillaFile').files[0];
-            const historicoFile = document.getElementById('historicoFile').files[0];
-            const contratoBuscado = document.getElementById('contrato').value.trim();
-
-            // Leer histórico
-            const historicoArrayBuffer = await historicoFile.arrayBuffer();
-            const historicoData = new Uint8Array(await historicoFile.arrayBuffer());
-            const historicoWB = XLSX.read(historicoData, { type: 'array' });
-            const historicoWS = historicoWB.Sheets[historicoWB.SheetNames[0]];
-            const historico = XLSX.utils.sheet_to_json(historicoWS);
-
-            // Filtrar por contrato
-            const pagos = historico.filter(row => {
-                const referencia = String(row.Referencia || '');
-                return referencia.includes(contratoBuscado);
-            });
-
-            if (pagos.length === 0) {
-                showError(`❌ No se encontró información para: ${contratoBuscado}`);
-                showLoading(false);
-                return;
-            }
-
-            const primer = pagos[0];
-
-            // Leer plantilla
-            const plantillaData = new Uint8Array(await plantillaFile.arrayBuffer());
-            const plantillaWB = XLSX.read(plantillaData, { type: 'array' });
-            const plantillaWS = plantillaWB.Sheets[plantillaWB.SheetNames[0]];
-
-            // Escribir datos en plantilla
-            plantillaWS['D5'] = { t: 's', v: contratoBuscado };
-            plantillaWS['D6'] = { t: 's', v: String(primer['Nombre'] || '') };
-            plantillaWS['D7'] = { t: 'n', v: primer['VALOR FINAL DEL CONTRATO'] || 0 };
-            plantillaWS['D8'] = { t: 's', v: String(primer['FECHA INICIAL DE CONTRATO'] || '') };
-            plantillaWS['H5'] = { t: 's', v: String(primer['Proveedor'] || '') };
-            plantillaWS['H6'] = { t: 's', v: String(primer['Nº identificación'] || '') };
-            plantillaWS['H7'] = { t: 's', v: String(primer['Numero RP'] || '') };
-            plantillaWS['H8'] = { t: 's', v: String(primer['FECHA DE TERMINACION FINAL'] || '') };
-
-            // Escribir transacciones
-            let fila = 17;
-            let saldoAcumulado = primer['VALOR FINAL DEL CONTRATO'] || 0;
-
-            pagos.forEach((pago, idx) => {
-                const monto = pago['Valor Bruto'] || 0;
-                saldoAcumulado -= monto;
-
-                plantillaWS[`B${fila}`] = { t: 'n', v: idx + 1 };
-                plantillaWS[`C${fila}`] = { t: 's', v: String(pago['Texto cabecera documento'] || '') };
-                plantillaWS[`D${fila}`] = { t: 'n', v: monto };
-                plantillaWS[`E${fila}`] = { t: 'n', v: saldoAcumulado };
-                plantillaWS[`F${fila}`] = { t: 's', v: String(pago['Doc.compensación'] || '') };
-                plantillaWS[`G${fila}`] = { t: 's', v: String(pago['Fecha de pago'] || '') };
-                plantillaWS[`H${fila}`] = { t: 's', v: String(pago['Numero RP'] || '') };
-                plantillaWS[`I${fila}`] = { t: 's', v: String(pago['CDP Externo'] || '') };
-                plantillaWS[`J${fila}`] = { t: 's', v: String(pago['CRP Externo'] || '') };
-
-                fila++;
-            });
-
-            // Guardar y descargar
-            const fileName = `Estado_de_Cuenta_${contratoBuscado}.xlsx`;
-            XLSX.writeFile(plantillaWB, fileName);
-
-            // Mostrar resultado
-            showResult({
-                contrato: contratoBuscado,
-                contratista: String(primer['Nombre'] || ''),
-                pagos_encontrados: pagos.length,
-                valor_contrato: primer['VALOR FINAL DEL CONTRATO'] || 0,
-                saldo_final: saldoAcumulado,
-            });
-
-        } catch (error) {
-            showError(`❌ Error: ${error.message}`);
-            console.error(error);
-        } finally {
-            showLoading(false);
-        }
+  function graficaPeriodo() {
+    const crpP = agrupar("Período", "Valor CRP");
+    const giroP = agrupar("Período", "Autorizacion giro");
+    const periodos = Object.keys(crpP).sort((a, b) => num(a) - num(b));
+    dibujar("c06-periodo", "bar", {
+      labels: periodos,
+      datasets: [
+        { label: "CRP", data: periodos.map((p) => crpP[p]), backgroundColor: "#667eea" },
+        { label: "Girado", data: periodos.map((p) => giroP[p] || 0), backgroundColor: "#28a745" },
+      ],
     });
+  }
 
-    // Reset
-    document.getElementById('resetBtn').addEventListener('click', () => {
-        document.getElementById('plantillaFile').value = '';
-        document.getElementById('historicoFile').value = '';
-        document.getElementById('contrato').value = '';
-        document.getElementById('plantillaName').textContent = '';
-        document.getElementById('historicoName').textContent = '';
-        document.getElementById('result').classList.remove('active');
-        clearError();
-        enableGenerateBtn();
+  function graficaEjecucion(giro, pend, anul) {
+    dibujar("c06-ejec", "doughnut", {
+      labels: ["Girado", "Pendiente de giro", "Anulado"],
+      datasets: [{ data: [giro, pend, anul], backgroundColor: ["#28a745", "#ffc107", "#dc3545"] }],
     });
-}
+  }
+
+  function graficaModalidad() {
+    const m = agrupar("Descripcion Mod. Selec", "Valor CRP");
+    const orden = Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, 6);
+    dibujar("c06-modalidad", "pie", {
+      labels: orden.map((x) => x[0]),
+      datasets: [{ data: orden.map((x) => x[1]), backgroundColor: ["#667eea", "#28a745", "#ffc107", "#dc3545", "#17a2b8", "#8e44ad"] }],
+    });
+  }
+
+  function graficaBeneficiarios() {
+    const m = agrupar("Nombre BP Beneficiario", "Valor CRP");
+    const top = Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    dibujar("c06-benef", "bar", {
+      labels: top.map((x) => (x[0].length > 28 ? x[0].slice(0, 28) + "…" : x[0])),
+      datasets: [{ label: "Valor CRP", data: top.map((x) => x[1]), backgroundColor: "#667eea" }],
+    }, { indexAxis: "y" });
+  }
+
+  function graficaRubro() {
+    const m = agrupar("Descripción del Rubro", "Valor CRP");
+    const top = Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, 10);
+    dibujar("c06-rubro", "bar", {
+      labels: top.map((x) => (x[0].length > 30 ? x[0].slice(0, 30) + "…" : x[0])),
+      datasets: [{ label: "Valor CRP", data: top.map((x) => x[1]), backgroundColor: "#1e3a6e" }],
+    });
+  }
+
+  function dibujar(id, tipo, data, extra) {
+    const el = document.getElementById(id);
+    if (!el || typeof Chart === "undefined") return;
+    if (GRAF[id]) GRAF[id].destroy();
+    GRAF[id] = new Chart(el, {
+      type: tipo,
+      data,
+      options: Object.assign(
+        {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const v = ctx.parsed.y ?? ctx.parsed.x ?? ctx.parsed;
+                  return ctx.dataset.label
+                    ? `${ctx.dataset.label}: ${moneyCorto(v)}`
+                    : moneyCorto(v);
+                },
+              },
+            },
+          },
+          scales:
+            tipo === "bar"
+              ? (extra && extra.indexAxis === "y"
+                  ? { x: { ticks: { callback: (v) => moneyCorto(v) } } }
+                  : { y: { ticks: { callback: (v) => moneyCorto(v) } } })
+              : {},
+        },
+        extra || {}
+      ),
+    });
+  }
+
+  /* ---------- tabla ---------- */
+  function pintarTabla(filas) {
+    const w = document.getElementById("c06-tabla-wrap");
+    if (!w) return;
+    const cols = [
+      ["Período", "Período"],
+      ["Número de CRP", "CRP"],
+      ["Número de CDP", "CDP"],
+      ["Nombre BP Beneficiario", "Beneficiario"],
+      ["Descripcion Mod. Selec", "Modalidad"],
+      ["Valor CRP", "Valor CRP"],
+      ["Autorizacion giro", "Girado"],
+      ["Com.Sin.Aut.Giro", "Pendiente"],
+    ];
+    let html =
+      '<table style="width:100%;border-collapse:collapse;font-size:12px;"><thead><tr>';
+    cols.forEach(
+      (c) =>
+        (html += `<th style="text-align:left;padding:8px;background:#1a2742;color:#fff;font-size:11px;position:sticky;top:0;">${c[1]}</th>`)
+    );
+    html += "</tr></thead><tbody>";
+    filas.forEach((r, i) => {
+      html += `<tr style="background:${i % 2 ? "#f7f9fc" : "#fff"};">`;
+      cols.forEach(([campo]) => {
+        let val = r[campo];
+        if (["Valor CRP", "Autorizacion giro", "Com.Sin.Aut.Giro"].includes(campo))
+          val = money(num(val));
+        html += `<td style="padding:7px 8px;border-bottom:1px solid #eef2f7;">${val ?? ""}</td>`;
+      });
+      html += "</tr>";
+    });
+    html += "</tbody></table>";
+    if (filas.length === 0) html = '<div style="padding:20px;color:#888;">Sin resultados.</div>';
+    w.innerHTML = html;
+  }
+
+  console.log("✅ Módulo 06 (CRP real) listo");
+})();
 </script>
 </body>
 </html>
