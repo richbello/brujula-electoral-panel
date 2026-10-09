@@ -89,22 +89,55 @@ def sin_tildes(s: str) -> str:
 ROMANOS = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6,
            "VII": 7, "VIII": 8, "IX": 9, "X": 10}
 
-# Palabras que suelen seguir al ancla sin ser parte del nombre del lugar.
-CORTE = {"DEL", "DE", "LA", "EL", "LOS", "LAS", "EN", "Y", "PARA", "CON",
-         "MUNICIPIO", "SOACHA", "CUNDINAMARCA", "COLOMBIA"}
+# Articulos y preposiciones que pueden ABRIR un nombre ("de los Locos") y se
+# descartan al principio, pero no cortan la captura.
+ARRANQUE = {"DEL", "DE", "LA", "EL", "LOS", "LAS"}
+
+# Palabras que indican que el nombre ya termino: lo que sigue es otra cosa.
+# Sin esto, "PARQUE DE LOS LOCOS DEL MUNICIPIO DE SOACHA" se guardaba entero.
+FRENO = {"EN", "PARA", "CON", "QUE", "POR", "DESDE", "HASTA", "ENTRE", "SEGUN",
+         "MEDIANTE", "UBICAD", "LOCALIZAD", "PERTENECIENTE", "CORRESPONDIENTE",
+         "MUNICIPIO", "SOACHA", "CUNDINAMARCA", "COLOMBIA", "CIUDAD", "DEPARTAMENTO",
+         "Y", "E", "O", "U", "ASI", "COMO", "DEMAS", "OTROS", "VARIOS"}
+
+# Resultados que no son un lugar aunque el patron los capture.
+BASURA = {"", "OFICIAL", "OFICIALES", "PUBLICA", "PUBLICO", "MUNICIPAL", "DISTRITAL",
+          "ACTUALIZACION", "ADECUACION", "MANTENIMIENTO", "CONSTRUCCION", "DOTACION",
+          "MEJORAMIENTO", "SUMINISTRO", "PRESTACION", "SERVICIOS", "SERVICIO",
+          "CIUDAD", "MUNICIPIO", "SOACHA", "CUNDINAMARCA", "COLOMBIA", "SECTOR",
+          "SECTORES", "BARRIO", "BARRIOS", "COMUNA", "COMUNAS", "VEREDA", "URBANA",
+          "URBANAS", "RURAL", "RURALES", "NUEVA", "NUEVO", "VIAS", "VIA", "TODOS",
+          "VARIOS", "DIFERENTES", "LAS", "LOS", "DEL", "UNA", "UNO"}
 
 
 def _limpiar_nombre(txt: str) -> str:
-    t = re.sub(r"[^\wÁÉÍÓÚÑáéíóúñ ]+", " ", txt)
+    """Recorta el nombre del lugar: arranca tras los articulos y se detiene en
+    la primera palabra que indica que el nombre ya termino."""
+    t = re.sub(r"[^\wÁÉÍÓÚÑáéíóúñ ]+", " ", str(txt or ""))
     t = re.sub(r"\s+", " ", t).strip()
-    palabras = []
+    palabras: list[str] = []
     for p in t.split():
-        if len(palabras) >= 5:
-            break
-        if not palabras and p.upper() in CORTE:
-            continue
+        u = sin_tildes(p).upper()
+        if not palabras and u in ARRANQUE:
+            continue                       # "de los Locos" -> arranca en Locos
+        if palabras and any(u.startswith(f) for f in FRENO):
+            break                          # "Locos DEL MUNICIPIO" -> corta
+        if u in FRENO and not palabras:
+            return ""                      # arranca en una palabra de freno
         palabras.append(p)
-    return " ".join(palabras).title().strip()
+        if len(palabras) >= 4:
+            break
+    # un conector que quedo colgando al final no es parte del nombre:
+    # "Locos del" -> "Locos"
+    while palabras and sin_tildes(palabras[-1]).upper() in ARRANQUE:
+        palabras.pop()
+    nombre = " ".join(palabras).title().strip()
+    # un nombre que solo tiene palabras genericas no identifica ningun lugar
+    utiles = [w for w in nombre.split()
+              if sin_tildes(w).upper() not in BASURA and len(w) > 2]
+    if not utiles or len(nombre) < 3:
+        return ""
+    return nombre
 
 
 def extraer_lugares(objeto: str) -> list[dict]:

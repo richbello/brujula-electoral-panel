@@ -132,6 +132,37 @@ check("la advertencia de cobertura trae el porcentaje",
 check("explica el reparto entre lugares", "partes iguales" in d["meta"]["reparto"])
 check("es serializable", bool(json.dumps(d, ensure_ascii=False)))
 
+
+# ------------------------------------------ calidad de los nombres
+print("\n[7] El nombre se corta donde debe (casos vistos en el corte real)")
+casos = [
+ ("CONSTRUCCIÓN DE PARQUE DE LOS LOCOS DEL MUNICIPIO DE SOACHA", "Parque", "Locos"),
+ ("ADECUACION DE LA PLAZOLETA DE LOS SUEÑOS EN LA CIUDAD DE SOACHA", "Plazoleta", "Sueños"),
+ ("CONSTRUCCIÓN DE LA AVENIDA LAS TORRES ENTRE LA CALLE 46B", "Vía", "Avenida Torres"),
+]
+for objeto, tipo, esperado in casos:
+    got = {l["nombre"] for l in etl.extraer_lugares(objeto) if l["tipo"] == tipo}
+    check(f"{tipo} -> '{esperado}'", esperado in got, str(got))
+
+print("\n[8] Se descarta lo que no es un lugar")
+for objeto, razon in [
+  ("ACTUALIZACIÓN Y DOTACIÓN DE COLEGIO OFICIAL", "'Colegio Oficial' no nombra ningun colegio"),
+  ("MANTENIMIENTO DE INSTITUCIONES EDUCATIVAS DE LA CIUDAD DE SOACHA", "'Ciudad de Soacha' no es un colegio"),
+  ("MEJORAMIENTO DE VIAS URBANAS DEL MUNICIPIO", "'del municipio' no es un sector"),
+  ("ADECUACION DE PARQUES DEL MUNICIPIO DE SOACHA", "parques sin nombre propio"),
+]:
+    lg = etl.extraer_lugares(objeto)
+    check(razon, len(lg) == 0, f"extrajo {[l['nombre'] for l in lg]}")
+
+print("\n[9] Lo valido sigue pasando tras el filtro")
+for objeto, esperado in [
+  ("DOTACION DE LA Institución Educativa Oficial Vida Nueva", "Vida Nueva"),
+  ("OBRAS EN EL BARRIO LEON XIII", "Leon Xiii"),
+  ("PAVIMENTACION EN LOS SECTORES DANUBIO; VILLALUZ", "Danubio"),
+]:
+    got = {l["nombre"] for l in etl.extraer_lugares(objeto)}
+    check(f"'{esperado}' se conserva", esperado in got, str(got))
+
 print("\n" + "=" * 60)
 if fallos:
     print(f"FALLARON {len(fallos)}:")
