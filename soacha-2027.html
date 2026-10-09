@@ -10,14 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0F1C2E; --ink-2:#0A1626;
-  --paper:#F4F6F9; --surface:#ffffff;
-  --line:#E2E8F0; --line-strong:#CBD5E1;
-  --text:#1C2A3F; --muted:#6B7A90; --muted-2:#94A3B8;
-  --brass:#C8A560; --brass-deep:#A98841; --brass-soft:#F4EDDA;
-  --ok:#2E9E7B; --ok-soft:#E4F3EC;
-  --warn:#BE8A2C; --warn-soft:#F7EFDA;
-  --down:#C0485A; --down-soft:#F6E3E6;
+  --ink:#150B3D; --ink-2:#0D0628;
+  --paper:#F3F1FF; --surface:#ffffff;
+  --line:#E0D9F7; --line-strong:#C9BAED;
+  --text:#241552; --muted:#6B5E90; --muted-2:#9A8CC0;
+  --brass:#FFB020; --brass-deep:#E08A00; --brass-soft:#FFF3D6;
+  --ok:#00C97B; --ok-soft:#D2FAE8;
+  --warn:#F97316; --warn-soft:#FFEBD6;
+  --down:#FF2D6F; --down-soft:#FFE0EA;
   --radius:12px;
   --shadow:0 1px 2px rgba(19,32,51,.06), 0 8px 24px rgba(19,32,51,.05);
   font-variant-numeric:tabular-nums;
@@ -50,9 +50,9 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
 }
 .topbar .compass::after{content:"";width:3px;height:16px;background:var(--brass);border-radius:2px;transform:rotate(32deg)}
 .topbar .tt b{font-family:"Archivo";font-weight:800;letter-spacing:.2px}
-.topbar .tt span{display:block;font-size:12px;color:#c6d2c6}
+.topbar .tt span{display:block;font-size:12px;color:#BFE7D2}
 .topbar .back{
-  margin-left:auto;color:#dfe8df;text-decoration:none;font-weight:600;font-size:14px;
+  margin-left:auto;color:#DCF7E6;text-decoration:none;font-weight:600;font-size:14px;
   border:1px solid rgba(255,255,255,.25);padding:8px 14px;border-radius:8px;
   transition:background .15s;
 }
@@ -64,7 +64,7 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
 /* ---- hero ---- */
 .hero{margin-bottom:28px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--brass-soft);color:var(--brass-deep);
-  font-weight:600;font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid #ecdfc4}
+  font-weight:600;font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid #FFEBC2}
 .hero h1{font-size:clamp(28px,5vw,40px);line-height:1.05;margin:14px 0 6px;color:var(--ink-2)}
 .hero p{color:var(--muted);max-width:60ch;margin:0;font-size:15px}
 .meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;color:var(--muted);font-size:13px}
@@ -72,8 +72,8 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
 
 /* ---- banner demo ---- */
 .banner{
-  margin:18px 0 26px;background:var(--warn-soft);border:1px solid #ead9a8;
-  border-radius:var(--radius);padding:14px 16px;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#6b5418
+  margin:18px 0 26px;background:var(--warn-soft);border:1px solid #FFDE94;
+  border-radius:var(--radius);padding:14px 16px;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#92400E
 }
 .banner svg{flex:0 0 auto;margin-top:1px}
 
@@ -97,7 +97,7 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
   box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
 .cand.client{border-color:var(--brass);box-shadow:0 0 0 1px var(--brass),var(--shadow)}
 .cand-head{display:flex;align-items:center;gap:16px;padding:20px 24px;cursor:pointer;user-select:none}
-.cand-head:hover{background:#fafbfc}
+.cand-head:hover{background:#FAF8FF}
 .score-badge{width:62px;height:62px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;
   font-family:"Archivo";font-weight:800;font-size:20px;color:#fff}
 .cand-id{flex:1;min-width:0}
@@ -105,9 +105,9 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
 .cand-id .party{color:var(--muted);font-size:13px;margin-top:2px}
 .cand-id .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .tag{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--paper);color:var(--muted);border:1px solid var(--line)}
-.tag.trend-sube{background:var(--ok-soft);color:var(--ok);border-color:#cfe4d8}
-.tag.trend-baja{background:var(--down-soft);color:var(--down);border-color:#e9d2cb}
-.tag.tox{background:var(--down-soft);color:var(--down);border-color:#e9d2cb;font-weight:600}
+.tag.trend-sube{background:var(--ok-soft);color:var(--ok);border-color:#B4F5D9}
+.tag.trend-baja{background:var(--down-soft);color:var(--down);border-color:#FFD5DF}
+.tag.tox{background:var(--down-soft);color:var(--down);border-color:#FFD5DF;font-weight:600}
 .caret{flex:0 0 auto;color:var(--muted-2);transition:transform .2s}
 .cand.open .caret{transform:rotate(180deg)}
 
@@ -145,10 +145,10 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
 .post-date{color:var(--muted-2);font-size:12px}
 .post-score{margin-left:auto;font-family:"Archivo";font-weight:700;font-size:15px;padding:2px 10px;border-radius:7px;color:#fff}
 .post-sum{font-size:14px;font-weight:500;margin:0 0 12px}
-.post-sum a{color:var(--brass-deep);text-decoration:none;border-bottom:1px solid #e3d3ab}
+.post-sum a{color:var(--brass-deep);text-decoration:none;border-bottom:1px solid #FFDFA0}
 .quote{display:flex;gap:10px;padding:9px 12px;border-radius:8px;font-size:13px;margin-top:7px;line-height:1.4}
-.quote.pos{background:var(--ok-soft);color:#245c43}
-.quote.neg{background:var(--down-soft);color:#7a3a2c}
+.quote.pos{background:var(--ok-soft);color:#0B7A47}
+.quote.neg{background:var(--down-soft);color:#A3153A}
 .quote .qmark{font-weight:700;flex:0 0 auto}
 
 .tox-line{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-top:4px}
@@ -184,7 +184,7 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
   </div>
 
   <div class="banner" id="demoBanner" style="display:none">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE8A2C" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
     <div><b>Datos de demostración.</b> Estás viendo resultados de prueba. Cuando conectemos las APIs reales de Facebook y YouTube, estas cifras se reemplazan solas con la conversación real de cada candidato.</div>
   </div>
 
@@ -208,11 +208,11 @@ const PLAT_ICON = {
 
 // Verde (positivo) → ámbar (neutro) → rojo (negativo), según score -1..1
 function scoreColor(s){
-  if(s >= 0.6) return '#2E9E7B';
-  if(s >= 0.35) return '#6a9f4f';
-  if(s >= 0.1) return '#BE8A2C';
-  if(s >= -0.2) return '#c6763f';
-  return '#C0485A';
+  if(s >= 0.6) return '#00C97B';
+  if(s >= 0.35) return '#4CBF4A';
+  if(s >= 0.1) return '#F97316';
+  if(s >= -0.2) return '#F2682A';
+  return '#FF2D6F';
 }
 function pct(s){ return Math.round(((s+1)/2)*100); } // -1..1 → 0..100
 function fmt(s){ return (s>=0?'+':'') + s.toFixed(2); }
@@ -290,7 +290,7 @@ function postBlock(p){
 
 function candCard([nombre,d]){
   const s=d.sentimiento_promedio, col=scoreColor(s);
-  const toxCol = d.alerta_toxicidad ? '#C0485A' : (d.toxicidad_pct>15?'#BE8A2C':'#2E9E7B');
+  const toxCol = d.alerta_toxicidad ? '#FF2D6F' : (d.toxicidad_pct>15?'#F97316':'#00C97B');
   const serieFirst = d.serie&&d.serie.length?d.serie[0].f:'';
   const serieLast  = d.serie&&d.serie.length?d.serie[d.serie.length-1].f:'';
   return `<div class="cand ${d.es_cliente?'client':''}">

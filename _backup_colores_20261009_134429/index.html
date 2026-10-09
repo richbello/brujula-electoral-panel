@@ -6,36 +6,32 @@
 <title>Estrategia Electoral 2027</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00C97B;--warn:#EA6A0A;--g1:#7C4DFF;--g2:#B026FF;--g3:#FF2D6F;--g4:#00B2FF;--g5:#00E676}
+:root{--navy:#0F1C2E;--gold:#C8A560;--bg:#F4F6F9;--muted:#5B6B80;--line:#E2E7EE;--ok:#2E9E7B;--warn:#B7791F}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
-header{background:linear-gradient(120deg,#150B3D 0%,#2E1A7A 45%,#5B21B6 100%);color:#fff;border-bottom:3px solid var(--gold);box-shadow:0 6px 28px rgba(124,77,255,.35)}
+header{background:var(--navy);color:#fff}
 .bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
-.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(255,176,32,.28),transparent 70%);box-shadow:0 0 16px rgba(255,176,32,.55)}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
 .mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
 .brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
-.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
+.brand small{display:block;font-size:12px;color:#AEB9C8;margin-top:2px}
 .hero{max-width:1200px;margin:0 auto;padding:48px 32px 8px}
-.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#B026FF}
-h1{font-size:34px;font-weight:700;margin:10px 0;letter-spacing:-.02em;background:linear-gradient(95deg,#150B3D 0%,#7C4DFF 55%,#FF2D6F 100%);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:34px;font-weight:700;margin:10px 0;letter-spacing:-.02em}
 .lead{color:var(--muted);max-width:700px;line-height:1.6}
 .sec{max-width:1200px;margin:0 auto;padding:32px 32px 0}
-.sec h3{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7C4DFF;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.sec h3{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:20px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
-.card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s,transform .2s}
-.card::before{content:'';position:absolute;inset:0 0 auto 0;height:5px;background:var(--accent,var(--g1))}
-.card:hover{border-color:var(--accent,var(--g1));box-shadow:0 16px 38px -8px var(--accent,var(--g1));transform:translateY(-4px)}
-.card:nth-child(1){--accent:var(--g1)}.card:nth-child(2){--accent:var(--g4)}
-.card:nth-child(3){--accent:var(--g3)}.card:nth-child(4){--accent:var(--g2)}
-.card:nth-child(5){--accent:var(--g5)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s,transform .2s}
+.card:hover{border-color:var(--gold);box-shadow:0 10px 30px rgba(15,28,46,.08);transform:translateY(-2px)}
 .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-.num{font-weight:800;color:var(--accent,var(--g1));font-size:15px;letter-spacing:.04em}
+.num{font-size:13px;font-weight:700;color:var(--gold)}
 .tag{font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px}
-.real{background:linear-gradient(135deg,#00E676,#00C97B);color:#06301F}.demo{background:linear-gradient(135deg,#FFC53D,#FF8A00);color:#3A1A00}
+.real{background:#E6F4EF;color:var(--ok)}.demo{background:#FBF1E0;color:var(--warn)}
 .card h2{font-size:19px;font-weight:700;margin-bottom:8px}
 .card p{font-size:14px;color:var(--muted);line-height:1.55;flex:1}
 .go{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;font-weight:600}
-.card:hover .go{color:var(--accent,var(--g1))}
+.card:hover .go{color:var(--gold)}
 footer{max-width:1200px;margin:0 auto;padding:40px 32px 48px;font-size:12px;color:var(--muted);line-height:1.6}
 @media(max-width:700px){.bar,.hero,.sec,footer{padding-left:18px;padding-right:18px}h1{font-size:26px}}
 </style>

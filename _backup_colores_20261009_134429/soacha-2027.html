@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Electoral 2027 · Soacha — Pulso social</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F1C2E; --ink-2:#0A1626;
+  --paper:#F4F6F9; --surface:#ffffff;
+  --line:#E2E8F0; --line-strong:#CBD5E1;
+  --text:#1C2A3F; --muted:#6B7A90; --muted-2:#94A3B8;
+  --brass:#C8A560; --brass-deep:#A98841; --brass-soft:#F4EDDA;
+  --ok:#2E9E7B; --ok-soft:#E4F3EC;
+  --warn:#BE8A2C; --warn-soft:#F7EFDA;
+  --down:#C0485A; --down-soft:#F6E3E6;
+  --radius:12px;
+  --shadow:0 1px 2px rgba(19,32,51,.06), 0 8px 24px rgba(19,32,51,.05);
+  font-variant-numeric:tabular-nums;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; min-height:100%;
+  background:var(--paper);
+  color:var(--text);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
+
+/* ---- barra superior ---- */
+.topbar{
+  background:var(--ink); color:#fff;
+  padding:16px clamp(16px,4vw,40px);
+  display:flex; align-items:center; gap:16px;
+  position:sticky; top:0; z-index:20;
+  box-shadow:0 1px 0 rgba(0,0,0,.2);
+}
+.topbar .mark{display:flex;align-items:center;gap:12px}
+.topbar .compass{
+  width:38px;height:38px;border:2px solid var(--brass);border-radius:50%;
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.topbar .compass::after{content:"";width:3px;height:16px;background:var(--brass);border-radius:2px;transform:rotate(32deg)}
+.topbar .tt b{font-family:"Archivo";font-weight:800;letter-spacing:.2px}
+.topbar .tt span{display:block;font-size:12px;color:#c6d2c6}
+.topbar .back{
+  margin-left:auto;color:#dfe8df;text-decoration:none;font-weight:600;font-size:14px;
+  border:1px solid rgba(255,255,255,.25);padding:8px 14px;border-radius:8px;
+  transition:background .15s;
+}
+.topbar .back:hover{background:rgba(255,255,255,.1)}
+
+/* ---- contenedor ---- */
+.wrap{max-width:1040px;margin:0 auto;padding:clamp(20px,4vw,36px) clamp(16px,4vw,40px) 64px}
+
+/* ---- hero ---- */
+.hero{margin-bottom:28px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--brass-soft);color:var(--brass-deep);
+  font-weight:600;font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid #ecdfc4}
+.hero h1{font-size:clamp(28px,5vw,40px);line-height:1.05;margin:14px 0 6px;color:var(--ink-2)}
+.hero p{color:var(--muted);max-width:60ch;margin:0;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;color:var(--muted);font-size:13px}
+.meta b{color:var(--text);font-weight:600}
+
+/* ---- banner demo ---- */
+.banner{
+  margin:18px 0 26px;background:var(--warn-soft);border:1px solid #ead9a8;
+  border-radius:var(--radius);padding:14px 16px;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#6b5418
+}
+.banner svg{flex:0 0 auto;margin-top:1px}
+
+/* ---- comparativa (hero visual) ---- */
+.compare{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:22px 24px;margin-bottom:30px}
+.compare h2{font-size:15px;margin:0 0 4px;color:var(--text)}
+.compare .sub{color:var(--muted);font-size:13px;margin:0 0 18px}
+.cmp-row{display:grid;grid-template-columns:170px 1fr 54px;align-items:center;gap:14px;padding:10px 0;border-top:1px solid var(--line)}
+.cmp-row:first-of-type{border-top:0}
+.cmp-name{font-weight:600;font-size:14px;line-height:1.15}
+.cmp-name small{display:block;color:var(--muted-2);font-weight:400;font-size:12px;margin-top:2px}
+.cmp-track{height:12px;background:var(--paper);border-radius:999px;overflow:hidden;position:relative}
+.cmp-fill{height:100%;border-radius:999px;transition:width .6s cubic-bezier(.2,.7,.3,1)}
+.cmp-val{text-align:right;font-family:"Archivo";font-weight:700;font-size:18px}
+.chip-client{display:inline-block;background:var(--ink);color:#fff;font-size:10px;font-weight:600;
+  padding:2px 7px;border-radius:5px;margin-left:6px;vertical-align:middle;letter-spacing:.3px}
+
+/* ---- tarjeta candidato ---- */
+.cand{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
+.cand.client{border-color:var(--brass);box-shadow:0 0 0 1px var(--brass),var(--shadow)}
+.cand-head{display:flex;align-items:center;gap:16px;padding:20px 24px;cursor:pointer;user-select:none}
+.cand-head:hover{background:#fafbfc}
+.score-badge{width:62px;height:62px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;
+  font-family:"Archivo";font-weight:800;font-size:20px;color:#fff}
+.cand-id{flex:1;min-width:0}
+.cand-id h3{margin:0;font-size:18px;line-height:1.15;color:var(--ink-2)}
+.cand-id .party{color:var(--muted);font-size:13px;margin-top:2px}
+.cand-id .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.tag.trend-sube{background:var(--ok-soft);color:var(--ok);border-color:#cfe4d8}
+.tag.trend-baja{background:var(--down-soft);color:var(--down);border-color:#e9d2cb}
+.tag.tox{background:var(--down-soft);color:var(--down);border-color:#e9d2cb;font-weight:600}
+.caret{flex:0 0 auto;color:var(--muted-2);transition:transform .2s}
+.cand.open .caret{transform:rotate(180deg)}
+
+.cand-body{display:none;padding:0 24px 26px;border-top:1px solid var(--line)}
+.cand.open .cand-body{display:block}
+
+.section-t{font-size:13px;font-weight:600;color:var(--muted);margin:24px 0 12px;
+  display:flex;align-items:center;gap:8px}
+.section-t::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* plataformas */
+.plats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.plat{border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.plat .pn{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14px;margin-bottom:10px}
+.plat .pbig{font-family:"Archivo";font-weight:700;font-size:22px}
+.plat .pmeta{color:var(--muted);font-size:12px;margin-top:4px}
+
+/* temas */
+.tema-row{display:grid;grid-template-columns:120px 1fr 40px;align-items:center;gap:12px;margin:9px 0}
+.tema-name{font-size:13px;text-transform:capitalize}
+.tema-track{height:8px;background:var(--paper);border-radius:999px;overflow:hidden}
+.tema-fill{height:100%;border-radius:999px}
+.tema-val{text-align:right;font-size:13px;font-weight:600;font-family:"Archivo"}
+.tema-row .mns{grid-column:1/-1;font-size:11px;color:var(--muted-2);margin-top:-6px}
+
+/* serie */
+.serie-wrap{border:1px solid var(--line);border-radius:10px;padding:16px}
+.serie-wrap svg{width:100%;height:90px;display:block;overflow:visible}
+.serie-foot{display:flex;justify-content:space-between;color:var(--muted-2);font-size:11px;margin-top:8px}
+
+/* posts */
+.post{border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:12px}
+.post-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.post-plat{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:13px}
+.post-date{color:var(--muted-2);font-size:12px}
+.post-score{margin-left:auto;font-family:"Archivo";font-weight:700;font-size:15px;padding:2px 10px;border-radius:7px;color:#fff}
+.post-sum{font-size:14px;font-weight:500;margin:0 0 12px}
+.post-sum a{color:var(--brass-deep);text-decoration:none;border-bottom:1px solid #e3d3ab}
+.quote{display:flex;gap:10px;padding:9px 12px;border-radius:8px;font-size:13px;margin-top:7px;line-height:1.4}
+.quote.pos{background:var(--ok-soft);color:#245c43}
+.quote.neg{background:var(--down-soft);color:#7a3a2c}
+.quote .qmark{font-weight:700;flex:0 0 auto}
+
+.tox-line{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-top:4px}
+.tox-dot{width:10px;height:10px;border-radius:50%}
+
+.loading,.errbox{text-align:center;padding:60px 20px;color:var(--muted)}
+.errbox{color:var(--down)}
+
+@media(max-width:620px){
+  .cmp-row{grid-template-columns:110px 1fr 44px;gap:10px}
+  .cmp-name small{display:none}
+  .plats{grid-template-columns:1fr}
+  .tema-row{grid-template-columns:90px 1fr 36px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="mark">
+    <div class="compass"></div>
+    <div class="tt"><b>Estrategia Electoral 2027</b><span>Inteligencia de campaña · IA</span></div>
+  </div>
+  <a class="back" href="./index.html">← Volver al panel</a>
+</div>
+
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">● Electoral 2027 · Soacha</span>
+    <h1>Pulso social en redes</h1>
+    <p>Qué dice la gente en Facebook y YouTube sobre los candidatos al Concejo de Soacha. Sentimiento, temas dominantes, toxicidad y posts que marcan la conversación.</p>
+    <div class="meta" id="heroMeta"></div>
+  </div>
+
+  <div class="banner" id="demoBanner" style="display:none">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#BE8A2C" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+    <div><b>Datos de demostración.</b> Estás viendo resultados de prueba. Cuando conectemos las APIs reales de Facebook y YouTube, estas cifras se reemplazan solas con la conversación real de cada candidato.</div>
+  </div>
+
+  <div class="compare" id="compareBox" style="display:none">
+    <h2>Comparativa de sentimiento</h2>
+    <p class="sub">Promedio en la ventana analizada. 0 = neutro, 1 = muy favorable.</p>
+    <div id="compareRows"></div>
+  </div>
+
+  <div id="cands"></div>
+</div>
+
+<script>
+const JSON_URL = './data/sentimiento_soacha.json';
+
+const PLAT_ICON = {
+  facebook: '<svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.6.2 2.6.2v2.9h-1.5c-1.4 0-1.9.9-1.9 1.8V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>',
+  youtube:  '<svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.3 3.5-6.3 3.5z"/></svg>',
+  tiktok:   '<svg width="16" height="16" viewBox="0 0 24 24" fill="#000000"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.88 2.88 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.08A6.9 6.9 0 0 0 5 20.1a6.9 6.9 0 0 0 10.53-5.4V9.58a8.42 8.42 0 0 0 5.06 1.69v-3.58a4.82 4.82 0 0 1-.98-.1z"/></svg>'
+};
+
+// Verde (positivo) → ámbar (neutro) → rojo (negativo), según score -1..1
+function scoreColor(s){
+  if(s >= 0.6) return '#2E9E7B';
+  if(s >= 0.35) return '#6a9f4f';
+  if(s >= 0.1) return '#BE8A2C';
+  if(s >= -0.2) return '#c6763f';
+  return '#C0485A';
+}
+function pct(s){ return Math.round(((s+1)/2)*100); } // -1..1 → 0..100
+function fmt(s){ return (s>=0?'+':'') + s.toFixed(2); }
+
+function sparkline(serie){
+  if(!serie || !serie.length) return '';
+  const w=100, h=100, pad=6;
+  const xs = serie.map((_,i)=> pad + i*( (w-2*pad)/Math.max(1,serie.length-1) ));
+  const ys = serie.map(d=> h-pad - ((d.s+1)/2)*(h-2*pad) );
+  const pts = xs.map((x,i)=>`${x.toFixed(1)},${ys[i].toFixed(1)}`).join(' ');
+  const last = serie[serie.length-1];
+  const col = scoreColor(last.s);
+  const area = `${pad},${h-pad} ${pts} ${(w-pad)},${h-pad}`;
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <polyline points="${area}" fill="${col}1a" stroke="none"/>
+    <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${xs[xs.length-1].toFixed(1)}" cy="${ys[ys.length-1].toFixed(1)}" r="3" fill="${col}"/>
+  </svg>`;
+}
+
+function trendTag(t){
+  if(t==='sube') return '<span class="tag trend-sube">▲ Al alza</span>';
+  if(t==='baja') return '<span class="tag trend-baja">▼ A la baja</span>';
+  return '<span class="tag">● Estable</span>';
+}
+
+function renderCompare(cands){
+  const rows = Object.entries(cands)
+    .sort((a,b)=> b[1].sentimiento_promedio - a[1].sentimiento_promedio)
+    .map(([nombre,d])=>{
+      const s=d.sentimiento_promedio, col=scoreColor(s);
+      return `<div class="cmp-row">
+        <div class="cmp-name">${nombre}${d.es_cliente?'<span class="chip-client">TU CLIENTE</span>':''}<small>${d.partido||''}</small></div>
+        <div class="cmp-track"><div class="cmp-fill" style="width:${pct(s)}%;background:${col}"></div></div>
+        <div class="cmp-val" style="color:${col}">${fmt(s)}</div>
+      </div>`;
+    }).join('');
+  document.getElementById('compareRows').innerHTML = rows;
+  document.getElementById('compareBox').style.display='block';
+}
+
+function platBlock(key,p){
+  if(!p) return '';
+  return `<div class="plat">
+    <div class="pn">${PLAT_ICON[key]||''} ${key.charAt(0).toUpperCase()+key.slice(1)}</div>
+    <div class="pbig" style="color:${scoreColor(p.score)}">${fmt(p.score)}</div>
+    <div class="pmeta">${p.posts} posts · ${p.comentarios} comentarios</div>
+  </div>`;
+}
+
+function temaBlock(t){
+  const col=scoreColor(t.score);
+  return `<div class="tema-row">
+    <div class="tema-name">${t.tema}</div>
+    <div class="tema-track"><div class="tema-fill" style="width:${pct(t.score)}%;background:${col}"></div></div>
+    <div class="tema-val" style="color:${col}">${fmt(t.score)}</div>
+    <div class="mns">${t.menciones} menciones</div>
+  </div>`;
+}
+
+function postBlock(p){
+  const col=scoreColor(p.score);
+  return `<div class="post">
+    <div class="post-top">
+      <span class="post-plat">${PLAT_ICON[p.plataforma]||''} ${p.plataforma.charAt(0).toUpperCase()+p.plataforma.slice(1)}</span>
+      <span class="post-date">${p.fecha}</span>
+      <span class="post-score" style="background:${col}">${fmt(p.score)}</span>
+    </div>
+    <p class="post-sum">${p.resumen} ${p.url?`· <a href="${p.url}" target="_blank" rel="noopener">ver publicación</a>`:''}
+      <span class="tag" style="margin-left:4px">${p.tema}</span> · ${p.comentarios} comentarios</p>
+    ${p.comentario_pos?`<div class="quote pos"><span class="qmark">“</span><span>${p.comentario_pos}</span></div>`:''}
+    ${p.comentario_neg?`<div class="quote neg"><span class="qmark">“</span><span>${p.comentario_neg}</span></div>`:''}
+  </div>`;
+}
+
+function candCard([nombre,d]){
+  const s=d.sentimiento_promedio, col=scoreColor(s);
+  const toxCol = d.alerta_toxicidad ? '#C0485A' : (d.toxicidad_pct>15?'#BE8A2C':'#2E9E7B');
+  const serieFirst = d.serie&&d.serie.length?d.serie[0].f:'';
+  const serieLast  = d.serie&&d.serie.length?d.serie[d.serie.length-1].f:'';
+  return `<div class="cand ${d.es_cliente?'client':''}">
+    <div class="cand-head" onclick="this.parentElement.classList.toggle('open')">
+      <div class="score-badge" style="background:${col}">${fmt(s)}</div>
+      <div class="cand-id">
+        <h3>${nombre}${d.es_cliente?'<span class="chip-client">TU CLIENTE</span>':''}</h3>
+        <div class="party">${d.partido||''}</div>
+        <div class="tags">
+          ${trendTag(d.tendencia)}
+          <span class="tag">${d.total_posts} posts · ${d.total_comentarios} comentarios</span>
+          ${d.alerta_toxicidad?'<span class="tag tox">⚠ Toxicidad alta</span>':''}
+        </div>
+      </div>
+      <svg class="caret" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
+    <div class="cand-body">
+
+      <div class="section-t">Por red social</div>
+      <div class="plats">
+        ${platBlock('facebook',d.por_plataforma&&d.por_plataforma.facebook)}
+        ${platBlock('youtube', d.por_plataforma&&d.por_plataforma.youtube)}
+      </div>
+
+      <div class="section-t">Temas de conversación</div>
+      ${(d.temas||[]).map(temaBlock).join('')}
+
+      <div class="section-t">Evolución del sentimiento</div>
+      <div class="serie-wrap">
+        ${sparkline(d.serie)}
+        <div class="serie-foot"><span>${serieFirst}</span><span>${serieLast}</span></div>
+      </div>
+
+      <div class="section-t">Nivel de toxicidad</div>
+      <div class="tox-line">
+        <span class="tox-dot" style="background:${toxCol}"></span>
+        <b style="color:${toxCol};font-family:Archivo">${d.toxicidad_pct}%</b>
+        de los comentarios son tóxicos o agresivos${d.alerta_toxicidad?' — requiere atención':''}.
+      </div>
+
+      <div class="section-t">Publicaciones que marcan la conversación</div>
+      ${(d.posts_destacados||[]).map(postBlock).join('') || '<p style="color:var(--muted);font-size:13px">Sin posts destacados en esta ventana.</p>'}
+
+    </div>
+  </div>`;
+}
+
+async function cargar(){
+  const cont = document.getElementById('cands');
+  cont.innerHTML = '<div class="loading">Cargando pulso social…</div>';
+  try{
+    const r = await fetch(JSON_URL, {cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const data = await r.json();
+    const cands = data.candidatos || {};
+
+    // meta
+    document.getElementById('heroMeta').innerHTML =
+      `<span><b>${data.corporacion||'Soacha 2027'}</b></span>`+
+      `<span>Ventana: <b>últimos ${data.ventana_dias||30} días</b></span>`+
+      `<span>Actualizado: <b>${data.actualizado||'—'}</b></span>`;
+
+    if(data.fuente==='demostracion') document.getElementById('demoBanner').style.display='flex';
+
+    renderCompare(cands);
+
+    // cliente primero, luego por score desc
+    const orden = Object.entries(cands).sort((a,b)=>{
+      if(a[1].es_cliente!==b[1].es_cliente) return a[1].es_cliente?-1:1;
+      return b[1].sentimiento_promedio - a[1].sentimiento_promedio;
+    });
+    cont.innerHTML = orden.map(candCard).join('');
+    if(orden.length) cont.firstElementChild.classList.add('open'); // abre el del cliente
+  }catch(e){
+    cont.innerHTML = `<div class="errbox"><b>No se pudo cargar el pulso social.</b><br>
+      Verifica que exista <code>data/sentimiento_soacha.json</code> en el repositorio.<br>
+      <small style="color:var(--muted-2)">Detalle: ${e.message}</small></div>`;
+    document.getElementById('compareBox').style.display='none';
+  }
+}
+cargar();
+setInterval(cargar, 5*60*1000); // refresca cada 5 min
+</script>
+</body>
+</html>

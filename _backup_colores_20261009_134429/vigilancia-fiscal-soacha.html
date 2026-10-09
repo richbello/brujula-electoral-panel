@@ -6,7 +6,7 @@
 <title>Vigilancia Fiscal IA · Estrategia Electoral 2027</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root { --navy:#150B3D; --gold:#FFB020; --bg:#F3F1FF; --muted:#5C4F82; --line:#E0D9F7; --ok:#00C97B; --bad:#FF2D6F; --warn:#EA6A0A; --crit:#C8003C; }
+:root { --navy:#0F1C2E; --gold:#C8A560; --bg:#F4F6F9; --muted:#5B6B80; --line:#E2E7EE; --ok:#2E9E7B; --bad:#C0485A; --warn:#B7791F; --crit:#8B0000; }
 * { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:Inter,"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--navy); }
 header { background:var(--navy); color:#fff; }
@@ -16,11 +16,11 @@ header { background:var(--navy); color:#fff; }
 .brand { flex:1; }
 .brand b { font-size:18px; font-weight:700; }
 .brand em { font-style:normal; color:var(--gold); }
-.brand small { display:block; font-size:12px; color:#B4A6DB; margin-top:2px; }
+.brand small { display:block; font-size:12px; color:#AEB9C8; margin-top:2px; }
 .back { color:#fff; text-decoration:none; font-size:13px; font-weight:600; border:1px solid rgba(255,255,255,.25); padding:9px 14px; border-radius:8px; }
 .back:hover { border-color:var(--gold); color:var(--gold); }
 main { max-width:1200px; margin:0 auto; padding:32px; }
-.demo { background:#FFF0CC; color:#B45309; border:1px solid #FFE3A3; border-radius:8px; padding:12px 16px; font-size:13px; margin-bottom:24px; }
+.demo { background:#FBF1E0; color:#8A5A12; border:1px solid #F0DDB8; border-radius:8px; padding:12px 16px; font-size:13px; margin-bottom:24px; }
 h2 { font-size:22px; font-weight:700; margin-bottom:4px; }
 .sub { color:var(--muted); font-size:14px; margin-bottom:22px; }
 .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:24px; }
@@ -33,22 +33,22 @@ h2 { font-size:22px; font-weight:700; margin-bottom:4px; }
 .form-group label { display:block; font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; }
 .form-group input, .form-group select { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
 button { background:var(--navy); color:#fff; border:none; border-radius:8px; padding:10px 20px; font-weight:700; font-size:13px; cursor:pointer; }
-button:hover { background:#1F1150; }
-button:disabled { background:#9A8CC0; cursor:default; }
+button:hover { background:#1a2a42; }
+button:disabled { background:#94a3b8; cursor:default; }
 table { width:100%; border-collapse:collapse; font-size:13px; margin-top:14px; }
 th { text-align:left; font-size:11px; font-weight:700; color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--line); }
 td { padding:10px 8px; border-bottom:1px solid var(--line); }
-tr:hover { background:#F7F5FF; cursor:pointer; }
+tr:hover { background:#f8fafc; cursor:pointer; }
 .pill { display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; }
-.crit { background:#FFDEE8; color:var(--crit); }
-.alta { background:#FFDCE7; color:var(--bad); }
-.media { background:#FFF0CC; color:var(--warn); }
-.loading { color:#1D4ED8; font-weight:700; }
-.detail { display:none; background:#F7F5FF; padding:14px 10px; border-top:1px solid var(--line); }
+.crit { background:#FFE6E6; color:var(--crit); }
+.alta { background:#F9E5E8; color:var(--bad); }
+.media { background:#FBF1E0; color:var(--warn); }
+.loading { color:#2563eb; font-weight:700; }
+.detail { display:none; background:#f8fafc; padding:14px 10px; border-top:1px solid var(--line); }
 .detail.open { display:table-row; }
 .detail-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; font-size:12px; }
 .detail-field label { font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; }
-.detail-field value { font-size:13px; color:#3A2D66; margin-top:2px; display:block; }
+.detail-field value { font-size:13px; color:#334155; margin-top:2px; display:block; }
 @media(max-width:800px) { main { padding:18px; } .bar { padding-left:18px; padding-right:18px; } }
 </style>
 </head>
@@ -84,7 +84,7 @@ tr:hover { background:#F7F5FF; cursor:pointer; }
   <div style="display:flex; gap:12px; flex-wrap:wrap;">
     <input type="text" id="doc-input" placeholder="Ej: 51699228" style="flex:1; min-width:200px;" />
     <button onclick="buscarDocumento()">Buscar</button>
-    <button onclick="limpiarBusqueda()" style="background:#F1EEFF; color:var(--muted); border:1px solid var(--line);">Limpiar</button>
+    <button onclick="limpiarBusqueda()" style="background:#f1f5f9; color:var(--muted); border:1px solid var(--line);">Limpiar</button>
   </div>
   <div id="doc-result" style="margin-top:14px;"></div>
 </div>
@@ -207,9 +207,9 @@ function buscarDocumento() {
   const resultado = datosCompletos.alertas.filter(a => a.documento.includes(doc));
   const resultDiv = document.getElementById("doc-result");
   if (resultado.length === 0) {
-    resultDiv.innerHTML = `<div style="padding:12px; background:#D6FBEC; border:1px solid var(--ok); border-radius:6px; color:var(--ok); font-size:13px;">OK: El documento ${doc} no aparece en SIRI ni Boletín.</div>`;
+    resultDiv.innerHTML = `<div style="padding:12px; background:#E6F4EF; border:1px solid var(--ok); border-radius:6px; color:var(--ok); font-size:13px;">OK: El documento ${doc} no aparece en SIRI ni Boletín.</div>`;
   } else {
-    resultDiv.innerHTML = `<div style="padding:12px; background:#FFDEE8; border:1px solid var(--crit); border-radius:6px; color:var(--crit); font-size:13px; margin-bottom:12px;">⚠️ ${resultado.length} antecedente(s) para ${doc}</div>${resultado.map(a => `<div style="padding:12px; background:#FFF0F4; border:1px solid #FFC2D4; border-radius:6px; margin-bottom:8px;"><div style="font-weight:700;">${a.proveedor_secop}</div><div style="font-size:12px; margin-top:4px;"><b>Sanción:</b> ${a.sancion} | <b>Tipo:</b> ${a.tipo}</div></div>`).join("")}`;
+    resultDiv.innerHTML = `<div style="padding:12px; background:#FFE6E6; border:1px solid var(--crit); border-radius:6px; color:var(--crit); font-size:13px; margin-bottom:12px;">⚠️ ${resultado.length} antecedente(s) para ${doc}</div>${resultado.map(a => `<div style="padding:12px; background:#FEF2F2; border:1px solid #FECACA; border-radius:6px; margin-bottom:8px;"><div style="font-weight:700;">${a.proveedor_secop}</div><div style="font-size:12px; margin-top:4px;"><b>Sanción:</b> ${a.sancion} | <b>Tipo:</b> ${a.tipo}</div></div>`).join("")}`;
   }
 }
 

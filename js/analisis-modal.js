@@ -31,7 +31,7 @@
     .analisis-content h2 {
       color: #1a1a1a;
       margin-top: 0;
-      border-bottom: 3px solid #ff9800;
+      border-bottom: 3px solid #FF8A00;
       padding-bottom: 10px;
     }
     .analisis-stat {
@@ -41,20 +41,20 @@
       margin: 20px 0;
     }
     .stat-box {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #7C4DFF 0%, #B026FF 100%);
       color: white;
       padding: 20px;
       border-radius: 6px;
       text-align: center;
     }
     .stat-box.izquierda { 
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
+      background: linear-gradient(135deg, #FF6EC7 0%, #FF2D6F 100%); 
     }
     .stat-box.derecha { 
-      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
+      background: linear-gradient(135deg, #00B2FF 0%, #00E5FF 100%); 
     }
     .stat-box.centro { 
-      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); 
+      background: linear-gradient(135deg, #00E676 0%, #00F5D4 100%); 
     }
     .stat-box h3 { 
       margin: 0; 
@@ -71,15 +71,15 @@
       opacity: 0.8; 
     }
     .analisis-texto {
-      background: #f5f5f5;
+      background: #F5F2FF;
       padding: 15px;
-      border-left: 4px solid #ff9800;
+      border-left: 4px solid #FF8A00;
       margin: 20px 0;
       line-height: 1.6;
       font-size: 14px;
     }
     .close-btn {
-      background: #ff9800;
+      background: #FF8A00;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -91,14 +91,14 @@
       font-weight: bold;
     }
     .close-btn:hover {
-      background: #e68900;
+      background: #F57C00;
     }
     #analisis-trigger {
       position: fixed;
       bottom: 30px;
       right: 30px;
       z-index: 9998;
-      background: #ff9800;
+      background: #FF8A00;
       color: white;
       border: none;
       padding: 15px 25px;
@@ -109,7 +109,7 @@
       transition: all 0.3s ease;
     }
     #analisis-trigger:hover {
-      background: #e68900;
+      background: #F57C00;
       transform: scale(1.05);
     }
   `;
