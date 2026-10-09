@@ -1,0 +1,109 @@
+name: Actualizar vigilancia fiscal
+
+# Genera data/modulos/vigilancia_fiscal.json consultando SECOP II y el
+# Boletin de Responsables Fiscales, y lo publica en el sitio.
+#
+# Se puede disparar de dos formas:
+#   - a mano, desde la pestana Actions del repositorio (boton "Run workflow")
+#   - automaticamente, todos los lunes
+#
+# No requiere instalar nada en el computador del usuario.
+
+on:
+  workflow_dispatch:
+    inputs:
+      municipio:
+        description: "Municipio a analizar (como aparece en SECOP)"
+        required: true
+        default: "Soacha"
+      desde:
+        description: "Fecha inicial de firma del contrato (AAAA-MM-DD)"
+        required: true
+        default: "2020-01-01"
+      ventana_dias:
+        description: "Ventana en dias para el patron de contratos seguidos"
+        required: false
+        default: "90"
+      minimo_contratos:
+        description: "Contratos minimos dentro de la ventana"
+        required: false
+        default: "3"
+  schedule:
+    # lunes 11:00 UTC = 6:00 a.m. en Bogota
+    - cron: "0 11 * * 1"
+
+# Necesario para que el workflow pueda hacer commit del corte generado.
+permissions:
+  contents: write
+
+concurrency:
+  group: vigilancia-fiscal
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install --quiet requests
+
+      - name: Verificar la logica del ETL
+        # Si la logica esta rota, no tiene sentido publicar un corte.
+        run: python test_etl_vigilancia.py
+
+      - name: Generar el corte
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+        run: |
+          python etl_vigilancia_fiscal.py \
+            --municipio "${{ github.event.inputs.municipio || 'Soacha' }}" \
+            --desde "${{ github.event.inputs.desde || '2020-01-01' }}" \
+            --ventana-dias "${{ github.event.inputs.ventana_dias || '90' }}" \
+            --minimo-contratos "${{ github.event.inputs.minimo_contratos || '3' }}"
+
+      - name: Resumen del corte
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          d = json.loads(pathlib.Path("data/modulos/vigilancia_fiscal.json").read_text("utf-8"))
+          m, k = d["meta"], d["kpis"]
+          print(f"## Corte de {m['municipio']}\n")
+          print(f"Generado: `{m['generado_en']}`  ")
+          print(f"Ventana: {m['ventana']['desde']} a {m['ventana']['hasta']}\n")
+          print("| Indicador | Valor |")
+          print("|---|---:|")
+          print(f"| Contratos analizados | {k['contratos']:,} |")
+          print(f"| Contratistas | {k['contratistas']:,} |")
+          print(f"| Valor contratado | ${k['valor_total']:,.0f} |")
+          print(f"| Coincidencias en el boletin | {k['alertas_boletin']:,} |")
+          print(f"| Con contrato en ejecucion | {k['riesgo_critico']:,} |")
+          print(f"| Indicios de fraccionamiento | {k['indicios_fraccionamiento']:,} |")
+          print(f"| Concentracion top 3 | {k['concentracion_top3']}% |")
+          print(f"\n> Las coincidencias con el boletin **requieren verificacion** "
+                f"en el certificado oficial de la Contraloria antes de hacerlas publicas.")
+          PY
+
+      - name: Publicar el corte
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/modulos/vigilancia_fiscal.json
+          if git diff --staged --quiet; then
+            echo "El corte no cambio respecto al anterior; no hay nada que publicar."
+            exit 0
+          fi
+          git commit -m "Corte de vigilancia fiscal $(date -u +%Y-%m-%d)
+
+          Generado automaticamente por el workflow Actualizar vigilancia fiscal.
+          Fuentes: SECOP II (jbjy-vk9h) y Responsabilidad Fiscal (jr8e-e8tu)."
+          git push
