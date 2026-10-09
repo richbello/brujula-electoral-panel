@@ -170,6 +170,68 @@ d2 = etl.construir("SOACHA", None, desde="2020-01-01", hasta="2023-12-31",
 check("sin tope lo advierte en las limitaciones",
       any("no se evalua el umbral" in l for l in d2["meta"]["limitaciones"]))
 
+
+# ------------------------------------- cargos que cubre el articulo
+print("\n[7] El articulo 2 solo cubre ciertos cargos")
+for cargo, esperado in [("Alcaldía",True),("Gobernación",True),("Presidencia",True),
+                        ("Senado",True),("Cámara",True),
+                        ("Concejo",False),("Asamblea",False),("Junta Administradora Local",False),
+                        ("Edil",False)]:
+    check(f"{cargo:28} -> {'cubierto' if esperado else 'NO cubierto'}",
+          etl.cargo_cubierto(cargo) == esperado)
+
+print("\n[8] Aporte a un concejal no genera la inhabilidad")
+conc = [dict(ingresos[0], cnd_nombre="Concejo", ing_identificacion="901555444",
+             nombre_persona="DONANTE DE CONCEJAL", ing_valor="50000000",
+             nombre_candidato="UN CONCEJAL", can_identificacion="79999888")]
+cc = [dict(contratos[0], documento_proveedor="901555444",
+           proveedor_adjudicado="DONANTE DE CONCEJAL", id_contrato="CO1.X",
+           referencia_del_contrato="500-2021")]
+hc = etl.cruzar(etl.agrupar_aportes(conc), etl.indexar_contratos(cc), TOPE)
+check("aporto 25% del tope pero al concejo", bool(hc))
+if hc:
+    check("queda como 'cargo no cubierto', no como inhabilidad",
+          hc[0]["nivel"] == "cargo_no_cubierto", hc[0]["nivel"])
+    check("no cuenta como aporte a cargo cubierto",
+          hc[0]["aportado_cargo_cubierto"] == 0.0, str(hc[0]["aportado_cargo_cubierto"]))
+
+print("\n[9] Autofinanciacion: el aportante es el candidato")
+auto = [dict(ingresos[0], ing_identificacion="79777666", nombre_persona="CANDIDATO QUE SE FINANCIA",
+             can_identificacion="79777666", nombre_candidato="CANDIDATO QUE SE FINANCIA",
+             ing_valor="90000000", cnd_nombre="Alcaldía")]
+ca = [dict(contratos[0], documento_proveedor="79777666",
+           proveedor_adjudicado="CANDIDATO QUE SE FINANCIA", id_contrato="CO1.Y",
+           referencia_del_contrato="600-2022")]
+ha = etl.cruzar(etl.agrupar_aportes(auto), etl.indexar_contratos(ca), TOPE)
+check("lo detecta", bool(ha) and ha[0]["autofinanciacion"] is True)
+if ha:
+    check("no lo marca como posible inhabilidad",
+          ha[0]["nivel"] == "autofinanciacion", ha[0]["nivel"])
+check("un tercero con los mismos montos si quedaria marcado",
+      (lambda r: bool(r) and r[0]["nivel"] == "posible_inhabilidad")(
+        etl.cruzar(etl.agrupar_aportes([dict(auto[0], ing_identificacion="79000999",
+                     nombre_persona="UN TERCERO")]),
+                   etl.indexar_contratos([dict(ca[0], documento_proveedor="79000999",
+                     proveedor_adjudicado="UN TERCERO")]), TOPE)))
+
+print("\n[10] Conteos del resumen")
+mixto = conc + auto + ingresos[:2]
+cmix  = cc + ca + contratos[:1]
+dm = etl.construir("SOACHA", None, desde="2020-01-01", hasta="2023-12-31",
+                   tope=TOPE, token=None, limite=None) if False else None
+etl.traer_financiadores = lambda *a, **k: mixto
+etl.traer_contratos = lambda *a, **k: cmix
+dm = etl.construir("SOACHA", None, desde="2020-01-01", hasta="2023-12-31",
+                   tope=TOPE, token=None, limite=None)
+km = dm["kpis"]
+check("cuenta la autofinanciacion aparte", km["autofinanciacion"] == 1, str(km["autofinanciacion"]))
+check("cuenta los cargos no cubiertos aparte", km["cargo_no_cubierto"] == 1, str(km["cargo_no_cubierto"]))
+check("los terceros excluyen la autofinanciacion",
+      km["terceros_con_contrato"] == km["financiadores_con_contrato"] - km["autofinanciacion"])
+check("el corte explica ambos filtros",
+      "concejo" in dm["meta"]["cargos_cubiertos"].lower()
+      and "tercero" in dm["meta"]["autofinanciacion"].lower())
+
 print("\n" + "=" * 60)
 if fallos:
     print(f"FALLARON {len(fallos)}:")

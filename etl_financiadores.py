@@ -102,6 +102,16 @@ LEY = ("Ley 1474 de 2011, articulo 2 - Inhabilidad para contratar de quienes "
        "financien campanas politicas")
 UMBRAL = 0.02  # 2,0% del tope de campana
 
+# El articulo 2 enumera los cargos que cubre: Presidencia, gobernaciones,
+# alcaldias y Congreso. NO cubre concejos, asambleas ni JAL. Un aporte a un
+# candidato al concejo no genera esta inhabilidad, por grande que sea.
+CARGOS_CUBIERTOS = ("alcald", "gobernac", "presidenc", "senado", "camara", "cámara")
+
+
+def cargo_cubierto(cargo: str) -> bool:
+    c = str(cargo or "").lower()
+    return any(t in c for t in CARGOS_CUBIERTOS)
+
 # La excepcion legal: estos contratos no generan la inhabilidad.
 def es_servicios_profesionales(contrato: dict) -> bool:
     texto = " ".join([
@@ -250,12 +260,29 @@ def cruzar(financiadores: dict[str, dict], idx: dict[str, list[dict]],
         supera = (minimo is not None and ficha["aportado"] > minimo)
         en_territorio = any(f["mismo_territorio"] for f in detalle)
 
-        if supera and en_territorio and detalle:
-            nivel = "posible_inhabilidad"
-        elif detalle:
-            nivel = "revisar"
-        else:
+        # Autofinanciacion: el aportante ES el candidato. Poner plata en la
+        # campana propia no es el supuesto del articulo 2, que persigue que un
+        # tercero financie y despues contrate. Se separa, no se oculta.
+        docs_candidatos = {a["documento_candidato"] for a in ficha["aportes"] if a["documento_candidato"]}
+        auto = ficha["documento"] in docs_candidatos
+
+        # Solo los aportes a cargos que el articulo enumera pueden generar la
+        # inhabilidad. Un aporte a un concejal no la genera.
+        aportes_cubiertos = [a for a in ficha["aportes"] if cargo_cubierto(a["cargo"])]
+        cubierto = bool(aportes_cubiertos)
+        aportado_cubierto = sum(a["valor"] for a in aportes_cubiertos)
+        supera_cubierto = (minimo is not None and aportado_cubierto > minimo)
+
+        if auto:
+            nivel = "autofinanciacion"
+        elif not detalle:
             nivel = "solo_exceptuados"
+        elif not cubierto:
+            nivel = "cargo_no_cubierto"
+        elif supera_cubierto and en_territorio:
+            nivel = "posible_inhabilidad"
+        else:
+            nivel = "revisar"
 
         hallazgos.append({
             "documento": ficha["documento"],
@@ -263,8 +290,11 @@ def cruzar(financiadores: dict[str, dict], idx: dict[str, list[dict]],
             "tipo_persona": ficha["tipo_persona"],
             "tipo_documento": ficha["tipo_documento"],
             "aportado": ficha["aportado"],
-            "porcentaje_tope": round(ficha["aportado"] / tope * 100, 2) if tope else None,
-            "supera_umbral": supera if tope else None,
+            "aportado_cargo_cubierto": aportado_cubierto,
+            "autofinanciacion": auto,
+            "cargo_cubierto": cubierto,
+            "porcentaje_tope": round(aportado_cubierto / tope * 100, 2) if tope else None,
+            "supera_umbral": supera_cubierto if tope else None,
             "candidatos": sorted(ficha["candidatos"].values(), key=lambda x: -x["valor"]),
             "aportes": sorted(ficha["aportes"], key=lambda x: -x["valor"]),
             "contratos": detalle,
@@ -276,7 +306,8 @@ def cruzar(financiadores: dict[str, dict], idx: dict[str, list[dict]],
             "nivel": nivel,
         })
 
-    orden = {"posible_inhabilidad": 0, "revisar": 1, "solo_exceptuados": 2}
+    orden = {"posible_inhabilidad": 0, "revisar": 1, "cargo_no_cubierto": 2,
+             "solo_exceptuados": 3, "autofinanciacion": 4}
     hallazgos.sort(key=lambda h: (orden[h["nivel"]], -h["valor_contratos"]))
     return hallazgos
 
@@ -303,6 +334,9 @@ def construir(municipio: str | None, departamento: str | None, *, desde: str,
     hallazgos = cruzar(financiadores, idx, tope)
 
     con_inhab = [h for h in hallazgos if h["nivel"] == "posible_inhabilidad"]
+    terceros = [h for h in hallazgos if not h["autofinanciacion"]]
+    auto = [h for h in hallazgos if h["autofinanciacion"]]
+    no_cubierto = [h for h in hallazgos if h["nivel"] == "cargo_no_cubierto"]
     total_aportado = sum(h["aportado"] for h in hallazgos)
     total_contratos = sum(h["valor_contratos"] for h in hallazgos)
 
@@ -320,10 +354,18 @@ def construir(municipio: str | None, departamento: str | None, *, desde: str,
             "excepcion": ("La inhabilidad no aplica a contratos de prestacion de "
                           "servicios profesionales; esos contratos se listan aparte "
                           "y no cuentan para el total."),
+            "cargos_cubiertos": ("El articulo 2 solo cubre Presidencia, gobernaciones, "
+                                 "alcaldias y Congreso. Un aporte a un candidato al "
+                                 "concejo, a la asamblea o a una JAL no genera esta "
+                                 "inhabilidad, y se marca como 'cargo no cubierto'."),
+            "autofinanciacion": ("Cuando el aportante es el propio candidato, no hay un "
+                                 "tercero que financie a cambio de algo: se marca como "
+                                 "'autofinanciacion' y se excluye de las alertas."),
             "limitaciones": [
                 "No se detectan parientes del financiador: no hay fuente publica que los relacione.",
                 "No se detectan sociedades donde el financiador sea socio controlante: SECOP no publica composicion accionaria.",
                 "Coincidir por documento no prueba la inhabilidad; verifique cada caso antes de afirmarlo.",
+                "La autofinanciacion y los cargos no cubiertos por el articulo se listan, pero no son alertas.",
             ] + ([] if tope else [
                 "No se indico el tope de campana, asi que no se evalua el umbral del 2%: "
                 "todas las coincidencias quedan como 'revisar'."
@@ -341,6 +383,9 @@ def construir(municipio: str | None, departamento: str | None, *, desde: str,
             "financiadores": len(financiadores),
             "contratos_analizados": len(contratos),
             "financiadores_con_contrato": len(hallazgos),
+            "terceros_con_contrato": len(terceros),
+            "autofinanciacion": len(auto),
+            "cargo_no_cubierto": len(no_cubierto),
             "posible_inhabilidad": len(con_inhab),
             "total_aportado": total_aportado,
             "total_contratado": total_contratos,
@@ -387,6 +432,9 @@ def main() -> int:
     print(f"  Financiadores                {k['financiadores']:,}")
     print(f"  Contratos analizados         {k['contratos_analizados']:,}")
     print(f"  Financiadores con contrato   {k['financiadores_con_contrato']:,}")
+    print(f"     de terceros               {k['terceros_con_contrato']:,}")
+    print(f"     autofinanciacion          {k['autofinanciacion']:,}  (no aplica el art. 2)")
+    print(f"     cargo no cubierto         {k['cargo_no_cubierto']:,}  (concejo, asamblea, JAL)")
     print(f"  Posible inhabilidad          {k['posible_inhabilidad']:,}")
     print(f"  Total aportado               ${k['total_aportado']:,.0f}")
     print(f"  Total contratado             ${k['total_contratado']:,.0f}")

@@ -636,7 +636,9 @@ show(location.hash.slice(1));
   const NIVEL = {
     posible_inhabilidad: ["Posible inhabilidad", "#C8003C"],
     revisar:             ["Revisar",             "#EA6A0A"],
-    solo_exceptuados:    ["Solo exceptuados",    "#5C4F82"]
+    cargo_no_cubierto:   ["Cargo no cubierto",   "#7C7098"],
+    solo_exceptuados:    ["Solo exceptuados",    "#5C4F82"],
+    autofinanciacion:    ["Autofinanciación",    "#8E85A8"]
   };
 
   async function cargar() {
@@ -699,11 +701,14 @@ show(location.hash.slice(1));
       "el período para el que fue elegido." +
       (m.umbral_valor ? " Con el tope indicado, el umbral es <b>" + esc(plata(m.umbral_valor)) + "</b>." : "") +
       "</p><p>" + esc(m.excepcion) + "</p>" +
+      (m.cargos_cubiertos ? "<p>" + esc(m.cargos_cubiertos) + "</p>" : "") +
+      (m.autofinanciacion ? "<p>" + esc(m.autofinanciacion) + "</p>" : "") +
       "<ul>" + (m.limitaciones||[]).map(l => "<li>" + esc(l) + "</li>").join("") + "</ul></div>";
 
     h += '<div class="kpis">' +
       kpi("Financiadores", miles(k.financiadores)) +
       kpi("Con contrato después", miles(k.financiadores_con_contrato)) +
+      kpi("De terceros", miles(k.terceros_con_contrato ?? k.financiadores_con_contrato)) +
       kpi("Posible inhabilidad", miles(k.posible_inhabilidad)) +
       kpi("Total aportado", corto(k.total_aportado)) +
       kpi("Total contratado", corto(k.total_contratado)) +
@@ -711,7 +716,8 @@ show(location.hash.slice(1));
       "</div>";
 
     const grupos = [["todos","Todos"],["posible_inhabilidad","Posible inhabilidad"],
-                    ["revisar","Revisar"],["solo_exceptuados","Solo exceptuados"]];
+                    ["revisar","Revisar"],["cargo_no_cubierto","Cargo no cubierto"],
+                    ["solo_exceptuados","Solo exceptuados"],["autofinanciacion","Autofinanciación"]];
     h += '<div class="panel"><div class="vfi-pills">' +
       grupos.map(([v,t]) => '<button class="vfi-pill'+(filtro===v?" on":"")+'" data-f="'+v+'"' +
         (filtro===v ? ' style="background:'+((NIVEL[v]||[])[1]||"#150B3D")+'"' : "") +
