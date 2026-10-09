@@ -19,7 +19,7 @@ header{background:var(--navy);color:#fff}
 .back:hover{border-color:var(--gold);color:var(--gold)}
 main{max-width:1200px;margin:0 auto;padding:32px}
 .demo{background:#FFF0CC;color:#B45309;border:1px solid #FFE3A3;border-radius:8px;padding:12px 16px;font-size:13px;margin-bottom:24px}
-.tabs{display:none;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
 .tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
 .tabs button.on{color:var(--navy);border-color:var(--gold)}
 .pane{display:none}.pane.on{display:block}
@@ -94,6 +94,42 @@ tr:last-child td{border-bottom:0}
 .vfi-msg b{display:block;color:var(--navy);font-size:15px;margin-bottom:8px}
 .vfi-vacio{padding:28px;text-align:center;color:var(--muted)}
 #vfi-resultado canvas{max-height:250px}
+
+/* -- clases compartidas por los módulos que leen un corte -- */
+.vf-corte{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:13px}
+.vf-corte.viejo{border-left-color:var(--warn);background:#FFF8EC}
+.vf-corte b{color:var(--navy)}
+.vf-corte span{color:var(--muted)}
+.vf-sub{display:block;font-size:11px;color:var(--muted);margin-top:2px;font-weight:400;line-height:1.4}
+.vf-fuentes{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.8}
+.vf-fuentes a{color:var(--muted)}
+.vf-vacio{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;font-size:14px;line-height:1.75;color:var(--muted)}
+.vf-vacio b{color:var(--navy);display:block;margin-bottom:8px;font-size:15px}
+.vf-vacio code{background:#F3F1FF;border:1px solid var(--line);border-radius:4px;padding:3px 7px;font-size:12.5px;color:var(--navy)}
+.vf-vacio pre{background:var(--navy);color:#E8E2FF;border-radius:8px;padding:14px 16px;font-size:12.5px;overflow-x:auto;margin:12px 0;line-height:1.5}
+
+/* ==================== FINANCIADORES Y CONTRATOS ==================== */
+#fin-contenido .kpis{grid-template-columns:repeat(auto-fit,minmax(155px,1fr))}
+#fin-contenido .kpi b{font-size:21px}
+#fin-tabla td{vertical-align:top}
+#fin-tabla .vfi-mono .vf-sub{text-align:right;font-family:Inter,"Segoe UI",sans-serif}
+.fin-ley{background:#F3F1FF;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:10px;padding:16px 20px;margin-bottom:18px;font-size:13px;line-height:1.65}
+.fin-ley b{color:var(--navy)}
+.fin-ley p{margin:8px 0 0;color:var(--muted)}
+.fin-ley ul{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:12.5px}
+.fin-ley li{margin-bottom:3px}
+#fin-tabla tbody tr{cursor:pointer}
+#fin-tabla tbody tr:hover{background:#FAF9FF}
+#fin-tabla tbody tr.abierta{background:#F8F6FF}
+.fin-bloque{margin-bottom:18px}
+.fin-bloque:last-child{margin-bottom:0}
+.fin-bloque h4{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+table.fin-mini{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:8px;overflow:hidden}
+table.fin-mini th{background:#EFEBFF;color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;padding:7px 10px;text-align:left}
+table.fin-mini td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+table.fin-mini tr:last-child td{border-bottom:0}
+table.fin-mini tr.fin-fuera td{opacity:.6}
+table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-top:2px}
 #vfi-doc-res:not(:empty){margin-top:16px}
 @media(max-width:800px){.vfi-fila select,.vfi-fila input{min-width:100%}.vfi-btn{width:100%}}
 </style>
@@ -102,7 +138,7 @@ tr:last-child td{border-bottom:0}
 <header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Vigilancia de la contratación pública</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
 <main>
 <div class="demo" id="aviso"></div>
-<nav class="tabs"><button data-t="vigilancia">Vigilancia fiscal</button></nav>
+<nav class="tabs"><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="financiadores">Financiadores y contratos</button></nav>
 
 
 
@@ -138,6 +174,13 @@ tr:last-child td{border-bottom:0}
 <div id="vfi-resultado"></div>
 </section>
 
+<section class="pane" id="financiadores">
+<h2>Financiadores y contratos</h2>
+<p class="sub">Quién financió la campaña y qué contrató después · Ley 1474 de 2011, art. 2</p>
+<div id="fin-estado" class="vfi-msg">Cargando el último corte…</div>
+<div id="fin-contenido" hidden></div>
+</section>
+
 
 
 </main>
@@ -145,6 +188,7 @@ tr:last-child td{border-bottom:0}
 // Cada pestaña declara de dónde salen sus cifras. Si una deja de ser
 // demostración, se cambia aquí y el aviso deja de mentir.
 const ORIGEN = {
+  financiadores: {real:true, txt:'<strong>Datos reales.</strong> Cruce de los aportes reportados al CNE contra los contratos obtenidos después. Señala posibles inhabilidades del artículo 2 de la Ley 1474 de 2011, que deben verificarse caso por caso.'},
   vigilancia: {real:true, txt:'<strong>Datos reales.</strong> Cruce en vivo de SECOP II contra SIRI (Procuraduría) y el Boletín de Responsables Fiscales (Contraloría). Las coincidencias requieren verificación antes de hacerse públicas.'}
 };
 function show(id){
@@ -558,6 +602,238 @@ show(location.hash.slice(1));
     Object.values(graficas).forEach(g => g && g.destroy());
     graficas = {};
   }
+})();
+
+/* ============================================================
+   FINANCIADORES Y CONTRATOS
+   Lee data/modulos/financiadores.json, que produce
+   etl_financiadores.py cruzando Cuentas Claras contra SECOP II.
+   La pagina no calcula nada: solo muestra el corte, con la
+   base legal y los limites del cruce a la vista.
+   ============================================================ */
+(function () {
+  "use strict";
+  const FUENTE = "data/modulos/financiadores.json";
+  const DIAS_VIEJO = 90;   // la base de aportes es historica, envejece lento
+  let cargado = false, DATOS = null, abierta = null, filtro = "todos";
+
+  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const plata = v => new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",
+    maximumFractionDigits:0}).format(Number(v)||0);
+  const corto = v => { v=Number(v)||0; const a=Math.abs(v);
+    if(a>=1e12) return "$"+(v/1e12).toFixed(1)+" B";
+    if(a>=1e9)  return "$"+(v/1e9).toFixed(1)+" MM";
+    if(a>=1e6)  return "$"+(v/1e6).toFixed(1)+" M";
+    return plata(v); };
+  const miles = n => Number(n||0).toLocaleString("es-CO");
+  const fecha = iso => { const d=new Date(iso);
+    return isNaN(d)?String(iso||"—"):d.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"}); };
+  const doc = d => { const x=String(d||"").replace(/\D/g,"");
+    return x.length>6 ? x.replace(/\B(?=(\d{3})+(?!\d))/g,".") : (x||"—"); };
+  const $ = id => document.getElementById(id);
+
+  const NIVEL = {
+    posible_inhabilidad: ["Posible inhabilidad", "#C8003C"],
+    revisar:             ["Revisar",             "#EA6A0A"],
+    solo_exceptuados:    ["Solo exceptuados",    "#5C4F82"]
+  };
+
+  async function cargar() {
+    if (cargado) return;
+    cargado = true;
+    const caja = $("fin-estado"), cont = $("fin-contenido");
+    try {
+      const r = await fetch(FUENTE, { cache: "no-store" });
+      if (r.status === 404) return vacio(caja);
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      DATOS = await r.json();
+      if (!DATOS || !DATOS.meta || !DATOS.kpis) throw new Error("El archivo no tiene la estructura esperada.");
+      pintar();
+      cont.hidden = false;
+      caja.style.display = "none";
+    } catch (err) {
+      cargado = false;
+      caja.className = "vfi-msg";
+      caja.innerHTML = "<b>No se pudo cargar el corte de financiadores.</b>" + esc(err.message) +
+        "<br><br>Si abrió el archivo con doble clic, el navegador bloquea la lectura de datos " +
+        "locales. Levante un servidor: <code>python -m http.server</code>.";
+    }
+  }
+
+  function vacio(caja) {
+    caja.className = "vf-vacio";
+    caja.innerHTML =
+      "<b>Todavía no hay un corte generado.</b>" +
+      "Esta pestaña cruza los aportes reportados al CNE en Cuentas Claras contra los " +
+      "contratos que esos mismos aportantes obtuvieron después, para detectar la " +
+      "inhabilidad del artículo 2 de la Ley 1474 de 2011. Para generarlo:" +
+      "<pre>python etl_financiadores.py --municipio SOACHA --tope 180000000</pre>" +
+      "El <code>--tope</code> es el máximo que podía invertir un candidato en esa " +
+      "circunscripción, según la resolución del CNE para la elección. Sin ese dato el " +
+      "cruce igual corre, pero no puede afirmar que un aporte supere el 2 % que activa " +
+      "la inhabilidad.<br><br>" +
+      "También puede ejecutarlo desde la pestaña <b style=\"display:inline\">Actions</b> " +
+      "del repositorio, sin instalar nada.";
+  }
+
+  function pintar() {
+    const m = DATOS.meta, k = DATOS.kpis;
+    const dias = Math.floor((Date.now() - new Date(m.generado_en).getTime())/86400000);
+    const viejo = !isNaN(dias) && dias > DIAS_VIEJO;
+    let h = "";
+
+    h += '<div class="vf-corte'+(viejo?" viejo":"")+'">' +
+      "<b>Corte: " + esc(fecha(m.generado_en)) + "</b>" +
+      "<span>" + esc(m.municipio || m.departamento || "") + "</span>" +
+      "<span>Aportes de " + esc(m.eleccion) + "</span>" +
+      "<span>Contratos entre " + esc((m.ventana_contratos||{}).desde) + " y " +
+        esc((m.ventana_contratos||{}).hasta) + "</span>" +
+      (viejo ? '<span style="color:var(--warn);font-weight:600">Corte de hace '+dias+' días</span>' : "") +
+      "</div>";
+
+    // base legal y limites, antes que cualquier cifra
+    h += '<div class="fin-ley"><b>' + esc(m.base_legal) + "</b>" +
+      "<p>Quien aporte más del <b>" + (m.umbral_pct ?? 2) + " %</b> del tope de campaña no puede " +
+      "contratar con entidades del nivel administrativo del candidato que financió, durante todo " +
+      "el período para el que fue elegido." +
+      (m.umbral_valor ? " Con el tope indicado, el umbral es <b>" + esc(plata(m.umbral_valor)) + "</b>." : "") +
+      "</p><p>" + esc(m.excepcion) + "</p>" +
+      "<ul>" + (m.limitaciones||[]).map(l => "<li>" + esc(l) + "</li>").join("") + "</ul></div>";
+
+    h += '<div class="kpis">' +
+      kpi("Financiadores", miles(k.financiadores)) +
+      kpi("Con contrato después", miles(k.financiadores_con_contrato)) +
+      kpi("Posible inhabilidad", miles(k.posible_inhabilidad)) +
+      kpi("Total aportado", corto(k.total_aportado)) +
+      kpi("Total contratado", corto(k.total_contratado)) +
+      kpi("Retorno global", k.retorno_global ? k.retorno_global + "×" : "—") +
+      "</div>";
+
+    const grupos = [["todos","Todos"],["posible_inhabilidad","Posible inhabilidad"],
+                    ["revisar","Revisar"],["solo_exceptuados","Solo exceptuados"]];
+    h += '<div class="panel"><div class="vfi-pills">' +
+      grupos.map(([v,t]) => '<button class="vfi-pill'+(filtro===v?" on":"")+'" data-f="'+v+'"' +
+        (filtro===v ? ' style="background:'+((NIVEL[v]||[])[1]||"#150B3D")+'"' : "") +
+        ">"+t+"</button>").join("") +
+      "</div>" +
+      '<input id="fin-busca" placeholder="Buscar por financiador, documento, candidato o entidad…" ' +
+      'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;' +
+      'font-size:13px;box-sizing:border-box;margin-bottom:14px;font-family:inherit">' +
+      '<div style="overflow-x:auto"><table id="fin-tabla"><thead><tr>' +
+      '<th style="width:28px"></th><th>Financiador</th><th>Candidato que financió</th>' +
+      '<th class="r">Aportó</th><th class="r">Contrató</th><th class="r">Retorno</th><th>Nivel</th>' +
+      "</tr></thead><tbody></tbody></table></div></div>";
+
+    h += '<div class="vf-fuentes"><b>Fuentes de este corte</b><br>' +
+      (m.fuentes||[]).map(f => "· " + esc(f.nombre) + " — " + esc(f.entidad) +
+        ", dataset <code>" + esc(f.dataset) + "</code>, " + miles(f.registros) + " registros" +
+        (f.url ? ' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener">ver dataset</a>' : "")
+      ).join("<br>") +
+      "<br>Generado por <code>etl_financiadores.py</code> el " + esc(fecha(m.generado_en)) + ".</div>";
+
+    $("fin-contenido").innerHTML = h;
+
+    $("fin-contenido").querySelectorAll(".vfi-pill").forEach(b =>
+      b.addEventListener("click", () => { filtro = b.dataset.f; abierta = null; pintar(); }));
+    const bi = $("fin-busca");
+    if (bi) bi.addEventListener("input", () => { abierta = null; filas(); });
+    filas();
+  }
+
+  const kpi = (t,v) => '<div class="kpi"><small>'+esc(t)+"</small><b>"+esc(v)+"</b></div>";
+
+  function visibles() {
+    const q = (($("fin-busca")||{}).value || "").toLowerCase().trim();
+    return (DATOS.hallazgos||[]).filter(x => {
+      if (filtro !== "todos" && x.nivel !== filtro) return false;
+      if (!q) return true;
+      const campos = [x.nombre, x.documento]
+        .concat((x.candidatos||[]).map(c => c.candidato))
+        .concat((x.contratos||[]).map(c => c.entidad));
+      return campos.some(v => String(v||"").toLowerCase().includes(q));
+    });
+  }
+
+  function filas() {
+    const tb = document.querySelector("#fin-tabla tbody");
+    if (!tb) return;
+    const v = visibles();
+    if (!v.length) {
+      tb.innerHTML = '<tr><td colspan="7" class="vfi-vacio">Sin resultados para este filtro.</td></tr>';
+      return;
+    }
+    tb.innerHTML = v.map((x,i) => {
+      const ab = abierta === i;
+      const [etq,col] = NIVEL[x.nivel] || ["—","#5C4F82"];
+      const cands = (x.candidatos||[]);
+      let f = '<tr class="fin-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
+        '<td style="color:var(--muted)">'+(ab?"▼":"▶")+"</td>" +
+        "<td><b>"+esc(x.nombre)+"</b><span class=\"vf-sub\">"+esc(doc(x.documento)) +
+          " · " + esc(x.tipo_persona||"") + "</span></td>" +
+        "<td>" + (cands.length ? esc(cands[0].candidato) +
+            '<span class="vf-sub">'+esc(cands[0].cargo||"")+
+            (cands[0].partido ? " · "+esc(cands[0].partido) : "") +
+            (cands.length>1 ? " y "+(cands.length-1)+" más" : "") + "</span>" : "—") + "</td>" +
+        '<td class="vfi-mono">'+esc(corto(x.aportado)) +
+          (x.porcentaje_tope!=null ? '<span class="vf-sub" style="text-align:right">'+
+            esc(String(x.porcentaje_tope).replace(".",","))+" % del tope</span>" : "") + "</td>" +
+        '<td class="vfi-mono">'+esc(corto(x.valor_contratos)) +
+          '<span class="vf-sub" style="text-align:right">'+miles((x.contratos||[]).length)+" contratos</span></td>" +
+        '<td class="vfi-mono">'+(x.retorno!=null ? esc(String(x.retorno).replace(".",","))+"×" : "—")+"</td>" +
+        '<td><span class="vfi-nivel" style="background:'+col+'">'+esc(etq)+"</span></td></tr>";
+      if (ab) f += '<tr class="vfi-det"><td colspan="7">'+detalle(x)+"</td></tr>";
+      return f;
+    }).join("");
+
+    tb.querySelectorAll(".fin-f").forEach(tr =>
+      tr.addEventListener("click", () => {
+        const i = Number(tr.dataset.i);
+        abierta = (abierta === i) ? null : i;
+        filas();
+      }));
+  }
+
+  function detalle(x) {
+    let h = "";
+
+    h += '<div class="fin-bloque"><h4>Aportes reportados</h4><table class="fin-mini"><tr>' +
+      "<th>Candidato</th><th>Cargo</th><th>Partido</th><th>Fecha</th><th class=\"r\">Valor</th></tr>" +
+      (x.aportes||[]).map(a => "<tr><td>"+esc(a.candidato)+"</td><td>"+esc(a.cargo)+
+        "</td><td>"+esc(a.partido)+"</td><td>"+esc(a.fecha||"—")+
+        '</td><td class="vfi-mono">'+esc(plata(a.valor))+"</td></tr>").join("") +
+      "</table></div>";
+
+    const cs = x.contratos||[];
+    h += '<div class="fin-bloque"><h4>Contratos que cuentan para la inhabilidad ('+cs.length+')</h4>';
+    if (!cs.length) h += '<p class="note">Ninguno.</p>';
+    else h += '<table class="fin-mini"><tr><th>Entidad</th><th>Objeto</th><th>Tipo</th>' +
+      "<th>Firma</th><th class=\"r\">Valor</th></tr>" +
+      cs.map(c => "<tr"+(c.mismo_territorio?"":' class="fin-fuera"')+"><td>"+esc(c.entidad) +
+        (c.mismo_territorio ? "" : '<span class="vf-sub">otro territorio</span>') +
+        "</td><td>"+esc(c.objeto)+'<span class="vf-sub">'+esc(c.referencia)+
+        (c.url ? ' · <a href="'+esc(c.url)+'" target="_blank" rel="noopener">ver en SECOP</a>' : "") +
+        "</span></td><td>"+esc(c.tipo)+"</td><td>"+esc(c.firma)+
+        '</td><td class="vfi-mono">'+esc(plata(c.valor))+"</td></tr>").join("") + "</table>";
+    h += "</div>";
+
+    const ex = x.contratos_exceptuados||[];
+    if (ex.length) {
+      h += '<div class="fin-bloque"><h4>Exceptuados por el artículo 2 ('+ex.length+')</h4>' +
+        '<p class="note" style="margin:0 0 8px">La inhabilidad no cubre la prestación de ' +
+        "servicios profesionales, así que estos contratos no cuentan para el total ni para " +
+        "la clasificación. Se listan para que el panorama quede completo.</p>" +
+        '<table class="fin-mini"><tr><th>Entidad</th><th>Objeto</th><th>Firma</th><th class="r">Valor</th></tr>' +
+        ex.map(c => "<tr><td>"+esc(c.entidad)+"</td><td>"+esc(c.objeto)+"</td><td>"+esc(c.firma)+
+          '</td><td class="vfi-mono">'+esc(plata(c.valor))+"</td></tr>").join("") +
+        "</table></div>";
+    }
+    return h;
+  }
+
+  const btn = document.querySelector('.tabs button[data-t="financiadores"]');
+  if (btn) btn.addEventListener("click", cargar);
+  if (location.hash.slice(1) === "financiadores") cargar();
 })();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>

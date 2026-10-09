@@ -1,0 +1,126 @@
+name: Actualizar financiadores y contratos
+
+# Genera data/modulos/financiadores.json cruzando los aportes reportados al
+# CNE (Cuentas Claras) contra los contratos que esos mismos aportantes
+# obtuvieron despues, para detectar la inhabilidad del articulo 2 de la
+# Ley 1474 de 2011.
+#
+# Se ejecuta a mano desde la pestana Actions, con el boton "Run workflow".
+# No tiene horario propio: la base de aportes es de una eleccion ya cerrada,
+# asi que solo cambia cuando aparecen contratos nuevos o cuando se quiere
+# mirar otro municipio.
+#
+# No requiere instalar nada en el computador del usuario.
+
+on:
+  workflow_dispatch:
+    inputs:
+      municipio:
+        description: "Municipio del candidato financiado (como aparece en Cuentas Claras)"
+        required: true
+        default: "SOACHA"
+      departamento:
+        description: "Departamento (opcional; amplia la busqueda)"
+        required: false
+        default: ""
+      tope:
+        description: >-
+          Tope de campana en pesos, segun la resolucion del CNE para esa eleccion
+          y circunscripcion. El umbral de la inhabilidad es el 2%. Si se deja
+          vacio, el cruce corre pero no afirma que ningun aporte lo supere.
+        required: false
+        default: ""
+      desde:
+        description: "Inicio de la ventana de contratos (posesion del elegido)"
+        required: true
+        default: "2020-01-01"
+      hasta:
+        description: "Fin del periodo del elegido"
+        required: true
+        default: "2023-12-31"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: financiadores
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install --quiet requests
+
+      - name: Verificar la logica del cruce
+        # Si la logica esta rota, no tiene sentido publicar un corte que
+        # senala personas con nombre propio.
+        run: python test_etl_financiadores.py
+
+      - name: Generar el corte
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+          MUNICIPIO: ${{ github.event.inputs.municipio }}
+          DEPARTAMENTO: ${{ github.event.inputs.departamento }}
+          TOPE: ${{ github.event.inputs.tope }}
+          DESDE: ${{ github.event.inputs.desde }}
+          HASTA: ${{ github.event.inputs.hasta }}
+        run: |
+          args=(--municipio "$MUNICIPIO" --desde "$DESDE" --hasta "$HASTA")
+          [ -n "$DEPARTAMENTO" ] && args+=(--departamento "$DEPARTAMENTO")
+          [ -n "$TOPE" ] && args+=(--tope "$TOPE")
+          python etl_financiadores.py "${args[@]}"
+
+      - name: Resumen del corte
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          d = json.loads(pathlib.Path("data/modulos/financiadores.json").read_text("utf-8"))
+          m, k = d["meta"], d["kpis"]
+          print(f"## Financiadores y contratos — {m['municipio'] or m['departamento']}\n")
+          print(f"Aportes de {m['eleccion']} · contratos entre "
+                f"{m['ventana_contratos']['desde']} y {m['ventana_contratos']['hasta']}\n")
+          if m.get("umbral_valor"):
+              print(f"Umbral del 2% sobre el tope: **${m['umbral_valor']:,.0f}**\n")
+          else:
+              print("> Sin tope indicado: no se evalua el umbral del 2%.\n")
+          print("| Indicador | Valor |")
+          print("|---|---:|")
+          print(f"| Financiadores | {k['financiadores']:,} |")
+          print(f"| Con contrato despues | {k['financiadores_con_contrato']:,} |")
+          print(f"| Posible inhabilidad | {k['posible_inhabilidad']:,} |")
+          print(f"| Total aportado | ${k['total_aportado']:,.0f} |")
+          print(f"| Total contratado | ${k['total_contratado']:,.0f} |")
+          if k.get("retorno_global"):
+              print(f"| Retorno global | {k['retorno_global']}x |")
+          print(f"\n> {m['base_legal']}.")
+          print("> Coincidir por documento **no prueba** la inhabilidad: hay homonimos, "
+                "documentos mal digitados y sociedades que este cruce no ve. "
+                "Verifique cada caso antes de afirmarlo en publico.")
+          PY
+
+      - name: Publicar el corte
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/modulos/financiadores.json
+          if git diff --staged --quiet; then
+            echo "El corte no cambio respecto al anterior; no hay nada que publicar."
+            exit 0
+          fi
+          git commit -m "Corte de financiadores y contratos $(date -u +%Y-%m-%d)
+
+          Generado automaticamente por el workflow Actualizar financiadores y contratos.
+          Fuentes: Cuentas Claras (jgra-rz2t) y SECOP II (jbjy-vk9h)."
+          git push
