@@ -108,6 +108,19 @@ tr:last-child td{border-bottom:0}
 .vf-vacio code{background:#F3F1FF;border:1px solid var(--line);border-radius:4px;padding:3px 7px;font-size:12.5px;color:var(--navy)}
 .vf-vacio pre{background:var(--navy);color:#E8E2FF;border-radius:8px;padding:14px 16px;font-size:12.5px;overflow-x:auto;margin:12px 0;line-height:1.5}
 
+/* ==================== FICHA DEL CONTENDOR ==================== */
+.ficha-cab{background:linear-gradient(135deg,var(--navy),#2A1760);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:18px}
+.ficha-nom{font-size:23px;font-weight:700;line-height:1.25}
+.ficha-doc{font-size:13px;color:#B4A6DB;margin-top:3px}
+.ficha-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin-top:18px}
+.ficha-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:10px 12px}
+.ficha-chip.on{background:rgba(255,176,32,.16);border-color:rgba(255,176,32,.45)}
+.ficha-chip small{display:block;font-size:10.5px;color:#B4A6DB;text-transform:uppercase;letter-spacing:.04em}
+.ficha-chip b{display:block;font-size:16px;font-weight:700;margin-top:3px}
+.ficha-cand{cursor:pointer}
+.ficha-cand:hover{background:#FAF9FF}
+#ficha-alcance ul{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:12.5px;line-height:1.7}
+
 /* ==================== TERRITORIO Y OBRAS ==================== */
 .terr-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
 .terr-tab{padding:9px 18px;border-radius:9px;font:700 13px Inter,"Segoe UI",sans-serif;cursor:pointer;border:1.5px solid var(--line);background:#fff;color:var(--muted)}
@@ -154,7 +167,7 @@ table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-
 <header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Vigilancia de la contratación pública</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
 <main>
 <div class="demo" id="aviso"></div>
-<nav class="tabs"><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="financiadores">Financiadores y contratos</button><button data-t="territorio">Territorio y obras</button></nav>
+<nav class="tabs"><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="financiadores">Financiadores y contratos</button><button data-t="territorio">Territorio y obras</button><button data-t="ficha">Ficha del contendor</button></nav>
 
 
 
@@ -204,6 +217,24 @@ table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-
 <div id="terr-contenido" hidden></div>
 </section>
 
+<section class="pane" id="ficha">
+<h2>Ficha del contendor</h2>
+<p class="sub">Todo lo que esta plataforma sabe de una persona o empresa, en una sola consulta</p>
+<div id="ficha-estado" class="vfi-msg">Cargando los cortes…</div>
+<div id="ficha-buscador" hidden>
+  <div class="fin-ley" id="ficha-alcance"></div>
+  <div class="panel">
+    <label class="vfi-lbl" for="ficha-q">Documento o nombre</label>
+    <div class="vfi-fila">
+      <input id="ficha-q" placeholder="Cédula, NIT o parte del nombre" autocomplete="off">
+      <button id="ficha-buscar" class="vfi-btn">Buscar</button>
+      <button id="ficha-limpiar" class="vfi-btn gris">Limpiar</button>
+    </div>
+  </div>
+  <div id="ficha-res"></div>
+</div>
+</section>
+
 
 
 </main>
@@ -211,6 +242,7 @@ table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-
 // Cada pestaña declara de dónde salen sus cifras. Si una deja de ser
 // demostración, se cambia aquí y el aviso deja de mentir.
 const ORIGEN = {
+  ficha: {real:true, txt:'<strong>Datos reales.</strong> Reúne lo que ya producen los otros módulos sobre una misma persona. Las coincidencias por documento no prueban nada por sí solas: verifique antes de afirmar.'},
   territorio: {real:true, txt:'<strong>Datos reales.</strong> Contratos de SECOP II cuya fecha de fin ya pasó y siguen en ejecución, más el valor por lugar nombrado en el objeto. La cobertura de los sectores es parcial y la pestaña la muestra.'},
   financiadores: {real:true, txt:'<strong>Datos reales.</strong> Cruce de los aportes reportados al CNE contra los contratos obtenidos después. Señala posibles inhabilidades del artículo 2 de la Ley 1474 de 2011, que deben verificarse caso por caso.'},
   vigilancia: {real:true, txt:'<strong>Datos reales.</strong> Cruce en vivo de SECOP II contra SIRI (Procuraduría) y el Boletín de Responsables Fiscales (Contraloría). Las coincidencias requieren verificación antes de hacerse públicas.'}
@@ -1100,6 +1132,302 @@ show(location.hash.slice(1));
   window.addEventListener("hashchange", siToca);
   const btn = document.querySelector('.tabs button[data-t="territorio"]');
   if (btn) btn.addEventListener("click", cargar);
+})();
+
+/* ============================================================
+   FICHA DEL CONTENDOR
+   No trae datos propios: reune lo que ya producen los otros
+   modulos para una misma persona o empresa.
+     - territorio.json    huella contractual y obras vencidas
+     - financiadores.json aportes de campana y contratos
+     - backend VFI        antecedentes en SIRI y Boletin, en vivo
+   Cada bloque dice de donde sale y que alcance tiene, porque una
+   ficha que junta senalamientos sin decir su origen es una
+   acusacion, no un informe.
+   ============================================================ */
+(function () {
+  "use strict";
+  const API = "https://sistema-gestion-contractual.onrender.com/api/vfi";
+  const FUENTES = {
+    territorio: "data/modulos/territorio.json",
+    financiadores: "data/modulos/financiadores.json"
+  };
+  let iniciado = false, CORTES = {}, ultimaBusqueda = "";
+
+  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const plata = v => new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",
+    maximumFractionDigits:0}).format(Number(v)||0);
+  const corto = v => { v=Number(v)||0; const a=Math.abs(v);
+    if(a>=1e12) return "$"+(v/1e12).toFixed(1)+" B";
+    if(a>=1e9)  return "$"+(v/1e9).toFixed(1)+" MM";
+    if(a>=1e6)  return "$"+(v/1e6).toFixed(1)+" M";
+    return plata(v); };
+  const miles = n => Number(n||0).toLocaleString("es-CO");
+  const fecha = iso => { const d=new Date(iso);
+    return isNaN(d)?String(iso||"—"):d.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"}); };
+  const soloDigitos = s => String(s||"").replace(/\D/g,"");
+  const docFmt = d => { const x=soloDigitos(d);
+    return x.length>6 ? x.replace(/\B(?=(\d{3})+(?!\d))/g,".") : (x||"—"); };
+  const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toUpperCase().trim();
+  const $ = id => document.getElementById(id);
+
+  async function iniciar() {
+    if (iniciado) return;
+    iniciado = true;
+    const caja = $("ficha-estado");
+    const res = await Promise.all(Object.entries(FUENTES).map(async ([k, url]) => {
+      try {
+        const r = await fetch(url, { cache: "no-store" });
+        return [k, r.ok ? await r.json() : null];
+      } catch { return [k, null]; }
+    }));
+    CORTES = Object.fromEntries(res);
+
+    if (!CORTES.territorio && !CORTES.financiadores) {
+      caja.className = "vf-vacio";
+      caja.innerHTML = "<b>Todavía no hay cortes que consultar.</b>" +
+        "Esta ficha no genera datos: reúne los que producen los módulos de " +
+        "Territorio y de Financiadores. Genere al menos uno de esos cortes desde " +
+        "la pestaña <b style=\"display:inline\">Actions</b> y vuelva aquí.";
+      return;
+    }
+    caja.style.display = "none";
+    $("ficha-buscador").hidden = false;
+    pintarAlcance();
+  }
+
+  function pintarAlcance() {
+    const t = CORTES.territorio, f = CORTES.financiadores;
+    const li = [];
+    if (t) li.push("<li><b>Contratación en " + esc(t.meta.municipio) + "</b> — " +
+      miles((t.contratistas||[]).length) + " contratistas, contratos firmados entre " +
+      esc(t.meta.ventana.desde) + " y " + esc(t.meta.ventana.hasta) +
+      ". Corte del " + esc(fecha(t.meta.generado_en)) + ".</li>");
+    else li.push("<li><b>Contratación</b> — sin corte generado.</li>");
+    if (f) li.push("<li><b>Aportes de campaña</b> — " + esc(f.meta.eleccion) +
+      ", " + miles((f.hallazgos||[]).length) + " aportantes que después contrataron. " +
+      "Corte del " + esc(fecha(f.meta.generado_en)) + ".</li>");
+    else li.push("<li><b>Aportes de campaña</b> — sin corte generado.</li>");
+    li.push("<li><b>Antecedentes en SIRI y Boletín</b> — se consultan en vivo al buscar, " +
+      "no dependen de un corte.</li>");
+    $("ficha-alcance").innerHTML =
+      "<b>Qué alcanza a ver esta ficha</b><ul>" + li.join("") + "</ul>" +
+      "<p>Fuera de eso no hay nada: que una persona aparezca limpia aquí significa que " +
+      "no está en estos cortes, no que no exista información en otra parte.</p>";
+  }
+
+  /* ---------------- busqueda ---------------- */
+  function buscar() {
+    const q = $("ficha-q").value.trim();
+    if (!q) return;
+    ultimaBusqueda = q;
+    const dig = soloDigitos(q);
+    const esDoc = dig.length >= 5 && dig.length === q.replace(/[.\s-]/g, "").length;
+
+    const cands = esDoc ? porDocumento(dig) : porNombre(q);
+    if (!cands.length) {
+      $("ficha-res").innerHTML = '<div class="vfi-msg"><b>Sin coincidencias para “' +
+        esc(q) + '”.</b>' +
+        (esDoc ? "Ese documento no aparece en los cortes cargados."
+               : "Ningún nombre de los cortes contiene ese texto. Pruebe con el documento, " +
+                 "o con una parte del nombre: la búsqueda por nombre es literal.") +
+        "</div>";
+      return;
+    }
+    if (cands.length > 1 && !esDoc) return pintarCandidatos(cands, q);
+    pintarFicha(cands[0].documento);
+  }
+
+  function porDocumento(dig) {
+    const t = (CORTES.territorio?.contratistas || []).find(x => x.documento === dig);
+    const f = (CORTES.financiadores?.hallazgos || []).find(x => x.documento === dig);
+    return (t || f) ? [{ documento: dig, nombre: (t && t.nombre) || (f && f.nombre) || "" }]
+                    : [{ documento: dig, nombre: "", soloEnVivo: true }];
+  }
+
+  function porNombre(q) {
+    const nq = norm(q), vistos = new Map();
+    const mirar = (lista, campo) => (lista || []).forEach(x => {
+      if (norm(x[campo]).includes(nq) && !vistos.has(x.documento))
+        vistos.set(x.documento, { documento: x.documento, nombre: x[campo] });
+    });
+    mirar(CORTES.territorio?.contratistas, "nombre");
+    mirar(CORTES.financiadores?.hallazgos, "nombre");
+    return [...vistos.values()].slice(0, 40);
+  }
+
+  function pintarCandidatos(cands, q) {
+    $("ficha-res").innerHTML = '<div class="panel"><h3>' + miles(cands.length) +
+      " coincidencias para “" + esc(q) + "”</h3>" +
+      '<table><tbody>' + cands.map(c =>
+        '<tr class="ficha-cand" data-d="' + esc(c.documento) + '"><td><b>' + esc(c.nombre) +
+        '</b><span class="vf-sub">' + esc(docFmt(c.documento)) + "</span></td>" +
+        '<td class="r" style="color:var(--muted)">ver ficha →</td></tr>').join("") +
+      "</tbody></table></div>";
+    document.querySelectorAll(".ficha-cand").forEach(tr =>
+      tr.addEventListener("click", () => pintarFicha(tr.dataset.d)));
+  }
+
+  /* ---------------- la ficha ---------------- */
+  function pintarFicha(doc) {
+    const t = (CORTES.territorio?.contratistas || []).find(x => x.documento === doc);
+    const f = (CORTES.financiadores?.hallazgos || []).find(x => x.documento === doc);
+    const nombre = (t && t.nombre) || (f && f.nombre) || "Documento " + docFmt(doc);
+
+    let h = '<div class="ficha-cab"><div class="ficha-nom">' + esc(nombre) + "</div>" +
+      '<div class="ficha-doc">' + esc(docFmt(doc)) +
+      ((t && t.tipo_documento) || (f && f.tipo_documento)
+        ? " · " + esc(t?.tipo_documento || f?.tipo_documento) : "") + "</div>" +
+      '<div class="ficha-chips">' +
+        chip("Contratación", t ? corto(t.valor) : "sin registro", !!t) +
+        chip("Obras vencidas", t && t.vencidos ? miles(t.vencidos) : "ninguna", !!(t && t.vencidos)) +
+        chip("Aportes de campaña", f ? corto(f.aportado) : "sin registro", !!f) +
+        chip("Antecedentes", '<span id="ficha-chip-ant">consultando…</span>', false, true) +
+      "</div></div>";
+
+    h += bloqueContratacion(t);
+    h += bloqueAportes(f);
+    h += '<div id="ficha-antecedentes"><div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
+      '<p class="note">Consultando el servidor…</p></div></div>';
+
+    $("ficha-res").innerHTML = h;
+    traerAntecedentes(doc);
+  }
+
+  const chip = (k, v, fuerte, crudo) =>
+    '<div class="ficha-chip' + (fuerte ? " on" : "") + '"><small>' + esc(k) + "</small><b>" +
+    (crudo ? v : esc(v)) + "</b></div>";
+
+  function bloqueContratacion(t) {
+    let h = '<div class="panel"><h3>Contratación pública</h3>';
+    if (!t) return h + '<p class="note">No aparece como contratista en el corte de ' +
+      'territorio. Ese corte cubre un municipio y un rango de fechas: fuera de ahí no ve nada.</p></div>';
+    h += '<div class="vfi-campos" style="margin-bottom:14px">' +
+      campo("Total contratado", plata(t.valor)) +
+      campo("Contratos", miles(t.contratos)) +
+      campo("Entidades", miles(t.entidades) + (t.nombres_entidades?.length
+        ? " · " + esc(t.nombres_entidades.slice(0,2).join(" · ")) : "")) +
+      campo("Pagado", plata(t.pagado)) +
+      campo("Primer contrato", t.primero || "—") +
+      campo("Último contrato", t.ultimo || "—") +
+      (t.vencidos ? campo("Obras vencidas y abiertas", miles(t.vencidos), true) : "") +
+      (t.pendiente_vencido ? campo("Saldo vencido sin pagar", plata(t.pendiente_vencido), true) : "") +
+      "</div>";
+    if ((t.mayores||[]).length) {
+      h += '<table class="fin-mini"><tr><th>Objeto</th><th>Entidad</th><th>Firma</th>' +
+        '<th class="r">Valor</th></tr>' +
+        t.mayores.map(m => "<tr><td>" + esc(m.objeto) +
+          '<span class="vf-sub">' + esc(m.referencia) + " · " + esc(m.estado) + "</span></td>" +
+          "<td>" + esc(m.entidad) + "</td><td>" + esc(m.firma) + "</td>" +
+          '<td class="vfi-mono">' + esc(plata(m.valor)) + "</td></tr>").join("") + "</table>";
+    }
+    return h + "</div>";
+  }
+
+  function bloqueAportes(f) {
+    let h = '<div class="panel"><h3>Aportes de campaña</h3>';
+    if (!f) return h + '<p class="note">No figura como aportante en el corte de ' +
+      'financiadores, que cubre una elección concreta. Un aporte a otra elección no se vería aquí.</p></div>';
+    const nivel = {posible_inhabilidad:["Posible inhabilidad","#C8003C"],
+      revisar:["Revisar","#EA6A0A"], cargo_no_cubierto:["Cargo no cubierto","#7C7098"],
+      solo_exceptuados:["Solo exceptuados","#5C4F82"], autofinanciacion:["Autofinanciación","#8E85A8"]}[f.nivel]
+      || ["—","#5C4F82"];
+    h += '<div class="vfi-campos" style="margin-bottom:14px">' +
+      campo("Total aportado", plata(f.aportado)) +
+      (f.porcentaje_tope != null ? campo("Del tope de campaña",
+        String(f.porcentaje_tope).replace(".",",") + " %") : "") +
+      campo("Contratado después", plata(f.valor_contratos)) +
+      (f.retorno != null ? campo("Retorno", String(f.retorno).replace(".",",") + "×") : "") +
+      '<div class="vfi-campo"><div class="k">Clasificación</div><div class="v">' +
+        '<span class="vfi-nivel" style="background:'+nivel[1]+'">'+esc(nivel[0])+"</span></div></div>" +
+      "</div>";
+    if ((f.candidatos||[]).length) {
+      h += '<table class="fin-mini"><tr><th>Candidato financiado</th><th>Cargo</th>' +
+        '<th>Partido</th><th class="r">Aportó</th></tr>' +
+        f.candidatos.map(c => "<tr><td><b>" + esc(c.candidato) + "</b></td><td>" +
+          esc(c.cargo) + "</td><td>" + esc(c.partido) + '</td><td class="vfi-mono">' +
+          esc(plata(c.valor)) + "</td></tr>").join("") + "</table>";
+    }
+    if (f.autofinanciacion) {
+      h += '<p class="note" style="margin-top:10px">Aportó a su propia campaña. El artículo 2 ' +
+        "de la Ley 1474 persigue que un tercero financie y después contrate, así que este caso " +
+        "no activa esa inhabilidad.</p>";
+    }
+    return h + "</div>";
+  }
+
+  const campo = (k, v, rojo) => !v ? "" :
+    '<div class="vfi-campo"><div class="k">' + esc(k) + '</div>' +
+    '<div class="v' + (rojo ? " rojo" : "") + '">' + esc(v) + "</div></div>";
+
+  /* ---------------- antecedentes en vivo ---------------- */
+  async function traerAntecedentes(doc) {
+    const caja = $("ficha-antecedentes"), chipAnt = $("ficha-chip-ant");
+    try {
+      const r = await fetch(API + "/buscar?doc=" + encodeURIComponent(doc), { method: "POST" });
+      if (!r.ok) throw new Error("El servidor respondió " + r.status + ".");
+      const d = await r.json();
+      if (d.error) throw new Error(d.error);
+      const hs = d.hallazgos || [];
+      if (chipAnt) { chipAnt.textContent = hs.length ? miles(hs.length) : "ninguno";
+        if (hs.length) chipAnt.closest(".ficha-chip").classList.add("on"); }
+      if (!hs.length) {
+        caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
+          '<p class="note">Sin registros para este documento en SIRI ni en el Boletín de ' +
+          "Responsables Fiscales. Esto no reemplaza el certificado oficial.</p></div>";
+        return;
+      }
+      caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín (' +
+        miles(hs.length) + ")</h3>" +
+        '<div class="vfi-aviso" style="margin-bottom:12px"><b>Una coincidencia por documento no ' +
+        "prueba una inhabilidad.</b> Puede tratarse de un homónimo o de una sanción ya levantada. " +
+        "Verifique en el certificado oficial antes de afirmarlo.</div>" +
+        '<table class="fin-mini"><tr><th>Fuente</th><th>Nombre</th><th>Antecedente</th>' +
+        "<th>Autoridad</th><th>Fecha</th></tr>" +
+        hs.map(x => { const siri = String(x.fuente||"").toUpperCase().includes("SIRI");
+          return "<tr><td><span class='vfi-nivel' style='background:" + (siri?"#7C3AED":"#CA8A04") +
+            "'>" + (siri?"SIRI":"BOLETÍN") + "</span></td><td><b>" + esc(x.nombre||"—") +
+            "</b></td><td>" + esc(x.sancion||"—") +
+            (x.tipo ? '<span class="vf-sub">'+esc(x.tipo)+"</span>" : "") + "</td><td>" +
+            esc(x.autoridad||"—") + "</td><td>" + esc(x.fecha||"—") + "</td></tr>"; }).join("") +
+        "</table></div>";
+    } catch (err) {
+      if (chipAnt) chipAnt.textContent = "no consultado";
+      caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
+        '<p class="note">No se pudo consultar: ' + esc(err.message) + " El servidor de " +
+        "análisis se suspende por inactividad; si es la primera consulta del día puede tardar " +
+        'cerca de un minuto. <button class="vfi-btn gris" id="ficha-reint" ' +
+        'style="padding:7px 14px;margin-left:8px">Reintentar</button></p></div>';
+      const b = $("ficha-reint");
+      if (b) b.addEventListener("click", () => {
+        caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
+          '<p class="note">Consultando…</p></div>';
+        traerAntecedentes(doc);
+      });
+    }
+  }
+
+  /* ---------------- arranque ---------------- */
+  document.addEventListener("DOMContentLoaded", enganchar);
+  enganchar();
+  function enganchar() {
+    const b = $("ficha-buscar"), q = $("ficha-q");
+    if (!b || b.dataset.ligado === "1") return;
+    b.dataset.ligado = "1";
+    b.addEventListener("click", buscar);
+    q.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
+    const limpiar = $("ficha-limpiar");
+    if (limpiar) limpiar.addEventListener("click", () => {
+      q.value = ""; $("ficha-res").innerHTML = ""; q.focus();
+    });
+  }
+
+  const siToca = () => { if (location.hash.slice(1) === "ficha") iniciar(); };
+  siToca();
+  window.addEventListener("hashchange", siToca);
+  const tab = document.querySelector('.tabs button[data-t="ficha"]');
+  if (tab) tab.addEventListener("click", iniciar);
 })();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>

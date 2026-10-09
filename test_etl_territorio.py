@@ -176,6 +176,30 @@ check("pero 'Danubio' y 'Prado Vegas' sobreviven",
       {"Danubio","Prado Vegas"} <= {l["nombre"] for l in
         etl.extraer_lugares("PAVIMENTACION EN LOS SECTORES DANUBIO; PRADO VEGAS")})
 
+print("\n[11] Indice de contratistas para la ficha")
+idx = etl.indice_contratistas(contratos, HOY)
+check("agrupa los 5 contratos del fixture en 1 contratista", len(idx) == 1, str(len(idx)))
+if idx:
+    f = idx[0]
+    check("suma todos los contratos, no solo los vencidos", f["contratos"] == 5, str(f["contratos"]))
+    check("suma el valor total", f["valor"] == 2905000000.0, str(f["valor"]))
+    # El indice cuenta 2 vencidos y la lista visible muestra 1: el contrato
+    # pequeno queda fuera de la lista por el umbral de presentacion, pero
+    # sigue estando vencido. El indice no debe heredar ese umbral.
+    check("cuenta los vencidos sin aplicar el umbral de presentacion",
+          f["vencidos"] == 2, str(f["vencidos"]))
+    check("acumula el saldo vencido sin pagar", f["pendiente_vencido"] == 505000000.0,
+          str(f["pendiente_vencido"]))
+    check("la lista visible si aplica el umbral y muestra solo 1",
+          len(etl.obras_vencidas(contratos, HOY, minimo=20_000_000)) == 1)
+    check("registra primera y ultima firma", f["primero"] == "2022-01-05" and f["ultimo"] == "2025-02-05",
+          f'{f["primero"]} .. {f["ultimo"]}')
+    check("guarda los contratos mayores", len(f["mayores"]) == 5 and f["mayores"][0]["valor"] == 900000000.0)
+    check("cuenta las entidades", f["entidades"] == 1, str(f["entidades"]))
+check("un contrato sin documento no entra",
+      etl.indice_contratistas([{"documento_proveedor": "", "valor_del_contrato": "1"}], HOY) == [])
+check("el JSON publica el indice", "contratistas" in d and isinstance(d["contratistas"], list))
+
 print("\n" + "=" * 60)
 if fallos:
     print(f"FALLARON {len(fallos)}:")

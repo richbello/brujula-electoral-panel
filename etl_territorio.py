@@ -257,6 +257,79 @@ def obras_vencidas(contratos: list[dict], hoy: dt.date, *, minimo: float) -> lis
     return salida
 
 
+def indice_contratistas(contratos: list[dict], hoy: dt.date, *, tope: int = 1500) -> list[dict]:
+    """Huella contractual de cada contratista del municipio.
+
+    Alimenta la Ficha del contendor, que necesita responder "cuanto ha
+    contratado esta persona aqui", no solo "aparece en el top de obras
+    vencidas". Por eso recorre TODOS los contratos, no solo los vencidos.
+    """
+    reg: dict[str, dict] = {}
+    for c in contratos:
+        doc = re.sub(r"\D", "", str(c.get("documento_proveedor") or ""))
+        if not doc:
+            continue
+        f = reg.setdefault(doc, {
+            "documento": doc,
+            "nombre": c.get("proveedor_adjudicado") or "",
+            "tipo_documento": c.get("tipodocproveedor") or "",
+            "contratos": 0,
+            "valor": 0.0,
+            "pagado": 0.0,
+            "entidades": set(),
+            "primero": None,
+            "ultimo": None,
+            "vencidos": 0,
+            "valor_vencido": 0.0,
+            "pendiente_vencido": 0.0,
+            "mayores": [],
+        })
+        valor = a_numero(c.get("valor_del_contrato"))
+        f["contratos"] += 1
+        f["valor"] += valor
+        f["pagado"] += a_numero(c.get("valor_pagado"))
+        if c.get("nombre_entidad"):
+            f["entidades"].add(c["nombre_entidad"])
+
+        firma = a_fecha(c.get("fecha_de_firma"))
+        if firma:
+            if not f["primero"] or firma < f["primero"]:
+                f["primero"] = firma
+            if not f["ultimo"] or firma > f["ultimo"]:
+                f["ultimo"] = firma
+
+        fin = a_fecha(c.get("fecha_de_fin_del_contrato"))
+        estado = sin_tildes(c.get("estado_contrato")).lower()
+        if (fin and fin < hoy and not any(t in estado for t in CERRADOS)
+                and any(t in estado for t in ABIERTOS)):
+            f["vencidos"] += 1
+            f["valor_vencido"] += valor
+            f["pendiente_vencido"] += max(valor - a_numero(c.get("valor_pagado")), 0.0)
+
+        f["mayores"].append({
+            "referencia": c.get("referencia_del_contrato") or c.get("id_contrato") or "",
+            "entidad": c.get("nombre_entidad") or "",
+            "objeto": (c.get("objeto_del_contrato") or "")[:180],
+            "valor": valor,
+            "firma": firma.isoformat() if firma else "",
+            "estado": c.get("estado_contrato") or "",
+        })
+
+    salida = []
+    for f in reg.values():
+        f["mayores"].sort(key=lambda x: -x["valor"])
+        salida.append({
+            **{k: v for k, v in f.items() if k not in ("entidades", "primero", "ultimo", "mayores")},
+            "entidades": len(f["entidades"]),
+            "nombres_entidades": sorted(f["entidades"])[:5],
+            "primero": f["primero"].isoformat() if f["primero"] else "",
+            "ultimo": f["ultimo"].isoformat() if f["ultimo"] else "",
+            "mayores": f["mayores"][:5],
+        })
+    salida.sort(key=lambda x: -x["valor"])
+    return salida[:tope]
+
+
 def por_sector(contratos: list[dict]) -> tuple[list[dict], dict]:
     """Agrupa el valor por lugar nombrado y calcula la cobertura.
 
@@ -327,6 +400,7 @@ def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
     print("[2/2] Calculando obras vencidas y sectores")
     vencidas = obras_vencidas(contratos, hoy, minimo=minimo)
     sectores, cobertura = por_sector(contratos)
+    contratistas = indice_contratistas(contratos, hoy)
 
     valor_total = sum(a_numero(c.get("valor_del_contrato")) for c in contratos)
     valor_vencido = sum(v["valor"] for v in vencidas)
@@ -365,9 +439,11 @@ def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
             "pendiente_vencido": sum(v["pendiente"] for v in vencidas),
             "sectores": len(sectores),
             "cobertura_valor": cobertura["pct_valor"],
+            "contratistas": len(contratistas),
         },
         "obras_vencidas": vencidas[:80],
         "sectores": sectores[:60],
+        "contratistas": contratistas,
     }
 
 
@@ -404,6 +480,7 @@ def main() -> int:
     print(f"  Valor total          ${k['valor_total']:,.0f}")
     print(f"  Obras vencidas       {k['obras_vencidas']:,}  (${k['valor_vencido']:,.0f})")
     print(f"  Sectores nombrados   {k['sectores']:,}")
+    print(f"  Contratistas         {k['contratistas']:,}  (indice para la ficha)")
     print(f"  Cobertura            {c['pct_valor']}% del valor nombra un lugar "
           f"({c['contratos_con_lugar']:,} de {c['contratos_con_lugar'] + c['contratos_sin_lugar']:,} contratos)")
     print()
