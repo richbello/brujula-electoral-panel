@@ -50,13 +50,31 @@ tr:last-child td{border-bottom:0}
 /* ==================== MÓDULO 06 - ANÁLISIS PRESUPUESTAL CRP ==================== */
 #dash-06 canvas{max-height:260px}
 @media(max-width:800px){#dash-06 > div[style*="1fr 1fr"]{grid-template-columns:1fr !important}}
+
+/* ==================== VIGILANCIA FISCAL (datos reales) ==================== */
+.vf-cargando,.vf-vacio,.vf-error{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;font-size:14px;line-height:1.7;color:var(--muted)}
+.vf-vacio b,.vf-error b{color:var(--navy);display:block;margin-bottom:8px;font-size:15px}
+.vf-vacio code{background:#F3F1FF;border:1px solid var(--line);border-radius:4px;padding:3px 7px;font-size:12.5px;color:var(--navy);display:inline-block;margin:2px 0}
+.vf-vacio pre{background:var(--navy);color:#E8E2FF;border-radius:8px;padding:14px 16px;font-size:12.5px;overflow-x:auto;margin:12px 0;line-height:1.5}
+.vf-corte{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:13px}
+.vf-corte.viejo{border-left-color:var(--warn);background:#FFF8EC}
+.vf-corte b{color:var(--navy)}
+.vf-corte span{color:var(--muted)}
+.vf-fuentes{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.7}
+.vf-fuentes a{color:var(--muted)}
+.vf-aviso{background:#FFF0CC;border:1px solid #FFE3A3;border-left:4px solid var(--warn);border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.6;color:#8A5A00;margin-bottom:18px}
+.vf-aviso b{color:#7A4E00}
+.verif{display:inline-block;font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:999px;background:#FFF0CC;color:var(--warn);margin-left:6px;white-space:nowrap}
+.vf-obj{font-size:12px;color:var(--muted);display:block;margin-top:3px;line-height:1.45}
+.vf-sub{font-size:11.5px;color:var(--muted);display:block;margin-top:2px}
+#vigilancia .panel table{font-size:13.5px}
+#vigilancia .panel td{vertical-align:top}
 </style>
 </head>
 <body>
 <header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Fiscal · Vigilancia · Presupuestal CRP</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
 <main>
-<div class="demo" id="aviso-demo"><strong>Datos de demostración.</strong> Las cifras de esta pestaña están escritas a mano en el código y todavía no provienen de SECOP II, Contraloría ni Registraduría.</div>
-<div class="demo" id="aviso-real" style="display:none;background:#D6FBEC;color:#047857;border-color:#A7F3D0"><strong>Datos reales.</strong> Esta pestaña no trae cifras propias: calcula todo a partir del reporte CRP que usted cargue, así que su fecha de corte es la del archivo.</div>
+<div class="demo" id="aviso"></div>
 <nav class="tabs"><button data-t="fiscal">Análisis fiscal</button><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="generador">Análisis Presupuestal CRP</button></nav>
 
 <section class="pane" id="fiscal">
@@ -85,41 +103,10 @@ tr:last-child td{border-bottom:0}
 </section>
 
 <section class="pane" id="vigilancia">
-<h2>Vigilancia fiscal</h2><p class="sub">Análisis de riesgo contractual · cruzamiento SECOP II × Boletín Responsables Fiscales</p>
-<div class="alert"><b>Riesgo crítico:</b> 2 terceros activos en lista de responsables fiscales con contratos en ejecución.</div>
-<div class="kpis">
-<div class="kpi"><small>Terceros analizados</small><b>1.247</b></div>
-<div class="kpi"><small>Riesgo crítico</small><b>2</b></div>
-<div class="kpi"><small>Riesgo alto</small><b>18</b></div>
-<div class="kpi"><small>Casos de fraccionamiento</small><b>34</b></div>
-</div>
-<div class="cols">
-<div class="panel"><h3>Terceros en nivel crítico</h3><table>
-<tr><th>Tercero</th><th>NIT</th><th>Riesgo</th><th class="r">Valor en curso</th></tr>
-<tr><td>ETB S.A.</td><td>860.001.022</td><td><span class="pill crit">Crítico</span></td><td class="r">$245.000 M</td></tr>
-<tr><td>CONSORCIO KLEAN BOGOTÁ</td><td>900.456.128</td><td><span class="pill crit">Crítico</span></td><td class="r">$89.500 M</td></tr>
-</table></div>
-<div class="panel"><h3>Indicadores de riesgo</h3><table>
-<tr><th>Indicador</th><th class="r">Valor</th></tr>
-<tr><td>Fraccionamiento de contratación (mismos terceros, múltiples órdenes)</td><td class="r">34 casos</td></tr>
-<tr><td>Terceros activos en múltiples entidades (red de contratación)</td><td class="r">156 terceros</td></tr>
-<tr><td>Objetos contractuales repetidos (auditable)</td><td class="r">67 patrones</td></tr>
-<tr><td>Contratistas con responsable fiscal sin depuración</td><td class="r">22 casos</td></tr>
-</table></div>
-</div>
-<div class="panel"><h3>Top 10 terceros de alto riesgo</h3><table>
-<tr><th>Tercero</th><th>Riesgo</th><th class="r">Contratos</th><th class="r">Valor total</th></tr>
-<tr><td>Transportes Bogotá Express</td><td><span class="pill alto">Alto</span></td><td class="r">23</td><td class="r">$45.200 M</td></tr>
-<tr><td>Consultoría Integral Distrital</td><td><span class="pill alto">Alto</span></td><td class="r">19</td><td class="r">$38.900 M</td></tr>
-<tr><td>Servicios Integrales Cundinamarca</td><td><span class="pill alto">Alto</span></td><td class="r">15</td><td class="r">$155.596 M</td></tr>
-<tr><td>Grupo de Inversiones PRC</td><td><span class="pill alto">Alto</span></td><td class="r">12</td><td class="r">$28.400 M</td></tr>
-<tr><td>Fiduprevisora S.A.</td><td><span class="pill alto">Alto</span></td><td class="r">18</td><td class="r">$95.200 M</td></tr>
-<tr><td>Constructora Andina S.A.</td><td><span class="pill medio">Medio</span></td><td class="r">8</td><td class="r">$244.494 M</td></tr>
-<tr><td>SOFASA (Soc. Fin. de Autos S.A.)</td><td><span class="pill medio">Medio</span></td><td class="r">6</td><td class="r">$12.800 M</td></tr>
-<tr><td>Consorcio Mantenimiento Vial</td><td><span class="pill medio">Medio</span></td><td class="r">14</td><td class="r">$34.500 M</td></tr>
-<tr><td>Consultoría de Proyectos Bogotá</td><td><span class="pill ok-p">Bajo</span></td><td class="r">4</td><td class="r">$8.900 M</td></tr>
-<tr><td>Mantenimiento Infraestructura Local</td><td><span class="pill ok-p">Bajo</span></td><td class="r">5</td><td class="r">$11.200 M</td></tr>
-</table></div>
+<h2>Vigilancia fiscal</h2>
+<p class="sub">Cruce de contratos de SECOP II contra el Boletín de Responsables Fiscales de la Contraloría</p>
+<div id="vf-estado" class="vf-cargando">Cargando el último corte…</div>
+<div id="vf-contenido" hidden></div>
 </section>
 
 <section class="pane" id="generador">
@@ -140,18 +127,244 @@ tr:last-child td{border-bottom:0}
 
 </main>
 <script>
+// Cada pestaña declara de dónde salen sus cifras. Si una deja de ser
+// demostración, se cambia aquí y el aviso deja de mentir.
+const ORIGEN = {
+  fiscal: {real:false, txt:'<strong>Datos de demostración.</strong> Las cifras de esta pestaña están escritas a mano en el código y todavía no provienen de SECOP II, Contraloría ni Registraduría.'},
+  vigilancia: {real:true, txt:'<strong>Datos reales.</strong> Cruce de SECOP II contra el Boletín de Responsables Fiscales, generado por <code>etl_vigilancia_fiscal.py</code>. La fecha de corte aparece al inicio de la pestaña.'},
+  generador: {real:true, txt:'<strong>Datos reales.</strong> Esta pestaña no trae cifras propias: calcula todo a partir del reporte CRP que usted cargue, así que su fecha de corte es la del archivo.'}
+};
 function show(id){
   if(!document.getElementById(id))id='fiscal';
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));
   document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));
-  // el aviso depende del origen de los datos de cada pestaña
-  const real = id==='generador';
-  document.getElementById('aviso-demo').style.display = real?'none':'block';
-  document.getElementById('aviso-real').style.display = real?'block':'none';
+  const o = ORIGEN[id] || ORIGEN.fiscal, av = document.getElementById('aviso');
+  av.innerHTML = o.txt;
+  av.style.cssText = o.real
+    ? 'background:#D6FBEC;color:#047857;border-color:#A7F3D0'
+    : '';
   history.replaceState(null,'','#'+id);
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.t));
 show(location.hash.slice(1));
+
+/* ============================================================
+   VIGILANCIA FISCAL — render desde data/modulos/vigilancia_fiscal.json
+   El JSON lo produce etl_vigilancia_fiscal.py. La página no inventa
+   ninguna cifra: si no hay snapshot, lo dice.
+   ============================================================ */
+(function(){
+  "use strict";
+  const FUENTE = 'data/modulos/vigilancia_fiscal.json';
+  const DIAS_VIEJO = 30;
+  let cargado = false;
+
+  // Los nombres vienen de datasets públicos: se escapan siempre.
+  const esc = s => String(s==null?'':s).replace(/[&<>"']/g,
+    c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  const plata = v => new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',
+    maximumFractionDigits:0}).format(Number(v)||0);
+  const corto = v => { v = Number(v)||0;
+    const a = Math.abs(v);
+    if(a>=1e12) return '$'+(v/1e12).toFixed(1)+' B';
+    if(a>=1e9)  return '$'+(v/1e9).toFixed(1)+' MM';
+    if(a>=1e6)  return '$'+(v/1e6).toFixed(1)+' M';
+    return plata(v); };
+  const miles = n => new Intl.NumberFormat('es-CO').format(Number(n)||0);
+  const fecha = iso => { const d = new Date(iso);
+    return isNaN(d) ? String(iso||'—')
+      : d.toLocaleDateString('es-CO',{day:'numeric',month:'long',year:'numeric'}); };
+  const doc = d => { const s = String(d||'').replace(/\D/g,'');
+    return s.length>6 ? s.replace(/\B(?=(\d{3})+(?!\d))/g,'.') : (s||'—'); };
+
+  async function cargar(){
+    if(cargado) return;
+    cargado = true;
+    const caja = document.getElementById('vf-estado');
+    const cont = document.getElementById('vf-contenido');
+    try{
+      const r = await fetch(FUENTE, {cache:'no-store'});
+      if(r.status === 404) return vacio(caja);
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      const d = await r.json();
+      if(!d || !d.meta || !d.kpis) throw new Error('El archivo no tiene la estructura esperada.');
+      cont.innerHTML = pintar(d);
+      cont.hidden = false;
+      caja.style.display = 'none';
+    }catch(err){
+      cargado = false;              // permite reintentar al volver a la pestaña
+      caja.className = 'vf-error';
+      caja.innerHTML = '<b>No se pudo cargar el corte de vigilancia fiscal.</b>'+
+        esc(err.message)+'<br><br>Si abrió el archivo con doble clic, el navegador '+
+        'bloquea la lectura de datos locales. Levante un servidor: '+
+        '<code>python -m http.server</code> y entre por <code>http://localhost:8000</code>.';
+    }
+  }
+
+  function vacio(caja){
+    caja.className = 'vf-vacio';
+    caja.innerHTML =
+      '<b>Todavía no hay un corte generado.</b>'+
+      'Esta pestaña no trae cifras propias: muestra lo que produzca el ETL contra '+
+      'SECOP II y el Boletín de Responsables Fiscales. Para generar el primer corte, '+
+      'desde la raíz del repositorio:'+
+      '<pre>pip install requests\n'+
+      'python etl_vigilancia_fiscal.py --municipio Soacha --desde 2020-01-01</pre>'+
+      'Escribe <code>data/modulos/vigilancia_fiscal.json</code>. Haga commit de ese '+
+      'archivo y la pestaña queda publicada con su fecha de corte.<br><br>'+
+      'Conviene pedir un token gratuito en datos.gov.co y exportarlo como '+
+      '<code>SOCRATA_APP_TOKEN</code>: sin él la API limita las consultas anónimas.';
+  }
+
+  function pintar(d){
+    const m = d.meta, k = d.kpis;
+    const dias = Math.floor((Date.now() - new Date(m.generado_en).getTime())/86400000);
+    const viejo = !isNaN(dias) && dias > DIAS_VIEJO;
+
+    let h = '';
+
+    h += '<div class="vf-corte'+(viejo?' viejo':'')+'">'+
+      '<b>Corte: '+esc(fecha(m.generado_en))+'</b>'+
+      '<span>'+esc(m.municipio||'')+'</span>'+
+      '<span>Contratos firmados entre '+esc((m.ventana||{}).desde)+' y '+esc((m.ventana||{}).hasta)+'</span>'+
+      (viejo ? '<span style="color:var(--warn);font-weight:600">Este corte tiene '+dias+
+               ' días: vuelva a ejecutar el ETL</span>' : '')+
+      '</div>';
+
+    h += '<div class="vf-aviso"><b>Estas alertas no prueban una inhabilidad.</b> '+
+      esc(m.advertencia||'')+
+      (m.certificado_oficial ? ' <a href="'+esc(m.certificado_oficial)+
+        '" target="_blank" rel="noopener">Certificado de antecedentes fiscales de la Contraloría</a>.' : '')+
+      '</div>';
+
+    h += '<div class="kpis">'+
+      kpi('Contratos analizados', miles(k.contratos))+
+      kpi('Contratistas', miles(k.contratistas))+
+      kpi('Valor contratado', corto(k.valor_total))+
+      kpi('Coincidencias en el boletín', miles(k.alertas_boletin))+
+      kpi('Con contrato en ejecución', miles(k.riesgo_critico))+
+      kpi('Concentración top 3', String(k.concentracion_top3??0).replace('.',',')+' %')+
+      '</div>';
+
+    // --- coincidencias con el boletín
+    const al = d.alertas_boletin||[];
+    h += '<div class="panel"><h3>Contratistas que coinciden con el Boletín de Responsables Fiscales '+
+         '('+miles(al.length)+')</h3>';
+    if(!al.length){
+      h += '<p class="note">Ningún contratista del período cruzó con el boletín. '+
+           'Es un resultado posible y bueno; no significa que falten datos.</p>';
+    }else{
+      h += '<table><tr><th>Contratista</th><th>Documento</th><th>Sanción en el boletín</th>'+
+           '<th class="r">Contratos</th><th class="r">Valor</th><th>Nivel</th></tr>';
+      al.forEach(a=>{
+        const s = (a.sanciones&&a.sanciones[0])||{};
+        const pill = a.nivel==='critico'
+          ? '<span class="pill crit">Contrato en ejecución</span>'
+          : '<span class="pill alto">Sin contrato activo</span>';
+        h += '<tr><td><b>'+esc(a.nombre_secop)+'</b>'+
+             (a.posible_homonimo ? '<span class="verif">posible homónimo</span>' : '')+
+             (s.razon_social_boletin && a.posible_homonimo
+               ? '<span class="vf-sub">En el boletín figura: '+esc(s.razon_social_boletin)+'</span>' : '')+
+             '</td>'+
+             '<td>'+esc(doc(a.documento))+'<span class="vf-sub">'+esc(a.tipo_documento||'')+'</span></td>'+
+             '<td>'+esc(s.tipo||'—')+
+             (s.monto ? '<span class="vf-sub">'+esc(plata(s.monto))+'</span>' : '')+
+             (s.fecha_firmeza ? '<span class="vf-sub">En firme: '+esc(s.fecha_firmeza)+'</span>' : '')+
+             '</td>'+
+             '<td class="r">'+miles((a.contratos||[]).length)+
+             (a.contratos_activos ? '<span class="vf-sub">'+miles(a.contratos_activos)+' activos</span>' : '')+
+             '</td>'+
+             '<td class="r">'+esc(corto(a.valor_total))+'</td>'+
+             '<td>'+pill+'</td></tr>';
+      });
+      h += '</table>';
+    }
+    h += '</div>';
+
+    // --- indicios de fraccionamiento
+    const fr = d.indicios_fraccionamiento||[];
+    const par = m.parametros||{};
+    h += '<div class="panel"><h3>Indicios de fraccionamiento ('+miles(fr.length)+')</h3>'+
+         '<p class="note" style="margin:0 0 12px">Mismo contratista y misma entidad, '+
+         (par.fraccionamiento_minimo_contratos||3)+' contratos o más por contratación directa '+
+         'o mínima cuantía dentro de '+(par.fraccionamiento_ventana_dias||90)+' días. '+
+         'Es un patrón que amerita revisión, no una determinación jurídica.</p>';
+    if(!fr.length){
+      h += '<p class="note">Sin patrones que cumplan ese umbral en el período.</p>';
+    }else{
+      h += '<table><tr><th>Entidad</th><th>Contratista</th><th class="r">Contratos</th>'+
+           '<th class="r">En días</th><th class="r">Valor sumado</th></tr>';
+      fr.forEach(f=>{
+        h += '<tr><td>'+esc(f.entidad)+'</td>'+
+             '<td>'+esc(f.contratista)+'<span class="vf-sub">'+esc(doc(f.documento))+' · '+
+             esc((f.modalidades||[]).join(', '))+'</span></td>'+
+             '<td class="r">'+miles(f.contratos)+'</td>'+
+             '<td class="r">'+miles(f.dias)+'</td>'+
+             '<td class="r">'+esc(corto(f.valor_total))+'</td></tr>';
+      });
+      h += '</table>';
+    }
+    h += '</div>';
+
+    // --- concentración y red de contratación
+    h += '<div class="cols">';
+    const co = d.concentracion||[];
+    h += '<div class="panel"><h3>Concentración de contratación</h3>';
+    if(!co.length){ h += '<p class="note">Sin datos.</p>'; }
+    else{
+      h += '<table><tr><th>Contratista</th><th>Participación</th><th class="r">Valor</th></tr>';
+      co.forEach(c=>{
+        h += '<tr><td>'+esc(c.contratista||'—')+
+             '<span class="vf-sub">'+esc(doc(c.documento))+' · '+miles(c.contratos)+' contratos</span></td>'+
+             '<td><div class="pct"><div class="meter"><i style="width:'+
+             Math.max(0,Math.min(100,Number(c.participacion)||0))+'%"></i></div>'+
+             esc(String(c.participacion).replace('.',','))+' %</div></td>'+
+             '<td class="r">'+esc(corto(c.valor_total))+'</td></tr>';
+      });
+      h += '</table>';
+    }
+    h += '</div>';
+
+    const me = d.multi_entidad||[];
+    h += '<div class="panel"><h3>Contratistas en varias entidades</h3>';
+    if(!me.length){ h += '<p class="note">Ningún contratista aparece en dos o más entidades.</p>'; }
+    else{
+      h += '<table><tr><th>Contratista</th><th class="r">Entidades</th><th class="r">Valor</th></tr>';
+      me.forEach(x=>{
+        h += '<tr><td>'+esc(x.contratista||'—')+
+             '<span class="vf-sub">'+esc((x.nombres_entidades||[]).slice(0,2).join(' · '))+
+             ((x.nombres_entidades||[]).length>2 ? ' y '+((x.nombres_entidades.length)-2)+' más' : '')+
+             '</span></td>'+
+             '<td class="r">'+miles(x.entidades)+'</td>'+
+             '<td class="r">'+esc(corto(x.valor_total))+'</td></tr>';
+      });
+      h += '</table>';
+    }
+    h += '</div></div>';
+
+    // --- procedencia
+    h += '<div class="vf-fuentes"><b>Fuentes de este corte</b><br>';
+    (m.fuentes||[]).forEach(f=>{
+      h += '· '+esc(f.nombre)+' — '+esc(f.entidad)+', dataset <code>'+esc(f.dataset)+'</code>, '+
+           miles(f.registros)+' registros'+
+           (f.ultima_actualizacion_registro ? ', última actualización en la fuente '+
+             esc(f.ultima_actualizacion_registro) : '')+
+           (f.url ? ' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener">ver dataset</a>' : '')+
+           '<br>';
+    });
+    h += 'Generado por <code>etl_vigilancia_fiscal.py</code> el '+esc(fecha(m.generado_en))+'.</div>';
+
+    return h;
+  }
+
+  const kpi = (t,v) => '<div class="kpi"><small>'+esc(t)+'</small><b>'+esc(v)+'</b></div>';
+
+  // carga perezosa: solo al entrar a la pestaña
+  const btn = document.querySelector('.tabs button[data-t="vigilancia"]');
+  if(btn) btn.addEventListener('click', cargar);
+  if(location.hash.slice(1) === 'vigilancia') cargar();
+})();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
