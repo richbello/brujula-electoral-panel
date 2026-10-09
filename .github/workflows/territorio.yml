@@ -67,8 +67,12 @@ jobs:
           print(f"| Valor contratado | ${k['valor_total']:,.0f} |")
           print(f"| Obras vencidas y abiertas | {k['obras_vencidas']:,} |")
           print(f"| Valor vencido | ${k['valor_vencido']:,.0f} |")
-          print(f"| Saldo sin pagar | ${k['pendiente_vencido']:,.0f} |")
+          print(f"| Con pago reportado | {k.get('vencidas_con_pago_reportado', 0):,} |")
           print(f"| Sectores nombrados | {k['sectores']:,} |")
+          print(f"| Contratistas en el indice | {k.get('contratistas', 0):,} |")
+          if k.get("pct_contratos_con_pago") is not None:
+              print(f"\n> SECOP reporta valor pagado en solo el **{k['pct_contratos_con_pago']}%** "
+                    f"de los contratos, asi que donde falta no se calcula saldo pendiente.")
           print(f"\n> Cobertura: el **{c['pct_valor']}%** del valor nombra un lugar. "
                 f"El resto son contratos de alcance municipal o sin lugar en el objeto, "
                 f"asi que el desglose por sector es parcial.")
