@@ -39,3 +39,7 @@ yt_scraper_soacha.py
 yt_scraper_soacha_v3.py
 
 22_youtube_sentimiento_formato_pagina.py
+
+# === Backups locales ===
+*.bak
+_backup*/
