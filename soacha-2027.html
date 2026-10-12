@@ -151,6 +151,44 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
 .quote.neg{background:var(--down-soft);color:#A3153A}
 .quote .qmark{font-weight:700;flex:0 0 auto}
 
+/* ---- agenda del candidato ---- */
+.ag-note{font-size:12.5px;color:var(--muted);margin:0 0 14px;line-height:1.5}
+.ag-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.ag-kpi{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.ag-kpi b{display:block;font-family:"Archivo";font-size:21px;line-height:1.1;color:var(--ink-2)}
+.ag-kpi span{font-size:11px;color:var(--muted-2)}
+.ag-row{display:grid;grid-template-columns:132px 1fr 40px 58px;align-items:center;gap:10px;
+  padding:7px 0;font-size:13px}
+.ag-name{font-weight:500}
+.ag-track{height:9px;background:var(--paper);border-radius:999px;overflow:hidden}
+.ag-fill{height:100%;border-radius:999px;background:var(--ink-2);transition:width .6s cubic-bezier(.2,.7,.3,1)}
+.ag-pct{text-align:right;font-family:"Archivo";font-weight:700;font-size:13px;color:var(--muted)}
+.ag-sc{text-align:right;font-family:"Archivo";font-weight:700;font-size:13px}
+.ag-sc.na{color:var(--muted-2);font-weight:500;font-size:11px}
+.ag-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.ag-chip{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--paper);
+  border:1px solid var(--line);color:var(--text)}
+.ag-chip b{font-family:"Archivo";color:var(--ink-2)}
+@media(max-width:560px){
+  .ag-kpis{grid-template-columns:1fr 1fr}
+  .ag-row{grid-template-columns:96px 1fr 34px 50px;gap:7px;font-size:12px}
+}
+
+/* ---- tabla de videos analizados ---- */
+.vids{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.vid{display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:center;
+  padding:11px 14px;border-top:1px solid var(--line);font-size:13px}
+.vid:first-child{border-top:0}
+.vid:hover{background:#FAF8FF}
+.vid-date{color:var(--muted-2);font-size:11px;font-variant-numeric:tabular-nums}
+.vid-tit{font-weight:500;line-height:1.3;min-width:0}
+.vid-tit a{color:inherit;text-decoration:none}
+.vid-tit a:hover{text-decoration:underline}
+.vid-tit small{display:block;color:var(--muted-2);font-weight:400;font-size:11px;margin-top:2px}
+.vid-score{font-family:"Archivo";font-weight:700;font-size:14px;padding:2px 9px;border-radius:7px;color:#fff}
+.vid-score.na{background:var(--paper);color:var(--muted-2);font-weight:500}
+@media(max-width:560px){.vid{grid-template-columns:52px 1fr auto;gap:9px}}
+
 .tox-line{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-top:4px}
 .tox-dot{width:10px;height:10px;border-radius:50%}
 
@@ -288,6 +326,66 @@ function postBlock(p){
   </div>`;
 }
 
+function nFmt(n){
+  if(n>=1e6) return (n/1e6).toFixed(1).replace('.0','')+'M';
+  if(n>=1e3) return (n/1e3).toFixed(1).replace('.0','')+'k';
+  return String(n||0);
+}
+
+function vidRow(v){
+  const an = v.comentarios_analizados||0;
+  const col = an ? scoreColor(v.score) : null;
+  const fecha = (v.fecha||'').slice(5).replace('-','/');
+  return `<div class="vid">
+    <div class="vid-date">${fecha}</div>
+    <div class="vid-tit">
+      <a href="${v.url}" target="_blank" rel="noopener">${v.titulo}</a>
+      <small>${nFmt(v.vistas)} vistas · ${an} comentarios${v.tema_agenda?` · ${v.tema_agenda}`:''}${v.encuadre?` · ${v.encuadre}`:''}</small>
+    </div>
+    ${an ? `<div class="vid-score" style="background:${col}">${fmt(v.score)}</div>`
+         : `<div class="vid-score na">s/d</div>`}
+  </div>`;
+}
+
+function agendaBlock(a){
+  if(!a || !a.total_videos) return '';
+  const max = Math.max(...a.temas.map(t=>t.videos), 1);
+
+  const temas = a.temas.map(t=>{
+    const sc = (t.score===null||t.score===undefined)
+      ? '<div class="ag-sc na">s/d</div>'
+      : `<div class="ag-sc" style="color:${scoreColor(t.score)}">${fmt(t.score)}</div>`;
+    return `<div class="ag-row">
+      <div class="ag-name">${t.tema}</div>
+      <div class="ag-track"><div class="ag-fill" style="width:${(t.videos/max)*100}%"></div></div>
+      <div class="ag-pct">${t.pct}%</div>
+      ${sc}
+    </div>`;
+  }).join('');
+
+  const chips = (a.encuadres||[]).map(e=>
+    `<span class="ag-chip">${e.encuadre} <b>${e.pct}%</b></span>`).join('');
+
+  return `<div class="section-t">Agenda del candidato</div>
+    <p class="ag-note">De qué habla él, no qué opinan de él. Sale del título y la descripción
+    de cada video, así que cubre los ${a.total_videos} publicados entre ${a.desde} y ${a.hasta},
+    incluidos los que nadie comentó. La columna de la derecha es el sentimiento de los
+    comentarios en ese tema, cuando los hay.</p>
+    <div class="ag-kpis">
+      <div class="ag-kpi"><b>${a.total_videos}</b><span>videos publicados</span></div>
+      <div class="ag-kpi"><b>${nFmt(a.vistas_totales)}</b><span>vistas acumuladas</span></div>
+      <div class="ag-kpi"><b>${a.pct_sin_conversacion}%</b><span>sin un solo comentario</span></div>
+    </div>
+    ${temas}
+    <div class="ag-chips">${chips}</div>`;
+}
+
+function videosBlock(videos){
+  if(!videos || !videos.length) return '';
+  return `<div class="section-t">${videos.length} videos del canal</div>
+    <div class="vids">${videos.map(vidRow).join('')}</div>`;
+}
+
 function candCard([nombre,d]){
   const s=d.sentimiento_promedio, col=scoreColor(s);
   const toxCol = d.alerta_toxicidad ? '#FF2D6F' : (d.toxicidad_pct>15?'#F97316':'#00C97B');
@@ -313,6 +411,7 @@ function candCard([nombre,d]){
       <div class="plats">
         ${platBlock('facebook',d.por_plataforma&&d.por_plataforma.facebook)}
         ${platBlock('youtube', d.por_plataforma&&d.por_plataforma.youtube)}
+        ${platBlock('tiktok',  d.por_plataforma&&d.por_plataforma.tiktok)}
       </div>
 
       <div class="section-t">Temas de conversación</div>
@@ -334,6 +433,10 @@ function candCard([nombre,d]){
       <div class="section-t">Publicaciones que marcan la conversación</div>
       ${(d.posts_destacados||[]).map(postBlock).join('') || '<p style="color:var(--muted);font-size:13px">Sin posts destacados en esta ventana.</p>'}
 
+      ${agendaBlock(d.agenda)}
+
+      ${videosBlock(d.videos)}
+
     </div>
   </div>`;
 }
@@ -348,12 +451,16 @@ async function cargar(){
     const cands = data.candidatos || {};
 
     // meta
+    const meta = data.meta || {};
+    const ventana = data.ventana_texto || meta.ventana ||
+                    `últimos ${data.ventana_dias||30} días`;
     document.getElementById('heroMeta').innerHTML =
       `<span><b>${data.corporacion||'Soacha 2027'}</b></span>`+
-      `<span>Ventana: <b>últimos ${data.ventana_dias||30} días</b></span>`+
-      `<span>Actualizado: <b>${data.actualizado||'—'}</b></span>`;
+      `<span>Ventana: <b>${ventana}</b></span>`+
+      `<span>Actualizado: <b>${data.actualizado||(meta.generado||'').slice(0,16).replace('T',' ')||'—'}</b></span>`;
 
-    if(data.fuente==='demostracion') document.getElementById('demoBanner').style.display='flex';
+    const fuente = data.fuente || '';
+    if(fuente==='demostracion' || !fuente) document.getElementById('demoBanner').style.display='flex';
 
     renderCompare(cands);
 
