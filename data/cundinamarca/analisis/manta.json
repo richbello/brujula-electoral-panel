@@ -1,0 +1,245 @@
+{
+  "resumen": {
+    "contratos": 423,
+    "valor_total": 13126854309.68,
+    "entidades": 2,
+    "proveedores": 141
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 72.8132,
+    "pct_directa_valor": 30.6856,
+    "hhi": 277.7900328661878,
+    "top1_proveedor_pct": 8.386887230372766,
+    "top5_proveedores_pct": 29.572014867801634,
+    "pareto_proveedores_80pct_valor": 46,
+    "pct_con_adicion": 28.132387706855795,
+    "top_proveedores": [
+      {
+        "proveedor": "UNION TEMPORAL ILUMINACION ESTADIO 2025",
+        "documento": "902015181",
+        "valor": 944761058.0,
+        "contratos": 1,
+        "participacion_pct": 8.3869
+      },
+      {
+        "proveedor": "FUNDACIÓN PARA EL DESARROLLO INTEGRAL SOCIO-ECONÓMICO, CULTURAL, DEPORTIVO, TÉCNICO, CIENTÍFICO, AGROPECUARIO, AMBIENTAL",
+        "documento": "900989554",
+        "valor": 722858000.0,
+        "contratos": 6,
+        "participacion_pct": 6.417
+      },
+      {
+        "proveedor": "PLANTAR FUTURO INVERSIONES S.A.S.",
+        "documento": "900058982",
+        "valor": 679119761.0,
+        "contratos": 2,
+        "participacion_pct": 6.0287
+      },
+      {
+        "proveedor": "GRUPO FAO SAS",
+        "documento": "901484861",
+        "valor": 524170660.0,
+        "contratos": 1,
+        "participacion_pct": 4.6532
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 460301169.99,
+        "contratos": 11,
+        "participacion_pct": 4.0862
+      },
+      {
+        "proveedor": "ALBA CLEMENCIA AYALA MARTIN",
+        "documento": "20743601",
+        "valor": 428754999.0,
+        "contratos": 18,
+        "participacion_pct": 3.8062
+      },
+      {
+        "proveedor": "CONTECOR S.A.S",
+        "documento": "900702893",
+        "valor": 341863329.0,
+        "contratos": 1,
+        "participacion_pct": 3.0348
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 283231000.0,
+        "contratos": 2,
+        "participacion_pct": 2.5143
+      },
+      {
+        "proveedor": "E.S.E REGIÓN DE SALUD CENTRO ORIENTE ALMEIDAS",
+        "documento": "860024766",
+        "valor": 264458963.0,
+        "contratos": 5,
+        "participacion_pct": 2.3477
+      },
+      {
+        "proveedor": "GRUPO CARIOS S.A.S",
+        "documento": "901672834",
+        "valor": 255000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.2637
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9525362",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "UNION TEMPORAL PUEBLOS DORADOS 26",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1127144830.15,
+        "fecha_firma": "2026-06-05",
+        "objeto": "MEJORAMIENTO DEL ESPACIO PÚBLICO Y EMBELLECIMIENTO DE. FACHADAS DEL MUNICIPIO DE MANTA; CONFORME AL PROYECTO DEPARTAMENTAL PUEBLOS DORADOS."
+      },
+      {
+        "id": "CO1.PCCNTR.8681060",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "UNION TEMPORAL ILUMINACION ESTADIO 2025",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 944761058.0,
+        "fecha_firma": "2025-12-15",
+        "objeto": "INSTALACIÓN DE LA INFRAESTRUCTURA Y SISTEMA DE ILUMINACIÓN PARA EL ESTADIO DE FUTBOL UBICADO EN EL CASCO URBANO DEL MUNICIPIO DE MANTA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9514567",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "GRUPO FAO SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 524170660.0,
+        "fecha_firma": "2026-07-10",
+        "objeto": "ADECUACIÓN Y CONSTRUCCIÓN DE ANDENES SOBRE LA CALLE 3 Y CARRERA 6 EN EL MUNICIPIO DE MANTA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9458848",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "UNION TEMPORAL LUMIPARQUE 26",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 373968115.0,
+        "fecha_firma": "2026-05-12",
+        "objeto": "MEJORAMIENTO DEL SISTEMA DE ILUMINACIÓN DEL PARQUE PRINCIPAL DEL MUNICIPIO DE MANTA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9409759",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "CONSORCIO INTER MANTA 2026",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 361001157.0,
+        "fecha_firma": "2026-03-30",
+        "objeto": "CONTRATAR LAS INTERVENTORIAS TECNICAS; ADMINISTRATIVAS; JURIDICAS; AMBIENTALES Y FINANCIERAS DE LOS PROYECTOS QUE LO REQUIERAN EN EL MUNICIPIO DE MANTA; CUNIDNAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE MANTA CUNDINAMARCA",
+        "contratos": 6,
+        "valor": 27951247.0
+      },
+      {
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "contratos": 417,
+        "valor": 13098903062.68
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 15,
+    "valor_obras": 5082958280.13,
+    "obras_vencidas_abiertas": 8,
+    "valor_obras_vencidas_abiertas": 1470804866.98,
+    "pct_obras_vencidas_abiertas": 53.333333333333336,
+    "pct_pagado_obras_vencidas_abiertas": 44.4947,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8474259",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "PLANTAR FUTURO INVERSIONES S.A.S.",
+        "estado": "Modificado",
+        "valor": 340000000.0,
+        "pagado": 340000000.0,
+        "fecha_fin": "2026-01-13",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA QUIMBITA SECTOR ESCUELA; A LA VEREDA BERMEJAL SECTOR ALTO DE LA LUMBRE Y A LA VEREDA PALMAR ARRIBA SECTOR LOS PINOS DEL MUNICIPIO DE MANTA; CUNDINAMARCA; SEGÚN LOS CONVENIOS ICCU-385-2025; ICCU-387-2025 E ICCU-392-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9514324",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "PLANTAR FUTURO INVERSIONES S.A.S.",
+        "estado": "Modificado",
+        "valor": 339119761.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-11",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA CUBIA SECTOR EL ARRAYAN; A LA VEREDA BERMEJAL SECTOR EL COGOLLO Y A LA VEREDA CUBIA SECTOR LA GRANJA DEL MUNICIPIO DE MANTA; CUNDINAMARCA; SEGÚN LOS CONVENIOS ICCU-384-2025; ICCU-389-2025 E ICCU-386-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8119951",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "GEOAMBIENTE S.A.S",
+        "estado": "Modificado",
+        "valor": 223116382.73,
+        "pagado": 195756474.12,
+        "fecha_fin": "2025-12-15",
+        "objeto": "DESARROLLO DE ACCIONES DE CONSERVACION DE AREAS DE IMPORTANCIA ESTRATEGICA PARA LA PROTECCIÓN DEL RECURSO HIDRICO DEL MUNICIPIO DE MANTA"
+      },
+      {
+        "id": "CO1.PCCNTR.7863472",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "IP INVERSIONES Y PROYECTOS S.A.S.",
+        "estado": "Modificado",
+        "valor": 200000000.0,
+        "pagado": 118673871.0,
+        "fecha_fin": "2025-10-19",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO; A LA VEREDA FUCHATOQUE SECTOR SALÓN COMUNAL DEL MUNICIPIO DE MANTA EN EL MARCO DEL CONVENIO; NO. 930 DE 2024 Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA MINAS SECTOR LA ENRAMADA DEL MUNICIPIO DE MANTA; CUNDINAMARCA EN EL MARCO DEL CONVENIO; NO. 710 DE 2024 SUSCRITO CON EL INSTITUTO DE CONCESIONES CUNDINAMARCA - ICCU"
+      },
+      {
+        "id": "CO1.PCCNTR.8319630",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "COLING CONSTRUCTORES S.A.S.",
+        "estado": "Modificado",
+        "valor": 138725340.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-15",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO; A LA VEREDA FUCHATOQUE SECTOR ANTIGUO MATADERO DEL MUNICIPIO DE MANTA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8548159",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "CONSORCIO ZORQUIN 2025",
+        "estado": "En ejecución",
+        "valor": 126555550.17,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-13",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO; A LA VEREDA  MADRID SECTOR EL ZORQUIN DEL MUNICIPIO DE MANTA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9428100",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "JC INGENIERIA Y CONSULTORIA SAS",
+        "estado": "Modificado",
+        "valor": 99988588.08,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-11",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO; A LA VEREDA JUAN GORDO SECTOR LA ESMERALDA; DEL MUNICIPIO DE MANTA"
+      },
+      {
+        "id": "CO1.PCCNTR.8020265",
+        "entidad": "MUNICIPIO MANTA CUNDINAMARCA",
+        "proveedor": "jvale ingenieria",
+        "estado": "En ejecución",
+        "valor": 3299245.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-07-11",
+        "objeto": "MANTENIMIENTO DE LA RED HIDROSANITARIA DE LA ESTACION DE POLICIA DEL MUNICIPIO MANTA CUNDINAMARCA ALCALDIA"
+      }
+    ]
+  },
+  "municipio": "Manta",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 50.0,
+  "nivel": "medio",
+  "posicion": 36.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,125 @@
+{
+  "resumen": {
+    "contratos": 12,
+    "valor_total": 2362008171.0,
+    "entidades": 1,
+    "proveedores": 5
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 3253.908874215329,
+    "top1_proveedor_pct": 41.07979743309703,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "Fundación Casa San Cayetano",
+        "documento": "860045407",
+        "valor": 970308172.0,
+        "contratos": 3,
+        "participacion_pct": 41.0798
+      },
+      {
+        "proveedor": "FAINSCO ESAL",
+        "documento": "901149702",
+        "valor": 877000000.0,
+        "contratos": 2,
+        "participacion_pct": 37.1294
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 239999999.0,
+        "contratos": 2,
+        "participacion_pct": 10.1608
+      },
+      {
+        "proveedor": "FUNDACION MANANTIAL DE VIDA",
+        "documento": "808003436",
+        "valor": 206000000.0,
+        "contratos": 4,
+        "participacion_pct": 8.7214
+      },
+      {
+        "proveedor": "FUNDACION EDUCATIVA METROPOLITANA UTEM",
+        "documento": "900117542",
+        "valor": 68700000.0,
+        "contratos": 1,
+        "participacion_pct": 2.9085
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6595554",
+        "entidad": "MUNICIPIO DE TOCAIMA",
+        "proveedor": "FAINSCO ESAL",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 775000000.0,
+        "fecha_firma": "2024-08-01",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; FINANCIEROS Y LOGÍSTICOS PARA EL DESARROLLO DEL EVENTO FERIAS Y FIESTAS VI FESTIVAL BAJO EL CIELO PANCHE EN EL MUNICIPIO DE TOCAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9338201",
+        "entidad": "MUNICIPIO DE TOCAIMA",
+        "proveedor": "Fundación Casa San Cayetano",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 509162500.0,
+        "fecha_firma": "2026-02-16",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA EJECUCIÓN DE ACCIONES ORIENTADAS A LA PROTECCIÓN Y ATENCIÓN INTEGRAL DE LOS ADULTOS MAYORES EN SITUACIÓN DE ABANDONO DEL MUNICIPIO DE TOCAIMA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7527515",
+        "entidad": "MUNICIPIO DE TOCAIMA",
+        "proveedor": "Fundación Casa San Cayetano",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 272000000.0,
+        "fecha_firma": "2025-02-21",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA PROTECCIÓN Y ASISTENCIA INTEGRAL DE ADULTOS MAYORES EN ABANDONO DEL MUNICIPIO DE TOCAIMA-CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6393254",
+        "entidad": "MUNICIPIO DE TOCAIMA",
+        "proveedor": "Fundación Casa San Cayetano",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 189145672.0,
+        "fecha_firma": "2024-06-04",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA PROTECCIÓN Y ASISTENCIA INTEGRAL DE ADULTOS MAYORES EN ABANDONO DEL MUNICIPIO DE TOCAIMA-CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6116228",
+        "entidad": "MUNICIPIO DE TOCAIMA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 149999999.0,
+        "fecha_firma": "2024-03-21",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; FINANCIEROS Y LOGÍSTICOS PARA EL DESARROLLO DEL EVENTO CUMPLEAÑOS 480 DEL MUNICIPIO DE TOCAIMA; PRESENTACIONES ARTÍSTICAS; CULTURALES Y FERIA DE EMPRENDEDORES EN EL MUNICIPIO DE TOCAIMA - CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE TOCAIMA",
+        "contratos": 12,
+        "valor": 2362008171.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Tocaima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

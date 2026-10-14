@@ -1,0 +1,160 @@
+{
+  "resumen": {
+    "contratos": 11,
+    "valor_total": 60159770.0,
+    "entidades": 1,
+    "proveedores": 10
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 72.7273,
+    "pct_directa_valor": 80.12,
+    "hhi": 1220.9449662643385,
+    "top1_proveedor_pct": 16.622403975281156,
+    "top5_proveedores_pct": 68.66608698803203,
+    "pareto_proveedores_80pct_valor": 6,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "ANDRES CASTILLO CANO-Consultoria Nacion Visible",
+        "documento": "79654889",
+        "valor": 10000000.0,
+        "contratos": 2,
+        "participacion_pct": 16.6224
+      },
+      {
+        "proveedor": "SEIL INGENIERÍA",
+        "documento": "900311610",
+        "valor": 9109360.0,
+        "contratos": 1,
+        "participacion_pct": 15.1419
+      },
+      {
+        "proveedor": "DIVA MAGALLY RODRIGUEZ NAVARRO",
+        "documento": "39581019",
+        "valor": 8000000.0,
+        "contratos": 1,
+        "participacion_pct": 13.2979
+      },
+      {
+        "proveedor": "LINDA CAROLINA VANEGAS ORTIZ",
+        "documento": "1070597294",
+        "valor": 7200000.0,
+        "contratos": 1,
+        "participacion_pct": 11.9681
+      },
+      {
+        "proveedor": "HENRY GONZALEZ PINEDA",
+        "documento": "2954351",
+        "valor": 7000000.0,
+        "contratos": 1,
+        "participacion_pct": 11.6357
+      },
+      {
+        "proveedor": "JOSUE BARRERA MURCIA",
+        "documento": "80406533",
+        "valor": 7000000.0,
+        "contratos": 1,
+        "participacion_pct": 11.6357
+      },
+      {
+        "proveedor": "ALVARO MANTILLA BERNAL",
+        "documento": "11226971",
+        "valor": 5000000.0,
+        "contratos": 1,
+        "participacion_pct": 8.3112
+      },
+      {
+        "proveedor": "TATIANA MOLINA TOVAR",
+        "documento": "1018451456",
+        "valor": 4000000.0,
+        "contratos": 1,
+        "participacion_pct": 6.649
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 1450610.0,
+        "contratos": 1,
+        "participacion_pct": 2.4113
+      },
+      {
+        "proveedor": "COMERCIALIZADORA DALIAM",
+        "documento": "20368900",
+        "valor": 1399800.0,
+        "contratos": 1,
+        "participacion_pct": 2.3268
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8595815",
+        "entidad": "PERSONERIA MUNICIPAL DE JERUSALEN",
+        "proveedor": "SEIL INGENIERÍA",
+        "modalidad": "Mínima cuantía",
+        "valor": 9109360.0,
+        "fecha_firma": "2025-11-19",
+        "objeto": "ADQUISICIÓN DE EQUIPOS Y ELEMENTOS INCLUYENDO LA INSTALACION NECESARIA; CON DESTINO A LAS DEPENDENCIAS DEL DESPACHO DE LA PERSONERIA MUNICIPAL DE JERUSALEN - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9826113",
+        "entidad": "PERSONERIA MUNICIPAL DE JERUSALEN",
+        "proveedor": "DIVA MAGALLY RODRIGUEZ NAVARRO",
+        "modalidad": "Contratación directa",
+        "valor": 8000000.0,
+        "fecha_firma": "2026-08-19",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA BRINDAR\nASESORÍA TÉCNICA Y JURÍDICA EN LA ACTUALIZACIÓN DEL\nMANUAL DE CONTRATACIÓN DE LA PERSONERÍA MUNICIPAL\nDE JERUSALÉN (CUNDINAMARCA); INCLUYENDO LA REVISIÓN\nDEL MARCO NORMATIVO APLICABLE; EL ANÁLISIS Y AJUSTE\nDE LOS PROCEDIMIENTOS DE CONTRATACIÓN; ASÍ COMO LA\nFORMULACIÓN DE RECOMENDACIONES PARA SU\nFORTALECIMIENTO; IMPLEMENTACIÓN Y MEJORA;\nCONFORME A LA NORMATIVA VIGENTE Y LOS PRINCIPIOS QUE\nRIGEN LA CONTRATACIÓN ESTATAL"
+      },
+      {
+        "id": "CO1.PCCNTR.8989004",
+        "entidad": "PERSONERIA MUNICIPAL DE JERUSALEN",
+        "proveedor": "LINDA CAROLINA VANEGAS ORTIZ",
+        "modalidad": "Contratación directa",
+        "valor": 7200000.0,
+        "fecha_firma": "2026-01-21",
+        "objeto": "PRESTACION DE SERVICIOS PROFESIONALES DE ASESORIA EN EL MANEJO DE LA INFORMACION CONTABLE Y PRESUPUESTAL ORIGINADA EN LA PERSONERIA MUNICIPAL DE JERUSALEN CUNDINAMARCA; PARA LA VIGENCIA 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.9279215",
+        "entidad": "PERSONERIA MUNICIPAL DE JERUSALEN",
+        "proveedor": "ANDRES CASTILLO CANO-Consultoria Nacion Visible",
+        "modalidad": "Contratación directa",
+        "valor": 7000000.0,
+        "fecha_firma": "2026-01-30",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES ESPECIALIZADOS PARA LA OPTIMIZACIÓN DE: PLATAFORMAS DE GOBIERNO EN LÍNEA Y FORTALECIMIENTO DEL ÍNDICE DE TRANSPARENCIA Y ACCESO A LA INFORMACIÓN; GESTIÓN DE COMPRA PÚBLICA EN LA PLATAFORMA SECOP II Y PROYECCIÓN DOCUMENTAL DE LOS PROCESOS DE ADQUISICIÓN DE BIENES Y SERVICIOS DE LA PERSONERÍA MUNICIPAL DE JERUSALÉN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.10043563",
+        "entidad": "PERSONERIA MUNICIPAL DE JERUSALEN",
+        "proveedor": "JOSUE BARRERA MURCIA",
+        "modalidad": "Contratación directa",
+        "valor": 7000000.0,
+        "fecha_firma": "2026-10-08",
+        "objeto": "PRESTACIÓN DE SERVICIOS PARA LA ELABORACIÓN DEL DIAGNÓSTICO INTEGRAL DE ARCHIVOS - DIA; PLAN INSTITUCIONAL DE ARCHIVOS - PINAR Y EL PROGRAMA DE GESTIÓN DOCUMENTAL - PGD; DE ACUERDO A LO ESTABLECIDO EN LA LEY 594 DEL 2000; DECRETO 1080 DE 2015 Y EL ACUERDO 001 DE 2024 Y DEMÁS NORMAS REGLAMENTARIAS"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE JERUSALEN",
+        "contratos": 11,
+        "valor": 60159770.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Jerusalén",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

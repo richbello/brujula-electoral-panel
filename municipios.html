@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electoral 2027 - Ranking Fiscal Cundinamarca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .metadata {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .metadata div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge {
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .badge-alto {
+            background: #fee;
+            color: #c33;
+        }
+
+        .badge-medio {
+            background: #fef3cd;
+            color: #856404;
+        }
+
+        .badge-bajo {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .filter-btn {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            background: #f5f5f5;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .table-wrapper {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        th:hover {
+            background: #e9ecef;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 14px;
+        }
+
+        tbody tr {
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+            cursor: pointer;
+        }
+
+        .pos-col {
+            font-weight: 600;
+            color: #667eea;
+            width: 80px;
+        }
+
+        .mun-col {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .num-col {
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .alert-col {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .level-col {
+            text-align: center;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 8px;
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .modal-header {
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .modal-header h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .modal-header .close {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .modal-header .close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .detail-section {
+            margin-bottom: 30px;
+        }
+
+        .detail-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .detail-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .detail-item label {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .detail-item .value {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .detail-item .value.pct::after {
+            content: '%';
+        }
+
+        .detail-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .detail-list li {
+            margin-bottom: 8px;
+        }
+
+        .detail-list strong {
+            color: #667eea;
+        }
+
+        .top-providers {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .provider-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .provider-item:last-child {
+            border-bottom: none;
+        }
+
+        .provider-name {
+            flex: 1;
+            font-weight: 500;
+            color: #333;
+            font-size: 13px;
+        }
+
+        .provider-value {
+            text-align: right;
+            font-weight: 600;
+            color: #667eea;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #667eea;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 12px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Electoral 2027 - Auditoría Fiscal Cundinamarca</h1>
+            <p class="subtitle">Análisis de contratos y gestión fiscal por municipio | Módulos 04 & 05 SECOP II</p>
+            <div class="metadata">
+                <div>📊 <strong id="n-ranked">--</strong> municipios en ranking (≥30 contratos)</div>
+                <div>📈 <strong id="total-contracts">--</strong> contratos analizados</div>
+                <div>💰 <strong id="total-value">--</strong> en valor contratado</div>
+                <div>📅 Período: <strong id="period">--</strong></div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="🔍 Busca municipio o entidad...">
+            </div>
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="alto">🔴 Riesgo Alto</button>
+            <button class="filter-btn" data-filter="medio">🟡 Riesgo Medio</button>
+            <button class="filter-btn" data-filter="bajo">🟢 Riesgo Bajo</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th class="pos-col">Pos.</th>
+                        <th class="mun-col">Municipio</th>
+                        <th class="num-col">Contratos</th>
+                        <th class="num-col">Valor Total</th>
+                        <th class="num-col">% Directa</th>
+                        <th class="num-col">HHI</th>
+                        <th class="num-col">Top 1 %</th>
+                        <th class="num-col">Obras Vencidas</th>
+                        <th class="alert-col">Índice</th>
+                        <th class="level-col">Nivel</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr><td colspan="10" class="loading">Cargando datos...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            Electoral 2027 · Análisis Fiscal Cundinamarca · XCOG SMART Intelligence
+        </footer>
+    </div>
+
+    <!-- Modal de detalles -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2 id="modal-municipio">--</h2>
+                    <span class="subtitle" id="modal-periodo">--</span>
+                </div>
+                <button class="close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div class="loading">Cargando detalles...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const MASTER_FILE = 'data/cundinamarca/analisis/indice_maestro.json';
+        const DETAIL_PATH = 'data/cundinamarca/analisis';
+
+        let allData = [];
+        let filteredData = [];
+        let currentFilter = 'all';
+
+        // Formateo de números
+        function fmt(n, decimals = 1) {
+            if (n === null || n === undefined || isNaN(n)) return '--';
+            if (typeof n === 'number') {
+                return n.toLocaleString('es-CO', {
+                    minimumFractionDigits: decimals,
+                    maximumFractionDigits: decimals
+                });
+            }
+            return n;
+        }
+
+        function fmtCurrency(n) {
+            if (n === null || n === undefined || isNaN(n)) return '--';
+            if (Math.abs(n) >= 1e9) return '$ ' + (n / 1e9).toLocaleString('es-CO', {maximumFractionDigits: 1}) + ' mil M';
+            if (Math.abs(n) >= 1e6) return '$ ' + (n / 1e6).toLocaleString('es-CO', {maximumFractionDigits: 0}) + ' M';
+            return '$ ' + Math.round(n).toLocaleString('es-CO');
+        }
+
+        // Cargar datos maestros
+        async function loadMaster() {
+            try {
+                const response = await fetch(MASTER_FILE);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+
+                allData = data.municipios || [];
+                document.getElementById('period').textContent = data.periodo_desde || '--';
+                document.getElementById('n-ranked').textContent =
+                    allData.filter(m => m.posicion !== null && m.posicion !== undefined).length;
+
+                const totalContratos = allData.reduce((s, m) => s + (m.contratos || 0), 0);
+                const totalValor = allData.reduce((s, m) => s + (m.valor_total || 0), 0);
+
+                document.getElementById('total-contracts').textContent = totalContratos.toLocaleString('es-CO');
+                document.getElementById('total-value').textContent = fmtCurrency(totalValor);
+
+                applyFilters();
+                renderTable();
+            } catch (e) {
+                document.getElementById('tbody').innerHTML =
+                    `<tr><td colspan="10" class="no-data">❌ No se pudo leer indice_maestro.json (${e.message}).<br>
+                     Abre la página con un servidor local: en PowerShell, dentro de la carpeta del proyecto,
+                     ejecuta <code>python -m http.server 8000</code> y entra a
+                     <code>http://localhost:8000/municipios.html</code></td></tr>`;
+            }
+        }
+
+        // Aplicar filtros
+        function applyFilters() {
+            const search = document.getElementById('search').value.toLowerCase();
+
+            filteredData = allData.filter(m => {
+                const matchSearch = !search ||
+                    (m.municipio || '').toLowerCase().includes(search) ||
+                    (m.archivo || '').toLowerCase().includes(search);
+
+                const matchLevel = currentFilter === 'all' || m.nivel === currentFilter;
+
+                return matchSearch && matchLevel;
+            });
+        }
+
+        // Renderizar tabla
+        function renderTable() {
+            const tbody = document.getElementById('tbody');
+
+            if (filteredData.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="10" class="no-data">Sin resultados</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = filteredData.map(m => {
+                const levelClass = `badge badge-${m.nivel || 'bajo'}`;
+                return `
+                    <tr onclick="showDetail('${(m.municipio || '').replace(/'/g, "\\'")}', '${(m.archivo || '').replace(/'/g, "\\'")}')">
+                        <td class="pos-col">${m.posicion || '--'}</td>
+                        <td class="mun-col">${m.municipio || '--'}</td>
+                        <td class="num-col">${fmt(m.contratos, 0)}</td>
+                        <td class="num-col">${fmtCurrency(m.valor_total)}</td>
+                        <td class="num-col">${fmt(m.pct_directa_valor)}</td>
+                        <td class="num-col">${fmt(m.hhi, 0)}</td>
+                        <td class="num-col">${fmt(m.top1_proveedor_pct)}</td>
+                        <td class="num-col">${fmt(m.obras_vencidas_abiertas, 0)}</td>
+                        <td class="alert-col"><strong>${fmt(m.indice_alertas)}</strong></td>
+                        <td class="level-col"><span class="${levelClass}">${m.nivel || '--'}</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Mostrar detalles del municipio
+        async function showDetail(municipio, archivo) {
+            const modal = document.getElementById('detailModal');
+            document.getElementById('modal-municipio').textContent = municipio;
+            document.getElementById('modal-body').innerHTML = '<div class="loading">Cargando detalles...</div>';
+            modal.classList.add('show');
+
+            try {
+                const filePath = `${DETAIL_PATH}/${archivo}`;
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const detail = await response.json();
+
+                renderDetail(detail);
+            } catch (e) {
+                document.getElementById('modal-body').innerHTML =
+                    `<div class="no-data">❌ Error cargando ${archivo}: ${e.message}</div>`;
+            }
+        }
+
+        // Renderizar detalles
+        function renderDetail(d) {
+            const m04 = d.modulo_04_contratos || {};
+            const m05 = d.modulo_05_obras || {};
+            const resumen = d.resumen || {};
+
+            let html = `
+                <div class="detail-section">
+                    <h3>📊 Resumen</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <label>Contratos</label>
+                            <span class="value">${fmt(resumen.contratos, 0)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Valor Total</label>
+                            <span class="value">${fmtCurrency(resumen.valor_total)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Entidades</label>
+                            <span class="value">${fmt(resumen.entidades, 0)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Proveedores</label>
+                            <span class="value">${fmt(resumen.proveedores, 0)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Índice Alertas</label>
+                            <span class="value">${fmt(d.indice_alertas)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Nivel de Riesgo</label>
+                            <span class="value"><span class="badge badge-${d.nivel || 'bajo'}">${d.nivel || '--'}</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h3>💼 Módulo 04 - Contratación & Proveedores</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <label>% Contratos Directa</label>
+                            <span class="value pct">${fmt(m04.pct_contratos_directa)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>% Valor Directa</label>
+                            <span class="value pct">${fmt(m04.pct_directa_valor)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>HHI (Concentración)</label>
+                            <span class="value">${fmt(m04.hhi, 0)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Top 1 Proveedor</label>
+                            <span class="value pct">${fmt(m04.top1_proveedor_pct)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Top 5 Proveedores</label>
+                            <span class="value pct">${fmt(m04.top5_proveedores_pct)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Proveedores Pareto 80%</label>
+                            <span class="value">${fmt(m04.pareto_proveedores_80pct_valor, 0)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>% Contratos con Adición</label>
+                            <span class="value pct">${fmt(m04.pct_con_adicion)}</span>
+                        </div>
+                    </div>
+
+                    ${m04.top_proveedores && m04.top_proveedores.length > 0 ? `
+                    <div style="margin-top: 15px;">
+                        <label style="display: block; font-size: 11px; text-transform: uppercase; color: #666; margin-bottom: 10px; font-weight: 600;">Top 10 Proveedores</label>
+                        <div class="top-providers">
+                            ${m04.top_proveedores.map((p, i) => `
+                                <div class="provider-item">
+                                    <div class="provider-name">${i+1}. ${p.proveedor || 'N/A'}</div>
+                                    <div class="provider-value">${fmt(p.participacion_pct)}%</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
+
+                <div class="detail-section">
+                    <h3>🏗️ Módulo 05 - Territorio & Obras</h3>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <label>Contratos de Obra</label>
+                            <span class="value">${fmt(m05.contratos_obra, 0)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Valor Obras</label>
+                            <span class="value">${fmtCurrency(m05.valor_obras)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Obras Vencidas (Abiertas)</label>
+                            <span class="value">${fmt(m05.obras_vencidas_abiertas, 0)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>% Obras Vencidas Abiertas</label>
+                            <span class="value pct">${fmt(m05.pct_obras_vencidas_abiertas)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Valor Obras Vencidas</label>
+                            <span class="value">${fmtCurrency(m05.valor_obras_vencidas_abiertas)}</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>% Pagado (Obras Vencidas)</label>
+                            <span class="value pct">${fmt(m05.pct_pagado_obras_vencidas_abiertas)}</span>
+                        </div>
+                    </div>
+                </div>
+
+                ${d.nota ? `
+                <div style="background: #fef3cd; padding: 15px; border-radius: 4px; color: #856404; font-size: 13px;">
+                    ⚠️ <strong>Nota:</strong> ${d.nota}
+                </div>
+                ` : ''}
+
+                <div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
+                    Datos generados: ${d.generado || '--'} | Período: ${d.periodo_desde || '--'} | Posición: ${d.posicion || '--'} / ${d.total_rankeados || '--'}
+                </div>
+            `;
+
+            document.getElementById('modal-body').innerHTML = html;
+        }
+
+        // Cerrar modal
+        function closeModal() {
+            document.getElementById('detailModal').classList.remove('show');
+        }
+
+        // Event listeners
+        document.getElementById('search').addEventListener('input', () => {
+            applyFilters();
+            renderTable();
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentFilter = e.target.dataset.filter;
+                applyFilters();
+                renderTable();
+            });
+        });
+
+        document.getElementById('detailModal').addEventListener('click', (e) => {
+            if (e.target.id === 'detailModal') closeModal();
+        });
+
+        // Cargar al abrir
+        loadMaster();
+    </script>
+</body>
+</html>

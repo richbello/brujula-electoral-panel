@@ -1,0 +1,300 @@
+{
+  "resumen": {
+    "contratos": 893,
+    "valor_total": 32552787088.52,
+    "entidades": 3,
+    "proveedores": 380
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 83.4267,
+    "pct_directa_valor": 64.809,
+    "hhi": 412.80866506315533,
+    "top1_proveedor_pct": 18.499797700468907,
+    "top5_proveedores_pct": 29.288742018604825,
+    "pareto_proveedores_80pct_valor": 121,
+    "pct_con_adicion": 18.81298992161254,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 6000000000.0,
+        "contratos": 1,
+        "participacion_pct": 18.4998
+      },
+      {
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "documento": "832003417",
+        "valor": 1209881983.8,
+        "contratos": 4,
+        "participacion_pct": 3.7304
+      },
+      {
+        "proveedor": "COOPERATIVA DE TRABAJO ASOCIADO SEJARPI CTA",
+        "documento": "804010775",
+        "valor": 1048070170.0,
+        "contratos": 6,
+        "participacion_pct": 3.2315
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 657598050.0,
+        "contratos": 7,
+        "participacion_pct": 2.0276
+      },
+      {
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "documento": "900258772",
+        "valor": 583605136.0,
+        "contratos": 1,
+        "participacion_pct": 1.7994
+      },
+      {
+        "proveedor": "Rosa Nubia Romero Cubillos",
+        "documento": "42491073",
+        "valor": 572811719.69,
+        "contratos": 1,
+        "participacion_pct": 1.7662
+      },
+      {
+        "proveedor": "EI&T INGENIERIA SAS",
+        "documento": "900198610",
+        "valor": 525319679.0,
+        "contratos": 1,
+        "participacion_pct": 1.6197
+      },
+      {
+        "proveedor": "COMBUSTIBLES H&R LTDA",
+        "documento": "900078103",
+        "valor": 466571550.09000003,
+        "contratos": 4,
+        "participacion_pct": 1.4386
+      },
+      {
+        "proveedor": "ESE HOSPITAL SANTA MATILDE DE MADRID",
+        "documento": "860009555",
+        "valor": 446245179.2,
+        "contratos": 4,
+        "participacion_pct": 1.3759
+      },
+      {
+        "proveedor": "Ferreteria El Hidrante S.A",
+        "documento": "860031342",
+        "valor": 433500000.0,
+        "contratos": 2,
+        "participacion_pct": 1.3366
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9325811",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 6000000000.0,
+        "fecha_firma": "2026-02-06",
+        "objeto": "CONTRATO DE EMPRÉSTITO Y PIGNORACIÓN DE RENTAS CON VARIAS LÍNEAS DE FINANCIACIÓN DE LARGO PLAZO"
+      },
+      {
+        "id": "CO1.PCCNTR.7876067",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 706938393.8,
+        "fecha_firma": "2025-05-14",
+        "objeto": "CONTRATAR LA GERENCIA INTEGRAL PARA LA REALIZACIÓN DE LOS EVENTOS CULTURALES; RECREO DEPORTIVOS; SOCIALES; CONMEMORATIVOS Y DEMÁS ACTIVIDADES DIRIGIDAS A LA COMUNIDAD; LIDERADAS POR LA ADMINISTRACIÓN MUNICIPAL DE BOJACÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8132726",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 583605136.0,
+        "fecha_firma": "2025-07-30",
+        "objeto": "GERENCIA INTEGRAL PARA LA ELABORACIÓN Y/O AJUSTE DE ESTUDIOS Y DISEÑOS DE LOS PROYECTOS DE INFRAESTRUCTURA EN EL MUNICIPIO DE BOJACA; ASÍ COMO SUS CORRESPONDIENTES INTERVENTORIAS."
+      },
+      {
+        "id": "CO1.PCCNTR.9605357",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "Rosa Nubia Romero Cubillos",
+        "modalidad": "Contratación directa",
+        "valor": 572811719.69,
+        "fecha_firma": "2026-06-30",
+        "objeto": "COMPRAVENTA DEL PREDIO DENOMINADO LA IGUANA L01 UBICADO EN LA VEREDA BOBACÉ DEL MUNICIPIO DE BOJACÁ CUNDINAMARCA; IDENTIFICADO CON NÚMERO CATASTRAL 250990000000000010136000000000 Y MATRÍCULA INMOBILIARIA No. 156-18214 EN CUMPLIMIENTO AL ARTICULO 111 DE LA LEY 99 DE 1993 Y DEL ACUERDO MUNICIPAL No. 012 DEL 17 DE DICIEMBRE DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8354111",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "EI&T INGENIERIA SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 525319679.0,
+        "fecha_firma": "2025-09-25",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE MAQUINARIA Y EQUIPO DE LA EBAR Y PTAR"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "contratos": 856,
+        "valor": 32321168672.52
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE BOJACA",
+        "contratos": 15,
+        "valor": 132005329.0
+      },
+      {
+        "entidad": "PERSONERIA DE BOJACA",
+        "contratos": 15,
+        "valor": 99613087.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 18,
+    "valor_obras": 1620284310.92,
+    "obras_vencidas_abiertas": 13,
+    "valor_obras_vencidas_abiertas": 1198670671.02,
+    "pct_obras_vencidas_abiertas": 72.22222222222221,
+    "pct_pagado_obras_vencidas_abiertas": 37.9967,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8091210",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "PROJECTING DESIGNING AND BUILDING LTDA",
+        "estado": "Modificado",
+        "valor": 231093351.0,
+        "pagado": 46218670.0,
+        "fecha_fin": "2025-10-26",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA\nROBLEHUECO A LA VEREDA CHILCAL EN EL SECTOR TÍBOLI DEL MUNICIPIO DE BOJACÁ\nCUNDINAMARCA (CONV ICCU 931 DE 2024)"
+      },
+      {
+        "id": "CO1.PCCNTR.8298893",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "CB SALMER SAS",
+        "estado": "Modificado",
+        "valor": 205100000.0,
+        "pagado": 105100000.0,
+        "fecha_fin": "2026-03-02",
+        "objeto": "MANTENIMIENTO DEL EQUIPAMIENTO MUNICIPAL VIGENCIA 2025 DEL MUNCIIPIO DE BOJACA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9547326",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Modificado",
+        "valor": 200000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-01",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE EL CASCO URBANO A LA VEREDA BOBACE EN EL SECTOR LAS WILCHES DEL MUNICIPIO DE BOJACÁ; CUNDINAMARCA (CONV ICCU 1058-2025); MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA BARROBLANCO A LA VEREDA SANTA BARBARA EN EL SECTOR LAS ARENERAS DEL MUNICIPIO DE BOJACÁ; CUNDINAMARCA (CONV ICCU 1018-2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8647781",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "TIERRA VIVA CASTVARG SAS",
+        "estado": "En ejecución",
+        "valor": 100000000.0,
+        "pagado": 100000000.0,
+        "fecha_fin": "2026-02-27",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE EL CASCO \nURBANO A LA VEREDA ROBLEHUECO EN EL SECTOR PLANTA LOS GUARGUEROS DEL \nMUNICIPIO DE BOJACA; CUNDINAMARCA (CONV ICCU 860-2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8579822",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "SP INGENIERIA Y CONSTRUCCION SAS",
+        "estado": "En ejecución",
+        "valor": 99998621.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-30",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA \nROBLEHUECO A LA VEREDA CHILCAL EN EL SECTOR JERICO ALTO DEL \nMUNICIPIO DE BOJACA CUNDINAMARCA (CONV ICCU 414 DE 2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8296505",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "raul  ivan mera buitrago",
+        "estado": "En ejecución",
+        "valor": 94310775.0,
+        "pagado": 84629480.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MANTENIMIENTO DE ESCENARIOS DEPORTIVOS VIGENCIA 2025 DEL MUNICIPIO DE BOJACA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8524422",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "raul  ivan mera buitrago",
+        "estado": "Modificado",
+        "valor": 57637067.02,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "CONSTRUCCIÓN PLAZOLETA Y PARQUE INFANTIL; PARA \nEMBELLECIMIENTO Y RECUPERACIÓN DEL ESPACIO \nPÚBLICO EN EL MUNICIPIO DE BOJACA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8591262",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "CONSTRUCTION SUPPLIES AND CONSULTING SAS",
+        "estado": "En ejecución",
+        "valor": 51445889.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO DE ESCENARIOS CULTURALES VIGENCIA \n2025 DEL MUNCIIPIO DE BOJACA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8241781",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "En ejecución",
+        "valor": 37658090.0,
+        "pagado": 37658090.0,
+        "fecha_fin": "2025-11-30",
+        "objeto": "MANTENIMIENTO DE LA MALLA VIAL URBANA MEDIANTE PARCHEO\nEN PAVIMENTO FLEXIBLE VIGENCIA 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.7169710",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "CB SALMER SAS",
+        "estado": "En ejecución",
+        "valor": 36400000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MANTENIMIENTO DE LA IED SANTA HELENA DEL MUNICIPIO DE BOJACÁ\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7085622",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "INGEODES J.F. SAS",
+        "estado": "Modificado",
+        "valor": 36400000.0,
+        "pagado": 36400000.0,
+        "fecha_fin": "2024-12-30",
+        "objeto": "MANTENIMIENTO DE LA MALLA VIAL URBANA MEDIANTE PARCHEO EN PAVIMENTO\nFLEXIBLE VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7152015",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "jaime sanchez",
+        "estado": "En ejecución",
+        "valor": 26186682.0,
+        "pagado": 23020013.41,
+        "fecha_fin": "2025-03-13",
+        "objeto": "CONSTRUCCIÓN TRAMO COMPLEMENTARIO DE\nALCANTARILLADO SANITARIO EN LA CALLE 14 ENTRE CARRERA\n12 Y CARRERA 11 DEL MUNICIPIO DE BOJACÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8497121",
+        "entidad": "ALCALDIA MUNICIPAL DE BOJACA",
+        "proveedor": "CONSTRUCTION SUPPLIES AND CONSULTING SAS",
+        "estado": "Modificado",
+        "valor": 22440196.0,
+        "pagado": 22429058.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO DE LA INSTITUCION EDUCATIVA VEREDA \nROBLEHUECO DEL MUNICIPIO DE BOJACA"
+      }
+    ]
+  },
+  "municipio": "Bojacá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 80.1,
+  "nivel": "alto",
+  "posicion": 2.0,
+  "total_rankeados": 71
+}

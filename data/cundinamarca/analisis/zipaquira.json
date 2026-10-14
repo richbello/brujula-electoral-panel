@@ -1,0 +1,290 @@
+{
+  "resumen": {
+    "contratos": 4169,
+    "valor_total": 424865523241.43,
+    "entidades": 5,
+    "proveedores": 1470
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 81.2185,
+    "pct_directa_valor": 28.6189,
+    "hhi": 239.4123991956027,
+    "top1_proveedor_pct": 7.573122870620945,
+    "top5_proveedores_pct": 29.408737024195325,
+    "pareto_proveedores_80pct_valor": 164,
+    "pct_con_adicion": 19.117294315183496,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 30000000000.0,
+        "contratos": 1,
+        "participacion_pct": 7.5731
+      },
+      {
+        "proveedor": "EMPRESAS PUBLICAS DE ZIPAQUIRÁ E.P.Z ESP",
+        "documento": "800005900",
+        "valor": 27852394264.0,
+        "contratos": 7,
+        "participacion_pct": 7.031
+      },
+      {
+        "proveedor": "ACON SECURITY LTDA",
+        "documento": "830016530",
+        "valor": 24958985095.550003,
+        "contratos": 8,
+        "participacion_pct": 6.3006
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 20017902502.0,
+        "contratos": 3,
+        "participacion_pct": 5.0533
+      },
+      {
+        "proveedor": "FUNDACION MUCIPALIDAD",
+        "documento": "830051472",
+        "valor": 13669832942.0,
+        "contratos": 8,
+        "participacion_pct": 3.4508
+      },
+      {
+        "proveedor": "OUTSOURCING MULTISERVICIOS INTEGRALES EMPRESARIALES LTDA",
+        "documento": "832003653",
+        "valor": 12132029385.75,
+        "contratos": 6,
+        "participacion_pct": 3.0626
+      },
+      {
+        "proveedor": "UNION TEMPORAL ALIMENTOS ZIPA 2025",
+        "documento": "901949100",
+        "valor": 11267324658.13,
+        "contratos": 1,
+        "participacion_pct": 2.8443
+      },
+      {
+        "proveedor": "UNION T ZIPAQUIRA AVANZA",
+        "documento": "901815421",
+        "valor": 11227015398.0,
+        "contratos": 1,
+        "participacion_pct": 2.8341
+      },
+      {
+        "proveedor": "Unión Temporal Nutriendo Zipa",
+        "documento": "902067962",
+        "valor": 9291721711.32,
+        "contratos": 1,
+        "participacion_pct": 2.3456
+      },
+      {
+        "proveedor": "FUNDACION WR TEJIDO SOCIAL",
+        "documento": "900282430",
+        "valor": 6967850395.0,
+        "contratos": 10,
+        "participacion_pct": 1.7589
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8536718",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 30000000000.0,
+        "fecha_firma": "2025-11-24",
+        "objeto": "CONTRATO DE EMPRESTIRO Y PIGNORACION DE RENTAS A LARGO PLAZO SUSCRITO ENTRE MUNICIPIO DE ZIPAQUIRA - CUNDINAMARCA Y BANCOLOMBIA S.A."
+      },
+      {
+        "id": "CO1.PCCNTR.6694024",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "EMPRESAS PUBLICAS DE ZIPAQUIRÁ E.P.Z ESP",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 20000000000.0,
+        "fecha_firma": "2024-08-28",
+        "objeto": "CONTRATO INTERADMINISTRATIVO PARA ADELANTAR EL PROCESO DE ACTUALIZACIÓN CATASTRAL DE LAS ÁREAS URBANA Y RURAL DEL MUNICIPIO DE ZIPAQUIRÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8746575",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "CONSORCIO CICLO-ESPACIO ZIPA",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 13364100007.0,
+        "fecha_firma": "2025-12-31",
+        "objeto": "CONSTRUCCIÓN DE LA PRIMERA FASE DE LAS OBRAS CORRESPONDIENTES A LA CICLOINFRAESTRUCTURA Y ESPACIO PUBLICO SOBRE LA CALLE 8 EN LOS TRAMOS COMPRENDIDOS ENTRE LA CRA 36 A LA VARIANTE Y AVE COLOMBIANA AL SECTOR SAN MIGUEL DEL MUNICIPIO DE ZIPAQUIRA"
+      },
+      {
+        "id": "CO1.PCCNTR.7897615",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "UNION TEMPORAL ALIMENTOS ZIPA 2025",
+        "modalidad": "Licitación pública",
+        "valor": 11267324658.13,
+        "fecha_firma": "2025-06-03",
+        "objeto": "PRESTACIÓN DE SERVICIOS PARA LA EJECUCIÓN DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR PARA LAS INSTITUCIONES EDUCATIVAS PÚBLICAS DEL MUNICIPIO DE ZIPAQUIRÁ; ACORDE CON LOS LINEAMIENTOS TÉCNICOS ADMINISTRATIVOS Y ESTÁNDARES DE LA UNIDAD ADMINISTRATIVA ESPECIAL DE ALIMENTACIÓN ESCOLAR - ALIMENTOS PARA APRENDER - UApA"
+      },
+      {
+        "id": "CO1.PCCNTR.6131063",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "UNION T ZIPAQUIRA AVANZA",
+        "modalidad": "Licitación pública",
+        "valor": 11227015398.0,
+        "fecha_firma": "2024-03-26",
+        "objeto": "PRESTACIÓN DE SERVICIOS PARA LA PREPARACIÓN DE LA ALIMENTACIÓN ESCOLAR PARA LAS INSTITUCIONES EDUCATIVAS PÚBLICAS DEL MUNICIPIO; ACORDE CON LOS LINEAMIENTOS TÉCNICOS ADMINISTRATIVOS Y ESTÁNDARES DE LA UNIDAD ADMINISTRATIVA ESPECIAL DE ALIMENTACIÓN ESCOLAR - ALIMENTOS PARA APRENDER -UApA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "contratos": 2455,
+        "valor": 335690931031.91
+      },
+      {
+        "entidad": "CATEDRAL DE SAL DE ZIPAQUIRÁ SASEM",
+        "contratos": 364,
+        "valor": 59261001435.1
+      },
+      {
+        "entidad": "CONCEJO DE ZIPAQUIRA**",
+        "contratos": 69,
+        "valor": 2266296027.04
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE CULTURA, RECREACION Y DEPORTE DE ZIPAQUIRA",
+        "contratos": 1088,
+        "valor": 23461170434.7
+      },
+      {
+        "entidad": "PERSONERÍA MUNICIPAL DE ZIPAQUIRA",
+        "contratos": 159,
+        "valor": 4186124312.68
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 39,
+    "valor_obras": 38819282281.32,
+    "obras_vencidas_abiertas": 11,
+    "valor_obras_vencidas_abiertas": 3119476583.66,
+    "pct_obras_vencidas_abiertas": 28.205128205128204,
+    "pct_pagado_obras_vencidas_abiertas": 42.6895,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8020690",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "Modificado",
+        "valor": 698700000.0,
+        "pagado": 187874143.42,
+        "fecha_fin": "2026-02-27",
+        "objeto": "CONSTRUCCION DE LA VÍA CARRERA 29 DE LA CIUDADELA EL RECREO EN EL MUNICIPIO DE ZIPAQUIRÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7153592",
+        "entidad": "CATEDRAL DE SAL DE ZIPAQUIRÁ SASEM",
+        "proveedor": "GELVER",
+        "estado": "Modificado",
+        "valor": 484917364.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "CONTRATO DE OBRA PARA LA CONSTRUCCIÓN MODULAR DE CASINO\nPARA TRABAJADORES Y COLABORADORES DE CATEDRAL DE SAL DE\nZIPAQUIRÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.9343902",
+        "entidad": "CATEDRAL DE SAL DE ZIPAQUIRÁ SASEM",
+        "proveedor": "GELVER",
+        "estado": "En ejecución",
+        "valor": 373674000.0,
+        "pagado": 373674000.0,
+        "fecha_fin": "2026-05-25",
+        "objeto": "CONTRATO DE OBRA PARA EL MANTENIMIENTO DE INFRAESTRUCTURA\nSANITARIA DE LA CATEDRAL DE SAL DE ZIPAQUIRÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8412904",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "HERNANDO ALBERTO MORENO CASTILLO",
+        "estado": "Modificado",
+        "valor": 349998418.0,
+        "pagado": 180499753.36,
+        "fecha_fin": "2026-03-11",
+        "objeto": "MANTENIMIENTO CORRECTIVO Y PREVENTIVO DE LOS\nDIFERENTES ESPACIOS DE LA PLAZA DE MERCADO VILLA DE LA SAL\nDEL MUNICIPIO DE ZIPAQUIRÁ - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8734706",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "En ejecución",
+        "valor": 344838446.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-22",
+        "objeto": "CONSTRUCCION DE PLACA HUELLAS EN EL CORREGIMIENTO NUMERO UNO DEL MUNICIPIO DE ZIPAQUIRA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8175046",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "INGENIERIA R&A SAS",
+        "estado": "Modificado",
+        "valor": 222232164.0,
+        "pagado": 148495276.0,
+        "fecha_fin": "2026-03-19",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DE LOS CENTROS DE ATENCIÓN DE DONDE SE DESARROLLAN LOS DIFERENTES PROGRAMAS DE LA SECRETARIA DE FAMILIA Y DESARROLLO SOCIAL DEL MUNICIPIO DE ZIPAQUIRÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.9279600",
+        "entidad": "CATEDRAL DE SAL DE ZIPAQUIRÁ SASEM",
+        "proveedor": "INGENIERIA Y CONSTRUCCIONES R&A SAS",
+        "estado": "En ejecución",
+        "valor": 158983829.0,
+        "pagado": 158983829.0,
+        "fecha_fin": "2026-07-06",
+        "objeto": "CONTRATO DE OBRA PARA LA CONSTRUCCIÓN DE MURO DE CONTENCIÓN EN PARQUE DE LA SAL DE CATEDRAL DE SAL DE ZIPAQUIRÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.7178861",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "SOLUCIONES INTEGRALES GENFO LTDA SOLUCIONES INTEGRALES DE GERENCIA PARA EL FOMENTO LTDA",
+        "estado": "Modificado",
+        "valor": 148101525.1,
+        "pagado": 59242850.03,
+        "fecha_fin": "2025-09-14",
+        "objeto": "CONTRUCCION DE PLACA HUELLA VEREDA VENTALARGA SOBRE LA VÍA QUE CONECTA LA VUELTA EL BOBO CON LOS MARTÍNEZ EN EL MUNICIPIO DE ZIPAQUIRÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8502933",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "ingenieria especializada cave s.a.s",
+        "estado": "Modificado",
+        "valor": 140485450.0,
+        "pagado": 140485450.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DEL CIRCUITO ELÉCTRICO COMPLETO DE LA CASA SOCIAL DE LA MUJER; INCLUYENDO LA INSTALACIÓN DE PUNTOS DE RED Y LA ADQUISICIÓN E INSTALACIÓN DE EQUIPOS ESPECIALIZADOS; CON EL FIN DE GARANTIZAR EL CORRECTO FUNCIONAMIENTO Y LA SEGURIDAD DE LAS INSTALACIONES"
+      },
+      {
+        "id": "CO1.PCCNTR.8647587",
+        "entidad": "INSTITUTO MUNICIPAL DE CULTURA, RECREACION Y DEPORTE DE ZIPAQUIRA",
+        "proveedor": "INGENIERIA Y PROYECTOS CIVILES",
+        "estado": "Modificado",
+        "valor": 132738178.56,
+        "pagado": 82434044.35,
+        "fecha_fin": "2026-03-02",
+        "objeto": "MANTENIMIENTO; REHABILITACIÓN Y REPARACIÓN DE LOS ESCENARIOS DEPORTIVOS PARA DESARROLLAR LOS PROGRAMAS Y ACTIVIDADES A CARGO DEL INSTITUTO MUNICIPAL DE CULTURA; RECREACIÓN Y DEPORTE DE ZIPAQUIRÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8332611",
+        "entidad": "ALCALDIA MUNICIPIO DE ZIPAQUIRA",
+        "proveedor": "INGENIERIA R&A SAS",
+        "estado": "Modificado",
+        "valor": 64807209.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-27",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LA INFRAESTRUCTURA DE LA INSTITUCIÓN EDUCATIVA MUNICIPAL CUNDINAMARCA - SEDE PRINCIPAL PARA MITIGAR RIESGOS Y GARANTIZAR LA SEGURIDAD DE LA COMUNIDAD EDUCATIVA"
+      }
+    ]
+  },
+  "municipio": "Zipaquirá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:57",
+  "indice_alertas": 33.7,
+  "nivel": "medio",
+  "posicion": 61.0,
+  "total_rankeados": 71
+}

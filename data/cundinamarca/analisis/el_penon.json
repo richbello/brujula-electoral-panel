@@ -1,0 +1,118 @@
+{
+  "resumen": {
+    "contratos": 6,
+    "valor_total": 663827611.0,
+    "entidades": 1,
+    "proveedores": 4
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 7159.078273856564,
+    "top1_proveedor_pct": 83.56476754022815,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "documento": "830105879",
+        "valor": 554726000.0,
+        "contratos": 2,
+        "participacion_pct": 83.5648
+      },
+      {
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "documento": "899999114",
+        "valor": 86601611.0,
+        "contratos": 2,
+        "participacion_pct": 13.0458
+      },
+      {
+        "proveedor": "D Carlo Esteban Lopez Varela",
+        "documento": "1072338726",
+        "valor": 12500000.0,
+        "contratos": 1,
+        "participacion_pct": 1.883
+      },
+      {
+        "proveedor": "ANGEL GABRIEL GUERRERO  GUERRERO",
+        "documento": "1069054197",
+        "valor": 10000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.5064
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8319609",
+        "entidad": "ALCALDIA MUNICIPAL DE EL PEÑON",
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 470956000.0,
+        "fecha_firma": "2025-09-12",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS PARA LA ORGANIZACIÓN Y DESARROLLO DE LAS ACTIVIDADES ARTÍSTICAS; AGROPECUARIAS; CULTURALES Y DEPORTIVAS EN EL MARCO DE LA CELEBRACIÓN DE LA XXI SEMANA CULTURAL Y FESTIVAL DE PAZ E INTEGRACIÓN ECO-CAMPESINO PEÑONERO EN EL MUNICIPIO DE EL PEÑÓN; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8004845",
+        "entidad": "ALCALDIA MUNICIPAL DE EL PEÑON",
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 83770000.0,
+        "fecha_firma": "2025-06-24",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS PARA LA ORGANIZACIÓN Y DESARROLLO DEL EVENTO CULTURAL DENOMINADO FESTIVAL CULTURAL SAN PEDRINO DEL AÑO 2025; EN EL CENTRO POBLADO DE GUAYABAL DE TOLEDO DEL MUNICIPIO DE EL PEÑÓN; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8559322",
+        "entidad": "ALCALDIA MUNICIPAL DE EL PEÑON",
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "modalidad": "Contratación régimen especial",
+        "valor": 46227248.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "Aunar esfuerzos para la conformación de la Bolsa Común de recursos para el financiamiento del Programa de Alimentación Escolar PAE en la ETC Cundinamarca; mediante la trasferencia de recursos SGP Alimentación Escolar del Municipio EL PEÑÓN con Nit 899.999.460-4 al Departamento de Cundinamarca Nit 899.999.114-0."
+      },
+      {
+        "id": "CO1.PCCNTR.7161523",
+        "entidad": "ALCALDIA MUNICIPAL DE EL PEÑON",
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "modalidad": "Contratación régimen especial",
+        "valor": 40374363.0,
+        "fecha_firma": "2024-12-26",
+        "objeto": "ACUERDO FORMAL DE AUTORIZACIÓN DE TRANSFERENCIA DE RECURSOS DEL SISTEMA GENERAL DE PARTICIPACIONES ALIMENTACIÓN ESCOLAR ASIGNADOS POR EL DEPARTAMENTO NACIONAL DE PLANEACIÓN - DNP AL MUNICIPIO DE EL PEÑÓN PARA SER GIRADOS AL DEPARTAMENTO DE CUNDINAMARCA ETC; CON EL FIN DE CONFORMAR LA BOLSA COMÚN PARA EL FINANCIAMIENTO DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR DE CONFORMIDAD CON LA RESOLUCIÓN 00335 DEL 23 DE DICIEMBRE DE 2021"
+      },
+      {
+        "id": "CO1.PCCNTR.6528156",
+        "entidad": "ALCALDIA MUNICIPAL DE EL PEÑON",
+        "proveedor": "D Carlo Esteban Lopez Varela",
+        "modalidad": "Contratación régimen especial",
+        "valor": 12500000.0,
+        "fecha_firma": "2024-07-12",
+        "objeto": "PRESTAR SERVICIOS DE APOYO A LA GESTIÓN PARA EL DESARROLLO DE ACTIVIDADES COMO INSTRUCTOR DE LA ESCUELA DE FORMACIÓN DEPORTIVA EN CICLISMO MTB Y APOYO EN TODAS LAS ACTIVIDADES RECREODEPORTIVAS Y LÚDICAS QUE ADELANTE EL MUNICIPIO DE EL PEÑÓN CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE EL PEÑON",
+        "contratos": 6,
+        "valor": 663827611.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "El Peñón",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

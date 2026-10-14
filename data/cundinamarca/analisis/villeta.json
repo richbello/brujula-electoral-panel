@@ -1,0 +1,390 @@
+{
+  "resumen": {
+    "contratos": 2659,
+    "valor_total": 98356569255.44,
+    "entidades": 7,
+    "proveedores": 1229
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 86.1978,
+    "pct_directa_valor": 69.5272,
+    "hhi": 56.97449873827154,
+    "top1_proveedor_pct": 4.832420497472814,
+    "top5_proveedores_pct": 11.958622529607524,
+    "pareto_proveedores_80pct_valor": 538,
+    "pct_con_adicion": 18.503196690485144,
+    "top_proveedores": [
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE VILLETA/",
+        "documento": "832002268",
+        "valor": 4735204752.2,
+        "contratos": 11,
+        "participacion_pct": 4.8324
+      },
+      {
+        "proveedor": "FUNDACION CONSTRUCCION LOCAL",
+        "documento": "900270576",
+        "valor": 2250654084.87,
+        "contratos": 9,
+        "participacion_pct": 2.2969
+      },
+      {
+        "proveedor": "Cuerpo de Bomberos Voluntarios de Villeta",
+        "documento": "832003832",
+        "valor": 1862181326.0,
+        "contratos": 4,
+        "participacion_pct": 1.9004
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 1567635365.0,
+        "contratos": 5,
+        "participacion_pct": 1.5998
+      },
+      {
+        "proveedor": "RAFAEL HERNANDO CORTES GARZON",
+        "documento": "80280711",
+        "valor": 1302370586.0,
+        "contratos": 4,
+        "participacion_pct": 1.3291
+      },
+      {
+        "proveedor": "INVERSIONES JORTER SAS",
+        "documento": "901824060",
+        "valor": 1295910000.0,
+        "contratos": 1,
+        "participacion_pct": 1.3225
+      },
+      {
+        "proveedor": "G&C Engineering Construction and Consulting",
+        "documento": "901651525",
+        "valor": 1294106626.06,
+        "contratos": 8,
+        "participacion_pct": 1.3207
+      },
+      {
+        "proveedor": "ESE HOSPITAL SALAZAR DE VILLETA",
+        "documento": "860015929",
+        "valor": 1201508612.0,
+        "contratos": 4,
+        "participacion_pct": 1.2262
+      },
+      {
+        "proveedor": "TOPOCONSTRUCTORES SAS",
+        "documento": "900947600",
+        "valor": 1115892620.6999998,
+        "contratos": 5,
+        "participacion_pct": 1.1388
+      },
+      {
+        "proveedor": "Fundación Compasión",
+        "documento": "900530622",
+        "valor": 879404874.03,
+        "contratos": 1,
+        "participacion_pct": 0.8975
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9790547",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "INVERSIONES JORTER SAS",
+        "modalidad": "Licitación pública",
+        "valor": 1295910000.0,
+        "fecha_firma": "2026-08-18",
+        "objeto": "ADQUISICIÓN DE EQUIPOS ESPECIALIZADOS DE TRANSPORTE Y EQUIPOS DE\nDOTACIÓN DESTINADOS A FORTALECER LA CAPACIDAD OPERATIVA Y OPTIMIZACIÓN DEL SERVICIO DE ALUMBRADO PUBLICO EN EL MUNICIPIO DE VILLETA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7721975",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE VILLETA/",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 1197591280.0,
+        "fecha_firma": "2025-04-01",
+        "objeto": "CONVENIO DE TRANSFERENCIA DE RECURSOS PARA APOYAR EL ASEGURAMIENTO DE LA PRESTACIÓN DEL SERVICIO PUBLICO DE ACUEDUCTO; ALCANTARILLADO Y ASEO PARA LOS SUSCRIPTORES DE LOS ESTRATOS 1; 2 Y 3; CON LOS RECURSOS RECAUDADOS EN EL FONDO DE SOLIDARIDAD Y REDISTRIBUCIÓN DE LOS INGRESOS FSRI; EN APLICACIÓN DEL DECRETO 1077 DE 2015; CAPÍTULO II; TÍTULO IV; PARTE III O LA NORMA QUE LO MODIFIQUE; ADICIONE O DEROGUE"
+      },
+      {
+        "id": "CO1.PCCNTR.6103113",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE VILLETA/",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 1175425000.0,
+        "fecha_firma": "2024-03-20",
+        "objeto": "CONVENIO DE TRANSFERENCIA DE RECURSOS PARA \nAPOYAR EL ASEGURAMIENTO DE LA PRESTACIÓN DEL \nSERVICIO PUBLICO DE ACUEDUCTO; ALCANTARILLADO Y \nASEO PARA LOS SUSCRIPTORES DE LOS ESTRATOS 1; 2 Y \n3; CON LOS RECURSOS RECAUDADOS EN EL FONDO DE \nSOLIDARIDAD Y REDISTRIBUCIÓN DE LOS INGRESOS - FSRI; \nEN APLICACIÓN DEL DECRETO 1077 DE 2015; CAPÍTULO II; \nTÍTULO IV; PARTE III O LA NORMA QUE LO MODIFIQUE; \nADICIONE O DEROGUE."
+      },
+      {
+        "id": "CO1.PCCNTR.7747895",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "Fundación Compasión",
+        "modalidad": "Contratación régimen especial",
+        "valor": 879404874.03,
+        "fecha_firma": "2025-04-07",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCIÓN DE VIVIENDA RURAL EN EL MUNICIPIO DE VILLETA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8066212",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "MILMACK SAS",
+        "modalidad": "Licitación pública",
+        "valor": 838140726.0,
+        "fecha_firma": "2025-07-11",
+        "objeto": "CONTRATAR EL\nSERVICIO DE MANTENIMIENTO PREVENTIVO Y/O CORRECTIVO A TODO COSTO DE LOS\nVEHÍCULOS; EQUIPOS Y MAQUINARIA AMARILLA Y/O AGRÍCOLA DE PROPIEDAD Y/O A\nCARGO DE LA ALCALDÍA MUNICIPAL DE VILLETA; CUND"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "contratos": 1202,
+        "valor": 52364373720.77
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE VILLETA",
+        "contratos": 39,
+        "valor": 508839784.19
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS MUNICIPIO DE VILLETA*",
+        "contratos": 1,
+        "valor": 513562079.66
+      },
+      {
+        "entidad": "ESTABLECIMIENTO PENITENCIARIO Y CARCELARIO DE VILLETA",
+        "contratos": 16,
+        "valor": 183742894.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL PARA EL TURISMO, LA CULTURA, LA RECREACIÓN Y EL DEPORTE DE VILLETA",
+        "contratos": 460,
+        "valor": 11004939220.85
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE VILLETA",
+        "contratos": 14,
+        "valor": 132960000.0
+      },
+      {
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CDAE",
+        "contratos": 923,
+        "valor": 33648151555.97
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 28,
+    "valor_obras": 4623185284.78,
+    "obras_vencidas_abiertas": 26,
+    "valor_obras_vencidas_abiertas": 3910145096.7,
+    "pct_obras_vencidas_abiertas": 92.85714285714286,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.6466169",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "TOPOCONSTRUCTORES SAS",
+        "estado": "Modificado",
+        "valor": 683495486.28,
+        "pagado": 0.0,
+        "fecha_fin": "2025-04-22",
+        "objeto": "CONTRATAR LA CONSTRUCCIÓN DE LAS OBRAS DE CONTENCIÓN Y PROTECCIÓN DEL TALUD EN EL BARRIO EL PORVENIR DEL MUNICIPIO DE VILLETA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7872234",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "G&C Engineering Construction and Consulting",
+        "estado": "Modificado",
+        "valor": 629431349.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-23",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA URBANA CALLE\n11 ENTRE LA CARRERA 7A Y LA CARRERA 4A DEL BARRIO VILLA MARIA; DEL\nMUNICIPIO DE VILLETA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7807739",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "Consorcio PA Cune",
+        "estado": "Modificado",
+        "valor": 394932095.57,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-11",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CUNE A LA VEREDA QUEBRADA HONDA; EN EL SECTOR FINCA LA LORENA; DEL MUNICIPIO DE VILLETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8597404",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "ACRUX ARQUITECTURA",
+        "estado": "Modificado",
+        "valor": 285001779.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-25",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LAS VÍAS RURALES DEL MUNICIPIO DE VILLETA; CUNDINAMARCA; ENMARCADAS EN LOS CONVENIOS INTERAMINISTRATIVOS No. ICCU 493-2025; ICCU 533-2025; ICCU-CTO-570-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8666631",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CDAE",
+        "proveedor": "AMBICOL SERVICES SAS",
+        "estado": "Modificado",
+        "valor": 250349881.47,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-15",
+        "objeto": "25_9509_267 Contratar a todo costo las actividades de mantenimiento de\ncubiertas; estructura metálica de cubiertas; canaletas metálicas; vigas\ncanal; pintura de muros en las sedes Villeta y Pacho; estructura en guadua\ndel auditorio de la sede Villeta y cambio de plástico de invernadero en la\nsubsede de Pacho del Centro de Desarrollo Agroindustrial y Empresarial -\nCDAE; Regional Cundinamarca del SENA."
+      },
+      {
+        "id": "CO1.PCCNTR.8229094",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "PRIMUTAF SAS",
+        "estado": "Suspendido",
+        "valor": 238991551.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-19",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE\nDE LA VEREDA ALTO DE TORRES A LA VEREDA MAVE; EN EL SECTOR TIENDA DOÑA\nGLADYS DEL MUNICIPIO DE VILLETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8229087",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "CONSORCIO VIAL CUNE",
+        "estado": "En ejecución",
+        "valor": 147019000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-04",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA LA ESMERALDA A LA VEREDA CUNE; EN EL SECTOR FINCA CARMA; DEL MUNICIPIO DE VILLETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8482409",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CDAE",
+        "proveedor": "AMBICOL SERVICES SAS",
+        "estado": "Modificado",
+        "valor": 140082083.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-15",
+        "objeto": "25_9509_151 Contratar las actividades de adecuación de la zona de empleados oficiales;\nárea de tintos; cuarto de aseo; vestidor y cuarto cámaras del Centro de Desarrollo Agroindustrial y\nEmpresarial en Villeta; Regional Cundinamarca"
+      },
+      {
+        "id": "CO1.PCCNTR.7919510",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "PLUS MAX CONSULTORIA",
+        "estado": "En ejecución",
+        "valor": 99996984.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-09-03",
+        "objeto": "CONTRATAR MEJORAMIENTO DE LA VÍA QUE CONDUCE DE\nLA VEREDA RIO DULCE A LA VEREDA MAVE; EN EL SECTOR LA CEIBA; DEL\nMUNICIPIO DE VILLETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7808368",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "ACRUX ARQUITECTURA",
+        "estado": "En ejecución",
+        "valor": 99996984.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-22",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE\nDE LA VEREDA ILO A LA VEREDA MANÍ; EN EL SECTOR EL CASERÍO; DEL\nMUNICIPIO DE VILLETA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7849443",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "TOPOCONSTRUCTORES SAS",
+        "estado": "En ejecución",
+        "valor": 99996984.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-07-30",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE\nDE LA VEREDA SALITRE BLANCO BAJO; A LA VEREDA SALITRE NEGRO; EN EL\nSECTOR ESCUELA VENTANAS; DEL MUNICIPIO DE VILLETA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7827039",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "ACRUX ARQUITECTURA",
+        "estado": "En ejecución",
+        "valor": 99996983.9,
+        "pagado": 0.0,
+        "fecha_fin": "2025-06-07",
+        "objeto": "CONTRATAR MEJORAMIENTO DE LA VÍA QUE CONDUCE DE\nLA VEREDA MANI A LA VEREDA BALSAL; EN EL SECTOR EL TAMBOR; DEL\nMUNICIPIO DE VILLETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8379630",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "TOPOCONSTRUCTORES SAS",
+        "estado": "En ejecución",
+        "valor": 96522042.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-03",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE\nDE LA VEREDA MANÍ A LA VEREDA ALTO DE PAJAS; EN EL SECTOR PARTE BAJA\nFINCA HERNÁNDEZ DEL MUNICIPIO DE VILLETA DEL DEPARTAMENTO DE\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8356716",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "PLUS MAX CONSULTORIA",
+        "estado": "En ejecución",
+        "valor": 96299000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-26",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE\nDE LA VEREDA CUNE A LA VEREDA SAN ISIDRO; EN EL SECTOR FINCA LA UNIÓN DEL\nMUNICIPIO DE VILLETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8338482",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "PLUS MAX CONSULTORIA",
+        "estado": "En ejecución",
+        "valor": 95499000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-23",
+        "objeto": "CONTRATAR EL MEJORAMIENTO DE LA VÍA QUE CONDUCE\nDE LA VEREDA CUNE A LA VEREDA QUEBRADA HONDA; EN EL SECTOR FINCA LA\nSILVIA; DEL MUNICIPIO DE VILLETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8211876",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CDAE",
+        "proveedor": "J&S SOLUCIONES GLOBALES SAS",
+        "estado": "Modificado",
+        "valor": 91306496.26,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-12",
+        "objeto": "25_9509_262 Contratar a todo costo las actividades de mantenimiento de baterías sanitarias; duchas; lavaplatos; bombas eyectoras y motobombas; trampas de grasa; cajas de inspección; cajas de agua lluvia; canales y bajantes del Centro de Desarrollo Agroindustrial y Empresarial en Villeta y la subsede de Pacho"
+      },
+      {
+        "id": "CO1.PCCNTR.8490104",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CDAE",
+        "proveedor": "GRUPO EMPRESARIAL G&C S.A.S.",
+        "estado": "Modificado",
+        "valor": 58354762.22,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-17",
+        "objeto": "25_9509_265 Contratar el mantenimiento general a todo costo de la Planta de Tratamiento de Aguas Residuales del Centro de Desarrollo Agroindustrial y Empresarial del SENA en la Subsede Pacho"
+      },
+      {
+        "id": "CO1.PCCNTR.7125941",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA CUNE VILLETA ULT",
+        "estado": "Modificado",
+        "valor": 36001784.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-01-31",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES; COMUNITARIOS;\nECONÓMICOS Y SOCIALES CON LA JUNTA DE ACCIÓN\nCOMUNAL DE LA VEREDA CUNE PARA EL MEJORAMIENTO DE\nLAS VÍAS TERCIARIAS DEL MUNICIPIO DE VILLETA;\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7125935",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA CHAPAIMA VILLETA",
+        "estado": "En ejecución",
+        "valor": 36001784.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES; COMUNITARIOS; ECONÓMICOS Y SOCIALES CON LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA CHAPAIMA PARA EL MEJORAMIENTO DE LAS VÍAS TERCIARIAS DEL MUNICIPIO DE VILLETA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7119076",
+        "entidad": "ALCALDIA MUNICIPAL DE VILLETA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA MAVE VILLETA ULT",
+        "estado": "En ejecución",
+        "valor": 36001784.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES; COMUNITARIOS; \nECONÓMICOS Y SOCIALES CON LA JUNTA DE ACCIÓN \nCOMUNAL DE LA VEREDA MAVE PARA EL MEJORAMIENTO DE \nLAS VÍAS TERCIARIAS DEL MUNICIPIO DE VILLETA; \nCUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Villeta",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 66.4,
+  "nivel": "medio",
+  "posicion": 12.0,
+  "total_rankeados": 71
+}

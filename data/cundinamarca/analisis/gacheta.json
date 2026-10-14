@@ -1,0 +1,290 @@
+{
+  "resumen": {
+    "contratos": 997,
+    "valor_total": 37559701969.71,
+    "entidades": 5,
+    "proveedores": 558
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 37.1113,
+    "pct_directa_valor": 28.7005,
+    "hhi": 196.7471159243037,
+    "top1_proveedor_pct": 7.932013385184302,
+    "top5_proveedores_pct": 26.450172661947047,
+    "pareto_proveedores_80pct_valor": 151,
+    "pct_con_adicion": 16.0481444332999,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACION INTERNACIONAL PARA EL DESARROLLO Y LA EQUIDAD SOCIAL",
+        "documento": "900170371",
+        "valor": 2897881539.14,
+        "contratos": 8,
+        "participacion_pct": 7.932
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 2050466391.0,
+        "contratos": 2,
+        "participacion_pct": 5.6125
+      },
+      {
+        "proveedor": "FUNDACION GUALIVA DULCE",
+        "documento": "900396205",
+        "valor": 1743657457.0,
+        "contratos": 15,
+        "participacion_pct": 4.7727
+      },
+      {
+        "proveedor": "CPG",
+        "documento": "902016860",
+        "valor": 1616188364.87,
+        "contratos": 1,
+        "participacion_pct": 4.4238
+      },
+      {
+        "proveedor": "GEH SAS",
+        "documento": "900949968",
+        "valor": 1355111558.0,
+        "contratos": 3,
+        "participacion_pct": 3.7092
+      },
+      {
+        "proveedor": "INCCO CONSTRUCTORES Y CONSULTORES S.A.S.",
+        "documento": "901220723",
+        "valor": 860442261.29,
+        "contratos": 6,
+        "participacion_pct": 2.3552
+      },
+      {
+        "proveedor": "SEIING SAS",
+        "documento": "900208425",
+        "valor": 852386708.0,
+        "contratos": 1,
+        "participacion_pct": 2.3331
+      },
+      {
+        "proveedor": "ONG CORPOINTEGRAS",
+        "documento": "9000809421",
+        "valor": 817641950.0,
+        "contratos": 4,
+        "participacion_pct": 2.238
+      },
+      {
+        "proveedor": "EST SERVITEMPORALES SAS",
+        "documento": "901350353",
+        "valor": 575977227.0,
+        "contratos": 2,
+        "participacion_pct": 1.5766
+      },
+      {
+        "proveedor": "COOPERATIVA DE TRABAJO ASOCIADOS SANTA MARTA CTA",
+        "documento": "900172416",
+        "valor": 509040000.0,
+        "contratos": 3,
+        "participacion_pct": 1.3933
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8565571",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "modalidad": "Contratación directa",
+        "valor": 1818517275.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "GERENCIA INTEGRAL PARA ADELANTAR EL PROYECTO  CONSTRUCCIÓN DE OBRAS COMPLEMETARIAS A LA FASE 1 DEL PLAN MAESTRO DE ACUEDUCTO Y ALCANTARILLADO DEL MUNICIPIO DE GACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8694703",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "CPG",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1616188364.87,
+        "fecha_firma": "2026-01-27",
+        "objeto": "CONSTRUCCIÓN DEL PUENTE VEHICULAR QUEBRADA GRANDE MUNICIPIO DE GACHETA; DEPARTAMENTO DE CUNDINAMARCA; EN EL MARCO DEL CONVENIO No. ICCU-391-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8229833",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "ECOSYGMA",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 1025704882.0,
+        "fecha_firma": "2025-12-11",
+        "objeto": "ESTUDIOS Y DISEÑOS PARA LA CONSTRUCCION DE OBRAS DEL PLAN MAESTRO DE ACUEDUCTO Y ALCANTARILLADO FASE II (INCLUYE PSMV) DEL MUNICIPIO DE GACHETÁ SEGÚN CONVENIO EPC-CI-008-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8146133",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "SEIING SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 852386708.0,
+        "fecha_firma": "2025-07-31",
+        "objeto": "CONSTRUCCIÓN DE 50 UNIDADES SANITARIAS EN LA ZONA RURAL DE EL MUNICIPIO DE GACHETA DEPARTAMENTO DE CUNDINAMARCA EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO EPC-CI-003-2025 CELEBRADO ENTRE EMPRESAS PUBLICAS DE CUNDINAMARCA - Y EL MUNICIPIO DE GACHETA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9218617",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "FUNDACION INTERNACIONAL PARA EL DESARROLLO Y LA EQUIDAD SOCIAL",
+        "modalidad": "Contratación régimen especial",
+        "valor": 690766599.0,
+        "fecha_firma": "2026-01-28",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; FINANCIEROS; ADMINISTRATIVOS Y OPERATIVOS PARA GARANTIZAR LA ADMINISTRACIÓN Y FUNCIONAMIENTO DEL CENTRO DE BIENESTAR DEL ADULTO MAYOR SAN ANTONIO DEL MUNICIPIO DE GACHETÁ."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "contratos": 542,
+        "valor": 27193687677.51
+      },
+      {
+        "entidad": "CONCEJO MUNCIPAL DE GACHETA",
+        "contratos": 2,
+        "valor": 19658000.19
+      },
+      {
+        "entidad": "E.S.E HOSPITAL SAN FRANCISCO  DE GACHETA",
+        "contratos": 414,
+        "valor": 10151789935.0
+      },
+      {
+        "entidad": "ESTABLECIMIENTO PENITENCIARIO DE MEDIANA SEGURIDAD Y CARCELARIO DE GACHETA",
+        "contratos": 27,
+        "valor": 159766402.01
+      },
+      {
+        "entidad": "Personería Municipal de Gachetá Cundinamarca",
+        "contratos": 2,
+        "valor": 34799955.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 23,
+    "valor_obras": 4575544212.56,
+    "obras_vencidas_abiertas": 11,
+    "valor_obras_vencidas_abiertas": 612859326.62,
+    "pct_obras_vencidas_abiertas": 47.82608695652174,
+    "pct_pagado_obras_vencidas_abiertas": 33.7523,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9440225",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "INCCO CONSTRUCTORES Y CONSULTORES S.A.S.",
+        "estado": "Aprobado",
+        "valor": 199544530.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-08",
+        "objeto": "EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SALINAS A LA VEREDA DE BOMBITA; SECTOR EL CARMEN DEL MUNICIPIO DE GACHETÁ CUNDINAMARCA EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO No. ICCU-543-2025 Y EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA RESGUARDO 1 AL CASCO URBANO SECTOR LOS GALPONES DEL MUNICIPIO DE GACHETÁ CUNDINAMARCA EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO No. ICCU-547-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9408155",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "INVERSIONES ASMC",
+        "estado": "En ejecución",
+        "valor": 94660408.32,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-01",
+        "objeto": "EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA YERBABUENA A LA VEREDA HATOGRANDE; SECTOR SAN ROQUE; DEL MUNICIPIO DE GACHETÁ; DEPARTAMENTO DE CUNDINAMARCA; EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO NO. ICCU-538-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7153761",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "ASOCIACION DE USUARIOS ACUEDUCTO DE LA VEREDA MUCHINDOTE CUARTO LOS LOPEZ DEL MUNICIPIO DE GACHETA",
+        "estado": "Modificado",
+        "valor": 88508345.93,
+        "pagado": 55760257.94,
+        "fecha_fin": "2025-12-06",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA ASOCIACION DE USUARIOS DE ACUEDUCTO DE LA VEREDA MUCHINDOTE CUARTO LOS LOPEZ Y EL MUNICIPIO DE GACHETÁ PARA EL MEJORAMIENTO Y OPTIMIZACION DEL ACUEDUCTO DE LA VEREDA MUCHINDOTE SECTOR CUARTO LOS LOPEZ DEL MUNICIPIO DE GACHETÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8044175",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "estado": "En ejecución",
+        "valor": 55523733.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-08",
+        "objeto": "AUNAR ESFUERZOS PARA LA CONFORMACIÓN DE LA BOLSA COMÚN DE RECURSOS PARA EL FINANCIAMIENTO DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR PAE EN LA ETC CUNDINAMARCA; MEDIANTE LA TRANSFERENCIA DE RECURSOS SGP ALIMENTACIÓN ESCOLAR DEL MUNICIPIO DE GACHETÁ CON NIT 899999331-2 AL DEPARTAMENTO DE CUNDINAMARCA NIT 899999114-0"
+      },
+      {
+        "id": "CO1.PCCNTR.7112545",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "INCCO CONSTRUCTORES Y CONSULTORES S.A.S.",
+        "estado": "Modificado",
+        "valor": 54131974.0,
+        "pagado": 54131974.0,
+        "fecha_fin": "2025-03-01",
+        "objeto": "ADECUACIÓN Y MANTENIMIENTO DE LA INFRAESTRUCTURA FÍSICA DE LA CASA DE GOBIERNO DEL MUNICIPIO DE GACHETA - CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7185637",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "CONSTRUCTORA E INMOBILIARIA HABITA COLOMBIA SAS",
+        "estado": "Modificado",
+        "valor": 45162114.94,
+        "pagado": 45162114.94,
+        "fecha_fin": "2025-03-30",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DEL POLIDEPORTIVO LA COLOMBIA MUNICIPIO DE GACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7101269",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "INCCO CONSTRUCTORES Y CONSULTORES S.A.S.",
+        "estado": "Modificado",
+        "valor": 29002591.43,
+        "pagado": 29002591.43,
+        "fecha_fin": "2025-02-10",
+        "objeto": "ADECUACIÓN Y MANTENIMIENTO DE LA ESTRUCTURA DEL KIOSCO UBICADO EN EL PARQUE DEL AGUA DEL MUNICIPIO DE GACHETA - CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8503257",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "JUNTA DE ACCION COMUNAL RINCONES MUCHINDOTE",
+        "estado": "En ejecución",
+        "valor": 19402164.0,
+        "pagado": 16203428.1,
+        "fecha_fin": "2025-12-30",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA JUNTA DE ACCION COMUNAL DE RINCONES MUCHINDOTE Y EL MUNICIPIO DE GACHETÁ PARA EL MEJORAMIENTO DEL PUENTE PEATONAL SOBRE LA QUEBRADA CASCADAS UBICADA EN LAVEREDA MUCHINDOTE SECTOR RINCONES"
+      },
+      {
+        "id": "CO1.PCCNTR.8638127",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA MUCHINDOTE CUARTO SALITRE",
+        "estado": "En ejecución",
+        "valor": 13357098.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA JUNTA DE ACCION COMUNAL VEREDA MUCHINDOTE Y EL MUNICIPIO DE GACHETÁ PARA EL MEJORAMIENTO DEL PUENTE PEATONAL LA CAPILLA UBICADO SOBRE EL RIO MUCHINDOTE"
+      },
+      {
+        "id": "CO1.PCCNTR.8492089",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA DE HATOGRANDE  CUARTO DE SAN ROQUE",
+        "estado": "Modificado",
+        "valor": 7093923.0,
+        "pagado": 6593923.0,
+        "fecha_fin": "2025-12-28",
+        "objeto": "AUNAR ESFUERZOS ENTRE EL MUNICIPIO DE GACHETA Y LA JUNTA DE ACCION COMUNAL DE LA VEREDA HATOGRANDE CUARTO SAN ROQUE PARA EL MANTENIMIENTO Y MEJORAMIENTO DE LOS CAMINOS PEATONALES"
+      },
+      {
+        "id": "CO1.PCCNTR.8638024",
+        "entidad": "ALCALDIA MUNICIPAL DE GACHETA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA VILLA SECTOR SAN MIGUEL PARTE BAJA",
+        "estado": "En ejecución",
+        "valor": 6472444.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-25",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA JUNTA DE ACCION COMUNAL VEREDA VILLA SECTOR SAN MIGUEL PARTE BAJA Y EL MUNICIPIO DE GACHETÁ PARA EL MEJORAMIENTO DEL PUENTE PEATONAL LA VEGA SOBRE LA QUEBRADA LA NEGRA UBICADA EN LA VEREDA VILLA"
+      }
+    ]
+  },
+  "municipio": "Gachetá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 30.6,
+  "nivel": "bajo",
+  "posicion": 66.0,
+  "total_rankeados": 71
+}

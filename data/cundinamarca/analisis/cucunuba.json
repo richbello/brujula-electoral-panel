@@ -1,0 +1,225 @@
+{
+  "resumen": {
+    "contratos": 571,
+    "valor_total": 22534819947.85,
+    "entidades": 4,
+    "proveedores": 251
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 74.9562,
+    "pct_directa_valor": 54.4803,
+    "hhi": 221.95279136739398,
+    "top1_proveedor_pct": 7.654435123030883,
+    "top5_proveedores_pct": 28.00821022984112,
+    "pareto_proveedores_80pct_valor": 89,
+    "pct_con_adicion": 16.987740805604204,
+    "top_proveedores": [
+      {
+        "proveedor": "GEOSYGMA",
+        "documento": "900557377",
+        "valor": 1724913173.0,
+        "contratos": 1,
+        "participacion_pct": 7.6544
+      },
+      {
+        "proveedor": "UNION TEMPORAL CUCUNUBA EDUCATIVA",
+        "documento": "901982790",
+        "valor": 1286787371.3,
+        "contratos": 1,
+        "participacion_pct": 5.7102
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 1239435200.0,
+        "contratos": 3,
+        "participacion_pct": 5.5001
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DEL MUNICIPIO DE CUCUNUBA SAS ESP",
+        "documento": "900481517",
+        "valor": 1200175273.0,
+        "contratos": 6,
+        "participacion_pct": 5.3259
+      },
+      {
+        "proveedor": "ESE CENTRO DE SALUD DE CUCUNUBA",
+        "documento": "832010240",
+        "valor": 860288728.61,
+        "contratos": 7,
+        "participacion_pct": 3.8176
+      },
+      {
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "documento": "830105879",
+        "valor": 617102853.33,
+        "contratos": 1,
+        "participacion_pct": 2.7384
+      },
+      {
+        "proveedor": "I&A CONSTRUCCIONES SAS",
+        "documento": "901838527",
+        "valor": 557897001.0,
+        "contratos": 1,
+        "participacion_pct": 2.4757
+      },
+      {
+        "proveedor": "OJEDA GAVILAN LUIS GABRIEL",
+        "documento": "79167268",
+        "valor": 494797033.0,
+        "contratos": 3,
+        "participacion_pct": 2.1957
+      },
+      {
+        "proveedor": "COOPERATIVA MULTIACTIVA DE TRABAJADORES DE CUCUNUBA",
+        "documento": "830504257",
+        "valor": 494500000.0,
+        "contratos": 8,
+        "participacion_pct": 2.1944
+      },
+      {
+        "proveedor": "EL RINCÓN DEL PARQUE SAS",
+        "documento": "901679506",
+        "valor": 432797781.0,
+        "contratos": 9,
+        "participacion_pct": 1.9206
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9522601",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "GEOSYGMA",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 1724913173.0,
+        "fecha_firma": "2026-09-07",
+        "objeto": "ESTUDIOS Y DISEÑOS PARA LA CONSTRUCCIÓN DEL POZO PROFUNDO SECTOR CASA DE LATA; MUNICIPIO DE CUCUNUBÁ; (CONVENIO NO EPC-CI-048-2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8236866",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "UNION TEMPORAL CUCUNUBA EDUCATIVA",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1286787371.3,
+        "fecha_firma": "2025-10-06",
+        "objeto": "CONSTRUCCIÓN DE LA SEDE EDUCATIVA RURAL DE LA VEREDA CHÁPALA FASE 2 DEL MUNICIPIO DE CUCUNUBÁ; CUNDINAMARCA; (CONVENIO No ICCU. 748 DE 2024)"
+      },
+      {
+        "id": "CO1.PCCNTR.8561142",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DEL MUNICIPIO DE CUCUNUBA SAS ESP",
+        "modalidad": "Contratación directa",
+        "valor": 618970656.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "CONVENIO INTERADMINISTRATIVO LLAVE EN MANO ENTRE EL MUNICIPIO DE CUCUNUBÁ Y LA EMPRESA DE SERVICIOS PÚBLICOS DEL MUNICIPIO DE CUCUNUBÁ S.A.S. E.S.P.; PARA LLEVAR A CABO EL FORTALECIMIENTO DEL SECTOR DE AGUA POTABLE DEL ÁREA RURAL Y URBANA DEL MUNICIPIO DE CUCUNUBA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6518622",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 617102853.33,
+        "fecha_firma": "2024-07-12",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS CON ENTIDAD SIN ÁNIMO DE LUCRO (ESAL) DE RECONOCIDA IDONEIDAD PARA LLEVAR A CABO LA PRESTACIÓN DE SERVICIOS LOGÍSTICOS; ARTÍSTICOS; CULTURALES; DEPORTIVOS; RECREATIVOS; RELIGIOSOS; SOCIAL; TURISTICOS Y COMUNAL EN EL MUNICIPIO DE CUCUNUBÁ A MONTO AGOTABLE VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9588073",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DEL MUNICIPIO DE CUCUNUBA SAS ESP",
+        "proveedor": "I&A CONSTRUCCIONES SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 557897001.0,
+        "fecha_firma": "2026-06-23",
+        "objeto": "CONTRATO LLAVE EN MANO PARA LA EJECUCIÓN DE LOS ESTUDIOS; DISEÑOS Y LA PRIMERA FASE DE OBRAS PARA EL FORTALECIMIENTO DEL SECTOR DE AGUA POTABLE DEL ÁREA RURAL Y URBANA DEL MUNICIPIO DE CUCUNUBÁ; CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE CUCUNUBÁ",
+        "contratos": 7,
+        "valor": 38711951.89
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DEL MUNICIPIO DE CUCUNUBA SAS ESP",
+        "contratos": 61,
+        "valor": 1575334045.0
+      },
+      {
+        "entidad": "ESE CENTRO DE SALUD DE CUCUNUBA",
+        "contratos": 1,
+        "valor": 22969315.8
+      },
+      {
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "contratos": 502,
+        "valor": 20897804635.16
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 7,
+    "valor_obras": 2251371376.22,
+    "obras_vencidas_abiertas": 5,
+    "valor_obras_vencidas_abiertas": 678253336.92,
+    "pct_obras_vencidas_abiertas": 71.42857142857143,
+    "pct_pagado_obras_vencidas_abiertas": 85.8443,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8694627",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "OPEN INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 299608250.0,
+        "pagado": 299608250.0,
+        "fecha_fin": "2026-04-15",
+        "objeto": "mejoramiento de la vía que comunica el casco urbano con la vereda pueblo viejo sector la escuela; sector Panamá medio y con la vereda hato de rojas sector la virgen del municipio de Cucunubá; Cundinamarca (CONVENIO ICCU 374; 404 Y 399 DE 2025)."
+      },
+      {
+        "id": "CO1.PCCNTR.9450498",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "OBRA NOVA CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 149932029.92,
+        "pagado": 149932029.92,
+        "fecha_fin": "2026-07-03",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA PEÑAS SECTOR EL MORTIÑO DEL MUNICIPIO DE CUCUNUBA; CUNDINAMARCA (CONVENIO ICCU 1398 DE 2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8205417",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "FERMETRI INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 95945502.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-31",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DE ESPACIOS EN LA SEDE ADMINISTRATIVA DE LA ALCALDÍA DEL MUNICIPIO DE CUCUNUBÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9476043",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "C - VIAL OF CUCUNUBA",
+        "estado": "En ejecución",
+        "valor": 94949962.0,
+        "pagado": 94947054.0,
+        "fecha_fin": "2026-09-22",
+        "objeto": "mejoramiento de la vía que comunica el casco urbano con la vereda Juaitoque sector la virgen del municipio de Cucunuba; Cundinamarca (convenio ICCU 401 de 2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8709638",
+        "entidad": "MUNICIPIO DE CUCUNUBÁ",
+        "proveedor": "SOLUCIONES INTEGRALES ROCAS SAS",
+        "estado": "Modificado",
+        "valor": 37817593.0,
+        "pagado": 37754496.0,
+        "fecha_fin": "2026-04-02",
+        "objeto": "MANTENIMIENTO DE SEDES EDUCATIVAS RURALES DEL MUNICIPIO DE CUCUNUBÁ CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Cucunubá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 66.9,
+  "nivel": "alto",
+  "posicion": 11.0,
+  "total_rankeados": 71
+}

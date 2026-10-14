@@ -1,0 +1,210 @@
+{
+  "resumen": {
+    "contratos": 1152,
+    "valor_total": 109200118046.8,
+    "entidades": 3,
+    "proveedores": 559
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 82.6389,
+    "pct_directa_valor": 28.6725,
+    "hhi": 573.6580576763715,
+    "top1_proveedor_pct": 21.744644157937298,
+    "top5_proveedores_pct": 35.913362471227586,
+    "pareto_proveedores_80pct_valor": 114,
+    "pct_con_adicion": 11.54513888888889,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 20000000000.0,
+        "contratos": 1,
+        "participacion_pct": 21.7446
+      },
+      {
+        "proveedor": "CONSORCIO COGUA ABASTECE",
+        "documento": "901966016",
+        "valor": 6519200473.0,
+        "contratos": 1,
+        "participacion_pct": 7.0879
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 2782722105.0,
+        "contratos": 2,
+        "participacion_pct": 3.0255
+      },
+      {
+        "proveedor": "GECOLSA",
+        "documento": "860002576",
+        "valor": 1919674792.0,
+        "contratos": 1,
+        "participacion_pct": 2.0871
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 1810318177.0,
+        "contratos": 5,
+        "participacion_pct": 1.9682
+      },
+      {
+        "proveedor": "MUNDIAL CATERPILLAR",
+        "documento": "16050667",
+        "valor": 1594546348.0,
+        "contratos": 3,
+        "participacion_pct": 1.7336
+      },
+      {
+        "proveedor": "ACON SECURITY LTDA",
+        "documento": "830016530",
+        "valor": 1465426465.0,
+        "contratos": 5,
+        "participacion_pct": 1.5933
+      },
+      {
+        "proveedor": "Fundación Hogar San Joaquin",
+        "documento": "832004484",
+        "valor": 1277945115.43,
+        "contratos": 3,
+        "participacion_pct": 1.3894
+      },
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 1267165346.0,
+        "contratos": 4,
+        "participacion_pct": 1.3777
+      },
+      {
+        "proveedor": "HOSPITAL UNIVERSITARIO LA SAMARITANA",
+        "documento": "899999032",
+        "valor": 1121572726.0,
+        "contratos": 3,
+        "participacion_pct": 1.2194
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8222518",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 20000000000.0,
+        "fecha_firma": "2025-08-28",
+        "objeto": "Contrato de empréstito y pignoración de rentas con varias líneas de financiación de largo plazo"
+      },
+      {
+        "id": "CO1.PCCNTR.9720081",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "CONSORCIO INTERCOGUA AP.",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 7795143189.0,
+        "fecha_firma": "2026-09-11",
+        "objeto": "INTERVENTORIA TÉCNICA; ADMINISTRATIVA;\nREGULATORIA; AMBIENTAL PARA EL\nSERVICIO DE ALUMBRADO PÚBLICO;\nSERVICIOS TECNOLOGICOS ASOCIADOS A\nEL; Y LAS OBRAS DE MODERNIZACIÓN;\nEXPANSIÓN. ALUMBRADO NAVIDEÑO Y\nORNAMENTÁL DEL MUNICIPIO DE COGUA -\nCUNDINAMARC"
+      },
+      {
+        "id": "CO1.PCCNTR.8077042",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "CONSORCIO COGUA ABASTECE",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 6519200473.0,
+        "fecha_firma": "2025-07-17",
+        "objeto": "CONSTRUCCION DE LA NUEVA INFRAESTRUCTURA DEL\nCENTRO DE ABASTECIMIENTO Y DISTRIBUCION DE ALIMENTOS DEL MUNICIPIO\nDE COGUA; CUNDINAMARCA; EN EL MARCO DEL CONVENIO ICCU-CTO-593-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9455452",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "CONSORCIO SMARTLED COGUA",
+        "modalidad": "Licitación pública",
+        "valor": 6118765560.0,
+        "fecha_firma": "2026-07-07",
+        "objeto": "CONTRATACIÓN POR MEDIO DEL SISTEMA DE CONCESIÓN DE LA PRESTACIÓN INTEGRAL DEL SERVICIO DE ALUMBRADO PÚBLICO EN EL MUNICIPIO DE COGUA-CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9515429",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "CONSORCIO SHV INFRAESTRUCTURA",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2572574915.94,
+        "fecha_firma": "2026-06-03",
+        "objeto": "CONSTRUCCION DE LA INFRAESTRUCTURA DEL\nCENTRO DIA DEL ADULTO MAYOR EN EL MUNICIPIO DE COGUA;\nCUNDINAMARCA; EN EL MARCO DEL CONVENIO - ICCU-878- 2025."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Concejo Municipal de Cogua",
+        "contratos": 18,
+        "valor": 462486956.0
+      },
+      {
+        "entidad": "MUNICIPIO DE COGUA",
+        "contratos": 1116,
+        "valor": 108617789826.8
+      },
+      {
+        "entidad": "PERSONERÍA MUNICIPAL DE COGUA",
+        "contratos": 13,
+        "valor": 119841264.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 31,
+    "valor_obras": 14943065505.66,
+    "obras_vencidas_abiertas": 4,
+    "valor_obras_vencidas_abiertas": 547804066.97,
+    "pct_obras_vencidas_abiertas": 12.903225806451612,
+    "pct_pagado_obras_vencidas_abiertas": 35.914,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9327130",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "OSCAR LEONARDO PINZON GARCIA",
+        "estado": "Modificado",
+        "valor": 215000000.0,
+        "pagado": 141613524.0,
+        "fecha_fin": "2026-07-03",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LOS ESCENARIOS DEPORTIVOS DE PARAMO ALTO; CERRITOS Y CASCAJAL DEL MUNICIPIO DE COGUA CUNDINAMARCA; EN EL MARCO DEL CONVENIO - ICCU-1287-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.6477951",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "DESARROLLOS ELECTRICOS Y ASESORIAS REGULATORIAS SAS",
+        "estado": "Modificado",
+        "valor": 193025214.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-10-02",
+        "objeto": "RENOVACIÓN Y OPTIMIZACIÓN DEL SISTEMA DE ILUMINACIÓN DEL ESCENARIO DEPORTIVO DE FUTBOL DEL COMPLEJO DEPORTIVO APOYO DEL CERRO"
+      },
+      {
+        "id": "CO1.PCCNTR.9326295",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "VERIA INGENIEROS SAS",
+        "estado": "Modificado",
+        "valor": 100000000.0,
+        "pagado": 15346000.0,
+        "fecha_fin": "2026-06-18",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLA PARA EL MEJORAMIENTO\nDE VIAS RURALES EN EL MUNICIPIO DE COGUA CUNIDNAMARCA;\nEN EL MARCO DEL CONVENIO - ICCU-1380-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7881723",
+        "entidad": "MUNICIPIO DE COGUA",
+        "proveedor": "BIHAO SOCIEDAD POR ACCIONES SIMPLIFICADA",
+        "estado": "Modificado",
+        "valor": 39778852.97,
+        "pagado": 39778852.97,
+        "fecha_fin": "2025-07-29",
+        "objeto": "MONTAJE E INSTALACIÓN DE DOS VIVEROS SATELITES EN EL MUNICIPIO DE COGUA"
+      }
+    ]
+  },
+  "municipio": "Cogua",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 33.3,
+  "nivel": "bajo",
+  "posicion": 62.0,
+  "total_rankeados": 71
+}

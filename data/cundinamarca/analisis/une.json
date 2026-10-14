@@ -1,0 +1,118 @@
+{
+  "resumen": {
+    "contratos": 5,
+    "valor_total": 730298172.0,
+    "entidades": 1,
+    "proveedores": 4
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 9195.284397135893,
+    "top1_proveedor_pct": 95.85087281308435,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "G&C MEDICALS S.A.S",
+        "documento": "830134409",
+        "valor": 699997172.0,
+        "contratos": 1,
+        "participacion_pct": 95.8509
+      },
+      {
+        "proveedor": "DISTRIBUIDORA COLOMBIANA DE MEDICAMENTOS  Y TECNOLOGIAS EN SALUD SAS - DISCOLMETS S.A.S",
+        "documento": "828002423",
+        "valor": 15823000.0,
+        "contratos": 2,
+        "participacion_pct": 2.1666
+      },
+      {
+        "proveedor": "SOFI ASTRID CASTRO ANGEL",
+        "documento": "52151289",
+        "valor": 12978000.0,
+        "contratos": 1,
+        "participacion_pct": 1.7771
+      },
+      {
+        "proveedor": "OXY EXPRESS SAS",
+        "documento": "900317971",
+        "valor": 1500000.0,
+        "contratos": 1,
+        "participacion_pct": 0.2054
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9497634",
+        "entidad": "E.S.E CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS",
+        "proveedor": "G&C MEDICALS S.A.S",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 699997172.0,
+        "fecha_firma": "2026-05-06",
+        "objeto": "ADQUISICIÓN DE EQUIPOS BIOMÉDICOS; MOBILIARIO HOSPITALARIO ASISTENCIAL E INSTRUMENTAL; CON EL FIN DE CONTRIBUIR EN EL FORTALECIMIENTO; MEJORAMIENTO Y CUMPLIMIENTO DE LOS COMPONENTES DEL SISTEMA OBLIGATORIO DE GARANTÍA DE LA CALIDAD EN EL CONTEXTO DE REDES INTEGRALES E INTEGRADAS DE SERVICIOS DE SALUD; IMPACTANDO EN LA CALIDAD DE LOS SERVICIOS A LA POBLACIÓN DEL DEPARTAMENTO DE CUNDINAMARCA DE ACUERDO A CONVENIO INTERADMINISTRATIVO SS-CD-CVI-873-2025; CELEBRADO ENTRE EL DEPARTAMENTO DE CUNDINAMAR"
+      },
+      {
+        "id": "CO1.PCCNTR.4869849",
+        "entidad": "E.S.E CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS",
+        "proveedor": "SOFI ASTRID CASTRO ANGEL",
+        "modalidad": "Contratación régimen especial",
+        "valor": 12978000.0,
+        "fecha_firma": "2026-01-31",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES COMO ASESOR CONTABLE Y FINANCIERO DE LA ESE CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS DE UNE"
+      },
+      {
+        "id": "CO1.PCCNTR.4851479",
+        "entidad": "E.S.E CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS",
+        "proveedor": "DISTRIBUIDORA COLOMBIANA DE MEDICAMENTOS  Y TECNOLOGIAS EN SALUD SAS - DISCOLMETS S.A.S",
+        "modalidad": "Contratación régimen especial",
+        "valor": 8823000.0,
+        "fecha_firma": "2024-07-04",
+        "objeto": "SUMINISTRO DE MATERIAL MEDICO -  QUIRÚRGICO Y ODONTOLÓGICO PARA     LA E.S.E. CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS DE UNE - CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.4897192",
+        "entidad": "E.S.E CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS",
+        "proveedor": "DISTRIBUIDORA COLOMBIANA DE MEDICAMENTOS  Y TECNOLOGIAS EN SALUD SAS - DISCOLMETS S.A.S",
+        "modalidad": "Contratación régimen especial",
+        "valor": 7000000.0,
+        "fecha_firma": "2024-07-04",
+        "objeto": "CONTRATAR SUMINISTRO DE MEDICAMENTOS PARA LA FARMACIA DE LA ESE CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS DE UNE"
+      },
+      {
+        "id": "CO1.PCCNTR.4850320",
+        "entidad": "E.S.E CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS",
+        "proveedor": "OXY EXPRESS SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 1500000.0,
+        "fecha_firma": "2025-06-27",
+        "objeto": "CONTRATAR SUMINISTRO DE GASES MEDICINALES PARA LA ESE CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS DE UNE CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "E.S.E CENTRO DE SALUD TIMOTEO RIVEROS CUBILLOS",
+        "contratos": 5,
+        "valor": 730298172.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Une",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

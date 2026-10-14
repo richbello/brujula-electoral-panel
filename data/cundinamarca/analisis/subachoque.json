@@ -1,0 +1,230 @@
+{
+  "resumen": {
+    "contratos": 830,
+    "valor_total": 42803445053.84,
+    "entidades": 3,
+    "proveedores": 377
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 76.2651,
+    "pct_directa_valor": 48.7506,
+    "hhi": 207.18109628139123,
+    "top1_proveedor_pct": 6.868844110460712,
+    "top5_proveedores_pct": 26.330770736419733,
+    "pareto_proveedores_80pct_valor": 105,
+    "pct_con_adicion": 18.67469879518072,
+    "top_proveedores": [
+      {
+        "proveedor": "AGUAS Y ASEO DE SUBACHOQUE SA ESP",
+        "documento": "900322539",
+        "valor": 2908298844.0,
+        "contratos": 9,
+        "participacion_pct": 6.8688
+      },
+      {
+        "proveedor": "Centro de bienestar del anciano Fundacion Jeymar",
+        "documento": "860404701",
+        "valor": 2689752149.0,
+        "contratos": 3,
+        "participacion_pct": 6.3527
+      },
+      {
+        "proveedor": "GECOLSA",
+        "documento": "860002576",
+        "valor": 2049565515.0,
+        "contratos": 1,
+        "participacion_pct": 4.8407
+      },
+      {
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "documento": "832003417",
+        "valor": 1876975501.99,
+        "contratos": 7,
+        "participacion_pct": 4.4331
+      },
+      {
+        "proveedor": "CONSORCIO MERECURE",
+        "documento": "902019213",
+        "valor": 1623972269.95,
+        "contratos": 1,
+        "participacion_pct": 3.8355
+      },
+      {
+        "proveedor": "CUERPO DE BOMBEROS VOLUNTARIOS DE SUBACHOQUE",
+        "documento": "900656813",
+        "valor": 1298638035.0,
+        "contratos": 5,
+        "participacion_pct": 3.0671
+      },
+      {
+        "proveedor": "RAMONERRE S.A.S.",
+        "documento": "800216125",
+        "valor": 1189762000.0,
+        "contratos": 1,
+        "participacion_pct": 2.81
+      },
+      {
+        "proveedor": "ARMELCO SAS",
+        "documento": "901192425",
+        "valor": 918563915.96,
+        "contratos": 1,
+        "participacion_pct": 2.1695
+      },
+      {
+        "proveedor": "LUBRICANTES COMBUSTIBLES Y PARTES",
+        "documento": "900073153",
+        "valor": 849101265.0,
+        "contratos": 6,
+        "participacion_pct": 2.0054
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 801709193.0,
+        "contratos": 3,
+        "participacion_pct": 1.8935
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9524116",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "GECOLSA",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 2049565515.0,
+        "fecha_firma": "2026-05-26",
+        "objeto": "ADQUISICIÓN DE MAQUINARIA DESTINADA PARA EL MANTENIMENTO Y REHABILITACION DE LA MALLA VIAL URBANA Y RURAL DEL MUNICIPIO DE SUBACHOQUE CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU-CTO-1517-2025 SUSCRITO CON EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU."
+      },
+      {
+        "id": "CO1.PCCNTR.8717673",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "CONSORCIO MERECURE",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 1623972269.95,
+        "fecha_firma": "2025-12-24",
+        "objeto": "SUMINISTRO DE MATERIALES DE CONSTRUCCIÓN Y FERRETERÍA PARA EL MANTENIMIENTO Y ADECUACIÓN DE VÍAS Y ESPACIOS PÚBLICOS; ASÍ COMO LA INFRAESTRUCTURA MUNICIPAL Y EDUCATIVA DEL MUNICIPIO DE SUBACHOQUE; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8565403",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "Centro de bienestar del anciano Fundacion Jeymar",
+        "modalidad": "Contratación régimen especial",
+        "valor": 1616152149.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA IMPLEMENTACIÓN DEL PROGRAMA DE ATENCIÓN INTEGRAL AL ADULTO MAYOR; CON EL FIN DE BRINDAR SERVICIOS DE APOYO; ASESORIA; FORMACION Y ATENCION ENCAMINADO A MEJORAR SIGNIFICATIVAMENTE SU CALIDAD DE VIDA; EN CUMPLIMIENTO DE LA META 74 DEL PLAN DE DESARROLLO MUNICIPAL"
+      },
+      {
+        "id": "CO1.PCCNTR.9439606",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "RAMONERRE S.A.S.",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 1189762000.0,
+        "fecha_firma": "2026-04-20",
+        "objeto": "ADQUISICIÓN DE UN VEHICULO COMPACTADOR DE RESIDUOS SOLIDOS DE 25 Yd3 PARA EL MUNICIPIO DE SUBACHOQUE CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO EPC-CI-050-2025 SUSCRITO CON EMPRESAS PÚBLICAS DE CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9974276",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "ARMELCO SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 918563915.96,
+        "fecha_firma": "2026-09-23",
+        "objeto": "CONTRATAR LAS OBRAS PARA LA CONSTRUCCIÓN DE LA CASA SOCIAL DE LA MUJER EN EL MUNICIPIO DE SUBACHOQUE; CUNDINAMARCA; EN EL MARCO DEL CONVENIO ICCU-909-2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE SUBACHOQUE",
+        "contratos": 32,
+        "valor": 268461615.0
+      },
+      {
+        "entidad": "INSTITUTO DE DEPORTE CULTURA Y TURISMO DE SUBACHOQUE",
+        "contratos": 246,
+        "valor": 4979371164.05
+      },
+      {
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "contratos": 504,
+        "valor": 37555612274.79
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 16,
+    "valor_obras": 2886869297.23,
+    "obras_vencidas_abiertas": 6,
+    "valor_obras_vencidas_abiertas": 812279992.0,
+    "pct_obras_vencidas_abiertas": 37.5,
+    "pct_pagado_obras_vencidas_abiertas": 23.3909,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9111552",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "CONSTRUCCIONES ARES SAS",
+        "estado": "Aprobado",
+        "valor": 351979992.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-31",
+        "objeto": "CONTRATAR LAS OBRAS EL MEJORAMIENTO DE VIVIENDA RURAL CON REPARACIONES LOCATIVAS EN EL MUNICIPIO DE SUBACHOQUE; CUNDINAMARCA-CONVENIO SV-CD-CVI-110-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9483105",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "CB SALMER SAS",
+        "estado": "En ejecución",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-12",
+        "objeto": "CONTRATAR LAS OBRAS PARA EL MEJORAMIENTO DE LA VÍA QUE COMUNICA DEL CASCO URBANO A LA VEREDA LA UNION SECTOR ENTRADA 4 EL ALMAGUER EN EL MUNICIPIO SUBACHOQUE; CUNDINAMARCA - CONVENIO 1313 DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.8536347",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 100000000.0,
+        "pagado": 95000000.0,
+        "fecha_fin": "2026-03-30",
+        "objeto": "CONTRATAR LAS OBRAS PARA EL MEJORAMIENTO DE LA VÍA QUE\nCOMUNICA DEL CASCO URBANO A LA VEREDA CANICA BAJA SECTOR CAMINO EL ATICO\nEN EL MUNICIPIO DE SUBACHOQUE; CUNDINAMARCA-CONVENIO 512 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9472044",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "CB SALMER SAS",
+        "estado": "En ejecución",
+        "valor": 100000000.0,
+        "pagado": 95000000.0,
+        "fecha_fin": "2026-08-12",
+        "objeto": "CONTRATAR LAS OBRAS PARA EL MEJORAMIENTO DE LA VÍA QUE COMUNICA DEL CASCO URBANO A LA VEREDA CANICA ALTA SECTOR EL PICACHO EN EL MUNICIPIO DE SUBACHOQUE; CUNDINAMACA-CONVENIO 1165 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9484107",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "CCG SAS",
+        "estado": "En ejecución",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "CONTRATAR LAS OBRAS PARA EL MEJORAMIENTO DE LA VÍA QUE COMUNICA DEL CASCO URBANO A LA VEREDA GALDAMEZ\nSECTOR PIEDRA MIRANDA EN EL MUNICIPIO DE SUBACHOQUE; CUNDINAMARCA EN EL MARCO DEL CONVENIO 1161 - 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.6740617",
+        "entidad": "MUNICIPIO DE SUBACHOQUE",
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "estado": "Modificado",
+        "valor": 60300000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS Y FINANCIEROS PARA LA PROTECCIÓN SOCIAL INTEGRAL QUE SE OFRECEN EN LOS CENTROS ESPECIALES DE PROTECCION DE LA BENEFECIENCIA DE CUNDIANAMARCA A LOS USUARIOS PROCEDENTES DEL MUNICIPIO DE SUBACHOQUE"
+      }
+    ]
+  },
+  "municipio": "Subachoque",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 46.3,
+  "nivel": "medio",
+  "posicion": 43.0,
+  "total_rankeados": 71
+}

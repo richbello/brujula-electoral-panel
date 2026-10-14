@@ -1,0 +1,159 @@
+{
+  "resumen": {
+    "contratos": 79,
+    "valor_total": 1569318779.0,
+    "entidades": 1,
+    "proveedores": 54
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 84.8101,
+    "pct_directa_valor": 57.0978,
+    "hhi": 972.7204613249079,
+    "top1_proveedor_pct": 21.28579313967414,
+    "top5_proveedores_pct": 52.358454190141316,
+    "pareto_proveedores_80pct_valor": 25,
+    "pct_con_adicion": 3.79746835443038,
+    "top_proveedores": [
+      {
+        "proveedor": "LOGÍSTICA DE PROYECTOS SOCIALES Y AMBIENTALES",
+        "documento": "900005820",
+        "valor": 334041949.0,
+        "contratos": 1,
+        "participacion_pct": 21.2858
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 323494273.0,
+        "contratos": 9,
+        "participacion_pct": 20.6137
+      },
+      {
+        "proveedor": "MAYERLY ROCIO GONZALEZ MUÑOZ",
+        "documento": "20859681",
+        "valor": 68420000.0,
+        "contratos": 4,
+        "participacion_pct": 4.3599
+      },
+      {
+        "proveedor": "SINFA SISTEMA DE INFORMACIÓN FINANCIERO Y ADMINISTRATIVO SAS",
+        "documento": "900271100",
+        "valor": 64514832.0,
+        "contratos": 1,
+        "participacion_pct": 4.111
+      },
+      {
+        "proveedor": "JOHANNA PAOLA FORERO HERAQUE",
+        "documento": "52715804",
+        "valor": 31200000.0,
+        "contratos": 2,
+        "participacion_pct": 1.9881
+      },
+      {
+        "proveedor": "ESMERALDA VIRACACHÁ RODRÍGUEZ",
+        "documento": "1069435370",
+        "valor": 29868000.0,
+        "contratos": 2,
+        "participacion_pct": 1.9032
+      },
+      {
+        "proveedor": "WILLIAM ACERO DUARTE",
+        "documento": "80353597",
+        "valor": 26250000.0,
+        "contratos": 2,
+        "participacion_pct": 1.6727
+      },
+      {
+        "proveedor": "JAIME JEISSON HERREÑO ESPAÑOL",
+        "documento": "1069154079",
+        "valor": 26250000.0,
+        "contratos": 2,
+        "participacion_pct": 1.6727
+      },
+      {
+        "proveedor": "juan david rodriguez garcia",
+        "documento": "1069154073",
+        "valor": 25555000.0,
+        "contratos": 2,
+        "participacion_pct": 1.6284
+      },
+      {
+        "proveedor": "Haiver Riaño Riaño",
+        "documento": "1069432304",
+        "valor": 24917400.0,
+        "contratos": 2,
+        "participacion_pct": 1.5878
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6631115",
+        "entidad": "MUNICIPIO DE PULI",
+        "proveedor": "LOGÍSTICA DE PROYECTOS SOCIALES Y AMBIENTALES",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 334041949.0,
+        "fecha_firma": "2024-08-12",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA ALCALDIA MUNICIPAL DE PULI CUNDINAMARCA Y UNA ENTIDAD SIN ANIMO DE LUCRO; PARA EL IMPULSO DE PROGRAMAS Y ACTIVIDADES DE INTERS PUBLICO; CULTURAL; ARTISITICAS; DEPORTIVAS Y DE FOMENTO AGROPECUARIO Y TURISTICO A DESARROLLARSEN DENTRO DEL MARCO DE LAS XXII FERIAS Y FIESTAS DEL FOLCLORE Y EL PAISAJE EN EL MUNICIPIO DE PULI CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9296492",
+        "entidad": "MUNICIPIO DE PULI",
+        "proveedor": "SINFA SISTEMA DE INFORMACIÓN FINANCIERO Y ADMINISTRATIVO SAS",
+        "modalidad": "Contratación directa",
+        "valor": 64514832.0,
+        "fecha_firma": "2026-01-30",
+        "objeto": "SERVICIOS DE COMPUTACION EN LA NUBE DEL SISTEMA DE INFORMACION FINANCIERO Y ADMINISTRATIVO SINFA ERP SAS; SOPORTE Y ACTUALIZACION DE LOS MODULOS DE CONTABILIDAD; TESORERIA; PRESUPUESTO; IMPUESTO PREDIAL; ALMACEN E INVENTARIOS; NOMINA; INDUSTRIA Y COMERCIO PARA LA VIGENCIA 2026 EN CUMPLIMIENTO A LA META 206; ESTABLECIDA EN EL PLAN DE DESARROLLO MUNICIPAL 2024-2027"
+      },
+      {
+        "id": "CO1.PCCNTR.9368801",
+        "entidad": "MUNICIPIO DE PULI",
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "modalidad": "Mínima cuantía",
+        "valor": 48219782.0,
+        "fecha_firma": "2026-03-04",
+        "objeto": "CONTRATAR LOS SEGUROS QUE AMPAREN LOS INTERESES PATRIMONIALES ACTUALES Y FUTUROS POLIZAS DE VIDA ASI COMO LOS BIENES DE PROPIEDAD DE MUNICIPIO DE PULI CUNDINAMARCA QUE ESTEN BAJO SU RESPONSABILIDAD Y CUSTODIA Y AQUELLOS QUE SEAN ADQUIRIDOS PARA DESARROLLAR LAS FUNCIONES INHERENTES A SU ACTIVIDAD ASI COMO LA EXPEDICION POLIZA DE SEGUROS QUE REQUIERA LA ENTIDAD EN EL DESARROLLO DE SU ACTIVIDAD"
+      },
+      {
+        "id": "CO1.PCCNTR.10044617",
+        "entidad": "MUNICIPIO DE PULI",
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "modalidad": "Mínima cuantía",
+        "valor": 45054279.0,
+        "fecha_firma": "2026-10-07",
+        "objeto": "CONTRATAR LOS SEGUROS QUE AMPAREN LOS INTERESES PATRIMONIALES ACTUALES Y FUTUROS PÓLIZAS DE VIDA ASÍ COMO LOS BIENES DE PROPIEDAD DE MUNICIPIO DE PULÍ CUNDINAMARCA QUE ESTÉN BAJO SU RESPONSABILIDAD Y CUSTODIA Y AQUELLOS QUE SEAN ADQUIRIDOS PARA DESARROLLAR LAS FUNCIONES INHERENTES A SU ACTIVIDAD ASÍ COMO LA EXPEDICIÓN PÓLIZA DE SEGUROS QUE REQUIERA LA ENTIDAD EN EL DESARROLLO DE SU ACTIVIDAD"
+      },
+      {
+        "id": "CO1.PCCNTR.9635601",
+        "entidad": "MUNICIPIO DE PULI",
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "modalidad": "Mínima cuantía",
+        "valor": 41709570.0,
+        "fecha_firma": "2026-07-13",
+        "objeto": "CONTRATAR LOS SEGUROS QUE AMPAREN LOS INTERESES PATRIMONIALES ACTUALES Y FUTUROS PÓLIZAS DE VIDA ASÍ COMO LOS BIENES DE PROPIEDAD DE MUNICIPIO DE PULÍ CUNDINAMARCA QUE ESTÉN BAJO SU RESPONSABILIDAD Y CUSTODIA Y AQUELLOS QUE SEAN ADQUIRIDOS PARA DESARROLLAR LAS FUNCIONES INHERENTES A SU ACTIVIDAD ASÍ COMO LA EXPEDICIÓN PÓLIZA DE SEGUROS QUE REQUIERA LA ENTIDAD EN EL DESARROLLO DE SU ACTIVIDAD."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE PULI",
+        "contratos": 78,
+        "valor": 1569318779.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Pulí",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 65.0,
+  "nivel": "medio",
+  "posicion": 14.0,
+  "total_rankeados": 71
+}

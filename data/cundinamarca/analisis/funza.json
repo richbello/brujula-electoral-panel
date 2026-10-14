@@ -1,0 +1,270 @@
+{
+  "resumen": {
+    "contratos": 6888,
+    "valor_total": 553088252062.3799,
+    "entidades": 5,
+    "proveedores": 2187
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 94.2654,
+    "pct_directa_valor": 38.2794,
+    "hhi": 196.77203203951106,
+    "top1_proveedor_pct": 10.05651043138956,
+    "top5_proveedores_pct": 23.51350920931889,
+    "pareto_proveedores_80pct_valor": 288,
+    "pct_con_adicion": 11.469221835075494,
+    "top_proveedores": [
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 50809879437.0,
+        "contratos": 14,
+        "participacion_pct": 10.0565
+      },
+      {
+        "proveedor": "EMPRESA DE ACUEDUCTO, ALCANTARILLADO Y ASEO DE FUNZA EMAAF E.S.P",
+        "documento": "832000776",
+        "valor": 17725689383.55,
+        "contratos": 8,
+        "participacion_pct": 3.5083
+      },
+      {
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "documento": "900258772",
+        "valor": 16957307813.44,
+        "contratos": 7,
+        "participacion_pct": 3.3563
+      },
+      {
+        "proveedor": "UNION TEMPORAL TC FUNZA 2024",
+        "documento": "901901765",
+        "valor": 16780733415.7,
+        "contratos": 1,
+        "participacion_pct": 3.3213
+      },
+      {
+        "proveedor": "CONSORCIO VIAL SABANA OCCIDENTE",
+        "documento": "901903294",
+        "valor": 16526899950.0,
+        "contratos": 1,
+        "participacion_pct": 3.2711
+      },
+      {
+        "proveedor": "EMPRESA PÚBLICA DE MADRID (proveedor)",
+        "documento": "901255451",
+        "valor": 13404371009.460001,
+        "contratos": 4,
+        "participacion_pct": 2.6531
+      },
+      {
+        "proveedor": "UNION TEMPORAL SEGURIDAD FUNZA 2025",
+        "documento": "902020791",
+        "valor": 12774121377.93,
+        "contratos": 1,
+        "participacion_pct": 2.5283
+      },
+      {
+        "proveedor": "FUNDACION BANCO DE ALIMENTOS PAZ CON PROPOSITO",
+        "documento": "900909214",
+        "valor": 10523119932.0,
+        "contratos": 1,
+        "participacion_pct": 2.0828
+      },
+      {
+        "proveedor": "UT NUTRIENDO FUTURO 2026",
+        "documento": "902021681",
+        "valor": 10072531040.0,
+        "contratos": 1,
+        "participacion_pct": 1.9936
+      },
+      {
+        "proveedor": "UNION TEMPORAL TAC CENTRAL FUNZA 2024",
+        "documento": "901817859",
+        "valor": 8637524256.0,
+        "contratos": 1,
+        "participacion_pct": 1.7096
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8721820",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "CONSORCIO VIAL JF",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 29756997937.0,
+        "fecha_firma": "2025-12-31",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO DE FUNZA AL SECTOR LA PUNTA; MUNICIPIO DE FUNZA; DEPARTAMENTO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7185208",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "UNION TEMPORAL TC FUNZA 2024",
+        "modalidad": "Licitación pública",
+        "valor": 16780733415.7,
+        "fecha_firma": "2024-12-30",
+        "objeto": "SERVICIO DE VIGILANCIA Y SEGURIDAD PRIVADA PARA LAS DIFERENTES DEPENDENCIAS Y SEDES A CARGO DE LA ADMINISTRACIÓN MUNICIPAL; LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE FUNZA Y EL CENTRO DE SERVICIOS JUDICIALES PARA ADOLESCENTES (CESPA)"
+      },
+      {
+        "id": "CO1.PCCNTR.7187830",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "CONSORCIO VIAL SABANA OCCIDENTE",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 16526899950.0,
+        "fecha_firma": "2024-12-31",
+        "objeto": "MANTENIMIENTO Y/O MEJORAMIENTO Y/O REHABILITACIÓN DE LA INFRAESTRUCTURA VIAL URBANA Y REGIONAL VIA LA FUNZHE DEL MUNICIPIO DE FUNZA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9107176",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 14414838640.0,
+        "fecha_firma": "2026-01-27",
+        "objeto": "AUNAR RECURSOS TÉCNICOS; HUMANOS Y FINANCIEROS PARA LA PRESTACIÓN DEL SERVICIO DE LOS JARDINES SOCIALES; COMO ESPACIOS DE ATENCIÓN INTEGRAL A LA PRIMERA INFANCIA DEL MUCICIPIO DE FUNZA"
+      },
+      {
+        "id": "CO1.PCCNTR.7399596",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 12958015350.0,
+        "fecha_firma": "2025-02-06",
+        "objeto": "AUNAR RECURSOS TECNICOS; HUMANOS Y FINANCIEROS PARA LA PRESTACION DEL SERVICIO DE LOS JARDINES SOCIALES; COMO ESPACIOS DE ATENCION INTEGRAL A LA PRIMERA INFANCIA DEL MUNICIPIO DE FUNZA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CENTRO CULTURAL BACATA",
+        "contratos": 1600,
+        "valor": 40403667153.29
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE FUNZA",
+        "contratos": 205,
+        "valor": 6732443175.0
+      },
+      {
+        "entidad": "CUNDEPORTES FUNZA",
+        "contratos": 775,
+        "valor": 39535978498.76
+      },
+      {
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "contratos": 4109,
+        "valor": 461469652450.53
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE FUNZA",
+        "contratos": 160,
+        "valor": 4946510784.8
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 17,
+    "valor_obras": 77606014070.16,
+    "obras_vencidas_abiertas": 9,
+    "valor_obras_vencidas_abiertas": 31886408743.16,
+    "pct_obras_vencidas_abiertas": 52.94117647058824,
+    "pct_pagado_obras_vencidas_abiertas": 90.6934,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7187830",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "CONSORCIO VIAL SABANA OCCIDENTE",
+        "estado": "Modificado",
+        "valor": 16526899950.0,
+        "pagado": 14863537601.0,
+        "fecha_fin": "2026-03-19",
+        "objeto": "MANTENIMIENTO Y/O MEJORAMIENTO Y/O REHABILITACIÓN DE LA INFRAESTRUCTURA VIAL URBANA Y REGIONAL VIA LA FUNZHE DEL MUNICIPIO DE FUNZA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7183265",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "CONSORCIO MANTENIMIENTOS ARDISAF",
+        "estado": "Modificado",
+        "valor": 7015296642.14,
+        "pagado": 5993055660.72,
+        "fecha_fin": "2026-01-20",
+        "objeto": "MANTENIMIENTO; MEJORAMIENTO Y ADECUACIÓN DE EQUIPAMIENTOS PÚBLICOS DEL MUNICIPIO DE FUNZA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7180817",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "UNION TEMPORAL PROVIAS 2",
+        "estado": "Modificado",
+        "valor": 2573711415.0,
+        "pagado": 2304588752.0,
+        "fecha_fin": "2025-09-10",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DE SENDEROS PEATONALES  2024 EN EL MUNICIPIO DE FUNZA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7187725",
+        "entidad": "CUNDEPORTES FUNZA",
+        "proveedor": "CONSORCIO DEPORTIVO 2025",
+        "estado": "Modificado",
+        "valor": 1975625947.0,
+        "pagado": 1975592919.0,
+        "fecha_fin": "2025-12-26",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y ADECUACION DE ESCENARIOS RECREODEPORTIVOS DEL MUNICIPIO DE FUNZA; EN CUMPLIMIENTO DEL PLAN DE DESARROLLO MUNICIPAL FUNZA EVOLUCIONA 2024-2027"
+      },
+      {
+        "id": "CO1.PCCNTR.7188460",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "CONSORCIO CARRERA 26",
+        "estado": "Modificado",
+        "valor": 1152743151.0,
+        "pagado": 1152606157.0,
+        "fecha_fin": "2025-06-26",
+        "objeto": "MEJORAMIENTO VÍA CARRERA 26 CON CALLE 12; EN EL MUNICIPIO\nDE FUNZA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7806309",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "AYG SERVICIOS E INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 920605392.5,
+        "pagado": 920576568.6,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO Y/O ADECUACIÓN Y/O CONSTRUCCIÓN DE RED ELÉCTRICA; INSTITUCIONAL; EQUIPOS ELECTRICOS; HIDRAULICOS Y DE ASCENSORES DE LOS EQUIPAMIENTOS DEL MUNICIPIO DE FUNZA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7228822",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "UNION TEMPORAL SEÑALIZACION LUMINOSA 2024",
+        "estado": "Modificado",
+        "valor": 836532069.52,
+        "pagado": 823962695.27,
+        "fecha_fin": "2025-06-16",
+        "objeto": "INSTALACIÓN; SUMINISTRO Y MANTENIMIENTO DE DISPOSITIVOS DE SEÑALIZACIÓN LUMINOSA (SEMÁFOROS) EN EL MUNICIPIO DE FUNZA"
+      },
+      {
+        "id": "CO1.PCCNTR.6526959",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "david fernando caicedo ballen",
+        "estado": "Modificado",
+        "valor": 447994176.0,
+        "pagado": 447949728.01,
+        "fecha_fin": "2024-12-22",
+        "objeto": "MANTENIMIENTO Y ADECUACION DEL SISTEMA DE ALUMBRADO PUBLICO DEL MUNICIPIO DE FUNZA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7828392",
+        "entidad": "MUNICIPIO DE FUNZA - ALCALDÍA DE FUNZA",
+        "proveedor": "david fernando caicedo ballen",
+        "estado": "Modificado",
+        "valor": 437000000.0,
+        "pagado": 436992858.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO; ADECUACION Y EXTENSIÓN DE REDES PARA EL SISTEMA DE ALUMBRADO PUBLICO DEL MUNICIPIO DE FUNZA; CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Funza",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 36.6,
+  "nivel": "medio",
+  "posicion": 58.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,380 @@
+{
+  "resumen": {
+    "contratos": 3151,
+    "valor_total": 105750809911.06,
+    "entidades": 5,
+    "proveedores": 1048
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 45.2872,
+    "pct_directa_valor": 38.1326,
+    "hhi": 105.61278656336845,
+    "top1_proveedor_pct": 3.8140756494966497,
+    "top5_proveedores_pct": 16.592704743353163,
+    "pareto_proveedores_80pct_valor": 272,
+    "pct_con_adicion": 30.815614090764836,
+    "top_proveedores": [
+      {
+        "proveedor": "GEODATA SAS",
+        "documento": "9004917591",
+        "valor": 3978738000.0,
+        "contratos": 6,
+        "participacion_pct": 3.8141
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PÚBLICOS DE EL COLEGIO EMPUCOL E.S.P.",
+        "documento": "808000463",
+        "valor": 3763614014.0,
+        "contratos": 12,
+        "participacion_pct": 3.6079
+      },
+      {
+        "proveedor": "CORPORACION TIERRA LIBRE",
+        "documento": "900525572",
+        "valor": 3310373246.0,
+        "contratos": 6,
+        "participacion_pct": 3.1734
+      },
+      {
+        "proveedor": "GEH SAS",
+        "documento": "900949968",
+        "valor": 3256324416.0,
+        "contratos": 2,
+        "participacion_pct": 3.1216
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 3000000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.8758
+      },
+      {
+        "proveedor": "Fundación Médicos Especialistas de Cundinamarca",
+        "documento": "901611823",
+        "valor": 2811666400.0,
+        "contratos": 10,
+        "participacion_pct": 2.6953
+      },
+      {
+        "proveedor": "PHARMA MEDICAL SERVICES SAS",
+        "documento": "900452680",
+        "valor": 2409500000.0,
+        "contratos": 13,
+        "participacion_pct": 2.3098
+      },
+      {
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "documento": "900136128",
+        "valor": 2037683854.0,
+        "contratos": 2,
+        "participacion_pct": 1.9534
+      },
+      {
+        "proveedor": "ALVARO HERNANDO SUA CARREÑO",
+        "documento": "80085072",
+        "valor": 1964342994.93,
+        "contratos": 2,
+        "participacion_pct": 1.883
+      },
+      {
+        "proveedor": "CORPORACIÓN CRECIENDO POR COLOMBIA J&O",
+        "documento": "901929595",
+        "valor": 1906900000.0,
+        "contratos": 3,
+        "participacion_pct": 1.828
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8728123",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 3000000000.0,
+        "fecha_firma": "2025-12-30",
+        "objeto": "CONTRATO DE EMPRÉSTITO Y PIGNORACIÓN DE RENTAS CON VARIAS LÍNEAS DE FINANCIACIÓN DE LARGO PLAZO SUSCRITO ENTRE EL MUNICIPIO DE EL COLEGIO - CUNDINAMARCA Y BANCOLOMBIA S.A."
+      },
+      {
+        "id": "CO1.PCCNTR.8751878",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "GEH SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 2426324416.0,
+        "fecha_firma": "2026-01-01",
+        "objeto": "PRESTACIÓN DE SERVICIOS TEMPORALES A TRAVÉS DEL SUMINISTRO DE TRABAJADORES EN MISIÓN; PARA EL ÁREA DE GESTIÓN ASISTENCIAL EN LOS NIVELES PROFESIONAL; TECNÓLOGO; TÉCNICO Y AUXILIAR; QUE SEA ACEPTADO POR LA E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO DE ACUERDO A LOS ESTÁNDARES DE TALENTO HUMANO PREVISTOS PARA LA CORRECTA OPERACIÓN."
+      },
+      {
+        "id": "CO1.PCCNTR.8751815",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "GEODATA SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 1905000000.0,
+        "fecha_firma": "2026-01-01",
+        "objeto": "PRESTACION DE SERVICIOS ADMINISTRATIVOS DE APOYO A LA GESTION EN EL PROCESO INTEGRAL DE FACTURACION Y SISTEMA DE INFORMACION (FACTURACION Y AUTORIZACIONES; REVISORIA DE CUENTAS MEDICAS; MERCADEO; AUDITORIA DE CUENTAS MEDICAS; CITAS MEDICAS; ESTADISTICA; SISTEMAS Y TICS) PARA LA ESE HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO"
+      },
+      {
+        "id": "CO1.PCCNTR.9425909",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "ALVARO HERNANDO SUA CARREÑO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1724981621.93,
+        "fecha_firma": "2026-03-31",
+        "objeto": "ADECUACION DE LA INFRAESTRUCTURA EXISTENTE PARA LA APERTURA DEL SERVICIO DE CIRUGIA Y DEL AMBIENTE DEL PROCESO DE ESTERILIZACION DE LA ESE HOSPITAL NUESTRA SEÑORA DEL CARMEN DE EL COLEGIO"
+      },
+      {
+        "id": "CO1.PCCNTR.7559658",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "GEODATA SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 1632000000.0,
+        "fecha_firma": "2025-02-25",
+        "objeto": "GESTIÓN INTEGRAL DE SUBPROCESOS ADMINISTRATIVOS (FACTURACION; AUTORIZACIONES; AUDITORIA MEDICA DE CUENTAS; GLOSAS; CARTERA; CENTRAL DE CITAS; SISTEMAS DE INFORMACIÓN GESTIÓN COMERCIAL Y SIAU) EN ESE HOSPITAL NUESTRA SEÑORA DEL CARMEN DE EL COLEGIO Y PUESTOS DE SALUD ADSCRITOS DE LA VICTORIA; EL TRIUNFO Y PRADILLA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "contratos": 1612,
+        "valor": 56527848108.83
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL EL COLEGIO CUNDINAMARCA +",
+        "contratos": 24,
+        "valor": 275947770.6
+      },
+      {
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "contratos": 1507,
+        "valor": 48841961610.63
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PÚBLICOS DE EL COLEGIO EMPUCOL E.S.P.",
+        "contratos": 2,
+        "valor": 82650000.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE EL COLEGIO CUNDINAMARCA",
+        "contratos": 4,
+        "valor": 22402421.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 118,
+    "valor_obras": 11716183175.71,
+    "obras_vencidas_abiertas": 44,
+    "valor_obras_vencidas_abiertas": 4670227447.69,
+    "pct_obras_vencidas_abiertas": 37.28813559322034,
+    "pct_pagado_obras_vencidas_abiertas": 10.6472,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9379257",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "APF INGENIERÍA SAS",
+        "estado": "Modificado",
+        "valor": 508005632.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-25",
+        "objeto": "MANTENIMIENTO PARA LA ADECUACION DE LA INFRAESTRUCTURA CORRESPONDIENTE AL SECTOR ALEDAÑO A LA CARRERA 7; COSTADO NORORIENTAL; PARA LA IMPLEMENTACIÓN DE OFICINAS PARA EL PERSONAL ADMINISTRATIVO DE LA E.S.E. HOSPITAL NUESTRA SEÑORA DEL CARMEN DE EL COLEGIO"
+      },
+      {
+        "id": "CO1.PCCNTR.7907429",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "APF INGENIERÍA SAS",
+        "estado": "Modificado",
+        "valor": 419999736.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-09-04",
+        "objeto": "OBRA PARA EL MANTENIMIENTO Y LA ADECUACION DE LAS AREAS CORRESPONDIENTES AL SERVICIO DE FISIOTERAPIA; PROCEDIMIENTOS MENORES Y ZONAS ALEDAÑAS DE LA ESE NUESTRA SEÑORA DEL CARMEN DE EL COLEGIO"
+      },
+      {
+        "id": "CO1.PCCNTR.9131694",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL DE LA VEREDA DE LUCERNA",
+        "estado": "Suspendido",
+        "valor": 279500000.0,
+        "pagado": 80000000.0,
+        "fecha_fin": "2026-06-08",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE ACCION COMUNAL VEREDA DE LUCERNA DE EL COLEGIO  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8738629",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA ANTIOQUEÑITA",
+        "estado": "Aprobado",
+        "valor": 260000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-30",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS: VÍAS EN ACCIÓN; VÍAS PARA PROGRESAR; ENTRE EL MUNICIPIO DE EL COLEGIO CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA ANTIOQUEÑITA"
+      },
+      {
+        "id": "CO1.PCCNTR.9515441",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "SERVICIOS DE INGENIERIA MECANICOS AMBIENTALES Y CIVILES",
+        "estado": "En ejecución",
+        "valor": 245209400.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-15",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA TRUJILLO TRAMO 1 Y TRAMO 2 EN EL SECTOR EL MANANTIAL Y TRAMO 3 EN EL SECTOR LOS LAGOS; BAJO EL CONVENIO ICCU No. 1291-2025 DEL MUNICIPIO DE EL COLEGIO CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7184321",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "ALVARO HERNANDO SUA CARREÑO",
+        "estado": "Modificado",
+        "valor": 239361373.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-05-28",
+        "objeto": "CONTRATAR LA OBRA PARA EL MANTENIMIENTO DE LAS AREAS CORRESPONDIENTES AL SERVICIO DE CONSULTA EXTERNA Y ZONAS ALEDAÑAS DE LA ESE HOSPITAL NUESTRA SEÑORA DEL CARMEN DE EL COLEGIO."
+      },
+      {
+        "id": "CO1.PCCNTR.8538560",
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DEL COLEGIO",
+        "proveedor": "CONDISEING INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 224701546.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-26",
+        "objeto": "MANTENIMIENTO DE LAS AREAS ADYACENTES A LA INFRAESTRUCTURA; ADECUACION DEL CUARTO ELECTRICO Y PUESTA EN MARCHA DE LA PLANTA ELÉCTRICA DEL PUESTO DE SALUD DE LA INSPECCION DE PRADILLA Y; PUESTA EN MARCHA DE LA PLANTA ELÉCTRICA DEL PUESTO DE SALUD DE EL TRIUNFO; ADSCRITOS A LA E.S.E. HOSPITAL NUESTRA SEÑORA DEL CARMEN DE EL COLEGIO"
+      },
+      {
+        "id": "CO1.PCCNTR.9532926",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "SERVICIOS DE INGENIERIA MECANICOS AMBIENTALES Y CIVILES",
+        "estado": "En ejecución",
+        "valor": 190000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-11",
+        "objeto": "MEJORAMIENTO Y OPTIMIZACION RED DE ALCANTARILLADO SANITARIO VEREDA LA FRANCIA EN EL MUNICIPIO DE EL COLEGIO CUNDINAMARCA; el presente contrato se ejecutará a través de las acciones del proyecto que deben ser desarrolladas conforme a las siguientes especificaciones técnicas..."
+      },
+      {
+        "id": "CO1.PCCNTR.9250304",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL DE LA VICTORIA DEL MUNICIPIO DE EL COLEGIO",
+        "estado": "Modificado",
+        "valor": 159803800.0,
+        "pagado": 122926000.0,
+        "fecha_fin": "2026-10-08",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS\nEN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON\nLA JUNTA DE ACCIÓN COMUNAL DE LA VICTORIA DE EL COLEGIO-CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8738470",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA SAN JOAQUIN SANTA CECILIA MUNICIPIO DEL COLEGIO",
+        "estado": "Aprobado",
+        "valor": 156000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-28",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS: VÍAS EN ACCIÓN; VÍAS PARA PROGRESAR; ENTRE EL MUNICIPIO DE EL COLEGIO CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA SAN JOAQUIN SANTA CECILIA"
+      },
+      {
+        "id": "CO1.PCCNTR.9132887",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JAC DE LA VEREDA HONDURAS",
+        "estado": "Suspendido",
+        "valor": 143000000.0,
+        "pagado": 40000000.0,
+        "fecha_fin": "2026-06-08",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE ACCION COMUNAL VEREDA HONDURAS EL COLEGIO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9157089",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL DEL BARRIO SANTA ELENA",
+        "estado": "Aprobado",
+        "valor": 143000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-26",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL\nALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE\nACCIÓN COMUNAL DEL BARRIO SANTA ELENA DE EL COLEGIO-CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8737938",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LA VIRGINIA",
+        "estado": "Aprobado",
+        "valor": 104000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-28",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS: VÍAS EN ACCIÓN; VÍAS PARA PROGRESAR; ENTRE EL MUNICIPIO DE EL COLEGIO CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LA VIRGINIA\nAUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS: VÍAS EN ACCIÓN; VÍAS PARA PROGRESA"
+      },
+      {
+        "id": "CO1.PCCNTR.8693087",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA SANTA CRUZ PRIMER SECTOR",
+        "estado": "Suspendido",
+        "valor": 104000000.0,
+        "pagado": 12000000.0,
+        "fecha_fin": "2026-05-16",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS: VÍAS EN ACCIÓN; VÍAS PARA PROGRESAR; ENTRE EL MUNICIPIO DE EL COLEGIO CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL VEREDA SANTA CRUZ PRIMER SECTOR"
+      },
+      {
+        "id": "CO1.PCCNTR.8746324",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "Junta de Acción Comunal de Marcella",
+        "estado": "Aprobado",
+        "valor": 104000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-27",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA MARCELLA DE EL COLEGIO-CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7115873",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "NSL CONSTRUCCIONES PG SAS",
+        "estado": "En ejecución",
+        "valor": 86987519.63,
+        "pagado": 86982042.56,
+        "fecha_fin": "2024-12-30",
+        "objeto": "MEJORAMIENTO DE LA INFRAESTRUCTURA ESCOLAR EN EL MUNICIPIO DE EL COLEGIO CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9171593",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA DE GUACHACÁ DEL MUNICIPIO DE EL COLEGIO",
+        "estado": "Aprobado",
+        "valor": 78000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-26",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL\nALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE\nACCION COMUNAL VEREDA GUACHACA DE EL COLEGIO - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9136604",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VILLAS DE MONSERRATE",
+        "estado": "Aprobado",
+        "valor": 52000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-31",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE ACCION COMUNAL BARRIO VILLAS DE MONSERRATE DE EL COLEGIO - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9150612",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA EL TIGRE",
+        "estado": "Aprobado",
+        "valor": 52000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-26",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL\nALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE\nACCIÓN COMUNAL DE LA VEREDA EL TIGRE DE EL COLEGIO-CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8738342",
+        "entidad": "ALCALDIA MUNICIPAL DE EL COLEGIO",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL DE LA VEREDA TRUJILLO",
+        "estado": "Aprobado",
+        "valor": 52000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-28",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA REALIZAR LAS OBRAS DESCRITAS EN EL ALCANCE DE ESTE CONVENIO BAJO EL PROGRAMA DE ESFUERZOS COMPARTIDOS SUSCRITO CON LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA TRUJILLO DE EL COLEGIO-CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "El Colegio",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 35.6,
+  "nivel": "medio",
+  "posicion": 59.0,
+  "total_rankeados": 71
+}

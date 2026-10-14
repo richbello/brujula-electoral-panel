@@ -1,0 +1,280 @@
+{
+  "resumen": {
+    "contratos": 1041,
+    "valor_total": 47018144377.1,
+    "entidades": 3,
+    "proveedores": 389
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 79.5389,
+    "pct_directa_valor": 45.4083,
+    "hhi": 213.26403902019024,
+    "top1_proveedor_pct": 9.797540301769189,
+    "top5_proveedores_pct": 24.006587075868012,
+    "pareto_proveedores_80pct_valor": 125,
+    "pct_con_adicion": 24.495677233429394,
+    "top_proveedores": [
+      {
+        "proveedor": "CONSORCIO PACHO GE",
+        "documento": "901968123",
+        "valor": 4436596809.0,
+        "contratos": 1,
+        "participacion_pct": 9.7975
+      },
+      {
+        "proveedor": "IGAC Sede Central *",
+        "documento": "899999004",
+        "valor": 1938185058.0,
+        "contratos": 1,
+        "participacion_pct": 4.2802
+      },
+      {
+        "proveedor": "G&C INGENIERIA SAS",
+        "documento": "900202250",
+        "valor": 1678719596.0,
+        "contratos": 6,
+        "participacion_pct": 3.7072
+      },
+      {
+        "proveedor": "Comercializadora Gran Emporio SAS",
+        "documento": "901354754",
+        "valor": 1514835640.0,
+        "contratos": 29,
+        "participacion_pct": 3.3453
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 1302508470.0,
+        "contratos": 6,
+        "participacion_pct": 2.8764
+      },
+      {
+        "proveedor": "FREDY HERNAN DELGADO MAHECHA",
+        "documento": "80059494",
+        "valor": 1277003630.0,
+        "contratos": 44,
+        "participacion_pct": 2.8201
+      },
+      {
+        "proveedor": "ICSSA SAS",
+        "documento": "901450894",
+        "valor": 1229831345.0,
+        "contratos": 1,
+        "participacion_pct": 2.7159
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DEL MUNICIPIO DE PACHO CUNDINAMARCA SA ESPMP ESP SOCIEDAD POR ACCIONES SA",
+        "documento": "832006409",
+        "valor": 1202731831.4,
+        "contratos": 5,
+        "participacion_pct": 2.656
+      },
+      {
+        "proveedor": "RAMONERRE S.A.S.",
+        "documento": "800216125",
+        "valor": 1195117000.0,
+        "contratos": 1,
+        "participacion_pct": 2.6392
+      },
+      {
+        "proveedor": "ASOCIACIÓN PRIMERAS DAMAS DE COLOMBIA",
+        "documento": "900305447",
+        "valor": 1180000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.6058
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8096843",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "CONSORCIO PACHO GE",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4436596809.0,
+        "fecha_firma": "2025-09-04",
+        "objeto": "MEJORAMIENTO DE LA GALERÍA MUNICIPAL Y CENTRO DE ABASTO COMO DESTINO TURÍSTICO DEL MUNICIPIO DE PACHO CUNDINAMARCA; SEGÚN CONVENIO ICCU 775 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7010528",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "IGAC Sede Central *",
+        "modalidad": "Contratación directa",
+        "valor": 1938185058.0,
+        "fecha_firma": "2024-11-13",
+        "objeto": "AUNAR ESFUERZOS PARA ADELANTAR EL PROCESO DE ACTUALIZACIÓN CATASTRAL CON ENFOQUE MULTIPROPÓSITO EN EL ÁREA URBANA DEL MUNICIPIO DE PACHO; DE ACUERDO CON LA NORMATIVIDAD VIGENTE"
+      },
+      {
+        "id": "CO1.PCCNTR.9440458",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "ICSSA SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1229831345.0,
+        "fecha_firma": "2026-04-15",
+        "objeto": "CONSTRUCCION PUENTE VEHICULAR SECTOR CUERNAVACA MUNICIPIO DE PACHO; CUNDINAMARCA; SEGÚN CONVENIO ICCU 363 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8734568",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "CONSORCIO INFRA-IPEL 2025",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1226382864.0,
+        "fecha_firma": "2026-01-14",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA DESDE EL CASCO URBANO A LA VEREDA SAN MIGUEL Y LA RAMADA EN EL SECTOR EL SENA DEL MUNICIPIO DE PACHO CUNDINAMARCA; SEGÚN CONVENIO ICCU 769 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9322337",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "RAMONERRE S.A.S.",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 1195117000.0,
+        "fecha_firma": "2026-02-10",
+        "objeto": "COMPRA DE VEHÍCULO RECOLECTOR COMPACTADOR DE RESIDUOS SÓLIDOS DE 25 YD3 PARA EL MUNICIPIO DE PACHO CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO DE PACHO",
+        "contratos": 21,
+        "valor": 296194249.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DEL MUNICIPIO DE PACHO CUNDINAMARCA SA ESPMP ESP SOCIEDAD POR ACCIONES SA",
+        "contratos": 3,
+        "valor": 1004461248.0
+      },
+      {
+        "entidad": "MUNICIPIO DE PACHO",
+        "contratos": 1013,
+        "valor": 45717488880.1
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 23,
+    "valor_obras": 11786777234.48,
+    "obras_vencidas_abiertas": 11,
+    "valor_obras_vencidas_abiertas": 2418002933.48,
+    "pct_obras_vencidas_abiertas": 47.82608695652174,
+    "pct_pagado_obras_vencidas_abiertas": 56.2092,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9408491",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "CONSORCIO GE 2026",
+        "estado": "En ejecución",
+        "valor": 402987735.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-16",
+        "objeto": "LINEA 129 MEJORAMIENTO DE LA VÍA QUE COMUNICA AL CASCO URBANO DEL CORREGIMIENTO DE PASUNCHA CON LA VEREDA EL PENCIL SECTOR HOYA GRANDE DEL MUNICIPIO DE PACHO; CUNDINAMARCA DERIVADO DEL CONVENIO ICCU-CTO-1494-2025; MEJORAMIENTO DE LA VÍA QUE COMUNICA AL CASCO URBANO DEL CORREGIMIENTO DE PASUNCHA CON LA VEREDA LA SERREZUELA PARTE BAJA SECTOR PARADERO DEL MUNICIPIO DE PACHO; CUNDINAMARCA. DERIVADO DEL CONVENIO ICCU-CTO-1257-2025; MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO DEL CORREGIMIENTO"
+      },
+      {
+        "id": "CO1.PCCNTR.6966374",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "INFRAESTRUCTURA JV",
+        "estado": "Modificado",
+        "valor": 356564769.82,
+        "pagado": 356564769.82,
+        "fecha_fin": "2025-05-15",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DE LA INFRAESTRUCTURA INSTITUCIONAL A CARGO DEL MUNICIPIO DE PACHO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6562971",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "CONSORCIO VIAS GV",
+        "estado": "Modificado",
+        "valor": 348643439.92,
+        "pagado": 348643439.29,
+        "fecha_fin": "2025-01-16",
+        "objeto": "MEJORAMIENTO DE LA VIA TERCIARIA QUE COMUNICA EL CASCO URBANO CON LA VEREDA LA CABRERA SECTOR LA CUESTA-BOMBEROS DEL MUNICIPIO DE PACHO CUNDINAMARCA DEL DEPARTAMENTO DE CUNDINAMARCA (Derivado del convenio ICCU-1259-2023); MEJORAMIENTO DE LA VIA TERCIARIA QUE COMUNICA A LA VEREDA LA PRIMAVERA CON EL CASCO URBANO EN EL SECTOR CUEVA DEL CHULO DEL MUNICIPIO DE PACHO CUNDINAMARCA (Derivado del convenio ICCU-1263-2023)"
+      },
+      {
+        "id": "CO1.PCCNTR.7844062",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DEL MUNICIPIO DE PACHO CUNDINAMARCA SA ESPMP ESP SOCIEDAD POR ACCIONES SA",
+        "proveedor": "HIDRAGILLI",
+        "estado": "Modificado",
+        "valor": 345912000.0,
+        "pagado": 240173131.94,
+        "fecha_fin": "2025-08-18",
+        "objeto": "REPOSICION Y AMPLIACION DE REDES DE ACUEDUCTO Y ALCANTARILLADO; INCLUYENDO ACOMETIDAS (ACUEDUCTO Y ALCANTARILLADO); EN LA CRA 19 ENTRE CALLE 9 Y CALLE 10 Y CALLE 10 ENTRE CARRERAS 19 Y 17 EN EL MUNICIPIO DE PACHO CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8228058",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "BETANIA GV",
+        "estado": "En ejecución",
+        "valor": 250730676.2,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-15",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA LA MOYA A LA VEREDA BETANIA PARTE BAJA SECTOR BETANIA PARTE ALTA; MUNICIPIO DE PACHO; CUNDINAMARCA; SEGUN CONVENIO ICCU 731 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.6938224",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "PACHO PGC",
+        "estado": "Modificado",
+        "valor": 226509486.44,
+        "pagado": 226509486.44,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MEJORAMIENTO DE LA VIA TERCIARIA QUE COMUNICA A LA VEREDA LA CUESTA CON EL CASCO URBANO EN EL SECTOR EL PARAISO DEL MUNICIPIO DE PACHO DEL DEPARTAMENTO DE CUNDINAMARCA (Derivado del convenio ICCU-1258-2023)"
+      },
+      {
+        "id": "CO1.PCCNTR.7186879",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "CONSTRUCTORA GCJ",
+        "estado": "Modificado",
+        "valor": 187250335.0,
+        "pagado": 187250335.0,
+        "fecha_fin": "2025-09-20",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DE LA INFRAESTRUCTURA FISICA DE LAS INSTITUCIONES EDUCATIVAS DEPARTAMENTALES DEL MUNICIPIO DE PACHO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8068152",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "CONSORCIO FUEGO VERDE",
+        "estado": "En ejecución",
+        "valor": 99977368.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-20",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA\nLA VIRGEN SECTOR FUEGO VERDE; MUNICIPIO DE PACHO CUNDINAMARCA; SEGÚN CONVENIO ICCU 776 DE\n2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9774250",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "LLANO EG",
+        "estado": "Aprobado",
+        "valor": 99976236.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-21",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA EL CASCO URBANO CON LA VEREDA LLANO DEL TRIGO; SECTOR TIENDA DOÑA CECILIA DEL MUNICIPIO DE PACHO; CUNDINAMARCA DERIVADO DEL CONVENIO ICCU-CTO-858-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8429042",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "GEONOMAC SAS",
+        "estado": "Aprobado",
+        "valor": 84726247.1,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-18",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO EN EL CORREGIMIENTO DE PASUNCHA A LA VEREDA CERREZUELA EN EL MUNICIPIO DE PACHO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8750446",
+        "entidad": "MUNICIPIO DE PACHO",
+        "proveedor": "JUNTA DE ACCION COMUNAL BARRIO JUAN PABLO II DEL MUNICIPIO DE PACHO",
+        "estado": "En ejecución",
+        "valor": 14724640.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-26",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO Y LA JUNTA DE ACCION COMUNAL DEL BARRIO JUAN PABLO II PARA EL MANTENIMIENTO Y ADECUACIONES DE LOS ESPACIOS E INSTALACIONES DE LA CONCENTRACION URBANA JUAN PABLO II; DEL MUNICIPIO DE PACHO"
+      }
+    ]
+  },
+  "municipio": "Pacho",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 49.9,
+  "nivel": "medio",
+  "posicion": 38.0,
+  "total_rankeados": 71
+}

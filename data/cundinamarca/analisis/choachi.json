@@ -1,0 +1,159 @@
+{
+  "resumen": {
+    "contratos": 32,
+    "valor_total": 643845921.0,
+    "entidades": 1,
+    "proveedores": 20
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 904.352187876526,
+    "top1_proveedor_pct": 13.978499678962786,
+    "top5_proveedores_pct": 57.72530443661845,
+    "pareto_proveedores_80pct_valor": 8,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "iArq & Co SAS",
+        "documento": "900131175",
+        "valor": 90000000.0,
+        "contratos": 1,
+        "participacion_pct": 13.9785
+      },
+      {
+        "proveedor": "COMBUSTIBLES T & G S.A.S",
+        "documento": "901056608",
+        "valor": 87000000.0,
+        "contratos": 2,
+        "participacion_pct": 13.5125
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 68814956.0,
+        "contratos": 3,
+        "participacion_pct": 10.6881
+      },
+      {
+        "proveedor": "QUIMICOS INDUSTRIALES ASOCIADOS S.A.S",
+        "documento": "800141903",
+        "valor": 66247062.0,
+        "contratos": 1,
+        "participacion_pct": 10.2893
+      },
+      {
+        "proveedor": "Oscar Ramos Villate",
+        "documento": "1020791945",
+        "valor": 59600000.0,
+        "contratos": 5,
+        "participacion_pct": 9.2569
+      },
+      {
+        "proveedor": "Angel Emilio Rios",
+        "documento": "2999833",
+        "valor": 58500000.0,
+        "contratos": 2,
+        "participacion_pct": 9.086
+      },
+      {
+        "proveedor": "ANGELA MARYORY ZAMUDIO MOLINA",
+        "documento": "52912784",
+        "valor": 44600000.0,
+        "contratos": 1,
+        "participacion_pct": 6.9271
+      },
+      {
+        "proveedor": "YENNY PAOLA POTES SEGURA",
+        "documento": "52966857",
+        "valor": 40930178.0,
+        "contratos": 3,
+        "participacion_pct": 6.3571
+      },
+      {
+        "proveedor": "Daniel Fernando Pardo Cortes",
+        "documento": "1068974674",
+        "valor": 24570000.0,
+        "contratos": 1,
+        "participacion_pct": 3.8161
+      },
+      {
+        "proveedor": "JUAN CAMILO PATIÑO MURILLO",
+        "documento": "1018481933",
+        "valor": 20000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.1063
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7943996",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE CHOACHI",
+        "proveedor": "iArq & Co SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 90000000.0,
+        "fecha_firma": "2025-06-03",
+        "objeto": "OPTIMIZACIÓN DE 105 METROS LINEALES DE LA RED DE DISTRIBUCIÓN DEL ACUEDUCTO URBANO EN LA CALLE 3; ENTRE LAS CARRERAS 5 Y 6 DEL MUNICIPIO DE CHOACHÍ; CONFORME A LO ESTABLECIDO EN EL CONVENIO INTERADMINISTRATIVO NO. 083 DE 2025 SUSCRITO ENTRE EMSERCHOACHÍ ESP Y EL MUNICIPIO DE CHOACHÍ."
+      },
+      {
+        "id": "CO1.PCCNTR.5887469",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE CHOACHI",
+        "proveedor": "COMBUSTIBLES T & G S.A.S",
+        "modalidad": "Contratación régimen especial",
+        "valor": 80500000.0,
+        "fecha_firma": "2024-03-26",
+        "objeto": "SUMINISTRO DE COMBUSTIBLE PARA LOS VEHÍCULOS Y EQUIPOS MECÁNICOS PAR CUMPLIR FUNCIONES PROPIAS DE LA EMPRESA DE SERVICIOS PÚBLICOS DE CHOACHI CUNDINAMARCA PARA EL AÑO 2024."
+      },
+      {
+        "id": "CO1.PCCNTR.5887790",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE CHOACHI",
+        "proveedor": "QUIMICOS INDUSTRIALES ASOCIADOS S.A.S",
+        "modalidad": "Contratación régimen especial",
+        "valor": 66247062.0,
+        "fecha_firma": "2024-02-28",
+        "objeto": "SUMINISTRO DE QUÍMICOS PARA LA POTABILIZACIÓN DEL AGUA EN LA PLANTA DE TRATAMIENTO DEL ACUEDUCTO MUNICIPAL DE CHOACHÍ CUNDINAMARCA; VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7366182",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE CHOACHI",
+        "proveedor": "ANGELA MARYORY ZAMUDIO MOLINA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 44600000.0,
+        "fecha_firma": "2025-02-26",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES COMO CONTADOR PÚBLICO Y ASESORÍA PROFESIONAL ESPECIALIZADA EN EL ÁREA FINANCIERA Y PRESUPUESTAL PARA LA PRESENTACIÓN DE INFORMES DE CARÁCTER FINANCIERO Y APOYO TÉCNICO EN ACTIVIDADES DE ÍNDOLE CONTABLE DE ENERO A DICIEMBRE DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.5887745",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE CHOACHI",
+        "proveedor": "Angel Emilio Rios",
+        "modalidad": "Contratación régimen especial",
+        "valor": 37500000.0,
+        "fecha_firma": "2024-03-07",
+        "objeto": "PRESTACIÓN DE SERVICIOS PARA OPERAR EL VEHÍCULO COMPACTADOR DE PLACAS OIA-174 Y VEHICULO NPR DE PLACAS OIA 211; EN LA RECOLECCIÓN DE LOS RESIDUOS SÓLIDOS DEL CASCO URBANO Y VEREDAS DEL MUNICIPIO DE CHOACHÍ Y SU DISPOSICIÓN FINAL AL RELLENO SANITARIO EN LA CIUDAD DE BOGOTÁ DOÑA JUANA DURANTE LOS MESES DE ENERO A DICIEMBRE DE 2024; UN TOTAL DE 250 VIAJES"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE CHOACHI",
+        "contratos": 32,
+        "valor": 643845921.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Choachí",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 39.0,
+  "nivel": "medio",
+  "posicion": 57.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,365 @@
+{
+  "resumen": {
+    "contratos": 620,
+    "valor_total": 31103198619.41,
+    "entidades": 2,
+    "proveedores": 241
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 73.5484,
+    "pct_directa_valor": 39.2454,
+    "hhi": 259.64259637380445,
+    "top1_proveedor_pct": 8.042443221193142,
+    "top5_proveedores_pct": 29.410654767129575,
+    "pareto_proveedores_80pct_valor": 71,
+    "pct_con_adicion": 18.870967741935484,
+    "top_proveedores": [
+      {
+        "proveedor": "EMPRESA DE SERVICIOS DE GUALIVA EMSERGUALIVA S.A.S.E.S.P",
+        "documento": "900316141",
+        "valor": 2300254905.33,
+        "contratos": 14,
+        "participacion_pct": 8.0424
+      },
+      {
+        "proveedor": "PICBRAS CONSTRUCCIONES S.A.S",
+        "documento": "900439176",
+        "valor": 2182097836.34,
+        "contratos": 10,
+        "participacion_pct": 7.6293
+      },
+      {
+        "proveedor": "Cesar Andres Aldana Ortiz",
+        "documento": "1070704611",
+        "valor": 1617021386.0,
+        "contratos": 8,
+        "participacion_pct": 5.6536
+      },
+      {
+        "proveedor": "CONSORCIO NOCAIMA 4029",
+        "documento": "902059686",
+        "valor": 1282616628.95,
+        "contratos": 1,
+        "participacion_pct": 4.4844
+      },
+      {
+        "proveedor": "DISTRIANGULO SAS",
+        "documento": "900251139",
+        "valor": 1029881237.55,
+        "contratos": 12,
+        "participacion_pct": 3.6008
+      },
+      {
+        "proveedor": "CONSORCIO P&P PAVIMENTOS",
+        "documento": "901988638",
+        "valor": 781919225.99,
+        "contratos": 1,
+        "participacion_pct": 2.7338
+      },
+      {
+        "proveedor": "S & T CONSTRUCCIONES Y SERVICIOS S.A.S.",
+        "documento": "900593703",
+        "valor": 768786151.0,
+        "contratos": 3,
+        "participacion_pct": 2.6879
+      },
+      {
+        "proveedor": "Carlos Alberto Leiva Izquierdo",
+        "documento": "80495789",
+        "valor": 744210707.0,
+        "contratos": 4,
+        "participacion_pct": 2.602
+      },
+      {
+        "proveedor": "CONSORCIO CUNDIVIAS",
+        "documento": "901820097",
+        "valor": 732363423.0,
+        "contratos": 1,
+        "participacion_pct": 2.5606
+      },
+      {
+        "proveedor": "CONSORCIO VIAS URBANAS",
+        "documento": "902042216",
+        "valor": 631549284.14,
+        "contratos": 1,
+        "participacion_pct": 2.2081
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9408261",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO NOCAIMA GYS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2406301632.29,
+        "fecha_firma": "2026-04-20",
+        "objeto": "CONSTRUCCION DE LA ALTERNATIVA DE ABASTECIMIENTO Y TRATAMIENTO DE AGUA POTABLE EN EL MUNICIPIO DE NOCAIMA; CUNDINAMARCA FASE I."
+      },
+      {
+        "id": "CO1.PCCNTR.9455476",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO NOCAIMA 4029",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1282616628.95,
+        "fecha_firma": "2026-05-06",
+        "objeto": "MEJORAMIENTO DE LA CARRERA 2 ENTRE CALLE 5 Y 7 Y CALLE 5 CARRERA 2 Y 6 EN EL CASCO URBANO DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU 510-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.7861707",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "EMPRESA DE SERVICIOS DE GUALIVA EMSERGUALIVA S.A.S.E.S.P",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 1022743835.29,
+        "fecha_firma": "2025-05-12",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS TENDIENTES A LA EJECUCIÓN DE LAS OBRAS DE RECUPERACIÓN DE LA PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES SAN JOAQUÍN; EN EL MUNICIPIO DE NOCAIMA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8017781",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO P&P PAVIMENTOS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 781919225.99,
+        "fecha_firma": "2025-07-09",
+        "objeto": "MEJORAMIENTO DE LA CALLE 2 ENTRE CARRERA 2 Y 6 Y CARRERA 6 ENTRE CALLE 2 Y TRANSVERSAL 6 EN EL CASCO URBANO DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU-793-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.6170445",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO CUNDIVIAS",
+        "modalidad": "Seleccion Abreviada Menor Cuantia Sin Manifestacion Interes",
+        "valor": 732363423.0,
+        "fecha_firma": "2024-04-19",
+        "objeto": "MEJORAMIENTO DE LA CARRERA 3 ENTRE CALLE 6 Y CALLE 5; Y CALLE 6 ENTRE CRA 6 Y CRA 3 DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU 1183 DE 2023."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "contratos": 610,
+        "valor": 31073099111.41
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS DE GUALIVA EMSERGUALIVA S.A.S.E.S.P",
+        "contratos": 2,
+        "valor": 30099508.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 65,
+    "valor_obras": 12740937101.56,
+    "obras_vencidas_abiertas": 32,
+    "valor_obras_vencidas_abiertas": 4433900851.78,
+    "pct_obras_vencidas_abiertas": 49.23076923076923,
+    "pct_pagado_obras_vencidas_abiertas": 95.4129,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7861707",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "EMPRESA DE SERVICIOS DE GUALIVA EMSERGUALIVA S.A.S.E.S.P",
+        "estado": "Modificado",
+        "valor": 1022743835.29,
+        "pagado": 995483115.68,
+        "fecha_fin": "2025-12-12",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS TENDIENTES A LA EJECUCIÓN DE LAS OBRAS DE RECUPERACIÓN DE LA PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES SAN JOAQUÍN; EN EL MUNICIPIO DE NOCAIMA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8017781",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO P&P PAVIMENTOS",
+        "estado": "Modificado",
+        "valor": 781919225.99,
+        "pagado": 781919225.99,
+        "fecha_fin": "2026-05-20",
+        "objeto": "MEJORAMIENTO DE LA CALLE 2 ENTRE CARRERA 2 Y 6 Y CARRERA 6 ENTRE CALLE 2 Y TRANSVERSAL 6 EN EL CASCO URBANO DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU-793-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7688729",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "PICBRAS CONSTRUCCIONES S.A.S",
+        "estado": "Modificado",
+        "valor": 300000000.0,
+        "pagado": 295026892.0,
+        "fecha_fin": "2025-10-27",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE EL CASCO URBANO A LA VEREDA CENTRO EN EL SECTOR LA LAJA 2 DEL MUNICIPIO DE NOCAIMA DEL DEPARTAMENTO DE ACUERDO AL CONVENIO ICCU-529-2024."
+      },
+      {
+        "id": "CO1.PCCNTR.8603199",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO REDES 2025",
+        "estado": "Modificado",
+        "valor": 272722077.0,
+        "pagado": 272722076.99,
+        "fecha_fin": "2026-05-30",
+        "objeto": "OBRAS DE CONSTRUCCION PARA LA AMPLIACION Y MEJORAMIENTO DE LAS REDES DE ALCANTARILLADO PLUVIAL Y SANITARIO DE LOS BARRIOS LOS GUADUALES Y LA PARCELA DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8516944",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO VIAL NOCAIMA 01",
+        "estado": "En ejecución",
+        "valor": 244835748.45,
+        "pagado": 244835748.45,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA TOBIA AL CENTRO POBLADO TOBIA CHICA EN EL SECTOR TOBIA CHICA DEL MUNICIPIO DE NOCAIMA DEL DEPARTAMENTO DE CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU-459-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.9439710",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "S & T CONSTRUCCIONES Y SERVICIOS S.A.S.",
+        "estado": "Modificado",
+        "valor": 209685176.0,
+        "pagado": 99850103.0,
+        "fecha_fin": "2026-09-03",
+        "objeto": "MEJORAMIENTO DE LAS VIAS RURALES DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA. \n\nLOTE 1. MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA LAS MERCEDES A LA VEREDA SANTA BARABARA EN EL SECTOR LA LAGUNA DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA DERIVADO DEL CONVENIO ICCU 1042 DE 2025 - ZONA RURAL DE LA VIA QUE CONDUCE DE LA VEREDA LAS MERCEDES A LA VEREDA SANTA BARBARA\n\nLOTE 3. MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA SAN AGUSTIN A LA VEREDA LAS MERCEDES EN EL SECTOR EL SILENCIO DEL MUNICIPIO DE NOCAIM"
+      },
+      {
+        "id": "CO1.PCCNTR.7746395",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO P&I NOCAIMA",
+        "estado": "En ejecución",
+        "valor": 200000000.0,
+        "pagado": 200000000.0,
+        "fecha_fin": "2025-09-14",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SAN CAYETANO A LA VEREDA CAÑUTAL EN EL SECTOR EL CHUPO DEL MUNICIPIO DE NOCAIMA DEL DEPARTAMENTO DE ACUERDO AL CONVENIO \tICCU-539-2024; Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA NARANJAL A LA VEREDA LA CONCEPCIÓN EN EL SECTOR EL HIGUERON DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU-815-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8516448",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO VIAS NOCAIMA",
+        "estado": "Modificado",
+        "valor": 200000000.0,
+        "pagado": 200000000.0,
+        "fecha_fin": "2026-02-13",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA NARANJAL A LA VEREDA LA CONCEPCION EN EL SECTOR LA VISTOSA DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DE ACUERDO CON EL CONVENIO ICCU 508-2025 Y MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA BAQUERO A LA VEREDA COCUNCHE EN EL SECTOR LA YE DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU-509-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9439407",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "PICBRAS CONSTRUCCIONES S.A.S",
+        "estado": "En ejecución",
+        "valor": 199858813.0,
+        "pagado": 199858813.0,
+        "fecha_fin": "2026-07-10",
+        "objeto": "MEJORAMIENTO DE LAS VIAS RURALES DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA. \n\nLOTE 2. MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA CAÑUTAL A LA VEREDA EL FICAL EN EL SECTOR TIERRA AMARILLA DEL DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA DERIVADO DEL CONVENIO ICCU 1052 DE 2025\n\nLOTE 4. MEJORAMIENTO DE LA VIA QUE CONDUCE DE EL CASCO URBANO A LA VEREDA TOBIA EN EL SECTOR LOS ANGELES 2 DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DERIVADO DEL CONVENIO 1358 DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.8295968",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO P&I NOCAIMA 01",
+        "estado": "En ejecución",
+        "valor": 100000000.0,
+        "pagado": 100000000.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE EL CENTRO POBLADO TOBIA CHICA A LA VEREDA EL CAJON EN EL SECTOR EL BAMBU DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA DE ACUERDO AL CONVENIO ICCU-355-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8457194",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "PICBRAS CONSTRUCCIONES S.A.S",
+        "estado": "En ejecución",
+        "valor": 100000000.0,
+        "pagado": 100000000.0,
+        "fecha_fin": "2025-12-29",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA LAS MERCEDES A LA VEREDA SAN JOSE EN EL SECTOR ALTO DE SAN JOSE DEL MUNICIPIO DE NOCAIMA DEL DEPARTAMENTO DE CUNDINAMARCA ACUERDO AL CONVENIO ICCU-481-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.7410071",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "CONSORCIO VIVERO NOCAIMA 2025",
+        "estado": "Modificado",
+        "valor": 79686948.75,
+        "pagado": 79472020.75,
+        "fecha_fin": "2025-03-01",
+        "objeto": "ADECUACIÓN Y MANTENIMIENTO DE LA INFRAESTRUCTURA DEL VIVERO LAS MERCEDES; PARA LA PRODUCCIÓN DE CUARENTA Y CINCO MIL (45.000) ÁRBOLES DE CLIMA MEDIO Y/O CÁLIDO PARA LA CONSERVACIÓN; REFORESTACIÓN; PRESERVACIÓN; PROTECCIÓN Y APROVECHAMIENTO DE LAS CUENCAS HIDROGRÁFICAS DEL MUNICIPIO DE NOCAIMA CON EL CONVENIO SADR-CDCI-175-2024 CELEBRADO ENTRE EL DEPARTAMENTO DE CUNDINAMARCA Y EL MUNICIPIO DE NOCAIMA."
+      },
+      {
+        "id": "CO1.PCCNTR.9584424",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "INESCO PROYECTOS S.A.S",
+        "estado": "Modificado",
+        "valor": 60823857.0,
+        "pagado": 60823857.0,
+        "fecha_fin": "2026-09-20",
+        "objeto": "MEJORAMIENTO DE LA INFRAESTRUCTURA RECREO-DEPORTIVA DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9435640",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "INESCO PROYECTOS S.A.S",
+        "estado": "Modificado",
+        "valor": 59954766.0,
+        "pagado": 59954766.0,
+        "fecha_fin": "2026-07-25",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DE OBRAS DE ARTE EN LA RED VIAL RURAL DEL MUNICIPIO DE NOCAIMA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7844043",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "INESCO PROYECTOS S.A.S",
+        "estado": "Modificado",
+        "valor": 58670360.0,
+        "pagado": 58670360.0,
+        "fecha_fin": "2025-09-02",
+        "objeto": "OBRAS DE MANTENIMIENTO DE EQUIPAMIENTO DE PROPIEDAD DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8295153",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "5M CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 54296008.88,
+        "pagado": 54296008.88,
+        "fecha_fin": "2025-11-28",
+        "objeto": "MANTENIMIENTO Y ADECUACION A LA INFRAESTRUCTURA DE LA ESTACION DE POLICIA DEL MUNICIPIO DE NOCAIMA- CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8122014",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "JAC VEREDA LA CONCEPCION",
+        "estado": "En ejecución",
+        "valor": 46000000.0,
+        "pagado": 35000000.0,
+        "fecha_fin": "2025-10-24",
+        "objeto": "AUNAR ESFUERZOS ENTRE EL MUNICIPIO DE NOCAIMA CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LA CONCEPCIÓN PARA REALIZAR EL MEJORAMIENTO A LA RED VIAL TERCIARIA."
+      },
+      {
+        "id": "CO1.PCCNTR.7816623",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE VEREDA LOMALARGA",
+        "estado": "En ejecución",
+        "valor": 42466951.33,
+        "pagado": 30000000.0,
+        "fecha_fin": "2025-08-25",
+        "objeto": "AUNAR ESFUERZOS ENTRE EL MUNICIPIO DE NOCAIMA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LOMALARGA CON EL FIN DE REALIZAR OBRAS DE MITIGACIÓN PARA LA REDUCCIONES RIESGO DE DESASTRES EN EL SECTOR DIVINO NIÑO."
+      },
+      {
+        "id": "CO1.PCCNTR.8679690",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "PICBRAS CONSTRUCCIONES S.A.S",
+        "estado": "Modificado",
+        "valor": 41639078.0,
+        "pagado": 41639078.0,
+        "fecha_fin": "2026-02-27",
+        "objeto": "CONSTRUCCION Y MEJORAMIENTO DE LOS ANDENES DEL BARRIO LA PARCELA DEL MUNICIPIO DE NOCAIMA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8633991",
+        "entidad": "ALCALDIA MUNICIPIO DE NOCAIMA",
+        "proveedor": "INESCO PROYECTOS S.A.S",
+        "estado": "Modificado",
+        "valor": 39840431.0,
+        "pagado": 39840431.0,
+        "fecha_fin": "2026-02-09",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE PARQUES INFANTILES EN EL MUNICIPIO DE NOCAIMA CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Nocaima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 48.3,
+  "nivel": "medio",
+  "posicion": 40.0,
+  "total_rankeados": 71
+}

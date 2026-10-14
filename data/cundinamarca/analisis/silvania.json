@@ -1,0 +1,240 @@
+{
+  "resumen": {
+    "contratos": 355,
+    "valor_total": 22074539684.44,
+    "entidades": 3,
+    "proveedores": 218
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 81.9718,
+    "pct_directa_valor": 60.8832,
+    "hhi": 760.7846491150244,
+    "top1_proveedor_pct": 22.803240735220164,
+    "top5_proveedores_pct": 47.37552921768247,
+    "pareto_proveedores_80pct_valor": 50,
+    "pct_con_adicion": 21.12676056338028,
+    "top_proveedores": [
+      {
+        "proveedor": "Banco Davivienda",
+        "documento": "8600343137",
+        "valor": 5000000000.0,
+        "contratos": 1,
+        "participacion_pct": 22.8032
+      },
+      {
+        "proveedor": "MVC CONSTRUCTORES S.A.S.",
+        "documento": "900375814",
+        "valor": 2605193139.0,
+        "contratos": 1,
+        "participacion_pct": 11.8814
+      },
+      {
+        "proveedor": "ESE HOSPITAL ISMAEL SILVA",
+        "documento": "808003500",
+        "valor": 1044351520.0,
+        "contratos": 2,
+        "participacion_pct": 4.7629
+      },
+      {
+        "proveedor": "FERRETERIA Y DEPOSITO ALTO DE LA VIRGEN S.A.S.",
+        "documento": "900410127",
+        "valor": 900187309.1,
+        "contratos": 3,
+        "participacion_pct": 4.1054
+      },
+      {
+        "proveedor": "coinbiser sas",
+        "documento": "900908559",
+        "valor": 838161965.0,
+        "contratos": 6,
+        "participacion_pct": 3.8226
+      },
+      {
+        "proveedor": "GECOLSA",
+        "documento": "860002576",
+        "valor": 655225900.0,
+        "contratos": 1,
+        "participacion_pct": 2.9883
+      },
+      {
+        "proveedor": "EPICO INGENIERIA S.A.S.",
+        "documento": "900105134",
+        "valor": 475485031.0,
+        "contratos": 2,
+        "participacion_pct": 2.1685
+      },
+      {
+        "proveedor": "Ferreteria El Hidrante S.A",
+        "documento": "860031342",
+        "valor": 459974456.43,
+        "contratos": 1,
+        "participacion_pct": 2.0978
+      },
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 376909952.0,
+        "contratos": 2,
+        "participacion_pct": 1.719
+      },
+      {
+        "proveedor": "SERVICIOS EN COLOMBIA SAS",
+        "documento": "901633083",
+        "valor": 358931387.0,
+        "contratos": 6,
+        "participacion_pct": 1.637
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9616070",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "Banco Davivienda",
+        "modalidad": "Contratación directa",
+        "valor": 5000000000.0,
+        "fecha_firma": "2026-07-08",
+        "objeto": "El acreedor se obliga para con el deudor a otorgarle un empréstito interno de largo plazo. hasta por la suma de CINCO MIL MILLONES DE PESOS M/CTE (COP $5.000.000.000)"
+      },
+      {
+        "id": "CO1.PCCNTR.9575719",
+        "entidad": "ESE HOSPITAL ISMAEL SILVA",
+        "proveedor": "MVC CONSTRUCTORES S.A.S.",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 2605193139.0,
+        "fecha_firma": "2026-06-25",
+        "objeto": "EJECUTAR LA OBRA DE REPOSICIÓN DE LA SEDE SUBIA\nADSCRITA AL HOSPITAL ISMAEL SILVA E.S.E DEL MUNICIPIO DE SILVANIA;\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9539682",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "FERRETERIA Y DEPOSITO ALTO DE LA VIRGEN S.A.S.",
+        "modalidad": "Contratación directa",
+        "valor": 811337309.1,
+        "fecha_firma": "2026-05-28",
+        "objeto": "SUMINISTRO DE MATERIALES PARA LA ATENCIÓN Y CONSTRUCCIÓN DE ALCANTARILLAS Y MANEJO DE AGUAS EN EL MARCO DEL PAE PARA EL MUNICIPIO DE SILVANIA; EN EL MARCO DEL DECRETO DE URGENCIA MANIFIESTA N.° 036 DEL 30 DE ABRIL DE 2026 Y EL PLAN DE ACCIÓN ESPECÍFICO"
+      },
+      {
+        "id": "CO1.PCCNTR.8558176",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "ESE HOSPITAL ISMAEL SILVA",
+        "modalidad": "Contratación directa",
+        "valor": 691587408.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "PRESTAR SERVICIOS PARA LA EJECUCIÓN DE LAS INTERVENCIONES COLECTIVAS EN SALUD PÚBLICA (PIC) ESTABLECIDAS EN EL PLAN DE ACCIÓN EN SALUD 2026-2027 DEL MUNICIPIO SILVANIA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9535154",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "GECOLSA",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 655225900.0,
+        "fecha_firma": "2026-05-27",
+        "objeto": "COMPRA VENTA DE AUTO HORMIGONERA PARA EL MEJORAMIENTO DE LAS VÍAS RURALES DEL MUNICIPIO"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE SILVANIA",
+        "contratos": 10,
+        "valor": 105956734.0
+      },
+      {
+        "entidad": "ESE HOSPITAL ISMAEL SILVA",
+        "contratos": 2,
+        "valor": 2773683733.0
+      },
+      {
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "contratos": 343,
+        "valor": 19194899217.44
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 11,
+    "valor_obras": 1534881295.75,
+    "obras_vencidas_abiertas": 7,
+    "valor_obras_vencidas_abiertas": 731369865.02,
+    "pct_obras_vencidas_abiertas": 63.63636363636363,
+    "pct_pagado_obras_vencidas_abiertas": 13.4527,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9450979",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "ROMING SAS",
+        "estado": "Modificado",
+        "valor": 199999999.97,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "MEJORAMIENTO DE VÍAS RURALES DE LAS VEREDAS SANTA RITA ALTA SECTOR LA ESCUELA Y LOMA ALTA SECTOR CASA VERDE DEL MUNICIPIO DE SILVANIA - CUNDINAMARCA; SEGÚN CONVENIOS ICCU  675 Y 972 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9503802",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "JERZY JOSE ACOSTA MORENO",
+        "estado": "Modificado",
+        "valor": 199999285.0,
+        "pagado": 98389107.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "MEJORAMIENTO DE VÍAS RURALES DE LAS VEREDAS SUBÍA PEDREGAL Y LA VEREDA SUBÍA LAS DELICIAS DEL MUNICIPIO DE SILVANIA - CUNDINAMARCA; SEGÚN LOS CONVENIOS ICCU 1262 Y 1329 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9440373",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "CONYCON SUCHIIMMA S.A.S",
+        "estado": "Modificado",
+        "valor": 143457252.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-13",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA ENTRADA TRONCAL PANAMERICANA A LA VEREDA SAN JOSÉ SECTOR EL HATO MUNICIPIO DE SILVANIA; CUNDINAMARCA; SEGÚN CONVENIO ICCU 1074 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9452204",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "INVERSIONES ASMC",
+        "estado": "Modificado",
+        "valor": 99001695.58,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA ENTRADA TRONCAL PANAMERICANA A LA VEREDA SAN LUIS CENTRO SECTOR TURRIAGO MUNICIPIO DE SILVANIA; CUNDINAMARCA; SEGÚN CONVENIO ICCU 680 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9467671",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "A&E INGENIERIA OBRAS CIVILES S.A.S.",
+        "estado": "Modificado",
+        "valor": 49019458.47,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "CONSTRUCCIÓN DEL MURO DE CONTENCIÓN; DÁNDOLE CUMPLIMIENTO AL FALLO DE ACCIÓN DE TUTELA N° 25743.40.89.001.2023/00172-00; DEL JUZGADO PROMISCUO MUNICIPAL SILVANIA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8552698",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA SAN JOSE DE LAS PALMAS",
+        "estado": "Modificado",
+        "valor": 19955302.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-14",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; PRESUPUESTALES Y FINANCIEROS CON LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA SAN JOSÉ LAS DE LAS PALMAS PARA EL MEJORAMIENTO DE ALCANTARILLAS Y REPARACIÓN DE GAVIONES POR LA VÍA QUE CONDUCE DESDE YAYATÁ LAS VILLAS A SAN JOSE LA BASE; DEL MUNICIPIO DE SILVANIA; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8552254",
+        "entidad": "MUNICIPIO DE SILVANIA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE SANTA RITA  ALTA",
+        "estado": "Modificado",
+        "valor": 19936872.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-25",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; PRESUPUESTALES Y FINANCIEROS CON LA JUNTA DE ACCIÓN COMUNAL DE SANTA RITA ALTA PARA EL MEJORAMIENTO DE LAS VIAS TERCIARIAS MEDIANTE LA CONSTRUCCIÓN DE CINTAS EN LOS SECTORES DENOMINADOS EL GUARDADO Y ALFONSO HERNANDEZ; DEL MUNICIPIO DE SILVANIA; DEPARTAMENTO DE CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Silvania",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 80.7,
+  "nivel": "alto",
+  "posicion": 1.0,
+  "total_rankeados": 71
+}

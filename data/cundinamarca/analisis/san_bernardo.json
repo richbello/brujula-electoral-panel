@@ -1,0 +1,139 @@
+{
+  "resumen": {
+    "contratos": 9,
+    "valor_total": 76807800.0,
+    "entidades": 1,
+    "proveedores": 7
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 66.6667,
+    "pct_directa_valor": 67.0505,
+    "hhi": 1942.1082372377634,
+    "top1_proveedor_pct": 32.94951814789644,
+    "top5_proveedores_pct": 88.93341561664312,
+    "pareto_proveedores_80pct_valor": 5,
+    "pct_con_adicion": 33.33333333333333,
+    "top_proveedores": [
+      {
+        "proveedor": "LAURA GISELL ACOSTA URREGO",
+        "documento": "1014206113",
+        "valor": 25307800.0,
+        "contratos": 3,
+        "participacion_pct": 32.9495
+      },
+      {
+        "proveedor": "yaritza estifany chavez bohorquez",
+        "documento": "1030550636",
+        "valor": 13000000.0,
+        "contratos": 1,
+        "participacion_pct": 16.9254
+      },
+      {
+        "proveedor": "INES GISSELL GUINEA LINARES",
+        "documento": "1010240385",
+        "valor": 10000000.0,
+        "contratos": 1,
+        "participacion_pct": 13.0195
+      },
+      {
+        "proveedor": "JULIETH VIVIANA PAEZ OSPINA",
+        "documento": "1026266260",
+        "valor": 10000000.0,
+        "contratos": 1,
+        "participacion_pct": 13.0195
+      },
+      {
+        "proveedor": "DANIEL ALEXANDER CHAVEZ BOHORQUEZ",
+        "documento": "1116800821",
+        "valor": 10000000.0,
+        "contratos": 1,
+        "participacion_pct": 13.0195
+      },
+      {
+        "proveedor": "LEDY LORENA BELTRAN ACOSTA",
+        "documento": "20888270",
+        "valor": 4500000.0,
+        "contratos": 1,
+        "participacion_pct": 5.8588
+      },
+      {
+        "proveedor": "CARLOS EDUARDO ALVAREZ MARTINEZ",
+        "documento": "11316930",
+        "valor": 4000000.0,
+        "contratos": 1,
+        "participacion_pct": 5.2078
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7857606",
+        "entidad": "Concejo Municipal San Bernardo Cundinamarca",
+        "proveedor": "yaritza estifany chavez bohorquez",
+        "modalidad": "Contratación directa",
+        "valor": 13000000.0,
+        "fecha_firma": "2025-05-08",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES PARA LA ASESORÍA EN LA \nACTUALIZACIÓN; EVALUACIÓN Y SEGUIMIENTO DEL MODELO ESTÁNDAR DE \nCONTROL INTERNO (MECÍ) DE CONFORMIDAD A LA LEY 1499/2017; DEL \nCONCEJO MUNICIPAL DE SAN BERNARDO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8563304",
+        "entidad": "Concejo Municipal San Bernardo Cundinamarca",
+        "proveedor": "LAURA GISELL ACOSTA URREGO",
+        "modalidad": "Mínima cuantía",
+        "valor": 12500000.0,
+        "fecha_firma": "2025-11-18",
+        "objeto": "ADQUISICIÓN DE PRENDAS Y ELEMENTOS DE DOTACIÓN; INSUMOS Y ARTÍCULOS DE ASEO; PAPELERÍA Y CAFETERÍA PARA EL CONCEJO MUNICIPAL DE SAN BERNARDO CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8734705",
+        "entidad": "Concejo Municipal San Bernardo Cundinamarca",
+        "proveedor": "LAURA GISELL ACOSTA URREGO",
+        "modalidad": "Mínima cuantía",
+        "valor": 11007800.0,
+        "fecha_firma": "2025-12-26",
+        "objeto": "ADQUISICIÓN DE SILLAS DE ESCRITORIO; MUEBLE ORGANIZADOR Y ACCESORIOS PARA EL CONCEJO MUNICIPAL DE SAN BERNARDO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9241330",
+        "entidad": "Concejo Municipal San Bernardo Cundinamarca",
+        "proveedor": "INES GISSELL GUINEA LINARES",
+        "modalidad": "Contratación directa",
+        "valor": 10000000.0,
+        "fecha_firma": "2026-01-29",
+        "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES DE ASESORIA JURIDICA Y \nADMINISTRATIVA AL CONCEJO MUNICIPAL DE SAN BERNARDO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8115864",
+        "entidad": "Concejo Municipal San Bernardo Cundinamarca",
+        "proveedor": "DANIEL ALEXANDER CHAVEZ BOHORQUEZ",
+        "modalidad": "Contratación directa",
+        "valor": 10000000.0,
+        "fecha_firma": "2025-07-23",
+        "objeto": "PRESTAR LOS SERVICIOS PROFESIONALES EN ASESORÍA JURÍDICA Y ADMINISTRATIVA AL CONCEJO MUNICIPAL DE SAN BERNARDO CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Concejo Municipal San Bernardo Cundinamarca",
+        "contratos": 9,
+        "valor": 76807800.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "San Bernardo",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

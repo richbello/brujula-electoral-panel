@@ -1,0 +1,345 @@
+{
+  "resumen": {
+    "contratos": 434,
+    "valor_total": 9421034593.85,
+    "entidades": 4,
+    "proveedores": 283
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 62.4424,
+    "pct_directa_valor": 46.8161,
+    "hhi": 190.11768392820593,
+    "top1_proveedor_pct": 7.450449735724382,
+    "top5_proveedores_pct": 24.342910093304287,
+    "pareto_proveedores_80pct_valor": 102,
+    "pct_con_adicion": 7.603686635944701,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 701909447.0,
+        "contratos": 2,
+        "participacion_pct": 7.4504
+      },
+      {
+        "proveedor": "JS-SJ CONSTRUCCIONES S.A.S",
+        "documento": "900546002",
+        "valor": 569335625.04,
+        "contratos": 1,
+        "participacion_pct": 6.0432
+      },
+      {
+        "proveedor": "EVODEC S.A.S",
+        "documento": "901969695",
+        "valor": 368594279.0,
+        "contratos": 1,
+        "participacion_pct": 3.9125
+      },
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 356656332.0,
+        "contratos": 2,
+        "participacion_pct": 3.7857
+      },
+      {
+        "proveedor": "AGENCIA LOGÍSTICA DE GESTIÓN INMOBILIARIA Y DE SERVICIOS DE CUNDINAMARCA",
+        "documento": "830021022",
+        "valor": 296858298.0,
+        "contratos": 2,
+        "participacion_pct": 3.151
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 258036269.0,
+        "contratos": 1,
+        "participacion_pct": 2.7389
+      },
+      {
+        "proveedor": "EMPRESA SOCIAL DEL ESTADO HOSPITAL SAN FRANCISCO DE VIOTA",
+        "documento": "890680032",
+        "valor": 255436430.4,
+        "contratos": 1,
+        "participacion_pct": 2.7113
+      },
+      {
+        "proveedor": "Importación de Elementos Médicos ltda - Implemedica Ltda",
+        "documento": "860057406",
+        "valor": 228097572.0,
+        "contratos": 5,
+        "participacion_pct": 2.4212
+      },
+      {
+        "proveedor": "CUERPO DE BOMBEROS VOLUNTARIOS DE VIOTA",
+        "documento": "901478063",
+        "valor": 203500000.0,
+        "contratos": 2,
+        "participacion_pct": 2.1601
+      },
+      {
+        "proveedor": "SP INGENIERIA Y CONSTRUCCION SAS",
+        "documento": "900614012",
+        "valor": 199987823.46,
+        "contratos": 2,
+        "participacion_pct": 2.1228
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9498706",
+        "entidad": "EMPRESA SOCIAL DEL ESTADO HOSPITAL SAN FRANCISCO DE VIOTA",
+        "proveedor": "JS-SJ CONSTRUCCIONES S.A.S",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 569335625.04,
+        "fecha_firma": "2026-05-07",
+        "objeto": "LA REMODELACIÓN; ADECUACIÓN Y\nMEJORAMIENTO DE LAS INFRAESTRUCTURAS EXISTENTES PARA LAS\nAPERTURAS DE LOS PUESTOS DE SALUD DE SAN GABRIEL Y LIBERIA\nSEDES ADSCRITAS A LA E.S.E. HOSPITAL SAN FRANCISCO DE VIOTÁ; DE CONFORMIDAD CON LOS CONVENIOS No. SS-CD-CVI-1076-2025 y SS-CD-CVI1079-2025 RESPECTIVAMENTE"
+      },
+      {
+        "id": "CO1.PCCNTR.9589314",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 391463447.0,
+        "fecha_firma": "2026-06-24",
+        "objeto": "PRESTACIÓN DE SERVICIOS TÉCNICOS; ARTÍSTICOS Y LOGÍSTICOS NECESARIOS PARA EL DESARROLLO DE LAS ACTIVIDADES PROGRAMADAS EN EL MARCO DEL XXXII REINADO DEPARTAMENTAL DEL CAFÉ A CELEBRARSE EN EL MUNICIPIO DE VIOTÁ CUNDINAMARCA DEL 26 AL 29 DE JUNIO DE 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.8717126",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "EVODEC S.A.S",
+        "modalidad": "Licitación pública",
+        "valor": 368594279.0,
+        "fecha_firma": "2025-12-23",
+        "objeto": "PRESTACIÓN INTEGRAL DE LA ILUMINACIÓN PÚBLICA EN EL MUNICIPIO DE VIOTÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9398626",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 310446000.0,
+        "fecha_firma": "2026-03-16",
+        "objeto": "PRESTACIÓN DE SERVICIOS TÉCNICOS; ARTÍSTICOS Y LOGÍSTICOS NECESARIOS PARA EL DESARROLLO DE LAS ACTIVIDADES PROGRAMADAS EN EL MARCO DEL XIII FESTIVAL DE LA CULTURA CAFETERA A CELEBRARSE EN EL MUNICIPIO DE VIOTÁ CUNDINAMARCA DEL 20 AL 23 DE MARZO DE 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.5213049",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "AGENCIA LOGÍSTICA DE GESTIÓN INMOBILIARIA Y DE SERVICIOS DE CUNDINAMARCA",
+        "modalidad": "Contratación directa",
+        "valor": 276858298.0,
+        "fecha_firma": "2024-01-24",
+        "objeto": "INTERVENTORIA TECNICA; ADMINISTRATIVA; FINANCIERA Y JURIDICA; PARA REHABILITACION DE ANDENES Y URBANISMO DE A CARRERA 10 ENTRE CALLES 13 Y 20 DEL MUNICIPIO DE VIOTA CUNDINAMARCA BAJO EL CONVENIO No ICCU-847-2022."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "contratos": 318,
+        "valor": 7714731468.01
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE VIOTA",
+        "contratos": 5,
+        "valor": 18526452.0
+      },
+      {
+        "entidad": "EMPRESA SOCIAL DEL ESTADO HOSPITAL SAN FRANCISCO DE VIOTA",
+        "contratos": 95,
+        "valor": 1613384653.04
+      },
+      {
+        "entidad": "PERSONERIA MUNICUPAL DE VIOTÁ",
+        "contratos": 15,
+        "valor": 74392020.8
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 19,
+    "valor_obras": 1113680969.53,
+    "obras_vencidas_abiertas": 17,
+    "valor_obras_vencidas_abiertas": 919029348.57,
+    "pct_obras_vencidas_abiertas": 89.47368421052632,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9498706",
+        "entidad": "EMPRESA SOCIAL DEL ESTADO HOSPITAL SAN FRANCISCO DE VIOTA",
+        "proveedor": "JS-SJ CONSTRUCCIONES S.A.S",
+        "estado": "En ejecución",
+        "valor": 569335625.04,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-13",
+        "objeto": "LA REMODELACIÓN; ADECUACIÓN Y\nMEJORAMIENTO DE LAS INFRAESTRUCTURAS EXISTENTES PARA LAS\nAPERTURAS DE LOS PUESTOS DE SALUD DE SAN GABRIEL Y LIBERIA\nSEDES ADSCRITAS A LA E.S.E. HOSPITAL SAN FRANCISCO DE VIOTÁ; DE CONFORMIDAD CON LOS CONVENIOS No. SS-CD-CVI-1076-2025 y SS-CD-CVI1079-2025 RESPECTIVAMENTE"
+      },
+      {
+        "id": "CO1.PCCNTR.9525312",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "SP INGENIERIA Y CONSTRUCCION SAS",
+        "estado": "Modificado",
+        "valor": 99994119.93,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-11",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA SALITRE; SECTOR JULIO PORRAS DEL MUNICIPIO DE VIOTA; CUNDINAMARCA CONFORME CON EL CONVENIO INTERADMINISTRATIVO No. 488-2025 SUSCRITO ENTRE EL ICCU Y EL MUNICIPIO DE VIOTÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.9525117",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "SONA INGENIEROS SAS",
+        "estado": "Suspendido",
+        "valor": 93699603.6,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-23",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA LIBERIA BAJA; SECTOR DOÑA BARBARA DEL MUNICIPIO DE VIOTA; CUNDINAMARCA CONFORME CON EL CONVENIO INTERADMINISTRATIVO No. 1414-2025 SUSCRITO ENTRE EL ICCU Y EL MUNICIPIO DE VIOTÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8532582",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JAC JUNTA DE ACCION COMUNAL DE LA VEREDA BUENAVISTA",
+        "estado": "En ejecución",
+        "valor": 32500000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EJECUTAR LABORES DE MEJORAMIENTO DE LA RED VIAL TERCIARIA CON LA CONSTRUCCION DE OBRAS HIDRAULICAS EN LA VEREDA BUENA VISTA; SECTOR SANTA GERTRUDIS DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8533800",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA DE CASA BLANCA CALANDAIMA",
+        "estado": "En ejecución",
+        "valor": 32500000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EJECUTAR LABORES DE MEJORAMIENTO DE LA RED VIAL TERCIARIA CON LA CONSTRUCCION DE OBRAS HIDRAULICAS EN LA CASA BLANCA; SECTOR LA GUAMUCHERA DEL MUNICIPIO DE VIOTA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8504766",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA VICTORIA ALTA",
+        "estado": "En ejecución",
+        "valor": 10400000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-27",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA VICTORIA ALTA Y LA ALCALDÍA MUNICIPAL DE VIOTÁ CUNDINAMARCA; PARA EL MEJORAMIENTO Y ADECUACIÓN DE LA ESCUELA RURAL DEL SECTOR."
+      },
+      {
+        "id": "CO1.PCCNTR.8534603",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA DE PALESTINA",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE UNA ALCANTARILLA DE 36 PULGADAS EN CONCRETO CICLOPEO EN LA VEREDA PALESTINA SECTOR CRUCE DE LOS RAMIREZ DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8534522",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA EL BRASIL",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE UNA ALCANTARILLA DE 36 PULGADAS EN CONCRETO CICLOPEO UBICADA EN LA VEREDA BRASIL SECTOR HERNANDO SABOGAL DEL MUNICIPIO DE VIOTA  CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8533599",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA EL PINO",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE UNA ALCANTARILLA DE 36 PULGADAS EN CONCRETO CICLOPEO EN LA VEREDA EL PINO SECTOR LOMA DON TITO DEL MUNICIPIO DE VIOTA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8543652",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA EL ESPINO",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-25",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE UNA BATEA EN CONCRETO REFORZADO UBICADA EN LA VEREDA EL ESPINO SECTOR LA VIRGINIA DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8534611",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA ACCION COMUNAL  DE LA VEREDA EL ROBLAL",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO Y ADECUACION DE UNA ALCANTARILLA DE 36 PULGADAS EN CONCRETO CICLOPEO EN LA VEREDA ROBLAL SECTOR JAIR SIERRA DEL MUNICIPIO DE VIOTA  CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8532826",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA LAGUNAS",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE UNA ALCANTARILLA DE 36 PULGADAS EN CONCRETO CICLOPEO EN LA VEREDA LAGUNAS SECTOR CHIPALOS DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8504595",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA CALANDAIMA SECTOR BAJO",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-26",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO Y ADECUACION DE UNA ALCANTARILLA DE 36 PULGADAS EN CONCRETO CICLOPEO EN LA VEREDA CALANDAIMA BAJO SECTOR LOS CORRALES DEL MUNICIPIO DE VIOTA  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8533799",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA ACCION ACCION COMUNAL DE LA VEREDA LAGUNA LARGA",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE OBRAS DE MITIGACION (GAVIONES) PARA ESTABILIZAR LA BANCA Y LA ALCANTARILLA EN LA VEREDA LAGUNA LARGA SECTOR JOSE SANCHEZ DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8534526",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA LA BELLA",
+        "estado": "En ejecución",
+        "valor": 7800000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "ANUAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE UNA ALCANTARILLA DE 36 PULGADAS EN CONCRETO CICLOPEO EN LA VEREDA LA BELLA SECTOR CRUCE LA ESPERANZA DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8534525",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "Junta de accion comunal Vereda Arabia",
+        "estado": "En ejecución",
+        "valor": 6500000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL REFORZAMIENTO DE LA PLACA HUELLA EXISTENTE UBICADA EN LA VEREDA ARABIA SECTOR ROCIO LOPEZ DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8532829",
+        "entidad": "ALCALDIA MUNICIPAL DE VIOTÁ",
+        "proveedor": "JUNTA ACCION COMUNAL DE LA VEREDA PUEBLO DE PIEDRA",
+        "estado": "En ejecución",
+        "valor": 3900000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "AUNAR ESFUERZOS ECONOMICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO Y ADECUACION DE UNA ALCANTARILLA UBICADA EN LA VEREDA PUEBLO DE PIEDRA SECTOR EL PARAISO DEL MUNICIPIO DE VIOTA CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Viotá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 55.5,
+  "nivel": "medio",
+  "posicion": 25.0,
+  "total_rankeados": 71
+}

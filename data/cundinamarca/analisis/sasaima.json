@@ -1,0 +1,325 @@
+{
+  "resumen": {
+    "contratos": 715,
+    "valor_total": 28474890798.98,
+    "entidades": 4,
+    "proveedores": 338
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 72.3077,
+    "pct_directa_valor": 59.7447,
+    "hhi": 428.5790852150904,
+    "top1_proveedor_pct": 18.541347755933792,
+    "top5_proveedores_pct": 30.860387417716762,
+    "pareto_proveedores_80pct_valor": 98,
+    "pct_con_adicion": 26.573426573426573,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 5200000000.0,
+        "contratos": 1,
+        "participacion_pct": 18.5413
+      },
+      {
+        "proveedor": "EGS SAS",
+        "documento": "900573269",
+        "valor": 1137356530.0,
+        "contratos": 1,
+        "participacion_pct": 4.0554
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 834351125.0,
+        "contratos": 6,
+        "participacion_pct": 2.975
+      },
+      {
+        "proveedor": "JC INGENIERIA Y CONSULTORIA SAS",
+        "documento": "901102184",
+        "valor": 789883963.98,
+        "contratos": 2,
+        "participacion_pct": 2.8164
+      },
+      {
+        "proveedor": "E.S.E. HOSPITAL HILARIO LUGO",
+        "documento": "832000029",
+        "valor": 693335557.0,
+        "contratos": 4,
+        "participacion_pct": 2.4722
+      },
+      {
+        "proveedor": "CONTECOR S.A.S",
+        "documento": "900702893",
+        "valor": 602094599.0,
+        "contratos": 4,
+        "participacion_pct": 2.1469
+      },
+      {
+        "proveedor": "OPEN INGENIERIA SAS",
+        "documento": "900145551",
+        "valor": 572176328.0,
+        "contratos": 2,
+        "participacion_pct": 2.0402
+      },
+      {
+        "proveedor": "ESTRUCTURAR INGENIERIA Y PROYECTOS SAS",
+        "documento": "900359365",
+        "valor": 499736344.0,
+        "contratos": 2,
+        "participacion_pct": 1.7819
+      },
+      {
+        "proveedor": "BIHAO SOCIEDAD POR ACCIONES SIMPLIFICADA",
+        "documento": "900781798",
+        "valor": 498634146.0,
+        "contratos": 4,
+        "participacion_pct": 1.778
+      },
+      {
+        "proveedor": "IMPORTADORA DISMAQ SAS",
+        "documento": "900162075",
+        "valor": 445500000.0,
+        "contratos": 2,
+        "participacion_pct": 1.5885
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7798893",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 5200000000.0,
+        "fecha_firma": "2025-04-22",
+        "objeto": "BANCOLOMBIA ha acordado prestar a EL DEUDOR hasta la suma\nseñalada en el aparte MONTO DE LA OPERACIÓN' de la PARTE 1.2; la cual Se entregará a su\nperfeccionamiento y una vez se haya acreditado el cumplimiento de la totalidad de los requisitos\nlegales."
+      },
+      {
+        "id": "CO1.PCCNTR.7018882",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "EGS SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1137356530.0,
+        "fecha_firma": "2024-12-02",
+        "objeto": "MEJORAMIENTO DE VÍAS TERCIARIAS MEDIANTE EL USO DE PLACA HUELLA EN LA VEREDA MESETAS SECTOR VILLA CRISTINA DEL MUNICIPIO DE SASAIMA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9916430",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "JC INGENIERIA Y CONSULTORIA SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 489946423.98,
+        "fecha_firma": "2026-09-21",
+        "objeto": "MEJORAMIENTO DE LA INFRAESTRUCTURA VIAL MEDIANTE LA\nINTERVENCIÓN DE SEIS (06) TRAMOS SOBRE LA VÍA RURAL DE LA VEREDA LIMONAL; EN EL\nSECTOR COMPRENDIDO ENTRE LA Y Y EL PUENTE QUE COMUNICA CON EL COLUMPIO;\nJURISDICCIÓN DEL MUNICIPIO DE SASAIMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9536004",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONTECOR S.A.S",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 382166994.0,
+        "fecha_firma": "2026-06-18",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN \nDEL CASCO URBANO A LA VEREDA SAN BERNARDO SECTOR BUCARITA \nVÍA COLEGIO SAN BERNARDO; CENTRO POBLADO SANTA INES SECTOR \nBUCARITA; MUNICIPIO DE SASAIMA; CONFORME A LOS CONVENIOS; \nICCU-699-2025 Y ICCU-1496-2025; SUSCRITOS ENTRE EL ICCU Y EL \nMUNICIPIO DE SASAIMA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9529908",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "INGENIERIA CIVIL Y GEODESIA SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 378939876.0,
+        "fecha_firma": "2026-07-08",
+        "objeto": "MEJORAMIENTO DE LA INFRAESTRUCTURA VIAL QUE CONDUCE \nDESDE EL CASCO URBANO DEL MUNICIPIO DE SASAIMA; EN EL TRAMO COMPRENDIDO ENTRE EL \nPUENTE RÍO DULCE Y LA Y DE LA VEREDA MESETAS"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "contratos": 611,
+        "valor": 27287034972.22
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL SASAIMA",
+        "contratos": 1,
+        "valor": 6017862.76
+      },
+      {
+        "entidad": "E.S.E. HOSPITAL HILARIO LUGO",
+        "contratos": 96,
+        "valor": 1141474024.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE SASAIMA",
+        "contratos": 7,
+        "valor": 40363940.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 26,
+    "valor_obras": 6374816947.38,
+    "obras_vencidas_abiertas": 15,
+    "valor_obras_vencidas_abiertas": 3033875408.4,
+    "pct_obras_vencidas_abiertas": 57.692307692307686,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7018882",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "EGS SAS",
+        "estado": "Modificado",
+        "valor": 1137356530.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-16",
+        "objeto": "MEJORAMIENTO DE VÍAS TERCIARIAS MEDIANTE EL USO DE PLACA HUELLA EN LA VEREDA MESETAS SECTOR VILLA CRISTINA DEL MUNICIPIO DE SASAIMA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7018758",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONSTRUCTORA SANTOSP S.A.S",
+        "estado": "Suspendido",
+        "valor": 342456995.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-09",
+        "objeto": "MEJORAMIENTO VIVIENDA RURAL MEDIANTE CONSTRUCCIÓN DE COCINAS Y HABITACIONES EN LA ZONA RURAL DEL MUNICIPIO DE SASAIMA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7895101",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONSORCIO HUELLAS GUALIVÁ",
+        "estado": "En ejecución",
+        "valor": 300000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-18",
+        "objeto": "CONSTRUCCIÓN DE PLACAS HUELLA EN EL SECTOR LOS PEÑA; SECTOR LOS BAUTISTA Y SECTOR LAGOMAR DEL MUNICIPIO DE SASAIMA CUNDINAMARCA;  EN EJECUCIÓN DE LOS CONVENIO 709; 702 Y 735 SUSCRITOS ENTRE EL ICCU Y EL MUNICIPIO DE SASAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7893691",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "OPEN INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 272225926.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-25",
+        "objeto": "CONSTRUCCIÓN DEL PUENTE PEATONAL SOBRE EL RÍO DULCE BARRIO SAN ANTONIO VIA COLEGIO MILITAR MUNICIPIO DE SASAIMA; DEPARTAMENTO DE CUNDINAMARCA; SEGÚN CONVENIO INTERADMINISTRATIVO No. ICCU 585 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7878967",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONTECOR S.A.S",
+        "estado": "En ejecución",
+        "valor": 206927605.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MEJORAMIENTO DE VIVIENDA RURAL EN EL MUNICIPIO DE SASAIMA - CUNDINAMARCA; MEDIANTE LA CONSTRUCCIÓN DE MÓDULOS INDEPENDIENTES (HABITACIONES Y COCINAS) CONVENIO SHVS-CDCVI-134-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7894913",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONSORCIO HUELLAS SASAIMA",
+        "estado": "En ejecución",
+        "valor": 199903290.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-14",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLAS SECTOR LOS ORJUELA Y CASA BONITA DEL MUNICIPIO DE SASAIMA CUNDINAMARCA; EN EJECUCIÓN DEL CONVENIO INTERADMINISTRATIVO 721 y 729 SUSCRITO ENTRE EL ICCU Y EL MUNICIPIO DE SASAIMA"
+      },
+      {
+        "id": "CO1.PCCNTR.9499215",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONSORCIO PUENTE ACUAPAR",
+        "estado": "Aprobado",
+        "valor": 143163526.4,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-13",
+        "objeto": "CONSTRUCCIÓN PUENTE SOBRE LA QUEBRADA\nACUAPAR; VEREDA NARIZ ALTA MUNICIPIO DE SASAIMA;\nDEPARTAMENTO DE CUNDINAMARCA; CONFORME AL CONVENIO\nINTERADMINISTRATIVO ICCU-940-2025 SUSCRITO ENTRE EL ICCU Y EL\nMUNICIPIO DE SASAIMA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7835019",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "JAC VEREDA DE PILACA MUNICIPIO DE SASAIMA",
+        "estado": "Modificado",
+        "valor": 118974303.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-15",
+        "objeto": "AUNAR ESFUERZOS \nINSTITUCIONALES; COMUNITARIOS; ECONÓMICOS Y SOCIALES PARA EL MEJORAMIENTO DE \nINFRAESTRUCTURA VIAL MEDIANTE LA CONSTRUCCIÓN DE PLACA HUELLA Y OBRAS \nCOMPLEMENTARIAS CON LA JUNTA DE ACCIÓN COMUNAL (JAC) DE LA VEREDA PILACA SECTOR \nEL MONTE Y SECTOR EL PORVENIR DEL MUNICIPIO DE SASAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7704732",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "JAC LAS MESETAS",
+        "estado": "Modificado",
+        "valor": 68410230.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-12",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES; COMUNITARIOS; ECONÓMICOS Y SOCIALES PARA EL \nMEJORAMIENTO DE INFRAESTRUCTURA VIAL MEDIANTE LA CONSTRUCCIÓN DE PLACA HUELLA  Y OBRAS COMPLEMENTARIAS CON LA JUNTA DE ACCIÓN COMUNAL (JAC) DE LA VEREDA \nMESETAS SECTOR ACUEMOME DEL MUNICIPIO DE SASAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7839458",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "JAC DE LA GRANJA",
+        "estado": "En ejecución",
+        "valor": 59487152.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-13",
+        "objeto": "infraestructura vial mediante la construcción de \nplaca huella y obras complementarias con la Junta de Acción Comunal (JAC) de la vereda La \nGranja sector Bautista del Municipio de Sasaima Cundinamarca."
+      },
+      {
+        "id": "CO1.PCCNTR.7479489",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA LOMA LARGA",
+        "estado": "Modificado",
+        "valor": 59487152.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-15",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES; COMUNITARIOS; ECONÓMICOS Y SOCIALES PARA \nEL MEJORAMIENTO DE INFRAESTRUCTURA VIAL MEDIANTE LA CONSTRUCCIÓN DE PLACA \nHUELLA Y OBRAS COMPLEMENTARIAS CON LA JUNTA DE ACCIÓN COMUNAL (JAC) DE LA  VEREDA LOMA LARGA SECTOR VELÁSQUEZ-PEÑA DEL MUNICIPIO DE SASAIMA \nCUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.6235602",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "JAC VEREDA EL MOJON DEL MUNICIPIO DE SASAIMA",
+        "estado": "Modificado",
+        "valor": 56543025.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-08-04",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES; COMUNITARIOS; ECONÓMICOS Y SOCIALES PARA\nADECUACIÓN; MANTENIMIENTO; MEJORAMIENTO WO CONSTRUCCIÓN DE PLACA HUELLAS\nDE víAS TERCIARIAS CON BAJOS Y MEDIOS VOLÚMENES DE TRÁNSITO EN LA VEREDA EL\nMOJÓN BAJO SECTOR LOS HERNÁNDEZ DEL MUNICIPIO DE SASAIMA CUNDINAMARCA;\nDERIVADO DE LA CONVOCATORIA NO 001 DE 2024."
+      },
+      {
+        "id": "CO1.PCCNTR.8613210",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONSTRUCCIONES H MUÑOZ SAS",
+        "estado": "En ejecución",
+        "valor": 33975690.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-23",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA DESTINADA AL FUNCIONAMIENTO DEL CENTRO DÍA UBICADO EN EL MUNICIPIO DE SASAIMA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7110342",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "Héctor Leonardo Pinzón Garcia",
+        "estado": "En ejecución",
+        "valor": 25537944.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-11",
+        "objeto": "EJECUCIÓN DE OBRAS CIVILES PARA MITIGACIÓN DE RIESGO Y OPTIMIZACIÓN DE LAS AGUAS LLUVIAS DEL AUDITORIO MUNICIPAL EN EL CASCO URBANO DEL MUNICIPIO DE SASAIMA - CUNDINAMARCA EN CUMPLIMIENTO AL FALLO DE TUTELA PROFERIDO POR EL JUZGADO PROMISCUO MUNICIPAL DE FECHA 23\nDE NOVIEMBRE DEL 2023 BAJO RADICADO NO. 25718408900120230064100"
+      },
+      {
+        "id": "CO1.PCCNTR.9379287",
+        "entidad": "ALCALDÍA MUNICIPAL DE SASAIMA",
+        "proveedor": "CONSTRUCIVILES JEG SAS",
+        "estado": "Modificado",
+        "valor": 9426040.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-04",
+        "objeto": "REALIZAR A PRECIOS UNITARIOS FIJOS; SIN FORMULA DE REAJUSTE; LAS OBRAS\nDE MANTENIMIENTO; ADECUACIÓN Y MEJORAMIENTO DE LA INFRAESTRUCTURA FÍSICA Y/O\nESPACIOS PÚBLICOS DE LAS INSTITUCIONES EDUCATIVAS EN LAS ZONAS URBANA Y RURAL\nDEL MUNICIPIO DE SASAIMA; CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Sasaima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 76.0,
+  "nivel": "alto",
+  "posicion": 4.0,
+  "total_rankeados": 71
+}

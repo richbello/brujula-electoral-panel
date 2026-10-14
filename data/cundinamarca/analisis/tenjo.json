@@ -1,0 +1,220 @@
+{
+  "resumen": {
+    "contratos": 2509,
+    "valor_total": 282427533935.71,
+    "entidades": 5,
+    "proveedores": 1053
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 86.8872,
+    "pct_directa_valor": 48.6382,
+    "hhi": 321.6189211386131,
+    "top1_proveedor_pct": 11.909218685494631,
+    "top5_proveedores_pct": 32.52822354680092,
+    "pareto_proveedores_80pct_valor": 104,
+    "pct_con_adicion": 4.942208051016341,
+    "top_proveedores": [
+      {
+        "proveedor": "CONSORCIO CAM TE",
+        "documento": "901997293",
+        "valor": 32787843775.0,
+        "contratos": 1,
+        "participacion_pct": 11.9092
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE TENJO SA ESP",
+        "documento": "900149883",
+        "valor": 21506222595.0,
+        "contratos": 15,
+        "participacion_pct": 7.8115
+      },
+      {
+        "proveedor": "CONSORCIO OBRAS COLISEO GTB",
+        "documento": "901926050",
+        "valor": 12980403954.0,
+        "contratos": 1,
+        "participacion_pct": 4.7147
+      },
+      {
+        "proveedor": "EMPRESA PÚBLICA DE MADRID (proveedor)",
+        "documento": "901255451",
+        "valor": 11350718197.0,
+        "contratos": 4,
+        "participacion_pct": 4.1228
+      },
+      {
+        "proveedor": "SOLUCIONES FOUR POINTS S.A.S",
+        "documento": "860524077",
+        "valor": 10929831006.0,
+        "contratos": 10,
+        "participacion_pct": 3.9699
+      },
+      {
+        "proveedor": "CONSTRUCTORA PEREZ CORTES SAS",
+        "documento": "901576146",
+        "valor": 10473380918.0,
+        "contratos": 2,
+        "participacion_pct": 3.8041
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Urbano de La Ceja",
+        "documento": "901105143",
+        "valor": 8052046006.0,
+        "contratos": 1,
+        "participacion_pct": 2.9247
+      },
+      {
+        "proveedor": "TENJO TECNOLOGIA E INNOVACIÓN S.A.S",
+        "documento": "901734351",
+        "valor": 7166934214.0,
+        "contratos": 3,
+        "participacion_pct": 2.6032
+      },
+      {
+        "proveedor": "CUERPO DE BOMBEROS VOLUNTARIOS DE TENJO",
+        "documento": "900308633",
+        "valor": 5928400000.0,
+        "contratos": 4,
+        "participacion_pct": 2.1533
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 5531813070.0,
+        "contratos": 2,
+        "participacion_pct": 2.0093
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8430842",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "CONSORCIO CAM TE",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 32787843775.0,
+        "fecha_firma": "2025-10-17",
+        "objeto": "ESTUDIOS; DISEÑOS A NIVEL DE DETALLE DE INGENIERÍA (FASE III); LICENCIAMIENTO; PRE-CONSTRUCCIÓN Y CONSTRUCCIÓN DEL CENTRO ADMINISTRATIVO MUNICIPAL -CAM; DEL MUNICIPIO DE TENJO (CUND)."
+      },
+      {
+        "id": "CO1.PCCNTR.7626711",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "CONSORCIO OBRAS COLISEO GTB",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 12980403954.0,
+        "fecha_firma": "2025-03-19",
+        "objeto": "ESTUDIOS; DISEÑOS; PRE-CONSTRUCCIÓN LICENCIAS; PERMISOS; AUTORIZACIONES; PLANES; ETC Y CONSTRUCCION DE LA AMPLIACIÓN Y MEJORAMIENTO DEL COLISEO CUBIERTO EN EL MUNICIPIO DE TENJO - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7102345",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "CONSTRUCTORA PEREZ CORTES SAS",
+        "modalidad": "Contratación directa",
+        "valor": 10462918000.0,
+        "fecha_firma": "2024-12-03",
+        "objeto": "ADQUISICIÓN DE PREDIO PARA LA CONSTRUCCIÓN DEL CENTRO ADMINISTRATIVO MUNICIPAL-CAM; DE MUNICIPIO DE TENJO; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8269384",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "Empresa de Desarrollo Urbano de La Ceja",
+        "modalidad": "Contratación directa",
+        "valor": 8052046006.0,
+        "fecha_firma": "2025-09-03",
+        "objeto": "GERENCIA INTEGRAL PARA LA EJECUCIÓN DE PROYECTOS DE INFRAESTRUCTURA Y ESPACIO PÚBLICO EN EL MUNICIPIO DE TENJO; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7014325",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "TENJO TECNOLOGIA E INNOVACIÓN S.A.S",
+        "modalidad": "Contratación directa",
+        "valor": 4362602134.0,
+        "fecha_firma": "2024-11-12",
+        "objeto": "AUNAR ESFUERZOS FINANCIEROS; ADMINISTRATIVOS Y TÉCNICOS; PARA LA EJECUCIÓN DEL PROYECTO ENCAMINADO AL DESARROLLO DE TENJO COMO CIUDAD INTELIGENTE"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE TENJO",
+        "contratos": 75,
+        "valor": 3222575158.88
+      },
+      {
+        "entidad": "INDERTEN",
+        "contratos": 77,
+        "valor": 9904908347.01
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE CULTURA Y TURISMO DE TENJO",
+        "contratos": 690,
+        "valor": 26311130134.8
+      },
+      {
+        "entidad": "MUNICIPIO DE TENJO",
+        "contratos": 1560,
+        "valor": 242286645740.02
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE TENJO",
+        "contratos": 26,
+        "valor": 702274555.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 12,
+    "valor_obras": 50283078834.0,
+    "obras_vencidas_abiertas": 4,
+    "valor_obras_vencidas_abiertas": 1638584336.0,
+    "pct_obras_vencidas_abiertas": 33.33333333333333,
+    "pct_pagado_obras_vencidas_abiertas": 33.5724,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8522502",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "CONSORCIO INSTITUCIONES TENJO",
+        "estado": "Modificado",
+        "valor": 629427758.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-19",
+        "objeto": "MANTENIMIENTO; ADECUACIÓN Y MEJORAMIENTO DE LA\nINFRAESTRUCTURA FÍSICA DE LAS INSTITUCIONES EDUCATIVAS\nDEPARTAMENTALES Y SUS RESPECTIVAS SEDES DEL MUNICIPIO DE\nTENJO; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8284837",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "CONSORCIO SANTA MARTA",
+        "estado": "En ejecución",
+        "valor": 623678469.0,
+        "pagado": 550111702.0,
+        "fecha_fin": "2026-03-17",
+        "objeto": "CONSTRUCCIÓN DE MUROS DE CONTENCIÓN PARA LA MITIGACIÓN DE RIESGOS EN ZONAS DE POSIBLES DESLIZAMIENTOS EN EL MUNICIPIO DE TENJO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8628523",
+        "entidad": "MUNICIPIO DE TENJO",
+        "proveedor": "M C GROUP S.A.S",
+        "estado": "En ejecución",
+        "valor": 347077796.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-29",
+        "objeto": "MANTENIMIENTO; ADECUACIÓN Y MEJORAMIENTO DE LA INFRAESTRUCTURA SOCIAL Y DEPORTIVA DEL MUNICIPIO DE TENJO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8358138",
+        "entidad": "CONCEJO MUNICIPAL DE TENJO",
+        "proveedor": "INGEVAL DAV SAS",
+        "estado": "En ejecución",
+        "valor": 38400313.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-29",
+        "objeto": "REALIZAR EL MANTENIMIENTO; ADECUACIONES Y MEJORAMIENTO DE LAS INSTALACIONES Y LA ADECUACIÓN ELÉCTRICA INTERNA DEL CONCEJO MUNICIPAL DE TENJO CUNDINAMARCA INCLUYE EL SUMINISTRO DE MATERIALES"
+      }
+    ]
+  },
+  "municipio": "Tenjo",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 44.5,
+  "nivel": "medio",
+  "posicion": 46.0,
+  "total_rankeados": 71
+}

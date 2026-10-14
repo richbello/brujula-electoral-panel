@@ -1,0 +1,169 @@
+{
+  "resumen": {
+    "contratos": 118,
+    "valor_total": 4156210523.41,
+    "entidades": 3,
+    "proveedores": 90
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 82.2034,
+    "pct_directa_valor": 62.0746,
+    "hhi": 424.4225727021102,
+    "top1_proveedor_pct": 12.853773575494593,
+    "top5_proveedores_pct": 39.718873736106765,
+    "pareto_proveedores_80pct_valor": 44,
+    "pct_con_adicion": 38.13559322033898,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNSDEPCOL",
+        "documento": "900497553",
+        "valor": 534229890.0,
+        "contratos": 1,
+        "participacion_pct": 12.8538
+      },
+      {
+        "proveedor": "GERENCIA SOCIAL",
+        "documento": "900489737",
+        "valor": 383243003.0,
+        "contratos": 3,
+        "participacion_pct": 9.221
+      },
+      {
+        "proveedor": "MIMESIS",
+        "documento": "900023210",
+        "valor": 364000000.0,
+        "contratos": 1,
+        "participacion_pct": 8.758
+      },
+      {
+        "proveedor": "OSCAR ALBERTO RIVERA RODRIGUEZ",
+        "documento": "79203338",
+        "valor": 199623333.0,
+        "contratos": 3,
+        "participacion_pct": 4.803
+      },
+      {
+        "proveedor": "Adrian Mauricio Calderon Martinez",
+        "documento": "1098773599",
+        "valor": 169703784.0,
+        "contratos": 3,
+        "participacion_pct": 4.0831
+      },
+      {
+        "proveedor": "NORMA CONSTANZA ACOSTA",
+        "documento": "65736641",
+        "valor": 84933334.0,
+        "contratos": 2,
+        "participacion_pct": 2.0435
+      },
+      {
+        "proveedor": "Maritza Contreras Quevedo",
+        "documento": "1072960437",
+        "valor": 81089066.0,
+        "contratos": 3,
+        "participacion_pct": 1.951
+      },
+      {
+        "proveedor": "ENLACE DE COLOMBIA SAS",
+        "documento": "900861659",
+        "valor": 72719000.0,
+        "contratos": 1,
+        "participacion_pct": 1.7496
+      },
+      {
+        "proveedor": "Katiuska Cabrera Berrio",
+        "documento": "1019101050",
+        "valor": 66300000.0,
+        "contratos": 2,
+        "participacion_pct": 1.5952
+      },
+      {
+        "proveedor": "Laura Camila Díaz Rodríguez",
+        "documento": "1007569712",
+        "valor": 66186810.0,
+        "contratos": 4,
+        "participacion_pct": 1.5925
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9434001",
+        "entidad": "IMRDA",
+        "proveedor": "FUNSDEPCOL",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 534229890.0,
+        "fecha_firma": "2026-04-04",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; FINANCIEROS Y LOGÍSTICOS PARA LA REALIZACIÓN DE LA XXVI CLÁSICA NACIONAL DE CICLISMO CIUDAD DE ANAPOIMA; A LLEVARSE A CABO DEL 06 AL 10 DE ABRIL DE 2026; EVENTO DEPORTIVO Y/O RECREATIVO; EN CUMPLIMIENTO DEL DECRETO 092 DE 2017 Y EN CONCORDANCIA CON EL PLAN DE DESARROLLO MUNICIPAL"
+      },
+      {
+        "id": "CO1.PCCNTR.7735817",
+        "entidad": "IMRDA",
+        "proveedor": "MIMESIS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 364000000.0,
+        "fecha_firma": "2025-04-02",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; FINANCIEROS Y LOGÍSTICOS PARA LA REALIZACIÓN DE LA XXV CLÁSICA NACIONAL DE CICLISMO CIUDAD DE ANAPOIMA; A LLEVARSE A CABO DEL 06 AL 09 DE ABRIL DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9993973",
+        "entidad": "IMRDA",
+        "proveedor": "GERENCIA SOCIAL",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 280296062.0,
+        "fecha_firma": "2026-09-25",
+        "objeto": "PRESTACIÓN DE SERVICIOS LOGÍSTICOS; OPERATIVOS Y DE APOYO; INCLUIDO EL SUMINISTRO DE BIENES E INSUMOS REQUERIDOS PARA LA ORGANIZACIÓN Y REALIZACIÓN DE EVENTOS DEPORTIVOS; RECREATIVOS Y FORMATIVOS A CARGO DEL INSTITUTO MUNICIPAL DE RECREACIÓN Y DEPORTES DE ANAPOIMA DURANTE LA VIGENCIA 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.9416754",
+        "entidad": "IMRDA",
+        "proveedor": "ENLACE DE COLOMBIA SAS",
+        "modalidad": "Mínima cuantía",
+        "valor": 72719000.0,
+        "fecha_firma": "2026-03-26",
+        "objeto": "PRESTACIÓN DE SERVICIOS LOGÍSTICOS INTEGRALES; BAJO LA MODALIDAD DE MONTO AGOTABLE; QUE COMPRENDAN TRANSPORTE TERRESTRE; CON EL FIN DE GARANTIZAR LA PARTICIPACIÓN DE LOS DEPORTISTAS; ENTRENADORES Y PERSONAL DE APOYO DEL MUNICIPIO DE ANAPOIMA EN EVENTOS; TORNEOS Y/O INTERCAMBIOS DEPORTIVOS A NIVEL MUNICIPAL; DEPARTAMENTAL O NACIONAL; DE CONFORMIDAD CON LAS NECESIDADES INSTITUCIONALES"
+      },
+      {
+        "id": "CO1.PCCNTR.8812022",
+        "entidad": "CONCEJO MUNICIPAL DE ANAPOIMA",
+        "proveedor": "OSCAR ALBERTO RIVERA RODRIGUEZ",
+        "modalidad": "Contratación directa",
+        "valor": 71573333.0,
+        "fecha_firma": "2026-01-09",
+        "objeto": "Prestación de servicios profesionales de asesoría jurídica   para el Concejo de Anapoima Cundinamarca"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE ANAPOIMA",
+        "contratos": 26,
+        "valor": 811863015.55
+      },
+      {
+        "entidad": "IMRDA",
+        "contratos": 72,
+        "valor": 3112883189.0
+      },
+      {
+        "entidad": "Personería Municipal de Anapoima",
+        "contratos": 20,
+        "valor": 231464318.86
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Anapoima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 77.2,
+  "nivel": "alto",
+  "posicion": 3.0,
+  "total_rankeados": 71
+}

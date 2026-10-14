@@ -1,0 +1,125 @@
+{
+  "resumen": {
+    "contratos": 5,
+    "valor_total": 645198872.42,
+    "entidades": 1,
+    "proveedores": 5
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 100.0,
+    "pct_directa_valor": 100.0,
+    "hhi": 7328.481114013954,
+    "top1_proveedor_pct": 85.24503428486634,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 550000000.0,
+        "contratos": 1,
+        "participacion_pct": 85.245
+      },
+      {
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA SAN VICENTE DEL MUNICIPIO DE TIBACUY",
+        "documento": "9016087171",
+        "valor": 32280039.55,
+        "contratos": 1,
+        "participacion_pct": 5.0031
+      },
+      {
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA DE LA ESCUELA",
+        "documento": "9010270432",
+        "valor": 32123072.87,
+        "contratos": 1,
+        "participacion_pct": 4.9788
+      },
+      {
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA LA PORTADA",
+        "documento": "901263011",
+        "valor": 18795760.0,
+        "contratos": 1,
+        "participacion_pct": 2.9132
+      },
+      {
+        "proveedor": "CPMS-FUSAGASUGA**",
+        "documento": "808000716",
+        "valor": 12000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.8599
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8249327",
+        "entidad": "ALCALDIA MUNICIPAL DE TIBACUY",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 550000000.0,
+        "fecha_firma": "2025-09-10",
+        "objeto": "CONTRATO DE EMPRESTITO Y PIGNORACION DE RENTAS A LARGO PLAZO SUSCRITO ENTRE EL MUNICIPIO DE TIBACUY- CUNDINAMARCA Y BANCOLOMBIA S.A"
+      },
+      {
+        "id": "CO1.PCCNTR.10057607",
+        "entidad": "ALCALDIA MUNICIPAL DE TIBACUY",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA SAN VICENTE DEL MUNICIPIO DE TIBACUY",
+        "modalidad": "Contratación directa",
+        "valor": 32280039.55,
+        "fecha_firma": "2026-10-09",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES Y COMUNITARIOS ENTRE EL MUNICIPIO DE TIBACUY;\nCUNDINAMARCA; Y LA JUNTA DE ACCIÓN COMUNAL VEREDA SAN VICENTE DEL MUNICIPIO DE\nTIBACUY; PARA EL MEJORAMIENTO DE LA INFRAESTRUCTURA VIAL MEDIANTE LA CONSTRUCCIÓN\nDE PLACA HUELLA EN EL SECTOR SANTA ELENA."
+      },
+      {
+        "id": "CO1.PCCNTR.10008290",
+        "entidad": "ALCALDIA MUNICIPAL DE TIBACUY",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA DE LA ESCUELA",
+        "modalidad": "Contratación directa",
+        "valor": 32123072.87,
+        "fecha_firma": "2026-10-01",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES Y COMUNITARIOS ENTRE EL MUNICIPIO DE TIBACUY; CUNDINAMARCA; Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LA ESCUELA; PARA EL MEJORAMIENTO DE LA INFRAESTRUCTURA VIAL MEDIANTE LA CONSTRUCCIÓN DE PLACA HUELLA EN EL SECTOR LA Y; VEREDA LA ESCUELA DEL MUNICIPIO DE TIBACUY; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9971981",
+        "entidad": "ALCALDIA MUNICIPAL DE TIBACUY",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA LA PORTADA",
+        "modalidad": "Contratación directa",
+        "valor": 18795760.0,
+        "fecha_firma": "2026-09-21",
+        "objeto": "AUNAR ESFUERZOS INSTITUCIONALES Y COMUNITARIOS ENTRE EL MUNICIPIO DE TIBACUY; CUNDINAMARCA; Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LA PORTADA; PARA EL MEJORAMIENTO DE LA INFRAESTRUCTURA EDUCATIVA MEDIANTE LA ADECUACIÓN DEL CERRAMIENTO DE LA SEDE LA PORTADA DE LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL TÉCNICO COMERCIAL DE TIBACUY."
+      },
+      {
+        "id": "CO1.PCCNTR.9915847",
+        "entidad": "ALCALDIA MUNICIPAL DE TIBACUY",
+        "proveedor": "CPMS-FUSAGASUGA**",
+        "modalidad": "Contratación directa",
+        "valor": 12000000.0,
+        "fecha_firma": "2026-09-08",
+        "objeto": "AUNAR ESFUERZOS QUE PERMITAN GARANTIZAR EL MEJORAMIENTO DEL SISTEMA PENITENCIARIO Y CARCELARIO PARA EL ESTABLECIMIENTO CÁRCEL Y PENITENCIARÍA DE MEDIA SEGURIDAD DE FUSAGASUGÁ; EN CUMPLIMIENTO DE LOS ARTÍCULOS 17 Y 19 DE LA LEY 65 DE 1993 PARA RECIBIR PPL"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE TIBACUY",
+        "contratos": 5,
+        "valor": 645198872.42
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 1,
+    "valor_obras": 32123072.87,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": 0.0,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Tibacuy",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

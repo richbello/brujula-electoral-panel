@@ -1,0 +1,350 @@
+{
+  "resumen": {
+    "contratos": 6448,
+    "valor_total": 542699848674.41,
+    "entidades": 13,
+    "proveedores": 2937
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 89.5782,
+    "pct_directa_valor": 52.7708,
+    "hhi": 269.56679220463866,
+    "top1_proveedor_pct": 10.1187580742955,
+    "top5_proveedores_pct": 30.301619112130762,
+    "pareto_proveedores_80pct_valor": 488,
+    "pct_con_adicion": 29.978287841191065,
+    "top_proveedores": [
+      {
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "documento": "901084024",
+        "valor": 51933175544.09,
+        "contratos": 8,
+        "participacion_pct": 10.1188
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 48000000000.0,
+        "contratos": 1,
+        "participacion_pct": 9.3524
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 26162793693.0,
+        "contratos": 13,
+        "participacion_pct": 5.0976
+      },
+      {
+        "proveedor": "EMPRESA DE ACUEDUCTO Y ALCANTARILLADO DE MOSQUERA EAMOS ESP",
+        "documento": "832000850",
+        "valor": 14771715411.54,
+        "contratos": 12,
+        "participacion_pct": 2.8781
+      },
+      {
+        "proveedor": "CAJA DE COMPENSACION FAMILIAR COMPENSAR",
+        "documento": "860066942",
+        "valor": 14651331921.0,
+        "contratos": 4,
+        "participacion_pct": 2.8547
+      },
+      {
+        "proveedor": "SEGURIDAD FENIX DE COLOMBIA LTDA",
+        "documento": "800234493",
+        "valor": 10957489395.0,
+        "contratos": 2,
+        "participacion_pct": 2.135
+      },
+      {
+        "proveedor": "HOSPITAL MARÍA AUXILIADORA EMPRESA SOCIAL DEL ESTADO DEL MUNICIPIO DE MOSQUERA",
+        "documento": "832010436",
+        "valor": 10642062496.73,
+        "contratos": 21,
+        "participacion_pct": 2.0735
+      },
+      {
+        "proveedor": "IGAC Sede Central *",
+        "documento": "899999004",
+        "valor": 10638715577.0,
+        "contratos": 1,
+        "participacion_pct": 2.0729
+      },
+      {
+        "proveedor": "SOCIEDAD SALESIANA INSPECTORIA DE BOGOTA",
+        "documento": "860008010",
+        "valor": 10503240302.0,
+        "contratos": 4,
+        "participacion_pct": 2.0465
+      },
+      {
+        "proveedor": "SEGURIDAD TREBOL LTDA.",
+        "documento": "800185215",
+        "valor": 9754928854.93,
+        "contratos": 1,
+        "participacion_pct": 1.9007
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7304601",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 48000000000.0,
+        "fecha_firma": "2025-03-28",
+        "objeto": "REALIZAR UN CONTRATO DE EMPRESTITO POR UN VALOR CUARENTA Y OCHO MIL MILLONES DE PESOS MTCE ( $ 48.000.000.000)"
+      },
+      {
+        "id": "CO1.PCCNTR.7181755",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "modalidad": "Licitación pública",
+        "valor": 27251593684.09,
+        "fecha_firma": "2025-01-14",
+        "objeto": "DESARROLLAR EL PROGRAMA DE ALIMENTACIÓN ESCOLAR PAE EN EL MUNICIPIO DE MOSQUERA - CUNDINAMARCA; ACORDE A LOS LINEAMIENTOS TÉCNICO - ADMINISTRATIVOS; LOS ESTÁNDARES Y LAS CONDICIONES MÍNIMAS DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR - PAE EMITIDAS POR LA UNIDAD ADMINISTRATIVA ESPECIAL DE ALIMENTACIÓN ESCOLAR - ALIMENTOS PARA APRENDER"
+      },
+      {
+        "id": "CO1.PCCNTR.10000044",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "modalidad": "Licitación pública",
+        "valor": 23471756210.0,
+        "fecha_firma": "2026-09-30",
+        "objeto": "DESARROLLAR EL PROGRAMA DE ALIMENTACIÓN ESCOLAR PAE EN EL MUNICIPIO DE MOSQUERA - CUNDINAMARCA; ACORDE A LOS LINEAMIENTOS TÉCNICO - ADMINISTRATIVOS; LOS ESTÁNDARES Y LAS CONDICIONES MÍNIMAS DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR - PAE EMITIDAS POR LA UNIDAD ADMINISTRATIVA ESPECIAL DE ALIMENTACIÓN ESCOLAR - ALIMENTOS PARA APRENDER."
+      },
+      {
+        "id": "CO1.PCCNTR.8104318",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "UT EDIMSOM",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 23091157916.0,
+        "fecha_firma": "2025-08-06",
+        "objeto": "AMPLIACIÓN DEL SISTEMA DE ALUMBRADO PÚBLICO CORRESPONDIENTE A DIFERENTES SECTORES VIALES Y OTRAS ÁREAS DEL CASCO URBANO DEL MUNICIPIO DE MOSQUERA CUNDINAMARCA; MEDIANTE LUMINARIAS CON TECNOLOGÍA LED CON SISTEMA AUTÓNOMO DE ENERGÍA SOLAR"
+      },
+      {
+        "id": "CO1.PCCNTR.7133508",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "IGAC Sede Central *",
+        "modalidad": "Contratación directa",
+        "valor": 10638715577.0,
+        "fecha_firma": "2024-12-13",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; FINANCIEROS Y JURÍDICOS PARA REALIZAR LA ACTUALIZACIÓN CATASTRAL URBANA Y RURAL CON ENFOQUE MULTIPROPÓSITO PARA TODO EL TERRITORIO DEL MUNICIPIO DE MOSQUERA CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE MOSQUERA",
+        "contratos": 207,
+        "valor": 4287908431.0
+      },
+      {
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "contratos": 4380,
+        "valor": 449173193205.44
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA JUAN LUIS LONDOÑO DE LA CUESTA",
+        "contratos": 37,
+        "valor": 302785700.33
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA LA ARMONIA",
+        "contratos": 19,
+        "valor": 207438740.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA LA MERCED.",
+        "contratos": 7,
+        "valor": 126692333.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA ROBERTO VELANDIA",
+        "contratos": 20,
+        "valor": 425973894.6
+      },
+      {
+        "entidad": "INSTITUCIÓN EDUCATIVA  MAYOR DE MOSQUERA",
+        "contratos": 53,
+        "valor": 592684150.62
+      },
+      {
+        "entidad": "INSTITUCIÓN EDUCATIVA ANTONIO NARIÑO MOSQUERA",
+        "contratos": 12,
+        "valor": 114550733.8
+      },
+      {
+        "entidad": "INSTITUCIÓN EDUCATIVA COMPARTIR DE MOSQUERA",
+        "contratos": 1,
+        "valor": 6000000.0
+      },
+      {
+        "entidad": "INSTITUCIÓN EDUCATIVA LA PAZ**",
+        "contratos": 1,
+        "valor": 6000000.0
+      },
+      {
+        "entidad": "INSTITUTO COLOMBIANO AGROPECUARIO - SECCIONAL CUNDINAMARCA",
+        "contratos": 85,
+        "valor": 12646273818.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE MOSQUERA",
+        "contratos": 99,
+        "valor": 1842173226.75
+      },
+      {
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CBA",
+        "contratos": 1497,
+        "valor": 72968174440.87
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 23,
+    "valor_obras": 38248543112.43,
+    "obras_vencidas_abiertas": 13,
+    "valor_obras_vencidas_abiertas": 9129899306.99,
+    "pct_obras_vencidas_abiertas": 56.52173913043478,
+    "pct_pagado_obras_vencidas_abiertas": 41.4958,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8481042",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "CONSORCIO EDUCATIVOS MOSQUERA 2026",
+        "estado": "Modificado",
+        "valor": 2200000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-13",
+        "objeto": "MEJORAMIENTO; MANTENIMIENTO Y ADECUACIÓN DE LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE MOSQUERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7029640",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CBA",
+        "proveedor": "CARLOS ANDRES SALAZAR ROJAS",
+        "estado": "Modificado",
+        "valor": 1159960399.0,
+        "pagado": 1159960399.0,
+        "fecha_fin": "2025-03-30",
+        "objeto": "ADECUACIÓN; MANTENIMIENTO Y MEJORAMIENTO DE CUBIERTAS; \nCANALES Y BAJANTES EDIFICIO DE GASTRONOMIA; AUDITORIO; BLOQUE A; \nBLOQUE B; BLOQUE C; BIBLIOTECA; ESTAR DE PROFESORES; INTERNADO DE \nMUJERES; RECURSOS NATURALES; LABORATORIO CONTROL DE CALIDAD; \nPOLIDEPORTIVO Y GANADERIA DEL CENTRO DE BIOTECNOLOGÍA \nAGROPECUARIA.."
+      },
+      {
+        "id": "CO1.PCCNTR.8717310",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "señales ltda",
+        "estado": "Modificado",
+        "valor": 1029121861.0,
+        "pagado": 305041090.0,
+        "fecha_fin": "2026-09-07",
+        "objeto": "SEÑALIZACIÓN; DEMARCACIÓN E IMPLEMENTACIÓN DE DISPOSITIVOS ESPECIALES EN DIFERENTES PUNTOS DE LAS VÍAS URBANAS Y RURALES DEL MUNICIPIO DE MOSQUERA; CUNDINAMARCA; DE CONFORMIDAD CON LA NORMATIVIDAD VIGENTE"
+      },
+      {
+        "id": "CO1.PCCNTR.8717601",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "CONSORCIO EDIFICACIONES MOSQUERA 2025",
+        "estado": "Modificado",
+        "valor": 1008843220.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-30",
+        "objeto": "MEJORAMIENTO; MANTENIMIENTO Y ADECUACIÓN DE LOS EQUIPAMIENTOS INSTITUCIONALES DEL MUNICIPIO DE MOSQUERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7189313",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "INGENIERIA Y GERENCIA DE OBRAS CIVILES SAS",
+        "estado": "Modificado",
+        "valor": 815563985.0,
+        "pagado": 275785212.0,
+        "fecha_fin": "2025-09-20",
+        "objeto": "MEJORAMIENTO DE ANDENES Y OBRAS COMPLEMENTARIAS DE LA CARRERA 14; DE LA CALLE 9F; DE LA CALLE 9B; Y DE LA CARRERA 17B DEL BARRIO EL POBLADO MUNICIPIO DE MOSQUERA DEL DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8719918",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CBA",
+        "proveedor": "UNION TEMPORAL CBA",
+        "estado": "Modificado",
+        "valor": 695452141.0,
+        "pagado": 695452141.0,
+        "fecha_fin": "2026-03-30",
+        "objeto": "MANTENIMIENTO DE LOS INVERNADEROS DEL CENTRO DE BIOTECNOLOGIA AGROPECURIA SEDE SENA - MOSQUERA."
+      },
+      {
+        "id": "CO1.PCCNTR.8585097",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "UNION TEMPORAL INFRADEPORTE",
+        "estado": "Suspendido",
+        "valor": 574464786.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-10",
+        "objeto": "MEJORAMIENTO; MANTENIMIENTO Y ADECUACION DE PISTA MUNICIPAL Y CANCHA SINTETICA DEL PARQUE RINCON DEL TREBOL EN EL MUNICIPIO DE MOSQUERA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7112477",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "UNIÓN TEMPORAL EL TREBOL",
+        "estado": "Modificado",
+        "valor": 563846088.0,
+        "pagado": 563745972.63,
+        "fecha_fin": "2025-03-08",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DEL PARQUE DEPORTIVO Y RECREATIVO RINCON DEL TREBOL EN EL MUNICIPIO DE MOSQUERA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7002481",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "CONSORCIO LA ESMERALDA",
+        "estado": "Modificado",
+        "valor": 559588878.0,
+        "pagado": 559313999.22,
+        "fecha_fin": "2025-02-28",
+        "objeto": "RECUPERACIÓN Y MANTENIMIENTO DE LAS INSTALACIONES DEL COLEGIO LA MERCED DEL MUNICIPIO DE MOSQUERA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8745610",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "CONSORCIO CICLOMONTAÑA",
+        "estado": "En ejecución",
+        "valor": 229366333.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-19",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DEL CIRCUITO DE CICLISMO DE MONTAÑA EN EL MUNICIPIO DE MOSQUERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7185989",
+        "entidad": "CUNDINAMARCA-ALCALDIA MUNICIPIO MOSQUERA",
+        "proveedor": "CONSORCIO RECAMARA MOSQUERA",
+        "estado": "Modificado",
+        "valor": 177405755.99,
+        "pagado": 176996284.07,
+        "fecha_fin": "2025-04-05",
+        "objeto": "CONSTRUCCIÓN Y ADECUACIÓN DE UNA CÁMARA DE INSPECCIÓN EN EL SISTEMA DE ALCANTARILLADO PLUVIAL PARA EL SECTOR DE PLANADAS DEL MUNICIPIO DE MOSQUERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8651329",
+        "entidad": "INSTITUTO COLOMBIANO AGROPECUARIO - SECCIONAL CUNDINAMARCA",
+        "proveedor": "DKS INGENIERIA Y CONSTRUCCION S.A.S.",
+        "estado": "Modificado",
+        "valor": 64057500.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO DE LA INFRAESTRUCTURA FÍSICA DEL LABORATORIO DE ORGANISMOS GENÉTICAMENTE MODIFICADOS Y EL ÁREA DE INVESTIGACIÓN E INNOVACIÓN ANALÍTICA Y DIAGNÓSTICA DEL LABORATORIO NACIONAL DE DIAGNÓSTICO FITOSANITARIO"
+      },
+      {
+        "id": "CO1.PCCNTR.9645805",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CBA",
+        "proveedor": "COMERCIALIZADORA AGREGADOS DE COLOMBIA S.A.S",
+        "estado": "En ejecución",
+        "valor": 52228360.0,
+        "pagado": 52228360.0,
+        "fecha_fin": "2026-09-05",
+        "objeto": "CONTRATAR SERVICIO DE MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LA GRANJA FOTOVOLTAICA DEL CBA- SENA MOSQUERA; INCLUYENDO LIMPIEZA DE MÓDULOS SOLARES; INSPECCIÓN; AJUSTE ESTRUCTURAS."
+      }
+    ]
+  },
+  "municipio": "Mosquera",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 70.2,
+  "nivel": "alto",
+  "posicion": 8.0,
+  "total_rankeados": 71
+}

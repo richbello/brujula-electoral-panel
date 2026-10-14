@@ -1,0 +1,275 @@
+{
+  "resumen": {
+    "contratos": 780,
+    "valor_total": 44196815172.51,
+    "entidades": 4,
+    "proveedores": 372
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 82.1795,
+    "pct_directa_valor": 33.2383,
+    "hhi": 156.24493941888522,
+    "top1_proveedor_pct": 6.202371117962716,
+    "top5_proveedores_pct": 21.39805911398791,
+    "pareto_proveedores_80pct_valor": 148,
+    "pct_con_adicion": 13.461538461538462,
+    "top_proveedores": [
+      {
+        "proveedor": "GRUPO CARIOS S.A.S",
+        "documento": "901672834",
+        "valor": 1703869229.0,
+        "contratos": 2,
+        "participacion_pct": 6.2024
+      },
+      {
+        "proveedor": "CONTECOR S.A.S",
+        "documento": "900702893",
+        "valor": 1626077730.99,
+        "contratos": 2,
+        "participacion_pct": 5.9192
+      },
+      {
+        "proveedor": "ASOCIACION SUPRADEPARTAMENTAL DE MUNICIPIOS PARA EL PROGRESO",
+        "documento": "901445387",
+        "valor": 1131353880.0900002,
+        "contratos": 3,
+        "participacion_pct": 4.1183
+      },
+      {
+        "proveedor": "SUMAQ MOTOR SAS",
+        "documento": "900200380",
+        "valor": 742926568.0,
+        "contratos": 3,
+        "participacion_pct": 2.7044
+      },
+      {
+        "proveedor": "consorcio maquinaria 2025 -",
+        "documento": "901998211",
+        "valor": 674088125.0,
+        "contratos": 1,
+        "participacion_pct": 2.4538
+      },
+      {
+        "proveedor": "E.S.E REGIÓN DE SALUD CENTRO ORIENTE ALMEIDAS",
+        "documento": "860024766",
+        "valor": 649984150.33,
+        "contratos": 5,
+        "participacion_pct": 2.3661
+      },
+      {
+        "proveedor": "JAIME YECID CHIA ANGARITA",
+        "documento": "74185393",
+        "valor": 614382212.43,
+        "contratos": 4,
+        "participacion_pct": 2.2365
+      },
+      {
+        "proveedor": "UVET COMPANY",
+        "documento": "901245584",
+        "valor": 576465905.91,
+        "contratos": 1,
+        "participacion_pct": 2.0984
+      },
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 506659149.0,
+        "contratos": 4,
+        "participacion_pct": 1.8443
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 472249825.0,
+        "contratos": 2,
+        "participacion_pct": 1.7191
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9755428",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "CONSORCIO CHOCONTA ICCU 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 10954148284.0,
+        "fecha_firma": "2026-10-06",
+        "objeto": "MEJORAMIENTO DEL ESTADIO MUNICIPAL DE CHOCONTÁ DEPARTAMENTO DE CUNDINAMARCA EN EL MARCO DEL CONVENIO No. ICCU-752-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9899004",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "CONSORCIO RUFINO CHOCONTA",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4475736906.0,
+        "fecha_firma": "2026-10-01",
+        "objeto": "MEJORAMIENTO DE LA SEDE PRINCIPAL DE LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL RUFINO CUERVO MEDIANTE LA CONSTRUCCIÓN DE LABORATORIOS ESPECIALIZADOS EN CIENCIAS BÁSICAS; TECNOLOGÍA Y FORMACIÓN TÉCNICA ETAPA 1; DEL MUNICIPIO DE CHOCONTÁ CUNDINAMARCA EN EL MARCO DEL CONVENIO No. 1126 DE 2025 SUSCRITO CON EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES"
+      },
+      {
+        "id": "CO1.PCCNTR.9900708",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "CONTECOR S.A.S",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1257858826.0,
+        "fecha_firma": "2026-09-08",
+        "objeto": "CONSTRUCCIÓN DE LA CUBIERTA DEL POLIDEPORTIVO DE LA SEDE PRINCIPAL DE LA IED AGROINDUSTRIAL SANTIAGO DEL MUNICIPIO DE CHOCONTÁ; CUNDINAMARCA EN EL MARCO DEL CONVENIO No. 1138 DE 2025 SUSCRITO CON EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA- ICCU"
+      },
+      {
+        "id": "CO1.PCCNTR.9893186",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "CONSORCIO LOGISTICA CHOCONTA 2026",
+        "modalidad": "Licitación pública",
+        "valor": 1256951687.0,
+        "fecha_firma": "2026-09-03",
+        "objeto": "APOYO LOGÍSTICO Y SUMINISTRO DE ELEMENTOS NECESARIOS PARA EL DESARROLLO DE LAS ACTIVIDADES INSTITUCIONALES A CARGO DE LAS DIFERENTES DEPENDENCIAS DEL MUNICIPIO DE CHOCONTÁ; EN CUMPLIMIENTO DE LAS METAS DEL PLAN DE DESARROLLO CHOCONTÁ EFICIENTE AL SERVICIO DE LA GENTE 2024-2028; DURANTE LA VIGENCIA 2026."
+      },
+      {
+        "id": "CO1.PCCNTR.8224064",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "GRUPO CARIOS S.A.S",
+        "modalidad": "Licitación pública",
+        "valor": 902270670.0,
+        "fecha_firma": "2025-08-22",
+        "objeto": "APOYO LOGÍSTICO Y SUMINISTRO DE ELEMENTOS PARA EL CUMPLIMIENTO DE LAS METAS DEL PLAN DE DESARROLLO CHOCONTÁ EFICIENTE AL SERVICIO DE LA GENTE 2024 - 2028 A CARGO DE LAS SECRETARIAS DE PLANEACIÓN; GOBIERNO; UNIDAD MUNICIPAL DE ASISTENCIA TECNICA AGROPECUARIA (UMATA) SECRETARIA DE CULTURA Y TURISMO"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CARCEL Y PENITENCIARIA DE MEDIANA  SEGURIDAD DE CHOCONTA",
+        "contratos": 37,
+        "valor": 544481384.8
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE CHOCONTA",
+        "contratos": 11,
+        "valor": 164715250.0
+      },
+      {
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "contratos": 724,
+        "valor": 43434268537.71
+      },
+      {
+        "entidad": "PERSONERÍA MUNICIPAL DE CHOCONTÁ",
+        "contratos": 5,
+        "valor": 53350000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 14,
+    "valor_obras": 18444417400.19,
+    "obras_vencidas_abiertas": 10,
+    "valor_obras_vencidas_abiertas": 1656674902.1,
+    "pct_obras_vencidas_abiertas": 71.42857142857143,
+    "pct_pagado_obras_vencidas_abiertas": 67.351,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7736706",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "CONTECOR S.A.S",
+        "estado": "Modificado",
+        "valor": 368218904.99,
+        "pagado": 368218904.99,
+        "fecha_fin": "2026-03-01",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL PERÍMETRO URBANO A LA VEREDA AGUA CALIENTE SECTOR LAS ANTENAS DEL MUNICIPIO DE CHOCONTÁ; CUNDINAMARCA EN EL MARCO DEL CONVENIO No. 619 DE 2024 SUSCRITO CON EL INSTITUTO DE INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA- ICCU"
+      },
+      {
+        "id": "CO1.PCCNTR.8628270",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "OBRECOL SAS",
+        "estado": "Modificado",
+        "valor": 348920010.0,
+        "pagado": 279102159.0,
+        "fecha_fin": "2026-04-02",
+        "objeto": "REHABILITACIÓN; BACHEO Y PARCHEO \nDE LA MALLA VIAL E INSTALACIÓN DE REDUCTORES DE VELOCIDAD Y SEÑALIZACIÓN VERTICAL \nEN PUNTOS CRITICOS DEL CASCO URBANO DEL MUNICIPIO DE CHOCONTÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7738843",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "CONSORCIO VIAS CHOCONTA 2025",
+        "estado": "Modificado",
+        "valor": 323902356.25,
+        "pagado": 323545243.85,
+        "fecha_fin": "2025-09-03",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA HATOFIERO A LA VEREDA GUANGÜITA SECTOR LAS PIEDRAS DEL DIABLO DEL MUNICIPIO DE CHOCONTÁ; CUNDINAMARCA EN EL MARCO DEL CONVENIO No. 620 DE 2024 SUSCRITO CON EL INSTITUTO DE INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA- ICCU"
+      },
+      {
+        "id": "CO1.PCCNTR.9362601",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "CONSORCIO PH CHOCONTA 2026",
+        "estado": "Modificado",
+        "valor": 321714274.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-02",
+        "objeto": "MEJORAMIENTO DE VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA PUEBLO VIEJO SECTOR MATA REDONDA DEL MUNICIPIO DE CHOCONTÁ DEPARTAMENTO DE CUNDINAMARCA; MEJORAMIENTO DE LA VÍA QUE COMUNICA DEL CASCO URBANO CON LA VEREDA PUEBLO VIEJO SECTOR PIEDRA DE SAL DEL MUNICIPIO DE CHOCONTÁ DEPARTAMENTO DE CUNDINAMARCA Y MEJORAMIENTO DE LA VÍA QUE COMUNICA DEL CASCO URBANO CON LA VEREDA PUEBLO VIEJO SECTOR LA QUEBRADITA DEL MUNICIPIO DE CHOCONTÁ DEPARTAMENTO DE CUNDINAMARCA; EN EL MARCO DE LOS CONVENIOS"
+      },
+      {
+        "id": "CO1.PCCNTR.9366214",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "ARQUILAT",
+        "estado": "Aprobado",
+        "valor": 99998336.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-30",
+        "objeto": "S MEJORAMIENTO DE VÍA QUE COMUNICA AL CASCO URBANO CON LA VEREDA GUAGÜITA; SECTOR ESCUELA GUAGÜITA BAJO - MUNICIPIO DE CHOCONTA -DEPARTAMENTO DE CUNDINAMARCA; EN EL MARCO DEL CONVENIO No. 913 DE 2025 SUSCRITO CON EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA- ICCU."
+      },
+      {
+        "id": "CO1.PCCNTR.9625464",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "JAIME YECID CHIA ANGARITA",
+        "estado": "En ejecución",
+        "valor": 49000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-21",
+        "objeto": "CONSTRUCCIÓN Y/O MANTENIMIENTO Y/O LIMPIEZA DE SUMIDEROS Y CÁRCAMOS DEL\nSISTEMA DE ALCANTARILLADO URBANO DEL MUNICIPIO DE CHOCONTÁ\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8675660",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "JAIME YECID CHIA ANGARITA",
+        "estado": "Modificado",
+        "valor": 48990866.68,
+        "pagado": 48990866.68,
+        "fecha_fin": "2026-01-30",
+        "objeto": "OBRAS DE MANTENIMIENTO Y MEJORAMIENTO A LA INFRAESTRUCTURA FISICA DE LA ESTACIÓN DE POLICIA DEL MUNICPIO DE CHOCONTA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8011531",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "DARWIN RIGOBERTO LOPEZ MORENO",
+        "estado": "Modificado",
+        "valor": 38738808.43,
+        "pagado": 38738808.43,
+        "fecha_fin": "2025-09-12",
+        "objeto": "OBRAS DE MANTENIMIENTO Y MEJORAMIENTO A LA INFRAESTRUCTURA CORRESPONDIENTEAL JARDIN SOCIAL TELENTO DE CHOCONTA UBICADO EN EL BARRIO ECOBARRIO EN EL MUNICIPIO DE CHOCONTÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.7140828",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "JAIME YECID CHIA ANGARITA",
+        "estado": "Modificado",
+        "valor": 36391345.75,
+        "pagado": 36391345.75,
+        "fecha_fin": "2025-04-16",
+        "objeto": "MANTENIMIENTO Y ADECUACION DE LA INFRAESTRUCTURA DE LAS INSTITUCIONES EDUCATIVAS RURALES DEL MUNICIPIO DE CHOCONTÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7945458",
+        "entidad": "MUNICIPIO DE CHOCONTÁ",
+        "proveedor": "DARWIN RIGOBERTO LOPEZ MORENO",
+        "estado": "Modificado",
+        "valor": 20800000.0,
+        "pagado": 20800000.0,
+        "fecha_fin": "2025-08-08",
+        "objeto": "OBRA DE MANTENIMIENTO Y MEJORAMIENTO AL EQUIPAMIENTO COMUNAL UBICADO EN LA \nVEREDA SAUCIO DEL MUNICIPIO DE CHOCONTÁ"
+      }
+    ]
+  },
+  "municipio": "Chocontá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 41.0,
+  "nivel": "medio",
+  "posicion": 56.0,
+  "total_rankeados": 71
+}

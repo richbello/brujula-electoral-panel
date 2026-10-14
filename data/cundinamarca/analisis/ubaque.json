@@ -1,0 +1,125 @@
+{
+  "resumen": {
+    "contratos": 7,
+    "valor_total": 1644371765.53,
+    "entidades": 1,
+    "proveedores": 5
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 2738.312015447277,
+    "top1_proveedor_pct": 36.10958400326335,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "fundacion desarrollo social colombia",
+        "documento": "900227059",
+        "valor": 593775804.0,
+        "contratos": 2,
+        "participacion_pct": 36.1096
+      },
+      {
+        "proveedor": "FUNDACION PARA EL DESARROLO INTEGRAL SOSTENIBLE NVA AMERICA",
+        "documento": "900393726",
+        "valor": 499155792.0,
+        "contratos": 1,
+        "participacion_pct": 30.3554
+      },
+      {
+        "proveedor": "FUNDACION COGUAY",
+        "documento": "822004357",
+        "valor": 274699898.33,
+        "contratos": 1,
+        "participacion_pct": 16.7055
+      },
+      {
+        "proveedor": "Fundacion Escuela Cultural Común y Arte",
+        "documento": "800220563",
+        "valor": 250060271.2,
+        "contratos": 2,
+        "participacion_pct": 15.207
+      },
+      {
+        "proveedor": "FUNDACION PAIS POSITIVO",
+        "documento": "901085259",
+        "valor": 26680000.0,
+        "contratos": 1,
+        "participacion_pct": 1.6225
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7243230",
+        "entidad": "ALCALDIA MUNICIPAL DE UBAQUE",
+        "proveedor": "FUNDACION PARA EL DESARROLO INTEGRAL SOSTENIBLE NVA AMERICA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 499155792.0,
+        "fecha_firma": "2025-01-15",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA LA ORGANIZACIÓN Y EJECUCIÓN DE ACTIVIDADES ARTISTICAS Y CULTURALES EN EL MARCO DEL XXVI FESTIVAL TURÍSTICO Y CULTURAL Y XXXIV CARNAVAL DE LA ALEGRIA DEL MUNICIPIO DE UBAQUE"
+      },
+      {
+        "id": "CO1.PCCNTR.8465701",
+        "entidad": "ALCALDIA MUNICIPAL DE UBAQUE",
+        "proveedor": "fundacion desarrollo social colombia",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 340942569.0,
+        "fecha_firma": "2025-10-24",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA LA ORGANIZACIÓN Y EJECUCIÓN DE ACTIVIDADES ARTÍSTICAS; SONIDO; ALIMENTACIÓN Y DETALLES PARA LOS EVENTOS DESARROLLADOS EN EL MARCO DE LA PROMOCIÓN DE ACTIVIDADES Y EVENTOS CULTURALES Y TRADICIONALES DEL MUNICIPIO DE UBAQUE"
+      },
+      {
+        "id": "CO1.PCCNTR.8613290",
+        "entidad": "ALCALDIA MUNICIPAL DE UBAQUE",
+        "proveedor": "FUNDACION COGUAY",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 274699898.33,
+        "fecha_firma": "2025-11-20",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA LA ORGANIZACIÓN Y EJECUCIÓN   PARA REALIZAR UNA SALIDA LUDICO RECREATIVA Y DE INTEGRACIÓN PARA LOS ADULTOS MAYORES DEL MUNICIPIO DE UBAQUE (CUNDINAMARCA)"
+      },
+      {
+        "id": "CO1.PCCNTR.7062503",
+        "entidad": "ALCALDIA MUNICIPAL DE UBAQUE",
+        "proveedor": "fundacion desarrollo social colombia",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 252833235.0,
+        "fecha_firma": "2024-12-03",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA LA ORGANIZACIÓN Y EJECUCIÓN DE LAS ACTIVIDADES ARTÍSTICOS; SONIDO; REFRIGERIOS; ALIMENTACIÓN Y PREMIACIÓN PARA LAS ACTIVIDADES DESARROLLADAS EN LA PROMOCIÓN DE ACTIVIDADES Y EVENTOS CULTURALES; TURISTICOS Y POBLACIONALES DEL MUNICIPIO DE UBAQUE"
+      },
+      {
+        "id": "CO1.PCCNTR.9207664",
+        "entidad": "ALCALDIA MUNICIPAL DE UBAQUE",
+        "proveedor": "Fundacion Escuela Cultural Común y Arte",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 179810271.2,
+        "fecha_firma": "2026-01-29",
+        "objeto": "AUNAR ESFUERZOS TECNICOS Y LOGISTICOS PARA LA REALIZACION Y EJECUCION DE LA MUESTRA CULTURAL Y ARTISTICA EN DESARROLLO DE FIESTA DE LA VIRGEN DE BELEN EN UBAQUE CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE UBAQUE",
+        "contratos": 7,
+        "valor": 1644371765.53
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Ubaque",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

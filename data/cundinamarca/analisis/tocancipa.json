@@ -1,0 +1,205 @@
+{
+  "resumen": {
+    "contratos": 2892,
+    "valor_total": 588485919150.85,
+    "entidades": 6,
+    "proveedores": 1350
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 93.0498,
+    "pct_directa_valor": 66.8417,
+    "hhi": 1482.6684543283027,
+    "top1_proveedor_pct": 36.178396735088754,
+    "top5_proveedores_pct": 59.292874846678956,
+    "pareto_proveedores_80pct_valor": 24,
+    "pct_con_adicion": 17.946058091286307,
+    "top_proveedores": [
+      {
+        "proveedor": "DESARROLLO CONJUNTO TERRITORIAL - DETERCONSA",
+        "documento": "902005834",
+        "valor": 211697939763.0,
+        "contratos": 4,
+        "participacion_pct": 36.1784
+      },
+      {
+        "proveedor": "Consorcio Mega Auditorio 3..",
+        "documento": "902083434",
+        "valor": 37911256553.0,
+        "contratos": 1,
+        "participacion_pct": 6.4789
+      },
+      {
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "documento": "901084024",
+        "valor": 36322481258.0,
+        "contratos": 9,
+        "participacion_pct": 6.2074
+      },
+      {
+        "proveedor": "URBANITTECH",
+        "documento": "902001080",
+        "valor": 35904079614.0,
+        "contratos": 3,
+        "participacion_pct": 6.1359
+      },
+      {
+        "proveedor": "CONSORCIO PTAP TOCANCIPÁ",
+        "documento": "0",
+        "valor": 25116584000.0,
+        "contratos": 1,
+        "participacion_pct": 4.2923
+      },
+      {
+        "proveedor": "UNION TEMPORAL AF NOVA",
+        "documento": "902020952",
+        "valor": 18294271948.0,
+        "contratos": 1,
+        "participacion_pct": 3.1264
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE TOCANCIPA S.A. E.S.P.",
+        "documento": "900227413",
+        "valor": 17942057153.0,
+        "contratos": 3,
+        "participacion_pct": 3.0662
+      },
+      {
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "documento": "832003417",
+        "valor": 13495987272.91,
+        "contratos": 5,
+        "participacion_pct": 2.3064
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 9144078529.0,
+        "contratos": 8,
+        "participacion_pct": 1.5627
+      },
+      {
+        "proveedor": "Unión Temporal Escolares Tocancipá 2026",
+        "documento": "902022196",
+        "valor": 7373943318.0,
+        "contratos": 1,
+        "participacion_pct": 1.2602
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8563622",
+        "entidad": "MUNICIPIO DE TOCANCIPA",
+        "proveedor": "DESARROLLO CONJUNTO TERRITORIAL - DETERCONSA",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 107642800224.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "CONTRATO INTERADMINISTRATIVO PARA REALIZAR GERENCIA INTEGRAL DE LA EJECUCIÓN DE PROYECTOS INCLUIDOS EN EL PLAN DE DESARROLLO DEL MUNICIPIO DE TOCANCIPÁ 2024-2027"
+      },
+      {
+        "id": "CO1.PCCNTR.9310121",
+        "entidad": "MUNICIPIO DE TOCANCIPA",
+        "proveedor": "DESARROLLO CONJUNTO TERRITORIAL - DETERCONSA",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 100210019093.0,
+        "fecha_firma": "2026-01-30",
+        "objeto": "CONTRATO INTERADMINISTRATIVO PARA REALIZAR GERENCIA INTEGRAL PARA LA EJECUCIÓN DE PROYECTOS DE INFRAESTRUCTURA VIAL."
+      },
+      {
+        "id": "CO1.PCCNTR.9585653",
+        "entidad": "MUNICIPIO DE TOCANCIPA",
+        "proveedor": "Consorcio Mega Auditorio 3..",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 37911256553.0,
+        "fecha_firma": "2026-06-24",
+        "objeto": "CONSTRUCCIÓN DE LA TERCERA ETAPA DEL AUDITORIO MUNICIPAL DE TOCANCIPA"
+      },
+      {
+        "id": "CO1.PCCNTR.8559299",
+        "entidad": "MUNICIPIO DE TOCANCIPA",
+        "proveedor": "URBANITTECH",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 34254079614.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "CONTRATO INTERADMINISTRATIVO PARA LA IMPLEMENTACIÓN; AMPLIACIÓN; MANTENIMIENTO; MODERNIZACIÓN Y OPERACIÓN PERMANENTE DE LA PLATAFORMA TECNOLÓGICA; ASÍ COMO LA OPERACIÓN; FUNCIONAMIENTO Y FORTALECIMIENTO DEL OBSERVATORIO O CENTRO DE INFORMACIÓN DEL DELITO Y DE LAS CONDUCTAS CONTRARIAS A LA CONVIVENCIA; EN ARTICULACIÓN CON LA SECRETARÍA DE SEGURIDAD Y CONVIVENCIA DEL MUNICIPIO DE TOCANCIPÁ."
+      },
+      {
+        "id": "CO1.PCCNTR.5799211",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE TOCANCIPA S.A. E.S.P.",
+        "proveedor": "CONSORCIO PTAP TOCANCIPÁ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 25116584000.0,
+        "fecha_firma": "2024-02-01",
+        "objeto": "AMPLIACIÓN DE LA PLANTA DE TRATAMIENTO DE AGUA POTABLE LOS PATOS; DEL MUNICIPIO DE TOCANCIPÁ; CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPIO DE TOCANCIPÁ",
+        "contratos": 104,
+        "valor": 3239462295.1
+      },
+      {
+        "entidad": "DESARROLLO CONJUNTO TERRITORIAL - DETERCONSA",
+        "contratos": 1,
+        "valor": 174600000.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE TOCANCIPA S.A. E.S.P.",
+        "contratos": 1,
+        "valor": 25116584000.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE RECREACION Y DEPORTES DE TOCANCIPA",
+        "contratos": 396,
+        "valor": 17290113346.0
+      },
+      {
+        "entidad": "MUNICIPIO DE TOCANCIPA",
+        "contratos": 2165,
+        "valor": 536458101141.75
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE TOCANCIPA",
+        "contratos": 203,
+        "valor": 6207058368.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 4,
+    "valor_obras": 63845699590.76,
+    "obras_vencidas_abiertas": 2,
+    "valor_obras_vencidas_abiertas": 25866543625.0,
+    "pct_obras_vencidas_abiertas": 50.0,
+    "pct_pagado_obras_vencidas_abiertas": 1.8979,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.5799211",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE TOCANCIPA S.A. E.S.P.",
+        "proveedor": "CONSORCIO PTAP TOCANCIPÁ",
+        "estado": "Modificado",
+        "valor": 25116584000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-07-03",
+        "objeto": "AMPLIACIÓN DE LA PLANTA DE TRATAMIENTO DE AGUA POTABLE LOS PATOS; DEL MUNICIPIO DE TOCANCIPÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6438715",
+        "entidad": "MUNICIPIO DE TOCANCIPA",
+        "proveedor": "COLING CONSTRUCTORES S.A.S.",
+        "estado": "Modificado",
+        "valor": 749959625.0,
+        "pagado": 490923315.75,
+        "fecha_fin": "2024-12-30",
+        "objeto": "MEJORAMIENTO DE VIAS MEDIANTE LA EJECUCION DE PLACA HUELLAS DE CONFORMIDAD CON LOS CONVENIOS No ICCU 1193 DE 2023 MEJORAMIENTO DE LA VIA QUE COMUNICA LA VEREDA CANAVITA CON EL MUNICIPIO DE SOPO SECTOR BUENOS AIRES PARTE ALTA DEL MUNICIPIO DE TOCANCIPA CUNDINAMARCA Y No 1194 DE 2023 MEJORAMIENTO DE LA VIA QUE COMUNICA EL CENTRO POBLADO URBANO CON LA VEREDA LA FUENTE SECTOR PUENTE MICOS DEL MUNICIPIO DE TOCANCIPA CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Tocancipá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 72.7,
+  "nivel": "alto",
+  "posicion": 5.0,
+  "total_rankeados": 71
+}

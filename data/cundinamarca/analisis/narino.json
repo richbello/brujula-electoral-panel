@@ -1,0 +1,86 @@
+{
+  "resumen": {
+    "contratos": 3,
+    "valor_total": 1264481270.0,
+    "entidades": 1,
+    "proveedores": 2
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 5625.1947021001115,
+    "top1_proveedor_pct": 67.68042281875792,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 2,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDEOG",
+        "documento": "900981084",
+        "valor": 855806270.0,
+        "contratos": 2,
+        "participacion_pct": 67.6804
+      },
+      {
+        "proveedor": "fundacion afs",
+        "documento": "900919742",
+        "valor": 408675000.0,
+        "contratos": 1,
+        "participacion_pct": 32.3196
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9769701",
+        "entidad": "MUNICIPIO DE NARIÑO",
+        "proveedor": "FUNDEOG",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 433923330.0,
+        "fecha_firma": "2026-08-06",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; FINANCIEROS Y LOGISTICOS PARA EL DESARROLLO DE LOS DIFERENTES EVENTOS CULTURALES Y TURISTICOS EN EL MARCO DE CELEBRACIÓN DE FERIAS Y FIESTAS 2026 EN EL MUNICIPIO DE NARIÑO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8169301",
+        "entidad": "MUNICIPIO DE NARIÑO",
+        "proveedor": "FUNDEOG",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 421882940.0,
+        "fecha_firma": "2025-08-08",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; FINANCIEROS Y LOGISTICOS PARA EL DESARROLLO DE LOS DIFERENTES EVENTOS CULTURALES Y TURISTICOS EN EL MARCO DE CELEBRACIÓN DE FERIAS Y FIESTAS 2025 EN EL MUNICIPIO DE NARIÑO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6626119",
+        "entidad": "MUNICIPIO DE NARIÑO",
+        "proveedor": "fundacion afs",
+        "modalidad": "Contratación régimen especial",
+        "valor": 408675000.0,
+        "fecha_firma": "2024-08-09",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; FINANCIEROS Y LOGISTICOS PARA EL DESARROLLO DE LOS DIFERENTES EVENTOS CULTURALES Y TURISTICOS EN EL MARCO DE CELEBRACIÓN DE FERIAS Y FIESTAS 2024 EN EL MUNICIPIO DE NARIÑO CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE NARIÑO",
+        "contratos": 3,
+        "valor": 1264481270.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Nariño",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

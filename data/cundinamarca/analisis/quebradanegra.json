@@ -1,0 +1,118 @@
+{
+  "resumen": {
+    "contratos": 11,
+    "valor_total": 2634589286.0,
+    "entidades": 1,
+    "proveedores": 4
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 2826.2571821707143,
+    "top1_proveedor_pct": 35.33011930725661,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "COPREVISION CORPORACION PARA EL DESARROLLO HUMANO",
+        "documento": "900400641",
+        "valor": 930803538.0,
+        "contratos": 3,
+        "participacion_pct": 35.3301
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 857476748.0,
+        "contratos": 4,
+        "participacion_pct": 32.5469
+      },
+      {
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "documento": "830105879",
+        "valor": 454309000.0,
+        "contratos": 3,
+        "participacion_pct": 17.244
+      },
+      {
+        "proveedor": "ASOMATICURU",
+        "documento": "828002333",
+        "valor": 392000000.0,
+        "contratos": 1,
+        "participacion_pct": 14.879
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9758371",
+        "entidad": "MUNICIPIO DE QUEBRADANEGRA",
+        "proveedor": "COPREVISION CORPORACION PARA EL DESARROLLO HUMANO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 493342579.0,
+        "fecha_firma": "2026-08-04",
+        "objeto": "CONVENIO DE ASOCIACION PARA LA COORDINACIÓN; ORGANIZACIÓN Y EJECUCION DEL FESTIVAL CULTURAL Y TURISTICO EN HONOR A NUESTRO PATRONO SAN ROQUE EN SU LXXI EDICIÓN; EN EL MUNICIPIO DE QUEBRADANEGRA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8185682",
+        "entidad": "MUNICIPIO DE QUEBRADANEGRA",
+        "proveedor": "ASOMATICURU",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 392000000.0,
+        "fecha_firma": "2025-08-11",
+        "objeto": "CONVENIO DE ASOCIACION PARA LA COORDINACIÓN; ORGANIZACIÓN Y EJECUCION DEL FESTIVAL CULTURAL Y TURISTICO EN HONOR A NUESTRO PATRONO SAN ROQUE EN SU LXX EDICIÓN; EN EL MUNICIPIO DE QUEBRADANEGRA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8332687",
+        "entidad": "MUNICIPIO DE QUEBRADANEGRA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 277293241.0,
+        "fecha_firma": "2025-09-18",
+        "objeto": "AUNAR ESFUERZOS MEDIANTE CONVENIO DE ASOCIACION PARA EL FUNCIONAMIENTO Y ATENCIÓN INTEGRAL DEL ADULTO MAYOR EN SUS COMPONENTES DE RECREACION Y SEGURIDAD ALIMENTARIA EN EL CENTRO DIA DEL CASCO URBANO; LA INSPECCIÓN DE LA MAGDALENA Y LAS VEREDAS DEL MUNICIPIO DE QUEBRADANEGRA."
+      },
+      {
+        "id": "CO1.PCCNTR.6635460",
+        "entidad": "MUNICIPIO DE QUEBRADANEGRA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 274980000.0,
+        "fecha_firma": "2024-08-13",
+        "objeto": "CONVENIO DE ASOCIACION PARA LA COORDINACIÓN; \nORGANIZACIÓN Y EJECUCION DEL FESTIVAL CULTURAL Y TURISTICO EN HONOR A \nNUESTRO PATRONO SAN ROQUE EN SU LXIX EDICIÓN; EN EL MUNICIPIO DE \nQUEBRADANEGRA; CUNDI"
+      },
+      {
+        "id": "CO1.PCCNTR.8797812",
+        "entidad": "MUNICIPIO DE QUEBRADANEGRA",
+        "proveedor": "COPREVISION CORPORACION PARA EL DESARROLLO HUMANO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 231942070.0,
+        "fecha_firma": "2026-01-09",
+        "objeto": "CONVENIO DE ASOCIACION PARA LA PRESTACION DE SERVICIOS EN LA COORDINACIÓN; ORGANIZACIÓN Y EJECUCION DEL FESTIVAL TURISTICO; CULTURAL y RELIGIOSO DE REYES MAGOS EN SUS 109 AÑOS DE TRADICIÓN EN EL MUNICIPIO DE QUEBRADANEGRA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE QUEBRADANEGRA",
+        "contratos": 11,
+        "valor": 2634589286.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Quebradanegra",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

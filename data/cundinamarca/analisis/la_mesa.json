@@ -1,0 +1,375 @@
+{
+  "resumen": {
+    "contratos": 1254,
+    "valor_total": 68215469135.32,
+    "entidades": 6,
+    "proveedores": 521
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 61.244,
+    "pct_directa_valor": 47.2947,
+    "hhi": 344.5166273502082,
+    "top1_proveedor_pct": 11.517132782829425,
+    "top5_proveedores_pct": 32.71619525045163,
+    "pareto_proveedores_80pct_valor": 118,
+    "pct_con_adicion": 23.923444976076556,
+    "top_proveedores": [
+      {
+        "proveedor": "ASOCIACION DE MUNICIPIO DEL NORDESTE Y MAGDALENA MEDIO ANTIOQUEÑO ZONA NUS",
+        "documento": "900689854",
+        "valor": 7245915764.0,
+        "contratos": 1,
+        "participacion_pct": 11.5171
+      },
+      {
+        "proveedor": "BANCO DE BOGOTA S.A",
+        "documento": "8600029644",
+        "valor": 7245915764.0,
+        "contratos": 1,
+        "participacion_pct": 11.5171
+      },
+      {
+        "proveedor": "Inversiones & Suministros GMTC SAS",
+        "documento": "901181182",
+        "valor": 2902209243.6,
+        "contratos": 18,
+        "participacion_pct": 4.613
+      },
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 1645521378.67,
+        "contratos": 4,
+        "participacion_pct": 2.6155
+      },
+      {
+        "proveedor": "INGEFILTERS COLOMBIA SAS",
+        "documento": "901172803",
+        "valor": 1543581187.0,
+        "contratos": 4,
+        "participacion_pct": 2.4535
+      },
+      {
+        "proveedor": "MIMESIS",
+        "documento": "900023210",
+        "valor": 1524611475.0,
+        "contratos": 6,
+        "participacion_pct": 2.4233
+      },
+      {
+        "proveedor": "JESPAR INGENIERIA",
+        "documento": "800179396",
+        "valor": 1414538900.0,
+        "contratos": 2,
+        "participacion_pct": 2.2484
+      },
+      {
+        "proveedor": "E.S.E HOSPITAL PEDRO LEON ALVAREZ DIAZ",
+        "documento": "890680027",
+        "valor": 1316207298.0,
+        "contratos": 4,
+        "participacion_pct": 2.0921
+      },
+      {
+        "proveedor": "FUNDACION SENDEROS Y CAMINOS",
+        "documento": "900020277",
+        "valor": 1217946598.0,
+        "contratos": 3,
+        "participacion_pct": 1.9359
+      },
+      {
+        "proveedor": "HYDROFER",
+        "documento": "900748888",
+        "valor": 1142000000.0,
+        "contratos": 2,
+        "participacion_pct": 1.8152
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8720703",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "BANCO DE BOGOTA S.A",
+        "modalidad": "Contratación directa",
+        "valor": 7245915764.0,
+        "fecha_firma": "2026-01-08",
+        "objeto": "EMPRESTITO BANCO DE BOGOTA"
+      },
+      {
+        "id": "CO1.PCCNTR.8546280",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "ASOCIACION DE MUNICIPIO DEL NORDESTE Y MAGDALENA MEDIO ANTIOQUEÑO ZONA NUS",
+        "modalidad": "Contratación directa",
+        "valor": 7245915764.0,
+        "fecha_firma": "2025-11-05",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS PARA; EJECUTAR; GERENCIAR E IMPLEMENTAR PROYECTOS APROBADOS MEDIANTE ACUERDO MUNICIPAL NO. 016 DE 2025; POR MEDIO DEL CUAL SE CONCEDE FACULTADES A LA ALCALDESA MUNICIPAL; PARA CONTRATAR UN EMPRÉSTITO CON DESTINO A INVERSIÓN EN LOS SECTORES DE TRANSPORTE; DEPORTE Y RECREACIÓN Y SE DICTAN OTRAS DISPOSICIONES"
+      },
+      {
+        "id": "CO1.PCCNTR.9513022",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "CONSORCIO PLAZA LA MESA",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 3178490121.0,
+        "fecha_firma": "2026-06-12",
+        "objeto": "MEJORAMIENTO DE LA PLAZA DE FRUTAS DE\nLA INSPECCIÓN DE SAN JOAQUÍN DEL MUNICIPIO DE LA MESA"
+      },
+      {
+        "id": "CO1.PCCNTR.9585547",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "CONSORCIO PUEBLOS DORADOS 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1270501800.96,
+        "fecha_firma": "2026-07-31",
+        "objeto": "MEJORAMIENTO DEL ESPACIO PUBLICO Y EMBELLECIMIENTO DE FACHADAS DE LA INSPECCIÓN DE SAN JOAQUIN DEL MUNICIPIO DE LA MESA; CONFORME AL PROYECTO DEPARTAMENTAL PUEBLOS DORADOS"
+      },
+      {
+        "id": "CO1.PCCNTR.6861828",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "UNION TEMPORAL R&T LA MESA 2024",
+        "modalidad": "Licitación pública",
+        "valor": 812160500.0,
+        "fecha_firma": "2024-10-24",
+        "objeto": "EQUIPAMIENTO E INSTALACIÓN DE ELEMENTOS PARA LA INSTITUCIÓN EDUCATIVA OFICIAL FRANCISCO JULIÁN OLAYA - SEDE B; DEL MUNICIPIO DE LA MESA; CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Concejo Municipal La Mesa Cundinamarca",
+        "contratos": 25,
+        "valor": 565760172.0
+      },
+      {
+        "entidad": "EMPRESA REGIONAL AGUAS DEL TEQUENDAMA S.A. E.S.P.",
+        "contratos": 276,
+        "valor": 6505419551.45
+      },
+      {
+        "entidad": "ESTABLECIMIENTO PENITENCIARIO DE MEDIANA SEGURIDAD Y CARCELARIO LA MESA - INPEC",
+        "contratos": 11,
+        "valor": 61453670.8
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA DEPARTAMENTAL FRANCISCO JULIAN OLAYA",
+        "contratos": 3,
+        "valor": 135173234.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE DEPORTES, RECREACION - DEPORMESA",
+        "contratos": 4,
+        "valor": 188497450.0
+      },
+      {
+        "entidad": "MUNICIPIO DE LA MESA",
+        "contratos": 928,
+        "valor": 60759165057.07
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 28,
+    "valor_obras": 10728985016.74,
+    "obras_vencidas_abiertas": 19,
+    "valor_obras_vencidas_abiertas": 4787874070.38,
+    "pct_obras_vencidas_abiertas": 67.85714285714286,
+    "pct_pagado_obras_vencidas_abiertas": 26.1164,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8407704",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "CONSORCIO DI-VAR",
+        "estado": "Modificado",
+        "valor": 810702770.0,
+        "pagado": 189246409.0,
+        "fecha_fin": "2026-09-06",
+        "objeto": "CONSTRUCCION DE PUENTE CAJON; MURO DE CONTENCION Y OBRAS DE\nMANEJO DE AGUA DE ESCORRENTIA; PARA LA REHABILITACION DE LA CARRERA 19 ENTRE CALLES\n6 Y 7 DEL MUNICIPIO DE LA MESA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6906517",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "UNION TEMPORAL CFA",
+        "estado": "En ejecución",
+        "valor": 494367679.06,
+        "pagado": 339366836.2,
+        "fecha_fin": "2025-05-27",
+        "objeto": "ADECUACIÓN DE OBRAS COMPLEMENTARIAS CENTRAL DE ABASTOS DEL MUNICIPIO DE LA MESA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8342262",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "CIVILTEQ SAS",
+        "estado": "Modificado",
+        "valor": 456000000.0,
+        "pagado": 240099147.07,
+        "fecha_fin": "2026-09-08",
+        "objeto": "REALIZAR LA\nADECUACION DEL PREDIO PARA LA CONSTRUCCION DEL PROYECTO DE VIVIENDA VILLA MERCEDES\nDEL MUNICIPIO DE LA MESA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9543803",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "JC INGENIERIA Y CONSULTORIA SAS",
+        "estado": "Aprobado",
+        "valor": 333306961.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-01",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA ANATOLI HACIA\nANATOLI EL CHIRCAL SECTOR JAIRO LOPEZ EN EL MUNICIPIO DE LA MESA CUNDINAMARCA SEGÚN\nCONVENIO ICCU-1222-2025; MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA PAYACAL A LA\nVEREDA PAYACAL ALTO SECTOR VALLE ESCONDIDO EN EL MUNICIPIO DE LA MESA CUNDINAMARCA\nSEGÚN CONVENIO ICCU-1227-2025 Y MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA BOSQUES\nDE SAN NICOLAS AL CASCO URBANO SECTOR SAN SEBASTIAN EN EL MUNICIPIO DE LA MESA.\nCUNDINAMARCA SEGÚ"
+      },
+      {
+        "id": "CO1.PCCNTR.8730898",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "NORTCON S.A.S.",
+        "estado": "Suspendido",
+        "valor": 330000000.0,
+        "pagado": 100391465.0,
+        "fecha_fin": "2026-09-15",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA HONDURAS A LA VEREDA PAYACAL CASA DE TEJA SECTOR ANTONIO ALFONSO EN EL MUNICIPIO DE LA MESA DEL DEPTARTAMENTO DE CUNDINAMARCA (No. ICCU 541 DE 2025); MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA HATO NORTE HACIA EL BARRIO JOSE ANTONIO OLAYA SECTOR TORRE CLARO EN EL MUNICIPIO DE LA MESA CUNDINAMARCA (No. ICCU 597 DE 2025) Y MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA PAYACAL ALTO A LA VEREDA PAYACAL BAJO SECTOR ENTRADA LOS TANQUES EN EL MUNIC"
+      },
+      {
+        "id": "CO1.PCCNTR.9457730",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "CONYCON SUCHIIMMA S.A.S",
+        "estado": "Aprobado",
+        "valor": 328022018.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-20",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA PAYACAL\nA LA VEREDA HONDURAS SECTOR FLOR PEDRAZA EN EL MUNICIPIO DE LA MESA\nCUNDINAMARCA (No. ICCU 735 DE 2025); MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA\nINSPECCIÓN DE SAN JAVIER A LA VEREDA PARAISO SECTOR PIEDRA LA MONJA EN EL\nMUNICIPIO DE LA MESA CUNDINAMARCA (No. ICCU 993 DE 2025) Y MEJORAMIENTO VÍA QUE\nCONDUCE DE LA INSPECCIÓN DE LA ESPERANZA A LA VEREDA CAMPO SANTO SECTOR LA\nSALADA EN EL MUNICIPIO DE LA MESA CUNDINAMARCA (No. ICCU 1131 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8748291",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "QBIKA INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 319680276.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-28",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA INSPECCIÓN DE SAN JOAQUÍN A LA VEREDA EL ESPINO SECTOR LOS CARDENAS EN EL MUNICIPIO DE LA MESA DEL DEPARTAMENTO DE CUNDINAMARCA (No. ICCU 413 DE 2025); MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SANTA BÁRBARA A LA VEREDA LA CONCHA SECTOR LAS MARRANERAS EN EL MUNICIPIO DE LA MESA CUNDINAMARCA (No. ICCU 540 DE 2025) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SANTA BARBARA A LA VEREDA HATO NORTE SECTOR BETO CALDERON EN EL MUNICIPIO DE LA MESA CUN"
+      },
+      {
+        "id": "CO1.PCCNTR.8137988",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "CONSORCIO PH LA MESA 2025",
+        "estado": "En ejecución",
+        "valor": 299848399.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-23",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA ALTO\nGRANDE A LA VEREDA ANATOLI SECTOR FINCA EL BERCEL EN EL MUNICIPIO DE LA MESA\nCUNDINAMARCA (CONVENIO ICCU 813- 2024); MEJORAMIENTO DE LA VÍA QUE CONDUCE\nDE LA VEREDA ANATOLI A LA VEREDA ALTO GRANDE SECTOR LA GRANJA; EN EL\nMUNICIPIO DE LA MESA; CUNDINAMARCA (CONVENIO ICCU 821-2024) Y EL MEJORAMIENT0\nDE LA VÍA QUE CONDUCE DE LA VEREDA FLORIÁN A LA VEREDA HOSPICIO SECTOR LA\nESCUELA; EN EL MUNICIPIO DE LA MESA; CUNDINAMARCA (CONVENIO ICCU 811- 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7887420",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "ICSSA SAS",
+        "estado": "Modificado",
+        "valor": 249308654.0,
+        "pagado": 193978266.0,
+        "fecha_fin": "2026-01-15",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA LA TRINIDAD A LA VEREDA MARGARITAS SECTOR LOS LAGOS CANAN DEL MUNICIPIO DE LA MESA CUNDINAMARCA (ICCU-CTO-854 DE 2024) Y MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO DE LA VEREDA HONDURAS A LA VEREDA PAYACAL BAJO SECTOR TIENDA DEL CRUCE ALTO DE SAN JUAN EN EL MUNICIPIO DE LA MESA CUNDINAMARCA (CONVENIO ICCU-CTO-808 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7152263",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Modificado",
+        "valor": 226762862.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-04-01",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LAS INSTITUCIONES EDUCATIVAS RURALES DEL MUNICIPIO DE LA\nMESA; SEDE A URBANA DEL COLEGIO FRANCISCO JULIÁN OLAYA Y ADECUACIÓN Y CERRAMIENTO DEL\nCENTRO CULTURAL DEL MUNICIPIO DE LA MESA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7886715",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "AMCI INGENIEROS S.A.S",
+        "estado": "En ejecución",
+        "valor": 220000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-01",
+        "objeto": "EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA OJO DE AGUA PARTE ALTA A LA VEREDA ESTAMBUL SECTOR LOS PORTES EN EL MUNICIPIO DE LA MESA CUNDINAMARCA (ICCUCTO-805 DE 2024) Y EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA DOIMA ALTO CON LA VEREDA BUENAVISTA SECTOR LA FLORA EN EL MUNICIPIO DE LA MESA CUNDINAMARCA. (ICCU- CTO-758 DE 2024)"
+      },
+      {
+        "id": "CO1.PCCNTR.8035245",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "CONTECOR S.A.S",
+        "estado": "En ejecución",
+        "valor": 199898933.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-01",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA ANATOLI\nAL MUNICIPIO DE BOJACÁ SECTOR DON JUANITO; EN EL MUNICIPIO DE LA MESA\nCUNDINAMARCA (No. ICCU 831 DE 2024) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE\nLA VEREDA HOSPICIO A LA VEREDA GUAYABAL SECTOR LA ESTACIÓN; EN EL MUNICIPIO\nDE LA MESA CUNDINAMARCA (No. ICCU 827 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8035259",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "APPIANTICA SAS",
+        "estado": "Modificado",
+        "valor": 196001386.0,
+        "pagado": 97993602.56,
+        "fecha_fin": "2026-01-15",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA DOIMA A\nLA VEREDA ALTO GRANDE SECTOR VILLA IRENE; EN EL MUNICIPIO DE LA MESA\nCUNDINAMARCA (No. ICCU 812 DE 2024) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE\nLA VEREDA GUAYABAL A LA VEREDA HOSPICIO SECTOR INOCENCIO BENGOCHEA; EN EL\nMUNICIPIO DE LA MESA CUNDINAMARCA (No. ICCU 814 DE 2024)."
+      },
+      {
+        "id": "CO1.PCCNTR.9712528",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "ICSSA SAS",
+        "estado": "Aprobado",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-24",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA PALMAR ALTO A LA VEREDA ZAPATA SECTOR EL MAMEY EN EL MUNICIPIO DE LA MESA CUNDINAMARCA SEGÚN CONVENIO ICCU-CTO-657-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9567161",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "APPIANTICA SAS",
+        "estado": "Aprobado",
+        "valor": 99980643.32,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-14",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA INSPECCIÓN DE\nSAN JAVIER A LA VEREDA ALTO DEL FRISOL SECTOR EL ROBAYO\nEN EL MUNICIPIO DE LA MESA CUNDINAMARCA SEGÚN CONVENIO\nICCU-CTO-473-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.8651591",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "AASING SAS",
+        "estado": "En ejecución",
+        "valor": 59346917.0,
+        "pagado": 59346917.0,
+        "fecha_fin": "2025-12-28",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LAS INSTALACIONES DE LA BIBLIOTECA PÚBLICA MUNICIPAL Y LA INSTITUCIÓN EDUCATIVA RURAL DEPARTAMENTAL SAN JOAQUÍN DEL MUNICIPIO DE LA MESA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8073379",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA PAYACAL SECTOR CASA DE TEJA",
+        "estado": "En ejecución",
+        "valor": 30000000.0,
+        "pagado": 30000000.0,
+        "fecha_fin": "2025-08-22",
+        "objeto": "AUNAR ESFUERZOS ENTRE EL MUNICIPIO DE LA MESA Y LA JUNTA DE ACCION COMUNAL DE LA\nVEREDA PAYACAL-SECTOR CASA DE TEJA PARA EJECUTAR PROYECTOS COMUNITARIOS A TRAVES\nDE LAS ASOCIACIONES PUBLICO POPULARES; FOMENTANDO LA PARTICIPACION ACERTIVA EN PRO\nDE LA CONSTRUCIÓN DE 4 CABEZALES Y ADECUACIÓN DE UNA ALCANTARILLA A BENEFICIO DE LA\nPOBLACIÓN DE LA VEREDA PAYACAL-SECTOR CASA DE TEJA DEL MUNICIPIO DE LA MESA\nCUNDINAMARCA CON COMPROMISO Y EQUIDAD SOCIAL"
+      },
+      {
+        "id": "CO1.PCCNTR.6539013",
+        "entidad": "INSTITUCION EDUCATIVA DEPARTAMENTAL FRANCISCO JULIAN OLAYA",
+        "proveedor": "jvale ingenieria",
+        "estado": "En ejecución",
+        "valor": 20806440.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-08-23",
+        "objeto": "MEJORAMIENTO DE INFRAESTRUCTURA DE LA IED. FRANCISCO JULIAN OLAYA; SEDE A; CAFETERIA ESCOLAR Y PASO PEATONAL BLOQUE A AL BLOQUE B"
+      },
+      {
+        "id": "CO1.PCCNTR.8731416",
+        "entidad": "MUNICIPIO DE LA MESA",
+        "proveedor": "PROCON CP SAS",
+        "estado": "En ejecución",
+        "valor": 13840132.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-30",
+        "objeto": "MANTENIMIENTO DE LA VIGA DE CANAL. CUBIERTA Y MODULOS DE LA AREA DEL BATAN DE LA\nCENTRAL DE ABASTOS DEL TEQUENDAMA; UBICADA EN EL MUNICIPIO DE LA MESA CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "La Mesa",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 71.2,
+  "nivel": "alto",
+  "posicion": 7.0,
+  "total_rankeados": 71
+}

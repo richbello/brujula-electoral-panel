@@ -1,0 +1,130 @@
+{
+  "resumen": {
+    "contratos": 9,
+    "valor_total": 1070193494.64,
+    "entidades": 2,
+    "proveedores": 5
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 33.3333,
+    "pct_directa_valor": 9.9615,
+    "hhi": 3709.549716308686,
+    "top1_proveedor_pct": 56.71021203545597,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "ASOCIACIÓN RESILIENCIA PARA LA VIDA",
+        "documento": "900261853",
+        "valor": 606909000.0,
+        "contratos": 2,
+        "participacion_pct": 56.7102
+      },
+      {
+        "proveedor": "FUNDACION ANDREY RAMOS HERRERA",
+        "documento": "901840018",
+        "valor": 150000000.0,
+        "contratos": 1,
+        "participacion_pct": 14.0162
+      },
+      {
+        "proveedor": "DOTASALUD JC SAS",
+        "documento": "900053297",
+        "valor": 128819880.0,
+        "contratos": 1,
+        "participacion_pct": 12.0371
+      },
+      {
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "documento": "899999114",
+        "valor": 106607157.0,
+        "contratos": 3,
+        "participacion_pct": 9.9615
+      },
+      {
+        "proveedor": "L&Q REVISORES FISCALES AUDITORES EXTERNOS S.A.S",
+        "documento": "900354279",
+        "valor": 77857457.64,
+        "contratos": 2,
+        "participacion_pct": 7.2751
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7109300",
+        "entidad": "MUNICIPIO DE FOMEQUE",
+        "proveedor": "ASOCIACIÓN RESILIENCIA PARA LA VIDA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 466884000.0,
+        "fecha_firma": "2024-12-05",
+        "objeto": "ORGANIZACIÓN DE LAS ACTIVIDADES DE INTERÉS PÚBLICO; PARA EL EVENTO FERIAS Y FIESTAS; CELEBRACION DE 431 AÑOS DE ANIVERSARIO; PARA GARANTIZAR LA PROMOCION Y APOYO EN PROCESOS ARTISITICOS; CULTURALES Y DE TURISMO EN EL CUMPLIMIENTO DE LAS METAS DEL PLAN DE DESARROLLO  FOMEQUE LIDERA 2024-2027 Y CELEBRACION DEL DIA DEL ADULTO MAYOR Y REINADO MUNICIPAL DE ADULTO MAYOR; FOMEQUE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7569138",
+        "entidad": "MUNICIPIO DE FOMEQUE",
+        "proveedor": "FUNDACION ANDREY RAMOS HERRERA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 150000000.0,
+        "fecha_firma": "2025-03-01",
+        "objeto": "ORGANIZACIÓN DE LAS ACTIVIDADES DE INTERÉS PÚBLICO; PARA LA EJECUCION DEL PROYECTO ARMONÍAS DE PAZ UNIENDO EL ORIENTE DE CUNDINAMARCA; EN EL MARCO DE LA RESOLUCION 1247 DE 2024; EMITIDA POR EL MINISTERIO DE CULTURA; POR MEDIO DE LA CUAL SE DESIGNAN LAS INICIATIVAS SELECCIONADAS PARA LA LÍNEA 6. BANDAS DE VIENTOS PARA LA PAZ; CORRESPONDIENTES AL CICLO 1"
+      },
+      {
+        "id": "CO1.PCCNTR.7930928",
+        "entidad": "MUNICIPIO DE FOMEQUE",
+        "proveedor": "ASOCIACIÓN RESILIENCIA PARA LA VIDA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 140025000.0,
+        "fecha_firma": "2025-05-29",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS PARA LA CELEBRACIÓN DE UN CONVENIO CON ENTIDAD SIN ÁNIMO DE LUCRO PARA EL 2DO FESTIVAL GASTRONÓMICO DEL AMASIJO; CULTURAL Y DEPORTIVO DEL MUNICIPIO DE FOMEQUE"
+      },
+      {
+        "id": "CO1.PCCNTR.8707621",
+        "entidad": "HOSPITAL SAN VICENTE DE PAUL DE FOMEQUE",
+        "proveedor": "DOTASALUD JC SAS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 128819880.0,
+        "fecha_firma": "2025-12-17",
+        "objeto": "COMPRAVENTA  DE DISPOSITIVOS MÉDICOS  PARA LA ADECUADA OPERACIÓN DE LOS EQUIPOS BASICOS EN SALUD DE LA EMPRESA SOCIAL DEL ESTADO HOSPITAL SAN VICENTE DE PAUL DE FOMEQUE; PARA LOS MUNCIPIOS DE FOMEQUE; CHOACHI Y UBAQUE"
+      },
+      {
+        "id": "CO1.PCCNTR.8757181",
+        "entidad": "HOSPITAL SAN VICENTE DE PAUL DE FOMEQUE",
+        "proveedor": "L&Q REVISORES FISCALES AUDITORES EXTERNOS S.A.S",
+        "modalidad": "Contratación régimen especial",
+        "valor": 45508505.64,
+        "fecha_firma": "2026-01-02",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES DE REVISORÍA FISCAL Y SU RESPECTIVO SUPLENTE DE LA E.S.E HOSPITAL SAN VICENTE DE PAÚL DE FÓMEQUE; DE CONFORMIDAD CON LA PROPUESTA SELECCIONADA Y EL PLIEGO DE CONDICIONES DISPUESTO EN LA CONVOCATORIA 01 DE 2025."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "HOSPITAL SAN VICENTE DE PAUL DE FOMEQUE",
+        "contratos": 3,
+        "valor": 206677337.64
+      },
+      {
+        "entidad": "MUNICIPIO DE FOMEQUE",
+        "contratos": 6,
+        "valor": 863516157.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Fomeque",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

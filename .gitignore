@@ -43,3 +43,6 @@ yt_scraper_soacha_v3.py
 # === Backups locales ===
 *.bak
 _backup*/
+
+data/cundinamarca/*.csv
+data/cundinamarca/*.parquet

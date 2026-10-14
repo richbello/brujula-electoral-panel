@@ -1,0 +1,185 @@
+{
+  "resumen": {
+    "contratos": 465,
+    "valor_total": 30486387930.39,
+    "entidades": 2,
+    "proveedores": 194
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 78.4946,
+    "pct_directa_valor": 20.1732,
+    "hhi": 285.41662296190793,
+    "top1_proveedor_pct": 7.864143621452281,
+    "top5_proveedores_pct": 31.28522742253744,
+    "pareto_proveedores_80pct_valor": 63,
+    "pct_con_adicion": 14.623655913978496,
+    "top_proveedores": [
+      {
+        "proveedor": "GRUPO CARIOS S.A.S",
+        "documento": "901672834",
+        "valor": 1248452518.0,
+        "contratos": 2,
+        "participacion_pct": 7.8641
+      },
+      {
+        "proveedor": "Marva construcciones sas",
+        "documento": "901241893",
+        "valor": 1181795375.16,
+        "contratos": 1,
+        "participacion_pct": 7.4443
+      },
+      {
+        "proveedor": "FUNDACION CAFAMI",
+        "documento": "830147561",
+        "valor": 947837758.0,
+        "contratos": 3,
+        "participacion_pct": 5.9705
+      },
+      {
+        "proveedor": "HECTOR JAVIER VANEGAS",
+        "documento": "80321232",
+        "valor": 826476360.0,
+        "contratos": 3,
+        "participacion_pct": 5.2061
+      },
+      {
+        "proveedor": "Soluciones Franvel SAS",
+        "documento": "900840126",
+        "valor": 762046284.92,
+        "contratos": 24,
+        "participacion_pct": 4.8002
+      },
+      {
+        "proveedor": "ESE HOSPITAL SAN JOSE DE GUADUAS",
+        "documento": "860020283",
+        "valor": 501232022.0,
+        "contratos": 3,
+        "participacion_pct": 3.1573
+      },
+      {
+        "proveedor": "GRUPO FAO SAS",
+        "documento": "901484861",
+        "valor": 459358347.0,
+        "contratos": 3,
+        "participacion_pct": 2.8936
+      },
+      {
+        "proveedor": "CONTECOR S.A.S",
+        "documento": "900702893",
+        "valor": 454589952.0,
+        "contratos": 4,
+        "participacion_pct": 2.8635
+      },
+      {
+        "proveedor": "SURTIMILENIUM S.A.S",
+        "documento": "901883155",
+        "valor": 413134509.0,
+        "contratos": 2,
+        "participacion_pct": 2.6024
+      },
+      {
+        "proveedor": "CONSORCIO INTERCASA CAPARRAPI",
+        "documento": "1014220264",
+        "valor": 400370851.8,
+        "contratos": 2,
+        "participacion_pct": 2.522
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9643444",
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "proveedor": "CONSORCIO G&C PTAP",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4543032234.0,
+        "fecha_firma": "2026-08-21",
+        "objeto": "CONSTRUCCIÓN DE LA FASE I DEL PLAN MAESTRO DE ACUEDUCTO Y ALCANTARILLADO DEL MUNICIPIO DE CAPARRAPÍ - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9614862",
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "proveedor": "CONSORCIO CAPARRAPI C 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4266141000.0,
+        "fecha_firma": "2026-08-13",
+        "objeto": "CONSTRUCCIÓN DE 200 UNIDADES SANITARIAS EN LA ZONA RURAL DEL MUNICIPIO DE CAPARRAPI - CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO EPC-CI-043-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.9428392",
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "proveedor": "CONSORCIO CASA DE GOBIERNO",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 3082074870.63,
+        "fecha_firma": "2026-04-29",
+        "objeto": "CONSTRUCCIÓN CASA DE GOBIERNO DEL MUNICIPIO DE CAPARRAPÍ; CUNDINAMARCA (ICCU-CTO-1006-2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.9422407",
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "proveedor": "CONSORCIO VIVIENDAS CAPARRAPI",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1708449082.6,
+        "fecha_firma": "2026-04-22",
+        "objeto": "MEJORAMIENTO DE VIVIENDA RURAL CON MÓDULOS INDEPENDIENTES EN EL MUNICIPIO DE CAPARRAPI (SV-CD-CVI-113-2025)."
+      },
+      {
+        "id": "CO1.PCCNTR.8399622",
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "proveedor": "Marva construcciones sas",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1181795375.16,
+        "fecha_firma": "2025-10-08",
+        "objeto": "PRIMERA ETAPA DE CONSTRUCCIÓN Y DOTACIÓN PLACA POLIDEPORTIVA CUBIERTA EN EL CENTRO POBLADO DE SAN RAMÓN DEL MUNICIPIO DE CAPARRAPI; CUNDINAMARCA."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "contratos": 461,
+        "valor": 30466387930.39
+      },
+      {
+        "entidad": "PERSONERIA DE CAPARRAPI CUNDINAMARCA",
+        "contratos": 2,
+        "valor": 20000000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 15,
+    "valor_obras": 16955091108.46,
+    "obras_vencidas_abiertas": 2,
+    "valor_obras_vencidas_abiertas": 389356101.67,
+    "pct_obras_vencidas_abiertas": 13.333333333333334,
+    "pct_pagado_obras_vencidas_abiertas": 89.3566,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9437922",
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "proveedor": "GRUPO FAO SAS",
+        "estado": "Modificado",
+        "valor": 364303350.0,
+        "pagado": 327873015.0,
+        "fecha_fin": "2026-09-25",
+        "objeto": "FASE No.2 MEJORAMIENTO Y ADECUACIÓN DEL ACUEDUCTO Y ALCANTARILLADO DEL MUNICIPIO DE CAPARRAPÍ"
+      },
+      {
+        "id": "CO1.PCCNTR.8441111",
+        "entidad": "MUNICIPIO DE CAPARRAPI*",
+        "proveedor": "UVET COMPANY",
+        "estado": "Modificado",
+        "valor": 25052751.67,
+        "pagado": 20042201.34,
+        "fecha_fin": "2026-03-10",
+        "objeto": "CONSTRUCCIÓN DE DOS CASETAS COMUNALES EN MATERIAL DE GUADUA UBICADAS EN EL PARQUE PRINCIPAL DEL MUNICIPIO DE CAPARRAPÍ CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Caparrapí",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 26.7,
+  "nivel": "bajo",
+  "posicion": 69.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,270 @@
+{
+  "resumen": {
+    "contratos": 764,
+    "valor_total": 26338500168.27,
+    "entidades": 3,
+    "proveedores": 252
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 82.7225,
+    "pct_directa_valor": 42.9904,
+    "hhi": 224.360763189129,
+    "top1_proveedor_pct": 10.161960643665543,
+    "top5_proveedores_pct": 24.89920044832379,
+    "pareto_proveedores_80pct_valor": 87,
+    "pct_con_adicion": 27.094240837696336,
+    "top_proveedores": [
+      {
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "documento": "900418702",
+        "valor": 2584112212.58,
+        "contratos": 3,
+        "participacion_pct": 10.162
+      },
+      {
+        "proveedor": "ECOEQUIPOS SAS",
+        "documento": "900369869",
+        "valor": 1197132530.0,
+        "contratos": 1,
+        "participacion_pct": 4.7077
+      },
+      {
+        "proveedor": "AASING SAS",
+        "documento": "900976357",
+        "valor": 904394438.08,
+        "contratos": 2,
+        "participacion_pct": 3.5565
+      },
+      {
+        "proveedor": "HORZON SAS",
+        "documento": "832007472",
+        "valor": 889435884.0,
+        "contratos": 11,
+        "participacion_pct": 3.4977
+      },
+      {
+        "proveedor": "Ideacorp SAS",
+        "documento": "901320972",
+        "valor": 756609363.0,
+        "contratos": 12,
+        "participacion_pct": 2.9753
+      },
+      {
+        "proveedor": "OJEDA GAVILAN LUIS GABRIEL",
+        "documento": "79167268",
+        "valor": 657820833.7,
+        "contratos": 8,
+        "participacion_pct": 2.5869
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 599159245.0,
+        "contratos": 4,
+        "participacion_pct": 2.3562
+      },
+      {
+        "proveedor": "FUNDACION JUNTOS AVANZAMOS",
+        "documento": "900974611",
+        "valor": 552889310.0,
+        "contratos": 4,
+        "participacion_pct": 2.1742
+      },
+      {
+        "proveedor": "CONSORCIO CENTRO DIA JIN",
+        "documento": "901902457",
+        "valor": 545183713.01,
+        "contratos": 1,
+        "participacion_pct": 2.1439
+      },
+      {
+        "proveedor": "IMPORTADORA DISMAQ SAS",
+        "documento": "900162075",
+        "valor": 503339316.0,
+        "contratos": 3,
+        "participacion_pct": 1.9794
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9801347",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1803660671.12,
+        "fecha_firma": "2026-08-31",
+        "objeto": "MEJORAMIENTO Y PAVIMENTACIÓN DE LA VÍA SECUNDARIA SECTOR SAN CARLOS 45ACN01-1 DEL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9416849",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "ECOEQUIPOS SAS",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 1197132530.0,
+        "fecha_firma": "2026-03-27",
+        "objeto": "ADQUISICIÓN DE UN VEHÍCULO COMPACTADOR DE RESIDUOS SÓLIDOS DE 25 YD3 PARA EL MUNICIPIO DE NEMOCÓN EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO EPC-CI-028-2025 SUSCRITO ENTRE EMPRESA PUBLICA DE CUNDINAMARCA SA E.S.P Y EL MUNICIPIO DE NEMOCÓN"
+      },
+      {
+        "id": "CO1.PCCNTR.7919456",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "CONSORCIO PLAZA NEMOCÓN 2025",
+        "modalidad": "Licitación pública",
+        "valor": 790386687.0,
+        "fecha_firma": "2025-06-05",
+        "objeto": "CONSTRUCCION SEGUNDA ETAPA PLAZA DE MERCADO DEL MUNICIPIO DE NEMOCÓN CUNDINAMARCA EN MARCO DEL CONVENIO INTERADMNISTRATIVO SUSCRITO ENTRE EL INSTITUO DE INFRAESTRCUTURA Y CONCESIONES DE CUNDINAMARCA-ICCU Y EL MUNICIPIO DE NEMOCON No. ICCU 746 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7186781",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "CONSORCIO CENTRO DIA JIN",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 545183713.01,
+        "fecha_firma": "2024-12-31",
+        "objeto": "OBRAS DE MEJORAMIENTO DE LAS INSTALACIONES DEL CENTRO DÍA PARA LA ATENCIÓN INTEGRAL Y BIENESTAR DEL ADULTO MAYOR EN EL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA- PRIMERA ETAPA"
+      },
+      {
+        "id": "CO1.PCCNTR.9322817",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 537315110.46,
+        "fecha_firma": "2026-02-09",
+        "objeto": "MEJORAMIENTO DE LA RED VIAL URBANA MEDIANTE LA CONSTRUCCIÓN DE PAVIMENTO ARTICULADO (ADOQUÍN) DEL BARRIO FUTURO DEL MUNICIPIO DE NEMOCÓN CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDÍA NEMOCON",
+        "contratos": 750,
+        "valor": 26222935021.27
+      },
+      {
+        "entidad": "E.S.E HOSPITAL SAN VICENTE DE PAUL DE NEMOCON",
+        "contratos": 1,
+        "valor": 30090384.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE NEMOCON",
+        "contratos": 12,
+        "valor": 85474763.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 17,
+    "valor_obras": 6769516020.57,
+    "obras_vencidas_abiertas": 10,
+    "valor_obras_vencidas_abiertas": 3593465660.29,
+    "pct_obras_vencidas_abiertas": 58.82352941176471,
+    "pct_pagado_obras_vencidas_abiertas": 35.6361,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7919456",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "CONSORCIO PLAZA NEMOCÓN 2025",
+        "estado": "Suspendido",
+        "valor": 790386687.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-28",
+        "objeto": "CONSTRUCCION SEGUNDA ETAPA PLAZA DE MERCADO DEL MUNICIPIO DE NEMOCÓN CUNDINAMARCA EN MARCO DEL CONVENIO INTERADMNISTRATIVO SUSCRITO ENTRE EL INSTITUO DE INFRAESTRCUTURA Y CONCESIONES DE CUNDINAMARCA-ICCU Y EL MUNICIPIO DE NEMOCON No. ICCU 746 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7186781",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "CONSORCIO CENTRO DIA JIN",
+        "estado": "Modificado",
+        "valor": 545183713.01,
+        "pagado": 545182576.0,
+        "fecha_fin": "2025-07-26",
+        "objeto": "OBRAS DE MEJORAMIENTO DE LAS INSTALACIONES DEL CENTRO DÍA PARA LA ATENCIÓN INTEGRAL Y BIENESTAR DEL ADULTO MAYOR EN EL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA- PRIMERA ETAPA"
+      },
+      {
+        "id": "CO1.PCCNTR.9322817",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Modificado",
+        "valor": 537315110.46,
+        "pagado": 259316288.58,
+        "fecha_fin": "2026-07-16",
+        "objeto": "MEJORAMIENTO DE LA RED VIAL URBANA MEDIANTE LA CONSTRUCCIÓN DE PAVIMENTO ARTICULADO (ADOQUÍN) DEL BARRIO FUTURO DEL MUNICIPIO DE NEMOCÓN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8739832",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "AASING SAS",
+        "estado": "Modificado",
+        "valor": 414143475.92,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-13",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LA INFRAESTRUCTURA INSTITUCIONAL TEATRO MUNICIPAL EL CACIQUE NEMEQUENE EN EL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8036107",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "CONSORCIO ESCUELAS NEMOCON 2025",
+        "estado": "Modificado",
+        "valor": 361861649.9,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-07",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA EN LAS INSTITUCIONES EDUCATIVAS ESCUELAS RURALES ORATORIO; CERRO VERDE; ASTORGA Y SUSATA ZONA RURAL DEL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8726131",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "INGENIERIA CONSTRUCCION Y VIAS DE COLOMBIA S.A.S.",
+        "estado": "En ejecución",
+        "valor": 300436216.0,
+        "pagado": 281754545.0,
+        "fecha_fin": "2026-09-10",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA PERICO CON LA VEREDA MOGUA SECTOR EL CHUZCAL PARTE ALTA DEL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA EN MARCO DEL CONVENIO INTERADMINISTRATIVO SUSCRITO ENTRE EL INSTITUTO DE INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA-ICCU Y EL MUNICIPIO DE NEMOCÓN NO. ICCU 1164 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8733807",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Modificado",
+        "valor": 243136431.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-13",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LA INFRAESTRUCTURA INSTITUCIONAL DE LA ALCALDÍA MUNICIPAL (PALACIO MUNICIPAL) Y LA INFRAESTRUCTURA INSTITUCIONAL SEDE TELECOM; SECTOR LA PLAZUELA; EN EL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8729786",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "JR FONSECA ING",
+        "estado": "En ejecución",
+        "valor": 196302319.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA \nVEREDA CASA BLANCA A LA VEREDA PATIO BONITO SECTOR SAN \nJOAQUÍN DEL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA EN MARCO DEL \nCONVENIO INTERADMINISTRATIVO SUSCRITO ENTRE EL INSTITUTO DE \nINFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA-ICCU Y EL \nMUNICIPIO DE NEMOCÓN No. ICCU 1166 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9322907",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "SERVICIOS DE INGENIERIA MECANICOS AMBIENTALES Y CIVILES",
+        "estado": "En ejecución",
+        "valor": 105000000.0,
+        "pagado": 99697500.01,
+        "fecha_fin": "2026-09-21",
+        "objeto": "CONSTRUCCIÓN PLACA HUELLA VEREDA PATIO BONITO SECTOR EL ARENAL DEL MUNICIPIO DE NEMOCÓN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8729781",
+        "entidad": "ALCALDÍA NEMOCON",
+        "proveedor": "INGENIERIA CONSTRUCCION Y VIAS DE COLOMBIA S.A.S.",
+        "estado": "Modificado",
+        "valor": 99700058.0,
+        "pagado": 94620155.0,
+        "fecha_fin": "2026-08-10",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA \nVEREDA CHECUA CON LA VEREDA CERRO VERDE SECTOR LA ESCUADRA \nEN EL MUNICIPIO DE NEMOCÓN; DEPARTAMENTO DE CUNDINAMARCA EN \nMARCO DEL CONVENIO INTERADMINISTRATIVO SUSCRITO ENTRE EL \nINSTITUTO DE INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA\nICCU Y EL MUNICIPIO DE NEMOCÓN No. ICCU 904 DE 2025"
+      }
+    ]
+  },
+  "municipio": "Nemocón",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 59.3,
+  "nivel": "medio",
+  "posicion": 22.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,365 @@
+{
+  "resumen": {
+    "contratos": 1110,
+    "valor_total": 77766455220.92,
+    "entidades": 2,
+    "proveedores": 448
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 74.6847,
+    "pct_directa_valor": 24.3667,
+    "hhi": 390.7226037130637,
+    "top1_proveedor_pct": 10.617449844501907,
+    "top5_proveedores_pct": 38.4006390139794,
+    "pareto_proveedores_80pct_valor": 56,
+    "pct_con_adicion": 18.55855855855856,
+    "top_proveedores": [
+      {
+        "proveedor": "Cesar Andres Aldana Ortiz",
+        "documento": "1070704611",
+        "valor": 8153094740.0,
+        "contratos": 18,
+        "participacion_pct": 10.6174
+      },
+      {
+        "proveedor": "AASING SAS",
+        "documento": "900976357",
+        "valor": 7496775032.12,
+        "contratos": 11,
+        "participacion_pct": 9.7628
+      },
+      {
+        "proveedor": "CONSORCIO VEREDAL 26",
+        "documento": "9020611438",
+        "valor": 6049247636.0,
+        "contratos": 1,
+        "participacion_pct": 7.8777
+      },
+      {
+        "proveedor": "COLOMBIA A&Z S.A.S,",
+        "documento": "901429826",
+        "valor": 4663345213.0,
+        "contratos": 18,
+        "participacion_pct": 6.0729
+      },
+      {
+        "proveedor": "EDS EL PROGRESO",
+        "documento": "311705",
+        "valor": 3125225340.0,
+        "contratos": 9,
+        "participacion_pct": 4.0699
+      },
+      {
+        "proveedor": "AGROAMBIENTAL",
+        "documento": "900446649",
+        "valor": 2743292854.54,
+        "contratos": 8,
+        "participacion_pct": 3.5725
+      },
+      {
+        "proveedor": "HIERROS Y CEMENTOS DEL GUALIVA",
+        "documento": "79331604",
+        "valor": 2574249707.5,
+        "contratos": 5,
+        "participacion_pct": 3.3523
+      },
+      {
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "documento": "900418702",
+        "valor": 2010748084.4099998,
+        "contratos": 12,
+        "participacion_pct": 2.6185
+      },
+      {
+        "proveedor": "Techne SAS",
+        "documento": "900282761",
+        "valor": 1880611238.07,
+        "contratos": 4,
+        "participacion_pct": 2.449
+      },
+      {
+        "proveedor": "EMPRESA DE ACUEDUCTO ALCANTARILLADO Y ASEO DE LA VEGA E.S.P.",
+        "documento": "832002460",
+        "valor": 1546796317.7,
+        "contratos": 6,
+        "participacion_pct": 2.0143
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9473209",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CONSORCIO VEREDAL 26",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 6049247636.0,
+        "fecha_firma": "2026-05-08",
+        "objeto": "MANTENIMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA ROSARIO A LA VEREDA TABACAL; SECTOR EL CANEY SEGÚN CONVENIO ICCU 941-2025 DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8129903",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AASING SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2199985727.0,
+        "fecha_firma": "2025-07-31",
+        "objeto": "CONSTRUCCIÓN DE LA INFRAESTRUCTURA DE LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL LUIS ALFONSO VALBUENA ULLOA DEL MUNICIPIO DE LA VEGA; CUNDINAMARCA; SEGÚN CONVENIO ICCU No. 898 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.10051025",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "Cesar Andres Aldana Ortiz",
+        "modalidad": "Licitación pública",
+        "valor": 1356150000.0,
+        "fecha_firma": "2026-10-08",
+        "objeto": "PRESTACION DE SERVICIOS DE APOYO LOGISTICO Y ARTISTICO PARA LA ORGANIZACIÓN Y REALIZACIÓN DEL 39 CONCURSO NACIONAL DE BANDAS MUSICALES JUVENILES 2026; A REALIZARSE EN EL MUNICIPIO DE LA VEGA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9511784",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "Cesar Andres Aldana Ortiz",
+        "modalidad": "Licitación pública",
+        "valor": 1199958800.0,
+        "fecha_firma": "2026-05-20",
+        "objeto": "PRESTACION DE SERVICIOS DE APOYO LOGISTICO Y ARTISTICO PARA LA ORGANIZACIÓN Y REALIZACIÓN DEL XXX FESTIVAL DEPARTAMENTAL DE TUNAS A REALIZARSE EN EL MUNICIPIO DE LA VEGA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9773607",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CATALINA MARIA DEL PERPETUO SOCORRO FLOREZ VELEZ",
+        "modalidad": "Contratación directa",
+        "valor": 1002584782.0,
+        "fecha_firma": "2026-08-06",
+        "objeto": "ADQUIRIR UN INMUEBLE DE INTERES ESTRATEGICO PARA LA PROTECCION DEL RECURSO HIDRICO Y AMBIENTAL; ACORDE CON LA LEY 99 DE 1993 EN LA VEREDA EL DINTEL DEL MUNICIPIO DE LA VEGA."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "contratos": 1048,
+        "valor": 77469602991.92
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE LA VEGA - CUNDINAMARCA",
+        "contratos": 18,
+        "valor": 296852229.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 43,
+    "valor_obras": 23743042106.39,
+    "obras_vencidas_abiertas": 23,
+    "valor_obras_vencidas_abiertas": 12032701940.02,
+    "pct_obras_vencidas_abiertas": 53.48837209302325,
+    "pct_pagado_obras_vencidas_abiertas": 11.3048,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8129903",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AASING SAS",
+        "estado": "Suspendido",
+        "valor": 2199985727.0,
+        "pagado": 408100103.4,
+        "fecha_fin": "2026-06-29",
+        "objeto": "CONSTRUCCIÓN DE LA INFRAESTRUCTURA DE LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL LUIS ALFONSO VALBUENA ULLOA DEL MUNICIPIO DE LA VEGA; CUNDINAMARCA; SEGÚN CONVENIO ICCU No. 898 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8189167",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CONSORCIO BULUCAIMA DEPORTE",
+        "estado": "Suspendido",
+        "valor": 976879010.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-04",
+        "objeto": "CONSTRUCCIÓN POLIDEPORTIVO CUBIERTO Y OBRAS COMPLEMENTARIAS EN LA INSTITUCION EDUCATIVA SAN JOSE DE LA VEREDA BULUCAIMA DEL MUNICIPIO DE LA VEGA; CUNDINAMARCA; SEGÚN CONVENIO ICCU No. 938 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7611494",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AASING SAS",
+        "estado": "Modificado",
+        "valor": 629201796.52,
+        "pagado": 561240566.37,
+        "fecha_fin": "2026-01-02",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA CENTRO CON LA VEREDA LA ALIANZA SECTOR HERRADURA SEGÚN CONVENIO ICCU 715 - 2024 Y MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA CENTRO CON LA VEREDA LA ALIANZA SECTOR LA ESCUELA SEGUN CONVENIO ICCU 743 - 2024 Y OTRAS VIAS RURALES DEL MUNICIPIO DE LA VEGA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8744677",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AASING SAS",
+        "estado": "Modificado",
+        "valor": 531844743.9,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-31",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS ROSARIO; TABACAL Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9055857",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AASING SAS",
+        "estado": "Suspendido",
+        "valor": 531820297.21,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS CACAHUAL; CHUPAL Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9061910",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CONSORCIO VIAS LA VEGA",
+        "estado": "Suspendido",
+        "valor": 519081701.6,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS ALIANZA; NAGUY; HOYA GRANDE Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8744174",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CONSORCIO OBRAS VIALES LA VEGA",
+        "estado": "Suspendido",
+        "valor": 509133772.06,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS EL ROBLE; EL DINTEL; SAN ANTONIO Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9218296",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "Techne SAS",
+        "estado": "Suspendido",
+        "valor": 499895389.58,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS CHUSCAL; SABANETA Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8739842",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CONSORCIO EL CURAL",
+        "estado": "Suspendido",
+        "valor": 499861732.16,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS EL CURAL; CENTRO Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9160145",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "Techne SAS",
+        "estado": "Suspendido",
+        "valor": 499848801.12,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS BULUCAIMA Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9098995",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CONSORCIO VIAS SAN JUAN",
+        "estado": "Modificado",
+        "valor": 499848653.49,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS EL LLANO GRANDE; SAN JUAN Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9157190",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "CONSORCIO VIAS UCRANIA",
+        "estado": "Suspendido",
+        "valor": 494466642.98,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCIÓN DE VÍAS EN LA VEREDAS UCRANIA Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8701412",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AASING SAS",
+        "estado": "Suspendido",
+        "valor": 489899887.88,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS LA HUERTA; PETAQUERO Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9322710",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AASING SAS",
+        "estado": "Suspendido",
+        "valor": 459988574.12,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS LA CABAÑA; GUARUMAL Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9057061",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "Techne SAS",
+        "estado": "Suspendido",
+        "valor": 445970291.37,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-04",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION DE VIAS EN LAS VEREDAS LIBERTAD; LAURELES; MINAS Y OTRAS DEL MUNICIPIO DE LA VEGA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8680719",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "Techne SAS",
+        "estado": "Modificado",
+        "valor": 434896756.0,
+        "pagado": 390936309.0,
+        "fecha_fin": "2026-06-04",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA CENTRO CON LA VEREDA LA ALIANZA SECTOR LA COLINA SEGÚN CONVENIO ICCU 720-2025; MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA CENTRO CON LA VEREDA LA ALIANZA SECTOR LA ESPERANZA SEGÚN CONVENIO ICCU 795-2025; MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA CENTRO CON LA VEREDA LA ALIANZA SECTOR SAN JUANITO SEGÚN CONVENIO ICCU 819-2025 Y OTRAS VIAS RURALES DEL MUNICIPIO DE LA VEGA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7063142",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "PRORUSSI CONSTRUCCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 322035188.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-01-02",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA LA HUERTA SECTOR LOS MANGOS; LA VIA DE LA VEREDA MINAS SECTOR CHILIN CARRERA 9; Y LA VIA DE LA VEREDA NAGUY SECTOR LA ESPERANZA LAS PALMAS DEL MUNICIPIO DE LA VEGA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9388146",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "PRORUSSI CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 321999930.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-02",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA NAGUY CON EL MUNICIPIO DE SAN FRANCISCO SECTOR PIEDRA GORDA SEGÚN CONVENIO ICCU-1011-2025; MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA HOYA GRANDE CON LA VEREDA NAGUY SECTOR EL POSTE SEGUN CONVENIO ICCU-1072-2025; MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA EL ROSARIO CON LA VEREDA NAGUY SECTOR ALTAMIRA SEGUN CONVENIO ICCU-1488-2025 Y OTRAS VIAS RURALES DEL MUNICIPIO DE LA VEGA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7044103",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Modificado",
+        "valor": 309033908.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-04-08",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA LAURELES SECTOR ESCUELA VIEJA; LA VIA DE LA VEREDA EL CURAL SECTOR SAN PABLO Y OTRAS VIAS TERCIARIAS DEL MUNICIPIO DE LA VEGA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7062521",
+        "entidad": "ALCALDIA MUNICIPIO DE LA VEGA CUNDINAMARCA",
+        "proveedor": "AGROAMBIENTAL",
+        "estado": "Modificado",
+        "valor": 308862458.68,
+        "pagado": 0.0,
+        "fecha_fin": "2025-02-01",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA GUARUMAL SECTOR EL GUAYABO; LA VIA DE LA VEREDA CHUPAL SECTOR LA VIRGEN; Y VIAS TERCIARIAS DEL MUNICIPIO DE LA VEGA CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "La Vega",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 45.0,
+  "nivel": "medio",
+  "posicion": 45.0,
+  "total_rankeados": 71
+}

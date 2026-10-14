@@ -1,0 +1,225 @@
+{
+  "resumen": {
+    "contratos": 495,
+    "valor_total": 30671598607.54,
+    "entidades": 4,
+    "proveedores": 226
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 56.1616,
+    "pct_directa_valor": 34.1826,
+    "hhi": 884.8366138673363,
+    "top1_proveedor_pct": 26.46890361958362,
+    "top5_proveedores_pct": 47.723001734771266,
+    "pareto_proveedores_80pct_valor": 33,
+    "pct_con_adicion": 8.484848484848486,
+    "top_proveedores": [
+      {
+        "proveedor": "INGENOVA ING SAS",
+        "documento": "9005718246",
+        "valor": 7909090909.0,
+        "contratos": 1,
+        "participacion_pct": 26.4689
+      },
+      {
+        "proveedor": "CORPORACION MUNICIPAL DEL FOMENTO DESARROLLO Y TURISMO DE APULO",
+        "documento": "808001331",
+        "valor": 1795317189.34,
+        "contratos": 8,
+        "participacion_pct": 6.0083
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 1780000000.0,
+        "contratos": 1,
+        "participacion_pct": 5.957
+      },
+      {
+        "proveedor": "SERVICIOS PLANIFICADOS SAS",
+        "documento": "901742864",
+        "valor": 1575553878.0,
+        "contratos": 1,
+        "participacion_pct": 5.2728
+      },
+      {
+        "proveedor": "EAG",
+        "documento": "800105497",
+        "valor": 1200000000.0,
+        "contratos": 1,
+        "participacion_pct": 4.016
+      },
+      {
+        "proveedor": "ARCO C Y C",
+        "documento": "830033703",
+        "valor": 1100000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.6813
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS EMPOAPULO SA ESP",
+        "documento": "9003547699",
+        "valor": 968851935.99,
+        "contratos": 2,
+        "participacion_pct": 3.2424
+      },
+      {
+        "proveedor": "CONSORCIO GUACAMAYAS 2025",
+        "documento": "902017944",
+        "valor": 909000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.0421
+      },
+      {
+        "proveedor": "MARIA EUGENIA MONTEALEGRE PADILLA",
+        "documento": "65553318",
+        "valor": 736461774.0,
+        "contratos": 22,
+        "participacion_pct": 2.4647
+      },
+      {
+        "proveedor": "AGROAUTOMOTORA SAS",
+        "documento": "901471102",
+        "valor": 681059062.0,
+        "contratos": 2,
+        "participacion_pct": 2.2793
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9766714",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "INGENOVA ING SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 7909090909.0,
+        "fecha_firma": "2026-08-05",
+        "objeto": "CONSTRUCCIÓN DEL CENTRO DEPORTIVO DE NATACIÓN MUNICIPAL DEL MUNICIPIO DE APULO; CUNDINAMARCA; EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO ICCU 737 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.9836189",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 1780000000.0,
+        "fecha_firma": "2026-08-21",
+        "objeto": "BANCOLOMBIA ha acordado prestar a EL DEUDOR hasta la suma señalada en el aparte MONTO DE LA OPERACIÓN de la PARTE 1.2; la cual se entregará a su perfeccionamiento y una vez se haya acreditado el cumplimiento de la totalidad de los requisitos\nlegales."
+      },
+      {
+        "id": "CO1.PCCNTR.8731544",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "SERVICIOS PLANIFICADOS SAS",
+        "modalidad": "Licitación pública",
+        "valor": 1575553878.0,
+        "fecha_firma": "2026-02-05",
+        "objeto": "CONCESIÓN INTEGRAL A LA PRESTACIÓN DEL SERVICIO DE ALUMBRADO PÚBLICO EN EL MUNICIPIO DE APULO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.10048016",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "EAG",
+        "modalidad": "Contratación directa",
+        "valor": 1200000000.0,
+        "fecha_firma": "2026-10-07",
+        "objeto": "CONTRATO INTERADMINISTRATIVO DE MANDATO SIN REPRESENTACIÓN PARA LA GERENCIA INTEGRAL PARA LA INFRAESTRUCTURA DEL MUNICIPIO DE APULO; CUNDINAMARCA PROYECTO MEJORAMIENTO DE LA VÍA URBANA CALLE 10 ENTRE CARRERA 6 - CARRERA 9; DIAGONAL 8 ENTRE CARRERA 9 - CARRERA 9A; CALLE 5B ENTRE CARRERA 9 - CARRERA 9A Y CARRERA 9A BARRIO SAN JOSÉ EN EL MUNICIPIO DE APULO; CUNDINAMARCA; incluye interventoría."
+      },
+      {
+        "id": "CO1.PCCNTR.8545677",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "CORPORACION MUNICIPAL DEL FOMENTO DESARROLLO Y TURISMO DE APULO",
+        "modalidad": "Contratación directa",
+        "valor": 1186980000.0,
+        "fecha_firma": "2025-11-05",
+        "objeto": "REALIZAR LA ORGANIZACIÓN; COORDINACIÓN; DESARROLLO Y EJECUCIÓN DE LAS FESTIVIDADES CULTURALES DE CONMEMORACIÓN DE LOS LXXVI CUMPLEAÑOS DE APULO Y EXPOCULTURA REYES MAGOS 2026"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE APULO",
+        "contratos": 7,
+        "valor": 44401817.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE ACUEDUCTO, ALCANTARILLADO Y ASEO DEL MUNICIPIO DE APULO",
+        "contratos": 101,
+        "valor": 1189715195.0
+      },
+      {
+        "entidad": "MUNICIPIO DE APULO",
+        "contratos": 386,
+        "valor": 29423481595.54
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE APULO CUNDINAMARCA",
+        "contratos": 1,
+        "valor": 14000000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 12,
+    "valor_obras": 11067508586.51,
+    "obras_vencidas_abiertas": 5,
+    "valor_obras_vencidas_abiertas": 665391544.1,
+    "pct_obras_vencidas_abiertas": 41.66666666666667,
+    "pct_pagado_obras_vencidas_abiertas": 86.6511,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8574390",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "CONSORCIO IS APULO 2025",
+        "estado": "En ejecución",
+        "valor": 360758939.77,
+        "pagado": 360758939.77,
+        "fecha_fin": "2026-03-19",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE EN EL CASCO URBANO EN EL BARRIO VOLVER A VIVIR DEL MUNICIPIO DE APULO - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8574367",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "SEBASTIAN CASTILLO",
+        "estado": "En ejecución",
+        "valor": 236966279.75,
+        "pagado": 150294044.94,
+        "fecha_fin": "2026-05-10",
+        "objeto": "MEJORAMIENTO DE VÍA QUE CONDUCE DEL CASCO URBANO HACIA LA VEREDA BEJUCAL EN EL MUNICIPIO APULO CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8487531",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "ESTUDIOS DISEÑOS Y CONSTRUCCIONES CARLOS NIETO S.A.S.",
+        "estado": "Modificado",
+        "valor": 43979267.17,
+        "pagado": 43979267.17,
+        "fecha_fin": "2026-03-31",
+        "objeto": "REALIZAR EL MANTENIMIENTO MEJORAMIENTO ADECUACIONES Y DOTACIONES LOCATIVAS EN LAS INSTALACIONES DE UNA OFICINA PARA LA COMISARIA DE FAMILIA EN LA SEDE B DE LA ADMINISTRACION MUNICIPAL DE APULO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8265933",
+        "entidad": "MUNICIPIO DE APULO",
+        "proveedor": "ESTUDIOS DISEÑOS Y CONSTRUCCIONES CARLOS NIETO S.A.S.",
+        "estado": "En ejecución",
+        "valor": 21537057.41,
+        "pagado": 21537057.41,
+        "fecha_fin": "2025-11-15",
+        "objeto": "REALIZAR EL MANTENIMIENTO MEJORAMIENTO Y/O ADECUACIONES LOCATIVAS DE LAS INSTALACIONES DEL CENTRO DE VIDA SENSORIAL DE LA ADMINISTRACION MUNICIPAL DE APULO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6266018",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE ACUEDUCTO, ALCANTARILLADO Y ASEO DEL MUNICIPIO DE APULO",
+        "proveedor": "JUAN CARLOS BOCANEGRA FORERO",
+        "estado": "En ejecución",
+        "valor": 2150000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-05-10",
+        "objeto": "CONTRATO DE OBRA PARA EL MEJORAMIENTO DE LA PUERTA DEL CUARTO DE BOMBAS DE LA MESETA; ELABORACION REJILLA TIPO SUMIDERO PARA REFUERZO FRENTE A LA PISCINA MUNICIPAL"
+      }
+    ]
+  },
+  "municipio": "Apulo",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 43.8,
+  "nivel": "medio",
+  "posicion": 47.0,
+  "total_rankeados": 71
+}

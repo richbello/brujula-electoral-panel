@@ -1,0 +1,255 @@
+{
+  "resumen": {
+    "contratos": 4541,
+    "valor_total": 203993535988.76,
+    "entidades": 4,
+    "proveedores": 1816
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 11.4072,
+    "pct_directa_valor": 6.0301,
+    "hhi": 102.61968442588358,
+    "top1_proveedor_pct": 7.153627033677279,
+    "top5_proveedores_pct": 16.25931680032335,
+    "pareto_proveedores_80pct_valor": 425,
+    "pct_con_adicion": 16.560229024443952,
+    "top_proveedores": [
+      {
+        "proveedor": "IPS CMT SOLUCIONES MEDICAS S.A.S.",
+        "documento": "900963716",
+        "valor": 14297857670.0,
+        "contratos": 36,
+        "participacion_pct": 7.1536
+      },
+      {
+        "proveedor": "Enlaces Temporales S.A.S E.S.T",
+        "documento": "900467648",
+        "valor": 6231368066.0,
+        "contratos": 8,
+        "participacion_pct": 3.1177
+      },
+      {
+        "proveedor": "SOCIEDAD OFTALMOLOGICA MFJ & PS SAS",
+        "documento": "900065662",
+        "valor": 4028821144.0,
+        "contratos": 12,
+        "participacion_pct": 2.0157
+      },
+      {
+        "proveedor": "DISTRIBUIDORA INGLESA S.A.S.",
+        "documento": "830099732",
+        "valor": 3999572428.0,
+        "contratos": 18,
+        "participacion_pct": 2.0011
+      },
+      {
+        "proveedor": "GEH SAS",
+        "documento": "900949968",
+        "valor": 3939657434.0,
+        "contratos": 5,
+        "participacion_pct": 1.9711
+      },
+      {
+        "proveedor": "INGSULAB SAS",
+        "documento": "900416503",
+        "valor": 3830000000.0,
+        "contratos": 9,
+        "participacion_pct": 1.9163
+      },
+      {
+        "proveedor": "SERVIMOS DE TU MANO SAS",
+        "documento": "901679128",
+        "valor": 3175934629.0,
+        "contratos": 11,
+        "participacion_pct": 1.589
+      },
+      {
+        "proveedor": "FUNDACION PARA ELCUIDADO CRITICO",
+        "documento": "900508607",
+        "valor": 3111244690.0,
+        "contratos": 11,
+        "participacion_pct": 1.5566
+      },
+      {
+        "proveedor": "AXIOMED SAS",
+        "documento": "901452195",
+        "valor": 2753000000.0,
+        "contratos": 10,
+        "participacion_pct": 1.3774
+      },
+      {
+        "proveedor": "CENTRO MÉDICO OFTALMOLÓGICO Y LABORATORIO CLÍNICO ANDRADE NARVÁEZ SOCIEDAD POR ACCIONES SIMPLIFICADA - COLCAN S.A.S",
+        "documento": "800066001",
+        "valor": 2175000000.0,
+        "contratos": 10,
+        "participacion_pct": 1.0882
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8432108",
+        "entidad": "E.S.E HOSPITAL SAN RAFAEL DE CAQUEZA",
+        "proveedor": "UNION TEMPORAL TECNOSALUD CAQUEZA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 3514304879.0,
+        "fecha_firma": "2025-10-27",
+        "objeto": "ADQUIRIR EQUIPOS; MOBILIARO Y ELEMENTOS BIOMÉDICOS \nPARA LA E.S.E. HOSPITAL SAN RAFAEL DE CÁQUEZA; \nDESTINADOS A FORTALECER Y MEJORAR LOS DIFERENTES \nSERVICIOS DE MEDIANA Y ALTA COMPLEJIDAD DE LA \nINSTITUCIÓN; EN CUMPLIMIENTO DE LA RESOLUCIÓN 211 DE \nFEBRERO DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.5707459",
+        "entidad": "E.S.E HOSPITAL SAN RAFAEL DE CAQUEZA",
+        "proveedor": "Enlaces Temporales S.A.S E.S.T",
+        "modalidad": "Contratación régimen especial",
+        "valor": 3450000000.0,
+        "fecha_firma": "2024-01-01",
+        "objeto": "PRESTAR SERVICIOS TEMPORALES MEDIANTE PROVISION DE TRABAJADORES EN MISION PARA EL AREA DE GESTION ASISTENCIAL EN LOS NIVELES ESPECIALIZADO; PROFESIONAL; TECNOLOGO; TECNICO Y AUXILIAR QUE SEA ACEPTADO POR EL HOSPITAL DE ACUERDO A LOS ESTÁNDARES DE TALENTO HUMANO PARA EL APOYO LOGÍSTICO ASISTENCIAL ACTIVIDADES PROPIAS DE LA MISIÓN DEL HOSPITAL EN CADA UNA DE LAS OCASIONES QUE REQUIERA DE SUS SERVICIOS    DURANTE EL DESARROLLO DEL CONTRATO."
+      },
+      {
+        "id": "CO1.PCCNTR.6661184",
+        "entidad": "E.S.E HOSPITAL SAN RAFAEL DE CAQUEZA",
+        "proveedor": "GEH SAS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1993000000.0,
+        "fecha_firma": "2024-09-01",
+        "objeto": "PRESTAR LOS SERVICIOS TEMPORALES MEDIANTE PROVISIÓN DE TRABAJADORES EN MISIÓN PARA EL ÁREA DE GESTIÓN ASISTENCIAL EN LOS NIVELES ESPECIALIZADO; PROFESIONAL; TECNÓLOGO TÉCNICO Y AUXILIAR QUE SEA ACEPTADO POR EL HOSPITAL DE ACUERDO A LOS ESTÁNDARES DE TALENTO HUMANO PARA EL APOYO LOGÍSTICO ASISTENCIAL ACTIVIDADES PROPIAS DE LA MISIÓN DEL HOSPITAL EN CADA UNA DE LAS OCASIONES QUE REQUIERA DE SUS SERVICIOS DURANTE EL DESARROLLO DEL CONTRATO"
+      },
+      {
+        "id": "CO1.PCCNTR.9365437",
+        "entidad": "E.S.E HOSPITAL SAN RAFAEL DE CAQUEZA",
+        "proveedor": "EQUIPOS CASA BLANCA SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 1807782650.0,
+        "fecha_firma": "2026-02-27",
+        "objeto": "ADQUISICION DE EQUIPOS BIOMEDICOS Y MOBILIARIO ASISTENCIAL; PARA LOS CENTROS DE SALUD DE GUAYABETAL; GUTIERREZ Y CHIPAQUE SEGUN LOS CONVENIOS ADMINISTRATIVOS SS-CD-CVI-870-205/SS-CD-CVI-871-205/SS-CD-CVI-872-205 SUSCRITOS CON LA SECRETARIA DE SALUD"
+      },
+      {
+        "id": "CO1.PCCNTR.6477838",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "GKR CONSTRUCCIONES S.A.S.",
+        "modalidad": "Seleccion Abreviada Menor Cuantia Sin Manifestacion Interes",
+        "valor": 1766368512.08,
+        "fecha_firma": "2024-07-17",
+        "objeto": "CONSTRUCCIÓN DE UNIDADES SANITARIAS EN LA ZONA RURAL DE EL MUNICIPIO DE CÁQUEZA DEPARTAMENTO DE CUNDINAMARCA EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO EPC-PDA-CI-072-2023 CELEBRADO ENTRE EMPRESAS PUBLICAS DE COLOMBIA - Y EL MUNICIPIO DE CAQUEZA - CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "E.S.E HOSPITAL SAN RAFAEL DE CAQUEZA",
+        "contratos": 3869,
+        "valor": 179209754684.9
+      },
+      {
+        "entidad": "ESTABLECIMIENTO PENITENCIARIO DE MEDIANA SEGURIDAD Y CARCELARIO DE CAQUEZA",
+        "contratos": 11,
+        "valor": 77651604.0
+      },
+      {
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "contratos": 659,
+        "valor": 24691129699.86
+      },
+      {
+        "entidad": "PERSONERÍA MUNICIPAL DE CÁQUEZA",
+        "contratos": 1,
+        "valor": 15000000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 12,
+    "valor_obras": 3777051233.39,
+    "obras_vencidas_abiertas": 8,
+    "valor_obras_vencidas_abiertas": 2996941641.47,
+    "pct_obras_vencidas_abiertas": 66.66666666666666,
+    "pct_pagado_obras_vencidas_abiertas": 30.9413,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.6477838",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "GKR CONSTRUCCIONES S.A.S.",
+        "estado": "Modificado",
+        "valor": 1766368512.08,
+        "pagado": 0.0,
+        "fecha_fin": "2025-03-31",
+        "objeto": "CONSTRUCCIÓN DE UNIDADES SANITARIAS EN LA ZONA RURAL DE EL MUNICIPIO DE CÁQUEZA DEPARTAMENTO DE CUNDINAMARCA EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO EPC-PDA-CI-072-2023 CELEBRADO ENTRE EMPRESAS PUBLICAS DE COLOMBIA - Y EL MUNICIPIO DE CAQUEZA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9430602",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "LIBARDO TORRES ROJAS",
+        "estado": "Modificado",
+        "valor": 386967218.0,
+        "pagado": 167635715.1,
+        "fecha_fin": "2026-08-31",
+        "objeto": "EL MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA PANTANO DE CARLOS SECTOR CUATRO CAMINOS EN EL MUNICIPIO DE CÁQUEZA; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU-1208-2025; EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA RESGUARDO A LA VEREDA MOYAS SECTOR EL LIMO EN EL MUNICIPIO DE CÁQUEZA; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU-1210-2025 Y EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE LA VÍA NACIONAL BOGOTÁ VILLAVICENCIO A L"
+      },
+      {
+        "id": "CO1.PCCNTR.9430603",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "DISTRIBUIDORA FERRETERA DE COLOMBIA DISFERCO A&A SAS",
+        "estado": "En ejecución",
+        "valor": 249811416.0,
+        "pagado": 237320845.0,
+        "fecha_fin": "2026-07-03",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA GIRON DE BLANCOS AL MUNICIPIO DE UBAQUE SECTOR TRILLADEROS EN EL MUNICIPIO DE CÁQUEZA; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU-1344-2025 Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL SECTOR URBANO A LA VEREDA RESGUARDO SECTOR TIERRA NEGRA EN EL MUNICIPIO DE CÁQUEZA; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU-1523 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9495046",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "DISTRIBUIDORA FERRETERA DE COLOMBIA DISFERCO A&A SAS",
+        "estado": "En ejecución",
+        "valor": 148144944.0,
+        "pagado": 139980333.0,
+        "fecha_fin": "2026-06-30",
+        "objeto": "EL MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VÍA BOGOTÁ - VILLAVICENCIO CON LA VEREDA RIO NEGRO SUR SECTOR PUENTE MAYUYA DEL MUNICIPIO DE CÁQUEZA; CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU 1065-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8720689",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "ING ADRIANA VELASQUEZ",
+        "estado": "Modificado",
+        "valor": 145706744.23,
+        "pagado": 87424046.54,
+        "fecha_fin": "2026-09-24",
+        "objeto": "DEMOLICIÓN DE LA INFRAESTRUCTURA DEL PREDIO DE LA ANTIGUA PLANTA DE BENEFICIO ANIMAL DEL MUNICIPIO DE CÁQUEZA; CUNDINAMARCA ."
+      },
+      {
+        "id": "CO1.PCCNTR.9511229",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "ROMING SAS",
+        "estado": "En ejecución",
+        "valor": 99999993.16,
+        "pagado": 94987985.5,
+        "fecha_fin": "2026-07-13",
+        "objeto": "EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA \nPALOGRANDE SECTOR SUMMER SUN DEL MUNICIPIO DE CÁQUEZA; CUNDINAMARCA EN EL MARCO DEL \nCONVENIO INTERADMINISTRATIVO NO. ICCU-1064-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7846610",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "LIBARDO TORRES ROJAS",
+        "estado": "En ejecución",
+        "valor": 99985791.0,
+        "pagado": 99985791.0,
+        "fecha_fin": "2025-08-19",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA LA VEREDA LOS PINOS CON LA VEREDA SAN JOSE EN EL SECTOR EL CALLEJON EN EL MUNICIPIO DE CAQUEZA CUNDINAMARCA EN DESARROLLO DEL CONVENIO INTERADMINISTRATIVO ICCU NO. 606 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7756410",
+        "entidad": "MUNICIPIO DE CAQUEZA",
+        "proveedor": "LIBARDO TORRES ROJAS",
+        "estado": "En ejecución",
+        "valor": 99957023.0,
+        "pagado": 99957023.0,
+        "fecha_fin": "2025-07-20",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA MOYAS A LA VEREDA VELANDIA SECTOR \nLA RECEBERA EN EL MUNICIPIO DE CAQUEZA CUNDINAMARCA EN DESARROLLO DEL CONVENIO \nINTERADMINISTRATIVO ICCU NO. 873 DE 2024"
+      }
+    ]
+  },
+  "municipio": "Caqueza",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 31.6,
+  "nivel": "bajo",
+  "posicion": 64.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,195 @@
+{
+  "resumen": {
+    "contratos": 736,
+    "valor_total": 22702802144.73,
+    "entidades": 4,
+    "proveedores": 295
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 90.4891,
+    "pct_directa_valor": 66.6635,
+    "hhi": 184.1325303392844,
+    "top1_proveedor_pct": 7.775644233149327,
+    "top5_proveedores_pct": 23.92599498930532,
+    "pareto_proveedores_80pct_valor": 121,
+    "pct_con_adicion": 18.206521739130434,
+    "top_proveedores": [
+      {
+        "proveedor": "EMPRESA DE ACUEDUCTO, ALCANTARILLADO Y ASEO DE EL ROSAL S.A E.S.P",
+        "documento": "900322072",
+        "valor": 1765289125.73,
+        "contratos": 8,
+        "participacion_pct": 7.7756
+      },
+      {
+        "proveedor": "Fungestores",
+        "documento": "900090077",
+        "valor": 1592674456.0,
+        "contratos": 6,
+        "participacion_pct": 7.0153
+      },
+      {
+        "proveedor": "ESE HOSPITAL SANTA MATILDE DE MADRID",
+        "documento": "860009555",
+        "valor": 795896595.85,
+        "contratos": 5,
+        "participacion_pct": 3.5057
+      },
+      {
+        "proveedor": "MIGUEL ANGEL BELTRAN PALMAR",
+        "documento": "11433892",
+        "valor": 693060000.0,
+        "contratos": 3,
+        "participacion_pct": 3.0528
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 584951126.0,
+        "contratos": 2,
+        "participacion_pct": 2.5766
+      },
+      {
+        "proveedor": "AGREGADOS Y SUMINISTROS L Y D SAS",
+        "documento": "900995003",
+        "valor": 462744300.0,
+        "contratos": 3,
+        "participacion_pct": 2.0383
+      },
+      {
+        "proveedor": "CONSORCIO PLACA HUELLAS EL ROSAL",
+        "documento": "902055029",
+        "valor": 460557839.0,
+        "contratos": 1,
+        "participacion_pct": 2.0286
+      },
+      {
+        "proveedor": "AXA COLPATRIA SEGUROS S.A",
+        "documento": "860002184",
+        "valor": 432958602.0,
+        "contratos": 3,
+        "participacion_pct": 1.9071
+      },
+      {
+        "proveedor": "Asociación de Caballistas Colombianos",
+        "documento": "800145491",
+        "valor": 406797104.0,
+        "contratos": 2,
+        "participacion_pct": 1.7918
+      },
+      {
+        "proveedor": "Cuerpo de Bomberos Voluntarios de El Rosal Cundinamarca",
+        "documento": "900793547",
+        "valor": 403000000.0,
+        "contratos": 4,
+        "participacion_pct": 1.7751
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7746792",
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "proveedor": "Fungestores",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 581892573.0,
+        "fecha_firma": "2025-04-08",
+        "objeto": "CONVENIO DE ASOCIACION PARA LA ATENCION INTEGRAL DE LA POBLACION BENEFICIARIA DE LOS PROGRAMAS SOCIALES DE DESARROLLO SOCIAL; SALUD Y EDUCACION DEL MUNICIPIO DE EL ROSAL CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8269299",
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "proveedor": "EMPRESA DE ACUEDUCTO, ALCANTARILLADO Y ASEO DE EL ROSAL S.A E.S.P",
+        "modalidad": "Contratación directa",
+        "valor": 572441983.0,
+        "fecha_firma": "2025-09-03",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; FINANCIEROS Y JURÍDICOS ENTRE ELMUNICIPIO DE EL ROSAL Y LA EMPRESA DE ACUEDUCTO; ALCANTARILLADO Y ASEO DE EL ROSAL S.A. E.S.P.; PARA FORTALECER EL SISTEMA DE TRATAMIENTO DE AGUAS\nRESIDUALES EN LA PTAR FASE 2; MEDIANTE LA IMPLEMENTACIÓN DE UN SISTEMA DE AIREACIÓN EFICIENTE Y AUTOMATIZADO."
+      },
+      {
+        "id": "CO1.PCCNTR.8563791",
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "proveedor": "EMPRESA DE ACUEDUCTO, ALCANTARILLADO Y ASEO DE EL ROSAL S.A E.S.P",
+        "modalidad": "Contratación directa",
+        "valor": 524864179.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "CONVENIO INTERADMINISTRATIVO PARA AUNAR ESFUERZOS ENTRE EL MUNICIPIO DE EL\nROSAL Y LA EMPRESA DE ACUEDUCTO; ALCANTARILLADO Y ASEO DE EL ROSAL S.A. ESP\nPARA REALIZAR LA OPTIMIZACIÓN; FORTALECIMIENTO Y MEJORAMIENTO DE LOS SERVICIOS\nDE ACUEDUCTO Y ALCANTARILLADO EN PUNTOS ESTRATÉGICOS DEL MUNICIPIO DE EL\nROSAL CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9438051",
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "proveedor": "CONSORCIO PLACA HUELLAS EL ROSAL",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 460557839.0,
+        "fecha_firma": "2026-04-22",
+        "objeto": "CONTRATO DE OBRA PARA EL MEJORAMIENTO DE LA RED VIAL TERCIARIA DEL MUNICIPIO DE EL ROSAL EN VIRTUD DE LOS CONVENIOS No. ICCU-1318-2025; ICCU-440-2025 E ICCU-1316-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9556606",
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "proveedor": "Fungestores",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 371468000.0,
+        "fecha_firma": "2026-06-10",
+        "objeto": "PRESTACIÓN DE SERVICIOS Y SUMINISTRO DE ELEMENTOS NECESARIOS PARA LA ATENCION INTEGRAL DE LA POBLACION VULNERABLE BENEFICIARIA DE LOS PROGRAMAS SOCIALES DE DESARROLLO SOCIAL; SALUD Y EDUCACION; ASI COMO EL PROGRAMA DE CULTURA AMBIENTAL EN EL MARCO DE LA EDUCACIÓN AMBIENTAL DE LA SECRETARIA DE DESARROLLO ECONOMICO; AGRARIO Y MEDIO AMBIENTE; DEL MUNICIPIO DE EL ROSAL CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE EL ROSAL CUNDINAMARCA*",
+        "contratos": 18,
+        "valor": 198409981.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA DEPARTAMENTAL JOSE MARIA OBANDO",
+        "contratos": 1,
+        "valor": 4699040.0
+      },
+      {
+        "entidad": "Instituto municipal de deportes recreacion cultura y turismo IMDERCULTUR EL ROSAL",
+        "contratos": 1,
+        "valor": 7280000.0
+      },
+      {
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "contratos": 716,
+        "valor": 22492413123.73
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 3,
+    "valor_obras": 528689352.92,
+    "obras_vencidas_abiertas": 2,
+    "valor_obras_vencidas_abiertas": 492289352.92,
+    "pct_obras_vencidas_abiertas": 66.66666666666666,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9438051",
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "proveedor": "CONSORCIO PLACA HUELLAS EL ROSAL",
+        "estado": "Modificado",
+        "valor": 460557839.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-06",
+        "objeto": "CONTRATO DE OBRA PARA EL MEJORAMIENTO DE LA RED VIAL TERCIARIA DEL MUNICIPIO DE EL ROSAL EN VIRTUD DE LOS CONVENIOS No. ICCU-1318-2025; ICCU-440-2025 E ICCU-1316-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9546471",
+        "entidad": "MUNICIPIO DE EL ROSAL",
+        "proveedor": "SEÑALIZACIONES Y CONSTRUCCIONES SC COLOMBIA SAS",
+        "estado": "En ejecución",
+        "valor": 31731513.92,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-02",
+        "objeto": "CONTRATO DE OBRA PARA ADELANTAR LA DEMARCACIÓN VIAL DEL SECTOR URBANO PRIORIZADO DEL MUNICIPIO DE EL ROSAL"
+      }
+    ]
+  },
+  "municipio": "El Rosal",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 64.7,
+  "nivel": "medio",
+  "posicion": 15.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,169 @@
+{
+  "resumen": {
+    "contratos": 67,
+    "valor_total": 498885438.0,
+    "entidades": 3,
+    "proveedores": 16
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 1.4925,
+    "pct_directa_valor": 2.0045,
+    "hhi": 2125.4508157587156,
+    "top1_proveedor_pct": 41.035940600054154,
+    "top5_proveedores_pct": 73.63230092917645,
+    "pareto_proveedores_80pct_valor": 7,
+    "pct_con_adicion": 2.9850746268656714,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 204722332.0,
+        "contratos": 2,
+        "participacion_pct": 41.0359
+      },
+      {
+        "proveedor": "SANDRA MILENA GUTIERREZ RAMIREZ",
+        "documento": "20394983",
+        "valor": 81935000.0,
+        "contratos": 19,
+        "participacion_pct": 16.4236
+      },
+      {
+        "proveedor": "COMERCIALIZADORA A Y F SAS",
+        "documento": "901812925",
+        "valor": 29010495.0,
+        "contratos": 3,
+        "participacion_pct": 5.8151
+      },
+      {
+        "proveedor": "SISTEMAS Y COPIADORAS S.A.S",
+        "documento": "900553744",
+        "valor": 27673000.0,
+        "contratos": 5,
+        "participacion_pct": 5.547
+      },
+      {
+        "proveedor": "FREDDY ALEXANDER FAJARDO AGUILERA",
+        "documento": "80058735",
+        "valor": 24000000.0,
+        "contratos": 6,
+        "participacion_pct": 4.8107
+      },
+      {
+        "proveedor": "DOTACIONES Y SUMINISTROS INSTITUCIONALES JM S.A.S.",
+        "documento": "900878870",
+        "valor": 21994351.0,
+        "contratos": 2,
+        "participacion_pct": 4.4087
+      },
+      {
+        "proveedor": "EVERT ANTONIO AGUILAR MUÑOZ",
+        "documento": "1032396293",
+        "valor": 20187600.0,
+        "contratos": 3,
+        "participacion_pct": 4.0465
+      },
+      {
+        "proveedor": "Fredy Lopez",
+        "documento": "7704589",
+        "valor": 18640000.0,
+        "contratos": 6,
+        "participacion_pct": 3.7363
+      },
+      {
+        "proveedor": "OSCAR VASQUEZ BAQUERO",
+        "documento": "82393399",
+        "valor": 16993910.0,
+        "contratos": 5,
+        "participacion_pct": 3.4064
+      },
+      {
+        "proveedor": "ROGELIO CRUZ",
+        "documento": "14268664",
+        "valor": 15867400.0,
+        "contratos": 4,
+        "participacion_pct": 3.1806
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9586501",
+        "entidad": "ALCALDIA MUNICIPAL DE BELTRAN",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 122000000.0,
+        "fecha_firma": "2026-06-22",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS PARA LA ORGANIZACIÓN Y DESARROLLO DE LAS  ACTIVIDADES   DE LA CELEBRACION DEL X FESTIVAL CULTURA; MITOLÓGICO; TURÍSTICO Y DEPORTIVO DEL MOHAN A REALIAZRSE EN LA VEREDA GRAMALOTAL DEL MUNICIPIO DE BELTRAN CUNDINAMRCA PARA LA VIGENCIA 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.9893301",
+        "entidad": "ALCALDIA MUNICIPAL DE BELTRAN",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 82722332.0,
+        "fecha_firma": "2026-09-04",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS PARA LA ORGANIZACIÓN Y DESARROLLO DE LAS ACTIVIDADES DEL XXXVII  FESTIVAL ARTÍSTICO; CULTURA Y RELIGIOSO DE LA VIRGEN DE LA CANOA DEL MUNICIPIO DE BELTRÁN CUNDINAMRCA PARA LA VIGENCIA 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.7154428",
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL TECNICO AGROPECUARIO JAIME DE NARVAEZ PAQUILO",
+        "proveedor": "COMERCIALIZADORA A Y F SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 22390495.0,
+        "fecha_firma": "2024-12-19",
+        "objeto": "CONTRAT SUMINISTRO DE MENAJE Y UTENSILIOS PARA RESTAURANTES ESCOLARES DE LA IE JAIME DE NARVAEZ PAQUILO Y SUS CORRESPONDIENTES SEDES"
+      },
+      {
+        "id": "CO1.PCCNTR.9952047",
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL TECNICO AGROPECUARIO JAIME DE NARVAEZ PAQUILO",
+        "proveedor": "EVERT ANTONIO AGUILAR MUÑOZ",
+        "modalidad": "Contratación régimen especial",
+        "valor": 12539600.0,
+        "fecha_firma": "2026-09-17",
+        "objeto": "CONTRATO DE ADQUISICION DE APARATOS DE USO DOMESTICO Y OTROS BIENES TRANSPORTABLE PARA LA INSTITUCIÓN EDUCATIVA RURAL DEPARTAMENTAL TÉCNICO AGROPECUARIO JAIME DE NARVÁEZ PAQUILO"
+      },
+      {
+        "id": "CO1.PCCNTR.8362066",
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL TECNICO AGROPECUARIO JAIME DE NARVAEZ PAQUILO",
+        "proveedor": "DOTACIONES Y SUMINISTROS INSTITUCIONALES JM S.A.S.",
+        "modalidad": "Contratación régimen especial",
+        "valor": 11149125.0,
+        "fecha_firma": "2025-09-26",
+        "objeto": "SUMINISTRO MATERIAL DIDÁCTICO PARA LA INSTITUCIÓN EDUCATIVA TÉCNICO AGROPECUARIO JAIME DE NARVÁEZ PAQUILÓ Y SEDES ANEXAS"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE BELTRAN",
+        "contratos": 3,
+        "valor": 214722332.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA DEPARTAMENTAL TECNICO AGROPECUARIO JAIME DE NARVAEZ BELTRAN",
+        "contratos": 35,
+        "valor": 143236386.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL TECNICO AGROPECUARIO JAIME DE NARVAEZ PAQUILO",
+        "contratos": 29,
+        "valor": 140926720.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Beltrán",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 41.8,
+  "nivel": "medio",
+  "posicion": 53.0,
+  "total_rankeados": 71
+}

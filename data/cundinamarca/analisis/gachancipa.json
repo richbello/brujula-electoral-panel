@@ -1,0 +1,205 @@
+{
+  "resumen": {
+    "contratos": 782,
+    "valor_total": 54177438174.05,
+    "entidades": 2,
+    "proveedores": 336
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 76.4706,
+    "pct_directa_valor": 33.9736,
+    "hhi": 420.69830893093217,
+    "top1_proveedor_pct": 10.685621144749733,
+    "top5_proveedores_pct": 39.766937232055255,
+    "pareto_proveedores_80pct_valor": 44,
+    "pct_con_adicion": 18.797953964194374,
+    "top_proveedores": [
+      {
+        "proveedor": "Empresa de Desarrollo Urbano de La Ceja",
+        "documento": "901105143",
+        "valor": 5789195789.21,
+        "contratos": 1,
+        "participacion_pct": 10.6856
+      },
+      {
+        "proveedor": "FUN ARTE Y VIDA",
+        "documento": "900941584",
+        "valor": 5374263670.0,
+        "contratos": 6,
+        "participacion_pct": 9.9197
+      },
+      {
+        "proveedor": "CONSORCIO ALCANTARILLADO 2026",
+        "documento": "800021000",
+        "valor": 5074189495.0,
+        "contratos": 1,
+        "participacion_pct": 9.3659
+      },
+      {
+        "proveedor": "FUNDACION CULTURAL Y ALIMENTARIA AVANZA",
+        "documento": "901892157",
+        "valor": 3005458685.38,
+        "contratos": 4,
+        "participacion_pct": 5.5474
+      },
+      {
+        "proveedor": "JJHS INGENIERIA SAS",
+        "documento": "901375569",
+        "valor": 2301600193.02,
+        "contratos": 10,
+        "participacion_pct": 4.2483
+      },
+      {
+        "proveedor": "GRUPO COMERCIAL SINERGIA",
+        "documento": "901719588",
+        "valor": 1796752052.0,
+        "contratos": 2,
+        "participacion_pct": 3.3164
+      },
+      {
+        "proveedor": "AGROQUALITY SAS",
+        "documento": "900482662",
+        "valor": 1789968347.0,
+        "contratos": 5,
+        "participacion_pct": 3.3039
+      },
+      {
+        "proveedor": "SERVI ESPECIALES GACHACIPA Y TURISMO SAS",
+        "documento": "900949189",
+        "valor": 1703626725.0,
+        "contratos": 16,
+        "participacion_pct": 3.1445
+      },
+      {
+        "proveedor": "COMERCIAL ORBELAR  SAS",
+        "documento": "900726316",
+        "valor": 1438957078.0,
+        "contratos": 7,
+        "participacion_pct": 2.656
+      },
+      {
+        "proveedor": "CARLOS EMIRO ROJAS LÓPEZ",
+        "documento": "3029313",
+        "valor": 1209409525.0,
+        "contratos": 4,
+        "participacion_pct": 2.2323
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8137905",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "Empresa de Desarrollo Urbano de La Ceja",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 5789195789.21,
+        "fecha_firma": "2025-07-29",
+        "objeto": "CONTRATO INTERADMINISTRATIVO - GERENCIA INTEGRAL PARA\nREALIZAR LA EJECUCION DE LOS CONTRATOS DE OBRA SOBRE EL\nPROYECTO DE ESTRUCTURACIÓN; CONTROL DE SEGUIMIENTO Y\nEJECUCIÓN EN LA MEJORA DE LA INFRAESTRUCTURA VIAL DEL\nMUNICIPIO DE GACHANCIPÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9461203",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "CONSORCIO ALCANTARILLADO 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 5074189495.0,
+        "fecha_firma": "2026-05-07",
+        "objeto": "OPTIMIZACIÓN DEL SISTEMA DE ALCANTARILLADO SANITARIO Y PLUVIAL FASE I OBRAS PRIORITARIAS DEL CASCO URBANO DEL MUNICIPIO DE GACHANCIPÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6894632",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "FUN ARTE Y VIDA",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 1892523800.0,
+        "fecha_firma": "2024-10-16",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL DESARROLLO DE LAS ACTIVIDADES DE LA XXIX SEMANA CULTURAL INTERNACIONAL; INTEGRANDO EL FESTIVAL EQUINO; REALIZACIÓN DEL VI FESTIVAL DE GASTRONOMÍA Y CELEBRACIÓN DEL AGUINALDO GACHANCIPEÑO EN EL MUNICIPIO DE GACHANCIPÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.9837845",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "FUNDACION CULTURAL Y ALIMENTARIA AVANZA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1443712108.78,
+        "fecha_firma": "2026-08-20",
+        "objeto": "AUNAR ESFUERZOS PARA LA REALIZACIÓN DE SALIDAS LÚDICO-RECREATIVAS; SOCIOCULTURALES Y DE BIENESTAR DIRIGIDAS A PERSONAS MAYORES DE CENTRO DÍA; CUIDADORES; POBLACIÓN CON DISCAPACIDAD FOCALIZADA EN EL PROGRAMA; Y FUNCIONARIOS DEL MUNICIPIO DE GACHANCIPÁ; INCLUYENDO TRANSPORTE; ALIMENTACIÓN; OPERACIÓN LOGÍSTICA Y ACOMPAÑAMIENTO TÉCNICO; EN EL MARCO DE LA LEY 1618 DE 2013; LEY 2297 DE 2023 Y EL PLAN DE BIENESTAR INSTITUCIONAL VIGENCIA 2026."
+      },
+      {
+        "id": "CO1.PCCNTR.8189439",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "FUN ARTE Y VIDA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1424786000.0,
+        "fecha_firma": "2025-08-12",
+        "objeto": "APOYO LOGÍSTICO PARA LA REALIZACIÓN DE LAS DIFERENTES ACTIVIDADES  ESTABLECIDAS EN EL MARCO DEL PLAN DE DESARROLLO DEL MUNICIPIO DE GACHANCIPÁ- CUNDINAMARCA; TALES COMO:  LA SEMANA DE LA JUVENTUD; XXX SEMANA CULTURAL INTERNACIONAL DE GACHANCIPÁ; CELEBRACIÓN DEL DÍA DULCE;  DESARROLLO DEL II FESTIVAL EQUINO; CELEBRACIÓN DEL V FESTIVAL GASTRONÓMICO  Y  CELEBRACIÓN DEL AGUINALDO GACHANCIPEÑO DEL MUNICIPIO DE GACHANCIPÁ VIGENCIA 2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE GACHANCIPÁ",
+        "contratos": 28,
+        "valor": 472536210.0
+      },
+      {
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "contratos": 754,
+        "valor": 53704901964.05
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 21,
+    "valor_obras": 16580046597.77,
+    "obras_vencidas_abiertas": 4,
+    "valor_obras_vencidas_abiertas": 6148217691.68,
+    "pct_obras_vencidas_abiertas": 19.047619047619047,
+    "pct_pagado_obras_vencidas_abiertas": 67.7099,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8137905",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "Empresa de Desarrollo Urbano de La Ceja",
+        "estado": "Modificado",
+        "valor": 5789195789.21,
+        "pagado": 3841447530.17,
+        "fecha_fin": "2026-05-28",
+        "objeto": "CONTRATO INTERADMINISTRATIVO - GERENCIA INTEGRAL PARA\nREALIZAR LA EJECUCION DE LOS CONTRATOS DE OBRA SOBRE EL\nPROYECTO DE ESTRUCTURACIÓN; CONTROL DE SEGUIMIENTO Y\nEJECUCIÓN EN LA MEJORA DE LA INFRAESTRUCTURA VIAL DEL\nMUNICIPIO DE GACHANCIPÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6256738",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "CLAUDIA PATRICIA RINCÓN ORTEGÓN",
+        "estado": "Modificado",
+        "valor": 270347898.5,
+        "pagado": 267069343.5,
+        "fecha_fin": "2024-09-28",
+        "objeto": "CONSTRUCCIÓN DE CUBIERTAS EN EL MUNICIPIO DE GACHANCIPÁ CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. SHVS-CDCVI-134-2022 CELEBRADO ENTRE EL DEPARTAMENTO DE CUNDINAMARCA-SECRETARÍA DE HÁBITAT Y VIVIENDA Y EL MUNICIPIO DE GACHANCIPÁ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.6314446",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "JJHS INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 54434291.97,
+        "pagado": 54434291.0,
+        "fecha_fin": "2024-08-01",
+        "objeto": "OBRAS DE MANTENIMIENTO Y ADECUACIÓN DE CENTROS EDUCATIVOS DEL MUNICIPIO DE GACHANCIPÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9769377",
+        "entidad": "MUNICIPIO DE GACHANCIPA",
+        "proveedor": "JJHS INGENIERIA SAS",
+        "estado": "En ejecución",
+        "valor": 34239712.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-02",
+        "objeto": "OBRAS DE MANTENIMIENTO Y ADECUACIÓN DEL CENTRO DE VIDA SENSORIAL Y CASA DE ADULTO MAYOR DEL MUNICIPIO DE GACHANCIPÁ CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Gachancipá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 41.2,
+  "nivel": "medio",
+  "posicion": 55.0,
+  "total_rankeados": 71
+}

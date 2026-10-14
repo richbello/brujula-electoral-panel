@@ -1,0 +1,370 @@
+{
+  "resumen": {
+    "contratos": 4601,
+    "valor_total": 730372551555.71,
+    "entidades": 11,
+    "proveedores": 1730
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 79.374,
+    "pct_directa_valor": 37.2027,
+    "hhi": 224.82468789724325,
+    "top1_proveedor_pct": 8.01240077540916,
+    "top5_proveedores_pct": 24.98831477760649,
+    "pareto_proveedores_80pct_valor": 70,
+    "pct_con_adicion": 28.580743316670286,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 51500000000.0,
+        "contratos": 1,
+        "participacion_pct": 8.0124
+      },
+      {
+        "proveedor": "AGUAS DE FACATATIVA S.A.S. E.S.P.",
+        "documento": "800188660",
+        "valor": 39877994008.31,
+        "contratos": 19,
+        "participacion_pct": 6.2042
+      },
+      {
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "documento": "832003417",
+        "valor": 24041606095.39,
+        "contratos": 38,
+        "participacion_pct": 3.7404
+      },
+      {
+        "proveedor": "DESARROLLO E INTEGRACION DE TECNOLOGIA Y COMUNICACIONES SAS - DEINTEKO SAS",
+        "documento": "900009482",
+        "valor": 23692705705.73,
+        "contratos": 11,
+        "participacion_pct": 3.6861
+      },
+      {
+        "proveedor": "MOTOROLA SOLUTIONS COLOMBIA LTDA.",
+        "documento": "800235050",
+        "valor": 21501004373.0,
+        "contratos": 3,
+        "participacion_pct": 3.3451
+      },
+      {
+        "proveedor": "DISTRIBUIDORA COLOMBIANA DE MEDICAMENTOS  Y TECNOLOGIAS EN SALUD SAS - DISCOLMETS S.A.S",
+        "documento": "828002423",
+        "valor": 19744714000.0,
+        "contratos": 4,
+        "participacion_pct": 3.0719
+      },
+      {
+        "proveedor": "GLOBAL OPEN TECHNOLOGIES SAS",
+        "documento": "900461960",
+        "valor": 17911774089.0,
+        "contratos": 6,
+        "participacion_pct": 2.7867
+      },
+      {
+        "proveedor": "NEWSAT SAS",
+        "documento": "830513366",
+        "valor": 16736458272.2,
+        "contratos": 5,
+        "participacion_pct": 2.6039
+      },
+      {
+        "proveedor": "NETWORK & ACCESORIES SAS",
+        "documento": "901159165",
+        "valor": 15511207644.0,
+        "contratos": 9,
+        "participacion_pct": 2.4132
+      },
+      {
+        "proveedor": "ESPECIALISTAS EN INNOVACIÓN Y TECNOLOGÍAS MEDICAS ESINTEC M SAS",
+        "documento": "901468817",
+        "valor": 15199814000.0,
+        "contratos": 8,
+        "participacion_pct": 2.3648
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7900701",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 51500000000.0,
+        "fecha_firma": "2025-05-22",
+        "objeto": "CONTRATO DE EMPRÉSTITO Y PIGNORACIÓN DE RENTAS CON VARIAS LÍNEAS DE FINANCIACIÓN DE LARGO PLAZO"
+      },
+      {
+        "id": "CO1.PCCNTR.9548816",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "proveedor": "UT-EJC-INREACH-2026",
+        "modalidad": "Licitación pública",
+        "valor": 15021468998.46,
+        "fecha_firma": "2026-06-16",
+        "objeto": "ADQUISICIÓN DE EQUIPOS DE GEOPOSICIONAMIENTO Y SERVICIO SATELITAL INREACH PARA EL EJÉRCITO NACIONAL; A EJECUTAR EN LA VIGENCIA 2026."
+      },
+      {
+        "id": "CO1.PCCNTR.9230823",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "UNION TEMPORAL NUTRIMOS FACA",
+        "modalidad": "Licitación pública",
+        "valor": 14993940696.0,
+        "fecha_firma": "2026-01-30",
+        "objeto": "CONTRATAR LA PRESTACIÓN DEL SERVICIO DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR - PAE; A TRAVÉS DEL CUAL SE BRINDA UN COMPLEMENTO ALIMENTARIO PARA NIÑOS; NIÑAS Y ADOLESCENTES DE ACUERDO CON LA RESOLUCIÓN 335 DE 2021 DE LA UNIDAD ADMINISTRATIVA DE ALIMENTOS PARA APRENDER - UAPA EN LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE FACATATIVÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8043810",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "proveedor": "CODALTEC",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 14040000000.0,
+        "fecha_firma": "2025-07-08",
+        "objeto": "ADQUISICIÓN DE EQUIPOS ANTIDRONES TACTICOS; PARA LA SEGUNDA DIVISION DEL EJERCITO NACIONAL; A EJECUTAR EN LA VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9917576",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "UNION TEMPORAL INTEGRAL SECURITY 2026",
+        "modalidad": "Licitación pública",
+        "valor": 14000000000.0,
+        "fecha_firma": "2026-09-09",
+        "objeto": "CONTRATAR LA PRESTACIÓN DE SERVICIOS DE VIGILANCIA Y SEGURIDAD PRIVADA PARA LA PROTECCIÓN Y CUSTODIA DE LAS INSTALACIONES ADMINISTRATIVAS; INSTITUCIONES EDUCATIVAS Y DEMÁS BIENES INMUEBLES BAJO ADMINISTRACIÓN; TENENCIA O RESPONSABILIDAD DEL MUNICIPIO DE FACATATIVA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "AGUAS DE FACATATIVA S.A.S. E.S.P.",
+        "contratos": 1,
+        "valor": 12000000.0
+      },
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "contratos": 3148,
+        "valor": 318799992334.84
+      },
+      {
+        "entidad": "CARCEL Y PENITENCIARIA DE MEDIA Y MINIMA SEGURIDAD PARA MIEMBROS DE LA FUERZA PUBLICA DE FACATATIVA - POLICIA NACIONAL",
+        "contratos": 44,
+        "valor": 447156042.0
+      },
+      {
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "contratos": 345,
+        "valor": 275220831284.18
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE FACATATIVA",
+        "contratos": 55,
+        "valor": 1303677351.0
+      },
+      {
+        "entidad": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "contratos": 39,
+        "valor": 5487477830.86
+      },
+      {
+        "entidad": "EMPRESA SOCIAL DEL ESTADO HOSPITAL SAN RAFAEL DE FACATATIVA",
+        "contratos": 232,
+        "valor": 103454745942.59
+      },
+      {
+        "entidad": "ESCUELA NACIONAL DE CARABINEROS POLICIA NACIONAL",
+        "contratos": 156,
+        "valor": 12065728524.24
+      },
+      {
+        "entidad": "INSTITUCIÓN EDUCATIVA MUNICIPAL TÉCNICA COMERCIAL SANTA RITA - FACATATIVÁ",
+        "contratos": 1,
+        "valor": 34140000.0
+      },
+      {
+        "entidad": "INSTITUTO DE DEPORTES Y RECREACIÓN DEL MUNICIPIO DE FACATATIVA",
+        "contratos": 450,
+        "valor": 11095037143.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE FACATATIVA",
+        "contratos": 121,
+        "valor": 2451765103.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 29,
+    "valor_obras": 47706831021.2,
+    "obras_vencidas_abiertas": 16,
+    "valor_obras_vencidas_abiertas": 15081042622.72,
+    "pct_obras_vencidas_abiertas": 55.172413793103445,
+    "pct_pagado_obras_vencidas_abiertas": 44.2217,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7187835",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "CONSORCIO VIAS FACA",
+        "estado": "Modificado",
+        "valor": 5674617468.75,
+        "pagado": 4523233156.46,
+        "fecha_fin": "2026-03-10",
+        "objeto": "CONTRATAR LAS OBRAS NECESARIAS PARA EL MANTENIMIENTO DE VIAS URBANAS Y RURALES EN EL MUNICIPIO DE FACATATIVÁ."
+      },
+      {
+        "id": "CO1.PCCNTR.8403004",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "estado": "Modificado",
+        "valor": 4500000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-31",
+        "objeto": "GERENCIA INTEGRAL PARA EL DESARROLLO Y EJECUCIÓN DEL PROYECTO DENOMINADO: TERMINACIÓN DE LA INFRAESTRUCTURA DESTINADA PARA LA INSTITUCIÓN EDUCATIVA MUNICIPAL LA ARBOLEDA SEDE MARIA PATRICIA CIFUENTES DEL MUNICIPIO DE FACATATIVÁ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.6909905",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "CONSORCIO MANTENIMIENTO FAC",
+        "estado": "Modificado",
+        "valor": 1811118799.68,
+        "pagado": 1383331246.74,
+        "fecha_fin": "2025-12-20",
+        "objeto": "MEJORAIENTO; MANTNEIMIENTO Y ADECUACIÓN CENTRO ADMIISTRATIVO DE DESARROLLO SOCIAL Y PALACIO MUNICIPAL ALCALDIA DEL MUNICIPIO DE FACATATIVA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8244715",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "ROMING SAS",
+        "estado": "Modificado",
+        "valor": 930085965.0,
+        "pagado": 564443151.58,
+        "fecha_fin": "2026-02-28",
+        "objeto": "MEJORAMIENTO DE VÍAS TERCIARIAS MEDIANTE LA CONSTRUCCIÓN DE PLACA HUELLAS EN EL MUNICIPIO DE FACATATIVÁ SEGÚN CONVENIOS ICCU 583-24; 587-24; 772-24; 792-24"
+      },
+      {
+        "id": "CO1.PCCNTR.8114375",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "CONSORCIO EDUCATIVO FAC 2025",
+        "estado": "Suspendido",
+        "valor": 623966668.88,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-16",
+        "objeto": "REALIZAR ACCIONES PARA LA ADECUACION Y MEJORAMIENTO DE LOS RESTAURANTES ESCOLARES DE LAS INSTITUCIONES EDUCATIVAS MUNICIPALES QUE PERMITAN MEJORAR LA PRESTACION DEL PROGRAMA DE ALIMENTACION ESCOLAR PAE EN EL MARCO DE MEJORAR AMBIENTES EDUCATIVOS (INFRAESTRUCTURA MEJORADA"
+      },
+      {
+        "id": "CO1.PCCNTR.8749135",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "arkan arquitectura",
+        "estado": "Suspendido",
+        "valor": 460721710.97,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-23",
+        "objeto": "ADECUACIÓN DEL ESPACIO PUBLICO MEDIANTE LA CONSTRUCCIÓN DE CERRAMIENTOS PERIMETRALES EN PARQUES DE FACATATIVÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.9538894",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "ROMING SAS",
+        "estado": "Suspendido",
+        "valor": 337523373.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-12",
+        "objeto": "MEJORAMIENTO DE VÍAS TERCIARIAS MEDIANTE LA CONSTRUCCIÓN DE PLACA HUELLAS EN EL MUNICIPIO DE FACATATIVÁ SEGÚN CONVENIOS ICCU 410-25 Y 1073-25"
+      },
+      {
+        "id": "CO1.PCCNTR.8062325",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "CONSORCIO OBRAS M&C",
+        "estado": "Suspendido",
+        "valor": 249625558.32,
+        "pagado": 54338405.27,
+        "fecha_fin": "2025-12-30",
+        "objeto": "CONSTRUCCIÓN; ADECUACIÓN Y REHABILITACIÓN DE SENDEROS PEATONALES; CICLO INFRAESTRUCTURA Y ESPACIO PÚBLICO EN FACATATIVÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.6307496",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "proveedor": "gilberth",
+        "estado": "En ejecución",
+        "valor": 103999968.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MANTENIMIENTO INSTALACIONES DE LAS UNIDADES DEL CANTÓN MILITAR BRIGADA ESPECIAL \nDE COMUNICACIONES EN FACATATIVÁ; A EJECUTAR EN LA VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8262777",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "proveedor": "INELMED",
+        "estado": "En ejecución",
+        "valor": 91326024.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-19",
+        "objeto": "MANTENIMIENTO DE INSTALACIONES DE LAS UNIDADES DEL CANTON MILITAR BRIGADA ESPECIAL DE COMUNICACIONES EN FACATATIVA; A EJECUTAR VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8521947",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "proveedor": "INELMED",
+        "estado": "En ejecución",
+        "valor": 84288098.27,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-15",
+        "objeto": "SERVICIO DE INSTALACIÓN; PUESTA EN FUNCIONAMIENTO A TODO COSTO DE CABLE RED LAN Y ADECUACION DE ACOMETIDA EXTERNA PARA LAS OFICINAS Y AULAS DEL BATALLÓN DE AVIACIÓN No. 2; A EJECUTAR EN LA VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7776860",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "CAPPING INGENIERIA Y ARQUITECTURA S.A.S.",
+        "estado": "Modificado",
+        "valor": 64000000.0,
+        "pagado": 57600000.0,
+        "fecha_fin": "2025-06-19",
+        "objeto": "MANTENIMIENTO DE LA CUBIERTA Y ADECUACIONES PARA LA CONSERVACIÓN DEL EDIFICIO PÚBLICO SEDE RAFAEL POMBO; EN EL MUNICIPIO DE FACATATIVÁ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8280954",
+        "entidad": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "JBC INGENIERIA S.A.S",
+        "estado": "Modificado",
+        "valor": 54977129.35,
+        "pagado": 46730559.66,
+        "fecha_fin": "2025-12-28",
+        "objeto": "REHABILITACIÓN Y MANTENIMIENTO DE LA VÍA EN LA CARRERA 2A SUR; SECTOR LAS PALMAS II; EN FACATATIVÁ; CUNDINAMARCA; COMO PARTE DEL MEJORAMIENTO DE LA INFRAESTRUCTURA VIAL URBANA DEL MUNICIPIO. EL PROYECTO INCLUIRÁ OBRAS DE MITIGACIÓN DE RIESGOS PARA GARANTIZAR LA ESTABILIDAD; FUNCIONALIDAD Y SEGURIDAD DE LA VÍA"
+      },
+      {
+        "id": "CO1.PCCNTR.8730864",
+        "entidad": "PERSONERIA MUNICIPAL DE FACATATIVA",
+        "proveedor": "SOLUCIONES FOUR POINTS S.A.S",
+        "estado": "Modificado",
+        "valor": 39418750.0,
+        "pagado": 39416727.0,
+        "fecha_fin": "2026-01-30",
+        "objeto": "SUMINISTRO DE ELEMENTOS E INSTALACION PARA LA DIVISIÓN Y ADECUACIONES DE LA NUEVA SEDE DE LA PERSONERIA MUNICIPAL DE FACATATIVA"
+      },
+      {
+        "id": "CO1.PCCNTR.7031335",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "proveedor": "M&C CONSTRUCCIONES Y SERVICIOS SAS",
+        "estado": "Modificado",
+        "valor": 32373108.5,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-23",
+        "objeto": "ADECUACIÓN Y REPARACIÓN DE BAÑOS -COMPAÑÍA INSTRUCCIÓN - KEYSPAN"
+      },
+      {
+        "id": "CO1.PCCNTR.8484910",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE TELEMATICA",
+        "proveedor": "DKS INGENIERIA Y CONSTRUCCION S.A.S.",
+        "estado": "En ejecución",
+        "valor": 23000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-05",
+        "objeto": "MANTENIMIENTO DE INSTALACIONES DEL DISPENSARIO MÉDICO DEL BASCO A TODO COSTO CON RECURSOS PROPIOS DE FONDO INTERNO; A EJECUTAR EN LA VIGENCIA 2025."
+      }
+    ]
+  },
+  "municipio": "Facatativá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 52.4,
+  "nivel": "medio",
+  "posicion": 32.0,
+  "total_rankeados": 71
+}

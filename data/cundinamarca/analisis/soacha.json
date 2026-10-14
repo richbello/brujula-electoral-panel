@@ -1,0 +1,355 @@
+{
+  "resumen": {
+    "contratos": 21773,
+    "valor_total": 1980107290953.77,
+    "entidades": 10,
+    "proveedores": 7410
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 55.5137,
+    "pct_directa_valor": 46.7713,
+    "hhi": 233.72827981207405,
+    "top1_proveedor_pct": 11.622941273899814,
+    "top5_proveedores_pct": 26.472838550409207,
+    "pareto_proveedores_80pct_valor": 876,
+    "pct_con_adicion": 28.406742295503605,
+    "top_proveedores": [
+      {
+        "proveedor": "EPUXUA E.I.C.E.",
+        "documento": "901511522",
+        "valor": 182568430996.1,
+        "contratos": 36,
+        "participacion_pct": 11.6229
+      },
+      {
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "documento": "901084024",
+        "valor": 95103793366.8,
+        "contratos": 6,
+        "participacion_pct": 6.0546
+      },
+      {
+        "proveedor": "BANCO BILBAO VIZCAYA ARGENTARIA S.A. (OFICIAL)",
+        "documento": "860003020",
+        "valor": 59433962263.0,
+        "contratos": 1,
+        "participacion_pct": 3.7838
+      },
+      {
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "documento": "900258772",
+        "valor": 40269533557.97,
+        "contratos": 6,
+        "participacion_pct": 2.5637
+      },
+      {
+        "proveedor": "Banco Davivienda",
+        "documento": "8600343137",
+        "valor": 38448853327.0,
+        "contratos": 4,
+        "participacion_pct": 2.4478
+      },
+      {
+        "proveedor": "CAJA DE COMPENSACION FAMILIAR COMPENSAR",
+        "documento": "860066942",
+        "valor": 33697258042.0,
+        "contratos": 7,
+        "participacion_pct": 2.1453
+      },
+      {
+        "proveedor": "Laboratorio Clínico Santa Lucia IPS S.A.S.",
+        "documento": "900434332",
+        "valor": 31408560867.0,
+        "contratos": 11,
+        "participacion_pct": 1.9996
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 30000000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.9099
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 25091668100.0,
+        "contratos": 18,
+        "participacion_pct": 1.5974
+      },
+      {
+        "proveedor": "CONSORCIO PLAN VIAL SOACHA 26",
+        "documento": "902085422",
+        "valor": 22133299442.62,
+        "contratos": 1,
+        "participacion_pct": 1.4091
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6086356",
+        "entidad": "empresa social del estado región de salud soacha.",
+        "proveedor": "CONSORCIO HOSPITALARIO SOACHA 2024",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 202173502349.0,
+        "fecha_firma": "2024-03-23",
+        "objeto": "CONSTRUCCION DE INFRAESTRUCTURA HOSPITALARIA EN EL MUNICIPIO DE SOACHA CUNDINAMARCA EN DESARROLLO DEL CONVENIO MARCO N ICCU-1216 DE 2023"
+      },
+      {
+        "id": "CO1.PCCNTR.8166586",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "BANCO BILBAO VIZCAYA ARGENTARIA S.A. (OFICIAL)",
+        "modalidad": "Contratación directa",
+        "valor": 59433962263.0,
+        "fecha_firma": "2025-08-15",
+        "objeto": "EL PRESTAMISTA HA ACORDADO PARA CON EL PRESTATARIO OTORGARLE UN EMPRÉSTITO INTERNO HASTA POR LA SUMA DE CINCUENTA Y NUEVE MIL CUATROCIENTOS TREINTA Y TRES MILLONES NOVECIENTOS SESENTA Y DOS MIL DOSCIENTOS SESENTA Y TRES PESOS M/CTE ($59.433.962.263); CON CARGO A LA LÍNEA DE CRÉDITO COMERCIO; EN LA MODALIDAD DE CRÉDITO PÚBLICO INTERNO Y PIGNORACIÓN DE RENTAS; MEDIANTE DESEMBOLSOS QUE REQUIERA EL PRESTATARIO; Y EN LA MEDIDA EN QUE ESTE LO ESTIME CONVENIENTE."
+      },
+      {
+        "id": "CO1.PCCNTR.8713514",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "PROMESA DE SOCIEDAD FUTURA SOLAP",
+        "modalidad": "Licitación pública",
+        "valor": 49115659583.0,
+        "fecha_firma": "2026-02-16",
+        "objeto": "SELECCIONAR UN SOCIO ESTRATÉGICO PARA LA CONSTITUCIÓN DE UNA SOCIEDAD DE ECONOMÍA MIXTA; BAJO LA FORMA DE SOCIEDAD POR ACCIONES SIMPLIFICADA; PARA LA PRESTACIÓN DEL SERVICIO DE ALUMBRADO PÚBLICO EN TODOS SUS COMPONENTES Y DEMÁS ACTIVIDADES CONEXAS A LA PRESTACIÓN DEL SERVICIO"
+      },
+      {
+        "id": "CO1.PCCNTR.8367035",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "EPUXUA E.I.C.E.",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 37100000000.0,
+        "fecha_firma": "2025-09-24",
+        "objeto": "GERENCIA INTEGRAL PARA LA ESTRUCTURACION DE LOS ESTUDIOS Y DISEÑOS; CONSTRUCCION Y DOTACION DE LA OBRA DENOMINADA PLAZOLETA DE LOS SUEÑOS EN LA CIUDAD DE SOACHA"
+      },
+      {
+        "id": "CO1.PCCNTR.8746777",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "modalidad": "Licitación pública",
+        "valor": 31841860181.45,
+        "fecha_firma": "2025-12-31",
+        "objeto": "PRESTAR EL SERVICIO DE ALIMENTACIÓN ESCOLAR; A TRAVÉS DEL CUAL SE BRINDA UN COMPLEMENTO ALIMENTARIO; A NIÑOS; NIÑAS Y ADOLESCENTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO DE SOACHA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Concejo Municipal de Soacha",
+        "contratos": 391,
+        "valor": 7156344482.0
+      },
+      {
+        "entidad": "EPUXUA E.I.C.E.",
+        "contratos": 548,
+        "valor": 112722600113.1
+      },
+      {
+        "entidad": "ESE MUNICIPAL DE SOACHA JULIO CESAR PEÑALOZA*",
+        "contratos": 3961,
+        "valor": 65037191103.91
+      },
+      {
+        "entidad": "IE LUIS HENRIQUEZ",
+        "contratos": 1,
+        "valor": 193547346.11
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA MANUELA BELTRAN - SOACHA",
+        "contratos": 10,
+        "valor": 95102416.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL PARA LA RECREACION Y EL DEPORTE DE SOACHA",
+        "contratos": 1037,
+        "valor": 46348238845.01
+      },
+      {
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "contratos": 9297,
+        "valor": 1218704052848.79
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE SOACHA",
+        "contratos": 219,
+        "valor": 4216996411.28
+      },
+      {
+        "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+        "contratos": 1480,
+        "valor": 57144462384.05
+      },
+      {
+        "entidad": "empresa social del estado región de salud soacha.",
+        "contratos": 4755,
+        "valor": 468488755003.52
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 27,
+    "valor_obras": 275876371586.47,
+    "obras_vencidas_abiertas": 15,
+    "valor_obras_vencidas_abiertas": 18528932065.6,
+    "pct_obras_vencidas_abiertas": 55.55555555555556,
+    "pct_pagado_obras_vencidas_abiertas": 0.1929,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8749715",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "CONSORCIO SANTA INES",
+        "estado": "Suspendido",
+        "valor": 7967589880.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-01",
+        "objeto": "MEJORAMIENTO; REHABILITACION Y PAVIMENTACION DE VIAS URBANAS EN LAS COMUNAS 1; 2 Y 5 INCLUYE OBRAS COMPLEMENTARIAS DE ALCANTARILLADO SANITARIO Y PLUVIAL DEL MUNICIPIO DE SOACHA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7174407",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "UNIÓN TEMPORAL PINWATER",
+        "estado": "Modificado",
+        "valor": 3668238444.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-15",
+        "objeto": "IMPLEMENTAR LA SEÑALIZACIÓN VIAL VERTICAL Y HORIZONTAL; DISPOSITIVOS PARA LA REGULACIÓN DEL TRÁNSITO Y DISEÑOS E INTERVENCIÓN DEL ESPACIO PÚBLICO MEDIANTE URBANISMO TÁCTICO EN CUMPLIMIENTO DE LA ESTRATEGIA DE SEGURIDAD VIAL DE LA CIUDAD DE SOACHA  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8122683",
+        "entidad": "EPUXUA E.I.C.E.",
+        "proveedor": "UNIÓN TEMPORAL VALLES DE SANTA ANA 2025",
+        "estado": "Suspendido",
+        "valor": 1819038354.22,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-24",
+        "objeto": "CONSTRUCCIÓN; AMPLIACIÓN; OPTIMIZACIÓN Y MEJORAMIENTO DE LAS REDES DE ALCANTARILLADO SANITARIO EN EL SECTOR; VALLES DE SANTA ANA; EN EL MUNICIPIO DE SOACHA; CUNDINAMARCA; EN EL MARCO DEL CONTRATO INTERADMINISTRATIVO 3572/2023; SUSCRITO ENTRE LA SECRETARIA DE INFRAESTRUCTURA DEL MUNICIPIO DE SOACHA Y EPUXUA AVANZA E.I.C.E"
+      },
+      {
+        "id": "CO1.PCCNTR.7672145",
+        "entidad": "EPUXUA E.I.C.E.",
+        "proveedor": "CONSORCIO EL FUTURO",
+        "estado": "Modificado",
+        "valor": 1363472683.28,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-29",
+        "objeto": "REMODELACION; RENOVACION ARQUITECTONICA Y PAISAJISTICA DE LA ZONA VERDE DENOMINADO PARQUE DEL FUTURO UBICADA EN LA CALLE 19 CON AVENIDA 24 ESQUINA DEL MUNICIPIO DE GIRARDOT CUNDINAMARCA; OBRA PARQUE EL FUTURO EN EL MARCO DEL CONTRATO INTERADMINISTRATIVO 1331 2024; SUSCRITO ENTRE LA ALCALDIA DE GIRARDOT Y EPUXUA AVANZA E.I.C.E."
+      },
+      {
+        "id": "CO1.PCCNTR.8651374",
+        "entidad": "EPUXUA E.I.C.E.",
+        "proveedor": "PANAM INGENIEROS SAS",
+        "estado": "Suspendido",
+        "valor": 872344152.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-17",
+        "objeto": "OPTIMIZACIÓN DE REDES DE ALCANTARILLADO SANITARIO PARA LOS BARRIOS EL DANUBIO Y VILLA ROSITA - FASE 1 ETAPA 2 EN EL MUNICIPIO DE SOACHA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8063744",
+        "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+        "proveedor": "PROSOI.SAS",
+        "estado": "Modificado",
+        "valor": 839064539.29,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-12",
+        "objeto": "CONTRATAR LA ADECUACIÓN Y MODERNIZACIÓN DE LA\nRED HIDRÁULICA; DEL SISTEMA DE BOMBEO Y DE LAS BATERIAS SANITARIAS DEL CENTRO DE\nTECNOLOGÍAS PARA LA CONSTRUCCION Y LA MADERA SENA- COMPLEJO CAZUCÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.7933327",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "CONSORCIO PANAMA PH",
+        "estado": "En ejecución",
+        "valor": 700000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-14",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE EL CASCO URBANO A LA VEREDA PANAMÁ EN EL SECTOR EL LIMONAR DEL MUNICIPIO DE SOACHA; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU 830 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8516954",
+        "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+        "proveedor": "PROSOI.SAS",
+        "estado": "Modificado",
+        "valor": 334187855.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-30",
+        "objeto": "Contratar la ejecución de la Fase 1 del proyecto de\nadecuación de cubiertas y cortinas enrollables del Complejo Cazucá (Centro de Tecnologías\ndel Transporte); conforme a las especificaciones técnicas del proceso de contratación"
+      },
+      {
+        "id": "CO1.PCCNTR.7576484",
+        "entidad": "EPUXUA E.I.C.E.",
+        "proveedor": "CONSORCIO ALCANTARILLADO SAN BERNARDO",
+        "estado": "Modificado",
+        "valor": 319544072.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-06-27",
+        "objeto": "REHABILITACION DE LA RED DE ALCANTARILLADO DE LA CALLE 7 ENTRE CARRERAS 3 Y 5 Y LA CARRERA 3 ENTRE CALLE 7 Y CALLE 8 SECTOR ANTIGUO CEMENTERIO; DEL AREA URBANA DEL MUNICIPIO DE SAN BERNARDO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9486902",
+        "entidad": "IE LUIS HENRIQUEZ",
+        "proveedor": "TELEACCESS LTDA",
+        "estado": "Modificado",
+        "valor": 193547346.11,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-31",
+        "objeto": "EJECUTAR LAS OBRAS DE ADECUACIÓN PARA CERRAMIENTO Y CUBIERTA DE ESPACIOS EDUCATIVOS- AULAS DE CLASE EN LA INSTITUCIÓN EDUCATIVA LUIS HENRÍQUEZ DEL MUNICIPIO DE SOACHA"
+      },
+      {
+        "id": "CO1.PCCNTR.8746676",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "cruzark sas",
+        "estado": "Modificado",
+        "valor": 187815162.7,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-14",
+        "objeto": "CONTRATAR LAS LABORES DE DEMOLICIÓN; MANEJO Y DISTRIBUCIÓN DE RESIDUOS Y CERRAMIENTO DE LAS INFRAESTRUCTURAS QUE SE ENCUENTRAN EN CONDICIÓN DE DETERIORO; RUINA O RIESGO UBICADAS EN EL MUNICIPIO DE SOACHA BMP2024257540056"
+      },
+      {
+        "id": "CO1.PCCNTR.8005329",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "ICSSA SAS",
+        "estado": "Modificado",
+        "valor": 99949138.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE LA VEREDA CHACUA (SOACHA) AL SECTOR ALTO DE CABRERA DEL MUNICIPIO DE SOACHA; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU 824 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.6086302",
+        "entidad": "MUNICIPIO DE SOACHA.",
+        "proveedor": "DAVID STEVE FAJARDO GERENA",
+        "estado": "Modificado",
+        "valor": 79398670.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-04-30",
+        "objeto": "MANTENIMIENTO DE LA INFRAESTRUCTURA DESTINADA PARA EL FUNCIONAMIENTO DE LA PLAZA DE MERCADO DEL MUNICIPIO DE SOACHA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8707861",
+        "entidad": "Concejo Municipal de Soacha",
+        "proveedor": "COLTERRA CP SAS",
+        "estado": "Modificado",
+        "valor": 49000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MANTENIMIENTO ADECUACION Y REPARACIONES LOCATIVAS DE LA INFRAESTRUCTURA FÍSICA DE LAS INSTALACIONES DEL CONCEJO MUNICIPAL DE SOACHA¨"
+      },
+      {
+        "id": "CO1.PCCNTR.8217566",
+        "entidad": "SENA GRUPO DE APOYO ADMINISTRATIVO INTERCENTROS CAZUCA",
+        "proveedor": "CONTROL SERVICES ENGINEERING S.A.S",
+        "estado": "En ejecución",
+        "valor": 35741769.0,
+        "pagado": 35741769.0,
+        "fecha_fin": "2025-11-18",
+        "objeto": "Contratar el mantenimiento preventivo y correctivo de la Red Contraincendios; que\nincluye Instalación Eléctrica; Tableros de Control de las Motobombas; Sistema de llenado del Tanque; lavado y desinfección del Centro de Tecnologías del Transporte SENA - Complejo Cazuca"
+      }
+    ]
+  },
+  "municipio": "Soacha",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 60.5,
+  "nivel": "medio",
+  "posicion": 19.0,
+  "total_rankeados": 71
+}
