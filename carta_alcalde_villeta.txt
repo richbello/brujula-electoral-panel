@@ -1,157 +1,59 @@
+PARA:    contactenos@villeta-cundinamarca.gov.co
+CC:      alcaldia@villeta-cundinamarca.gov.co
+ASUNTO:  Diagnóstico de contratación de Villeta en SECOP II – solicitud de videollamada
+ADJUNTO: villeta_diagnostico_detallado.pdf
+
+--------------------------------------------------------------------------------
+
 Bogotá D.C., 14 de octubre de 2026
 
-Estimado Alcalde BERNARDO OLAYA TRIANA
-Alcaldía Municipal de Villeta
-Cundinamarca
+Señor
+BERNARDO OLAYA TRIANA
+Alcalde Municipal de Villeta
+Palacio Municipal, Calle 4 # 5-61
+Villeta, Cundinamarca
 
----
+Respetado señor Alcalde:
 
-ASUNTO: Diagnóstico de contratos públicos — Hallazgos críticos en SECOP II
+Le escribo para compartirle un diagnóstico de la contratación de Villeta que preparé a
+partir de los datos públicos de SECOP II (enero de 2024 a la fecha). Revisé los 1.666
+contratos de la Alcaldía, el Instituto Municipal de Turismo, Cultura, Recreación y Deporte
+y la Empresa de Servicios Públicos; dejé por fuera los del SENA, el INPEC, el Concejo y la
+Personería, que no dependen de su administración.
 
----
+Tres cosas me parecieron importantes que usted conozca:
 
-Estimado Alcalde Olaya Triana,
+1. Al comparar Villeta con los 71 municipios de Cundinamarca que se pueden medir, el
+   municipio ocupa el puesto 4 en proporción de obras con plazo vencido que siguen abiertas
+   en SECOP II (92,9 % frente a una mediana de 55,4 %) y el puesto 2 en valor adjudicado por
+   contratación directa (69,5 % frente a 42,8 %). Son los indicadores con los que los entes
+   de control suelen escoger a quién revisar primero.
 
-Le escribo para compartir un análisis técnico de los contratos públicos de Villeta que he
-realizado utilizando datos de SECOP II (2024-presente). He encontrado hallazgos que considero
-deben ser de su conocimiento inmediato.
+2. De once contratos de mejoramiento de vías rurales firmados en 2025, diez siguen
+   apareciendo "en ejecución" o "modificados" meses después de su fecha de terminación,
+   sin pagos reportados. Cuatro de ellos tienen el mismo valor, $99.996.984, y se firmaron
+   en seis semanas. Eso no demuestra ninguna irregularidad, pero conviene tener lista la
+   justificación técnica antes de que la pidan.
 
----
+3. 1.081 contratos tienen la fecha de fin vencida sin cierre en la plataforma. La mayoría
+   son de prestación de servicios y probablemente solo falta actualizar su estado; pero 149
+   (suministros, convenios, obras y otros, por $14.556 millones) llevan más de seis meses
+   vencidos, cuando el plazo de liquidación ya habría corrido.
 
-📊 HALLAZGOS PRINCIPALES
+El documento adjunto trae cada contrato con su enlace directo a SECOP II, para que su
+equipo lo verifique en minutos.
 
-Villeta ocupa el **PRIMER LUGAR** entre los 102 municipios de Cundinamarca analizados en
-términos de RIESGO FISCAL:
+Le propongo una videollamada de 20 minutos, en el día y la hora que usted indique, para
+revisar juntos estos contratos en la plataforma y contarle cómo podría funcionar un
+seguimiento mensual que le avise con anticipación qué contratos van a vencer y qué
+patrones van a mirar los entes de control. La reunión no tiene costo ni compromiso.
 
-  • **661 obras vencidas** sin cerrar
-  • **2,659 contratos totales** en el período
-  • **Índice de alertas: 24.9%** (casi 1 de cada 4 contratos tiene una obra vencida)
-
-Para contexto: El promedio de Cundinamarca está en 7-8%. Villeta está 3x arriba.
-
-Estos datos están **100% públicos** en SECOP II. Están auditables por Contraloría, Procuraduría
-y Personería en cualquier momento.
-
----
-
-⚠️ ¿QUÉ SIGNIFICA ESTO?
-
-Un índice de alertas de 24.9% genera riesgos operativos y legales serios:
-
-  ✗ Multas de Contraloría por incumplimiento de cierres
-  ✗ Bloqueos de próximos desembolsos del SGP
-  ✗ Investigaciones de cumplimiento obligatorio
-  ✗ Demandas de contratistas por sobre-costos
-  ✗ Reputación institucional afectada
-
-Las obras vencidas sin cierre típicamente implican:
-  - Falta de liquidación formal
-  - Retenciones de dinero (cash flow negativos)
-  - Intereses de mora acumulados
-
----
-
-💼 MI PROPUESTA
-
-He preparado un **DIAGNÓSTICO DETALLADO** (adjunto: villeta_diagnostico.pdf) que muestra:
-
-  ✓ Top 5 obras vencidas específicas (con números de contrato)
-  ✓ Distribución por sector (infraestructura, educación, salud, etc.)
-  ✓ Comparación de Villeta vs otros municipios de Cundinamarca
-  ✓ Links para verificar cada hallazgo directamente en SECOP II
-
-Además, puedo ofrecerle un servicio de **AUDITORÍA MENSUAL DE CONTRATOS** que proporciona:
-
-  📋 Reporte mensual automático con hallazgos nuevos
-  📈 Seguimiento de obras que van a vencer próximamente (alertas anticipadas)
-  🔍 Análisis de concentración de proveedores (riesgo de cartel)
-  🎯 Identificación de patrones sospechosos en contratación
-
-**Inversión:** $500,000 COP/mes (aproximadamente $16,700 COP por día)
-**Período:** 12 meses (alineado con año fiscal)
-**Modelo:** Auditor externo independiente = cobertura política para su administración
-
----
-
-📞 REUNIÓN VIRTUAL — ESTA SEMANA
-
-Dado que Villeta está fuera de Bogotá, le propongo una **VIDEOLLAMADA de 20 minutos** donde puedo:
-
-  1. Mostrarle en vivo los 5 hallazgos principales del diagnóstico
-  2. Verificar juntos en SECOP II (en tiempo real)
-  3. Responder cualquier pregunta técnica
-  4. Explicar el modelo de auditoría y cómo funciona
-
-Sin compromiso. Solo una demostración de capacidades.
-
-**Disponibilidad:** Cualquier día de esta semana, a la hora que le convenga.
-
----
-
-📬 PRÓXIMOS PASOS
-
-1. **Esta semana:** Videollamada de demostración (20 minutos)
-2. **Semana siguiente:** Si ve valor, podemos agendar contrato por 12 meses
-3. **Alternativa:** Si lo prefiere, puedo iniciar con 2 meses de prueba ($300k/mes)
-
----
-
-☎️ CONTACTO
-
-Richard Bello
-Economista | Especialista en Auditoría de Contratos Públicos
-
-📞 Teléfono: +57-320-830-3847
-💬 WhatsApp: +57-320-830-3847
-📧 Email: richbello@gmail.com
-
----
-
-⚠️ NOTA IMPORTANTE
-
-Todos los datos de este diagnóstico provienen de **SECOP II pública**. Nada es privado,
-secreto o confidencial. Todo puede ser verificado directamente en:
-
-https://www.secop.gov.co/
-
-Esto significa que:
-  ✓ Cualquier auditor externo encontrará lo mismo
-  ✓ La Contraloría ya tiene acceso a estos datos
-  ✓ No hay sorpresas futuras
-  ✓ Actuar ahora es ser proactivo, no reactivo
-
----
-
-Quedo atento a cualquier pregunta.
-
-¿Hablamos esta semana?
+Quedo atento a su respuesta.
 
 Cordialmente,
 
-**Richard Bello Roncancio**
-Economista | Ingeniero de Software
-Especialista en Auditoría Fiscal y Contratos Públicos
-
----
-
-**Adjuntos:**
-  • villeta_diagnostico.pdf (diagnóstico de 1 página con hallazgos)
-
-================================================================================
-
-PARA ENVIAR:
-
-1. Guarda esta carta como villeta_carta.docx o .pdf
-2. Adjunta el PDF del diagnóstico (villeta.pdf)
-3. Busca email del alcalde en: alcalde@villeta-cundinamarca.gov.co
-4. Seguimiento por teléfono 2-3 días después si no responde
-5. WhatsApp si encuentras número disponible
-
-TONE CHECK:
-✓ Profesional pero no distante
-✓ Datos, no miedo
-✓ Verificable en SECOP II
-✓ Propuesta clara sin presión
-✓ Solución a un problema real
-
-================================================================================
+Richard Bello Roncancio
+Economista – Especialista en presupuesto y contratación pública
+Exconcejal de Cogua
+Celular y WhatsApp: +57 320 830 3847
+Correo: richbello@gmail.com
