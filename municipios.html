@@ -222,8 +222,8 @@
         .modal-content {
             background: white;
             border-radius: 8px;
-            max-width: 1250px;
-            width: 95%;
+            max-width: 900px;
+            width: 90%;
             max-height: 90vh;
             overflow-y: auto;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
@@ -372,117 +372,6 @@
             text-align: center;
             padding: 40px;
             color: #667eea;
-        }
-
-        /* Detalle de contratos */
-        .c-controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-        .c-controls input[type=text] {
-            flex: 1 1 280px;
-            padding: 9px 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        .c-controls select {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 13px;
-            max-width: 220px;
-            background: white;
-        }
-        .c-controls label {
-            font-size: 13px;
-            color: #444;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-        .c-btn {
-            padding: 8px 14px;
-            border: 1px solid #667eea;
-            background: #667eea;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 13px;
-        }
-        .c-btn:disabled { opacity: .4; cursor: default; }
-        .c-btn.sec { background: white; color: #667eea; }
-        .c-resumen {
-            font-size: 13px;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .c-table-wrap {
-            overflow-x: auto;
-            border: 1px solid #e3e6ea;
-            border-radius: 4px;
-        }
-        .c-table { width: 100%; border-collapse: collapse; min-width: 980px; }
-        .c-table th {
-            padding: 10px;
-            font-size: 11px;
-            background: #f8f9fa;
-            white-space: nowrap;
-        }
-        .c-table th.sort { color: #667eea; }
-        .c-table td {
-            padding: 9px 10px;
-            font-size: 13px;
-            vertical-align: top;
-        }
-        .c-table td.n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
-        .c-table td.f { white-space: nowrap; }
-        .c-table .num-contrato { font-family: Consolas, monospace; font-size: 12px; color: #555; }
-        .c-table .obj { max-width: 380px; }
-        .c-table .ent { display: block; color: #888; font-size: 11px; margin-top: 3px; }
-        .c-table tr.c-row:hover { background: #f3f5ff; cursor: pointer; }
-        .c-table tr.c-row.abierta { background: #eef1ff; }
-        .c-table tr.c-det td { background: #fafbff; padding: 16px 20px; }
-        .tag {
-            display: inline-block;
-            padding: 1px 6px;
-            border-radius: 3px;
-            font-size: 11px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-        .tag-rojo { background: #fee; color: #b03a2e; }
-        .tag-ambar { background: #fef3cd; color: #856404; }
-        .tag-gris { background: #eef0f2; color: #555; }
-        .c-det-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 12px 24px;
-            margin-bottom: 12px;
-        }
-        .c-det-grid label {
-            display: block;
-            font-size: 10px;
-            text-transform: uppercase;
-            color: #888;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-        .c-det-grid span { font-size: 13px; color: #222; }
-        .c-det-obj { font-size: 13px; line-height: 1.5; color: #222; margin-bottom: 10px; }
-        .c-det a { color: #667eea; font-weight: 600; font-size: 13px; }
-        .c-pager {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 14px;
-            margin-top: 12px;
-            font-size: 13px;
-            color: #555;
         }
 
         footer {
@@ -673,7 +562,6 @@
                 const detail = await response.json();
 
                 renderDetail(detail);
-                loadContratos(archivo, municipio);
             } catch (e) {
                 document.getElementById('modal-body').innerHTML =
                     `<div class="no-data">❌ Error cargando ${archivo}: ${e.message}</div>`;
@@ -756,7 +644,7 @@
                         <div class="top-providers">
                             ${m04.top_proveedores.map((p, i) => `
                                 <div class="provider-item">
-                                    <div class="provider-name">${i+1}. ${esc(p.proveedor || 'N/A')}</div>
+                                    <div class="provider-name">${i+1}. ${p.proveedor || 'N/A'}</div>
                                     <div class="provider-value">${fmt(p.participacion_pct)}%</div>
                                 </div>
                             `).join('')}
@@ -795,11 +683,6 @@
                     </div>
                 </div>
 
-                <div class="detail-section">
-                    <h3>📄 Contratos del municipio</h3>
-                    <div id="contratos-box"><div class="loading">Cargando contratos...</div></div>
-                </div>
-
                 ${d.nota ? `
                 <div style="background: #fef3cd; padding: 15px; border-radius: 4px; color: #856404; font-size: 13px;">
                     ⚠️ <strong>Nota:</strong> ${d.nota}
@@ -812,239 +695,6 @@
             `;
 
             document.getElementById('modal-body').innerHTML = html;
-        }
-
-        // ================= Detalle de contratos =================
-        const CONTRATOS_PATH = 'data/cundinamarca/contratos';
-        const POR_PAGINA = 50;
-        const C = { all: [], filtered: [], page: 0, sort: 'valor', dir: -1, open: null, archivo: '' };
-
-        function esc(s) {
-            if (s === null || s === undefined) return '';
-            return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-        }
-        function sinTildes(s) {
-            return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-        }
-        function fmtFecha(f) {
-            if (!f) return '--';
-            const [y, m, d] = f.split('-');
-            return `${d}/${m}/${y}`;
-        }
-        function fmtPesos(n) {
-            if (n === null || n === undefined) return '--';
-            return '$ ' + Math.round(n).toLocaleString('es-CO');
-        }
-
-        async function loadContratos(archivo, municipio) {
-            const box = document.getElementById('contratos-box');
-            if (!box) return;
-            try {
-                const r = await fetch(`${CONTRATOS_PATH}/${archivo}`);
-                if (!r.ok) throw new Error(`HTTP ${r.status}`);
-                const d = await r.json();
-                const cat = d.catalogos || {};
-                C.all = d.contratos.map(fila => {
-                    const o = {};
-                    d.campos.forEach((c, i) => o[c] = fila[i]);
-                    ['entidad', 'modalidad', 'tipo', 'estado'].forEach(c => {
-                        o[c] = (o[c] === null || o[c] === undefined) ? null : cat[c][o[c]];
-                    });
-                    o._q = sinTildes([o.numero, o.objeto, o.proveedor, o.doc_prov, o.entidad].join(' '));
-                    return o;
-                });
-                Object.assign(C, { page: 0, sort: 'valor', dir: -1, open: null, archivo });
-                renderContratosShell(cat);
-                filtrarContratos();
-            } catch (e) {
-                box.innerHTML = `<div class="no-data">El detalle de contratos de este municipio todavía no está publicado (${esc(e.message)}).</div>`;
-            }
-        }
-
-        function opciones(lista, etiqueta) {
-            const ord = [...(lista || [])].sort((a, b) => a.localeCompare(b, 'es'));
-            return `<option value="">${etiqueta}</option>` +
-                ord.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
-        }
-
-        function renderContratosShell(cat) {
-            const th = (campo, texto, num) =>
-                `<th class="${num ? 'num-col' : ''} ${campo ? 'sort' : ''}" ${campo ? `data-sort="${campo}"` : ''}>${texto}${campo ? ' <span data-flecha="' + campo + '"></span>' : ''}</th>`;
-            document.getElementById('contratos-box').innerHTML = `
-                <div class="c-controls">
-                    <input type="text" id="c-q" placeholder="Buscar por número, objeto, contratista, NIT o entidad">
-                    <select id="c-tipo">${opciones(cat.tipo, 'Todos los tipos')}</select>
-                    <select id="c-estado">${opciones(cat.estado, 'Todos los estados')}</select>
-                    <select id="c-modalidad">${opciones(cat.modalidad, 'Todas las modalidades')}</select>
-                    <select id="c-entidad">${opciones(cat.entidad, 'Todas las entidades')}</select>
-                    <label><input type="checkbox" id="c-prorroga"> Con prórroga</label>
-                    <label><input type="checkbox" id="c-vencido"> Vencidos sin cerrar</label>
-                    <button class="c-btn" id="c-csv">⬇ Descargar CSV</button>
-                </div>
-                <div class="c-resumen" id="c-resumen"></div>
-                <div class="c-table-wrap">
-                    <table class="c-table">
-                        <thead><tr>
-                            ${th(null, 'N.º contrato')}
-                            ${th(null, 'Objeto / Entidad')}
-                            ${th(null, 'Contratista')}
-                            ${th('valor', 'Valor', true)}
-                            ${th('fecha_inicio', 'Inicio')}
-                            ${th('fecha_fin', 'Terminación')}
-                            ${th('dias_adic', 'Prórroga', true)}
-                            ${th(null, 'Estado')}
-                        </tr></thead>
-                        <tbody id="c-tbody"></tbody>
-                    </table>
-                </div>
-                <div class="c-pager" id="c-pager"></div>`;
-
-            ['c-q'].forEach(id => document.getElementById(id).addEventListener('input', filtrarContratos));
-            ['c-tipo', 'c-estado', 'c-modalidad', 'c-entidad', 'c-prorroga', 'c-vencido']
-                .forEach(id => document.getElementById(id).addEventListener('change', filtrarContratos));
-            document.getElementById('c-csv').addEventListener('click', descargarCSV);
-            document.querySelectorAll('.c-table th[data-sort]').forEach(h => h.addEventListener('click', () => {
-                const k = h.dataset.sort;
-                C.dir = (C.sort === k) ? -C.dir : -1;
-                C.sort = k;
-                ordenarContratos();
-                C.page = 0; C.open = null;
-                renderContratos();
-            }));
-            document.getElementById('c-tbody').addEventListener('click', e => {
-                if (e.target.closest('a')) return;
-                const tr = e.target.closest('tr.c-row');
-                if (!tr) return;
-                const i = Number(tr.dataset.i);
-                C.open = (C.open === i) ? null : i;
-                renderContratos();
-            });
-        }
-
-        function filtrarContratos() {
-            const v = id => document.getElementById(id).value;
-            const q = sinTildes(v('c-q').trim());
-            const tipo = v('c-tipo'), estado = v('c-estado'), modalidad = v('c-modalidad'), entidad = v('c-entidad');
-            const pr = document.getElementById('c-prorroga').checked;
-            const ve = document.getElementById('c-vencido').checked;
-            C.filtered = C.all.filter(o =>
-                (!q || o._q.includes(q)) &&
-                (!tipo || o.tipo === tipo) &&
-                (!estado || o.estado === estado) &&
-                (!modalidad || o.modalidad === modalidad) &&
-                (!entidad || o.entidad === entidad) &&
-                (!pr || o.dias_adic > 0) &&
-                (!ve || o.vencido_abierto === 1));
-            ordenarContratos();
-            C.page = 0; C.open = null;
-            renderContratos();
-        }
-
-        function ordenarContratos() {
-            const k = C.sort, d = C.dir;
-            C.filtered.sort((a, b) => {
-                const x = a[k], y = b[k];
-                if (x === y) return 0;
-                if (x === null || x === undefined) return 1;
-                if (y === null || y === undefined) return -1;
-                return (x < y ? -1 : 1) * d;
-            });
-        }
-
-        function renderContratos() {
-            const f = C.filtered;
-            const suma = f.reduce((s, o) => s + (o.valor || 0), 0);
-            const nPr = f.filter(o => o.dias_adic > 0).length;
-            const nVe = f.filter(o => o.vencido_abierto === 1).length;
-            document.getElementById('c-resumen').innerHTML =
-                `<strong>${f.length.toLocaleString('es-CO')}</strong> de ${C.all.length.toLocaleString('es-CO')} contratos · ` +
-                `<strong>${fmtCurrency(suma)}</strong> · ${nPr.toLocaleString('es-CO')} con prórroga · ` +
-                `${nVe.toLocaleString('es-CO')} vencidos sin cerrar · <span style="color:#888">clic en una fila para ver el detalle completo</span>`;
-
-            document.querySelectorAll('[data-flecha]').forEach(s =>
-                s.textContent = s.dataset.flecha === C.sort ? (C.dir < 0 ? '▼' : '▲') : '');
-
-            const paginas = Math.max(1, Math.ceil(f.length / POR_PAGINA));
-            const ini = C.page * POR_PAGINA;
-            const filas = f.slice(ini, ini + POR_PAGINA);
-
-            document.getElementById('c-tbody').innerHTML = filas.length ? filas.map((o, j) => {
-                const i = ini + j;
-                const obj = o.objeto || '--';
-                const corto = obj.length > 160 ? obj.slice(0, 160) + '…' : obj;
-                const prorroga = o.dias_adic > 0 ? `<span class="tag tag-ambar">+${o.dias_adic.toLocaleString('es-CO')} días</span>` : '--';
-                const estado = o.vencido_abierto
-                    ? `${esc(o.estado || '--')}<br><span class="tag tag-rojo">vencido sin cerrar</span>`
-                    : esc(o.estado || '--');
-                let html = `
-                    <tr class="c-row ${C.open === i ? 'abierta' : ''}" data-i="${i}">
-                        <td><span class="num-contrato">${esc(o.numero || '--')}</span></td>
-                        <td class="obj">${esc(corto)}<span class="ent">${esc(o.entidad || '')}</span></td>
-                        <td>${esc(o.proveedor || '--')}</td>
-                        <td class="n">${fmtPesos(o.valor)}</td>
-                        <td class="f">${fmtFecha(o.fecha_inicio)}</td>
-                        <td class="f">${fmtFecha(o.fecha_fin)}</td>
-                        <td class="n">${prorroga}</td>
-                        <td>${estado}</td>
-                    </tr>`;
-                if (C.open === i) html += detalleContrato(o);
-                return html;
-            }).join('') : '<tr><td colspan="8" class="no-data">Ningún contrato cumple los filtros</td></tr>';
-
-            document.getElementById('c-pager').innerHTML = f.length > POR_PAGINA ? `
-                <button class="c-btn sec" id="c-prev" ${C.page === 0 ? 'disabled' : ''}>← Anterior</button>
-                <span>Página ${C.page + 1} de ${paginas}</span>
-                <button class="c-btn sec" id="c-next" ${C.page >= paginas - 1 ? 'disabled' : ''}>Siguiente →</button>` : '';
-            const prev = document.getElementById('c-prev'), next = document.getElementById('c-next');
-            if (prev) prev.onclick = () => { C.page--; C.open = null; renderContratos(); };
-            if (next) next.onclick = () => { C.page++; C.open = null; renderContratos(); };
-        }
-
-        function detalleContrato(o) {
-            const pctPagado = (o.valor > 0 && o.pagado !== null && o.pagado !== undefined)
-                ? ` (${(o.pagado / o.valor * 100).toLocaleString('es-CO', {maximumFractionDigits: 1})} %)` : '';
-            const item = (l, v) => `<div><label>${l}</label><span>${v}</span></div>`;
-            return `
-                <tr class="c-det"><td colspan="8">
-                    <div class="c-det-obj"><strong>Objeto:</strong> ${esc(o.objeto || '--')}</div>
-                    <div class="c-det-grid">
-                        ${item('N.º contrato', esc(o.numero || '--'))}
-                        ${item('Entidad contratante', esc(o.entidad || '--'))}
-                        ${item('Contratista', esc(o.proveedor || '--'))}
-                        ${item('Documento contratista', esc(o.doc_prov || '--'))}
-                        ${item('Modalidad', esc(o.modalidad || '--'))}
-                        ${item('Tipo de contrato', esc(o.tipo || '--'))}
-                        ${item('Estado', esc(o.estado || '--'))}
-                        ${item('Valor del contrato', fmtPesos(o.valor))}
-                        ${item('Valor pagado', fmtPesos(o.pagado) + pctPagado)}
-                        ${item('Fecha de firma', fmtFecha(o.fecha_firma))}
-                        ${item('Fecha de inicio', fmtFecha(o.fecha_inicio))}
-                        ${item('Fecha de terminación', fmtFecha(o.fecha_fin))}
-                        ${item('Días adicionados (prórroga)', o.dias_adic > 0 ? o.dias_adic.toLocaleString('es-CO') : 'Ninguno')}
-                    </div>
-                    ${o.url ? `<a href="${esc(o.url)}" target="_blank" rel="noopener">Ver el proceso en SECOP II ↗</a>` : ''}
-                </td></tr>`;
-        }
-
-        function descargarCSV() {
-            const cols = [['numero', 'N contrato'], ['entidad', 'Entidad'], ['proveedor', 'Contratista'],
-                ['doc_prov', 'Documento contratista'], ['modalidad', 'Modalidad'], ['tipo', 'Tipo'],
-                ['estado', 'Estado'], ['objeto', 'Objeto'], ['valor', 'Valor'], ['pagado', 'Valor pagado'],
-                ['fecha_firma', 'Fecha firma'], ['fecha_inicio', 'Fecha inicio'], ['fecha_fin', 'Fecha terminacion'],
-                ['dias_adic', 'Dias adicionados'], ['vencido_abierto', 'Vencido sin cerrar'], ['url', 'Enlace SECOP']];
-            const celda = v => {
-                if (v === null || v === undefined) return '';
-                const s = String(v);
-                return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
-            };
-            const lineas = [cols.map(c => c[1]).join(';')]
-                .concat(C.filtered.map(o => cols.map(([k]) => celda(k === 'vencido_abierto' ? (o[k] ? 'SI' : 'NO') : o[k])).join(';')));
-            const blob = new Blob(['﻿' + lineas.join('\r\n')], {type: 'text/csv;charset=utf-8'});
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'contratos_' + C.archivo.replace('.json', '') + '.csv';
-            a.click();
-            URL.revokeObjectURL(a.href);
         }
 
         // Cerrar modal

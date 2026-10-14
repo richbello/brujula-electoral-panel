@@ -1,1447 +1,785 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vigilancia Fiscal IA · Estrategia Electoral 2027</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00C97B;--bad:#FF2D6F;--warn:#EA6A0A;--crit:#C8003C}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
-header{background:var(--navy);color:#fff}
-.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
-.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
-.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
-.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
-.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
-.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px}
-.back:hover{border-color:var(--gold);color:var(--gold)}
-main{max-width:1200px;margin:0 auto;padding:32px}
-.demo{background:#FFF0CC;color:#B45309;border:1px solid #FFE3A3;border-radius:8px;padding:12px 16px;font-size:13px;margin-bottom:24px}
-.tabs{display:none;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
-.tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
-.tabs button.on{color:var(--navy);border-color:var(--gold)}
-.pane{display:none}.pane.on{display:block}
-h2{font-size:22px;margin-bottom:4px}
-.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
-.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
-.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:8px}
-.kpi b{font-size:24px;font-weight:700}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:20px;overflow-x:auto}
-.panel h3{font-size:15px;margin-bottom:14px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line)}
-td{padding:12px 10px;border-bottom:1px solid var(--line)}
-tr:last-child td{border-bottom:0}
-.r{text-align:right;white-space:nowrap}
-.pct{display:flex;align-items:center;gap:10px}
-.meter{height:6px;width:110px;background:#EFEBFF;border-radius:3px;overflow:hidden}
-.meter i{display:block;height:100%;background:var(--gold)}
-.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px}
-.ok-p{background:#D6FBEC;color:var(--ok)}.alto{background:#FFDCE7;color:var(--bad)}.medio{background:#FFF0CC;color:var(--warn)}.crit{background:#FFDEE8;color:var(--crit)}
-.note{font-size:13px;color:var(--muted);line-height:1.6;margin-top:14px}
-.alert{background:#FFDEE8;border-left:4px solid var(--crit);padding:12px 16px;margin-bottom:20px;border-radius:6px;font-size:13px}
-.alert b{color:var(--crit)}
-@media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main{padding-left:18px;padding-right:18px}.tabs{gap:12px}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia Electoral 2027 - 3 Módulos Integrados</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0F1C2E 0%, #1a2d4a 100%);
+            color: #333;
+            padding: 20px;
+        }
 
-/* ==================== VIGILANCIA FISCAL IA ==================== */
-.vfi-chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.vfi-chip{background:#fff;border:1px solid var(--line);border-left:3px solid var(--c);border-radius:10px;padding:10px 14px;flex:1;min-width:200px}
-.vfi-chip b{display:block;font-size:12px;font-weight:700;color:var(--c)}
-.vfi-chip span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
-.vfi-lbl{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}
-.vfi-fila{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.vfi-fila select,.vfi-fila input{flex:1;min-width:220px;padding:11px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:14px;font-family:inherit;background:#fff;color:var(--navy);box-sizing:border-box}
-.vfi-fila select:focus,.vfi-fila input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,176,32,.15)}
-.vfi-btn{background:var(--navy);color:#fff;border:none;border-radius:9px;padding:12px 24px;font:700 14px Inter,"Segoe UI",sans-serif;cursor:pointer;white-space:nowrap}
-.vfi-btn:hover:not(:disabled){background:#241160}
-.vfi-btn:disabled{background:#A99CC9;cursor:default}
-.vfi-btn.verde{background:var(--ok)}.vfi-btn.verde:hover:not(:disabled){background:#00A866}
-.vfi-btn.gris{background:#F1EEFB;color:var(--muted);border:1.5px solid var(--line)}
-.vfi-btn.gris:hover{background:#E7E2F7}
-#vfi-progreso{margin-top:14px;background:#F8F6FF;border:1px solid var(--line);border-radius:10px;padding:14px}
-.vfi-prog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.vfi-prog-top b{font-size:12px;color:var(--navy)}
-.vfi-prog-top span{font-size:13px;font-weight:700;font-family:ui-monospace,monospace}
-.vfi-log{max-height:150px;overflow-y:auto;font-size:12px;font-family:ui-monospace,monospace;line-height:1.65}
-.vfi-log div{margin-bottom:1px}
-.vfi-tarjetas{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:18px}
-.vfi-t{background:#fff;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:12px;padding:16px}
-.vfi-t .n{font-size:32px;font-weight:800;color:var(--c);line-height:1.1}
-.vfi-t .l{font-size:12px;font-weight:700;color:var(--navy);margin-top:2px}
-.vfi-t .s{font-size:11px;color:var(--muted);margin-top:3px}
-.vfi-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.vfi-pill{padding:7px 16px;border-radius:20px;font:700 12px Inter,"Segoe UI",sans-serif;cursor:pointer;border:none;background:#F1EEFB;color:var(--muted)}
-.vfi-pill.on{color:#fff}
-.vfi-nivel{display:inline-block;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:800;white-space:nowrap}
-#vfi-resultado table{width:100%;border-collapse:collapse;font-size:13px}
-#vfi-resultado tbody tr{cursor:pointer}
-#vfi-resultado tbody tr:hover{background:#FAF9FF}
-#vfi-resultado tbody tr.abierta{background:#F8F6FF}
-.vfi-mono{font-family:ui-monospace,monospace;font-weight:700;text-align:right;white-space:nowrap}
-.vfi-det{background:#F8F6FF}
-.vfi-det td{padding:16px 20px!important}
-.vfi-campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px 20px}
-.vfi-campo .k{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
-.vfi-campo .v{font-size:13px;color:var(--navy);line-height:1.45}
-.vfi-campo .v.rojo{color:var(--crit);font-weight:700}
-.vfi-aviso{background:#FFF0CC;border:1px solid #FFE3A3;border-left:4px solid var(--warn);border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.6;color:#8A5A00;margin-bottom:18px}
-.vfi-aviso b{color:#7A4E00}
-.vfi-msg{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;font-size:14px;line-height:1.7;color:var(--muted)}
-.vfi-msg b{display:block;color:var(--navy);font-size:15px;margin-bottom:8px}
-.vfi-vacio{padding:28px;text-align:center;color:var(--muted)}
-#vfi-resultado canvas{max-height:250px}
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
 
-/* -- clases compartidas por los módulos que leen un corte -- */
-.vf-corte{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;background:#fff;border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:13px}
-.vf-corte.viejo{border-left-color:var(--warn);background:#FFF8EC}
-.vf-corte b{color:var(--navy)}
-.vf-corte span{color:var(--muted)}
-.vf-sub{display:block;font-size:11px;color:var(--muted);margin-top:2px;font-weight:400;line-height:1.4}
-.vf-fuentes{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.8}
-.vf-fuentes a{color:var(--muted)}
-.vf-vacio{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;font-size:14px;line-height:1.75;color:var(--muted)}
-.vf-vacio b{color:var(--navy);display:block;margin-bottom:8px;font-size:15px}
-.vf-vacio code{background:#F3F1FF;border:1px solid var(--line);border-radius:4px;padding:3px 7px;font-size:12.5px;color:var(--navy)}
-.vf-vacio pre{background:var(--navy);color:#E8E2FF;border-radius:8px;padding:14px 16px;font-size:12.5px;overflow-x:auto;margin:12px 0;line-height:1.5}
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
 
-/* ==================== FICHA DEL CONTENDOR ==================== */
-.ficha-cab{background:linear-gradient(135deg,var(--navy),#2A1760);color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:18px}
-.ficha-nom{font-size:23px;font-weight:700;line-height:1.25}
-.ficha-doc{font-size:13px;color:#B4A6DB;margin-top:3px}
-.ficha-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin-top:18px}
-.ficha-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:10px 12px}
-.ficha-chip.on{background:rgba(255,176,32,.16);border-color:rgba(255,176,32,.45)}
-.ficha-chip small{display:block;font-size:10.5px;color:#B4A6DB;text-transform:uppercase;letter-spacing:.04em}
-.ficha-chip b{display:block;font-size:16px;font-weight:700;margin-top:3px}
-.ficha-cand{cursor:pointer}
-.ficha-cand:hover{background:#FAF9FF}
-#ficha-alcance ul{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:12.5px;line-height:1.7}
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
 
-/* ==================== TERRITORIO Y OBRAS ==================== */
-.terr-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.terr-tab{padding:9px 18px;border-radius:9px;font:700 13px Inter,"Segoe UI",sans-serif;cursor:pointer;border:1.5px solid var(--line);background:#fff;color:var(--muted)}
-.terr-tab:hover{border-color:var(--gold)}
-.terr-tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-.terr-aviso{background:#FFF0CC;border:1px solid #FFE3A3;border-left:4px solid var(--warn);border-radius:10px;padding:16px 20px;margin-bottom:18px;font-size:13px;line-height:1.65;color:#8A5A00}
-.terr-aviso b{color:#7A4E00}
-.terr-aviso p{margin:8px 0 0}
-.terr-barra{height:12px;border-radius:6px;background:#F0D9A8;overflow:hidden;margin-top:14px}
-.terr-barra-in{height:100%;background:linear-gradient(90deg,#EA6A0A,#FFB020)}
-.terr-barra-txt{display:flex;justify-content:space-between;gap:12px;font-size:12px;margin-top:6px;flex-wrap:wrap}
-#terr-tabla tbody tr{cursor:pointer}
-#terr-tabla tbody tr:hover{background:#FAF9FF}
-#terr-tabla tbody tr.abierta{background:#F8F6FF}
-.terr-ej{font-size:11.5px;color:var(--muted);line-height:1.75;padding:0 0 10px 4px;border-bottom:1px solid var(--line)}
+        .tabs-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-/* ==================== FINANCIADORES Y CONTRATOS ==================== */
-#fin-contenido .kpis{grid-template-columns:repeat(auto-fit,minmax(155px,1fr))}
-#fin-contenido .kpi b{font-size:21px}
-#fin-tabla td{vertical-align:top}
-#fin-tabla .vfi-mono .vf-sub{text-align:right;font-family:Inter,"Segoe UI",sans-serif}
-.fin-ley{background:#F3F1FF;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:10px;padding:16px 20px;margin-bottom:18px;font-size:13px;line-height:1.65}
-.fin-ley b{color:var(--navy)}
-.fin-ley p{margin:8px 0 0;color:var(--muted)}
-.fin-ley ul{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:12.5px}
-.fin-ley li{margin-bottom:3px}
-#fin-tabla tbody tr{cursor:pointer}
-#fin-tabla tbody tr:hover{background:#FAF9FF}
-#fin-tabla tbody tr.abierta{background:#F8F6FF}
-.fin-bloque{margin-bottom:18px}
-.fin-bloque:last-child{margin-bottom:0}
-.fin-bloque h4{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
-table.fin-mini{width:100%;border-collapse:collapse;font-size:12.5px;background:#fff;border-radius:8px;overflow:hidden}
-table.fin-mini th{background:#EFEBFF;color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;padding:7px 10px;text-align:left}
-table.fin-mini td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-table.fin-mini tr:last-child td{border-bottom:0}
-table.fin-mini tr.fin-fuera td{opacity:.6}
-table.fin-mini .vf-sub{display:block;font-size:10.5px;color:var(--muted);margin-top:2px}
-#vfi-doc-res:not(:empty){margin-top:16px}
-@media(max-width:800px){.vfi-fila select,.vfi-fila input{min-width:100%}.vfi-btn{width:100%}}
-</style>
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button:hover {
+            background: #f0f0f0;
+            color: #0F1C2E;
+        }
+
+        .tab-button.active {
+            color: white;
+            background: linear-gradient(135deg, #0F1C2E, #1a2d4a);
+            border-bottom-color: #C8A560;
+        }
+
+        .tab-button.fiscal.active { background: linear-gradient(135deg, #2E9E7B, #27ae60); }
+        .tab-button.social.active { background: linear-gradient(135deg, #C0485A, #e74c3c); }
+        .tab-button.seguridad.active { background: linear-gradient(135deg, #0F1C2E, #1a2d4a); }
+        .tab-button.integral.active { background: linear-gradient(135deg, #C8A560, #d4af5c); color: #0F1C2E; }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            animation: fadeIn 0.3s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* MÓDULO FISCAL */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .kpi {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 4px solid #2E9E7B;
+        }
+
+        .kpi .label {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .kpi .value {
+            display: block;
+            font-size: 24px;
+            color: #0F1C2E;
+            font-weight: bold;
+        }
+
+        .proveedor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .proveedor-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .proveedor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .proveedor-header strong {
+            color: #0F1C2E;
+            font-size: 13px;
+        }
+
+        .flag {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+            background: #f39c12;
+        }
+
+        .flag.critica { background: #e74c3c; }
+
+        .proveedor-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .oportunidad {
+            background: #e8f5e9;
+            border-left: 4px solid #2E9E7B;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .oportunidad strong {
+            color: #1b5e20;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .oportunidad ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .oportunidad li {
+            font-size: 13px;
+            color: #2e7d32;
+            margin: 5px 0;
+        }
+
+        /* MÓDULO SOCIAL */
+        .sentimiento-container {
+            display: grid;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .candidato-sentimiento {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .candidato-sentimiento strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #0F1C2E;
+        }
+
+        .sentimiento-bar {
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .sentimiento-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2E9E7B, #27ae60);
+            transition: width 0.3s;
+        }
+
+        .sentimiento-fill.negativo { background: linear-gradient(90deg, #C0485A, #e74c3c); }
+        .sentimiento-fill.neutral { background: linear-gradient(90deg, #f39c12, #e67e22); }
+
+        .trending-list {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .trending-card {
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .trending-card strong {
+            display: block;
+            color: #0F1C2E;
+            margin-bottom: 8px;
+        }
+
+        .trending-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+
+        .sentiment {
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .sentiment.negativo { color: #e74c3c; }
+
+        .monitoreo-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+
+        /* MÓDULO SEGURIDAD */
+        .seguridad-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .seg-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .seg-card strong {
+            display: block;
+            color: #0F1C2E;
+            margin-bottom: 10px;
+        }
+
+        .seg-card span {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2E9E7B, #27ae60);
+        }
+
+        .riesgo-puestos {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .puesto-riesgo {
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .puesto-riesgo strong {
+            display: block;
+            color: #0F1C2E;
+            margin-bottom: 8px;
+        }
+
+        .riesgo-score {
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin: 8px 0;
+            display: inline-block;
+        }
+
+        .riesgo-score.critico { background: #e74c3c; }
+        .riesgo-score.alto { background: #f39c12; }
+
+        .puesto-riesgo small {
+            display: block;
+            color: #999;
+            font-size: 11px;
+            margin-top: 8px;
+        }
+
+        /* MÓDULO INTEGRAL */
+        .scoring-formula {
+            text-align: center;
+            font-size: 14px;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-weight: 600;
+            color: #0F1C2E;
+        }
+
+        .scoring-results {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .scoring-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #ddd;
+        }
+
+        .scoring-card.ganador {
+            border-color: #2E9E7B;
+            background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+        }
+
+        .scoring-card.perdedor {
+            border-color: #C0485A;
+            opacity: 0.85;
+        }
+
+        .scoring-card h4 {
+            margin: 0 0 15px 0;
+            color: #0F1C2E;
+        }
+
+        .score-display {
+            font-size: 48px;
+            font-weight: bold;
+            color: #0F1C2E;
+            margin: 15px 0;
+        }
+
+        .score-breakdown {
+            text-align: left;
+        }
+
+        .score-breakdown span {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .recomendacion-estrategia {
+            background: #e8f5e9;
+            border-left: 4px solid #2E9E7B;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .recomendacion-estrategia h4 {
+            margin-top: 0;
+            color: #0F1C2E;
+        }
+
+        .recomendacion-estrategia ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .recomendacion-estrategia li {
+            font-size: 13px;
+            color: #2e7d32;
+            margin: 8px 0;
+        }
+
+        h2, h3, h4 {
+            color: #0F1C2E;
+            margin: 20px 0 15px 0;
+        }
+
+        h2 { border-bottom: 2px solid #C8A560; padding-bottom: 10px; }
+        h3 { font-size: 18px; }
+        h4 { font-size: 15px; margin-top: 20px; }
+
+        @media (max-width: 768px) {
+            .scoring-results { grid-template-columns: 1fr; }
+            .tabs { flex-direction: column; }
+            .tab-button { padding: 12px; font-size: 13px; }
+            .tab-content { padding: 20px; }
+        }
+    </style>
 </head>
 <body>
-<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Vigilancia de la contratación pública</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
-<main>
-<div class="demo" id="aviso"></div>
-<nav class="tabs"><button data-t="vigilancia">Vigilancia fiscal</button><button data-t="financiadores">Financiadores y contratos</button><button data-t="territorio">Territorio y obras</button><button data-t="ficha">Ficha del contendor</button></nav>
-
-
-
-<section class="pane" id="vigilancia">
-<h2>Vigilancia Fiscal IA</h2>
-<p class="sub">Cruce en tiempo real · SECOP II × SIRI (Procuraduría) × Boletín (Contraloría)</p>
-
-<div class="vfi-chips">
-  <div class="vfi-chip" style="--c:#2563EB"><b>SECOP II</b><span>Contratación pública · tiempo real</span></div>
-  <div class="vfi-chip" style="--c:#7C3AED"><b>SIRI · Procuraduría</b><span id="vfi-n-siri">Antecedentes disciplinarios · refresco periódico</span></div>
-  <div class="vfi-chip" style="--c:#CA8A04"><b>Boletín · Contraloría</b><span id="vfi-n-bol">Responsables fiscales · trimestral</span></div>
-</div>
-
-<div class="panel">
-  <label class="vfi-lbl" for="vfi-entidad">Entidad a auditar</label>
-  <div class="vfi-fila">
-    <select id="vfi-entidad"></select>
-    <button id="vfi-analizar" class="vfi-btn">Analizar</button>
-  </div>
-  <div id="vfi-progreso" hidden></div>
-</div>
-
-<div class="panel">
-  <label class="vfi-lbl" for="vfi-doc">Buscar persona o empresa por documento (cédula / NIT)</label>
-  <div class="vfi-fila">
-    <input id="vfi-doc" placeholder="Ej: 51699228" autocomplete="off" inputmode="numeric">
-    <button id="vfi-buscar" class="vfi-btn verde">Buscar documento</button>
-    <button id="vfi-limpiar" class="vfi-btn gris">Limpiar</button>
-  </div>
-  <div id="vfi-doc-res"></div>
-</div>
-
-<div id="vfi-resultado"></div>
-</section>
-
-<section class="pane" id="financiadores">
-<h2>Financiadores y contratos</h2>
-<p class="sub">Quién financió la campaña y qué contrató después · Ley 1474 de 2011, art. 2</p>
-<div id="fin-estado" class="vfi-msg">Cargando el último corte…</div>
-<div id="fin-contenido" hidden></div>
-</section>
-
-<section class="pane" id="territorio">
-<h2>Territorio y obras inconclusas</h2>
-<p class="sub">Obras vencidas que siguen abiertas, y el valor por los lugares que nombra el contrato</p>
-<div id="terr-estado" class="vfi-msg">Cargando el último corte…</div>
-<div id="terr-contenido" hidden></div>
-</section>
-
-<section class="pane" id="ficha">
-<h2>Ficha del contendor</h2>
-<p class="sub">Todo lo que esta plataforma sabe de una persona o empresa, en una sola consulta</p>
-<div id="ficha-estado" class="vfi-msg">Cargando los cortes…</div>
-<div id="ficha-buscador" hidden>
-  <div class="fin-ley" id="ficha-alcance"></div>
-  <div class="panel">
-    <label class="vfi-lbl" for="ficha-q">Documento o nombre</label>
-    <div class="vfi-fila">
-      <input id="ficha-q" placeholder="Cédula, NIT o parte del nombre" autocomplete="off">
-      <button id="ficha-buscar" class="vfi-btn">Buscar</button>
-      <button id="ficha-limpiar" class="vfi-btn gris">Limpiar</button>
+    <div class="header">
+        <h1>🎯 Estrategia Electoral 2027</h1>
+        <p>Dashboard Integrado: Fiscal + Social + Seguridad Electoral</p>
     </div>
-  </div>
-  <div id="ficha-res"></div>
-</div>
-</section>
 
-
-
-</main>
-<script>
-// Cada pestaña declara de dónde salen sus cifras. Si una deja de ser
-// demostración, se cambia aquí y el aviso deja de mentir.
-const ORIGEN = {
-  ficha: {real:true, txt:'<strong>Datos reales.</strong> Reúne lo que ya producen los otros módulos sobre una misma persona. Las coincidencias por documento no prueban nada por sí solas: verifique antes de afirmar.'},
-  territorio: {real:true, txt:'<strong>Datos reales.</strong> Contratos de SECOP II cuya fecha de fin ya pasó y siguen en ejecución, más el valor por lugar nombrado en el objeto. La cobertura de los sectores es parcial y la pestaña la muestra.'},
-  financiadores: {real:true, txt:'<strong>Datos reales.</strong> Cruce de los aportes reportados al CNE contra los contratos obtenidos después. Señala posibles inhabilidades del artículo 2 de la Ley 1474 de 2011, que deben verificarse caso por caso.'},
-  vigilancia: {real:true, txt:'<strong>Datos reales.</strong> Cruce en vivo de SECOP II contra SIRI (Procuraduría) y el Boletín de Responsables Fiscales (Contraloría). Las coincidencias requieren verificación antes de hacerse públicas.'}
-};
-function show(id){
-  if(!document.getElementById(id))id='vigilancia';
-  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));
-  document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===id));
-  const o = ORIGEN[id] || ORIGEN.vigilancia, av = document.getElementById('aviso');
-  av.innerHTML = o.txt;
-  av.style.cssText = o.real
-    ? 'background:#D6FBEC;color:#047857;border-color:#A7F3D0'
-    : '';
-  history.replaceState(null,'','#'+id);
-}
-document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.t));
-show(location.hash.slice(1));
-// Sin barra de pestañas la navegación es el ancla, así que el panel debe
-// seguir al hash: de otro modo el botón atrás del navegador, o un enlace a
-// otro módulo desde esta misma página, cambian la URL sin cambiar lo que se ve.
-window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
-
-/* ============================================================
-   VIGILANCIA FISCAL IA — puerto del Módulo 09 de
-   sistema-gestion-contractual a JS vanilla.
-
-   El original es React + Recharts; aquí se usan Chart.js y DOM
-   directo, que es lo que carga esta página. La lógica y los
-   endpoints son los mismos:
-     GET  /api/vfi/analizar-stream?entidad=  (SSE: progress, done)
-     POST /api/vfi/buscar?doc=
-   El backend tiene CORS abierto, así que responde igual desde
-   este repositorio.
-   ============================================================ */
-(function () {
-  "use strict";
-
-  const API = "https://sistema-gestion-contractual.onrender.com/api/vfi";
-
-  // Cada entrada es [etiqueta visible, texto que se busca].
-  // El backend hace  upper(nombre_entidad) like upper('%<texto>%')  contra
-  // SECOP II, asi que el valor es una subcadena, no el nombre exacto. Se
-  // eligieron subcadenas verificadas contra los nombres reales del dataset,
-  // que vienen con acentos inconsistentes y puntuacion sobrante:
-  //   - "FACATATIV" cubre FACATATIVA y FACATATIVÁ
-  //   - "MUNICIPAL DE GIRARDOT" evita cruzarse con Girardota (Antioquia)
-  //   - "ALCALDIA MUNICIPIO MOSQUERA" evita Mosquera (Nariño)
-  const ENTIDADES = [
-    { grupo: "Soacha", items: [
-      ["Todas las entidades de Soacha", "SOACHA"],
-      ["Alcaldía · Municipio de Soacha", "MUNICIPIO DE SOACHA"],
-      ["Concejo Municipal", "CONCEJO MUNICIPAL DE SOACHA"],
-      ["Personería Municipal", "PERSONERIA MUNICIPAL DE SOACHA"],
-      ["IMRD · Recreación y Deporte", "RECREACION Y EL DEPORTE DE SOACHA"],
-      ["ESE Región de Salud Soacha", "SALUD SOACHA"],
-      ["ESE Julio César Peñaloza", "JULIO CESAR"],
-      ["EPUXUA E.I.C.E.", "EPUXUA"]
-    ]},
-    { grupo: "Cundinamarca · departamento", items: [
-      ["Todo el departamento", "CUNDINAMARCA"],
-      ["Departamento de Cundinamarca", "DEPARTAMENTO DE CUNDINAMARCA"],
-      ["Asamblea Departamental", "ASAMBLEA DEPARTAMENTAL DE CUNDINAMARCA"]
-    ]},
-    { grupo: "Cundinamarca · municipios", items: [
-      ["Chía", "MUNICIPAL DE CHIA"],
-      ["Girardot", "MUNICIPAL DE GIRARDOT"],
-      ["Mosquera", "ALCALDIA MUNICIPIO MOSQUERA"],
-      ["Zipaquirá", "ZIPAQUIRA"],
-      ["Facatativá", "FACATATIV"],
-      ["Cajicá", "CAJICA"],
-      ["Cota", "MUNICIPAL COTA"],
-      ["Funza", "FUNZA"],
-      ["Madrid", "MADRID CUNDINAMARCA"],
-      ["Tocancipá", "TOCANCIPA"],
-      ["Tenjo", "TENJO"],
-      ["La Calera", "LA CALERA"],
-      ["El Colegio", "DE EL COLEGIO"],
-      ["Anolaima", "ANOLAIMA"],
-      ["Puerto Salgar", "PUERTO SALGAR"],
-      ["El Rosal", "MUNICIPIO DE EL ROSAL"]
-    ]},
-    { grupo: "Bogotá · Alcaldías Locales", items: ["USAQUEN","CHAPINERO","SANTA FE","SAN CRISTOBAL","USME","TUNJUELITO","BOSA","KENNEDY","FONTIBON","ENGATIVA","SUBA","BARRIOS UNIDOS","TEUSAQUILLO","LOS MARTIRES","ANTONIO NARINO","PUENTE ARANDA","CANDELARIA","RAFAEL URIBE","CIUDAD BOLIVAR","SUMAPAZ"].map(x=>[x,x]) },
-    { grupo: "Bogotá · Secretarías Distritales", items: ["SECRETARIA DE EDUCACION","SECRETARIA DE SALUD","SECRETARIA DE MOVILIDAD","SECRETARIA DE INTEGRACION SOCIAL","SECRETARIA DE GOBIERNO","SECRETARIA DE HACIENDA","SECRETARIA DE PLANEACION","SECRETARIA DE AMBIENTE","SECRETARIA DE CULTURA","SECRETARIA DE DESARROLLO ECONOMICO","SECRETARIA DE SEGURIDAD","SECRETARIA DE HABITAT","SECRETARIA DE LA MUJER","SECRETARIA GENERAL","SECRETARIA JURIDICA"].map(x=>[x,x]) },
-    { grupo: "Bogotá · Entidades y Establecimientos", items: ["IDU","UAESP","IDRD","TRANSMILENIO","UNIDAD DE MANTENIMIENTO VIAL","IDARTES","IDIGER","IPES","IDPAC","JARDIN BOTANICO","CANAL CAPITAL","LOTERIA DE BOGOTA","EAAB ACUEDUCTO","CATASTRO","DADEP","IDPC","EMPRESA DE RENOVACION"].map(x=>[x,x]) }
-  ];
-
-  const COLOR = { CRITICA:"#C8003C", ALTA:"#EA6A0A", MEDIA:"#CA8A04", INFO:"#5C4F82" };
-
-  // Todo lo que llega del backend proviene de fuentes externas: se escapa.
-  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
-    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const cop = v => { const n = parseInt(String(v||"0").replace(/[^\d-]/g,""),10);
-    return isNaN(n) ? "$0" : "$" + n.toLocaleString("es-CO"); };
-  const miles = n => Number(n||0).toLocaleString("es-CO");
-
-  const $ = id => document.getElementById(id);
-
-  let RES = null;          // último resultado del análisis
-  let filtro = "TODAS";
-  let abierta = null;
-  let graficas = {};
-  let es = null;           // EventSource activo
-  let timer = null;
-
-  /* ---------------- inicialización ---------------- */
-  const sel = $("vfi-entidad");
-  ENTIDADES.forEach(g => {
-    const og = document.createElement("optgroup");
-    og.label = g.grupo;
-    g.items.forEach(([etiqueta, busca]) => {
-      const o = document.createElement("option");
-      o.value = busca; o.textContent = etiqueta;
-      og.appendChild(o);
-    });
-    sel.appendChild(og);
-  });
-  sel.value = "SOACHA";
-
-  $("vfi-analizar").addEventListener("click", analizar);
-  $("vfi-buscar").addEventListener("click", buscarDoc);
-  $("vfi-limpiar").addEventListener("click", limpiar);
-  $("vfi-doc").addEventListener("keydown", e => { if (e.key === "Enter") buscarDoc(); });
-
-  /* ---------------- análisis por entidad ---------------- */
-  function analizar() {
-    cerrarStream();
-    const entidad = sel.value;
-    RES = null; abierta = null; filtro = "TODAS";
-    $("vfi-resultado").innerHTML = "";
-    $("vfi-analizar").disabled = true;
-    $("vfi-analizar").textContent = "Analizando…";
-
-    const log = [];
-    const t0 = Date.now();
-    const prog = $("vfi-progreso");
-    prog.hidden = false;
-    pintarProgreso(log, 0);
-    timer = setInterval(() => pintarProgreso(log, Math.floor((Date.now()-t0)/1000)), 1000);
-
-    es = new EventSource(API + "/analizar-stream?entidad=" + encodeURIComponent(entidad));
-
-    es.addEventListener("progress", e => {
-      try { log.push(JSON.parse(e.data)); } catch { log.push(String(e.data)); }
-      pintarProgreso(log, Math.floor((Date.now()-t0)/1000));
-    });
-
-    es.addEventListener("done", e => {
-      try { RES = JSON.parse(e.data); } catch (err) { return fallar("La respuesta del servidor no se pudo leer."); }
-      terminar();
-      pintarResultado();
-    });
-
-    es.addEventListener("error", () => {
-      const segs = Math.floor((Date.now()-t0)/1000);
-      terminar();
-      fallar(segs < 8
-        ? "No se pudo conectar con el servidor de análisis."
-        : "La conexión con el servidor se interrumpió durante el análisis.");
-    });
-  }
-
-  function terminar() {
-    cerrarStream();
-    if (timer) { clearInterval(timer); timer = null; }
-    $("vfi-progreso").hidden = true;
-    $("vfi-analizar").disabled = false;
-    $("vfi-analizar").textContent = "Analizar";
-  }
-
-  function cerrarStream() { if (es) { es.close(); es = null; } }
-
-  function fallar(motivo) {
-    $("vfi-resultado").innerHTML =
-      '<div class="vfi-msg"><b>' + esc(motivo) + '</b>' +
-      'El análisis corre en un servidor aparte que se suspende cuando lleva rato sin uso. ' +
-      'Si es la primera consulta del día, puede tardar cerca de un minuto en despertar: ' +
-      'vuelva a oprimir <b style="display:inline">Analizar</b> y espere. ' +
-      'Si falla varias veces seguidas, el servidor está caído.</div>';
-  }
-
-  function pintarProgreso(log, segs) {
-    const mm = Math.floor(segs/60), ss = String(segs%60).padStart(2,"0");
-    let filas = log.map(m => {
-      const t = String(m);
-      let color = "#5C4F82", txt = t;
-      if (/SIRI/i.test(t))                      { color="#7C3AED"; txt="📋 Procuraduría (SIRI): " + t.replace(/\[.*?\]/,"").trim(); }
-      else if (/Bolet[ií]n/i.test(t))           { color="#CA8A04"; txt="💰 Contraloría (Boletín): " + t.replace(/\[.*?\]/,"").trim(); }
-      else if (/contratos|SECOP/i.test(t))      { color="#2563EB"; txt="📄 SECOP II: " + t.replace(/\[.*?\]/,"").trim(); }
-      return '<div style="color:'+color+'">' + esc(txt) + '</div>';
-    }).join("");
-    if (!filas) filas = '<div>Iniciando… si el servidor estaba dormido, el primer arranque tarda.</div>';
-    $("vfi-progreso").innerHTML =
-      '<div class="vfi-prog-top"><b>Procesando análisis…</b><span>'+mm+':'+ss+'</span></div>' +
-      '<div class="vfi-log">' + filas + '</div>';
-    const l = $("vfi-progreso").querySelector(".vfi-log");
-    if (l) l.scrollTop = l.scrollHeight;
-  }
-
-  /* ---------------- resultado ---------------- */
-  function pintarResultado() {
-    if (!RES) return;
-    if (RES.registros_siri)    $("vfi-n-siri").textContent = miles(RES.registros_siri) + " registros disciplinarios";
-    if (RES.registros_boletin) $("vfi-n-bol").textContent  = miles(RES.registros_boletin) + " responsables fiscales · trimestral";
-
-    const hayAlertas = (RES.total_alertas || 0) > 0;
-    let h = "";
-
-    h += '<div class="vfi-aviso"><b>Estas alertas no prueban una inhabilidad.</b> ' +
-         'Son coincidencias por número de documento entre SECOP II y los registros de la ' +
-         'Procuraduría y la Contraloría. Puede haber homónimos, documentos mal digitados o ' +
-         'sanciones ya levantadas. Verifique cada caso en el certificado oficial de la entidad ' +
-         'que corresponda antes de afirmarlo en público.</div>';
-
-    h += '<div class="vfi-tarjetas">' +
-      tarjeta("Contratos analizados", RES.total_contratos, "#2563EB", "Entidad: " + (RES.entidad||"")) +
-      tarjeta("Alertas totales", RES.total_alertas, "#150B3D", "Análisis: " + (RES.fecha_analisis||"")) +
-      tarjeta("Críticas", RES.criticas, COLOR.CRITICA, "Contrato posterior a la inhabilidad") +
-      tarjeta("Altas", RES.altas, COLOR.ALTA, "Inhabilidad vigente") +
-      '</div>';
-
-    if (hayAlertas) {
-      h += '<div class="cols">' +
-        '<div class="panel"><h3>Distribución por nivel de riesgo</h3><canvas id="vfi-g-nivel"></canvas></div>' +
-        '<div class="panel"><h3>Alertas por fuente oficial</h3><canvas id="vfi-g-fuente"></canvas></div>' +
-        '</div>';
-    }
-
-    h += '<div class="panel">' +
-      '<div class="vfi-pills">' +
-        ["TODAS","CRITICA","ALTA","MEDIA","INFO"].map(n =>
-          '<button class="vfi-pill'+(filtro===n?" on":"")+'" data-n="'+n+'"'+
-          (filtro===n?' style="background:'+(COLOR[n]||"#150B3D")+'"':"")+'>'+
-          (n==="TODAS"?"Todas":n)+'</button>').join("") +
-      '</div>' +
-      '<input id="vfi-busca" placeholder="Buscar por proveedor, documento, sanción, entidad u objeto…" ' +
-      'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:13px;' +
-      'box-sizing:border-box;margin-bottom:14px;font-family:inherit">' +
-      '<div style="overflow-x:auto"><table id="vfi-tabla"><thead><tr>' +
-      '<th style="width:28px"></th><th>Nivel</th><th>Proveedor</th><th>Antecedente</th>' +
-      '<th>Fuente</th><th class="r">Valor contrato</th>' +
-      '</tr></thead><tbody></tbody></table></div></div>';
-
-    $("vfi-resultado").innerHTML = h;
-
-    $("vfi-resultado").querySelectorAll(".vfi-pill").forEach(b =>
-      b.addEventListener("click", () => { filtro = b.dataset.n; abierta = null; pintarResultado(); }));
-    const bi = $("vfi-busca");
-    if (bi) bi.addEventListener("input", () => { abierta = null; pintarFilas(); });
-
-    pintarFilas();
-    if (hayAlertas) { graficaNivel(); graficaFuente(); }
-  }
-
-  const tarjeta = (l, v, c, s) =>
-    '<div class="vfi-t" style="--c:'+c+'"><div class="n">'+miles(v)+'</div>' +
-    '<div class="l">'+esc(l)+'</div>'+(s?'<div class="s">'+esc(s)+'</div>':"")+'</div>';
-
-  function filtradas() {
-    const q = (($("vfi-busca")||{}).value || "").toLowerCase().trim();
-    return (RES.alertas||[]).filter(a => {
-      if (filtro !== "TODAS" && a.nivel !== filtro) return false;
-      if (!q) return true;
-      return [a.proveedor_secop, a.documento, a.sancion, a.entidad, a.objeto]
-        .some(v => String(v||"").toLowerCase().includes(q));
-    });
-  }
-
-  function pintarFilas() {
-    const tb = document.querySelector("#vfi-tabla tbody");
-    if (!tb) return;
-    const filas = filtradas();
-    if (!filas.length) {
-      tb.innerHTML = '<tr><td colspan="6" class="vfi-vacio">Sin alertas para este filtro.</td></tr>';
-      return;
-    }
-    tb.innerHTML = filas.map((a, i) => {
-      const ab = abierta === i;
-      let f = '<tr class="vfi-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
-        '<td style="color:var(--muted)">'+(ab?"▼":"▶")+'</td>' +
-        '<td><span class="vfi-nivel" style="background:'+(COLOR[a.nivel]||"#5C4F82")+'">'+esc(a.nivel)+'</span></td>' +
-        '<td><b>'+esc(a.proveedor_secop)+'</b><span class="vf-sub" style="display:block;font-size:11px;color:var(--muted)">'+esc(a.documento)+'</span></td>' +
-        '<td>'+esc(a.sancion)+'<span style="display:block;font-size:11px;color:var(--muted)">'+esc(a.tipo)+'</span></td>' +
-        '<td style="font-size:12px">'+esc(a.fuente)+'</td>' +
-        '<td class="vfi-mono">'+esc(cop(a.valor))+'</td></tr>';
-      if (ab) f += '<tr class="vfi-det"><td colspan="6">' + detalle(a) + '</td></tr>';
-      return f;
-    }).join("");
-
-    tb.querySelectorAll(".vfi-f").forEach(tr =>
-      tr.addEventListener("click", () => {
-        const i = Number(tr.dataset.i);
-        abierta = (abierta === i) ? null : i;
-        pintarFilas();
-      }));
-  }
-
-  // El original marcaba la fila con ▶/▼ pero no mostraba nada al abrirla.
-  // Aquí la flecha sí despliega el detalle, que ya venía en la respuesta.
-  function detalle(a) {
-    const campo = (k, v, rojo) => !v ? "" :
-      '<div class="vfi-campo"><div class="k">'+esc(k)+'</div>' +
-      '<div class="v'+(rojo?" rojo":"")+'">'+esc(v)+'</div></div>';
-    return '<div class="vfi-campos">' +
-      campo("Nombre en la fuente oficial", a.nombre_fuente) +
-      campo("Motivo de la alerta", a.motivo, true) +
-      campo("Autoridad", a.autoridad) +
-      campo("Tipo de antecedente", a.tipo) +
-      campo("Fecha de la sanción", a.fecha_sancion) +
-      campo("Fin de la inhabilidad", a.fin_inhabilidad) +
-      campo("Vigente", a.vigente) +
-      campo("Entidad contratante", a.entidad) +
-      campo("Estado del contrato", a.estado) +
-      campo("Fecha de firma", a.fecha_firma) +
-      campo("Valor del contrato", cop(a.valor)) +
-      campo("Objeto del contrato", a.objeto) +
-      '</div>';
-  }
-
-  /* ---------------- gráficas ---------------- */
-  function dibujar(id, tipo, data, extra) {
-    const el = $(id);
-    if (!el || typeof Chart === "undefined") return;
-    if (graficas[id]) graficas[id].destroy();
-    graficas[id] = new Chart(el, {
-      type: tipo, data,
-      options: Object.assign({
-        responsive: true, maintainAspectRatio: true,
-        plugins: { legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } } }
-      }, extra || {})
-    });
-  }
-
-  function graficaNivel() {
-    const d = [["Críticas", RES.criticas, COLOR.CRITICA], ["Altas", RES.altas, COLOR.ALTA],
-               ["Medias", RES.medias, COLOR.MEDIA], ["Info", RES.info, COLOR.INFO]]
-              .filter(x => Number(x[1]) > 0);
-    dibujar("vfi-g-nivel", "doughnut", {
-      labels: d.map(x => x[0]),
-      datasets: [{ data: d.map(x => Number(x[1])), backgroundColor: d.map(x => x[2]) }]
-    });
-  }
-
-  function graficaFuente() {
-    const m = {};
-    (RES.alertas||[]).forEach(a => {
-      const k = String(a.fuente||"").includes("SIRI") ? "SIRI · Procuraduría" : "Boletín · Contraloría";
-      m[k] = (m[k]||0) + 1;
-    });
-    const ks = Object.keys(m);
-    dibujar("vfi-g-fuente", "bar", {
-      labels: ks,
-      datasets: [{ label: "Alertas", data: ks.map(k => m[k]),
-                   backgroundColor: ks.map(k => k.includes("SIRI") ? "#7C3AED" : "#CA8A04"),
-                   borderRadius: 6 }]
-    }, { plugins: { legend: { display: false } },
-         scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } });
-  }
-
-  /* ---------------- búsqueda por documento ---------------- */
-  async function buscarDoc() {
-    const doc = $("vfi-doc").value.trim();
-    if (!doc) return;
-    const caja = $("vfi-doc-res");
-    const btn = $("vfi-buscar");
-    btn.disabled = true; btn.textContent = "Buscando…";
-    caja.innerHTML = '<div class="vfi-msg">Consultando SIRI y el Boletín…</div>';
-    try {
-      const r = await fetch(API + "/buscar?doc=" + encodeURIComponent(doc), { method: "POST" });
-      if (!r.ok) throw new Error("El servidor respondió " + r.status + ".");
-      const d = await r.json();
-      if (d.error) throw new Error(d.error);
-      caja.innerHTML = pintarBusqueda(d);
-    } catch (err) {
-      caja.innerHTML = '<div class="vfi-msg"><b>No se pudo consultar el documento.</b>' +
-        esc(err.message) + ' El servidor de análisis se suspende cuando lleva rato sin uso; ' +
-        'si es la primera consulta del día, espere unos segundos y vuelva a intentar.</div>';
-    }
-    btn.disabled = false; btn.textContent = "Buscar documento";
-  }
-
-  function pintarBusqueda(d) {
-    const hs = d.hallazgos || [];
-    if (!hs.length) {
-      return '<div class="vfi-msg"><b>Sin antecedentes para el documento ' + esc(d.documento) + '.</b>' +
-             'No aparece en los registros de SIRI ni en el Boletín de Responsables Fiscales que ' +
-             'tiene cargados el servidor. Esto no reemplaza el certificado oficial.</div>';
-    }
-    let h = '<div class="vfi-aviso"><b>' + miles(d.total) + ' antecedente' + (d.total===1?"":"s") +
-            ' para el documento ' + esc(d.documento) + '.</b> ' +
-            'Confirme en el certificado oficial antes de usar esta información: puede tratarse de ' +
-            'un homónimo o de una sanción ya levantada.</div>';
-    h += '<div style="overflow-x:auto"><table><thead><tr>' +
-         '<th>Fuente</th><th>Nombre</th><th>Antecedente</th><th>Autoridad</th><th>Fecha</th>' +
-         '</tr></thead><tbody>';
-    hs.forEach(x => {
-      const siri = String(x.fuente||"").toUpperCase().includes("SIRI");
-      h += '<tr><td><span class="vfi-nivel" style="background:' + (siri?"#7C3AED":"#CA8A04") + '">' +
-           esc(siri ? "SIRI" : "BOLETÍN") + '</span></td>' +
-           '<td><b>' + esc(x.nombre||"—") + '</b></td>' +
-           '<td>' + esc(x.sancion||"—") +
-           (x.tipo ? '<span style="display:block;font-size:11px;color:var(--muted)">'+esc(x.tipo)+'</span>' : "") +
-           (x.entidad ? '<span style="display:block;font-size:11px;color:var(--muted)">'+esc(x.entidad)+'</span>' : "") +
-           '</td>' +
-           '<td style="font-size:12px">' + esc(x.autoridad||"—") + '</td>' +
-           '<td style="font-size:12px;white-space:nowrap">' + esc(x.fecha||"—") + '</td></tr>';
-    });
-    return h + '</tbody></table></div>';
-  }
-
-  /* ---------------- limpiar ---------------- */
-  function limpiar() {
-    terminar();
-    RES = null; filtro = "TODAS"; abierta = null;
-    $("vfi-resultado").innerHTML = "";
-    $("vfi-doc-res").innerHTML = "";
-    $("vfi-doc").value = "";
-    Object.values(graficas).forEach(g => g && g.destroy());
-    graficas = {};
-  }
-})();
-
-/* ============================================================
-   FINANCIADORES Y CONTRATOS
-   Lee data/modulos/financiadores.json, que produce
-   etl_financiadores.py cruzando Cuentas Claras contra SECOP II.
-   La pagina no calcula nada: solo muestra el corte, con la
-   base legal y los limites del cruce a la vista.
-   ============================================================ */
-(function () {
-  "use strict";
-  const FUENTE = "data/modulos/financiadores.json";
-  const DIAS_VIEJO = 90;   // la base de aportes es historica, envejece lento
-  let cargado = false, DATOS = null, abierta = null, filtro = "todos";
-
-  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
-    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const plata = v => new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",
-    maximumFractionDigits:0}).format(Number(v)||0);
-  const corto = v => { v=Number(v)||0; const a=Math.abs(v);
-    if(a>=1e12) return "$"+(v/1e12).toFixed(1)+" B";
-    if(a>=1e9)  return "$"+(v/1e9).toFixed(1)+" MM";
-    if(a>=1e6)  return "$"+(v/1e6).toFixed(1)+" M";
-    return plata(v); };
-  const miles = n => Number(n||0).toLocaleString("es-CO");
-  const fecha = iso => { const d=new Date(iso);
-    return isNaN(d)?String(iso||"—"):d.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"}); };
-  const doc = d => { const x=String(d||"").replace(/\D/g,"");
-    return x.length>6 ? x.replace(/\B(?=(\d{3})+(?!\d))/g,".") : (x||"—"); };
-  const $ = id => document.getElementById(id);
-
-  const NIVEL = {
-    posible_inhabilidad: ["Posible inhabilidad", "#C8003C"],
-    revisar:             ["Revisar",             "#EA6A0A"],
-    cargo_no_cubierto:   ["Cargo no cubierto",   "#7C7098"],
-    solo_exceptuados:    ["Solo exceptuados",    "#5C4F82"],
-    autofinanciacion:    ["Autofinanciación",    "#8E85A8"]
-  };
-
-  async function cargar() {
-    if (cargado) return;
-    cargado = true;
-    const caja = $("fin-estado"), cont = $("fin-contenido");
-    try {
-      const r = await fetch(FUENTE, { cache: "no-store" });
-      if (r.status === 404) return vacio(caja);
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      DATOS = await r.json();
-      if (!DATOS || !DATOS.meta || !DATOS.kpis) throw new Error("El archivo no tiene la estructura esperada.");
-      pintar();
-      cont.hidden = false;
-      caja.style.display = "none";
-    } catch (err) {
-      cargado = false;
-      caja.className = "vfi-msg";
-      caja.innerHTML = "<b>No se pudo cargar el corte de financiadores.</b>" + esc(err.message) +
-        "<br><br>Si abrió el archivo con doble clic, el navegador bloquea la lectura de datos " +
-        "locales. Levante un servidor: <code>python -m http.server</code>.";
-    }
-  }
-
-  function vacio(caja) {
-    caja.className = "vf-vacio";
-    caja.innerHTML =
-      "<b>Todavía no hay un corte generado.</b>" +
-      "Esta pestaña cruza los aportes reportados al CNE en Cuentas Claras contra los " +
-      "contratos que esos mismos aportantes obtuvieron después, para detectar la " +
-      "inhabilidad del artículo 2 de la Ley 1474 de 2011. Para generarlo:" +
-      "<pre>python etl_financiadores.py --municipio SOACHA --tope 180000000</pre>" +
-      "El <code>--tope</code> es el máximo que podía invertir un candidato en esa " +
-      "circunscripción, según la resolución del CNE para la elección. Sin ese dato el " +
-      "cruce igual corre, pero no puede afirmar que un aporte supere el 2 % que activa " +
-      "la inhabilidad.<br><br>" +
-      "También puede ejecutarlo desde la pestaña <b style=\"display:inline\">Actions</b> " +
-      "del repositorio, sin instalar nada.";
-  }
-
-  function pintar() {
-    const m = DATOS.meta, k = DATOS.kpis;
-    const dias = Math.floor((Date.now() - new Date(m.generado_en).getTime())/86400000);
-    const viejo = !isNaN(dias) && dias > DIAS_VIEJO;
-    let h = "";
-
-    h += '<div class="vf-corte'+(viejo?" viejo":"")+'">' +
-      "<b>Corte: " + esc(fecha(m.generado_en)) + "</b>" +
-      "<span>" + esc(m.municipio || m.departamento || "") + "</span>" +
-      "<span>Aportes de " + esc(m.eleccion) + "</span>" +
-      "<span>Contratos entre " + esc((m.ventana_contratos||{}).desde) + " y " +
-        esc((m.ventana_contratos||{}).hasta) + "</span>" +
-      (viejo ? '<span style="color:var(--warn);font-weight:600">Corte de hace '+dias+' días</span>' : "") +
-      "</div>";
-
-    // base legal y limites, antes que cualquier cifra
-    h += '<div class="fin-ley"><b>' + esc(m.base_legal) + "</b>" +
-      "<p>Quien aporte más del <b>" + (m.umbral_pct ?? 2) + " %</b> del tope de campaña no puede " +
-      "contratar con entidades del nivel administrativo del candidato que financió, durante todo " +
-      "el período para el que fue elegido." +
-      (m.umbral_valor ? " Con el tope indicado, el umbral es <b>" + esc(plata(m.umbral_valor)) + "</b>." : "") +
-      "</p><p>" + esc(m.excepcion) + "</p>" +
-      (m.cargos_cubiertos ? "<p>" + esc(m.cargos_cubiertos) + "</p>" : "") +
-      (m.autofinanciacion ? "<p>" + esc(m.autofinanciacion) + "</p>" : "") +
-      "<ul>" + (m.limitaciones||[]).map(l => "<li>" + esc(l) + "</li>").join("") + "</ul></div>";
-
-    h += '<div class="kpis">' +
-      kpi("Financiadores", miles(k.financiadores)) +
-      kpi("Con contrato después", miles(k.financiadores_con_contrato)) +
-      kpi("De terceros", miles(k.terceros_con_contrato ?? k.financiadores_con_contrato)) +
-      kpi("Posible inhabilidad", miles(k.posible_inhabilidad)) +
-      kpi("Total aportado", corto(k.total_aportado)) +
-      kpi("Total contratado", corto(k.total_contratado)) +
-      kpi("Retorno global", k.retorno_global ? k.retorno_global + "×" : "—") +
-      "</div>";
-
-    const grupos = [["todos","Todos"],["posible_inhabilidad","Posible inhabilidad"],
-                    ["revisar","Revisar"],["cargo_no_cubierto","Cargo no cubierto"],
-                    ["solo_exceptuados","Solo exceptuados"],["autofinanciacion","Autofinanciación"]];
-    h += '<div class="panel"><div class="vfi-pills">' +
-      grupos.map(([v,t]) => '<button class="vfi-pill'+(filtro===v?" on":"")+'" data-f="'+v+'"' +
-        (filtro===v ? ' style="background:'+((NIVEL[v]||[])[1]||"#150B3D")+'"' : "") +
-        ">"+t+"</button>").join("") +
-      "</div>" +
-      '<input id="fin-busca" placeholder="Buscar por financiador, documento, candidato o entidad…" ' +
-      'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;' +
-      'font-size:13px;box-sizing:border-box;margin-bottom:14px;font-family:inherit">' +
-      '<div style="overflow-x:auto"><table id="fin-tabla"><thead><tr>' +
-      '<th style="width:28px"></th><th>Financiador</th><th>Candidato que financió</th>' +
-      '<th class="r">Aportó</th><th class="r">Contrató</th><th class="r">Retorno</th><th>Nivel</th>' +
-      "</tr></thead><tbody></tbody></table></div></div>";
-
-    h += '<div class="vf-fuentes"><b>Fuentes de este corte</b><br>' +
-      (m.fuentes||[]).map(f => "· " + esc(f.nombre) + " — " + esc(f.entidad) +
-        ", dataset <code>" + esc(f.dataset) + "</code>, " + miles(f.registros) + " registros" +
-        (f.url ? ' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener">ver dataset</a>' : "")
-      ).join("<br>") +
-      "<br>Generado por <code>etl_financiadores.py</code> el " + esc(fecha(m.generado_en)) + ".</div>";
-
-    $("fin-contenido").innerHTML = h;
-
-    $("fin-contenido").querySelectorAll(".vfi-pill").forEach(b =>
-      b.addEventListener("click", () => { filtro = b.dataset.f; abierta = null; pintar(); }));
-    const bi = $("fin-busca");
-    if (bi) bi.addEventListener("input", () => { abierta = null; filas(); });
-    filas();
-  }
-
-  const kpi = (t,v) => '<div class="kpi"><small>'+esc(t)+"</small><b>"+esc(v)+"</b></div>";
-
-  function visibles() {
-    const q = (($("fin-busca")||{}).value || "").toLowerCase().trim();
-    return (DATOS.hallazgos||[]).filter(x => {
-      if (filtro !== "todos" && x.nivel !== filtro) return false;
-      if (!q) return true;
-      const campos = [x.nombre, x.documento]
-        .concat((x.candidatos||[]).map(c => c.candidato))
-        .concat((x.contratos||[]).map(c => c.entidad));
-      return campos.some(v => String(v||"").toLowerCase().includes(q));
-    });
-  }
-
-  function filas() {
-    const tb = document.querySelector("#fin-tabla tbody");
-    if (!tb) return;
-    const v = visibles();
-    if (!v.length) {
-      tb.innerHTML = '<tr><td colspan="7" class="vfi-vacio">Sin resultados para este filtro.</td></tr>';
-      return;
-    }
-    tb.innerHTML = v.map((x,i) => {
-      const ab = abierta === i;
-      const [etq,col] = NIVEL[x.nivel] || ["—","#5C4F82"];
-      const cands = (x.candidatos||[]);
-      let f = '<tr class="fin-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
-        '<td style="color:var(--muted)">'+(ab?"▼":"▶")+"</td>" +
-        "<td><b>"+esc(x.nombre)+"</b><span class=\"vf-sub\">"+esc(doc(x.documento)) +
-          " · " + esc(x.tipo_persona||"") + "</span></td>" +
-        "<td>" + (cands.length ? esc(cands[0].candidato) +
-            '<span class="vf-sub">'+esc(cands[0].cargo||"")+
-            (cands[0].partido ? " · "+esc(cands[0].partido) : "") +
-            (cands.length>1 ? " y "+(cands.length-1)+" más" : "") + "</span>" : "—") + "</td>" +
-        '<td class="vfi-mono">'+esc(corto(x.aportado)) +
-          (x.porcentaje_tope!=null ? '<span class="vf-sub" style="text-align:right">'+
-            esc(String(x.porcentaje_tope).replace(".",","))+" % del tope</span>" : "") + "</td>" +
-        '<td class="vfi-mono">'+esc(corto(x.valor_contratos)) +
-          '<span class="vf-sub" style="text-align:right">'+miles((x.contratos||[]).length)+" contratos</span></td>" +
-        '<td class="vfi-mono">'+(x.retorno!=null ? esc(String(x.retorno).replace(".",","))+"×" : "—")+"</td>" +
-        '<td><span class="vfi-nivel" style="background:'+col+'">'+esc(etq)+"</span></td></tr>";
-      if (ab) f += '<tr class="vfi-det"><td colspan="7">'+detalle(x)+"</td></tr>";
-      return f;
-    }).join("");
-
-    tb.querySelectorAll(".fin-f").forEach(tr =>
-      tr.addEventListener("click", () => {
-        const i = Number(tr.dataset.i);
-        abierta = (abierta === i) ? null : i;
-        filas();
-      }));
-  }
-
-  function detalle(x) {
-    let h = "";
-
-    h += '<div class="fin-bloque"><h4>Aportes reportados</h4><table class="fin-mini"><tr>' +
-      "<th>Candidato</th><th>Cargo</th><th>Partido</th><th>Fecha</th><th class=\"r\">Valor</th></tr>" +
-      (x.aportes||[]).map(a => "<tr><td>"+esc(a.candidato)+"</td><td>"+esc(a.cargo)+
-        "</td><td>"+esc(a.partido)+"</td><td>"+esc(a.fecha||"—")+
-        '</td><td class="vfi-mono">'+esc(plata(a.valor))+"</td></tr>").join("") +
-      "</table></div>";
-
-    const cs = x.contratos||[];
-    h += '<div class="fin-bloque"><h4>Contratos que cuentan para la inhabilidad ('+cs.length+')</h4>';
-    if (!cs.length) h += '<p class="note">Ninguno.</p>';
-    else h += '<table class="fin-mini"><tr><th>Entidad</th><th>Objeto</th><th>Tipo</th>' +
-      "<th>Firma</th><th class=\"r\">Valor</th></tr>" +
-      cs.map(c => "<tr"+(c.mismo_territorio?"":' class="fin-fuera"')+"><td>"+esc(c.entidad) +
-        (c.mismo_territorio ? "" : '<span class="vf-sub">otro territorio</span>') +
-        "</td><td>"+esc(c.objeto)+'<span class="vf-sub">'+esc(c.referencia)+
-        (c.url ? ' · <a href="'+esc(c.url)+'" target="_blank" rel="noopener">ver en SECOP</a>' : "") +
-        "</span></td><td>"+esc(c.tipo)+"</td><td>"+esc(c.firma)+
-        '</td><td class="vfi-mono">'+esc(plata(c.valor))+"</td></tr>").join("") + "</table>";
-    h += "</div>";
-
-    const ex = x.contratos_exceptuados||[];
-    if (ex.length) {
-      h += '<div class="fin-bloque"><h4>Exceptuados por el artículo 2 ('+ex.length+')</h4>' +
-        '<p class="note" style="margin:0 0 8px">La inhabilidad no cubre la prestación de ' +
-        "servicios profesionales, así que estos contratos no cuentan para el total ni para " +
-        "la clasificación. Se listan para que el panorama quede completo.</p>" +
-        '<table class="fin-mini"><tr><th>Entidad</th><th>Objeto</th><th>Firma</th><th class="r">Valor</th></tr>' +
-        ex.map(c => "<tr><td>"+esc(c.entidad)+"</td><td>"+esc(c.objeto)+"</td><td>"+esc(c.firma)+
-          '</td><td class="vfi-mono">'+esc(plata(c.valor))+"</td></tr>").join("") +
-        "</table></div>";
-    }
-    return h;
-  }
-
-  // Sin barra de pestanas, se entra por el enlace del indice: el hash manda.
-  const siToca = () => { if (location.hash.slice(1) === "financiadores") cargar(); };
-  siToca();
-  window.addEventListener("hashchange", siToca);
-  const btn = document.querySelector('.tabs button[data-t="financiadores"]');
-  if (btn) btn.addEventListener("click", cargar);
-})();
-
-/* ============================================================
-   TERRITORIO Y OBRAS INCONCLUSAS
-   Lee data/modulos/territorio.json, que produce etl_territorio.py.
-   Dos miradas con confiabilidad distinta, y la pagina lo dice:
-   las obras vencidas cubren el 100% de los contratos; los sectores
-   solo los que nombran un lugar en el objeto.
-   ============================================================ */
-(function () {
-  "use strict";
-  const FUENTE = "data/modulos/territorio.json";
-  const DIAS_VIEJO = 30;
-  let cargado = false, DATOS = null, abierta = null, vista = "vencidas";
-
-  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
-    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const plata = v => new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",
-    maximumFractionDigits:0}).format(Number(v)||0);
-  const corto = v => { v=Number(v)||0; const a=Math.abs(v);
-    if(a>=1e12) return "$"+(v/1e12).toFixed(1)+" B";
-    if(a>=1e9)  return "$"+(v/1e9).toFixed(1)+" MM";
-    if(a>=1e6)  return "$"+(v/1e6).toFixed(1)+" M";
-    return plata(v); };
-  const miles = n => Number(n||0).toLocaleString("es-CO");
-  const fecha = iso => { const d=new Date(iso);
-    return isNaN(d)?String(iso||"—"):d.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"}); };
-  const anios = d => { d=Number(d)||0;
-    return d>=365 ? (d/365).toFixed(1).replace(".",",")+" años" : miles(d)+" días"; };
-  const $ = id => document.getElementById(id);
-
-  async function cargar() {
-    if (cargado) return;
-    cargado = true;
-    const caja = $("terr-estado"), cont = $("terr-contenido");
-    try {
-      const r = await fetch(FUENTE, { cache: "no-store" });
-      if (r.status === 404) return vacio(caja);
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      DATOS = await r.json();
-      if (!DATOS || !DATOS.meta || !DATOS.kpis) throw new Error("El archivo no tiene la estructura esperada.");
-      pintar();
-      cont.hidden = false;
-      caja.style.display = "none";
-    } catch (err) {
-      cargado = false;
-      caja.className = "vfi-msg";
-      caja.innerHTML = "<b>No se pudo cargar el corte de territorio.</b>" + esc(err.message) +
-        "<br><br>Si abrió el archivo con doble clic, el navegador bloquea la lectura de " +
-        "datos locales. Levante un servidor: <code>python -m http.server</code>.";
-    }
-  }
-
-  function vacio(caja) {
-    caja.className = "vf-vacio";
-    caja.innerHTML =
-      "<b>Todavía no hay un corte generado.</b>" +
-      "Esta pestaña muestra dos cosas: los contratos cuya fecha de fin ya pasó y siguen " +
-      "en ejecución, y el valor agrupado por los lugares que nombra el objeto contractual. " +
-      "Para generarlo:" +
-      "<pre>python etl_territorio.py --municipio Soacha --desde 2020-01-01</pre>" +
-      "También puede ejecutarlo desde la pestaña <b style=\"display:inline\">Actions</b> " +
-      "del repositorio, sin instalar nada.";
-  }
-
-  function pintar() {
-    const m = DATOS.meta, k = DATOS.kpis, c = m.cobertura || {};
-    const dias = Math.floor((Date.now() - new Date(m.generado_en).getTime())/86400000);
-    const viejo = !isNaN(dias) && dias > DIAS_VIEJO;
-    let h = "";
-
-    h += '<div class="vf-corte'+(viejo?" viejo":"")+'">' +
-      "<b>Corte: " + esc(fecha(m.generado_en)) + "</b>" +
-      "<span>" + esc(m.municipio||"") + "</span>" +
-      "<span>Contratos firmados entre " + esc((m.ventana||{}).desde) + " y " + esc((m.ventana||{}).hasta) + "</span>" +
-      (viejo ? '<span style="color:var(--warn);font-weight:600">Corte de hace '+dias+' días</span>' : "") +
-      "</div>";
-
-    h += '<div class="kpis">' +
-      kpi("Contratos", miles(k.contratos)) +
-      kpi("Valor contratado", corto(k.valor_total)) +
-      kpi("Obras vencidas", miles(k.obras_vencidas)) +
-      kpi("Valor vencido", corto(k.valor_vencido)) +
-      kpi("Con pago reportado", miles(k.vencidas_con_pago_reportado ?? 0) + " de " + miles(k.obras_vencidas)) +
-      kpi("Sectores nombrados", miles(k.sectores)) +
-      "</div>";
-
-    h += '<div class="terr-tabs">' +
-      '<button class="terr-tab'+(vista==="vencidas"?" on":"")+'" data-v="vencidas">' +
-        "Obras vencidas · " + miles(k.obras_vencidas) + "</button>" +
-      '<button class="terr-tab'+(vista==="sectores"?" on":"")+'" data-v="sectores">' +
-        "Por sector · " + miles(k.sectores) + "</button>" +
-      "</div><div id='terr-vista'></div>";
-
-    h += '<div class="vf-fuentes"><b>Fuente de este corte</b><br>' +
-      (m.fuentes||[]).map(f => "· " + esc(f.nombre) + " — " + esc(f.entidad) +
-        ", dataset <code>" + esc(f.dataset) + "</code>, " + miles(f.registros) + " registros" +
-        (f.url ? ' · <a href="'+esc(f.url)+'" target="_blank" rel="noopener">ver dataset</a>' : "")
-      ).join("<br>") +
-      "<br>Generado por <code>etl_territorio.py</code> el " + esc(fecha(m.generado_en)) + ".</div>";
-
-    $("terr-contenido").innerHTML = h;
-    $("terr-contenido").querySelectorAll(".terr-tab").forEach(b =>
-      b.addEventListener("click", () => { vista = b.dataset.v; abierta = null; pintar(); }));
-    pintarVista();
-  }
-
-  const kpi = (t,v) => '<div class="kpi"><small>'+esc(t)+"</small><b>"+esc(v)+"</b></div>";
-
-  function pintarVista() {
-    $("terr-vista").innerHTML = vista === "vencidas" ? vistaVencidas() : vistaSectores();
-    if (vista === "vencidas") {
-      document.querySelectorAll("#terr-vista .terr-f").forEach(tr =>
-        tr.addEventListener("click", () => {
-          const i = Number(tr.dataset.i);
-          abierta = (abierta === i) ? null : i;
-          pintarVista();
-        }));
-    }
-    const bi = $("terr-busca");
-    if (bi) bi.addEventListener("input", () => { abierta = null; pintarVista(); });
-  }
-
-  /* ---------- obras vencidas: el dato firme ---------- */
-  function vistaVencidas() {
-    const todas = DATOS.obras_vencidas || [];
-    const q = (($("terr-busca")||{}).value || "").toLowerCase().trim();
-    const filas = todas.filter(o => !q ||
-      [o.contratista, o.entidad, o.objeto, o.referencia]
-        .some(v => String(v||"").toLowerCase().includes(q)));
-
-    let h = '<div class="panel">' +
-      '<p class="note" style="margin:0 0 12px">Contratos cuya fecha de terminación ya pasó y ' +
-      "que siguen figurando en ejecución en SECOP. Cubre el <b>100 % de los contratos</b> del " +
-      "período: no depende de que el objeto nombre un lugar. Que un contrato aparezca aquí " +
-      "puede deberse a una obra parada, a una prórroga no registrada o a que la entidad no " +
-      "actualizó el estado; conviene confirmarlo antes de afirmarlo.</p>" +
-      (DATOS.meta.advertencia_pagos
-        ? '<p class="note" style="margin:0 0 12px"><b>Sobre la columna de pagos.</b> ' +
-          esc(DATOS.meta.advertencia_pagos) + "</p>" : "") +
-      '<input id="terr-busca" value="'+esc(q)+'" placeholder="Buscar por contratista, entidad u objeto…" ' +
-      'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;' +
-      'font-size:13px;box-sizing:border-box;margin-bottom:14px;font-family:inherit">';
-
-    if (!filas.length) {
-      h += '<div class="vfi-vacio">' + (todas.length
-        ? "Sin resultados para esa búsqueda."
-        : "Ningún contrato del período está vencido y abierto a la vez. Es un resultado posible y bueno.") +
-        "</div></div>";
-      return h;
-    }
-
-    h += '<div style="overflow-x:auto"><table id="terr-tabla"><thead><tr>' +
-      '<th style="width:28px"></th><th>Objeto</th><th>Contratista</th>' +
-      '<th class="r">Valor</th><th class="r">Falta por pagar</th><th class="r">Vencida hace</th>' +
-      "</tr></thead><tbody>";
-    filas.forEach((o, i) => {
-      const ab = abierta === i;
-      const grave = o.dias_vencido >= 730;
-      h += '<tr class="terr-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
-        '<td style="color:var(--muted)">'+(ab?"▼":"▶")+"</td>" +
-        "<td><b>"+esc(o.objeto.slice(0,90))+(o.objeto.length>90?"…":"")+"</b>" +
-          '<span class="vf-sub">'+esc(o.entidad)+" · "+esc(o.referencia)+"</span></td>" +
-        "<td>"+esc(o.contratista)+"</td>" +
-        '<td class="vfi-mono">'+esc(corto(o.valor))+"</td>" +
-        '<td class="vfi-mono">'+(o.pago_reportado
-            ? esc(corto(o.pendiente))
-            : '<span style="color:var(--muted);font-weight:400;font-size:11.5px">no reportado</span>')+"</td>" +
-        '<td class="vfi-mono"><span class="vfi-nivel" style="background:'+
-          (grave?"#C8003C":"#EA6A0A")+'">'+esc(anios(o.dias_vencido))+"</span></td></tr>";
-      if (ab) {
-        h += '<tr class="vfi-det"><td colspan="6"><div class="vfi-campos">' +
-          campo("Objeto completo", o.objeto) +
-          campo("Entidad", o.entidad) +
-          campo("Contratista", o.contratista + (o.documento ? " · " + o.documento : "")) +
-          campo("Tipo", o.tipo) +
-          campo("Inicio", o.inicio) +
-          campo("Fin pactado", o.fin, true) +
-          campo("Estado en SECOP", o.estado) +
-          campo("Valor", plata(o.valor)) +
-          campo("Pagado", o.pago_reportado ? plata(o.pagado) : "SECOP no reporta pagos de este contrato") +
-          (o.pago_reportado ? campo("Falta por pagar", plata(o.pendiente), true) : "") +
-          ((o.lugares||[]).length
-            ? campo("Lugar nombrado en el objeto",
-                o.lugares.map(l => l.tipo + ": " + l.nombre).join(" · "))
-            : "") +
-          (o.url ? '<div class="vfi-campo"><div class="k">SECOP</div><div class="v">' +
-            '<a href="'+esc(o.url)+'" target="_blank" rel="noopener">ver el proceso</a></div></div>' : "") +
-          "</div></td></tr>";
-      }
-    });
-    return h + "</tbody></table></div></div>";
-  }
-
-  const campo = (k, v, rojo) => !v ? "" :
-    '<div class="vfi-campo"><div class="k">'+esc(k)+'</div>' +
-    '<div class="v'+(rojo?" rojo":"")+'">'+esc(v)+"</div></div>";
-
-  /* ---------- sectores: parcial, y se dice ---------- */
-  function vistaSectores() {
-    const m = DATOS.meta, c = m.cobertura || {}, sec = DATOS.sectores || [];
-    const pct = Number(c.pct_valor) || 0;
-
-    let h = '<div class="terr-aviso"><b>Esto no es un mapa de la inversión, y la cobertura es parcial.</b>' +
-      "<p>" + esc(m.advertencia_mapa || "") + "</p>" +
-      "<p>" + esc(m.advertencia_cobertura || "") + "</p>" +
-      '<div class="terr-barra"><div class="terr-barra-in" style="width:'+Math.max(2,Math.min(100,pct))+'%"></div></div>' +
-      '<div class="terr-barra-txt"><span><b>'+esc(String(pct).replace(".",","))+' %</b> del valor nombra un lugar · ' +
-        esc(corto(c.valor_con_lugar)) + "</span><span>" +
-        esc(String(Math.round((100-pct)*10)/10).replace(".",",")) + " % sin ubicar · " +
-        esc(corto(c.valor_sin_lugar)) + "</span></div>" +
-      "<p style=\"margin-top:10px\">" + esc(m.reparto || "") + "</p></div>";
-
-    if (!sec.length) return h + '<div class="panel"><div class="vfi-vacio">Ningún objeto contractual del período nombra un lugar identificable.</div></div>';
-
-    const max = Math.max(...sec.map(s => s.valor)) || 1;
-    h += '<div class="panel"><table><thead><tr><th>Lugar</th><th>Participación del valor ubicado</th>' +
-      '<th class="r">Contratos</th><th class="r">Valor</th></tr></thead><tbody>';
-    sec.forEach(s => {
-      h += "<tr><td><b>"+esc(s.nombre)+"</b><span class=\"vf-sub\">"+esc(s.tipo)+"</span></td>" +
-        '<td><div class="pct"><div class="meter" style="width:140px"><i style="width:'+
-          Math.max(2, s.valor/max*100)+'%"></i></div></div></td>' +
-        '<td class="r">'+miles(s.contratos)+"</td>" +
-        '<td class="vfi-mono">'+esc(corto(s.valor))+"</td></tr>";
-      if ((s.ejemplos||[]).length) {
-        h += '<tr><td colspan="4" style="padding-top:0"><div class="terr-ej">' +
-          s.ejemplos.map(e => "· " + esc(e.objeto) + " <b>" + esc(corto(e.valor)) + "</b>").join("<br>") +
-          "</div></td></tr>";
-      }
-    });
-    return h + "</tbody></table></div>";
-  }
-
-  const siToca = () => { if (location.hash.slice(1) === "territorio") cargar(); };
-  siToca();
-  window.addEventListener("hashchange", siToca);
-  const btn = document.querySelector('.tabs button[data-t="territorio"]');
-  if (btn) btn.addEventListener("click", cargar);
-})();
-
-/* ============================================================
-   FICHA DEL CONTENDOR
-   No trae datos propios: reune lo que ya producen los otros
-   modulos para una misma persona o empresa.
-     - territorio.json    huella contractual y obras vencidas
-     - financiadores.json aportes de campana y contratos
-     - backend VFI        antecedentes en SIRI y Boletin, en vivo
-   Cada bloque dice de donde sale y que alcance tiene, porque una
-   ficha que junta senalamientos sin decir su origen es una
-   acusacion, no un informe.
-   ============================================================ */
-(function () {
-  "use strict";
-  const API = "https://sistema-gestion-contractual.onrender.com/api/vfi";
-  const FUENTES = {
-    territorio: "data/modulos/territorio.json",
-    financiadores: "data/modulos/financiadores.json"
-  };
-  let iniciado = false, CORTES = {}, ultimaBusqueda = "";
-
-  const esc = s => String(s==null?"":s).replace(/[&<>"']/g,
-    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const plata = v => new Intl.NumberFormat("es-CO",{style:"currency",currency:"COP",
-    maximumFractionDigits:0}).format(Number(v)||0);
-  const corto = v => { v=Number(v)||0; const a=Math.abs(v);
-    if(a>=1e12) return "$"+(v/1e12).toFixed(1)+" B";
-    if(a>=1e9)  return "$"+(v/1e9).toFixed(1)+" MM";
-    if(a>=1e6)  return "$"+(v/1e6).toFixed(1)+" M";
-    return plata(v); };
-  const miles = n => Number(n||0).toLocaleString("es-CO");
-  const fecha = iso => { const d=new Date(iso);
-    return isNaN(d)?String(iso||"—"):d.toLocaleDateString("es-CO",{day:"numeric",month:"long",year:"numeric"}); };
-  const soloDigitos = s => String(s||"").replace(/\D/g,"");
-  const docFmt = d => { const x=soloDigitos(d);
-    return x.length>6 ? x.replace(/\B(?=(\d{3})+(?!\d))/g,".") : (x||"—"); };
-  const norm = s => String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toUpperCase().trim();
-  const $ = id => document.getElementById(id);
-
-  async function iniciar() {
-    if (iniciado) return;
-    iniciado = true;
-    const caja = $("ficha-estado");
-    const res = await Promise.all(Object.entries(FUENTES).map(async ([k, url]) => {
-      try {
-        const r = await fetch(url, { cache: "no-store" });
-        return [k, r.ok ? await r.json() : null];
-      } catch { return [k, null]; }
-    }));
-    CORTES = Object.fromEntries(res);
-
-    if (!CORTES.territorio && !CORTES.financiadores) {
-      caja.className = "vf-vacio";
-      caja.innerHTML = "<b>Todavía no hay cortes que consultar.</b>" +
-        "Esta ficha no genera datos: reúne los que producen los módulos de " +
-        "Territorio y de Financiadores. Genere al menos uno de esos cortes desde " +
-        "la pestaña <b style=\"display:inline\">Actions</b> y vuelva aquí.";
-      return;
-    }
-    caja.style.display = "none";
-    $("ficha-buscador").hidden = false;
-    pintarAlcance();
-  }
-
-  function pintarAlcance() {
-    const t = CORTES.territorio, f = CORTES.financiadores;
-    const li = [];
-    if (t) li.push("<li><b>Contratación en " + esc(t.meta.municipio) + "</b> — " +
-      miles((t.contratistas||[]).length) + " contratistas, contratos firmados entre " +
-      esc(t.meta.ventana.desde) + " y " + esc(t.meta.ventana.hasta) +
-      ". Corte del " + esc(fecha(t.meta.generado_en)) + ".</li>");
-    else li.push("<li><b>Contratación</b> — sin corte generado.</li>");
-    if (f) li.push("<li><b>Aportes de campaña</b> — " + esc(f.meta.eleccion) +
-      ", " + miles((f.hallazgos||[]).length) + " aportantes que después contrataron. " +
-      "Corte del " + esc(fecha(f.meta.generado_en)) + ".</li>");
-    else li.push("<li><b>Aportes de campaña</b> — sin corte generado.</li>");
-    li.push("<li><b>Antecedentes en SIRI y Boletín</b> — se consultan en vivo al buscar, " +
-      "no dependen de un corte.</li>");
-    $("ficha-alcance").innerHTML =
-      "<b>Qué alcanza a ver esta ficha</b><ul>" + li.join("") + "</ul>" +
-      "<p>Fuera de eso no hay nada: que una persona aparezca limpia aquí significa que " +
-      "no está en estos cortes, no que no exista información en otra parte.</p>";
-  }
-
-  /* ---------------- busqueda ---------------- */
-  function buscar() {
-    const q = $("ficha-q").value.trim();
-    if (!q) return;
-    ultimaBusqueda = q;
-    const dig = soloDigitos(q);
-    const esDoc = dig.length >= 5 && dig.length === q.replace(/[.\s-]/g, "").length;
-
-    const cands = esDoc ? porDocumento(dig) : porNombre(q);
-    if (!cands.length) {
-      $("ficha-res").innerHTML = '<div class="vfi-msg"><b>Sin coincidencias para “' +
-        esc(q) + '”.</b>' +
-        (esDoc ? "Ese documento no aparece en los cortes cargados."
-               : "Ningún nombre de los cortes contiene ese texto. Pruebe con el documento, " +
-                 "o con una parte del nombre: la búsqueda por nombre es literal.") +
-        "</div>";
-      return;
-    }
-    if (cands.length > 1 && !esDoc) return pintarCandidatos(cands, q);
-    pintarFicha(cands[0].documento);
-  }
-
-  function porDocumento(dig) {
-    const t = (CORTES.territorio?.contratistas || []).find(x => x.documento === dig);
-    const f = (CORTES.financiadores?.hallazgos || []).find(x => x.documento === dig);
-    return (t || f) ? [{ documento: dig, nombre: (t && t.nombre) || (f && f.nombre) || "" }]
-                    : [{ documento: dig, nombre: "", soloEnVivo: true }];
-  }
-
-  function porNombre(q) {
-    const nq = norm(q), vistos = new Map();
-    const mirar = (lista, campo) => (lista || []).forEach(x => {
-      if (norm(x[campo]).includes(nq) && !vistos.has(x.documento))
-        vistos.set(x.documento, { documento: x.documento, nombre: x[campo] });
-    });
-    mirar(CORTES.territorio?.contratistas, "nombre");
-    mirar(CORTES.financiadores?.hallazgos, "nombre");
-    return [...vistos.values()].slice(0, 40);
-  }
-
-  function pintarCandidatos(cands, q) {
-    $("ficha-res").innerHTML = '<div class="panel"><h3>' + miles(cands.length) +
-      " coincidencias para “" + esc(q) + "”</h3>" +
-      '<table><tbody>' + cands.map(c =>
-        '<tr class="ficha-cand" data-d="' + esc(c.documento) + '"><td><b>' + esc(c.nombre) +
-        '</b><span class="vf-sub">' + esc(docFmt(c.documento)) + "</span></td>" +
-        '<td class="r" style="color:var(--muted)">ver ficha →</td></tr>').join("") +
-      "</tbody></table></div>";
-    document.querySelectorAll(".ficha-cand").forEach(tr =>
-      tr.addEventListener("click", () => pintarFicha(tr.dataset.d)));
-  }
-
-  /* ---------------- la ficha ---------------- */
-  function pintarFicha(doc) {
-    const t = (CORTES.territorio?.contratistas || []).find(x => x.documento === doc);
-    const f = (CORTES.financiadores?.hallazgos || []).find(x => x.documento === doc);
-    const nombre = (t && t.nombre) || (f && f.nombre) || "Documento " + docFmt(doc);
-
-    let h = '<div class="ficha-cab"><div class="ficha-nom">' + esc(nombre) + "</div>" +
-      '<div class="ficha-doc">' + esc(docFmt(doc)) +
-      ((t && t.tipo_documento) || (f && f.tipo_documento)
-        ? " · " + esc(t?.tipo_documento || f?.tipo_documento) : "") + "</div>" +
-      '<div class="ficha-chips">' +
-        chip("Contratación", t ? corto(t.valor) : "sin registro", !!t) +
-        chip("Obras vencidas", t && t.vencidos ? miles(t.vencidos) : "ninguna", !!(t && t.vencidos)) +
-        chip("Aportes de campaña", f ? corto(f.aportado) : "sin registro", !!f) +
-        chip("Antecedentes", '<span id="ficha-chip-ant">consultando…</span>', false, true) +
-      "</div></div>";
-
-    h += bloqueContratacion(t);
-    h += bloqueAportes(f);
-    h += '<div id="ficha-antecedentes"><div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
-      '<p class="note">Consultando el servidor…</p></div></div>';
-
-    $("ficha-res").innerHTML = h;
-    traerAntecedentes(doc);
-  }
-
-  const chip = (k, v, fuerte, crudo) =>
-    '<div class="ficha-chip' + (fuerte ? " on" : "") + '"><small>' + esc(k) + "</small><b>" +
-    (crudo ? v : esc(v)) + "</b></div>";
-
-  function bloqueContratacion(t) {
-    let h = '<div class="panel"><h3>Contratación pública</h3>';
-    if (!t) return h + '<p class="note">No aparece como contratista en el corte de ' +
-      'territorio. Ese corte cubre un municipio y un rango de fechas: fuera de ahí no ve nada.</p></div>';
-    h += '<div class="vfi-campos" style="margin-bottom:14px">' +
-      campo("Total contratado", plata(t.valor)) +
-      campo("Contratos", miles(t.contratos)) +
-      campo("Entidades", miles(t.entidades) + (t.nombres_entidades?.length
-        ? " · " + esc(t.nombres_entidades.slice(0,2).join(" · ")) : "")) +
-      campo("Pagado", t.contratos_con_pago
-        ? plata(t.pagado) + " (en " + miles(t.contratos_con_pago) + " de " + miles(t.contratos) + " contratos)"
-        : "SECOP no reporta pagos de estos contratos") +
-      campo("Primer contrato", t.primero || "—") +
-      campo("Último contrato", t.ultimo || "—") +
-      (t.vencidos ? campo("Obras vencidas y abiertas", miles(t.vencidos), true) : "") +
-      (t.vencidos_con_pago ? campo("Falta por pagar en lo vencido", plata(t.pendiente_vencido), true) : "") +
-      "</div>";
-    if ((t.mayores||[]).length) {
-      h += '<table class="fin-mini"><tr><th>Objeto</th><th>Entidad</th><th>Firma</th>' +
-        '<th class="r">Valor</th></tr>' +
-        t.mayores.map(m => "<tr><td>" + esc(m.objeto) +
-          '<span class="vf-sub">' + esc(m.referencia) + " · " + esc(m.estado) + "</span></td>" +
-          "<td>" + esc(m.entidad) + "</td><td>" + esc(m.firma) + "</td>" +
-          '<td class="vfi-mono">' + esc(plata(m.valor)) + "</td></tr>").join("") + "</table>";
-    }
-    return h + "</div>";
-  }
-
-  function bloqueAportes(f) {
-    let h = '<div class="panel"><h3>Aportes de campaña</h3>';
-    if (!f) return h + '<p class="note">No figura como aportante en el corte de ' +
-      'financiadores, que cubre una elección concreta. Un aporte a otra elección no se vería aquí.</p></div>';
-    const nivel = {posible_inhabilidad:["Posible inhabilidad","#C8003C"],
-      revisar:["Revisar","#EA6A0A"], cargo_no_cubierto:["Cargo no cubierto","#7C7098"],
-      solo_exceptuados:["Solo exceptuados","#5C4F82"], autofinanciacion:["Autofinanciación","#8E85A8"]}[f.nivel]
-      || ["—","#5C4F82"];
-    h += '<div class="vfi-campos" style="margin-bottom:14px">' +
-      campo("Total aportado", plata(f.aportado)) +
-      (f.porcentaje_tope != null ? campo("Del tope de campaña",
-        String(f.porcentaje_tope).replace(".",",") + " %") : "") +
-      campo("Contratado después", plata(f.valor_contratos)) +
-      (f.retorno != null ? campo("Retorno", String(f.retorno).replace(".",",") + "×") : "") +
-      '<div class="vfi-campo"><div class="k">Clasificación</div><div class="v">' +
-        '<span class="vfi-nivel" style="background:'+nivel[1]+'">'+esc(nivel[0])+"</span></div></div>" +
-      "</div>";
-    if ((f.candidatos||[]).length) {
-      h += '<table class="fin-mini"><tr><th>Candidato financiado</th><th>Cargo</th>' +
-        '<th>Partido</th><th class="r">Aportó</th></tr>' +
-        f.candidatos.map(c => "<tr><td><b>" + esc(c.candidato) + "</b></td><td>" +
-          esc(c.cargo) + "</td><td>" + esc(c.partido) + '</td><td class="vfi-mono">' +
-          esc(plata(c.valor)) + "</td></tr>").join("") + "</table>";
-    }
-    if (f.autofinanciacion) {
-      h += '<p class="note" style="margin-top:10px">Aportó a su propia campaña. El artículo 2 ' +
-        "de la Ley 1474 persigue que un tercero financie y después contrate, así que este caso " +
-        "no activa esa inhabilidad.</p>";
-    }
-    return h + "</div>";
-  }
-
-  const campo = (k, v, rojo) => !v ? "" :
-    '<div class="vfi-campo"><div class="k">' + esc(k) + '</div>' +
-    '<div class="v' + (rojo ? " rojo" : "") + '">' + esc(v) + "</div></div>";
-
-  /* ---------------- antecedentes en vivo ---------------- */
-  async function traerAntecedentes(doc) {
-    const caja = $("ficha-antecedentes"), chipAnt = $("ficha-chip-ant");
-    try {
-      const r = await fetch(API + "/buscar?doc=" + encodeURIComponent(doc), { method: "POST" });
-      if (!r.ok) throw new Error("El servidor respondió " + r.status + ".");
-      const d = await r.json();
-      if (d.error) throw new Error(d.error);
-      const hs = d.hallazgos || [];
-      if (chipAnt) { chipAnt.textContent = hs.length ? miles(hs.length) : "ninguno";
-        if (hs.length) chipAnt.closest(".ficha-chip").classList.add("on"); }
-      if (!hs.length) {
-        caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
-          '<p class="note">Sin registros para este documento en SIRI ni en el Boletín de ' +
-          "Responsables Fiscales. Esto no reemplaza el certificado oficial.</p></div>";
-        return;
-      }
-      caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín (' +
-        miles(hs.length) + ")</h3>" +
-        '<div class="vfi-aviso" style="margin-bottom:12px"><b>Una coincidencia por documento no ' +
-        "prueba una inhabilidad.</b> Puede tratarse de un homónimo o de una sanción ya levantada. " +
-        "Verifique en el certificado oficial antes de afirmarlo.</div>" +
-        '<table class="fin-mini"><tr><th>Fuente</th><th>Nombre</th><th>Antecedente</th>' +
-        "<th>Autoridad</th><th>Fecha</th></tr>" +
-        hs.map(x => { const siri = String(x.fuente||"").toUpperCase().includes("SIRI");
-          return "<tr><td><span class='vfi-nivel' style='background:" + (siri?"#7C3AED":"#CA8A04") +
-            "'>" + (siri?"SIRI":"BOLETÍN") + "</span></td><td><b>" + esc(x.nombre||"—") +
-            "</b></td><td>" + esc(x.sancion||"—") +
-            (x.tipo ? '<span class="vf-sub">'+esc(x.tipo)+"</span>" : "") + "</td><td>" +
-            esc(x.autoridad||"—") + "</td><td>" + esc(x.fecha||"—") + "</td></tr>"; }).join("") +
-        "</table></div>";
-    } catch (err) {
-      if (chipAnt) chipAnt.textContent = "no consultado";
-      caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
-        '<p class="note">No se pudo consultar: ' + esc(err.message) + " El servidor de " +
-        "análisis se suspende por inactividad; si es la primera consulta del día puede tardar " +
-        'cerca de un minuto. <button class="vfi-btn gris" id="ficha-reint" ' +
-        'style="padding:7px 14px;margin-left:8px">Reintentar</button></p></div>';
-      const b = $("ficha-reint");
-      if (b) b.addEventListener("click", () => {
-        caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
-          '<p class="note">Consultando…</p></div>';
-        traerAntecedentes(doc);
-      });
-    }
-  }
-
-  /* ---------------- arranque ---------------- */
-  document.addEventListener("DOMContentLoaded", enganchar);
-  enganchar();
-  function enganchar() {
-    const b = $("ficha-buscar"), q = $("ficha-q");
-    if (!b || b.dataset.ligado === "1") return;
-    b.dataset.ligado = "1";
-    b.addEventListener("click", buscar);
-    q.addEventListener("keydown", e => { if (e.key === "Enter") buscar(); });
-    const limpiar = $("ficha-limpiar");
-    if (limpiar) limpiar.addEventListener("click", () => {
-      q.value = ""; $("ficha-res").innerHTML = ""; q.focus();
-    });
-  }
-
-  const siToca = () => { if (location.hash.slice(1) === "ficha") iniciar(); };
-  siToca();
-  window.addEventListener("hashchange", siToca);
-  const tab = document.querySelector('.tabs button[data-t="ficha"]');
-  if (tab) tab.addEventListener("click", iniciar);
-})();
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-button fiscal active" onclick="switchTab('fiscal')">💰 FISCAL</button>
+            <button class="tab-button social" onclick="switchTab('social')">📱 SOCIAL</button>
+            <button class="tab-button seguridad" onclick="switchTab('seguridad')">🔒 SEGURIDAD</button>
+            <button class="tab-button integral" onclick="switchTab('integral')">🎯 SCORING INTEGRAL</button>
+        </div>
+
+        <!-- TAB: FISCAL -->
+        <div id="fiscal" class="tab-content active">
+            <h2>💰 Módulo Fiscal - Auditoría Anticorrupción</h2>
+            
+            <div class="kpi-row">
+                <div class="kpi">
+                    <span class="label">Ejecución Presupuestal</span>
+                    <span class="value">73%</span>
+                </div>
+                <div class="kpi">
+                    <span class="label">Scoring Corrupción</span>
+                    <span class="value" style="color: #e74c3c;">62/100 ALTO</span>
+                </div>
+                <div class="kpi">
+                    <span class="label">Anomalías Detectadas</span>
+                    <span class="value">12</span>
+                </div>
+            </div>
+
+            <h3>Top 3 Proveedores - Concentración de Gasto</h3>
+            <div class="proveedor-list">
+                <div class="proveedor-card">
+                    <div class="proveedor-header">
+                        <strong>CONSTRUCTORA ANDINA SA</strong>
+                        <span class="flag critica">CONCENTRACIÓN CRÍTICA</span>
+                    </div>
+                    <div class="proveedor-stats">
+                        <span>💵 $245B</span>
+                        <span>📊 39.4% presupuesto</span>
+                    </div>
+                </div>
+
+                <div class="proveedor-card">
+                    <div class="proveedor-header">
+                        <strong>SERVICIOS INTEGRALES CUNDINAMARCA</strong>
+                        <span class="flag">FAVORITISMO</span>
+                    </div>
+                    <div class="proveedor-stats">
+                        <span>💵 $156B</span>
+                        <span>📊 25.1% presupuesto</span>
+                    </div>
+                </div>
+
+                <div class="proveedor-card">
+                    <div class="proveedor-header">
+                        <strong>CONSULTORA PÚBLICA LTDA</strong>
+                        <span class="flag">SOBRE-FACTURACIÓN</span>
+                    </div>
+                    <div class="proveedor-stats">
+                        <span>💵 $89.7B</span>
+                        <span>📊 14.5% presupuesto</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Hallazgos de Auditoría</h3>
+            <div style="display: grid; gap: 12px; margin: 15px 0;">
+                <div style="background: #ffe0e0; padding: 12px; border-radius: 6px; border-left: 4px solid #e74c3c;">
+                    <strong style="color: #c00;">F001: Contratación directa en licitaciones públicas</strong>
+                    <small style="display: block; margin-top: 5px; color: #666;">Impacto: $78B | Recomendación: Licitación abierta 100% en contratos &gt;100M</small>
+                </div>
+                <div style="background: #fff3cd; padding: 12px; border-radius: 6px; border-left: 4px solid #f39c12;">
+                    <strong style="color: #856404;">F002: Facturas sin soportes técnicos adjuntos</strong>
+                    <small style="display: block; margin-top: 5px; color: #666;">Impacto: $34.5B | Recomendación: Validar documentos en pagaduría</small>
+                </div>
+                <div style="background: #fff3cd; padding: 12px; border-radius: 6px; border-left: 4px solid #f39c12;">
+                    <strong style="color: #856404;">F003: Incumplimiento de metas PDM en obras</strong>
+                    <small style="display: block; margin-top: 5px; color: #666;">Impacto: $28.7B | Recomendación: Auditoría física antes de pago final</small>
+                </div>
+            </div>
+
+            <div class="oportunidad">
+                <strong>🎯 Oportunidad para Danny Caicedo</strong>
+                <ul>
+                    <li><strong>Narrativa:</strong> "Transparencia Total - SECOP 100% abierto"</li>
+                    <li>Reducir concentración de gasto: máximo 15% a un proveedor</li>
+                    <li>Auditoría ciudadana trimestral publicada en web</li>
+                    <li><strong>Ahorro estimado 2024-2027:</strong> $156B COP</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: SOCIAL -->
+        <div id="social" class="tab-content">
+            <h2>📱 Módulo Social - Pulso de Redes Sociales</h2>
+
+            <div class="sentimiento-container">
+                <div class="candidato-sentimiento">
+                    <strong>Danny Caicedo</strong>
+                    <div class="sentimiento-bar">
+                        <div class="sentimiento-fill" style="width: 68%"></div>
+                    </div>
+                    <span style="color: #27ae60; font-weight: bold;">68% POSITIVO ✅</span>
+                </div>
+                <div class="candidato-sentimiento">
+                    <strong>Víctor Perico</strong>
+                    <div class="sentimiento-bar">
+                        <div class="sentimiento-fill negativo" style="width: 35%"></div>
+                    </div>
+                    <span style="color: #e74c3c; font-weight: bold;">35% POSITIVO ⚠️</span>
+                </div>
+                <div class="candidato-sentimiento">
+                    <strong>Otros Candidatos</strong>
+                    <div class="sentimiento-bar">
+                        <div class="sentimiento-fill neutral" style="width: 42%"></div>
+                    </div>
+                    <span style="color: #f39c12; font-weight: bold;">42% POSITIVO ➖</span>
+                </div>
+            </div>
+
+            <h3>Trending Topics en Soacha (Últimos 7 días)</h3>
+            <div class="trending-list">
+                <div class="trending-card">
+                    <strong>#TransparenciaTotalDanny</strong>
+                    <div class="trending-stats">
+                        <span class="sentiment" style="color: #27ae60;">75% positivo ✅</span>
+                        <span>📈 45K alcance</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <strong>#ObrasAbandonadasSoacha</strong>
+                    <div class="trending-stats">
+                        <span class="sentiment negativo">-62% negativo ❌</span>
+                        <span>📈 28.5K alcance</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <strong>#VotoLimpio2027</strong>
+                    <div class="trending-stats">
+                        <span class="sentiment" style="color: #27ae60;">81% positivo ✅</span>
+                        <span>📈 32.1K alcance</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Monitoreo de Plataformas</h3>
+            <div class="monitoreo-stats">
+                <span>📺 245 videos YouTube analizados</span>
+                <span>💬 12,400 comentarios procesados</span>
+                <span>🎥 89 TikToks monitoreados</span>
+            </div>
+
+            <div class="oportunidad">
+                <strong>🎯 Estrategia para Danny</strong>
+                <ul>
+                    <li>Viralizar #TransparenciaTotalDanny con propuestas concretas</li>
+                    <li>Responder a #ObrasAbandonadasSoacha con auditoría fiscal (Módulo 1)</li>
+                    <li>Amplificar #VotoLimpio2027 con ElectoralBio (Módulo 3)</li>
+                    <li>Resultado esperado: Danny lidera sentimiento en +0.68 vs Perico -0.35</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: SEGURIDAD -->
+        <div id="seguridad" class="tab-content">
+            <h2>🔒 Módulo Seguridad Electoral</h2>
+
+            <div class="seguridad-overview">
+                <div class="seg-card">
+                    <strong>Integridad Electoral</strong>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 78%"></div>
+                    </div>
+                    <span>78% - Vulnerable a fraude en 12 puestos (4.2%)</span>
+                </div>
+
+                <div class="seg-card">
+                    <strong>ElectoralBio Status</strong>
+                    <span style="color: #f39c12;">⚙️ v0.1 - Piloto en 15.7% de puestos</span>
+                    <span>✅ 120 testigos capacitados</span>
+                    <span>📅 Piloto: 15 marzo 2027</span>
+                </div>
+
+                <div class="seg-card">
+                    <strong>Amenazas Cibernéticas</strong>
+                    <span style="color: #e74c3c;">🚨 3 dominios falsos desactivados</span>
+                    <span>⚠️ 8 mitos electorales detectados</span>
+                    <span>🛡️ 7 intentos phishing último mes</span>
+                </div>
+            </div>
+
+            <h3>Puestos de Alto Riesgo (Top 3)</h3>
+            <div class="riesgo-puestos">
+                <div class="puesto-riesgo">
+                    <strong>IE Prado Veraniego - Puesto 1</strong>
+                    <div class="riesgo-score critico">Riesgo: 0.89 (CRÍTICO)</div>
+                    <small>• Ausencia de cámaras 2023
+                    <br>• Alta rotación de testigos
+                    <br>• Antecedente: fraude 2019
+                    <br>→ Equipar ElectoralBio (prioridad 1)</small>
+                </div>
+                <div class="puesto-riesgo">
+                    <strong>Escuela Rural El Bosque - Puesto 15</strong>
+                    <div class="riesgo-score alto">Riesgo: 0.78 (ALTO)</div>
+                    <small>• Zona de difícil acceso
+                    <br>• Baja vigilancia ciudadana
+                    <br>• Vulnerable a cooptación
+                    <br>→ Enviar observador oficial + testigo</small>
+                </div>
+                <div class="puesto-riesgo">
+                    <strong>Colegio José Martí - Puesto 47</strong>
+                    <div class="riesgo-score alto">Riesgo: 0.75 (ALTO)</div>
+                    <small>• Acta alterada 2019
+                    <br>• Oficial de mesa rotativo
+                    <br>• Presión de maquinaria local
+                    <br>→ Máxima vigilancia + ElectoralBio</small>
+                </div>
+            </div>
+
+            <h3>Monitor de Desinformación Electoral</h3>
+            <div style="display: grid; gap: 12px; margin: 15px 0;">
+                <div style="background: #ffe0e0; padding: 12px; border-radius: 6px;">
+                    <strong style="color: #c00;">🚨 ALERTA CRÍTICA</strong>
+                    <span style="display: block; margin: 5px 0; color: #666;"><strong>Mito:</strong> "Las mesas abren a las 6am"</span>
+                    <span style="display: block; color: #2e7d32;"><strong>Realidad:</strong> Abren 8am (horario oficial CNE)</span>
+                    <span style="display: block; color: #999; font-size: 11px;">Amplificación: 15,000 personas (WhatsApp viral)</span>
+                </div>
+                <div style="background: #fff3cd; padding: 12px; border-radius: 6px;">
+                    <strong style="color: #856404;">⚠️ Desinformación</strong>
+                    <span style="display: block; margin: 5px 0; color: #666;"><strong>Mito:</strong> "Danny fue inhabilitado"</span>
+                    <span style="display: block; color: #2e7d32;"><strong>Realidad:</strong> Está habilitado (BDAI verificado)</span>
+                    <span style="display: block; color: #999; font-size: 11px;">Fuente: 2 videos TikTok, 12 posts Facebook | 24,500 amplificaciones</span>
+                </div>
+            </div>
+
+            <div class="oportunidad">
+                <strong>🎯 Diferencial para Danny</strong>
+                <ul>
+                    <li><strong>Único candidato con auditoría electrónica de Día E</strong></li>
+                    <li>ElectoralBio en 100% de puestos: fotografía E-14 + OCR + GPS</li>
+                    <li>Publicar OCR dentro de 24h post-electoral (transparencia total)</li>
+                    <li>Cero tolerancia: recurrir ante CNE si hay discrepancia</li>
+                    <li><strong>Impacto:</strong> Danny gana credibilidad como "candidato de voto limpio"</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TAB: SCORING INTEGRAL -->
+        <div id="integral" class="tab-content">
+            <h2>🎯 Scoring Electoral Integral - Análisis Cruzado 3 Módulos</h2>
+
+            <div class="scoring-formula">
+                40% Electoral + 35% Fiscal + 25% Social = <strong>PREDICCIÓN 2027</strong>
+            </div>
+
+            <div class="scoring-results">
+                <div class="scoring-card ganador">
+                    <h4>🏆 Danny Caicedo</h4>
+                    <div class="score-display">72</div>
+                    <div class="score-breakdown">
+                        <span><strong>Electoral:</strong> 65/100 (volatilidad izq × 6.4)</span>
+                        <span><strong>Fiscal:</strong> 38/100 (anti-corrupción vs Perico)</span>
+                        <span><strong>Social:</strong> 68/100 (sentimiento en redes)</span>
+                        <hr style="margin: 8px 0; opacity: 0.5;">
+                        <span style="color: #27ae60; font-weight: bold;">✅ MARGEN: +24 puntos vs Perico</span>
+                    </div>
+                </div>
+
+                <div class="scoring-card perdedor">
+                    <h4>❌ Víctor Perico</h4>
+                    <div class="score-display">48</div>
+                    <div class="score-breakdown">
+                        <span><strong>Electoral:</strong> 35/100 (volatilidad centro × 0.166)</span>
+                        <span><strong>Fiscal:</strong> 38/100 (gestión actual con anomalías)</span>
+                        <span><strong>Social:</strong> 35/100 (sentimiento neutro-negativo)</span>
+                        <hr style="margin: 8px 0; opacity: 0.5;">
+                        <span style="color: #e74c3c; font-weight: bold;">❌ MARGEN: -24 puntos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recomendacion-estrategia">
+                <h4>📊 Recomendación Estratégica para Danny Caicedo</h4>
+                <ol>
+                    <li><strong>Enfatizar Módulo Fiscal:</strong> En debate, presentar auditoría de Perico (39% gasto concentrado en 3 proveedores). Proponer SECOP 100% abierto + auditoría ciudadana trimestral.</li>
+                    
+                    <li><strong>Amplificar Módulo Social:</strong> Viralizar #TransparenciaTotalDanny en YouTube/TikTok. Cruzar con datos fiscales (obras abandonadas + sobrecostos). Meta: Alcanzar +0.75 sentimiento.</li>
+                    
+                    <li><strong>Asegurar Módulo Seguridad:</strong> Entrenar 500 testigos en ElectoralBio antes de marzo. Implementar OCR en 287 puestos. Publicitarlo como "Voto Limpio 2027 - Danny es pionero".</li>
+                    
+                    <li><strong>Resultado Esperado:</strong> Danny 72 vs Perico 48 = Margen de victoria: +24 puntos = <strong>GANADOR CASI SEGURO</strong> (salvo evento exógeno).</li>
+                    
+                    <li><strong>Risk Mitigation:</strong> Si Pacto Histórico no lo respalda, score cae a 45 (independiente centro). CRÍTICO: Confirmar alianza Pacto ANTES de Registraduría (90-120 días).</li>
+                </ol>
+            </div>
+
+            <div class="oportunidad" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+                <strong style="color: #1b5e20;">💡 CONCLUSIÓN ESTRATÉGICA</strong>
+                <p style="color: #2e7d32; margin-top: 10px;">
+                    Danny Caicedo tiene <strong>máximas probabilidades de ganar Soacha 2027</strong> si ejecuta correctamente los 3 módulos:
+                </p>
+                <ul style="color: #2e7d32;">
+                    <li>✅ <strong>Fiscal:</strong> Auditoría anticorrupción vs Perico (diferencial claro)</li>
+                    <li>✅ <strong>Social:</strong> Liderazgo sentimiento en redes (+0.68 vs +0.35)</li>
+                    <li>✅ <strong>Seguridad:</strong> Monopolio de ElectoralBio (único con auditoría Día E)</li>
+                </ul>
+                <p style="color: #1b5e20; margin-top: 10px; font-weight: bold;">
+                    Timing crítico: Negociar alianza Pacto Histórico AHORA (antes que nombre otro candidato).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            // Ocultar todos los tabs
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.remove('active'));
+
+            // Desactivar todos los botones
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // Activar tab y botón seleccionado
+            document.getElementById(tab).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
