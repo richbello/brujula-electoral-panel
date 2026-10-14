@@ -263,6 +263,7 @@ th.cun-sort:hover{color:var(--navy)}
 <section class="pane" id="territorio">
 <h2>Territorio y obras inconclusas</h2>
 <p class="sub">Obras vencidas que siguen abiertas, y el valor por los lugares que nombra el contrato</p>
+<div class="vfi-fila" style="margin-bottom:18px"><label for="terr-muni" class="vfi-lbl" style="margin:0">Municipio</label><select id="terr-muni" style="max-width:420px"><option value="">Soacha · corte 2020 en adelante</option></select></div>
 <div id="terr-estado" class="vfi-msg">Cargando el último corte…</div>
 <div id="terr-contenido" hidden></div>
 </section>
@@ -966,7 +967,9 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
    ============================================================ */
 (function () {
   "use strict";
-  const FUENTE = "data/modulos/territorio.json";
+  const SOACHA = "data/modulos/territorio.json";
+  const CUN = "data/cundinamarca/territorio/";
+  let FUENTE = SOACHA;
   const DIAS_VIEJO = 30;
   let cargado = false, DATOS = null, abierta = null, vista = "vencidas";
 
@@ -1188,11 +1191,41 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
     return h + "</tbody></table></div>";
   }
 
-  const siToca = () => { if (location.hash.slice(1) === "territorio") cargar(); };
+  /* Selector de municipio: Soacha (corte propio) o cualquiera de Cundinamarca */
+  let listaLista = false;
+  async function llenarMunicipios() {
+    if (listaLista) return;
+    listaLista = true;
+    try {
+      const r = await fetch(CUN + "indice.json");
+      if (!r.ok) return;
+      const sel = $("terr-muni");
+      const g = document.createElement("optgroup");
+      g.label = "Municipios de Cundinamarca · desde 2024";
+      (await r.json()).municipios.forEach(m => {
+        if (m.archivo === "soacha.json") return;
+        const o = document.createElement("option");
+        o.value = m.archivo;
+        o.textContent = m.municipio + " · " + miles(m.obras_vencidas) + " obras vencidas";
+        g.appendChild(o);
+      });
+      sel.appendChild(g);
+    } catch (e) { listaLista = false; }
+  }
+  $("terr-muni").addEventListener("change", e => {
+    FUENTE = e.target.value ? CUN + encodeURIComponent(e.target.value) : SOACHA;
+    cargado = false; abierta = null; vista = "vencidas";
+    const caja = $("terr-estado");
+    caja.className = "vfi-msg"; caja.textContent = "Cargando…"; caja.style.display = "";
+    $("terr-contenido").hidden = true;
+    cargar();
+  });
+
+  const siToca = () => { if (location.hash.slice(1) === "territorio") { cargar(); llenarMunicipios(); } };
   siToca();
   window.addEventListener("hashchange", siToca);
   const btn = document.querySelector('.tabs button[data-t="territorio"]');
-  if (btn) btn.addEventListener("click", cargar);
+  if (btn) btn.addEventListener("click", () => { cargar(); llenarMunicipios(); });
 })();
 
 /* ============================================================
