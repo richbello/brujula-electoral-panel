@@ -1,0 +1,168 @@
+================================================================================
+                    🚀 GUÍA DE LANZAMIENTO — VENTAS ALCALDES
+                        Electoral 2027 — Oct 14, 2026
+================================================================================
+
+✅ MATERIAL LISTO:
+
+  1️⃣ 10 PDFs de diagnóstico (diagnosticos_pdf/)
+     └─ Villeta, Nilo, Guaduas (PRIORIDAD 1)
+     └─ Listos para enviar a alcaldes
+
+  2️⃣ Template de email (template_email_alcaldes.txt)
+     └─ Personalizable por municipio
+     └─ Contiene: datos, objeciones esperadas, call-to-action
+
+  3️⃣ Lista de contactos (contactos_alcaldes_top10.csv)
+     └─ Emails estimados + números de teléfono a buscar
+     └─ Plan de 3 fases
+
+  4️⃣ Documento de propuesta de valor (Artifact → Propuesta de Valor — Auditoría Contratos)
+     └─ Por qué alcaldes compran
+     └─ Cómo diferenciarte de equipos legales
+     └─ Segmentación de clientes
+
+================================================================================
+
+📋 CHECKLIST DE EJECUCIÓN (ESTA SEMANA):
+
+DÍA 1-2 (HOY):
+  ☐ Abre template_email_alcaldes.txt
+  ☐ Personaliza 3 emails para Villeta, Nilo, Guaduas
+  ☐ Reemplaza [MUNICIPIO], [INDICE], [OBRAS_VENCIDAS], etc. con datos del PDF
+  ☐ Adjunta PDF correspondiente a cada email
+  ☐ Busca emails alcalde@ en páginas municipales (Google: "[municipio] alcaldía email")
+  ☐ ENVÍA los 3 emails
+
+DÍA 3-4:
+  ☐ Llamadas telefónicas a alcaldías (busca números en municipios.gov.co)
+  ☐ Mensaje: "¿Recibió el diagnóstico de contratos? ¿Podemos hablar 15 minutos?"
+  ☐ Objetivo: Confirmar que lo recibieron + agendar demo
+
+DÍA 5-7:
+  ☐ Llamadas de DEMO (15-20 minutos cada una)
+  ☐ Muestra los 3 hallazgos principales del PDF
+  ☐ Responde: "¿De dónde sacas esto?" → Link SECOP II
+  ☐ Ofrece: "¿Probamos 3 meses a $0.3M/mes, luego 12 meses a $0.5M/mes?"
+  ☐ Si interés: "¿Firmamos propuesta esta semana?"
+
+DÍA 8-14:
+  ☐ Redacta contrato (o usa template estándar)
+  ☐ Envía para firma electrónica
+  ☐ Target: 2-3 contratos cerrados hasta Oct 31
+
+================================================================================
+
+💡 PUNTOS CLAVE DEL PITCH:
+
+ABRE CON:
+  "Hemos analizado sus contratos públicos de SECOP II y encontramos [NÚMERO] obras
+   vencidas sin cerrar. Eso es [INDICE]% — bastante arriba del promedio de Cundinamarca.
+   ¿Podemos hablar 15 minutos?"
+
+SI PREGUNTA "¿DE DÓNDE SACAS ESTO?":
+  "De SECOP II, que es pública. Todo lo que reporto puede verificarse en secop.gov.co
+   directamente. Le doy los links para cada contrato."
+
+SI DICE "TENGO EQUIPO LEGAL":
+  "Perfecto. Ustedes tienen equipo legal. Lo que yo hago es COMPLEMENTAR, no reemplazar.
+   Ustedes ven su municipio en 'loop cerrado'. Yo doy benchmarking: cómo están vs otros
+   115 municipios de Cundinamarca. Eso crea presión para actuar."
+
+SI DICE "ES MUY CARO":
+  "Son $0.4M/mes. Eso es menos de 15 minutos de trabajo por día para analizar 400+
+   contratos. El costo de una multa de Contraloría por irregularidades es $50M+.
+   La ROI es obvio. ¿Probamos 3 meses a $0.3M?"
+
+SI DICE "DÉJAME PENSARLO":
+  "Perfecto. ¿Hablamos el viernes? Quisiera que vea en vivo cómo funciona la auditoría."
+
+================================================================================
+
+📞 SCRIPTS RÁPIDOS:
+
+SCRIPT PARA LLAMADA FRÍA:
+"Hola [NOMBRE]. Soy Richard Bello. Acabo de terminar un análisis de sus contratos
+públicos en SECOP II — encontré [HALLAZGO PRINCIPAL]. ¿Tenés 15 minutos esta semana
+para que te lo muestre?"
+
+SCRIPT PARA FOLLOW-UP EMAIL:
+"Hola [NOMBRE],
+
+No sé si recibiste el PDF que envié. Adjunto de nuevo — son hallazgos simples que
+encontré en SECOP II pública. Quería mostrarte en vivo cómo funciona.
+
+¿Podemos agendar una llamada de 15 minutos esta semana?
+
+Abrazo,
+Richard"
+
+================================================================================
+
+⚡ RECURSOS ÚTILES:
+
+📄 Propuesta de valor: https://claude.ai/artifact/[LINK]
+   (Contiene: por qué compran, objeciones, segmentación)
+
+📊 Datos municipios: data/cundinamarca/territorio/indice.json
+   (Si necesitas actualizar info de otros municipios)
+
+🔧 Script generador PDF: generar_diagnosticos_pdf.py
+   (Si necesitas generar más diagnósticos para FASE 2)
+
+================================================================================
+
+🎯 OBJETIVO MES 1:
+
+  ✓ 2-3 contratos CERRADOS (Villeta, Nilo, Guaduas)
+  ✓ Revenue: $9.6M-18M COP (3 × $0.4M-0.6M/mes × 12)
+  ✓ Clientes "fundadores" para referenciar en FASE 2
+
+OBJETIVO 2026:
+
+  ✓ 8-10 contratos totales (todas las fases)
+  ✓ Revenue: $96M-120M COP anual
+  ✓ Case study de "auditoría exitosa" (para proponer a gobernador en 2027)
+
+================================================================================
+
+⚠️ RECORDATORIOS:
+
+❌ NO digas: "Soy asesor electoral"
+✅ DI: "Soy especialista en auditoría de contratos públicos"
+
+❌ NO digas: "Les ayudo a ganar"
+✅ DI: "Les ayudo a cumplir con auditoría y prevenir riesgos"
+
+❌ NO prometas: "Voy a encontrar X hallazgos"
+✅ DI: "Doy visibilidad de lo que ya existe en SECOP II"
+
+❌ NO hagas: Llamadas no solicitadas sin el PDF antes
+✅ HAZ: Envía diagnóstico primero, luego llama
+
+================================================================================
+
+¿PREGUNTAS O PROBLEMAS?
+
+Si no puedes encontrar un email de alcalde:
+  1. Busca "[municipio] alcaldía teléfono"
+  2. Llama a la línea principal
+  3. Di: "Hola, necesito el email del alcalde"
+  4. Envía por ese email o por WhatsApp (si encuentras número)
+
+Si un PDF no se ve bien:
+  1. Revisa que datos en CSV sean correctos
+  2. Ejecuta: python generar_diagnosticos_pdf.py
+  3. Volverá a generar todos
+
+Si no cierra un contrato:
+  1. Documenta: "¿Qué fue el 'no'? ¿Presupuesto? ¿Timing?"
+  2. Guarda en CRM para post-elecciones 2027
+  3. No persistas agresivamente (sale contraproducente)
+
+================================================================================
+
+                           ¡VAMOS! 🚀
+             Manda los 3 primeros emails hoy si es posible.
+
+================================================================================

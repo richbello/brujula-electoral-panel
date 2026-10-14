@@ -1,0 +1,45 @@
+Posición,Municipio,Obras Vencidas,Índice %,Email Alcaldía (buscar),Teléfono (buscar),Notas
+1,Villeta,661,24.9,alcalde@villeta-cundinamarca.gov.co,(buscar en municipio.gov.co),ALTO RIESGO — Prioridad 1
+2,Tibirita,15,18.3,alcalde@tibirita-cundinamarca.gov.co,(buscar en municipio.gov.co),Pequeño municipio — evaluar viabilidad
+3,Nilo,181,17.8,alcalde@nilo-cundinamarca.gov.co,(buscar en municipio.gov.co),ALTO RIESGO — Prioridad 2
+4,Sutatausa,66,17.4,alcalde@sutatausa-cundinamarca.gov.co,(buscar en municipio.gov.co),Riesgo medio-alto
+5,Guaduas,404,16.7,alcalde@guaduas-cundinamarca.gov.co,(buscar en municipio.gov.co),Municipio grande — presupuesto disponible
+6,Lenguazaque,99,16.4,alcalde@lenguazaque-cundinamarca.gov.co,(buscar en municipio.gov.co),Riesgo medio-alto
+7,Silvania,58,16.3,alcalde@silvania-cundinamarca.gov.co,(buscar en municipio.gov.co),Riesgo medio
+8,Apulo,77,15.6,alcalde@apulo-cundinamarca.gov.co,(buscar en municipio.gov.co),Riesgo medio
+9,Choachí,5,15.6,alcalde@choachi-cundinamarca.gov.co,(buscar en municipio.gov.co),Muy pequeño — evaluar viabilidad
+10,Sasaima,108,15.1,alcalde@sasaima-cundinamarca.gov.co,(buscar en municipio.gov.co),Riesgo medio
+
+INSTRUCCIONES PARA ENCONTRAR EMAILS:
+
+1. Entra en Google
+2. Busca: "[MUNICIPIO] alcaldía email" o "[MUNICIPIO] gobernación"
+3. Abre página web oficial del municipio (municipio.gov.co)
+4. Busca sección "Contacto" o "Directorio"
+5. Email generalmente está en formato: alcalde@[municipio]-cundinamarca.gov.co
+6. O: contacto@[municipio].gov.co
+
+PRIORIZACIÓN RECOMENDADA:
+
+FASE 1 (Primeros 3 días — Villeta, Nilo, Guaduas):
+- Municipios con mayor volumen de riesgo
+- Presupuesto operativo estimado (pueden pagar)
+- Índice de alertas > 16% (claramente "por arriba del promedio")
+
+FASE 2 (Días 4-7 — Sutatausa, Lenguazaque, Silvania):
+- Riesgo moderado pero documentado
+- Buenos candidatos para "prueba de 3 meses"
+
+FASE 3 (Después — Apulo, Sasaima, Choachí, Tibirita):
+- Más pequeños o menos presupuesto
+- Usar como "prospecting secundario"
+
+SEGUIMIENTO:
+
+✓ Email inicial (día 1-2)
+✓ Seguimiento telefónico (día 3-4)
+✓ Si interés: llamada de demo (día 5-7)
+✓ Si demo positiva: propuesta de contrato (día 8-10)
+✓ Target: 2-3 contratos cerrados en 30 días
+
+================================================================================
