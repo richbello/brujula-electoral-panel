@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generado": "2026-10-05T19:36:17.794943",
+    "generado": "2026-10-15T18:56:25.487463",
     "fuente": "YouTube + TikTok + Facebook",
-    "total_comentarios": 36,
+    "total_comentarios": 38,
     "modelo": "claude-haiku-4-5-20251001"
   },
   "candidatos": {
@@ -11,15 +11,15 @@
       "partido": "Alcalde actual",
       "sentimiento_promedio": -0.8,
       "tendencia": "baja",
-      "total_posts": 3,
-      "total_comentarios": 7,
+      "total_posts": 5,
+      "total_comentarios": 9,
       "toxicidad_pct": 100,
       "alerta_toxicidad": true,
       "por_plataforma": {
         "youtube": {
           "score": -0.8,
-          "posts": 2,
-          "comentarios": 5
+          "posts": 4,
+          "comentarios": 7
         },
         "tiktok": {
           "score": -0.8,
@@ -34,24 +34,24 @@
       },
       "temas": [
         {
-          "tema": "Infraestructura",
+          "tema": "Corrupción",
           "score": -0.8,
-          "menciones": 4
+          "menciones": 1
         },
         {
           "tema": "Gestión",
           "score": -0.8,
-          "menciones": 2
+          "menciones": 3
         },
         {
-          "tema": "Seguridad",
+          "tema": "Infraestructura",
           "score": -0.8,
-          "menciones": 1
+          "menciones": 4
         }
       ],
       "serie": [
         {
-          "f": "05 Oct",
+          "f": "15 Oct",
           "s": -0.8
         }
       ],
@@ -82,6 +82,30 @@
         },
         {
           "plataforma": "youtube",
+          "fecha": "2026-10-07",
+          "score": -0.8,
+          "resumen": "Ilegales y tras del hecho bravo",
+          "tema": "Corrupción",
+          "objetivo": "JULIAN SANCHE PERICO",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "Ilegales y tras del hecho bravo"
+        },
+        {
+          "plataforma": "youtube",
+          "fecha": "2026-10-07",
+          "score": -0.8,
+          "resumen": "Dejen trabajar.en vez de joder al trabajador jodan a los delincuentes como LOS MOISES.pero en soacha prefieren la gamineria.esta el caso del puente de",
+          "tema": "Gestión",
+          "objetivo": "Instituciones",
+          "idioma": "en",
+          "comentarios": 0,
+          "comentario_pos": "",
+          "comentario_neg": "Dejen trabajar.en vez de joder al trabajador jodan a los delincuentes como LOS MOISES.pero en soacha prefieren la gamineria.esta el caso del puente de"
+        },
+        {
+          "plataforma": "youtube",
           "fecha": "2026-02-20",
           "score": -0.8,
           "resumen": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no",
@@ -91,30 +115,6 @@
           "comentarios": 0,
           "comentario_pos": "",
           "comentario_neg": "Ya es justo y necesario estarle pagando por salir a la autopista a esos piratas que bueno aunque nos acercan, pero se pasan cobrando como los buses no"
-        },
-        {
-          "plataforma": "youtube",
-          "fecha": "2025-12-23",
-          "score": -0.8,
-          "resumen": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto",
-          "tema": "Infraestructura",
-          "objetivo": "JULIAN SANCHE PERICO",
-          "idioma": "en",
-          "comentarios": 0,
-          "comentario_pos": "",
-          "comentario_neg": "un alcade desastrozo, como es posible que no halla hecho algo tan elemental como el alumbrado de la autopista, nefasto"
-        },
-        {
-          "plataforma": "youtube",
-          "fecha": "2026-01-25",
-          "score": -0.8,
-          "resumen": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que ",
-          "tema": "Gestión",
-          "objetivo": "JULIAN SANCHE PERICO",
-          "idioma": "en",
-          "comentarios": 0,
-          "comentario_pos": "",
-          "comentario_neg": "que alcalde tan inservible e inepto como nos duele a nosotros los ciudadanos de Soacha no vemos nada de progreso solo atropellos con las personas que "
         }
       ]
     },
@@ -123,7 +123,7 @@
       "partido": "Concejal de oposición",
       "sentimiento_promedio": -0.74,
       "tendencia": "baja",
-      "total_posts": 9,
+      "total_posts": 8,
       "total_comentarios": 27,
       "toxicidad_pct": 96,
       "alerta_toxicidad": true,
@@ -131,7 +131,7 @@
         "youtube": {
           "score": -0.72,
           "posts": 2,
-          "comentarios": 19
+          "comentarios": 20
         },
         "tiktok": {
           "score": -0.8,
@@ -140,15 +140,15 @@
         },
         "facebook": {
           "score": -0.8,
-          "posts": 6,
-          "comentarios": 6
+          "posts": 5,
+          "comentarios": 5
         }
       },
       "temas": [
         {
           "tema": "Seguridad",
           "score": -0.8,
-          "menciones": 2
+          "menciones": 3
         },
         {
           "tema": "Corrupción",
@@ -156,14 +156,14 @@
           "menciones": 11
         },
         {
-          "tema": "Propuestas",
+          "tema": "Otro",
           "score": -0.8,
-          "menciones": 2
+          "menciones": 1
         }
       ],
       "serie": [
         {
-          "f": "05 Oct",
+          "f": "15 Oct",
           "s": -0.74
         }
       ],
@@ -270,7 +270,7 @@
       ],
       "serie": [
         {
-          "f": "05 Oct",
+          "f": "15 Oct",
           "s": -0.8
         }
       ],
