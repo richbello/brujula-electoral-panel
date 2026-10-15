@@ -1,0 +1,250 @@
+{
+  "resumen": {
+    "contratos": 546,
+    "valor_total": 18241393839.6,
+    "entidades": 3,
+    "proveedores": 195
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 72.5275,
+    "pct_directa_valor": 28.0367,
+    "hhi": 208.3422218548783,
+    "top1_proveedor_pct": 6.645430476801861,
+    "top5_proveedores_pct": 24.2569930908222,
+    "pareto_proveedores_80pct_valor": 64,
+    "pct_con_adicion": 25.64102564102564,
+    "top_proveedores": [
+      {
+        "proveedor": "FAASCOL",
+        "documento": "9012748221",
+        "valor": 1037765829.0,
+        "contratos": 6,
+        "participacion_pct": 6.6454
+      },
+      {
+        "proveedor": "PRODYCON SAS",
+        "documento": "901104357",
+        "valor": 970119578.3399999,
+        "contratos": 6,
+        "participacion_pct": 6.2123
+      },
+      {
+        "proveedor": "BIHAO SOCIEDAD POR ACCIONES SIMPLIFICADA",
+        "documento": "900781798",
+        "valor": 823888155.0,
+        "contratos": 4,
+        "participacion_pct": 5.2758
+      },
+      {
+        "proveedor": "INVERSIONES Y SERVICIOS PANAMERICANA S.A.",
+        "documento": "900309497",
+        "valor": 558561520.0,
+        "contratos": 10,
+        "participacion_pct": 3.5768
+      },
+      {
+        "proveedor": "FUNDACION HOGAR DEL ANCIANO DE GAMA",
+        "documento": "832003627",
+        "valor": 397693192.4,
+        "contratos": 2,
+        "participacion_pct": 2.5467
+      },
+      {
+        "proveedor": "SINTERMOTOR Y CIA LIMITADA SAS",
+        "documento": "9013464308",
+        "valor": 369242038.0,
+        "contratos": 1,
+        "participacion_pct": 2.3645
+      },
+      {
+        "proveedor": "HBC Constructores SAS",
+        "documento": "901817766",
+        "valor": 351526532.72,
+        "contratos": 2,
+        "participacion_pct": 2.251
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 346714878.0,
+        "contratos": 7,
+        "participacion_pct": 2.2202
+      },
+      {
+        "proveedor": "E.S.E HOSPITAL SAN FRANCISCO  DE GACHETA",
+        "documento": "899999163",
+        "valor": 305487887.0,
+        "contratos": 3,
+        "participacion_pct": 1.9562
+      },
+      {
+        "proveedor": "DIMAG INGENIERÍA SAS",
+        "documento": "901191331",
+        "valor": 294882556.0,
+        "contratos": 1,
+        "participacion_pct": 1.8883
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8715950",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "CONSORCIO VIVIENDAS VIP",
+        "modalidad": "Seleccion Abreviada Menor Cuantia Sin Manifestacion Interes",
+        "valor": 1787315019.0,
+        "fecha_firma": "2025-12-30",
+        "objeto": "CONSTRUCCIÓN DE VIVIENDA DE INTERES PRIORITARIO EN SITIO PROPIO ZONA RURAL DEL MUNICIPIO DE GAMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8710260",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "CONSORCIO SF FACHADAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 713925150.0,
+        "fecha_firma": "2025-12-30",
+        "objeto": "MEJORAMIENTO DE LAS FACHADAS DEL CASCO URBANO Y DEL CENTRO POBLADO DE SAN ROQUE DEL MUNICIPIO DE GAMA EN CUMPLIMIENTO DEL CONVENO ICCU 561 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8491637",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "FAASCOL",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 475944830.0,
+        "fecha_firma": "2025-10-24",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS TENDIENTES A LA EJECUCIÓN DE LOS EVENTOS INSTITUCIONALES FERIA DE EXPOSICIÓN CULTURAL; ARTESANAL; TURÍSTICA; GASTRONÓMICA; AMBIENTAL Y FAMILIAR; FIESTA DEL CAMPESINO; FESTIVAL DEL TORBELLINO; MERCADO GANADERO Y CAMPESINO DEL MUNICIPIO DE GAMA CUNDINAMARCA VIGENCIA 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.7056341",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "PRODYCON SAS",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 426487384.4,
+        "fecha_firma": "2024-11-25",
+        "objeto": "CONSULTORÍA PARA LA ELABORACION DE ESTUDIOS Y DISEÑOS EN EL MUNICIPIO DE GAMA CUNDINAMARCA EN CUMPLIMIENTO DE LAS METAS Y PROGRAMAS ESTABLECIDOS EN EL PLAN DE DESARROLLO GAMA AVANZA"
+      },
+      {
+        "id": "CO1.PCCNTR.9590721",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "SINTERMOTOR Y CIA LIMITADA SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 369242038.0,
+        "fecha_firma": "2026-07-16",
+        "objeto": "PRESTACIÓN DEL SERVICIO DE MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LOS VEHÍCULOS Y LA MAQUINARIA AMARILLA DE PROPIEDAD DEL MUNICIPIO DE GAMA; CUNDINAMARCA; PARA GARANTIZAR SU ADECUADA OPERATIVIDAD; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO NO. ICCU-CTO-1483-2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA DE GAMA",
+        "contratos": 517,
+        "valor": 17995849181.85
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE GAMA++",
+        "contratos": 21,
+        "valor": 173081057.75
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE GAMA CUNDINAMARCA",
+        "contratos": 6,
+        "valor": 72463600.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 12,
+    "valor_obras": 4110602631.28,
+    "obras_vencidas_abiertas": 8,
+    "valor_obras_vencidas_abiertas": 1737897653.94,
+    "pct_obras_vencidas_abiertas": 66.66666666666666,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8710260",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "CONSORCIO SF FACHADAS",
+        "estado": "Modificado",
+        "valor": 713925150.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-06",
+        "objeto": "MEJORAMIENTO DE LAS FACHADAS DEL CASCO URBANO Y DEL CENTRO POBLADO DE SAN ROQUE DEL MUNICIPIO DE GAMA EN CUMPLIMIENTO DEL CONVENO ICCU 561 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8899348",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "FAUSTO FERNANDO GONZALEZ BARRERA",
+        "estado": "Modificado",
+        "valor": 216136307.22,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-22",
+        "objeto": "MEJORAMIENTO DE ANDENES Y EMBELLECIMIENTO DEL PARQUE PRINCIPAL DEL CASCO URBANO Y EMBELLECIMIENTO DEL PARQUE DEL CENTRO POBLADO DE SAN ROQUE DEL MUNICIPIO DE GAMA EN CUMPLIMIENTO DEL CONVENIO ICCU 561 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8898623",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "PRODYCON SAS",
+        "estado": "En ejecución",
+        "valor": 204563496.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-22",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA LA UNIÓN SECTOR SAN JUAN DEL MUNICIPIO DE GAMA CUNDINAMARCA SEGÚN CONVENIO No. ICCU 767 DE 2025 Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SANTUARIO A LA VEREDA DE LA UNIÓN SECTOR AGUABLANCA DEL MUNICIPIO DE GAMA CUNDINAMARCA SEGÚN CONVENIO No. ICCU 847 DE 2025; CELEBRADOS CON EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA- ICCU"
+      },
+      {
+        "id": "CO1.PCCNTR.9349504",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "HBC Constructores SAS",
+        "estado": "Modificado",
+        "valor": 202138881.72,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-07",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LA INFRAESTRUCTURA ANTIGUA DE LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL TÉCNICA AGROPECUARIA MARTÍN ROMERO DEL MUNICIPIO DE GAMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.5729487",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "BIHAO SOCIEDAD POR ACCIONES SIMPLIFICADA",
+        "estado": "Modificado",
+        "valor": 171574256.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-09-02",
+        "objeto": "IMPLEMENTACIÓN DE 80 ESTUFAS ECOLOGICAS EN EL AREA RURAL DEL MUNICIPIO DE GAMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8200029",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "INGEARTH SAS",
+        "estado": "Modificado",
+        "valor": 97599458.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-27",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA PALENQUE I A LA VEREDA PALENQUE II SECTOR MANACA MUNICIPIO DE GAMA CUNDINAMARCA SEGÚN CONVENIO ICCU No 877 de 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8544574",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "O & L proyectos de ingenieria sas",
+        "estado": "Modificado",
+        "valor": 95800076.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-25",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA NARANJOS A LA VEREDA LA UNIÓN SECTOR MINAS DEL MUNICIPIO DE GAMA; CUNDINAMARCA SEGÚN CONVENIO ICCU No ICCU 763 de 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7044227",
+        "entidad": "ALCALDIA DE GAMA",
+        "proveedor": "PRODYCON SAS",
+        "estado": "Modificado",
+        "valor": 36160029.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-02-11",
+        "objeto": "MEJORAMIENTO DE LOS COMEDORES ESCOLARES DE LAS SEDES EDUCATIVAS DEL CASCO URBANO DEL MUNICIPIO DE GAMA CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Gama",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 48.7,
+  "nivel": "medio",
+  "posicion": 39.0,
+  "total_rankeados": 71
+}

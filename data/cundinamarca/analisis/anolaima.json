@@ -1,0 +1,370 @@
+{
+  "resumen": {
+    "contratos": 601,
+    "valor_total": 34129351090.21,
+    "entidades": 3,
+    "proveedores": 260
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 74.5424,
+    "pct_directa_valor": 39.2284,
+    "hhi": 424.8226019861105,
+    "top1_proveedor_pct": 14.976446480009969,
+    "top5_proveedores_pct": 36.317866301347635,
+    "pareto_proveedores_80pct_valor": 55,
+    "pct_con_adicion": 28.1198003327787,
+    "top_proveedores": [
+      {
+        "proveedor": "PABLO CESAR MURCIA BERMUDEZ",
+        "documento": "79689852",
+        "valor": 5111364000.0,
+        "contratos": 2,
+        "participacion_pct": 14.9764
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 2700000000.0,
+        "contratos": 1,
+        "participacion_pct": 7.9111
+      },
+      {
+        "proveedor": "RODRIPEREZ LTDA",
+        "documento": "832010450",
+        "valor": 1704429000.0,
+        "contratos": 11,
+        "participacion_pct": 4.994
+      },
+      {
+        "proveedor": "OSCAR JAVIER MURCIA BERMUDEZ",
+        "documento": "79791779",
+        "valor": 1460000000.0,
+        "contratos": 4,
+        "participacion_pct": 4.2778
+      },
+      {
+        "proveedor": "ESTRATEGAS SPI EU",
+        "documento": "900013472",
+        "valor": 1419259098.46,
+        "contratos": 2,
+        "participacion_pct": 4.1585
+      },
+      {
+        "proveedor": "Ferreteria El Hidrante S.A",
+        "documento": "860031342",
+        "valor": 1241798132.0,
+        "contratos": 4,
+        "participacion_pct": 3.6385
+      },
+      {
+        "proveedor": "MIMESIS",
+        "documento": "900023210",
+        "valor": 1090933489.0,
+        "contratos": 3,
+        "participacion_pct": 3.1965
+      },
+      {
+        "proveedor": "AMERICANA AUTOMOTRIZ SAS",
+        "documento": "860076670",
+        "valor": 1057079149.02,
+        "contratos": 3,
+        "participacion_pct": 3.0973
+      },
+      {
+        "proveedor": "CUERPO DE BOMBEROS VOLUNTARIOS DE ANOLAIMA",
+        "documento": "900908048",
+        "valor": 824285713.76,
+        "contratos": 4,
+        "participacion_pct": 2.4152
+      },
+      {
+        "proveedor": "Fungestores",
+        "documento": "900090077",
+        "valor": 721158680.0,
+        "contratos": 3,
+        "participacion_pct": 2.113
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9481268",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "PABLO CESAR MURCIA BERMUDEZ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4811364000.0,
+        "fecha_firma": "2026-04-28",
+        "objeto": "MEJORAMIENTO DE LA VÍA URBANA UBICADA EN LA CALLE 3 ENTRE CARRERA 6 HASTA ENTRADA AL PUEBLO MONUMENTO EL INDIO - (TRAMO 2); DEL CASCO URBANO DEL MUNICIPIO DE ANOLAIMA; DEPARTAMENTO DE CUNDINAMARCA; SEGÚN CONVENIO ICCU-1282-2025 Y MEJORAMIENTO Y OPTIMIZACIÓN ALCANTARILLADO PLUVIAL Y SANITARIO Y REDES DE ACUEDUCTO CASCO URBANO; FASE I MUNICIPIO DE ANOLAIMA CUNDINAMARCA SEGÚN CONVENIO EPC-CI-047-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7683464",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 2700000000.0,
+        "fecha_firma": "2025-03-21",
+        "objeto": "CONTRATO DE EMPRÉSTITO CON DESTINO A INVERSIÓN EN LOS SECTORES DE AGUA POTABLE Y TRANSPORTE CELEBRADO ENTRE EL MUNICIPIO DE ANOLAIMA Y BANCOLOMBIA S.A"
+      },
+      {
+        "id": "CO1.PCCNTR.8516082",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "ESTRATEGAS SPI EU",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1101145354.26,
+        "fecha_firma": "2025-10-30",
+        "objeto": "MEJORAMIENTO Y EMBELLECIMIENTO DEL ESPACIO PÚBLICO Y FACHADAS DENTRO DEL PROYECTO DEPARTAMENTAL PUEBLOS DORADOS EN CUMPLIMIENTO DE LOS CONVENIOS ICCU - CTO 562 DE 2024 Y ICCU - CTO 869 DE 2024 EN EL MUNICIPIO DE ANOLAIMA CUNDINANAMRCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8372288",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "Ferreteria El Hidrante S.A",
+        "modalidad": "Licitación pública",
+        "valor": 889532875.0,
+        "fecha_firma": "2025-09-26",
+        "objeto": "SUMINISTRO DE MATERIALES DE FERRETERÍA; HERRAMIENTAS; ELEMENTOS ELÉCTRICOS PARA ALUMBRADO PÚBLICO; Y DE CONSTRUCCIÓN; EMPLEADOS PARA REALIZAR LAS ADECUACIONES; REPARACIONES Y MANTENIMIENTOS REQUERIDOS PARA LA ATENCIÓN DE SERVICIOS PÚBLICOS Y DE LAS VÍAS A CARGO DE LA SECRETARIA DE PLANEACIÓN; OBRAS Y SERVICIOS PÚBLICOS DEL MUNICIPIO DE ANOLAIMA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9543436",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "Fungestores",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 615000000.0,
+        "fecha_firma": "2026-06-01",
+        "objeto": "ARTICULAR ESFUERZOS TÉCNICOS; FINANCIEROS Y ADMINISTRATIVOS ENTRE EL MUNICIPIO DE ANOLAIMA Y UNA ESAL PARA DESARROLLAR ACTIVIDADES CULTURALES Y ARTÍSTICAS PARA LA REALIZACIÓN DE ESPECTÁCULOS PÚBLICOS DE LAS ARTES ESCÉNICAS Y MUSICALES QUE EXALTEN LOS VALORES; TRADICIONES; COSTUMBRES Y MANIFESTACIONES CULTURALES ANOLAIMUNAS; EN EL MARCO DE LA CELEBRACIÓN DEL FESTIVAL CORPUS CHRISTI Y DE LAS FRUTAS 2026 EN EL MUNICIPIO; EN CUMPLIMIENTO DE LA META 103 DEL PLAN MUNICIPAL DE DESARROLLO"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "contratos": 563,
+        "valor": 33985096858.0
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE ANOLAIMA",
+        "contratos": 24,
+        "valor": 83841995.52
+      },
+      {
+        "entidad": "PERSONERIA DE ANOLAIMA",
+        "contratos": 10,
+        "valor": 60412236.69
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 25,
+    "valor_obras": 10065990331.75,
+    "obras_vencidas_abiertas": 20,
+    "valor_obras_vencidas_abiertas": 3093480977.49,
+    "pct_obras_vencidas_abiertas": 80.0,
+    "pct_pagado_obras_vencidas_abiertas": 19.2831,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9497724",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "OSCAR JAVIER MURCIA BERMUDEZ",
+        "estado": "En ejecución",
+        "valor": 400000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-06",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA DE LA VEREDA MATIMA ALTA EN EL SECTOR CRUCE VÍA ANOLAIMA SEGÚN CONVENIO ICCU-CTO-741-2025; VÍA QUE COMUNICA DEL CASCO URBANO A LA VEREDA SANTO DOMINGO; SECTOR VÍA LA PAZ MATARREDONDA TRAMO 2 SEGÚN CONVENIO ICCU-CTO-921-2025; MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA SAN AGUSTÍN - SECTOR MATECAÑA; SEGÚN CONVENIO ICCU-CTO-965-2025; VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA MATIMA SECTOR LA ISABEL; SEGÚN CONVENIO ICCU-CTO-966-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9502197",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "INMARLI SAS",
+        "estado": "Modificado",
+        "valor": 350000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-10",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA DEL CASCO URBANO CON LAS VEREDAS PUENTE TIERRA; SECTOR LOS TANQUES DEL MUNICIPIO DE ANOLAIMA; SEGÚN CONVENIO ICCU-CTO-577-2025; SAN CAYETANO EN EL SECTOR LA TIENDA DEL MUNICIPIO DE ANOLAIMA; SEGÚN CONVENIO ICCU-CTO-681-2025; SAN JUANITO SECTOR ALTO DEL AGUILA TRAMO 1 DEL MUNICIPIO DE ANOLAIMA; SEGÚN CONVENIO ICCU-CTO-686-2025 DEL MUNICIPIO DE ANOLAIMA"
+      },
+      {
+        "id": "CO1.PCCNTR.8633829",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "DYNAMIS GROUP SAS",
+        "estado": "Modificado",
+        "valor": 340342670.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-04",
+        "objeto": "REALIZAR OBRAS DE MEJORAMIENTO AL JARDÍN INFANTIL DEL CENTRO POBLADO DE REVENTONES; INSTITUCIÓN EDUCATIVA SEDE SANTA BARBARA Y RESTAURANTE ESCOLAR EN LA SEDE OLGA SANTA MARÍA; DEL MUNICIPIO DE ANOLAIMA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8462275",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "ESTRATEGAS SPI EU",
+        "estado": "Modificado",
+        "valor": 318113744.2,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "REMODELACIÓN; MANTENIMIENTO Y ADECUACIÓN DE LAS EDIFICACIONES MUNICIPALES:  SECRETARIA DE HACIENDA; OFICINA VIVE DIGITAL; DESPACHO DEL ALCALDE Y CENTRO CULTURAL; INCLUYENDO DOTACIÓN PARCIAL; EN EL MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8215001",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "INGKMC",
+        "estado": "Modificado",
+        "valor": 316152225.0,
+        "pagado": 99833412.0,
+        "fecha_fin": "2025-12-20",
+        "objeto": "MEJORAMIENTO Y PAVIMENTACIÓN EN CONCRETO HIDRÁULICO; VÍA UBICADA EN LA CALLE 4 ENTRE CARRERA 7 Y CARRERA 9; BARRIO LA GLORIA EN EL CASCO URBANO DEL MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8720397",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "PABLO CESAR MURCIA BERMUDEZ",
+        "estado": "Modificado",
+        "valor": 300000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-12",
+        "objeto": "MEJORAMIENTO DE LAS VIAS QUE COMUNICAN DEL CASCO URBANO CON LAS VEREDAS: LA LAGUNA; SECTOR CIRCUNVALAR DIVIÑO NIÑO DEL MUNICIPIO DE ANOLAIMA; SEGÚN CONVENIO ICCU-CTO-574-2025; LA MARIA SECTOR LOS PANCHES DEL MUNICIPIO DE ANOLAIMA; SEGÚN CONVENIO ICCU-CTO-666-2025; LA ESMERALDA SECTOR FLOR MORADO; SEGÚN CONVENIO ICCU-CTO-733-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.7126610",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "SOGITEC SAS",
+        "estado": "Modificado",
+        "valor": 195782896.82,
+        "pagado": 175186488.75,
+        "fecha_fin": "2025-05-15",
+        "objeto": "ADECUACIONES Y MEJORAMIENTO EN LAS INSTALACIONES DEL CONCEJO EN LA SEDE ADMINISTRATIVA DEL PALACIO MUNICIPAL DEL MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8082927",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA MARIA",
+        "estado": "En ejecución",
+        "valor": 140000000.0,
+        "pagado": 140000000.0,
+        "fecha_fin": "2025-10-21",
+        "objeto": "CONVENIO SOLIDARIO CON LA JUNTA DE ACCIÓN COMUNAL DE LA MARÍA PARA REALIZAR LOS TRABAJOS DE CONSTRUCCIÓN DE UNA PLACA HUELLA EN EL SECTOR LOS VELEÑOS Y SECTOR CALONCHO; MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8148276",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "BIHAO SOCIEDAD POR ACCIONES SIMPLIFICADA",
+        "estado": "En ejecución",
+        "valor": 139323419.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-07",
+        "objeto": "ESTABLECIMIENTO DE 4.083 KM DE CERCA E INSTALACIÓN DE VALLAS INFORMATIVAS PARA EL AISLAMIENTO DE LOS PREDIOS ADQUIRIDOS POR LA ADMINISTRACIÓN MUNICIPAL DESTINADOS A LAS CONSERVACIÓN DE RECURSOS HÍDRICOS"
+      },
+      {
+        "id": "CO1.PCCNTR.8431777",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "Cristo  Rodriguez",
+        "estado": "Modificado",
+        "valor": 126869612.06,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "ADECUACIÓN DEL PARQUE RECREATIVO INFANTIL UBICADO EN EL CENTRO POBLADO LA FLORIDA DEL MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7926441",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "INGKMC",
+        "estado": "En ejecución",
+        "valor": 99945589.8,
+        "pagado": 0.0,
+        "fecha_fin": "2025-07-04",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA EL CASCO URBANO CON LA VEREDA LA LAGUNA SECTOR EL SHADAI DEL MUNICIPIO DE ANOLAIMA CUNDINAMARCA - CONVENIO ICCU 838 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7972565",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DEL LIMONALDEL MUNICIPIO DE ANOLAIMA",
+        "estado": "Modificado",
+        "valor": 70000000.0,
+        "pagado": 70000000.0,
+        "fecha_fin": "2025-10-08",
+        "objeto": "CONVENIO SOLIDARIO CON LA JUNTA DE ACCION COMUNAL DE LA VEREDA EL LIMONAL PARA REALIZAR LOS TRABAJOS DE CONSTRUCCIÓN DE UNA PLACA HUELLA EN EL SECTOR LA TRAMPA MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6994607",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA LA ESPERANZA",
+        "estado": "En ejecución",
+        "valor": 50000000.0,
+        "pagado": 45000000.0,
+        "fecha_fin": "2024-12-06",
+        "objeto": "CONVENIO SOLIDARIO CON LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LA ESPERANZA CENTRO POBLADO LA FLORIDA PARA REALIZAR LOS TRABAJOS DE CONSTRUCCIÓN DE UNA PLACA HUELLA EN EL SECTOR LA POMPILIO MUNICIPIO DE ANOLAIMA CUNDINAMARA"
+      },
+      {
+        "id": "CO1.PCCNTR.7126903",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "SOGITEC SAS",
+        "estado": "Modificado",
+        "valor": 49730610.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "ADECUACIÓN DE LA FUENTE DE AGUA SUPERIOR UBICADA EN EL PARQUE PRINCIPAL DEL MUNICIPIO DE ANOLAIMA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9407222",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "JOHANNA GOMEZ VANEGAS",
+        "estado": "Modificado",
+        "valor": 46046353.61,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-09",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE REJILLAS; POZOS DE ALCANTARILLADO Y CÁRCAMOS DEL SISTEMA DE ACOPIO DE AGUAS LLUVIAS A CARGO DE LA SECRETARÍA DE PLANEACIÓN OBRAS Y SERVICIOS PÚBLICOS DEL MUNICIPIO DE ANOLAIMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7125342",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "SOGITEC SAS",
+        "estado": "Modificado",
+        "valor": 36200231.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-03-25",
+        "objeto": "MANTENIMIENTO DEL JARDÍN INFANTIL DEL CENTRO POBLADO DE REVENTONES DEL MUNICIPIO DE ANOLAIMA -CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8034533",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA HILO",
+        "estado": "En ejecución",
+        "valor": 35000000.0,
+        "pagado": 31500000.0,
+        "fecha_fin": "2025-08-22",
+        "objeto": "CONVENIO SOLIDARIO CON LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA DE HILO PARA REALIZAR LOS TRABAJOS DE CONSTRUCCIÓN DE UNA PLACA HUELLA EN EL SECTOR EL OCOBO; MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7990787",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "LA JUNTA DE ACCION COMUNAL DE REVENTONES DEL MUNICIPIO DE ANOLAIMA DEL DEPARTAMENTO DE CUNDINAMARCA",
+        "estado": "En ejecución",
+        "valor": 35000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-28",
+        "objeto": "CONVENIO SOLIDARIO CON LA JUNTA DE ACCIÓN COMUNAL DE REVENTONES PARA REALIZAR LOS TRABAJOS DE CONSTRUCCIÓN DE UNA PLACA HUELLA EN EL SECTOR EL COLEGIO; MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8019021",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE BALSILLAS",
+        "estado": "En ejecución",
+        "valor": 35000000.0,
+        "pagado": 34999776.48,
+        "fecha_fin": "2025-08-28",
+        "objeto": "CONVENIO SOLIDARIO CON LA JUNTA DE ACCIÓN COMUNAL DE BALSILLAS PARA REALIZAR LOS TRABAJOS DE CONSTRUCCIÓN DE UNA PLACA HUELLA EN EL SECTOR LA TOMATERA; MUNICIPIO DE ANOLAIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7101944",
+        "entidad": "ALCALDIA MUNICIPIO DE ANOLAIMA",
+        "proveedor": "SOGITEC SAS",
+        "estado": "Modificado",
+        "valor": 9973626.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "ADECUACIÓN E INSTALACIÓN DE POZO SÉPTICO DE LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL CARLOS GIRALDO DEL MUNICIPIO DE ANOLAIMA - CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Anolaima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 71.3,
+  "nivel": "alto",
+  "posicion": 6.0,
+  "total_rankeados": 71
+}

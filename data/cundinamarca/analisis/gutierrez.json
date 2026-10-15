@@ -1,0 +1,79 @@
+{
+  "resumen": {
+    "contratos": 3,
+    "valor_total": 348943675.41,
+    "entidades": 1,
+    "proveedores": 1
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 10000.0,
+    "top1_proveedor_pct": 100.0,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 33.33333333333333,
+    "top_proveedores": [
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 348943675.40999997,
+        "contratos": 3,
+        "participacion_pct": 100.0
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7675778",
+        "entidad": "MUNICIPIO DE GUTIERREZ",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 127239139.41,
+        "fecha_firma": "2025-03-19",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS ENCAMINADOS A GENERAR APOYO ORGANIZACIONAL Y OPERATIVO EN PRO DE LA EJECUCIÓN DE PROCESOS; PROCEDIMIENTOS Y ACTIVIDADES DEPORTIVAS; CULTURALES; AGROPECUARIAS Y RELACIONADAS CON ADULTO MAYOR EN EL MARCO DEL FESTIVAL AGROTURISTICO DEL FRIJOL Y DEL SAGÚ 2025 A DESARROLLARSE EN EL MUNICIPIO DE GUTIERREZ -CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9406201",
+        "entidad": "MUNICIPIO DE GUTIERREZ",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 118044310.0,
+        "fecha_firma": "2026-03-19",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS ENCAMINADOS A GENERAR APOYO LOGISTICO; ORGANIZACIONAL Y OPERATIVO EN PRO DE LA EJECUCION DE PROCESOS; PROCEDIMIENTOS Y ACTIVIDADES DEPORTIVAS; CULTURALES; AGROPECUARIAS Y RELACINADAS CON ADULTO MAYOR EN EL MARCO DEL FESTIVAL AGROTURISTICO DEL FRIJOL Y DEL SAGU 2026 A DESARROLLARSE EN EL MUNICIPIO DE GUTIERREZ - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6115766",
+        "entidad": "MUNICIPIO DE GUTIERREZ",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 103660226.0,
+        "fecha_firma": "2024-03-19",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS ENCAMINADOS A GENERAR APOYO ORGANIZACIONAL Y OPERATIVO EN PRO DE LA EJECUCIÓN DE PROCESOS; PROCEDIMIENTOS Y ACTIVIDADES DEPORTIVAS; CULTURALES; AGROPECUARIAS Y RELACIONADAS CON ADULTO MAYOR EN EL MARCO DEL FESTIVAL AGROTURÍSTICO DEL FRIJOL Y DEL SAGÚ 2024 A DESARROLLARSE EN EL MUNICIPIO DE GUTIÉRREZ - CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE GUTIERREZ",
+        "contratos": 3,
+        "valor": 348943675.41
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Gutiérrez",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

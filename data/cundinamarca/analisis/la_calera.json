@@ -1,0 +1,380 @@
+{
+  "resumen": {
+    "contratos": 1872,
+    "valor_total": 80401828501.84,
+    "entidades": 5,
+    "proveedores": 835
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 76.9231,
+    "pct_directa_valor": 57.9799,
+    "hhi": 106.4447018576494,
+    "top1_proveedor_pct": 7.338141569585048,
+    "top5_proveedores_pct": 16.231233487060987,
+    "pareto_proveedores_80pct_valor": 311,
+    "pct_con_adicion": 28.47222222222222,
+    "top_proveedores": [
+      {
+        "proveedor": "FINANCIERA DE DESARROLLO TERRITORIAL S.A.",
+        "documento": "800096329",
+        "valor": 5900000000.0,
+        "contratos": 1,
+        "participacion_pct": 7.3381
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 2163526983.0,
+        "contratos": 5,
+        "participacion_pct": 2.6909
+      },
+      {
+        "proveedor": "UNION TEMPORAL VIGILANCIA CALERA 2025",
+        "documento": "901931379",
+        "valor": 1790239426.0,
+        "contratos": 1,
+        "participacion_pct": 2.2266
+      },
+      {
+        "proveedor": "COLSERVICO & SUMINISTROS S.A.S.",
+        "documento": "900782536",
+        "valor": 1711786000.0,
+        "contratos": 1,
+        "participacion_pct": 2.129
+      },
+      {
+        "proveedor": "EMPRESA PÚBLICA DE MADRID (proveedor)",
+        "documento": "901255451",
+        "valor": 1484656103.0,
+        "contratos": 2,
+        "participacion_pct": 1.8465
+      },
+      {
+        "proveedor": "UNION TEMPORAL DOHA",
+        "documento": "901818079",
+        "valor": 1412997160.53,
+        "contratos": 1,
+        "participacion_pct": 1.7574
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PÚBLICOS DE LA CALERA ESPUCAL ESP",
+        "documento": "800005151",
+        "valor": 1248291868.3899999,
+        "contratos": 8,
+        "participacion_pct": 1.5526
+      },
+      {
+        "proveedor": "CONSORCIO BARRIO ALTO",
+        "documento": "901846304",
+        "valor": 1055929044.18,
+        "contratos": 1,
+        "participacion_pct": 1.3133
+      },
+      {
+        "proveedor": "UNION TEMPORAL VICTAR C&A",
+        "documento": "902065339",
+        "valor": 1029258345.0,
+        "contratos": 1,
+        "participacion_pct": 1.2801
+      },
+      {
+        "proveedor": "FUSION INGENIERÍA SAS",
+        "documento": "900510128",
+        "valor": 1010557918.0,
+        "contratos": 2,
+        "participacion_pct": 1.2569
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6964346",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "FINANCIERA DE DESARROLLO TERRITORIAL S.A.",
+        "modalidad": "Contratación directa",
+        "valor": 5900000000.0,
+        "fecha_firma": "2024-10-29",
+        "objeto": "CONTRATO DE EMPRÉSTITO DE DEUDA PÚBLICA INTERNA Y PIGNORACIÓN DE RENTAS ENTRE EL MUNICIPIO DE LA CALERA Y FINDETER"
+      },
+      {
+        "id": "CO1.PCCNTR.7701451",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "UNION TEMPORAL VIGILANCIA CALERA 2025",
+        "modalidad": "Licitación pública",
+        "valor": 1790239426.0,
+        "fecha_firma": "2025-03-27",
+        "objeto": "PRESTAR EL SERVICIO DE VIGILANCIA Y SEGURIDAD PRIVADA EN LAS MODALIDADES DE VIGILANCIA FIJA Y MOVIL CON Y SIN ARMAS EN LAS DIFERENTES DEPENDENCIAS DE LA ALCALDIA DE LA CALERA CUNDINAMARCA CON EL FIN DE ASEGURAR LA PROTECCION Y CUSTODIA DE LAS PERSONAS BIENES MUEBLES E INMUEBLES DE PROPIEDAD DE LA ENTIDAD Y DE LOS QUE LEGALMENTE SEA O LLEGARE A SER RESPONSABLE"
+      },
+      {
+        "id": "CO1.PCCNTR.8427254",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "COLSERVICO & SUMINISTROS S.A.S.",
+        "modalidad": "Licitación pública",
+        "valor": 1711786000.0,
+        "fecha_firma": "2025-10-10",
+        "objeto": "PRESTAR LOS SERVICIOS INTEGRALES DE OPERACIÓN LOGÍSTICA PARA LA EJECUCIÓN DE LAS ESTRATEGIAS INSTITUCIONALES DE LA ADMINISTRACIÓN MUNICIPAL; EN CUMPLIMIENTO DEL PLAN DE DESARROLLO LA CALERA UN LUGAR PARA TODOS 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.6168844",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "UNION TEMPORAL DOHA",
+        "modalidad": "Licitación pública",
+        "valor": 1412997160.53,
+        "fecha_firma": "2024-04-03",
+        "objeto": "PRESTAR EL SERVICIO DE VIGILANCIA Y SEGURIDAD PRIVADA EN LAS MODALIDADES DE VIGILANCIA FIJA Y MOVIL CON Y SIN ARMAS EN LAS DIFERENTES DEPENDENCIAS DE LA ALCALDÍA DE LA CALERA CUNDINAMARCA CON EL FIN DE ASEGURAR LA PROTECCION Y CUSTODIA DE LAS PERSONAS BIENES MUEBLES E INMUEBLES DE PROPIEDAD DE LA ENTIDAD Y DE LOS QUE LEGALMENTE SEA O LLEGARE A SER RESPONSABLE"
+      },
+      {
+        "id": "CO1.PCCNTR.6796858",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "EMPRESA PÚBLICA DE MADRID (proveedor)",
+        "modalidad": "Contratación directa",
+        "valor": 1354756082.0,
+        "fecha_firma": "2024-09-20",
+        "objeto": "PRESTAR SERVICIOS DE OPERACIÓN Y GESTIÓN LOGÍSTICA EN LAS ACTIVIDADES REQUERIDAS POR LAS DEPENDENCIAS DEL MUNICIPIO DE LA CALERA; DURANTE LA VIGENCIA 2024"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE LA CALERA - CUNDINAMARCA",
+        "contratos": 45,
+        "valor": 1047233539.0
+      },
+      {
+        "entidad": "ESPUCAL ESP",
+        "contratos": 282,
+        "valor": 12201248381.3
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE VIVIENDA URBANA Y RURAL IMVIUR",
+        "contratos": 71,
+        "valor": 2233320191.19
+      },
+      {
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "contratos": 1450,
+        "valor": 64812291333.35
+      },
+      {
+        "entidad": "Personería Municipal de La Calera",
+        "contratos": 12,
+        "valor": 107735057.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 57,
+    "valor_obras": 10034430699.23,
+    "obras_vencidas_abiertas": 29,
+    "valor_obras_vencidas_abiertas": 5527702226.66,
+    "pct_obras_vencidas_abiertas": 50.877192982456144,
+    "pct_pagado_obras_vencidas_abiertas": 66.3647,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.6513967",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "CONSORCIO BARRIO ALTO",
+        "estado": "Modificado",
+        "valor": 1055929044.18,
+        "pagado": 1055823901.59,
+        "fecha_fin": "2025-03-25",
+        "objeto": "PAVIMENTACION DE VIAS URBANAS EN EL BARRIO ALTO DE LA VIRGEN DEL MUNICIPIO DE LA CALERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7885110",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "FUSION INGENIERÍA SAS",
+        "estado": "Modificado",
+        "valor": 853310938.0,
+        "pagado": 853310938.0,
+        "fecha_fin": "2026-02-04",
+        "objeto": "MANTENIMIENTO ADECUACION Y DOTACION DE LA PLANTA DE BENEFICIO ANIMAL DEL MUNICIPIO DE LA CALERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8621568",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "OBRAS CYC SAS",
+        "estado": "Modificado",
+        "valor": 457981754.31,
+        "pagado": 107443424.0,
+        "fecha_fin": "2026-05-23",
+        "objeto": "EJECTURAR LAS OBRAS PARA LA ADECUACIÓN; MEJORAMIENTO Y REHABILITACIÓN DEL ESPACIO PÚBLICO E INSTITUCIONAL EN EL ÁREA URBANA DEL MUNICIPIO DE LA CALERA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7110223",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "PAVIBOY SAS",
+        "estado": "Modificado",
+        "valor": 381521012.0,
+        "pagado": 305216809.6,
+        "fecha_fin": "2025-12-17",
+        "objeto": "CONTRATAR LA CONSTRUCCION DE PLACA HUELLA EN LA VIA QUE CONDUCE DE LA VEREDA EL SALITRE AL COLEGIO HACIENDA LOS ALCAPARROS DEL MUNICIPIO DE LA CALERA CUNDINAMARCA SEGUN PLAN DE ACCION 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.6127360",
+        "entidad": "ESPUCAL ESP",
+        "proveedor": "ELECTROASOCIADOS RUEDA SAS",
+        "estado": "Modificado",
+        "valor": 381332615.0,
+        "pagado": 343383659.0,
+        "fecha_fin": "2024-12-20",
+        "objeto": "046_CONTRATO DE EMERGENCIA PARA LA EJECUCIÓN DE OBRA PARA LA ADE-CUACIÓN Y PUESTA EN MARCHA DE LA SUBESTACIÓN ELÉCTRICA DE LA PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES DEL CASCO URBANO DEL MUNICIPIO DE LA CALERA"
+      },
+      {
+        "id": "CO1.PCCNTR.9508464",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "CONSORCIO McLaren",
+        "estado": "Modificado",
+        "valor": 352556511.0,
+        "pagado": 105766953.0,
+        "fecha_fin": "2026-09-08",
+        "objeto": "MEJORAMIENTO Y CONSTRUCCION EN CONCRETO ASFALTICO DE LA VIA UBICADA SOBRE LA CARRERA 6 ENTRE CALLE 3 Y CARRERA 7 EN EL BARRIO BUENA VISTA DEL MUNICIPIO DE LA CALERA"
+      },
+      {
+        "id": "CO1.PCCNTR.9220598",
+        "entidad": "ESPUCAL ESP",
+        "proveedor": "HECTOR DAVID MORENO CLAVIJO",
+        "estado": "Modificado",
+        "valor": 309900558.0,
+        "pagado": 113975103.84,
+        "fecha_fin": "2026-05-30",
+        "objeto": "EJECUTAR LAS OBRAS DE REHABILITACIÓN DE LA RED DE ALCANTARILLADO SANITARIO UBICADA EN LA CALLE 8; ENTRE LAS CARRERAS 2B Y 4; EN EL CASCO URBANO DEL MUNICIPIO DE LA CALERA; DE CONFORMIDAD CON LAS ESPECIFICACIONES TÉCNICAS Y LA NORMATIVIDAD DEL SECTOR; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No. 469 DE 2025; SUSCRITO ENTRE EL MUNICIPIO DE LA CALERA Y LA EMPRESA DE SERVICIOS PÚBLICOS DE LA CALERA - ESPUCAL E.S.P."
+      },
+      {
+        "id": "CO1.PCCNTR.9223297",
+        "entidad": "ESPUCAL ESP",
+        "proveedor": "DEIVIS JERONIMO FELIZZOLA TAMARA",
+        "estado": "Modificado",
+        "valor": 198473553.0,
+        "pagado": 132349492.99,
+        "fecha_fin": "2026-04-20",
+        "objeto": "EJECUTAR LAS OBRAS DE REPOSICIÓN DE LAS REDES DE ALCANTARILLADO SANITARIO UBICADAS EN LA TRANSVERSAL 6; ENTRE LAS CALLES 3A Y 4 DEL CASCO URBANO DEL MUNICIPIO DE LA CALERA; EN UNA EXTENSIÓN APROXIMADA 222;40 METROS LINEALES; DE CONFORMIDAD CON LAS ESPECIFICACIONES TÉCNICAS Y LA NORMATIVIDAD DEL SECTOR; EN CUMPLIMIENTO DEL PLAN DE INVERSIONES A CARGO DE LA EMPRESA DE SERVICIOS PÚBLICOS DE LA CALERA ESPUCAL E.S.P."
+      },
+      {
+        "id": "CO1.PCCNTR.8668034",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "IZEL SAS",
+        "estado": "En ejecución",
+        "valor": 157430733.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "REALIZAR LA FASE 2 DE IMPLEMENTACIÓN DE LA SEÑALIZACIÓN VIAL NUEVA; AJUSTADA O MEJORADA EL CASCO URBANO DEL MUNICIPIO DE LA CALERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8529334",
+        "entidad": "ESPUCAL ESP",
+        "proveedor": "CORINGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 132303504.0,
+        "pagado": 132303504.0,
+        "fecha_fin": "2026-01-10",
+        "objeto": "107_ CONTRATAR LA EJECUCIÓN DE LAS OBRAS DE REPOSICIÓN DE 65;5 METROS LINEALES DE RED DE ALCANTARILLADO SANITARIO; LOCALIZADA EN LA VÍA DE ACCESO A LA VEREDA EL RODEO; A LA ALTURA DEL KILÓMETRO 1.3 DEL MUNICIPIO DE LA CALERA; QUE INCLUYEN LA EXCAVACIÓN; RETIRO DE LA TUBERÍA EXISTENTE; INSTALACIÓN DE NUEVA TUBERÍA CON SUS ACCESORIOS; RELLENOS Y COMPACTACIÓN; RESTITUCIÓN DE LA PLACA HUELLA Y DE LA SUPERFICIE INTERVENIDA; ASÍ COMO EL SUMINISTRO DE MATERIALES; EQUIPOS; HERRAMIENTAS; MANO DE OBRA CAL"
+      },
+      {
+        "id": "CO1.PCCNTR.7167826",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "Proyectos de Ingeniería Cumbre S.A.S.",
+        "estado": "En ejecución",
+        "valor": 117273499.0,
+        "pagado": 117273499.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "REALIZAR LA IMPLEMENTACIÓN DE LA SEÑALIZACIÓN VIAL NUEVA; AJUSTADA O MEJORADA DEL CASO URBANO DEL MUNICIPIO DE LA CALERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7182029",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "JUNTA DE ACCION COMUNAL EL RODEO",
+        "estado": "En ejecución",
+        "valor": 111283797.77,
+        "pagado": 0.0,
+        "fecha_fin": "2025-02-19",
+        "objeto": "CONSTRUCCION DE PLACA HUELLA EN EL SECTOR PALERMO DE LA VEREDA EL RODEO DEL MUNICIPIO DE LA CALERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8167614",
+        "entidad": "INSTITUTO MUNICIPAL DE VIVIENDA URBANA Y RURAL IMVIUR",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA TREINTA Y SEIS",
+        "estado": "Modificado",
+        "valor": 109779508.0,
+        "pagado": 109779508.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "CONSTRUCCIÓN DE VIVIENDA NUEVA DE INTERÉS PRIORITARIO EN SITIO PROPIO EN ÁREA RURAL DEL MUNICIPIO DE LA CALERA CUNDINAMARCA DE ACUERDO CON LOS PROGRAMAS MISIONALES DEL INSTITUTO MUNICIPAL DE VIVIENDA URBANA Y RURAL IMVIUR"
+      },
+      {
+        "id": "CO1.PCCNTR.7844580",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA TREINTA Y SEIS",
+        "estado": "Modificado",
+        "valor": 109500000.0,
+        "pagado": 106000000.0,
+        "fecha_fin": "2025-10-28",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCIÓN DE PLACA HUELLA EN LA VEREDA TREINTA Y SEIS SECTOR LA MOYA DEL MUNICIPIO DE LA CALERA - CUNDINAMARCA EN EL MARCO DEL CONVENIO ICCU No. 648 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9563992",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "JOPB INGENIERIA SAS",
+        "estado": "En ejecución",
+        "valor": 95092467.9,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-29",
+        "objeto": "CONTRATAR LA CONSTRUCCIÓN DE LA PLACA HUELLA EN LA VEREDA JUNIA EN EL SECTOR LA ESCUELA DEL MUNICIPIO DE LA CALERA - CUNDINAMARCA EN EL MARCO DEL CONVENIO ICCU No. 838 DE 2025 SEGÚN PLAN DE ACCIÓN 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.9613002",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "INGEY CONSTRUCTORES SAS",
+        "estado": "Aprobado",
+        "valor": 94901560.45,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-09",
+        "objeto": "CONTRATAR LA CONSTRUCCIÓN DE PLACA HUELLA EN LA VEREDA FRAILEJONAL EN EL SECTOR LOS LAGOS DEL MUNICIPIO DE LA CALERA - CUNDINAMARCA EN EL MARCO DEL CONVENIO ICCU No. 1345 DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.9566474",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "DIAMONDI SAS",
+        "estado": "Aprobado",
+        "valor": 94511645.15,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-15",
+        "objeto": "CONTRATAR LA CONSTRUCCION DE PLACA HUELLA EN LA VEREDA ALTAMAR EN EL SECTOR TRES QUEBRADAS DEL MUNICIPIO DE LA CALERA CUNDINAMARCA EN EL MARCO DEL CONVENIO No 1544 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9581637",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "GHS INGENIERIA SAS",
+        "estado": "Aprobado",
+        "valor": 92160994.79,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-31",
+        "objeto": "CONTRATAR LA CONSTRUCCIÓN DE PLACA HUELLA EN LA VEREDA EL HATO EN EL SECTOR LAS MERCEDES DEL MUNICIPIO DE LA CALERA - CUNDINAMARCA EN EL MARCO DEL CONVENIO ICCU No. 1342 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8372219",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL BARRIO FLANDES ALTO",
+        "estado": "Modificado",
+        "valor": 89375510.0,
+        "pagado": 76000000.0,
+        "fecha_fin": "2026-02-20",
+        "objeto": "SOP_30 REHABILITACION Y MEJORAMIENTO DE VIAS URBANAS DEL BARRIO FLANDES ALTO DEL MUNICIPIO DE LA CALERA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8745597",
+        "entidad": "MUNICIPIO DE LA CALERA CUNDINAMARCA",
+        "proveedor": "Martin´s Ingenieria S.A.S.",
+        "estado": "Modificado",
+        "valor": 63492680.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-09",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LAS INSTALACIONES DE LA VETERINARIA MUNICIPAL EN CUMPLIMIENTO DEL PLAN DE DESARROLLO LA CALERA UN LUGAR PARA TODOS VIGENCIA 2025"
+      }
+    ]
+  },
+  "municipio": "La Calera",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 54.1,
+  "nivel": "medio",
+  "posicion": 27.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,102 @@
+{
+  "resumen": {
+    "contratos": 4,
+    "valor_total": 146974800.0,
+    "entidades": 1,
+    "proveedores": 3
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 50.0,
+    "pct_directa_valor": 61.5682,
+    "hhi": 4799.068386536248,
+    "top1_proveedor_pct": 64.12582293018939,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 2,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "documento": "900136128",
+        "valor": 94248800.0,
+        "contratos": 2,
+        "participacion_pct": 64.1258
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 33215000.0,
+        "contratos": 1,
+        "participacion_pct": 22.5991
+      },
+      {
+        "proveedor": "COPREVISION CORPORACION PARA EL DESARROLLO HUMANO",
+        "documento": "900400641",
+        "valor": 19511000.0,
+        "contratos": 1,
+        "participacion_pct": 13.2751
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7156601",
+        "entidad": "MUNICIPIO DE BITUIMA*",
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "modalidad": "Contratación directa",
+        "valor": 70978800.0,
+        "fecha_firma": "2024-12-18",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; LOGÍSTICOS Y FINANCIEROS PARA EL DESARROLLO DE LAS ACTIVIDADES DIRIGIDAS A LA NIÑEZ; ADULTO MAYOR Y VICTIMAS DEL CONFLICTO ARMADO DEL MUNICIPIO DE BITUIMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.5715586",
+        "entidad": "MUNICIPIO DE BITUIMA*",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 33215000.0,
+        "fecha_firma": "2024-01-05",
+        "objeto": "AUNAR ESFUERZOS CON UNA ENTIDAD SIN ANIMO DE LUCRO PARA LA REALIZACIÓN DE LOS REYES MAGOS EN EL CASCO URBANO; FERIA GANADERA CENTRO POBLADO BOQUERON DE ILO CON EL OBJETO DE CREAR FOMENTO; PROMOCIÓN DE LA CULTURA Y DESARROLLO DE LA DIVERSIFICACIÓN DEL MUNICIPIO DE BITUIMA- CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7194912",
+        "entidad": "MUNICIPIO DE BITUIMA*",
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "modalidad": "Contratación régimen especial",
+        "valor": 23270000.0,
+        "fecha_firma": "2025-01-03",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; LOGÍSTICOS Y FINANCIEROS PARA EL DESARROLLO DE LAS ACTIVIDADES AGROTURISTICAS Y CELEBRACION CULTURAL DE LOS TRADICIONALES REYES MAGOS A  DESARROLLARSE EN CENTRO POBLADO DE BOQUERÓN DE ILÓ Y CASCO URBANO DEL MUNICIPIO DE BITUIMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6968216",
+        "entidad": "MUNICIPIO DE BITUIMA*",
+        "proveedor": "COPREVISION CORPORACION PARA EL DESARROLLO HUMANO",
+        "modalidad": "Contratación directa",
+        "valor": 19511000.0,
+        "fecha_firma": "2024-10-31",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS PARA LA CELEBRACIÓN RECREO DEPORTIVA DEL DÍA DULCE EN EL MUNICIPIO DE BITUIMA CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE BITUIMA*",
+        "contratos": 4,
+        "valor": 146974800.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Bituima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

@@ -1,0 +1,86 @@
+{
+  "resumen": {
+    "contratos": 3,
+    "valor_total": 156062517.0,
+    "entidades": 1,
+    "proveedores": 2
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 100.0,
+    "pct_directa_valor": 100.0,
+    "hhi": 6570.0414582914445,
+    "top1_proveedor_pct": 78.01822137727024,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 2,
+    "pct_con_adicion": 33.33333333333333,
+    "top_proveedores": [
+      {
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "documento": "899999114",
+        "valor": 121757200.0,
+        "contratos": 2,
+        "participacion_pct": 78.0182
+      },
+      {
+        "proveedor": "IPYBAC",
+        "documento": "901423202",
+        "valor": 34305317.0,
+        "contratos": 1,
+        "participacion_pct": 21.9818
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6299302",
+        "entidad": "MUNICIPIO DE ARBELAEZ",
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "modalidad": "Contratación directa",
+        "valor": 63796411.08,
+        "fecha_firma": "2024-05-10",
+        "objeto": "ACUERDO FORMAL DE AUTORIZACIÓN DE TRANSFERENCIA DE RECURSOS DEL \nSISTEMA GENERAL DE PARTICIPACIONES ALIMENTACIÓN ESCOLAR ASIGNADOS \nPOR EL DEPARTAMENTO NACIONAL DE PLANEACIÓN - DNP AL MUNICIPIO DE \nARBELAEZ PARA SER GIRADOS AL DEPARTAMENTO DE CUNDINAMARCA (ETC); \nCON EL FIN DE CONFORMAR LA BOLSA COMÚN PARA EL FINANCIAMIENTO DEL \nPROGRAMA DE ALIMENTACIÓN ESCOLAR DE CONFORMIDAD CON LA RESOLUCIÓN \n00335 DEL 23 DE DICIEMBRE DE 2021"
+      },
+      {
+        "id": "CO1.PCCNTR.7930571",
+        "entidad": "MUNICIPIO DE ARBELAEZ",
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "modalidad": "Contratación directa",
+        "valor": 57960788.92,
+        "fecha_firma": "2025-05-30",
+        "objeto": "BOLSA COMÚN PARA DESARROLLAR EL PROGRAMA DE ALIMENTACIÓN ESCOLAR 2025; A TRAVÉS DEL CUAL SE BRINDA UN COMPLEMENTO ALIMENTARIO A NIÑOS; NIÑAS Y ADOLESCENTES REGISTRADOS EN EL SISTEMA INTEGRADO DE MATRÍCULA SIMAT DE MUNICIPIOS NO CERTIFICADOS EN EL DEPARTAMENTO DE CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7140541",
+        "entidad": "MUNICIPIO DE ARBELAEZ",
+        "proveedor": "IPYBAC",
+        "modalidad": "Contratación directa",
+        "valor": 34305317.0,
+        "fecha_firma": "2024-12-13",
+        "objeto": "ACUERDO INTERADMINISTRATIVO PARA ACUERDAR APLICACIONES ENTRE EL MUNICIPIO DE ARBELÁEZ Y EL INSTITUTO DE PROTECCIÓN Y BIENESTAR ANIMAL DE CUNDINAMARCA PARA FORTALECER LOS PROCESOS DE SALUD Y BIENESTAR ANIMAL EN EL MUNICIPIO."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE ARBELAEZ",
+        "contratos": 3,
+        "valor": 156062517.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Arbeláez",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

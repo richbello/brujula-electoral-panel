@@ -1,0 +1,170 @@
+{
+  "resumen": {
+    "contratos": 48,
+    "valor_total": 1560809137.0,
+    "entidades": 1,
+    "proveedores": 45
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 95.8333,
+    "pct_directa_valor": 15.5558,
+    "hhi": 264.65692028215176,
+    "top1_proveedor_pct": 4.864439488613683,
+    "top5_proveedores_pct": 20.713807648127233,
+    "pareto_proveedores_80pct_valor": 30,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "LILIANA PATRICIA TORRES NARVAEZ",
+        "documento": "36642521",
+        "valor": 12015000.0,
+        "contratos": 2,
+        "participacion_pct": 4.8644
+      },
+      {
+        "proveedor": "BURK DAYANNY GUTIERREZ SALAMANCA",
+        "documento": "21088313",
+        "valor": 10320000.0,
+        "contratos": 1,
+        "participacion_pct": 4.1782
+      },
+      {
+        "proveedor": "ALEJANDRA MARIN ENCISO",
+        "documento": "1072467587",
+        "valor": 10320000.0,
+        "contratos": 1,
+        "participacion_pct": 4.1782
+      },
+      {
+        "proveedor": "IPM INGENIERIA",
+        "documento": "901369830",
+        "valor": 9906400.0,
+        "contratos": 1,
+        "participacion_pct": 4.0107
+      },
+      {
+        "proveedor": "NUBIA FORERO MARTINEZ",
+        "documento": "39812611",
+        "valor": 8601000.0,
+        "contratos": 1,
+        "participacion_pct": 3.4822
+      },
+      {
+        "proveedor": "Freidy Pesillo Salguero",
+        "documento": "1126446215",
+        "valor": 8601000.0,
+        "contratos": 1,
+        "participacion_pct": 3.4822
+      },
+      {
+        "proveedor": "ARLEY GUERRERO",
+        "documento": "1001061008",
+        "valor": 8000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.2389
+      },
+      {
+        "proveedor": "Maira Alejandra Chimbi Cusguen",
+        "documento": "1071868485",
+        "valor": 8000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.2389
+      },
+      {
+        "proveedor": "TATIANA CAMACHO",
+        "documento": "1071868539",
+        "valor": 8000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.2389
+      },
+      {
+        "proveedor": "SORITZA ORDOÑEZ SANCHEZ",
+        "documento": "20705902",
+        "valor": 7800000.0,
+        "contratos": 1,
+        "participacion_pct": 3.1579
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9817708",
+        "entidad": "ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA",
+        "proveedor": "CONSORCIO OBRAS ESE.",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1313812540.0,
+        "fecha_firma": "2026-09-28",
+        "objeto": "ADECUACIÓN DE LA INFRAESTRUCTURA FÍSICA DE LA E.S.E CENTRO DE SALUD SAN JOSÉ DE NIMAIMA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.5764228",
+        "entidad": "ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA",
+        "proveedor": "ALEJANDRA MARIN ENCISO",
+        "modalidad": "Contratación directa",
+        "valor": 10320000.0,
+        "fecha_firma": "2024-01-18",
+        "objeto": "PRESTACION DE SERVICIOS DE APOYO A LA GESTIÓN ASISTENCIAL COMO PROFESIONAL DE ENFERMERA JEFE EN LA CONSULTA; PROCESO DE VACUNACION COVID Y GENERACIÓN DE INFORMES DE SALUD SEGÚN LA NORMATIVIDAD DE OBLIGATORIO CUMPLIMIENTO PARA LA ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA"
+      },
+      {
+        "id": "CO1.PCCNTR.5737050",
+        "entidad": "ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA",
+        "proveedor": "BURK DAYANNY GUTIERREZ SALAMANCA",
+        "modalidad": "Contratación directa",
+        "valor": 10320000.0,
+        "fecha_firma": "2024-01-16",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES DE APOYO A LA GESTION COMO ASESORA EN LOS PROCESOS DE CALIDAD Y  PLANEACION DE LA ESE CENTRO DE SALUD SAN JOSE NIMAIMA; SEGÚN LA NORMATIVIDAD VIGENTE."
+      },
+      {
+        "id": "CO1.PCCNTR.6016270",
+        "entidad": "ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA",
+        "proveedor": "IPM INGENIERIA",
+        "modalidad": "Contratación directa",
+        "valor": 9906400.0,
+        "fecha_firma": "2024-02-27",
+        "objeto": "SERVICIO DE MANTENIMIENTO CORRECTIVO DE LA UPS Y AIRE ACONDICIONADO DE LA ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA."
+      },
+      {
+        "id": "CO1.PCCNTR.5737429",
+        "entidad": "ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA",
+        "proveedor": "NUBIA FORERO MARTINEZ",
+        "modalidad": "Contratación directa",
+        "valor": 8601000.0,
+        "fecha_firma": "2024-01-16",
+        "objeto": "PRESTACION DE SERVICIOS PROFESIONALES COMO CONTADOR PÚBLICO Y ASESOR DE PRESUPUESTO DE LA ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA",
+        "contratos": 48,
+        "valor": 1560809137.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 1,
+    "valor_obras": 1313812540.0,
+    "obras_vencidas_abiertas": 1,
+    "valor_obras_vencidas_abiertas": 1313812540.0,
+    "pct_obras_vencidas_abiertas": 100.0,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9817708",
+        "entidad": "ESE CENTRO DE SALUD SAN JOSE DE NIMAIMA",
+        "proveedor": "CONSORCIO OBRAS ESE.",
+        "estado": "En ejecución",
+        "valor": 1313812540.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-09",
+        "objeto": "ADECUACIÓN DE LA INFRAESTRUCTURA FÍSICA DE LA E.S.E CENTRO DE SALUD SAN JOSÉ DE NIMAIMA; CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Nimaima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 47.2,
+  "nivel": "medio",
+  "posicion": 41.0,
+  "total_rankeados": 71
+}

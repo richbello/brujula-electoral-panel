@@ -1,0 +1,370 @@
+{
+  "resumen": {
+    "contratos": 485,
+    "valor_total": 30904100677.91,
+    "entidades": 3,
+    "proveedores": 247
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 72.9897,
+    "pct_directa_valor": 35.7023,
+    "hhi": 178.74157612915164,
+    "top1_proveedor_pct": 5.740344741319114,
+    "top5_proveedores_pct": 22.19811194491112,
+    "pareto_proveedores_80pct_valor": 85,
+    "pct_con_adicion": 19.175257731958766,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACIÓN DESARROLLO SOCIAL Y PRODUCTIVA",
+        "documento": "900072754",
+        "valor": 1556981876.6100001,
+        "contratos": 3,
+        "participacion_pct": 5.7403
+      },
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 1348559978.0,
+        "contratos": 4,
+        "participacion_pct": 4.9719
+      },
+      {
+        "proveedor": "SEMCAR SAS",
+        "documento": "900502917",
+        "valor": 1121648420.0,
+        "contratos": 1,
+        "participacion_pct": 4.1353
+      },
+      {
+        "proveedor": "RICARDO ALFREDO MOJICA MONROY",
+        "documento": "7176106",
+        "valor": 1105582172.42,
+        "contratos": 3,
+        "participacion_pct": 4.0761
+      },
+      {
+        "proveedor": "CDQ SAS",
+        "documento": "901292739",
+        "valor": 888130399.52,
+        "contratos": 1,
+        "participacion_pct": 3.2744
+      },
+      {
+        "proveedor": "Nassiff Diseño Y Construcción SAS",
+        "documento": "901211848",
+        "valor": 843436363.8,
+        "contratos": 1,
+        "participacion_pct": 3.1096
+      },
+      {
+        "proveedor": "SISAN SAS",
+        "documento": "900527732",
+        "valor": 697735205.64,
+        "contratos": 3,
+        "participacion_pct": 2.5724
+      },
+      {
+        "proveedor": "Ferreteria El Hidrante S.A",
+        "documento": "860031342",
+        "valor": 637463246.0,
+        "contratos": 1,
+        "participacion_pct": 2.3502
+      },
+      {
+        "proveedor": "ESE HOSPITAL SAN JOSE DE GUACHETA",
+        "documento": "800204497",
+        "valor": 592385911.1800001,
+        "contratos": 3,
+        "participacion_pct": 2.184
+      },
+      {
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "documento": "900088206",
+        "valor": 563364738.1,
+        "contratos": 1,
+        "participacion_pct": 2.077
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8731529",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CONSORCIO BHR GUACHETÁ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2792837226.89,
+        "fecha_firma": "2026-02-06",
+        "objeto": "MEJORAMIENTO DE LAS VIAS URBANAS EN LA CARRERA 1E ENTRE CALLES 2 Y 6 Y CARRERA 1 ENTRE CALLES 4 Y 6 DEL MUNICIPIO DE GUACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8673299",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "SEMCAR SAS",
+        "modalidad": "Licitación pública",
+        "valor": 1121648420.0,
+        "fecha_firma": "2025-12-04",
+        "objeto": "ADQUISICIÓN E INSTALACIÓN DE EQUIPOS TECNOLÓGICOS PARA DOTAR LA NUEVA SEDE ADMINISTRATIVA; CENTRO SENSORIAL; CENTRO ADULTO MAYOR DE LA ALCALDÍA DE MUNICIPIO DE GUACHETÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8300738",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CDQ SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 888130399.52,
+        "fecha_firma": "2025-11-04",
+        "objeto": "MEJORAMIENTO DE LA VIA URBANA LOCALIZADA EN LA CALLE 2 ENTRE CARRERA 4 Y CARRERA 6 DEL MUNICIPIO DE GUACHETA DEPARTAMENTO DE\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8673804",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "Nassiff Diseño Y Construcción SAS",
+        "modalidad": "Licitación pública",
+        "valor": 843436363.8,
+        "fecha_firma": "2025-12-04",
+        "objeto": "REALIZAR EL DISEÑO INTERIOR Y ESPACIAL; ASI COMO EL SUMINISTRO E INSTALACION DEL MOBILIARIO REQUERIDO PARA LA DOTACIÓN DEL CENTRO ADMINISTRATIVO MUNICIPAL (CAM); CON EL PROPOSITO DE FORTALECER LA CAPACIDAD ADMINISTRATIVA E INSTITUCIONAL DEL MUNICIPIO DE GUACHETA - CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8178732",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación directa",
+        "valor": 790124500.0,
+        "fecha_firma": "2025-08-08",
+        "objeto": "CONTRATO DE APOYO PARA LA EJECUCION DE LA II FERIA AGROEMPRESARIAL; MINERA; TURISTICA Y CULTURAL GUACHETA TIERRA DE OPORTUNIDADES; entre otros PROGRAMAS PRODUCTIVOS; SOCIALES; DEPORTIVOS; CULTURALES; AMBIENTALES Y/O AGRICOLAS EN EL MARCO DEL CUMPLIMIENTO DEL PLAN DE DESARROLLO 2024-2027."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL GUACHETA",
+        "contratos": 11,
+        "valor": 104759889.0
+      },
+      {
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "contratos": 455,
+        "valor": 30720090788.91
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE GUACHETA",
+        "contratos": 5,
+        "valor": 79250000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 28,
+    "valor_obras": 10366244161.84,
+    "obras_vencidas_abiertas": 24,
+    "valor_obras_vencidas_abiertas": 6964638858.48,
+    "pct_obras_vencidas_abiertas": 85.71428571428571,
+    "pct_pagado_obras_vencidas_abiertas": 10.272,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8300738",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CDQ SAS",
+        "estado": "Modificado",
+        "valor": 888130399.52,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-24",
+        "objeto": "MEJORAMIENTO DE LA VIA URBANA LOCALIZADA EN LA CALLE 2 ENTRE CARRERA 4 Y CARRERA 6 DEL MUNICIPIO DE GUACHETA DEPARTAMENTO DE\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8136709",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "Modificado",
+        "valor": 563364738.1,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-11",
+        "objeto": "CONSTRUCCIÒN PUENTE VEHICULAR EN LA VEREDA EL RABANAL SECTOR LA ESCUELA DEL MUNICIPIO DE GUACHETÀ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9629997",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CONSORCIO TICHA Y NENGUA",
+        "estado": "En ejecución",
+        "valor": 449280908.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-21",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA TICHA EN EL SECTOR EL ALTO; DEL MUNICIPIO DE GUACHETA CUNDINAMARCA BAJO CONVENIO ICCU Nª 1113-2025; MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA NENGUA EN EL SECTOR CANAGUA; DEL MUNICIPIO DE GUACHETA CUNDINAMARCA BAJO CONVENIO ICCU Nª 1176-2025 Y MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA TICHA A LA VEREDA GACHA EN EL SECTOR GALLINACERA; DEL MUNICIPIO DE GUACHETA CUNDINAMARCA BAJO CONVENIO ICCU Nª 1192-2025;"
+      },
+      {
+        "id": "CO1.PCCNTR.8021342",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "C. FC GUACHETA",
+        "estado": "Modificado",
+        "valor": 398353586.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-05",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA PUEBLO VIEJO SECTOR EL ALTO Y A LA VEREDA FRONTERA SECTOR EL REPOSO MUNICIPIO DE GUACHETÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9445459",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CONSORCIO VIVIENDAS GUACHETÁ",
+        "estado": "Modificado",
+        "valor": 395138813.75,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-10",
+        "objeto": "MANTENIMIENTO DE VIVIENDAS MEDIANTE LA CONSTRUCCION DE HABITACIONES Y COCINAS TIPO EN EL MUNICIPIO DE GUACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8473977",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "I&A CONSTRUCCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 390859784.34,
+        "pagado": 234604306.92,
+        "fecha_fin": "2025-12-31",
+        "objeto": "CONTRATO PARA EL MEJORAMIENTO DE LAS VIAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA RABANAL EN EL SECTOR LA ESCUELA Y EN LA VEREDA LA ISLA EN EL SECTOR ARENAL DEL MUNICIPIO DE GUACHETÀ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8477482",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "RICARDO ALFREDO MOJICA MONROY",
+        "estado": "Modificado",
+        "valor": 375259881.56,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MEJORAMIENTO DE LAS VIAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA SAN ANTONIO SECTOR LAS PIEDRAS Y DE LA VEREDA NENGUA A LA VEREDA FRONTERA ALTO SECTOR LOS CONEJOS DEL MUNICIPIO DE GUACHETÀ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9454935",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CLAUDIA PATRICIA RINCÓN ORTEGÓN",
+        "estado": "Modificado",
+        "valor": 368410471.6,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-14",
+        "objeto": "ADECUACIÒN DE ANDENES Y SEÑALIZACIÒN EN LAS CALES 4 Y 5 ENTRE CARRERA 3 Y 4 SECTOR PARQUE PRINCIPAL DEL MUNICIPIO DE GUACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8482563",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "SISAN SAS",
+        "estado": "Modificado",
+        "valor": 351306896.72,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "CONTRATO PARA EL MEJORAMIENTO DE LAS VIAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA GACHETA ALTO SECTOR LA ESCUELA Y A LA VEREDA FALDA DE MOLINO SECTOR ARENERA DEL MUNICIPIO DE GUACHETÀ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8218626",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "RICARDO ALFREDO MOJICA MONROY",
+        "estado": "Modificado",
+        "valor": 339907102.48,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-01",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA GACHA SECTOR EL RECREO Y A LA VEREDA PEÑAS SECTOR BUITRAGO DEL MUNICIPIO DE GUACHETÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8490001",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "MILAN INGENIERÍA Y ARQUITECTURA S.A.S.",
+        "estado": "Modificado",
+        "valor": 326402086.0,
+        "pagado": 238361914.4,
+        "fecha_fin": "2026-02-18",
+        "objeto": "MEJORAMIENTO DE LA VÌA QUE CONDUCE DEL CASCO URBANO A LA VEREDA LA ISLA SECTOR LAGUNETA TRAMO 1 Y 2 DEL MUNICIPIO DE GUACHETÀ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7901248",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "FERCOIN SAS",
+        "estado": "Modificado",
+        "valor": 298403239.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-01",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA LA PUNTICA SECTOR EL HUERTO Y A LA VEREDA RANCHERÍA SECTOR BUENOS AIRES DEL MUNICIPIO DE GUACHETÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7988251",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "SISAN SAS",
+        "estado": "En ejecución",
+        "valor": 298290943.0,
+        "pagado": 238632754.4,
+        "fecha_fin": "2025-09-03",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA GACHETA EL CARMEN SECTOR EL ARENAL Y A LA VEREDA TICHA SECTOR VUELTA DEL PADRE DEL MUNICIPIO DE GUACHETÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9458529",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CONSORCIO P-M GUACHETÁ 2026",
+        "estado": "Modificado",
+        "valor": 249193445.81,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-25",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA NENGUA EN EL SECTOR LA ESCUELA DEL MUNICIPIO DE GUACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8716409",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "PROADI S.A.S",
+        "estado": "Modificado",
+        "valor": 219448868.54,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-14",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA GACHETA ALTO EN EL SECTOR GOLONDRINAS DEL MUNICIPIO DE GUACHETÁ CUNDINAMARCA BAJO CONVENIO No. ICCU 638 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9456045",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "GVR INGENIERIA Y SOLUCIONES SAS",
+        "estado": "Modificado",
+        "valor": 199990461.67,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-26",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA GACHA EN EL SECTOR EL CRUCE; DEL MUNICIPIO DE GUACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8717374",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CESAR HERNANDO FIGUEROA BAEZ",
+        "estado": "Modificado",
+        "valor": 199607036.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-04",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE EL CASCO URBANO A LA VEREDA FALDA DE MOLINO EN EL SECTOR PERIQUITERA DEL MUNICIPIO DE GUACHETÁ CUNDINAMARCA BAJO CONVENIO No. ICCU 637 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8783477",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "NESTOR GILBERTO RODRIGUEZ ALVARADO",
+        "estado": "Modificado",
+        "valor": 164400430.1,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-18",
+        "objeto": "CONSTRUCCIÒN DE LABORATORIOS EN LA IED EL CARMEN SEDE PRINCIPAL DEL MUNICIPIO DE GUACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9563668",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "Andes Constructores SAS",
+        "estado": "Modificado",
+        "valor": 160243123.84,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-25",
+        "objeto": "CONSTRUCCION DEL ALCANTARILLADO SANITARIO DEL SECTOR CHORRERON DEL CASCO URBANO DEL MUNICIPIO DE GUACHETA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9614508",
+        "entidad": "MUNICIPIO DE GUACHETÁ",
+        "proveedor": "CONSORCIO PHG",
+        "estado": "En ejecución",
+        "valor": 118629242.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-20",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA FRONTERA SECTOR MICHINES DEL MUNICIPIO DE GUACHETÁ CUNDINAMARCA BAJO CONVENIO ICCU N° 1201-2025"
+      }
+    ]
+  },
+  "municipio": "Guachetá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 52.5,
+  "nivel": "medio",
+  "posicion": 31.0,
+  "total_rankeados": 71
+}

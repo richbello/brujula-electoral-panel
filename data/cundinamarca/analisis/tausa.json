@@ -1,0 +1,325 @@
+{
+  "resumen": {
+    "contratos": 619,
+    "valor_total": 32524580524.73,
+    "entidades": 2,
+    "proveedores": 248
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 71.4055,
+    "pct_directa_valor": 39.9492,
+    "hhi": 333.1853090329671,
+    "top1_proveedor_pct": 14.2875238969919,
+    "top5_proveedores_pct": 31.308449282320016,
+    "pareto_proveedores_80pct_valor": 81,
+    "pct_con_adicion": 10.177705977382875,
+    "top_proveedores": [
+      {
+        "proveedor": "LAM CONSTRUCCIONES S.A.S",
+        "documento": "900356860",
+        "valor": 4283015096.0,
+        "contratos": 1,
+        "participacion_pct": 14.2875
+      },
+      {
+        "proveedor": "EMPRESA SOCIAL DEL ESTADO CENTRO DE SALUD TAUSA",
+        "documento": "832008321",
+        "valor": 1554693958.0,
+        "contratos": 12,
+        "participacion_pct": 5.1862
+      },
+      {
+        "proveedor": "FUNDACIÓN DE FORMACIÓN Y APOYO MUSICAL DE COLOMBIA",
+        "documento": "830137695",
+        "valor": 1469621539.0,
+        "contratos": 5,
+        "participacion_pct": 4.9024
+      },
+      {
+        "proveedor": "Q Y M  SAS",
+        "documento": "900058021",
+        "valor": 1050157265.95,
+        "contratos": 3,
+        "participacion_pct": 3.5032
+      },
+      {
+        "proveedor": "RAFAEL ANTONIO REYES",
+        "documento": "79161450",
+        "valor": 1027942526.0,
+        "contratos": 3,
+        "participacion_pct": 3.4291
+      },
+      {
+        "proveedor": "Multiservicios Automotrices S.A.S",
+        "documento": "900191900",
+        "valor": 842582727.3199999,
+        "contratos": 6,
+        "participacion_pct": 2.8107
+      },
+      {
+        "proveedor": "arkadia prime s.a.s",
+        "documento": "901361149",
+        "valor": 705833764.0,
+        "contratos": 20,
+        "participacion_pct": 2.3546
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 615054454.0,
+        "contratos": 2,
+        "participacion_pct": 2.0517
+      },
+      {
+        "proveedor": "Fundación Casa de la Providencia de Ubaté",
+        "documento": "860021648",
+        "valor": 572080143.0,
+        "contratos": 4,
+        "participacion_pct": 1.9084
+      },
+      {
+        "proveedor": "Corporacion casa de la cultura de Bosa",
+        "documento": "900357345",
+        "valor": 478533252.0,
+        "contratos": 4,
+        "participacion_pct": 1.5963
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8264878",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "LAM CONSTRUCCIONES S.A.S",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4283015096.0,
+        "fecha_firma": "2025-09-29",
+        "objeto": "CONSTRUCCIÓN DE GRADERÍAS; ESTRUCTURA DE CUBIERTA; CAMERINOS; BATERÍAS SANITARIAS; CERRAMIENTO Y OBRAS EXTERIORES DEL ESTADIO MUNICIPAL RODOLFO ORTIZ GARCÍA DEL MUNICIPIO DE TAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9785328",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "CONSORCIO PLAZA TAUSA SC2",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2547272162.0,
+        "fecha_firma": "2026-08-20",
+        "objeto": "MEJORAMIENTO DE LA PLAZA DEL TEMPLO DOCTRINERO; ADECUACIÓN DE LA ESCENOGRAFÍA CULTURAL Y EL ESPACIO PÚBLICO EN EL SECTOR DE TAUSA VIEJO; ZONA URBANA DEL MUNICIPIO DE TAUSA; DEPARTAMENTO DE CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8776192",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "FUNDACIÓN DE FORMACIÓN Y APOYO MUSICAL DE COLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 470000000.0,
+        "fecha_firma": "2026-01-07",
+        "objeto": "PRESTACION DE SERVICIOS ARTISTICOS A TODO COSTO PARA LA CONMEMORACION DEL DRAMA DE LOS REYES MAGOS EN EL MUNICIPIO DE TAUSA CUNDINAMARCA EN SUS 128 AÑOS DE TRADICION"
+      },
+      {
+        "id": "CO1.PCCNTR.7177911",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "FUNDACIÓN DE FORMACIÓN Y APOYO MUSICAL DE COLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 450000000.0,
+        "fecha_firma": "2024-12-27",
+        "objeto": "PRESTACION DE SERVICIOS ARTISTICOS A TODO COSTO PARA LA CONMEMORACION DEL DRAMA DE LOS REYES MAGOS EN EL MUNICIPIO DE TAUSA CUNDINAMARCA EN SUS 127 AÑOS DE TRADICION"
+      },
+      {
+        "id": "CO1.PCCNTR.5713278",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "Corporacion casa de la cultura de Bosa",
+        "modalidad": "Contratación régimen especial",
+        "valor": 407940000.0,
+        "fecha_firma": "2024-01-04",
+        "objeto": "Prestación de servicios artísticos y musicales en el marco de las ferias y fiestas; exposiciones y tradicional drama de los reyes magos en vivo con 126 años de tradición a celebrarse en el Municipio de Tausa Cundinamarca"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "contratos": 615,
+        "valor": 32369946896.73
+      },
+      {
+        "entidad": "EMPRESA SOCIAL DEL ESTADO CENTRO DE SALUD TAUSA",
+        "contratos": 2,
+        "valor": 154633628.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 27,
+    "valor_obras": 10024530718.51,
+    "obras_vencidas_abiertas": 16,
+    "valor_obras_vencidas_abiertas": 2080329235.59,
+    "pct_obras_vencidas_abiertas": 59.25925925925925,
+    "pct_pagado_obras_vencidas_abiertas": 80.5839,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.6938599",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "MR INGECONS SAS",
+        "estado": "Modificado",
+        "valor": 342950142.0,
+        "pagado": 342950142.0,
+        "fecha_fin": "2024-12-28",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LA PLAZA DE EVENTOS DEL MUNICIPIO DE TAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6993256",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "CONSORCIO SANTA MARIA",
+        "estado": "En ejecución",
+        "valor": 306378361.0,
+        "pagado": 306378361.0,
+        "fecha_fin": "2025-03-08",
+        "objeto": "CONSTRUCCION SEGUNDA ETAPA DEL SISTEMA DE ALCANTARILALDO SANITARIO SECTOR EL BOQUERON; DE ACUERDO A LOS ESTUDIOS Y DISEÑOS REALIZADOS CON EL CONTRATO DE CONSULTORIA No. 129 DE 2022 DEL MUNICIPIO DE TAUSA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9514935",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "CONSORCIO F&O",
+        "estado": "En ejecución",
+        "valor": 299963604.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-01",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LA MALLA VIAL RURAL - PLACA HUELLAS SECTOR CHIVOR - VEREDA PARAMO ALTO; SECTOR LOS MARRANOS VEREDA LAGUNITAS Y SECTOR PALO BLANCO - VEREDA RASGATA ALTO DEL MUNICIPIO DE TAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9535056",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "B&M CONSTRUCCIONES SR S.A.S",
+        "estado": "En ejecución",
+        "valor": 299862704.1,
+        "pagado": 299862704.1,
+        "fecha_fin": "2026-10-02",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LA MALLA VIAL RURAL - PLACA HUELLAS SECTOR PALOMARES - VEREDA PARAMO BAJO; SECTOR POZO HONDO - VEREDA PARAMO BAJO Y SECTOR TIERRA NEGRA - VEREDA RASGATA BAJO   DEL MUNICIPIO DE TAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7040969",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "FERMETRI INGENIERIA SAS",
+        "estado": "En ejecución",
+        "valor": 186142894.0,
+        "pagado": 186142894.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LAS INSTITUCIONES EDUCATIVAS RURALES DE LAS VEREDAS PARAMO BAJO; SAN ANTONIO; LOS PINOS; PAJARITO Y EL SALITRE DEL MUNICIPIO DE TAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7040984",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "MARSA COLOMBIA LTDA",
+        "estado": "En ejecución",
+        "valor": 160000000.0,
+        "pagado": 160000000.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MEJORAMIENTO Y MANTENIMIENTO DE LOS ESCENARIOS DEPORTIVOS DE LOS SECTORES DE EL BOQUERÓN Y TIERRA NEGRA DEL MUNICIPIO DE TAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7101966",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "QUINAC SOLUCIONES DE INGENIERIA S.A.S.",
+        "estado": "Modificado",
+        "valor": 152014854.0,
+        "pagado": 152014844.0,
+        "fecha_fin": "2024-12-25",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLAS EN LAS VEREDAS DE RASGATÁ BAJO Y PARAMO BAJO DEL MUNICIPIO DE TAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7166024",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "CONSORCIO AGUAS TAUSA",
+        "estado": "En ejecución",
+        "valor": 79200000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MANTENIMIENTO; MEJORAMIENTO; ADECUACIÓN Y OPTIMIZACIÓN DE LAS REDES DE ACUEDUCTO URBANO DEL MUNICIPIO DE TAUSA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7163480",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "JUNTA DE ACCION COMUNAL LAGUNITA",
+        "estado": "En ejecución",
+        "valor": 32723137.0,
+        "pagado": 32723137.0,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE TAUSA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LAGUNITAS PARA LA OPTIMIZACIÓN DEL SISTEMA DE ACUEDUCTO VEREDAL DE LA BOCATOMA LAS MINAS"
+      },
+      {
+        "id": "CO1.PCCNTR.7163477",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "JUNTA DE ACCION COMUNAL LAGUNITA",
+        "estado": "En ejecución",
+        "valor": 32723137.0,
+        "pagado": 32723137.0,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE TAUSA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LAGUNITAS PARA LA OPTIMIZACIÓN DEL SISTEMA DE ACUEDUCTO VEREDAL DE LA BOCATOMA SANTO DOMINGO"
+      },
+      {
+        "id": "CO1.PCCNTR.7163471",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "JUNTA DE ACCION COMUNAL LAGUNITA",
+        "estado": "En ejecución",
+        "valor": 32723137.0,
+        "pagado": 32723137.0,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE TAUSA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LAGUNITAS PARA LA OPTIMIZACIÓN DEL SISTEMA DE ACUEDUCTO VEREDAL DE LA BOCATOMA CENTRO"
+      },
+      {
+        "id": "CO1.PCCNTR.7164008",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "JUNTA DE ACCION COMUNAL PARAMO BAJO",
+        "estado": "En ejecución",
+        "valor": 32723137.0,
+        "pagado": 32723137.0,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE TAUSA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA PARAMO BAJO PARA LA OPTIMIZACIÓN DEL SISTEMA DE ACUEDUCTO VEREDAL DE LA BOCATOMA QUEBRADA GUANQUICA"
+      },
+      {
+        "id": "CO1.PCCNTR.7164012",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "JUNTA DE ACCION COMUNAL PUEBLO VIEJO TAUSA",
+        "estado": "En ejecución",
+        "valor": 32723137.0,
+        "pagado": 32723137.0,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONVENIO SOLIDARIO SUSCRITO ENTRE EL MUNICIPIO DE TAUSA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA PUEBLO VIEJO PARA LA OPTIMIZACIÓN DE LOS SISTEMAS DE ACUEDUCTOS VEREDALES COMPUESTO POR UNA BOCATOMA"
+      },
+      {
+        "id": "CO1.PCCNTR.7163483",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "JUNTA DE ACCION COMUNAL PARAMO BAJO",
+        "estado": "En ejecución",
+        "valor": 32723137.0,
+        "pagado": 32723137.0,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE TAUSA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA PARAMO BAJO PARA LA OPTIMIZACIÓN DEL SISTEMA DE ACUEDUCTO VEREDAL DE LA BOCATOMA LAS MOSCAS"
+      },
+      {
+        "id": "CO1.PCCNTR.7163494",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "JUNTA DE ACCION COMUNAL PARAMO BAJO",
+        "estado": "En ejecución",
+        "valor": 32723137.0,
+        "pagado": 32723137.0,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE TAUSA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA PARAMO BAJO PARA LA OPTIMIZACIÓN DEL SISTEMA DE ACUEDUCTO VEREDAL DE LA BOCATOMA SALINAS"
+      },
+      {
+        "id": "CO1.PCCNTR.6257981",
+        "entidad": "ALCALDIA MUNICIPAL TAUSA",
+        "proveedor": "bethel Arquitectura  SAS",
+        "estado": "En ejecución",
+        "valor": 24754717.49,
+        "pagado": 0.0,
+        "fecha_fin": "2024-05-05",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DE INFRAESTRUCTURA DEPORTIVA DEL MUNICIPIO DE TAUSA-CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Tausa",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 53.9,
+  "nivel": "medio",
+  "posicion": 28.0,
+  "total_rankeados": 71
+}

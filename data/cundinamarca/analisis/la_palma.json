@@ -1,0 +1,111 @@
+{
+  "resumen": {
+    "contratos": 5,
+    "valor_total": 1342249440.3,
+    "entidades": 1,
+    "proveedores": 3
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 4607.166134884129,
+    "top1_proveedor_pct": 59.12521835901264,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 2,
+    "pct_con_adicion": 20.0,
+    "top_proveedores": [
+      {
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "documento": "830105879",
+        "valor": 793607912.5,
+        "contratos": 3,
+        "participacion_pct": 59.1252
+      },
+      {
+        "proveedor": "FUNCAS",
+        "documento": "900410707",
+        "valor": 431999600.0,
+        "contratos": 1,
+        "participacion_pct": 32.1847
+      },
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 116641927.8,
+        "contratos": 1,
+        "participacion_pct": 8.69
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8176301",
+        "entidad": "MUNICIPIO LA PALMA",
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 576783105.0,
+        "fecha_firma": "2025-08-08",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; LOGISTICOS Y ORGANIZACIONALES ENCAMINADOS A LA ORGANIZACIÓN Y EJECUCION DE ACTIVIDADES ARTISTICAS; CULTURALES; TURISTICAS Y CAMPESINAS EN EL MARCO DE LA CELEBRACION DE LAS FERIAS Y FIESTAS MUNICIPALES DEL AÑO 2025 EN LA PALMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6606596",
+        "entidad": "MUNICIPIO LA PALMA",
+        "proveedor": "FUNCAS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 431999600.0,
+        "fecha_firma": "2024-08-08",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA LA ORGANIZACIÓN Y EJECUCIÓN DE LAS ACTIVIDADES ARTÍSTICAS; CULTURALES; TURÍSTICAS Y AGROPECUARIAS EN EL MARCO DE LA CELEBRACIÓN DE LAS FERIAS Y FIESTAS MUNICIPALES DEL AÑO 2024 EN LA PALMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9564230",
+        "entidad": "MUNICIPIO LA PALMA",
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 153139807.5,
+        "fecha_firma": "2026-06-12",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; OPERATIVOS Y LOGÍSTICOS ENCAMINADOS AL DESARROLLO Y EJECUCIÓN DE EVENTOS DEPORTIVOS; CULTURALES Y EDUCATIVOS PROGRAMADAS POR LA SECRETARIA DE DESARROLLO SOCIAL Y SALUD; ORIENTADAS AL FORTALECIMIENTO DE LA PARTICIPACIÓN COMUNITARIA; LA PROMOCIÓN DEL BIENESTAR SOCIAL Y EL MEJORAMIENTO DE LA CALIDAD DE VIDA DE LA POBLACIÓN DE LA PALMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7008234",
+        "entidad": "MUNICIPIO LA PALMA",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 116641927.8,
+        "fecha_firma": "2024-11-12",
+        "objeto": "CONVENIO ASOCIATIVO PARA LA ORGANIZACIÓN Y EJECUCIÓN DEL CALENDARIO DE ACTIVIDADES MUNICIPALES A CARGO DE LA SECRETARÍA DE DESARROLLO SOCIAL Y SALUD EN LOS SECTORES DE DEPORTES; CULTURA Y GRUPOS POBLACIONALES DEL SEGUNDO SEMESTRE DE LA VIGENCIA 2024 EN EL MARCO DEL PLAN DE DESARROLLO DEL MUNICIPIO DE LA PALMA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7993101",
+        "entidad": "MUNICIPIO LA PALMA",
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 63685000.0,
+        "fecha_firma": "2025-06-19",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS ENCAMINADOS A GENERAR APOYO ORGANIZACIONAL Y OPERATIVO ENCAMINADOS A DESARROLLAR ACTIVIDADES CULTURALES MUNICIPALES A CARGO DE LA SECRETARIA DE DESARROLLO SOCIAL Y SALUD: CELEBRACION DE LA FAMILIA PALMERA Y PRIMERA VALIDA NACIONAL DE CARROS ESFERADOS LOS COLIMAS VIGENCIA 2025 EN EL MARCO DEL PLAN DE DESARROLLO DEL MUNICIPIO DE LA PALMA CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO LA PALMA",
+        "contratos": 5,
+        "valor": 1342249440.3
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "La Palma",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

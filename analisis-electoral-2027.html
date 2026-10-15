@@ -14,7 +14,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #7C4DFF 0%, #B026FF 100%);
             min-height: 100vh;
             padding: 20px;
             color: #333;
@@ -30,7 +30,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #7C4DFF 0%, #B026FF 100%);
             color: white;
             padding: 40px;
             text-align: center;
@@ -48,7 +48,7 @@
         
         .tabs {
             display: flex;
-            background: #f5f5f5;
+            background: #F5F2FF;
             border-bottom: 2px solid #ddd;
         }
         
@@ -56,7 +56,7 @@
             flex: 1;
             padding: 16px;
             border: none;
-            background: #f5f5f5;
+            background: #F5F2FF;
             cursor: pointer;
             font-size: 14px;
             font-weight: 600;
@@ -71,8 +71,8 @@
         
         .tab-button.active {
             background: white;
-            color: #667eea;
-            border-bottom-color: #667eea;
+            color: #7C4DFF;
+            border-bottom-color: #7C4DFF;
         }
         
         .tab-content {
@@ -110,7 +110,7 @@
         }
         
         th {
-            background: #667eea;
+            background: #7C4DFF;
             color: white;
             padding: 12px;
             text-align: left;
@@ -123,11 +123,11 @@
         }
         
         tr:hover {
-            background: #f9f9f9;
+            background: #F8F6FF;
         }
         
         .metric {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #7C4DFF 0%, #B026FF 100%);
             color: white;
             padding: 20px;
             border-radius: 8px;
@@ -153,17 +153,17 @@
         }
         
         .delta-positive {
-            color: #27ae60;
+            color: #09BF5C;
             font-weight: bold;
         }
         
         .delta-negative {
-            color: #e74c3c;
+            color: #FF3B30;
             font-weight: bold;
         }
         
         .footer {
-            background: #f5f5f5;
+            background: #F5F2FF;
             padding: 20px;
             text-align: center;
             font-size: 12px;
@@ -178,16 +178,16 @@
         }
         
         h2 {
-            color: #667eea;
+            color: #7C4DFF;
             margin-bottom: 20px;
             font-size: 24px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #7C4DFF;
             padding-bottom: 10px;
         }
         
         .nota {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
+            background: #FFF0BF;
+            border-left: 4px solid #FFC400;
             padding: 12px;
             margin: 20px 0;
             border-radius: 4px;
@@ -248,7 +248,7 @@
                 <canvas id="chart2"></canvas>
             </div>
             
-            <h3 style="color: #667eea; margin-top: 30px; margin-bottom: 15px;">Factores de volatilidad 2027</h3>
+            <h3 style="color: #7C4DFF; margin-top: 30px; margin-bottom: 15px;">Factores de volatilidad 2027</h3>
             <table id="table-volatilidad">
                 <thead>
                     <tr>
@@ -384,7 +384,7 @@
                     datasets: [{
                         label: 'Delta Izquierda (pp)',
                         data: deltas,
-                        backgroundColor: deltas.map(d => d > 0 ? '#e74c3c' : '#27ae60'),
+                        backgroundColor: deltas.map(d => d > 0 ? '#FF3B30' : '#09BF5C'),
                         borderRadius: 4
                     }]
                 },
@@ -430,12 +430,12 @@
                         {
                             label: 'Votos 2023',
                             data: data.datos.map(d => d.votos_2023),
-                            backgroundColor: '#667eea'
+                            backgroundColor: '#7C4DFF'
                         },
                         {
                             label: 'Votos 2026',
                             data: data.datos.map(d => d.votos_2026),
-                            backgroundColor: '#764ba2'
+                            backgroundColor: '#B026FF'
                         }
                     ]
                 },

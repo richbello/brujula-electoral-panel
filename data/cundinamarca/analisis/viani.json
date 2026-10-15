@@ -1,0 +1,95 @@
+{
+  "resumen": {
+    "contratos": 4,
+    "valor_total": 968617461.0,
+    "entidades": 1,
+    "proveedores": 2
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 7193.995923681355,
+    "top1_proveedor_pct": 83.12095955495066,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 805124128.0,
+        "contratos": 3,
+        "participacion_pct": 83.121
+      },
+      {
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "documento": "900136128",
+        "valor": 163493333.0,
+        "contratos": 1,
+        "participacion_pct": 16.879
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7086982",
+        "entidad": "ALCALDIA MUNICIPAL DE VIANI",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 407700000.0,
+        "fecha_firma": "2024-11-29",
+        "objeto": "AUNAR ESFUERZOS TECNICOS ADMINISTRATIVOS FINANCIEROS OPERATIVOS Y LOGISTICOS A TRAVES DE LA REALIZACION DE ACTIVIDADES CULTURALES DEPORTIVAS RECREATIVAS Y EN CUMPLIMIENTO DE LAS METAS Y PROGRAMAS DEL PLAN DE DESARROLLO TRANSPARENCIA Y COMPROMISO CON VIANI QUE SE ENCUENTRAN A CARGO DEL MUNICIPIO DE VIANI CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6372996",
+        "entidad": "ALCALDIA MUNICIPAL DE VIANI",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 203000000.0,
+        "fecha_firma": "2024-05-28",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA AUNAR ESFUERZOS HUMANOS; TÉCNICOS; ADMINISTRATIVOS; LOGÍSTICOS Y FINANCIEROS ENTRE EL MUNICIPIO DE VIANÍ CUNDINAMARCA Y LA FUNDACIÓN FUNDACOLOMBIA PARA LA REALIZACIÓN DEL FESTIVAL TRADICIONAL; GANADERO; COMERCIAL; ARTISTICO; CULTURAL Y TURISTICO A REALIZARSE EN EL MUNICIPIO DE VIANÍ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8704535",
+        "entidad": "ALCALDIA MUNICIPAL DE VIANI",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 194424128.0,
+        "fecha_firma": "2025-12-15",
+        "objeto": "AUNAR ESFUERZOS TECNICOS OPERATIVOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA ATENCON INTEGRAL A LA POBLACION ADULTA; POBLACION CON DISCAPACIDAD; NIÑOS Y NIÑAS; Y POBLACION VULNERABLE RESIDENTE EN EL MUNICIPO DE VIANI CUNDUNAMARCA EN CUMPLIMIENTO A LAS METAS Y PROGRAMAS ESTABLECIDAS EN EL PLAN DE DESAROLLO MUNICIPAL TRANSPARENCIA Y COMPROMISO POR VIANI 2024-2027."
+      },
+      {
+        "id": "CO1.PCCNTR.6996874",
+        "entidad": "ALCALDIA MUNICIPAL DE VIANI",
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "modalidad": "Contratación régimen especial",
+        "valor": 163493333.0,
+        "fecha_firma": "2024-11-06",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; FINANCIEROS Y OPERATIVOS ENTRE EL MUNICIPIO DE VIANI CUNDINAMARCA Y LA CORPORACION INTEGRAL SOLUCIONES INMEDIATAS HB A TRAVÉS DE LA REALIZACIÓN DE ACTIVIDADES ARTISTICAS Y CULTURALES TRADICIONALES PARA LA VIGENCIA 2024."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE VIANI",
+        "contratos": 4,
+        "valor": 968617461.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Vianí",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

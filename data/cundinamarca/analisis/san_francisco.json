@@ -1,0 +1,245 @@
+{
+  "resumen": {
+    "contratos": 611,
+    "valor_total": 22300152327.84,
+    "entidades": 4,
+    "proveedores": 252
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 80.5237,
+    "pct_directa_valor": 45.969,
+    "hhi": 198.73245154944075,
+    "top1_proveedor_pct": 9.51788697399348,
+    "top5_proveedores_pct": 21.972727930481355,
+    "pareto_proveedores_80pct_valor": 95,
+    "pct_con_adicion": 23.076923076923077,
+    "top_proveedores": [
+      {
+        "proveedor": "Fungestores",
+        "documento": "900090077",
+        "valor": 2080175000.0,
+        "contratos": 10,
+        "participacion_pct": 9.5179
+      },
+      {
+        "proveedor": "PRORUSSI CONSTRUCCIONES SAS",
+        "documento": "901055683",
+        "valor": 829725568.1800001,
+        "contratos": 3,
+        "participacion_pct": 3.7964
+      },
+      {
+        "proveedor": "GAMA",
+        "documento": "800023917",
+        "valor": 720000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.2944
+      },
+      {
+        "proveedor": "FUNDACION GUALIVA DULCE",
+        "documento": "900396205",
+        "valor": 616454267.0,
+        "contratos": 1,
+        "participacion_pct": 2.8206
+      },
+      {
+        "proveedor": "EMPRESA SOCIAL DEL ESTADO CENTRO DE SALUD SAN FRANCISCO DE SALES",
+        "documento": "900283194",
+        "valor": 555879048.0,
+        "contratos": 3,
+        "participacion_pct": 2.5434
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 551152749.0,
+        "contratos": 5,
+        "participacion_pct": 2.5218
+      },
+      {
+        "proveedor": "candart arquitectura sas",
+        "documento": "901368803",
+        "valor": 537836220.0,
+        "contratos": 2,
+        "participacion_pct": 2.4609
+      },
+      {
+        "proveedor": "EDS LA FLORESTA GDS SAS",
+        "documento": "900395885",
+        "valor": 525100000.0,
+        "contratos": 10,
+        "participacion_pct": 2.4026
+      },
+      {
+        "proveedor": "RAFAEL HERNANDO CORTES GARZON",
+        "documento": "80280711",
+        "valor": 460000000.0,
+        "contratos": 3,
+        "participacion_pct": 2.1047
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 442641771.37,
+        "contratos": 3,
+        "participacion_pct": 2.0253
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9354205",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "GAMA",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 720000000.0,
+        "fecha_firma": "2026-02-25",
+        "objeto": "ADQUISICIÓN DE UN VEHÍCULO COMPACTADOR DE RESIDUOS SÓLIDOS DE 17 Yd3 PARA EL MUNICIPIO DE SAN FRANCISCO EN CUMPLIMIENTO AL CONVENIO INTERADMINISTRATIVO EPC-CI-042-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9793469",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "FUNDACION GUALIVA DULCE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 616454267.0,
+        "fecha_firma": "2026-08-11",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA PLANEACIÓN; ORGANIZACIÓN Y EJECUCIÓN DE LA PROGRAMACIÓN CULTURAL Y ARTÍSTICA A DESARROLLARSE EN EL MARCO DE LA LXI FERIA EXPOSICIÓN AGROPECURIA; COMERCIAL; TURÍSTICA Y CULTURAL Y LA XXII EDICIÓN DEL REINADO DEPARTAMENTAL DEL CABALLISTA; EN EL MUNICIPIO DE SAN FRANCISCO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8149787",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "Fungestores",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 521000000.0,
+        "fecha_firma": "2025-07-31",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA PLANEACIÓN; ORGANIZACIÓN Y EJECUCIÓN DE LA PROGRAMACIÓN CULTURAL Y ARTÍSTICA A DESARROLLARSE EN EL MARCO DE LAS FESTIVIDADES PARA LA XI EDICIÓN DEL REINADO DEPARTAMENTAL DEL CABALLISTA; EN EL MUNICIPIO DE SAN FRANCISCO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9394201",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "PRORUSSI CONSTRUCCIONES SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 489999386.0,
+        "fecha_firma": "2026-03-16",
+        "objeto": "CONTRATAR A PRECIO UNITARIO EL MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DESDE EL CASCO URBANO DEL MUNICIPIO DE SAN FRANCISCO; CUNDINAMARCA; A: (I) LA VEREDA ARRAYÁN; SECTOR LOS SARMIENTO; (II) LA VEREDA EL PEÑÓN; SECTOR ALIPIO; (III) LA VEREDA MUÑA; SECTOR SOLANO; Y (IV) LA VEREDA TORIBA; SECTOR CAMACHO; EN CUMPLIMIENTO DE LOS CONVENIOS  INTERADMINISTRATIVOS ICCU NOS. 1086; 1115; 1173 Y 1178 DE 2025; RESPECTIVAMENTE"
+      },
+      {
+        "id": "CO1.PCCNTR.9800752",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "CONSORCIO CO-META",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 444723642.0,
+        "fecha_firma": "2026-08-19",
+        "objeto": "CONTRATAR A PRECIO UNITARIO EL MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DESDE EL CASCO URBANO DEL MUNICIPIO DE SAN FRANCISCO; CUNDINAMARCA; A: (I) LA VEREDA EL PEÑON; SECTOR CASCADA; Y (II) LA VEREDA PUEBLO VIEJO; SECTORES LA PIEDRA DE LOS NOVIOS; CASA CHINA Y CERCA DE PIEDRA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE SAN FRANCISCO CUNDINAMARCA",
+        "contratos": 2,
+        "valor": 448730.0
+      },
+      {
+        "entidad": "ESE CENTRO DE SALUD SAN FRANCISCO DE SALES",
+        "contratos": 1,
+        "valor": 45000000.0
+      },
+      {
+        "entidad": "JUNDEPORTES SAN FRANCISCO",
+        "contratos": 63,
+        "valor": 752740375.0
+      },
+      {
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "contratos": 542,
+        "valor": 21501963222.84
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 20,
+    "valor_obras": 4427890648.78,
+    "obras_vencidas_abiertas": 7,
+    "valor_obras_vencidas_abiertas": 1325617070.0,
+    "pct_obras_vencidas_abiertas": 35.0,
+    "pct_pagado_obras_vencidas_abiertas": 29.7329,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9394201",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "PRORUSSI CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 489999386.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-24",
+        "objeto": "CONTRATAR A PRECIO UNITARIO EL MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DESDE EL CASCO URBANO DEL MUNICIPIO DE SAN FRANCISCO; CUNDINAMARCA; A: (I) LA VEREDA ARRAYÁN; SECTOR LOS SARMIENTO; (II) LA VEREDA EL PEÑÓN; SECTOR ALIPIO; (III) LA VEREDA MUÑA; SECTOR SOLANO; Y (IV) LA VEREDA TORIBA; SECTOR CAMACHO; EN CUMPLIMIENTO DE LOS CONVENIOS  INTERADMINISTRATIVOS ICCU NOS. 1086; 1115; 1173 Y 1178 DE 2025; RESPECTIVAMENTE"
+      },
+      {
+        "id": "CO1.PCCNTR.9610580",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "CONSORCIO NAR 2026",
+        "estado": "En ejecución",
+        "valor": 359998119.0,
+        "pagado": 159998259.0,
+        "fecha_fin": "2026-10-06",
+        "objeto": "CONTRATAR A PRECIOS UNITARIOS EL MEJORAMIENTO DE LAS VÍAS RURALES QUE CONDUCEN DESDE EL CASCO URBANO DEL MUNICIPIO DE SAN FRANCISCO; CUNDINAMARCA; HACIA: (I) LA VEREDA SAN MIGUEL; SECTOR TROPEZÓN ALDEA FELIZ; EN CUMPLIMIENTO DEL CONVENIO INTERADMINISTRATIVO ICCU No. 1519; (II) LA VEREDA EL PEÑÓN; SECTOR ALIPIO; Y (III) LA VEREDA MUÑA; SECTOR SOLANO."
+      },
+      {
+        "id": "CO1.PCCNTR.8480394",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "INTERCONDI SAS",
+        "estado": "En ejecución",
+        "valor": 199999976.0,
+        "pagado": 199999976.0,
+        "fecha_fin": "2025-12-21",
+        "objeto": "(I) MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA EL PEÑÓN SECTOR LOS GATOS DEL MUNICIPIO DE SAN FRANCISCO DEL DEPARTAMENTO DE CUNDINAMARCA EN CUMPLIMIENTO AL CONVENIO INTERADMINISTRATIVO ICCU 598 DE 2025;  (II) MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA ARRAYAN SECTOR CHOROTE II  DEL MUNICIPIO DE SAN FRANCISCO DEL DEPARTAMENTO DE CUNDINAMARCA; EN CUMPLIMIENTO AL CONVENIO INTERADMINISTRATIVO ICCU 635 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9453431",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "candart arquitectura sas",
+        "estado": "En ejecución",
+        "valor": 102937896.0,
+        "pagado": 34146211.83,
+        "fecha_fin": "2026-06-14",
+        "objeto": "MEJORAMIENTO DE VÍAS TERCIARIAS POR MEDIO DE OBRAS DE ARTE (ALCANTARILLAS) EN LAS VEREDAS SAN MIGUEL SECTOR LA CIMA Y LA VEREDA EL PEÑÓN SECTOR VÍA AGUAS CALIENTES EN EL MUNICIPIO DE SAN FRANCISCO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9539661",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "DHE INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 99827386.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-01",
+        "objeto": "MEJORAMIENTO DE LAS VIAS TERCIARIAS (CONSISTENTE EN OBRAS DE ARTE-MURO EN GAVIÓN); EN LA VEREDA EL PEÑÓN SECTORES UNIGAS Y SANTAMARÍA Y VEREDA TORIBA SECTOR LA ESCUELA; DEL MUNICIPIO DE SAN FRANCISCO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9891972",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "PRORUSSI CONSTRUCCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 39734010.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-09",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO LOCATIVO DE LA INFRAESTRUCTURA DONDE FUNCIONA EL CENTRO DE DESARROLLO INFANTIL (CDI) PEQUITAS; POLIDEPORTIVO MUNICIPAL Y LA ADECUACIÓN DE ESPACIOS DESTINADOS AL FUNCIONAMIENTO DEL CENTRO DE VIDA SENSORIAL; EN EL MUNICIPIO DE SAN FRANCISCO; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9591879",
+        "entidad": "MUNICIPIO DE SAN FRANCISCO",
+        "proveedor": "ALVARO HERNANDO SUA CARREÑO",
+        "estado": "En ejecución",
+        "valor": 33120297.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-05",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO LOCATIVO DE LAS DIFERENTES ÁREAS DEL PALACIO MUNICIPAL DEL MUNICIPIO DE SAN FRANCISCO; CUNDINAMARCA; INCLUYENDO LA CASA DE LA CULTURA Y VIVE DIGITAL"
+      }
+    ]
+  },
+  "municipio": "San Francisco",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 43.2,
+  "nivel": "medio",
+  "posicion": 49.0,
+  "total_rankeados": 71
+}

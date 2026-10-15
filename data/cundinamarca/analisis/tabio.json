@@ -1,0 +1,300 @@
+{
+  "resumen": {
+    "contratos": 1420,
+    "valor_total": 68715740315.57,
+    "entidades": 7,
+    "proveedores": 622
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 77.8169,
+    "pct_directa_valor": 46.9973,
+    "hhi": 641.0915911153057,
+    "top1_proveedor_pct": 20.081183274815515,
+    "top5_proveedores_pct": 45.89112569830309,
+    "pareto_proveedores_80pct_valor": 82,
+    "pct_con_adicion": 16.901408450704224,
+    "top_proveedores": [
+      {
+        "proveedor": "CONSORCIO ALCANTARILLADO TABIO",
+        "documento": "9020598256",
+        "valor": 13771294071.0,
+        "contratos": 1,
+        "participacion_pct": 20.0812
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 8135340052.0,
+        "contratos": 1,
+        "participacion_pct": 11.8629
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE TABIO SA",
+        "documento": "900285304",
+        "valor": 3706467675.0,
+        "contratos": 14,
+        "participacion_pct": 5.4047
+      },
+      {
+        "proveedor": "UNION TEMPORAL CENTRO DE CONVIVENCIA TABIO 2023",
+        "documento": "901788042",
+        "valor": 2941666809.0,
+        "contratos": 1,
+        "participacion_pct": 4.2895
+      },
+      {
+        "proveedor": "IGAC Sede Central *",
+        "documento": "899999004",
+        "valor": 2916493748.0,
+        "contratos": 1,
+        "participacion_pct": 4.2528
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 1380059655.0,
+        "contratos": 4,
+        "participacion_pct": 2.0124
+      },
+      {
+        "proveedor": "ACON SECURITY LTDA",
+        "documento": "830016530",
+        "valor": 1217434376.0,
+        "contratos": 5,
+        "participacion_pct": 1.7753
+      },
+      {
+        "proveedor": "CONSORCIO INTER ALCANTARILLADO TABIO 26",
+        "documento": "9020680391",
+        "valor": 1100154593.0,
+        "contratos": 1,
+        "participacion_pct": 1.6042
+      },
+      {
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "documento": "900418702",
+        "valor": 1091830374.1399999,
+        "contratos": 2,
+        "participacion_pct": 1.5921
+      },
+      {
+        "proveedor": "FUNDACION WR TEJIDO SOCIAL",
+        "documento": "900282430",
+        "valor": 1054658244.0,
+        "contratos": 2,
+        "participacion_pct": 1.5379
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9542595",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE TABIO S A",
+        "proveedor": "CONSORCIO ALCANTARILLADO TABIO",
+        "modalidad": "Contratación régimen especial",
+        "valor": 13771294071.0,
+        "fecha_firma": "2026-06-02",
+        "objeto": "CONSTRUCCIÓN DE COLECTORES DE ALCANTARILLADO SANITARIO SECTORES LOURDES Y PALO VERDE; PARA LOGRAR LA CONDUCCIÓN DE LAS AGUAS RESIDUALES A LA PTAR; EN EL MUNICIPIO DE TABIO; POR EL SISTEMA DE PRECIOS UNITARIOS FIJOS; SIN FÓRMULA DE REAJUSTE; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO CARCONV INT 33712025; SUSCRITO ENTRE LA CORPORACIÓN AUTÓNOMA REGIONAL DE CUNDINAMARCA - CAR Y EL MUNICIPIO DE TABIO  CUNDINAMARCA Y EMPRESA DE SERVICIOS PÚBLICOS DE TABIO."
+      },
+      {
+        "id": "CO1.PCCNTR.7187770",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 8135340052.0,
+        "fecha_firma": "2025-03-27",
+        "objeto": "CONTRATO DE EMPRESTITO Y PIGNORACION DE RENTAS A LARGO PLAZO - ACREEDOR: BANCOLOMBIA / DEUDOR: MUNICIPIO DE TABIO. BANCOLOMBIA ha acordado prestar a EL DEUDOR hasta la suma señalada en el aparte MONOT DE LA OPERACIÓN de la PARTE1.2; la cual se entregará a su perfeccionamiento y una vez se haya acreditado el cumplimiento de la totalidad de los requisitos legales."
+      },
+      {
+        "id": "CO1.PCCNTR.5703240",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "UNION TEMPORAL CENTRO DE CONVIVENCIA TABIO 2023",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2941666809.0,
+        "fecha_firma": "2024-02-22",
+        "objeto": "CONSTRUCCIÓN DEL CENTRO DE CONVIVENCIA CIUDADANA EN EL CASCO URBANO DEL MUNICIPIO DE TABIO DEL DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6350564",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "IGAC Sede Central *",
+        "modalidad": "Contratación directa",
+        "valor": 2916493748.0,
+        "fecha_firma": "2024-05-23",
+        "objeto": "AUNAR ESFUERZOS PARA LA IMPLEMENTACION DEL SERVICIO PUBLICO DE GESTION CATASTRAL QUE PERMITA LA ELABORACION DE INSUMOS CARTOGRAFICOS; GEODESICOS; AGROLOGICOS Y ACTUALIZACION CATASTRAL CON ENFOQUE MULTIPROPOSITO EN EL MUNICIPIO DE TABIO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7749105",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE TABIO SA",
+        "modalidad": "Contratación directa",
+        "valor": 2592876905.0,
+        "fecha_firma": "2025-04-04",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA EMPRESA DE SERVICIOS PÚBLICOS DE TABIO - EMSERTABIO S.A. E.S.P. Y EL MUNICIPIO DE TABIO PARA EJECUTAR LAS OBRAS ASOCIADAS AL PLAN MAESTRO DE ALCANTARILLADO EN EL MUNICIPIO DE TABIO; CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA DE TABIO",
+        "contratos": 774,
+        "valor": 46253176431.35
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL TABIO",
+        "contratos": 22,
+        "valor": 405655153.0
+      },
+      {
+        "entidad": "E.S.E HOSPITAL NUESTRA SEÑORA DEL CARMEN DE TABIO",
+        "contratos": 126,
+        "valor": 1822836082.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE TABIO S A",
+        "contratos": 2,
+        "valor": 14871448664.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE CULTURA JOAQUIN PIÑEROS CORPAS",
+        "contratos": 249,
+        "valor": 3037393549.96
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE DEPORTE Y RECREACION DE TABIO",
+        "contratos": 201,
+        "valor": 2223092345.26
+      },
+      {
+        "entidad": "PERSONERÍA MUNICIPAL DE TABIO",
+        "contratos": 13,
+        "valor": 102138090.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 19,
+    "valor_obras": 22460142784.59,
+    "obras_vencidas_abiertas": 11,
+    "valor_obras_vencidas_abiertas": 6144047609.59,
+    "pct_obras_vencidas_abiertas": 57.89473684210527,
+    "pct_pagado_obras_vencidas_abiertas": 59.1098,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.5703240",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "UNION TEMPORAL CENTRO DE CONVIVENCIA TABIO 2023",
+        "estado": "Suspendido",
+        "valor": 2941666809.0,
+        "pagado": 2323249667.0,
+        "fecha_fin": "2026-08-21",
+        "objeto": "CONSTRUCCIÓN DEL CENTRO DE CONVIVENCIA CIUDADANA EN EL CASCO URBANO DEL MUNICIPIO DE TABIO DEL DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8287609",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Modificado",
+        "valor": 728219511.14,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-19",
+        "objeto": "CONSTRUCCIÓN DE LA FASE II DEL CENTRO DE DESARROLLO INFANTIL (CDI) EL PENCIL EN EL MUNICIPIO DE TABIO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8701424",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "CONSORCIO DEPORTIVO TABIO",
+        "estado": "Modificado",
+        "valor": 424935082.0,
+        "pagado": 354078348.0,
+        "fecha_fin": "2026-04-30",
+        "objeto": "RECUPERACIÓN Y MANTENIMIENTO DEL ESCENARIO DEPORTIVO COLISEO HERACLIO VEGA DEL MUNICIPIO DE TABIO."
+      },
+      {
+        "id": "CO1.PCCNTR.8750237",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "OLPG CIVIL S.A.S.",
+        "estado": "Modificado",
+        "valor": 402276782.0,
+        "pagado": 220875389.0,
+        "fecha_fin": "2026-07-26",
+        "objeto": "MEJORAMIENTO DE LA INSTITUCIÓN EDUCATIVA JOSÉ DE SAN MARTÍN SEDE ALTERNA UBICADA EN LA CALLE 3#3-61 DEL MUNICIPIO DE TABIO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7706449",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "OSCAR LEONARDO PINZON GARCIA",
+        "estado": "En ejecución",
+        "valor": 385901477.0,
+        "pagado": 385901477.0,
+        "fecha_fin": "2025-08-27",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLAS EN LA VÍA QUE CONDUCE DE LA CABRERA AL SECTOR EL ALCAPARRO DE LA VEREDA RIO FRIO OCCIDENTAL y VÍA QUE CONDUCE DEL MUNICIPIO DE TABIO AL MUNICIPIO DE CHÍA VEREDA PALOVERDE SECTOR CAPILLA DEL LOURDES; CONFORME A LOS CONVENIOS ICCU N° 691 DE 2024 Y N°690 DE 2024 EN EL MUNICIPIO DE TABIO CUNDINAMARCADESARROLLAR CAMPAÑAS INTEGRALES DE PROMOCIÓN Y DIVULGACIÓN DIRIGIDAS A LA COMUNIDAD; PLASMADAS EN LAS METAS DEL PLAN DE DESARROLLO"
+      },
+      {
+        "id": "CO1.PCCNTR.8745563",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Suspendido",
+        "valor": 363610863.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-19",
+        "objeto": "MEJORAMIENTO DEL ESPACIO PÚBLICO EN LA DIAGONAL SÉPTIMA ENTRE CARRERAS TERCERA Y SEXTA DEL MUNICIPIO DE TABIO; DEPARTAMENTO DE CUNDINAMARCA CONFORME AL CONVENIO ICCU 944 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8746387",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "CONSORCIO ILUMINACION",
+        "estado": "Modificado",
+        "valor": 358896903.0,
+        "pagado": 170981608.0,
+        "fecha_fin": "2026-10-03",
+        "objeto": "MEJORAMIENTO DE LA ILUMINACIÓN DEL ESTADIO MUNICIPAL EN EL MUNICIPIO DE TABIO CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8700295",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "W & M SOLUCIONES",
+        "estado": "Modificado",
+        "valor": 257863331.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-31",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DE LA INFRAESTRUCTURA DE LA SEDE EDUCATIVA INSTITUTO TÉCNICO COMERCIAL JOSÉ DE SAN MARTÍN SEDE CAMILO TORRES Y SEDE PRINCIPAL DEL INSTITUTO DE CULTURA JOAQUÍN PIÑEROS CORPAS DE PROPIEDAD DEL MUNICIPIO DE TABIO; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8743990",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "OLPG CIVIL S.A.S.",
+        "estado": "Modificado",
+        "valor": 203999859.0,
+        "pagado": 99973586.0,
+        "fecha_fin": "2026-09-03",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA SALITRE SECTOR VERDE MENTA Y DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA RÍO FRÍO OCCIDENTAL SECTOR MONCADA EN EL MUNICIPIO DE TABIO; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8699681",
+        "entidad": "ALCALDIA DE TABIO",
+        "proveedor": "TEST TECHNOLOGY AND ENGINEERING SOLUTIONS LATAM S.A.S.",
+        "estado": "En ejecución",
+        "valor": 43530000.0,
+        "pagado": 43530000.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "SUMINISTRO E INSTALACIÓN DE JACUZZIS Y MANTENIMIENTO DE BAÑO TURCO Y CONTROLADORES EN EL BALNEARIO TERMALES EL ZIPA DEL MUNICIPIO DE TABIO"
+      },
+      {
+        "id": "CO1.PCCNTR.7815439",
+        "entidad": "INSTITUTO MUNICIPAL DE DEPORTE Y RECREACION DE TABIO",
+        "proveedor": "ELECTRICONSULTRES, PROYECTOS ELECTRICOS Y CIVILES  SAS",
+        "estado": "Modificado",
+        "valor": 33146992.45,
+        "pagado": 33146992.45,
+        "fecha_fin": "2025-05-28",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LOS ESCENARIOS PÚBLICOS DEPORTIVOS DEL MUNICIPIO DE TABIO CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Tabio",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 65.6,
+  "nivel": "medio",
+  "posicion": 13.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,275 @@
+{
+  "resumen": {
+    "contratos": 171,
+    "valor_total": 6895477543.95,
+    "entidades": 4,
+    "proveedores": 121
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 59.0643,
+    "pct_directa_valor": 25.2039,
+    "hhi": 369.70572473500494,
+    "top1_proveedor_pct": 9.853663345886227,
+    "top5_proveedores_pct": 32.98055866496388,
+    "pareto_proveedores_80pct_valor": 38,
+    "pct_con_adicion": 28.07017543859649,
+    "top_proveedores": [
+      {
+        "proveedor": "HYDRAMETAL SOLUCIONES SAS",
+        "documento": "900604822",
+        "valor": 654343280.0,
+        "contratos": 1,
+        "participacion_pct": 9.8537
+      },
+      {
+        "proveedor": "ADENAWER MAHECHA MAHECHA",
+        "documento": "79595822",
+        "valor": 470380074.71,
+        "contratos": 2,
+        "participacion_pct": 7.0834
+      },
+      {
+        "proveedor": "CONTECOR S.A.S",
+        "documento": "900702893",
+        "valor": 355252550.0,
+        "contratos": 1,
+        "participacion_pct": 5.3497
+      },
+      {
+        "proveedor": "GRUPO FAO SAS",
+        "documento": "901484861",
+        "valor": 355071355.0,
+        "contratos": 1,
+        "participacion_pct": 5.347
+      },
+      {
+        "proveedor": "GRUPO STROIT SAS",
+        "documento": "901354084",
+        "valor": 355062771.0,
+        "contratos": 1,
+        "participacion_pct": 5.3468
+      },
+      {
+        "proveedor": "CONSTRUCTORES ACF SAS",
+        "documento": "900535512",
+        "valor": 337904892.0,
+        "contratos": 1,
+        "participacion_pct": 5.0885
+      },
+      {
+        "proveedor": "Hector MIlciades Guerra Moncaleano",
+        "documento": "93200589",
+        "valor": 334456452.0,
+        "contratos": 1,
+        "participacion_pct": 5.0365
+      },
+      {
+        "proveedor": "AVANCEMOS INGENIERIA CUNDINAMARCA SAS",
+        "documento": "901774614",
+        "valor": 294996401.0,
+        "contratos": 1,
+        "participacion_pct": 4.4423
+      },
+      {
+        "proveedor": "CONSORCIO INCIGE PH",
+        "documento": "000000000",
+        "valor": 246512483.0,
+        "contratos": 1,
+        "participacion_pct": 3.7122
+      },
+      {
+        "proveedor": "FUNDACIÓN PARA EL DESARROLLO INTEGRAL SOCIO-ECONÓMICO, CULTURAL, DEPORTIVO, TÉCNICO, CIENTÍFICO, AGROPECUARIO, AMBIENTAL",
+        "documento": "900989554",
+        "valor": 240486868.0,
+        "contratos": 1,
+        "participacion_pct": 3.6215
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8743834",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "HYDRAMETAL SOLUCIONES SAS",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 654343280.0,
+        "fecha_firma": "2026-03-25",
+        "objeto": "ADQUISICIÓN DE UN VEHÍCULO COMPACTADOR DE RESIDUOS SÓLIDOS PARA EL MUNICIPIO DE VILLAGÓMEZ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9360508",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "ADENAWER MAHECHA MAHECHA",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 355767272.0,
+        "fecha_firma": "2026-03-16",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR MOTAS DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU-1511-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8720685",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "CONTECOR S.A.S",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 355252550.0,
+        "fecha_firma": "2026-03-16",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR PUENTE DE TABLA DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU-1499-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9548018",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "GRUPO FAO SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 355071355.0,
+        "fecha_firma": "2026-06-18",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR EL PINO DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU-1507-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9395741",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "GRUPO STROIT SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 355062771.0,
+        "fecha_firma": "2026-03-16",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR CESAR CASALLAS DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU 1522 2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNCIPAL DE VILLAGOMEZ",
+        "contratos": 2,
+        "valor": 35523600.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA DEPARTAMENTAL MISAEL GOMEZ",
+        "contratos": 6,
+        "valor": 27845000.0
+      },
+      {
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "contratos": 157,
+        "valor": 6760894143.95
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE VILLAGÓMEZ CUNDINAMARCA",
+        "contratos": 5,
+        "valor": 71214800.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 11,
+    "valor_obras": 3129701551.71,
+    "obras_vencidas_abiertas": 10,
+    "valor_obras_vencidas_abiertas": 2791796659.71,
+    "pct_obras_vencidas_abiertas": 90.9090909090909,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9360508",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "ADENAWER MAHECHA MAHECHA",
+        "estado": "Modificado",
+        "valor": 355767272.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-01",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR MOTAS DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU-1511-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8720685",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "CONTECOR S.A.S",
+        "estado": "Modificado",
+        "valor": 355252550.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-16",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR PUENTE DE TABLA DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU-1499-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9548018",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "GRUPO FAO SAS",
+        "estado": "Aprobado",
+        "valor": 355071355.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-12",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR EL PINO DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU-1507-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9395741",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "GRUPO STROIT SAS",
+        "estado": "Modificado",
+        "valor": 355062771.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-16",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA BUENAVISTA SECTOR CESAR CASALLAS DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA; SEGÚN CONVENIO ICCU 1522 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8646498",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "Hector MIlciades Guerra Moncaleano",
+        "estado": "Modificado",
+        "valor": 334456452.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-02",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA BUENAVISTA CON LA VEREDA CAMPAMENTO SECTOR ALIRIO BUITRAGO DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA (CONVENIO ICCU-607-2025) Y MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA BUENAVISTA CON LA VEREDA CAMPAMENTO SECTOR RIGO BUITRAGO DEL MUNICIPIO DE VILLAGOMEZ CUNDINAMARCA (CONVENIO ICCU-889-2025)."
+      },
+      {
+        "id": "CO1.PCCNTR.9497578",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "AVANCEMOS INGENIERIA CUNDINAMARCA SAS",
+        "estado": "Aprobado",
+        "valor": 294996401.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-19",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA LA VEREDA LA UNION SECTOR MONCADA DEL MUNICIPIO DE VILLAGOMEZ; CUNDINAMARCA; SEGÚN CONVENIO ICCU-CTO-602-2025 Y MEJORAMIENTO DE LA VIA QUE COMUNICA LA VEREDA CERRO AZUL CON LA VEREDA LA UNION SECTOR CUATRO CAMINOS DEL MUNICIPIO DE VILLAGOMEZ DEPARTAMENTO DE CUNDINAMARCA SEGÚN CONVENIO ICCU CTO-605-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9498350",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "CONSORCIO VIAL VILLAGÓMEZ",
+        "estado": "Modificado",
+        "valor": 254868290.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-06",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA EL RETIRO CON LA VEREDA CAIPAL SECTOR ESCUELA EL RETIRO; SEGÚN CONVENIO ICCU-583-2025 Y MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA CAMPAMENTO SECTOR PUENTE GONZALO PASCA GAZA; SEGÚN CONVENIO ICCU-1314-2025; DEL MUNICIPIO DE VILLAGÓMEZ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9407703",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "CONSORCIO INCIGE PH",
+        "estado": "Aprobado",
+        "valor": 246512483.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-27",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA CAMPAMENTO SECTOR ALIRIO DIAZ DEL MUNICIPIO DE VILLAGÓMEZ; CUNDINAMARCA SEGÚN CONVENIO ICCU CTO-813-2025 Y MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA CAMPAMENTO SECTOR FLOILAN GACHA DEL MUNICIPIO DE VILLAGOMEZ; CUNDINAMARCA SEGÚN CONVENIO ICCU CTO-1233-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8690620",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "JR FONSECA ING",
+        "estado": "Modificado",
+        "valor": 125196283.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-02",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA DEL CASCO URBANO CON LA VEREDA ARGENTINA SECTOR LA GALLERA DEL MUNICIPIO DE VILLAGÓMEZ; CUNDINAMARCA; SEGÚN CONVENIO ICCU-612-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8683092",
+        "entidad": "MUNICIPIO DE VILLAGÓMEZ*",
+        "proveedor": "ADENAWER MAHECHA MAHECHA",
+        "estado": "Modificado",
+        "valor": 114612802.71,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-20",
+        "objeto": "OPTIMIZACION DE LA RED DE ALCANTARILLADO DEL CASCO URBANO DE LA CARRERA 6 SALIDA A PAIME Y CONSTRUCCION DE DOS SUMIDEROS DE AGUAS LLUVIAS SECTOR PARQUEADERO MUNICIPAL Y CALLE 3 SECTOR MISAEL BUSTOS DE VILLAGOMEZ CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Villagómez",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 62.6,
+  "nivel": "medio",
+  "posicion": 17.0,
+  "total_rankeados": 71
+}

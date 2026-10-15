@@ -1,0 +1,125 @@
+{
+  "resumen": {
+    "contratos": 10,
+    "valor_total": 3613464788.96,
+    "entidades": 1,
+    "proveedores": 5
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 3156.6741822855493,
+    "top1_proveedor_pct": 37.26197349075386,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACION PARA EL DESARROLLO INTEGRAL PARA EL TERRITORIO",
+        "documento": "901695102",
+        "valor": 1346448291.76,
+        "contratos": 5,
+        "participacion_pct": 37.262
+      },
+      {
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "documento": "900136128",
+        "valor": 1109258487.2,
+        "contratos": 1,
+        "participacion_pct": 30.6979
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 1033756272.0,
+        "contratos": 2,
+        "participacion_pct": 28.6085
+      },
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 93561738.0,
+        "contratos": 1,
+        "participacion_pct": 2.5893
+      },
+      {
+        "proveedor": "FUNDACION PARQUE JAIME DUQUE",
+        "documento": "890802259",
+        "valor": 30440000.0,
+        "contratos": 1,
+        "participacion_pct": 0.8424
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8545187",
+        "entidad": "MUNICIPIO DE GUATAVITA",
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1109258487.2,
+        "fecha_firma": "2025-11-07",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS; CON EL FIN DE DESARROLLAR ACTIVIDADES Y EVENTOS ORIENTADOS AL FORTALECIMIENTO DEL SECTOR AGROPECUARIO; AMBIENTAL; DE EMPRENDIMIENTO; RURALIDAD; TURISMO Y CULTURA; QUE CONTRIBUYAN AL DESARROLLO SOCIAL; ECONÓMICO Y CULTURAL DEL MUNICIPIO DE GUATAVITA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8365813",
+        "entidad": "MUNICIPIO DE GUATAVITA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 599358672.0,
+        "fecha_firma": "2025-09-24",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS; Y FINANCIEROS PARA REALIZAR LOS EVENTOS CULTURALES; ARTISTICOS Y DEPORTIVOS A CARGO DE LA SERECTARIA DE CULTURA; RECREACION; DEPORTE Y TURISMO; EN EL MUNICIPIO DE GUATAVITA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7849861",
+        "entidad": "MUNICIPIO DE GUATAVITA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 434397600.0,
+        "fecha_firma": "2025-05-07",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS; Y FINANCIEROS EN LA EJECUCIÓN DE ACCIONES A CARGO DE LA SECRETARÍA DE DESARROLLO Y BIENESTAR SOCIAL DURANTE LA VIGENCIA 2025; PARA EL CUMPLIMIENTO DE METAS DEL PLAN DE DESARROLLO MUNICIPAL DE GUATAVITA."
+      },
+      {
+        "id": "CO1.PCCNTR.9964173",
+        "entidad": "MUNICIPIO DE GUATAVITA",
+        "proveedor": "FUNDACION PARA EL DESARROLLO INTEGRAL PARA EL TERRITORIO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 344796150.0,
+        "fecha_firma": "2026-09-18",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS PARA EL DESARROLLO DEL XXXVII FESTIVAL DEL DORADO Y EL CONCURSO DE DANZAS POR PAREJA; A CARGO DE LA SECRETARÍA DE CULTURA; RECREACIÓN; DEPORTES Y TURISMO DEL MUNICIPIO DE GUATAVITA; EN CUMPLIMIENTO DE LAS METAS ESTABLECIDAS EN EL PLAN DE DESARROLLO MUNICIPAL GUATAVITA UNIDA; UN DESTINO ÚNICO 2024-2027"
+      },
+      {
+        "id": "CO1.PCCNTR.9456055",
+        "entidad": "MUNICIPIO DE GUATAVITA",
+        "proveedor": "FUNDACION PARA EL DESARROLLO INTEGRAL PARA EL TERRITORIO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 324880580.76,
+        "fecha_firma": "2026-04-15",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS; Y FINANCIEROS EN LA EJECUCIÓN DE ACCIONES A CARGO DE LA SECRETARÍA DE DESARROLLO Y BIENESTAR SOCIAL DURANTE LA VIGENCIA 2026; PARA EL CUMPLIMIENTO DE METAS DEL PLAN DE DESARROLLO MUNICIPAL DE GUATAVITA."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE GUATAVITA",
+        "contratos": 10,
+        "valor": 3613464788.96
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Guatavita",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

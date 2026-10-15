@@ -1,0 +1,191 @@
+{
+  "resumen": {
+    "contratos": 21,
+    "valor_total": 1140560932.57,
+    "entidades": 1,
+    "proveedores": 15
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 14.2857,
+    "pct_directa_valor": 4.8435,
+    "hhi": 1240.683678219194,
+    "top1_proveedor_pct": 20.910148105161657,
+    "top5_proveedores_pct": 70.96767267015981,
+    "pareto_proveedores_80pct_valor": 6,
+    "pct_con_adicion": 4.761904761904762,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACION ADULTO MAYOR DE VENECIA CUNDINAMARCA",
+        "documento": "900493047",
+        "valor": 238492980.23000002,
+        "contratos": 3,
+        "participacion_pct": 20.9101
+      },
+      {
+        "proveedor": "FUNDACION CULTURAL Y ALIMENTARIA AVANZA",
+        "documento": "901892157",
+        "valor": 182000000.0,
+        "contratos": 1,
+        "participacion_pct": 15.9571
+      },
+      {
+        "proveedor": "FUNDEOG",
+        "documento": "900981084",
+        "valor": 145894800.0,
+        "contratos": 1,
+        "participacion_pct": 12.7915
+      },
+      {
+        "proveedor": "FUNGEINCO",
+        "documento": "900403236",
+        "valor": 129815000.0,
+        "contratos": 1,
+        "participacion_pct": 11.3817
+      },
+      {
+        "proveedor": "GRUPO COMERCIAL SINERGIA",
+        "documento": "901719588",
+        "valor": 113226769.0,
+        "contratos": 2,
+        "participacion_pct": 9.9273
+      },
+      {
+        "proveedor": "CONSTRUCCIONES Y ESTRUCTURAS METALICAS SAS",
+        "documento": "901318772",
+        "valor": 106902737.34,
+        "contratos": 3,
+        "participacion_pct": 9.3728
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 70330183.0,
+        "contratos": 1,
+        "participacion_pct": 6.1663
+      },
+      {
+        "proveedor": "INVERSIONES Y PROYECTOS INNOVA S.A.S",
+        "documento": "901191445",
+        "valor": 39146028.0,
+        "contratos": 1,
+        "participacion_pct": 3.4322
+      },
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 30568208.0,
+        "contratos": 1,
+        "participacion_pct": 2.6801
+      },
+      {
+        "proveedor": "AGENCIA LOGÍSTICA DE GESTIÓN INMOBILIARIA Y DE SERVICIOS DE CUNDINAMARCA",
+        "documento": "830021022",
+        "valor": 24675000.0,
+        "contratos": 2,
+        "participacion_pct": 2.1634
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8521903",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "FUNDACION CULTURAL Y ALIMENTARIA AVANZA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 182000000.0,
+        "fecha_firma": "2025-10-31",
+        "objeto": "APOYO LOGÍSTICO PARA LA REALIZACIÓN DEL FESTIVAL AGROTURISTICO Y CULTURAL DEL AGUA DE VENECIA- CUNDINAMARCA; CON EL FIN DE CELEBRAR Y PROMOVER LAS TRADICIONES AGROPECUARIAS; TURÍSTICAS Y CULTURALES DEL MUNICIPIO; CONTRIBUYENDO A LA  INAMIZACIÓN ECONÓMICA."
+      },
+      {
+        "id": "CO1.PCCNTR.8721817",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "FUNDEOG",
+        "modalidad": "Contratación régimen especial",
+        "valor": 145894800.0,
+        "fecha_firma": "2025-12-20",
+        "objeto": "PRESTAR EL SERVICIO DE APOYO LOGÍSTICO PARA LA REALIZACIÓN DE EVENTOS CULTURALES; DEPORTIVOS; DE BIENESTAR LABORAL Y D E PARTICIPACIÓN COMUNITARIA DEL MUNICIPIO DE VENECIA - CUNDINAMARCA; EN EL MARCO DEL CUMPLIMIENTO NORMATIVO Y DE LAS METAS DEL PLAN DE DESARROLLO"
+      },
+      {
+        "id": "CO1.PCCNTR.7161756",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "FUNGEINCO",
+        "modalidad": "Contratación régimen especial",
+        "valor": 129815000.0,
+        "fecha_firma": "2024-12-20",
+        "objeto": "AUNAR ESFUERZOS CON LA FUNDACION GESTORA INTEGRAL CONSTRUYENDO SENTIDO HUMANO FUNGEINCO PARA EL FORTALECIMIENTO; FOMENTO; PROMOCION Y DESARROLLO DE EVENTOS DEPORTIVOS Y CULTURALES A DESARROLLARSE EN EL MES DE DICIEMBRE EN EL MUNICIPIO VENECIA - CUNDINAMARCA - VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9303954",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "FUNDACION ADULTO MAYOR DE VENECIA CUNDINAMARCA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 89191100.7,
+        "fecha_firma": "2026-01-30",
+        "objeto": "Aunar esfuerzos entre el Municipio de Venecia - Cundinamarca y la Fundación Adulto Mayor de Venecia Cundinamarca; encaminados a brindar la atención integral para la población adulto mayor en la vigencia 2026."
+      },
+      {
+        "id": "CO1.PCCNTR.6964450",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "FUNDACION ADULTO MAYOR DE VENECIA CUNDINAMARCA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 74750000.0,
+        "fecha_firma": "2024-10-29",
+        "objeto": "AUNAR ESFUERZOS ENTRE EL MUNICIPIO DE VENECIA CUNDINAMARCA Y LA FUNDACIÓN ADULTO MAYOR DE VENECIA CUNDINAMARCA; ENCAMINADOS A BRINDAR LA ATENCIÓN NECESARIA PARA EL ADULTO MAYOR DURANTE LA VIGENCIA 2024."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "contratos": 21,
+        "valor": 1140560932.57
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 3,
+    "valor_obras": 106902737.34,
+    "obras_vencidas_abiertas": 3,
+    "valor_obras_vencidas_abiertas": 106902737.34,
+    "pct_obras_vencidas_abiertas": 100.0,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8734077",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "CONSTRUCCIONES Y ESTRUCTURAS METALICAS SAS",
+        "estado": "En ejecución",
+        "valor": 38846472.42,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "No definido"
+      },
+      {
+        "id": "CO1.PCCNTR.8706752",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "CONSTRUCCIONES Y ESTRUCTURAS METALICAS SAS",
+        "estado": "En ejecución",
+        "valor": 36257406.64,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MANTENIMIENTO DE LA INFRAESTRUCTURA DE LAS SEDE ADMINISTRATIVA GUARDERÍA EL ARRULLO Y DEL SENDERO ECOLÓGICO SALTO DE LA CHORRERA; DEL MUNICIPIO DE VENECIA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8611487",
+        "entidad": "MUNICIPIO DE VENECIA CUNDINAMARCA",
+        "proveedor": "CONSTRUCCIONES Y ESTRUCTURAS METALICAS SAS",
+        "estado": "En ejecución",
+        "valor": 31798858.28,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO DEL ESCENARIO DEPORTIVO DE LA I.E.D. VENECIA; SEDE LA REFORMA; Y MANTENIMIENTO DE LA INFRAESTRUCTURA DE LA I.E.D. VENECIA; SEDE SAN CRISTÓBAL DEL MUNICIPIO DE VENECIA; CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Venecia",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

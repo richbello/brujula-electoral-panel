@@ -1,0 +1,275 @@
+{
+  "resumen": {
+    "contratos": 984,
+    "valor_total": 48908408378.33,
+    "entidades": 4,
+    "proveedores": 411
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 67.2764,
+    "pct_directa_valor": 30.2059,
+    "hhi": 151.8844778070298,
+    "top1_proveedor_pct": 5.58847002201711,
+    "top5_proveedores_pct": 19.42302312303987,
+    "pareto_proveedores_80pct_valor": 122,
+    "pct_con_adicion": 5.691056910569105,
+    "top_proveedores": [
+      {
+        "proveedor": "C&C SAS",
+        "documento": "901078182",
+        "valor": 2542327876.0,
+        "contratos": 4,
+        "participacion_pct": 5.5885
+      },
+      {
+        "proveedor": "ARQUILAT",
+        "documento": "900448471",
+        "valor": 1857212075.0,
+        "contratos": 8,
+        "participacion_pct": 4.0825
+      },
+      {
+        "proveedor": "Miryan Lorena Avila Bejarano",
+        "documento": "52561936",
+        "valor": 1514373540.0,
+        "contratos": 6,
+        "participacion_pct": 3.3289
+      },
+      {
+        "proveedor": "CONSORCIO PLUSEL INGENIEROS - PLM",
+        "documento": "900641347",
+        "valor": 1490000000.0,
+        "contratos": 4,
+        "participacion_pct": 3.2753
+      },
+      {
+        "proveedor": "FUNDACIÓN DESARROLLO SOCIAL Y PRODUCTIVA",
+        "documento": "900072754",
+        "valor": 1432081500.0,
+        "contratos": 2,
+        "participacion_pct": 3.148
+      },
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 1105571700.0,
+        "contratos": 2,
+        "participacion_pct": 2.4302
+      },
+      {
+        "proveedor": "KASTOR SAS",
+        "documento": "820003972",
+        "valor": 1089563163.0,
+        "contratos": 1,
+        "participacion_pct": 2.395
+      },
+      {
+        "proveedor": "SERVIMARTINEZ SAS",
+        "documento": "901505701",
+        "valor": 1041400000.0,
+        "contratos": 4,
+        "participacion_pct": 2.2892
+      },
+      {
+        "proveedor": "REDEX SAS",
+        "documento": "820000817",
+        "valor": 986334999.0,
+        "contratos": 1,
+        "participacion_pct": 2.1681
+      },
+      {
+        "proveedor": "CONSTRUCIVILES ELITE SAS",
+        "documento": "800165517",
+        "valor": 970000000.0,
+        "contratos": 2,
+        "participacion_pct": 2.1322
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9351150",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "CONSORCIO OBRA PTAP 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 3356063542.05,
+        "fecha_firma": "2026-02-24",
+        "objeto": "OPTIMIZACIÓN DE LA PLANTA DE TRATAMIENTO DE AGUA POTABLE DEL CASCO URBANO DEL MUNICIPIO DE VILLAPINZÓN; SEGÚN CONVENIO EPC-CI-057 DE 2025 CELEBRADO CON EPC S.A. E.S.P"
+      },
+      {
+        "id": "CO1.PCCNTR.9552333",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "C&C SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1643196879.0,
+        "fecha_firma": "2026-06-10",
+        "objeto": "EL MEJORAMIENTO; REFORZAMIENTO Y REHABILITACIÓN ESTRUCTURAL PARA LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL LUIS ANTONIO ESCOBAR DEL MUNICIPIO DE VILLAPINZÓN CUNDINAMARCA SEGÚN CONVENIO ICCU-1435-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7977517",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "KASTOR SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1089563163.0,
+        "fecha_firma": "2025-06-17",
+        "objeto": "EL MANTENIMIENTO; MEJORAMIENTO Y ADECUACION DE LA INFRAESTRUCTURA RECREATIVA DEL COLISEO FRANCISCO DE VARGAS FIGUEROA DEL MUNICIPIO DE VILLAPINZÓN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9617741",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1069571700.0,
+        "fecha_firma": "2026-07-03",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; OPERATIVOS Y FINANCIEROS PARA LA PRESTACIÓN DEL SERVICIO DE LOGÍSTICA INTEGRAL PARA LA REALIZACIÓN DE EVENTOS INSTITUCIONALES; CULTURALES Y CONMEMORATIVOS DE LOS DOSCIENTOS CINCUENTA (250) AÑOS DE FUNDACIÓN DEL MUNICIPIO DE VILLAPINZÓN; VIGENCIA 2026."
+      },
+      {
+        "id": "CO1.PCCNTR.9499489",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "REDEX SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 986334999.0,
+        "fecha_firma": "2026-05-08",
+        "objeto": "CONSTRUCCIÓN DEL CENTRO DE VIDA SENSORIAL DEL MUNICIPIO DE VILLAPINZÓN CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Concejo Municipal de Villapinzon",
+        "contratos": 12,
+        "valor": 274279669.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL PARA EL DEPORTE, LA RECREACIÓN, LA EDUCACIÓN Y LA EDUCACIÓN FÍSICA EXTRAESCOLAR",
+        "contratos": 114,
+        "valor": 1972270861.0
+      },
+      {
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "contratos": 845,
+        "valor": 46581108848.33
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE VILLAPINZON",
+        "contratos": 8,
+        "valor": 80749000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 67,
+    "valor_obras": 15903155263.05,
+    "obras_vencidas_abiertas": 10,
+    "valor_obras_vencidas_abiertas": 3713211314.0,
+    "pct_obras_vencidas_abiertas": 14.925373134328357,
+    "pct_pagado_obras_vencidas_abiertas": 50.7677,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7977517",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "KASTOR SAS",
+        "estado": "En ejecución",
+        "valor": 1089563163.0,
+        "pagado": 871643167.75,
+        "fecha_fin": "2025-12-22",
+        "objeto": "EL MANTENIMIENTO; MEJORAMIENTO Y ADECUACION DE LA INFRAESTRUCTURA RECREATIVA DEL COLISEO FRANCISCO DE VARGAS FIGUEROA DEL MUNICIPIO DE VILLAPINZÓN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8521234",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "ARQUILAT",
+        "estado": "Suspendido",
+        "valor": 780024284.0,
+        "pagado": 123232724.0,
+        "fecha_fin": "2026-10-12",
+        "objeto": "CONSTRUCCIÓN; AMPLIACIÓN; OPTIMIZACIÓN Y MEJORAMIENTO DE LOS SISTEMAS DE ACUEDUCTO Y ALCANTARILLADO DEL MUNICIPIO DE VILLAPINZÓN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9508687",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "INTERCONMVN",
+        "estado": "Modificado",
+        "valor": 571543539.0,
+        "pagado": 430625126.0,
+        "fecha_fin": "2026-10-13",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DE PLAZOLETA DEL PARQUE PRINCIPAL EN CONMEMORACIÓN DE LOS 250 AÑOS DEL MUNICIPIO DE VILLAPINZÓN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9550904",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "ARQUILAT",
+        "estado": "Suspendido",
+        "valor": 400000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-15",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DE INFRAESTRUCTURA PARA EL FUNCIONAMIENTO DEL CENTRO ARTESANAL DEL MUNICIPIO DE VILLAPINZÓN"
+      },
+      {
+        "id": "CO1.PCCNTR.9550906",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "C&C SAS",
+        "estado": "En ejecución",
+        "valor": 347992895.0,
+        "pagado": 273657905.0,
+        "fecha_fin": "2026-09-23",
+        "objeto": "MEJORAMIENTO; ADECUACIÓN Y SEÑALIZACIÓN DE LAS VÍAS DEL CASCO URBANO DEL MUNICIPIO DE VILLAPINZÓN"
+      },
+      {
+        "id": "CO1.PCCNTR.9385093",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "CONSORCIO PLACA HUELLA CHASQUEZ",
+        "estado": "En ejecución",
+        "valor": 339415301.0,
+        "pagado": 150000000.0,
+        "fecha_fin": "2026-08-26",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE CONDUCEN DEL CASCO URBANO A LA VEREDA CHASQUEZ EN EL SECTOR EL RODEO SEGÚN CONVENIO ICCU 1084 DE 2025 Y DEL CASCO URBANO A LA VEREDA REATOVA EN EL SECTOR EL ALTO SEGÚN CONVENIO ICCU 1489 DE 2025 DEL MUNICIPIO DE VILLAPINZÓN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9646915",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "DARWIN RIGOBERTO LOPEZ MORENO",
+        "estado": "Modificado",
+        "valor": 99699278.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-29",
+        "objeto": "MEJORAMIENTO DE LA INFRAESTRUCTURA UTILIZADA PARA EL TRÁNSITO PEATONAL EN EL CASCO URBANO DEL MUNICIPIO DE VILLAPINZÓN"
+      },
+      {
+        "id": "CO1.PCCNTR.9664343",
+        "entidad": "MUNICIPIO DE VILLAPINZON",
+        "proveedor": "OSCAR ORLANDO CONTRERAS CALDERON",
+        "estado": "En ejecución",
+        "valor": 49019337.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-03",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DEL CENTRO LÚDICO Y ESPACIOS DE LA ADMINISTRACIÓN MUNICIPAL DEL MUNICIPIO DE VILLAPINZÓN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9479707",
+        "entidad": "INSTITUTO MUNICIPAL PARA EL DEPORTE, LA RECREACIÓN, LA EDUCACIÓN Y LA EDUCACIÓN FÍSICA EXTRAESCOLAR",
+        "proveedor": "OSCAR ORLANDO CONTRERAS CALDERON",
+        "estado": "En ejecución",
+        "valor": 21955103.0,
+        "pagado": 21955103.0,
+        "fecha_fin": "2026-06-28",
+        "objeto": "CONTRATAR LA ADECUACIÓN Y MEJORAMIENTO DE LAS OFICINAS ADMINISTRATIVAS DEL INSTITUTO MUNICIPAL PARA EL DEPORTE Y LA RECREACIÓN DE VILLAPINZÓN; MEDIANTE EL SUMINISTRO E INSTALACIÓN DE MOBILIARIO Y ELEMENTOS NECESARIOS PARA SU ÓPTIMO FUNCIONAMIENTO"
+      },
+      {
+        "id": "CO1.PCCNTR.9493956",
+        "entidad": "INSTITUTO MUNICIPAL PARA EL DEPORTE, LA RECREACIÓN, LA EDUCACIÓN Y LA EDUCACIÓN FÍSICA EXTRAESCOLAR",
+        "proveedor": "DARWIN RIGOBERTO LOPEZ MORENO",
+        "estado": "En ejecución",
+        "valor": 13998414.0,
+        "pagado": 13998414.0,
+        "fecha_fin": "2026-06-06",
+        "objeto": "CONTRATAR EL MEJORAMIENTO Y EMBELLECIMIENTO DE LOS ESCENARIOS DEPORTIVOS UBICADOS EN LAS ZONAS URBANA Y RURAL DEL MUNICIPIO DE VILLAPINZÓN; CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Villapinzón",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 15.4,
+  "nivel": "bajo",
+  "posicion": 71.0,
+  "total_rankeados": 71
+}

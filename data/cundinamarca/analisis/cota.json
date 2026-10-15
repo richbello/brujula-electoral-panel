@@ -1,0 +1,205 @@
+{
+  "resumen": {
+    "contratos": 5533,
+    "valor_total": 754547171443.1001,
+    "entidades": 6,
+    "proveedores": 2103
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 92.8068,
+    "pct_directa_valor": 52.7546,
+    "hhi": 588.2749803653153,
+    "top1_proveedor_pct": 21.373520654280025,
+    "top5_proveedores_pct": 39.21674581037326,
+    "pareto_proveedores_80pct_valor": 226,
+    "pct_con_adicion": 31.682631483824323,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 153500000000.0,
+        "contratos": 1,
+        "participacion_pct": 21.3735
+      },
+      {
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "documento": "901084024",
+        "valor": 40621563489.0,
+        "contratos": 2,
+        "participacion_pct": 5.6562
+      },
+      {
+        "proveedor": "CONSORCIO MEGADEPORTIVOS COTA 2025",
+        "documento": "901998876",
+        "valor": 33281895112.0,
+        "contratos": 1,
+        "participacion_pct": 4.6342
+      },
+      {
+        "proveedor": "SEGURIDAD FENIX DE COLOMBIA LTDA",
+        "documento": "800234493",
+        "valor": 27291165105.0,
+        "contratos": 3,
+        "participacion_pct": 3.8001
+      },
+      {
+        "proveedor": "UNION TEMPORAL CENTRO VIDA COTA",
+        "documento": "902002950",
+        "valor": 26951558000.0,
+        "contratos": 1,
+        "participacion_pct": 3.7528
+      },
+      {
+        "proveedor": "CONSORCIO EDUCATIVO SABANA",
+        "documento": "902005085",
+        "valor": 24760671778.5,
+        "contratos": 2,
+        "participacion_pct": 3.4477
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE COTA SA ESP",
+        "documento": "900124654",
+        "valor": 22283746911.66,
+        "contratos": 12,
+        "participacion_pct": 3.1028
+      },
+      {
+        "proveedor": "UT SEVIVECOTA 2024",
+        "documento": "901826330",
+        "valor": 20150754859.94,
+        "contratos": 1,
+        "participacion_pct": 2.8058
+      },
+      {
+        "proveedor": "CONSORCIO INB",
+        "documento": "902000036",
+        "valor": 15067545326.380001,
+        "contratos": 2,
+        "participacion_pct": 2.098
+      },
+      {
+        "proveedor": "NUEVO CUERPO DE BOMBEROS VOLUNTARIOS DE COTA CUNDINAMARCA",
+        "documento": "901744643",
+        "valor": 14858334563.0,
+        "contratos": 9,
+        "participacion_pct": 2.0689
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7771931",
+        "entidad": "ALCALDÍA MUNICIPAL COTA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 153500000000.0,
+        "fecha_firma": "2025-04-11",
+        "objeto": "EMPRÉSTITO DE RENTAS A LARGO PLAZO DEL MUNICIPIO DE COTA."
+      },
+      {
+        "id": "CO1.PCCNTR.8452556",
+        "entidad": "ALCALDÍA MUNICIPAL COTA",
+        "proveedor": "CONSORCIO MEGADEPORTIVOS COTA 2025",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 33281895112.0,
+        "fecha_firma": "2025-11-27",
+        "objeto": "DISENOS; ESTUDIOS; LICENCIAS; PERMISOS Y CONSTRUCCION DE PROYECTOS DE INFRAESTRUCTURA INSTITUCIONAL; SOCIAL RECREACION DEPORTE Y SUS OBRAS COMPLEMENTARIAS; EN EL MUNICIPIO DE COTA; CUNDINAMARCA COLISEO MULTIPROPOSITO LOTE 2"
+      },
+      {
+        "id": "CO1.PCCNTR.8452293",
+        "entidad": "ALCALDÍA MUNICIPAL COTA",
+        "proveedor": "UNION TEMPORAL CENTRO VIDA COTA",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 26951558000.0,
+        "fecha_firma": "2025-11-24",
+        "objeto": "DISEÑOS; ESTUDIOS; LICENCIAS; PERMISOS Y CONSTRUCCIÓN DE INFRAESTRUCTURA INSTITUCIONAL; SOCIAL - SECTOR SALUD Y SUS OBRAS COMPLEMENTARIAS; EN EL MUNICIPIO DE COTA; CUNDINAMARCA - CENTRO VIDA - ADULTO MAYOR"
+      },
+      {
+        "id": "CO1.PCCNTR.7863544",
+        "entidad": "ALCALDÍA MUNICIPAL COTA",
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "modalidad": "Licitación pública",
+        "valor": 23951532361.0,
+        "fecha_firma": "2025-05-09",
+        "objeto": "EJECUTAR EL PROGRAMA DE ALIMENTACIÓN ESCOLAR -P.A.E.-; EN EL SISTEMA EDUCATIVO; GARANTIZANDO LA PERMANECIA Y MEJORAR LAS CONDICIONES NUTRICIONALES DE LA POBLACIÓN VULNERABLE DEL MUNICIPIO DE COTA."
+      },
+      {
+        "id": "CO1.PCCNTR.6256597",
+        "entidad": "ALCALDÍA MUNICIPAL COTA",
+        "proveedor": "UT SEVIVECOTA 2024",
+        "modalidad": "Licitación pública",
+        "valor": 20150754859.94,
+        "fecha_firma": "2024-04-25",
+        "objeto": "EJECUTAR EL PROGRAMA DE ALIMENTACIÓN ESCOLAR -P.A.E.-; EL SISTEMA EDUCATIVO; GARANTIZANDO LA PERMANECIA Y MEJORAR LAS CONDICIONES NUTRICIONALES DE LA POBLACIÓN VULNERABLE DEL MUNICIPIO DE COTACIÓN \nVULNERABLE DEL MUNICIPIO DE COTA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDÍA MUNICIPAL COTA",
+        "contratos": 4412,
+        "valor": 699461853426.52
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL COTA",
+        "contratos": 232,
+        "valor": 6876506847.0
+      },
+      {
+        "entidad": "DIRECCION DE ANTINARCOTICOS",
+        "contratos": 6,
+        "valor": 2546907580.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE COTA SA ESP",
+        "contratos": 2,
+        "valor": 3429679291.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE RECREACION Y DEPORTE DE COTA CUNDINAMARCA",
+        "contratos": 664,
+        "valor": 31652445467.68
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE COTA",
+        "contratos": 209,
+        "valor": 10579778830.9
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 21,
+    "valor_obras": 131228986022.66,
+    "obras_vencidas_abiertas": 2,
+    "valor_obras_vencidas_abiertas": 4756760441.0,
+    "pct_obras_vencidas_abiertas": 9.523809523809524,
+    "pct_pagado_obras_vencidas_abiertas": 93.4687,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7480142",
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DE COTA SA ESP",
+        "proveedor": "CONSTRUCTORA Y FERRETERIA LA SABANA SAS",
+        "estado": "Modificado",
+        "valor": 3106760441.0,
+        "pagado": 2796084397.0,
+        "fecha_fin": "2026-02-08",
+        "objeto": "OPTIMIZACIÓN DEL ALCANTARILLADO Y SISTEMA DE ACUEDUCTO DE LA VEREDA EL ABRA DEL MUNICIPIO DE COTA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7022550",
+        "entidad": "DIRECCION DE ANTINARCOTICOS",
+        "proveedor": "CONSORCIO GUADAÑA 2024",
+        "estado": "Modificado",
+        "valor": 1650000000.0,
+        "pagado": 1650000000.0,
+        "fecha_fin": "2025-11-25",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LAS INSTALACIONES ADSCRITAS A LA DIRECCIÓN ANTINARCÓTICOS - POLICÍA NACIONAL; CON EJECUCIÓN POR TRACTO SUCESIVO; A PRECIOS UNITARIOS FIJOS SIN FÓRMULA DE REAJUSTE"
+      }
+    ]
+  },
+  "municipio": "Cota",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 60.6,
+  "nivel": "medio",
+  "posicion": 18.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,375 @@
+{
+  "resumen": {
+    "contratos": 797,
+    "valor_total": 62102041032.03,
+    "entidades": 4,
+    "proveedores": 441
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 65.2447,
+    "pct_directa_valor": 31.8038,
+    "hhi": 168.40335741796076,
+    "top1_proveedor_pct": 6.36961068068921,
+    "top5_proveedores_pct": 22.336645821333693,
+    "pareto_proveedores_80pct_valor": 141,
+    "pct_con_adicion": 23.588456712672524,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 3300000000.0,
+        "contratos": 1,
+        "participacion_pct": 6.3696
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DOMICILIARIOS DE SESQUILE CUNDINAMARCA S.A. ESP. SIGLA ACUASES S.A ESP.",
+        "documento": "900275140",
+        "valor": 3186333609.3599997,
+        "contratos": 9,
+        "participacion_pct": 6.1502
+      },
+      {
+        "proveedor": "Palermo Entertainment SAS",
+        "documento": "901655341",
+        "valor": 1824450445.0,
+        "contratos": 6,
+        "participacion_pct": 3.5215
+      },
+      {
+        "proveedor": "FUNDACION EL TALLER SOCIAL",
+        "documento": "901702042",
+        "valor": 1704166746.41,
+        "contratos": 3,
+        "participacion_pct": 3.2894
+      },
+      {
+        "proveedor": "CONSORCIO SESQUILÉ",
+        "documento": "901999841",
+        "valor": 1557331228.0,
+        "contratos": 1,
+        "participacion_pct": 3.0059
+      },
+      {
+        "proveedor": "GRUPO IGNEA SAS",
+        "documento": "901166624",
+        "valor": 1501163465.79,
+        "contratos": 1,
+        "participacion_pct": 2.8975
+      },
+      {
+        "proveedor": "CORPEGESA",
+        "documento": "901824447",
+        "valor": 1427573135.0,
+        "contratos": 1,
+        "participacion_pct": 2.7555
+      },
+      {
+        "proveedor": "Fundación Crear Soluciones con las Manos",
+        "documento": "900748442",
+        "valor": 1156973805.0,
+        "contratos": 6,
+        "participacion_pct": 2.2332
+      },
+      {
+        "proveedor": "CORPORACION COLOMBIA INTERNACIONAL CCI",
+        "documento": "800186585",
+        "valor": 969224000.0,
+        "contratos": 2,
+        "participacion_pct": 1.8708
+      },
+      {
+        "proveedor": "CONTRANSPORTES Y OBRAS SAS",
+        "documento": "901040683",
+        "valor": 854028127.5799999,
+        "contratos": 2,
+        "participacion_pct": 1.6484
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9684147",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "CONSORCIO PIECE GMJ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 5987912797.87,
+        "fecha_firma": "2026-07-28",
+        "objeto": "CONSTRUCCIÓN DE LA ETAPA II DEL TEATRO DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA; EN MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU 1256 DE 2025 SUSCRITO ENTRE EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU Y EL MUNICIPIO DE SESQUILÉ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8991878",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 3300000000.0,
+        "fecha_firma": "2026-01-20",
+        "objeto": "CONTRATO DE EMPRÉSTITO Y PIGNORACIÓN DE RENTAS A LARGO PLAZO SUSCRITO ENTRE MUNICIPIO DE\nSESQUILÉ - CUNDINAMARCA Y BANCOLOMBIA S.A."
+      },
+      {
+        "id": "CO1.PCCNTR.9324092",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "UT CASA DE LA MUJER SESQUILÉ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1614435477.0,
+        "fecha_firma": "2026-03-04",
+        "objeto": "CONSTRUCCIÓN DE LA CASA DE LA MUJER DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8430036",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "CONSORCIO SESQUILÉ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1557331228.0,
+        "fecha_firma": "2025-10-29",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA NESCUATÁ A LA VEREDA BOITIVÁ SECTOR LAS BRISAS; EN MARCO DEL CONVENIO INTERADMINISTRATIVO NO. ICCU 626 DE 2024 SUSCRITO ENTRE EL INSTITUTO DE INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA - ICCU Y EL MUNICIPIO DE SESQUILÉ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8866667",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "GRUPO IGNEA SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1501163465.79,
+        "fecha_firma": "2026-01-21",
+        "objeto": "MEJORAMIENTO DE LA PRIMERA ETAPA DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA NESCUATÁ; (SECTOR DE LA ESCUELA-LA VILLA); EN EL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA DE SESQUILE",
+        "contratos": 687,
+        "valor": 58515580018.51
+      },
+      {
+        "entidad": "CONCEJO MUNICIPIO DE SESQUILE CUNDINAMARCA",
+        "contratos": 26,
+        "valor": 496128870.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PUBLICOS DOMICILIARIOS DE SESQUILE CUNDINAMARCA S.A. ESP. SIGLA ACUASES S.A ESP.",
+        "contratos": 82,
+        "valor": 3072832143.52
+      },
+      {
+        "entidad": "EMPRESA INDUSTRIAL Y COMERCIAL DEL ESTADO GEOTER EICE SAS",
+        "contratos": 1,
+        "valor": 17500000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 43,
+    "valor_obras": 17531342704.42,
+    "obras_vencidas_abiertas": 25,
+    "valor_obras_vencidas_abiertas": 3459533942.0,
+    "pct_obras_vencidas_abiertas": 58.139534883720934,
+    "pct_pagado_obras_vencidas_abiertas": 8.3187,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8430036",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "CONSORCIO SESQUILÉ",
+        "estado": "Modificado",
+        "valor": 1557331228.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-05",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA LA VEREDA NESCUATÁ A LA VEREDA BOITIVÁ SECTOR LAS BRISAS; EN MARCO DEL CONVENIO INTERADMINISTRATIVO NO. ICCU 626 DE 2024 SUSCRITO ENTRE EL INSTITUTO DE INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA - ICCU Y EL MUNICIPIO DE SESQUILÉ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8194805",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "C&C SAS",
+        "estado": "Modificado",
+        "valor": 389352397.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-07",
+        "objeto": "ADECUACIÓN; MANTENIMIENTO Y MEJORAMIENTO DEL COLISEO MUNICIPAL UBICADO EN LA CALLE 4 No. 4-37 EN EL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7809888",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "C&E ENGINEERING S.A.S",
+        "estado": "Modificado",
+        "valor": 169637986.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-09",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLA EN LA VÍA QUE CONDUCE A LA VEREDA GOBERNADOR CON LA VEREDA SAN JOSE EN EL SECTOR EL TEJAR DEL MUNICIPIO DE SESQUILE; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9502169",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JULIO LEANDRO GARZON ALFONSO",
+        "estado": "Modificado",
+        "valor": 144730951.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-11",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DEL ACOPIO LECHERO UBICADO EN LA VEREDA EL HATO SECTOR EL UVAL DEL MUNICIPIO DEL SESQUILÉ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9466736",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "C&C SAS",
+        "estado": "Suspendido",
+        "valor": 135000000.0,
+        "pagado": 88488502.0,
+        "fecha_fin": "2026-09-17",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA EL HATO CON LA ESCUELA EL UVAL EN EL SECTOR BARRANCAS DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA; EN MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU 923 DE 2025 SUSCRITO ENTRE EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU Y EL MUNICIPIO DE SESQUILÉ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9423224",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "EUROINCO SAS",
+        "estado": "Modificado",
+        "valor": 127000000.0,
+        "pagado": 114300000.0,
+        "fecha_fin": "2026-08-31",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA EL HATO CON LA VEREDA RANCHERÍA EN EL SECTOR LAGUNETAS DEL MUNICIPIO DE SESQUILE; DEPARTAMENTO DE CUNDINAMARCA; EN MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU 930 DE 2025 SUSCRITO ENTRE EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU Y EL MUNICIPIO DE SESQUILÉ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9478501",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "CONSORCIO INGENIERIA DEL ORIENTE",
+        "estado": "Modificado",
+        "valor": 101391930.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-29",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA EL HATO CON LA VEREDA RANCHERÍA SECTOR COLORADO MUNICIPIO DE SESQUILÉ DEPARTAMENTO DE CUNDINAMARCA; EN MARCO DEL CONVENIO INTERADMINISTRATIVO No. ICCU 1366 DE 2025 SUSCRITO ENTRE EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA - ICCU Y EL MUNICIPIO DE SESQUILÉ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8723209",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JAC NESCUATA SECTOR   LA  VILLA",
+        "estado": "Modificado",
+        "valor": 78920000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-01",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCIÓN DE BATERÍAS SANITARIAS EXTERIORES EN EL SALÓN COMUNAL UBICADO EN LA VEREDA NESCUATÁ; SECTOR LA VILLA; DEL MUNICIPIO DE SESQUILÉ; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8694551",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JAC BARRIO BOITIVA",
+        "estado": "Modificado",
+        "valor": 53860000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-25",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EJECUTAR ACTIVIDADES DE MEJORAMIENTO Y ADECUACIÓN DE LOS ESPACIOS COMUNITARIOS DEL SALÓN COMUNAL UBICADO EN LA VEREDA BOITIVA; MUNICIPIO DE SESQUILÉ; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8331977",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA CHALECHE",
+        "estado": "Modificado",
+        "valor": 53100000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-10",
+        "objeto": "AUNAR  ESFUERZOS  TECNICOS; ADMINISTRATIVOS  Y FINANCIEROS PARA  LA CONSTRUCCION DE PLACA  HUELLA SECTOR  EL HORNO DE SAL VEREDA CHALECHE   DEL MUNICIPIO DE SESQUILE  DEL DEPARTAMENTO  DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8331537",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JAC VEREDA GOBERNADOR",
+        "estado": "Modificado",
+        "valor": 53100000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-04",
+        "objeto": "AUNAR  ESFUERZOS  TECNICOS; ADMINISTRATIVOS  Y FINANCIEROS PARA  LA CONSTRUCCION DE PLACA  HUELLA SECTOR  TALLER DE MIGUELIN  VEREDA EL GOBERNADOR   DEL MUNICIPIO DE SESQUILE  DEL DEPARTAMENTO  DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8333432",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA EL HATO",
+        "estado": "Modificado",
+        "valor": 53100000.0,
+        "pagado": 45000000.0,
+        "fecha_fin": "2026-05-07",
+        "objeto": "AUNAR  ESFUERZOS  TECNICOS; ADMINISTRATIVOS  Y FINANCIEROS PARA  LA CONSTRUCCION DE PLACA  HUELLA SECTOR  LA RINCONADA  VEREDA  EL HATO  DEL MUNICIPIO DE SESQUILE  DEL DEPARTAMENTO  DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8333915",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA SAN JOSE",
+        "estado": "Modificado",
+        "valor": 53100000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-04",
+        "objeto": "AUNAR  ESFUERZOS  TECNICOS; ADMINISTRATIVOS  Y FINANCIEROS PARA  LA CONSTRUCCION DE PLACA  HUELLA  CAMINO  RURAL VIA TERCIARIA EL RINCON  SECTOR  DORA LATORRE VEREDA  SAN JOSE DEL MUNICIPIO DE SESQUILE  DEL DEPARTAMENTO  DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7130405",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA EL HATO",
+        "estado": "Modificado",
+        "valor": 48656250.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-05-07",
+        "objeto": "AUNAR ESFUERZOS PARA LA CONSTRUCCIÓN DE PLACA HUELLAS; CON DESTINO A LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA DE EL HATO DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7131132",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "jac nescuata",
+        "estado": "Modificado",
+        "valor": 48656250.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-04-06",
+        "objeto": "AUNAR ESFUERZOS PARA LA CONSTRUCCIÓN DE PLACA HUELLAS; CON DESTINO A LA JUNTA DE ACCIÓN COMUNAL VEREDA DE NESCUATÁ DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7130147",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE VEREDA LA SALINA",
+        "estado": "Modificado",
+        "valor": 48656250.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-04",
+        "objeto": "AUNAR ESFUERZOS PARA LA CONSTRUCCIÓN DE PLACA HUELLAS; CON DESTINO A LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA LA SALINA DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7147133",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JAC VEREDA GOBERNADOR",
+        "estado": "Modificado",
+        "valor": 48656250.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-03-07",
+        "objeto": "AUNAR ESFUERZOS PARA LA CONSTRUCCIÓN DE PLACA HUELLAS; CON DESTINO A LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA GOBERNADOR DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7131143",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA SAN JOSE",
+        "estado": "Modificado",
+        "valor": 48656250.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-04-06",
+        "objeto": "AUNAR ESFUERZOS PARA LA CONSTRUCCIÓN DE PLACA HUELLAS; CON DESTINO A LA JUNTA DE ACCIÓN COMUNAL VEREDA DE SAN JOSÉ DEL MUNICIPIO DE SESQUILÉ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8333234",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCION COMUNAL URBANA CENTRO ALTO EL CAJON",
+        "estado": "Modificado",
+        "valor": 42500000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-28",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCION DE PLACA HUELLA EN LA CARRERA 1 B SECTOR MARCOS JUZGA; CASCO URBANO DEL MUNICIPIO DE SESQUILÉ DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8331724",
+        "entidad": "ALCALDIA DE SESQUILE",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE VEREDA LA SALINA",
+        "estado": "Aprobado",
+        "valor": 42500000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-16",
+        "objeto": "AUNAR  ESFUERZOS  TECNICOS; ADMINISTRATIVOS  Y FINANCIEROS PARA  LA CONSTRUCCION PLACA HUELA  SECTOR  LA PAJARERA  VEREDA LA SALINA   DEL MUNICIPIO DE SESQUILE  DEL DEPARTAMENTO  DE CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Sesquilé",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 42.8,
+  "nivel": "medio",
+  "posicion": 51.0,
+  "total_rankeados": 71
+}

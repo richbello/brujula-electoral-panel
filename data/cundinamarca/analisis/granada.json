@@ -1,0 +1,170 @@
+{
+  "resumen": {
+    "contratos": 33,
+    "valor_total": 580489852.1,
+    "entidades": 1,
+    "proveedores": 15
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 15.1515,
+    "pct_directa_valor": 5.7693,
+    "hhi": 1221.7479608826145,
+    "top1_proveedor_pct": 23.379933259646382,
+    "top5_proveedores_pct": 66.10406206272421,
+    "pareto_proveedores_80pct_valor": 8,
+    "pct_con_adicion": 15.151515151515152,
+    "top_proveedores": [
+      {
+        "proveedor": "Harold Mauricio Jaramillo Cuevas",
+        "documento": "11314146",
+        "valor": 135718140.0,
+        "contratos": 6,
+        "participacion_pct": 23.3799
+      },
+      {
+        "proveedor": "COMPUTECH CCTV",
+        "documento": "1069174653",
+        "valor": 102911000.0,
+        "contratos": 3,
+        "participacion_pct": 17.7283
+      },
+      {
+        "proveedor": "SYSTEM X SECURITY",
+        "documento": "11206778",
+        "valor": 62290800.0,
+        "contratos": 3,
+        "participacion_pct": 10.7307
+      },
+      {
+        "proveedor": "ANDRES FELIPE VERGAÑO ARIAS",
+        "documento": "1004753048",
+        "valor": 45767000.0,
+        "contratos": 3,
+        "participacion_pct": 7.8842
+      },
+      {
+        "proveedor": "DYG CONSTRUCCIONES DEL TOLIMA S.A.S",
+        "documento": "900465371",
+        "valor": 37040432.1,
+        "contratos": 2,
+        "participacion_pct": 6.3809
+      },
+      {
+        "proveedor": "DERLY VIVIANA ARCE NIÑO",
+        "documento": "1110451909",
+        "valor": 31959075.0,
+        "contratos": 1,
+        "participacion_pct": 5.5055
+      },
+      {
+        "proveedor": "william santos ortiz",
+        "documento": "11316993",
+        "valor": 31220000.0,
+        "contratos": 2,
+        "participacion_pct": 5.3782
+      },
+      {
+        "proveedor": "ANDRES FELIPE  ARANGO QUIMBAYO",
+        "documento": "112067787",
+        "valor": 30775000.0,
+        "contratos": 1,
+        "participacion_pct": 5.3016
+      },
+      {
+        "proveedor": "WILSON  NIETO DELGADO",
+        "documento": "80493200",
+        "valor": 25650000.0,
+        "contratos": 3,
+        "participacion_pct": 4.4187
+      },
+      {
+        "proveedor": "GIOVANI ALEXANDER TRIANA MORALES",
+        "documento": "112235220",
+        "valor": 20250000.0,
+        "contratos": 1,
+        "participacion_pct": 3.4884
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9566234",
+        "entidad": "INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA GIRARDOT",
+        "proveedor": "COMPUTECH CCTV",
+        "modalidad": "Contratación régimen especial",
+        "valor": 52403000.0,
+        "fecha_firma": "2026-06-17",
+        "objeto": "ADQUISICIÓN POR SUMINISTRO DE IMPRESOS CON ACCESORIOS; PUBLICIDAD y SERVICIOS LOGISTICOS PARA DESARROLLAR EVENTOS QUE IMPULSAN EL CONOCIMIENTO; LA CULTURA Y LA RECREACIÓN PARA LAS DIVERSAS ACTIVIDADES ACADÉMICAS Y PEDAGÓGICAS EN LA INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARÍA AUXILIADORA DEL MUNICIPIO DE GIRARDOT CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9488202",
+        "entidad": "INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA GIRARDOT",
+        "proveedor": "ANDRES FELIPE VERGAÑO ARIAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 39567000.0,
+        "fecha_firma": "2026-05-04",
+        "objeto": "PRESTACIÓN DE SERVICIOS DE MANTENIMIENTO AL SISTEMA DE\nCAPTACIÓN Y DRENAJE DE LLUVIAS; PUNTOS ECOLÓGICOS; BIENES MUEBLES (LOCKER;\nARCHIVADORES Y ESCRITORIOS; INCLUYE ELABORACIÓN DE ROPEROS); ZONAS VERDES Y\nARBOLADO; PARA LA BUENA MARCHA DE LAS ACTIVIDADES ADMINISTRATIVAS Y ACADÉMICAS\nDE LA INSTITUCIÓN EDUCATIVA ESCUELA NORMAL SUPERIOR MARÍA AUXILIADORA DE\nGIRARDOT  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8452201",
+        "entidad": "INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA GIRARDOT",
+        "proveedor": "Harold Mauricio Jaramillo Cuevas",
+        "modalidad": "Contratación régimen especial",
+        "valor": 37240440.0,
+        "fecha_firma": "2025-10-31",
+        "objeto": "ADQUISICION POR SUMINISTRO DE BIENES DE CONSUMO DE USO FINAL (PRODUCTOS DE PAPELERIA; FERRETERIA Y ASEO); PARA GARANTIZAR LA BUENA MARCHA DE LAS ACTIVIDADES ACADÉMICAS Y ADMINISTRATIVAS DE LA INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA DE GIRADOT CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9324494",
+        "entidad": "INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA GIRARDOT",
+        "proveedor": "Harold Mauricio Jaramillo Cuevas",
+        "modalidad": "Contratación régimen especial",
+        "valor": 35005000.0,
+        "fecha_firma": "2026-02-12",
+        "objeto": "ADQUISICIÓN POR COMPRA DE BIENES DE MOBILIARIO PARA GARANTIZAR LA BUENA MARCHA DE LAS ACTIVIDADES ACADÉMICAS DE LA INSTITUCIÓN EDUCATIVA ESCUELA NORMAL SUPERIOR MARÍA AUXILIADORA DE GIRARDOT  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9348946",
+        "entidad": "INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA GIRARDOT",
+        "proveedor": "SYSTEM X SECURITY",
+        "modalidad": "Contratación régimen especial",
+        "valor": 32800000.0,
+        "fecha_firma": "2026-02-23",
+        "objeto": "ADQUISICIÓN POR COMPRA DE BIENES DE CONSUMO DE USO DURADERO (EQUIPO TECNOLÓGICO) PARA GARANTIZAR LA BUENA MARCHA DE LAS ACTIVIDADES ACADÉMICAS Y ADMINISTRATIVAS DE LA INSTITUCIÓN EDUCATIVA ESCUELA NORMAL SUPERIOR MARÍA AUXILIADORA DE GIRARDOT  CUNDINAMARCA."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA GIRARDOT",
+        "contratos": 33,
+        "valor": 580489852.1
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 1,
+    "valor_obras": 28500332.1,
+    "obras_vencidas_abiertas": 1,
+    "valor_obras_vencidas_abiertas": 28500332.1,
+    "pct_obras_vencidas_abiertas": 100.0,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8705583",
+        "entidad": "INSTITUCION EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA GIRARDOT",
+        "proveedor": "DYG CONSTRUCCIONES DEL TOLIMA S.A.S",
+        "estado": "Modificado",
+        "valor": 28500332.1,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-24",
+        "objeto": "CONSTRUCCIÓN Y MEJORAMIENTO BATERÍAS DE BAÑOS PARA PREESCOLAR \nDE LA INSTITUCIÓN EDUCATIVA ESCUELA NORMAL SUPERIOR MARIA AUXILIADORA DE GIRARDOT \nCUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Granada",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 60.0,
+  "nivel": "medio",
+  "posicion": 20.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,205 @@
+{
+  "resumen": {
+    "contratos": 1862,
+    "valor_total": 44481943442.46,
+    "entidades": 2,
+    "proveedores": 728
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 93.8776,
+    "pct_directa_valor": 75.8861,
+    "hhi": 133.78024841048745,
+    "top1_proveedor_pct": 9.774184934890142,
+    "top5_proveedores_pct": 17.13810698736532,
+    "pareto_proveedores_80pct_valor": 316,
+    "pct_con_adicion": 14.60794844253491,
+    "top_proveedores": [
+      {
+        "proveedor": "RACO",
+        "documento": "900790856",
+        "valor": 4223348697.34,
+        "contratos": 21,
+        "participacion_pct": 9.7742
+      },
+      {
+        "proveedor": "SERVICIOS MORELI SAS",
+        "documento": "900927498",
+        "valor": 1740449054.0,
+        "contratos": 7,
+        "participacion_pct": 4.028
+      },
+      {
+        "proveedor": "DICB COLOMBIA SAS",
+        "documento": "830060802",
+        "valor": 566501060.22,
+        "contratos": 4,
+        "participacion_pct": 1.3111
+      },
+      {
+        "proveedor": "E.S.E HOSPITAL SAN FRANCISCO  DE GACHETA",
+        "documento": "899999163",
+        "valor": 441002442.0,
+        "contratos": 2,
+        "participacion_pct": 1.0206
+      },
+      {
+        "proveedor": "MARIA DOLORES BOHORQUEZ RUIZ",
+        "documento": "26559140",
+        "valor": 433940442.0,
+        "contratos": 4,
+        "participacion_pct": 1.0043
+      },
+      {
+        "proveedor": "DISTRIBUIDORA Y SERVICIOS ESTACION SAS",
+        "documento": "901767015",
+        "valor": 343000000.0,
+        "contratos": 2,
+        "participacion_pct": 0.7938
+      },
+      {
+        "proveedor": "Brayan stiven gutierrez garzon",
+        "documento": "1032503056",
+        "valor": 332140719.0,
+        "contratos": 10,
+        "participacion_pct": 0.7687
+      },
+      {
+        "proveedor": "WILLIAM MIKE URIBE SOLANO",
+        "documento": "13483001",
+        "valor": 322919866.33,
+        "contratos": 7,
+        "participacion_pct": 0.7473
+      },
+      {
+        "proveedor": "COMPAÑÍA DE DESARROLLO TERRITORIAL",
+        "documento": "830105897",
+        "valor": 300000000.0,
+        "contratos": 1,
+        "participacion_pct": 0.6943
+      },
+      {
+        "proveedor": "ASOCIACION DE SERVICIOS INTEGRALES - ASOSEINT",
+        "documento": "901022417",
+        "valor": 299963000.0,
+        "contratos": 1,
+        "participacion_pct": 0.6942
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9781560",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "CONSORCIO LEYENDA DORADA",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1272727272.79,
+        "fecha_firma": "2026-08-12",
+        "objeto": "CONTRATAR BAJO LA MODALIDAD DE PRECIOS UNITARIOS Y MONTO AGOTABLE EL MEJORAMIENTO DEL ESPACIO PUBLICO Y EMBELLECIMIENTO DE FACHADAS DEL MUNICIPIO DE GACHALÁ; CONFORME AL PROYECTO DEPARTAMENTAL PUEBLOS DORADOS"
+      },
+      {
+        "id": "CO1.PCCNTR.10023637",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "RACO",
+        "modalidad": "Contratación directa",
+        "valor": 698394952.69,
+        "fecha_firma": "2026-10-01",
+        "objeto": "CONTRATAR LA PRESTACIÓN DE SERVICIOS ARTÍSTICOS PARA EL DESARROLLO DE LAS ACTIVIDADES CULTURALES PROGRAMADAS EN EL MARCO DEL XXV FESTIVAL NACIONAL NÁUTICO Y ECOTURÍSTICO DEL GUAVIO; LA XXXII FERIA COMERCIAL Y EXPOSICION GANADERA Y EL XVII FESTIVAL EQUINO DEL MUNICIPIO DE GACHALÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8734595",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "SERVICIOS MORELI SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 510000000.0,
+        "fecha_firma": "2025-12-30",
+        "objeto": "CONSTRUCCION MANTENIMIENTO Y ADECUACION DE PUENTES PEATONALES VEREDALES EN EL MUNICIPIO DE GACHALÁ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9934687",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "RACO",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 490000000.0,
+        "fecha_firma": "2026-09-15",
+        "objeto": "PRESTACION DE SERVICIOS LOGISTICOS PARA LA ORGANIZACIÓN Y EJECUCION DE EVENTOS Y ACTIVIDADES PROMOVIDAS POR LA ADMINISTRACION MUNICIPAL DE GACHALÁ CUNDINAMARCA; BAJO LA MODALIDAD DE COTIZACION INDIVIDUAL Y MONTO AGOTABLE"
+      },
+      {
+        "id": "CO1.PCCNTR.9464753",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "RACO",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 408000000.0,
+        "fecha_firma": "2026-04-22",
+        "objeto": "PRESTACIÓN DE SERVICIOS PARA LA ORGANIZACIÓN Y CELEBRACIÓN DEL DÍA DE LA MADRE GACHALUNA E INTEGRACIÓN CAMPESINA 2026 COMO ACTIVIDAD CULTURAL TRADICIONAL DEL MUNICIPIO DE GACHALÁ CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "contratos": 327,
+        "valor": 16699970206.49
+      },
+      {
+        "entidad": "CORPORACION AUTONOMA REGIONAL DEL GUAVIO - CORPOGUAVIO (OFICIAL)",
+        "contratos": 1535,
+        "valor": 27781973235.97
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 17,
+    "valor_obras": 3758548048.61,
+    "obras_vencidas_abiertas": 4,
+    "valor_obras_vencidas_abiertas": 507216143.82,
+    "pct_obras_vencidas_abiertas": 23.52941176470588,
+    "pct_pagado_obras_vencidas_abiertas": 29.5839,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9413817",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "RACO",
+        "estado": "En ejecución",
+        "valor": 302432989.82,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-21",
+        "objeto": "MEJORAMIENTO DEL HOGAR GERIÁTRICO AÑOS DORADOS DEL MUNICIPIO DE GACHALÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8662627",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "QUANTIX GROUP SAS",
+        "estado": "En ejecución",
+        "valor": 120000000.0,
+        "pagado": 120000000.0,
+        "fecha_fin": "2025-12-15",
+        "objeto": "CONSTRUCCION E INSTALACION DE ALUMBRADO NAVIDEÑO EN EL MUNICIPIO DE GACHALÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8707364",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "CASCAVITA EQUIPOS Y CONSTRUCCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 59783154.0,
+        "pagado": 30054505.53,
+        "fecha_fin": "2026-06-30",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA DE LA CASA DE GOBIERNO EN EL MUNICIPIO DE GACHALÁ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8682400",
+        "entidad": "Alcaldía Municipal de Gachalá",
+        "proveedor": "CASCAVITA EQUIPOS Y CONSTRUCCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 25000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "PROTECCIÓN; CONSTRUCCIÓN; ADECUACIÓN Y MANTENIMIENTO DE LAS OBRAS DE CAPTACIÓN PARA GARANTIZAR LA CONTINUIDAD EN EL FUNCIONAMIENTO DE LOS ACUEDUCTOS VEREDALES DEL MUNICIPIO DE GACHALÁ CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Gachala",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 41.6,
+  "nivel": "medio",
+  "posicion": 54.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,320 @@
+{
+  "resumen": {
+    "contratos": 820,
+    "valor_total": 34220761926.17,
+    "entidades": 3,
+    "proveedores": 349
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 73.5366,
+    "pct_directa_valor": 25.9383,
+    "hhi": 189.7788127395479,
+    "top1_proveedor_pct": 8.17800556847503,
+    "top5_proveedores_pct": 23.708436753455192,
+    "pareto_proveedores_80pct_valor": 116,
+    "pct_con_adicion": 17.073170731707318,
+    "top_proveedores": [
+      {
+        "proveedor": "QBIKA INGENIERIA S.A.S.",
+        "documento": "860037746",
+        "valor": 1852387585.0,
+        "contratos": 1,
+        "participacion_pct": 8.178
+      },
+      {
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "documento": "901915541",
+        "valor": 1175122383.0,
+        "contratos": 10,
+        "participacion_pct": 5.188
+      },
+      {
+        "proveedor": "FUNDACION SAVIEZA",
+        "documento": "900113666",
+        "valor": 1112076157.56,
+        "contratos": 5,
+        "participacion_pct": 4.9096
+      },
+      {
+        "proveedor": "ECG INGENIERIA SAS",
+        "documento": "901289190",
+        "valor": 624996055.0,
+        "contratos": 1,
+        "participacion_pct": 2.7593
+      },
+      {
+        "proveedor": "SEGUROS DEL ESTADO S.A.",
+        "documento": "860009578",
+        "valor": 605579717.0,
+        "contratos": 5,
+        "participacion_pct": 2.6735
+      },
+      {
+        "proveedor": "FIIASOLE",
+        "documento": "901693110",
+        "valor": 535414634.0,
+        "contratos": 5,
+        "participacion_pct": 2.3638
+      },
+      {
+        "proveedor": "FUNDACION DEDICADA A LA RESPONSABILIDAD SOCIAL FUND@R",
+        "documento": "900562400",
+        "valor": 530050103.0,
+        "contratos": 2,
+        "participacion_pct": 2.3401
+      },
+      {
+        "proveedor": "Más Cultural Corporación",
+        "documento": "900837320",
+        "valor": 512209083.0,
+        "contratos": 2,
+        "participacion_pct": 2.2613
+      },
+      {
+        "proveedor": "E.S.E. HOSPITAL EL SALVADOR DE UBATE",
+        "documento": "899999147",
+        "valor": 507379081.0,
+        "contratos": 8,
+        "participacion_pct": 2.24
+      },
+      {
+        "proveedor": "SERVIMEZCLAS CENTER S.A.S.",
+        "documento": "900225782",
+        "valor": 416421620.5,
+        "contratos": 5,
+        "participacion_pct": 1.8384
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9497560",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSORCIO EJES VIALES",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 6522148094.0,
+        "fecha_firma": "2026-05-06",
+        "objeto": "MEJORAMIENTO Y REHABILITACIÓN DE LAS VÍAS DEPARTAMENTALES DE ACCESO (ENTRADA EL RETÉN Y SANTA LUCIA) DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO CONVENIO ICCU - CTO-1427-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9492688",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSORCIO SIMIJACA BT 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2840622763.0,
+        "fecha_firma": "2026-05-05",
+        "objeto": "CONSTRUCCIÓN DE LAS OBRAS DE OPTIMIZACIÓN Y SEPARACIÓN DE LAS REDES DE ALCANTARILLADO SANITARIO Y PLUVIAL A LO LARGO DE LA VÍA EL RETÉN; MUNICIPIO DE SIMIJACA BAJO LOS LINEAMIENTOS DEL CONVENIO INTERADMINISTRATIVO EPC-CI-076-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9506083",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSORCIO VIAS URBANAS G&P",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1958218854.0,
+        "fecha_firma": "2026-05-13",
+        "objeto": "MEJORAMIENTO Y REHABILITACIÓN DE LAS VÍAS URBANAS SALIDA SANTA LUCIA CARRERA 8; ENTRE LA CALLE 10 HASTA LA CALLE 16 Y LA VÍA URBANA SALIDA RETEN CALLE 9; ENTRE LA CARRERA 10 HASTA TERMINAR EL PREDIO LA ESTACIÓN DE SERVICIO PRIMAX MIRAFLORES DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7178081",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "QBIKA INGENIERIA S.A.S.",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1852387585.0,
+        "fecha_firma": "2024-12-30",
+        "objeto": "ADECUACION Y MANTENIMIENTO DE LA PLAZA DE MERCADO DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9506016",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "ECG INGENIERIA SAS",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 624996055.0,
+        "fecha_firma": "2026-05-13",
+        "objeto": "INTERVENTORIA TECNICA; ADMINISTRATIVA; FINANCIERA; JURIDICA; SOCIAL; SST Y AMBIENTAL PARA EL MEJORAMIENTO Y REHABILITACION DE LAS VIAS DEPARTAMENTALES DE ACCESO (ENTRADA RETEN Y SANTA LUCIA) DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO CONVENIO ICCU-CTO-1427-2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL SIMIJACA - CUNDINAMARCA",
+        "contratos": 10,
+        "valor": 70073100.0
+      },
+      {
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "contratos": 787,
+        "valor": 34069402077.17
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE SIMIJACA",
+        "contratos": 17,
+        "valor": 81286749.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 20,
+    "valor_obras": 15344443706.45,
+    "obras_vencidas_abiertas": 15,
+    "valor_obras_vencidas_abiertas": 3743242519.45,
+    "pct_obras_vencidas_abiertas": 75.0,
+    "pct_pagado_obras_vencidas_abiertas": 81.5577,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7178081",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "QBIKA INGENIERIA S.A.S.",
+        "estado": "Modificado",
+        "valor": 1852387585.0,
+        "pagado": 1852385842.06,
+        "fecha_fin": "2025-06-09",
+        "objeto": "ADECUACION Y MANTENIMIENTO DE LA PLAZA DE MERCADO DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7996326",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "VARUOCCO GROUP S.A.S",
+        "estado": "Modificado",
+        "valor": 279702897.62,
+        "pagado": 279702880.5,
+        "fecha_fin": "2025-11-09",
+        "objeto": "CONSTRUCCIÓN DE SISTEMAS DE ALMACENAMIENTO DE AGUA PARA LA DISPONIBILIDAD DEL RECURSO HÍDRICO EN EL MUNICIPIO DE SIMIJACA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8117800",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSORCIO PLANTA SIMIJACA 2025.",
+        "estado": "Modificado",
+        "valor": 200584294.79,
+        "pagado": 200577571.59,
+        "fecha_fin": "2025-11-25",
+        "objeto": "MEJORAMIENTO Y AMPLIACION DEL SISTEMA DE TRATAMIENTO DE AGUA POTABLE PARA LA OPTIMIZACION DE LA CALIDAD DE AGUA EN LA PRESTACION DEL SERVICIO DE ACUEDUCTO DEL AREA URBANA DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8817780",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "estado": "Modificado",
+        "valor": 195827264.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-16",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA TAQUIRA EN EL SECTOR BALAGUER EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO CONVENIO ICCU -1097-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8178671",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "DELTRI INGEOBRAS S.A.S",
+        "estado": "Modificado",
+        "valor": 195346825.04,
+        "pagado": 195326888.01,
+        "fecha_fin": "2025-12-05",
+        "objeto": "CONSTRUCCIÓN DEL PARQUE DEPORTIVO Y RECRETATIVO LAS MARAVILLAS EN EL MARCO DE LA ESTRATEGIA DE FORTALECIMIENTO DE LA RED DE ESPACIOS PÚBLICOS DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.6907901",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "DELTRI INGEOBRAS S.A.S",
+        "estado": "Modificado",
+        "valor": 184429071.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-23",
+        "objeto": "MEJORAMIENTOS DE VIVIENDA CON MODULOS INDEPENDIENTES DE HABITACION EN EL MUNICIPIO DE SIMIJACA BAJO LOS LINEAMIENTOS DEL CONVENIO SHVS-CDCVI-106-2022."
+      },
+      {
+        "id": "CO1.PCCNTR.9019208",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "estado": "En ejecución",
+        "valor": 109998523.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-16",
+        "objeto": "MEJORAMIENTODE LA VIA RURAL QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA HATOCHICO SECTOR PLANTA DE ASFALTO DEL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO CONVENIO ICCU-1558-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9017882",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "estado": "En ejecución",
+        "valor": 99998586.0,
+        "pagado": 99979646.0,
+        "fecha_fin": "2026-04-16",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA SANTA LUCIA SECTOR PARTE ALTA EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO CONVENIO ICCU -1378-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8817946",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "estado": "En ejecución",
+        "valor": 99998586.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-16",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA SALITRE EN EL SECTOR SAN FRANCISCO EN EL MUNICIPIO DE SIMIJACA\nCUNDINAMARCA BAJO CONVENIO ICCU -1536-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8508461",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "estado": "Modificado",
+        "valor": 99998586.0,
+        "pagado": 99995664.0,
+        "fecha_fin": "2026-02-03",
+        "objeto": "MEJORAMIENTO EN LA VIA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA FICAL SECTOR LAS ACACIAS EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO EL CONVENIO ICCU NO. 476 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8818312",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "estado": "Modificado",
+        "valor": 99998586.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-31",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA SALITRE EN EL SECTOR SAN JOSE EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO CONVENIO ICCU -1013-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8490165",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "CONSTRUCCION Y DESARROLLO DE OBRAS CIVILES S.A.S",
+        "estado": "Modificado",
+        "valor": 99998586.0,
+        "pagado": 99993735.0,
+        "fecha_fin": "2026-02-01",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA PEÑA BLANCA SECTOR CABALLO MUERTO EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO EL CONVENIO ICCU NO. 357 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7840649",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "RT INGENIERÍA Y CONSTRUCCIONES S.A.S.",
+        "estado": "Modificado",
+        "valor": 99972138.0,
+        "pagado": 99945646.0,
+        "fecha_fin": "2025-07-25",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA HATOCHICO SECTOR LA MARÍA EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO EL CONVENIO ICCU No. 800 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8637101",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "OBRECOL SAS",
+        "estado": "Modificado",
+        "valor": 99277596.0,
+        "pagado": 99277596.0,
+        "fecha_fin": "2026-02-18",
+        "objeto": "MEJORAMIENTO EN LA VIA QUE CONDUCE DE LA VEREDA CENTRO A LA VEREDA SALITRE SECTOR CARGUATA EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA BAJO EL CONVENIO ICCU NO. 427 DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.7083494",
+        "entidad": "MUNICIPIO DE SIMIJACA1",
+        "proveedor": "M&T INGENIERIA Y SOLUCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 25723395.0,
+        "pagado": 25717427.0,
+        "fecha_fin": "2025-01-10",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA PÚBLICA AL SERVICIO DEL SECTOR CULTURAL EN EL MUNICIPIO DE SIMIJACA CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Simijaca",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 42.7,
+  "nivel": "medio",
+  "posicion": 52.0,
+  "total_rankeados": 71
+}

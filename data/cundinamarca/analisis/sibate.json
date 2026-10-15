@@ -1,0 +1,375 @@
+{
+  "resumen": {
+    "contratos": 1968,
+    "valor_total": 142406624131.66,
+    "entidades": 4,
+    "proveedores": 910
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 83.1809,
+    "pct_directa_valor": 38.6044,
+    "hhi": 220.6286748121116,
+    "top1_proveedor_pct": 6.126692087251677,
+    "top5_proveedores_pct": 25.337128905500517,
+    "pareto_proveedores_80pct_valor": 130,
+    "pct_con_adicion": 37.34756097560975,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 8300000000.0,
+        "contratos": 1,
+        "participacion_pct": 6.1267
+      },
+      {
+        "proveedor": "EMPRESA DE VIGILANCIA Y SEGURIDAD PRIVADA SERVIGPODER LTDA",
+        "documento": "900369097",
+        "valor": 7197273283.47,
+        "contratos": 6,
+        "participacion_pct": 5.3127
+      },
+      {
+        "proveedor": "Consorcio Pablo Neruda S&A.",
+        "documento": "902074846",
+        "valor": 6584295859.68,
+        "contratos": 1,
+        "participacion_pct": 4.8602
+      },
+      {
+        "proveedor": "BANCO DE BOGOTA S.A",
+        "documento": "8600029644",
+        "valor": 6158721184.0,
+        "contratos": 2,
+        "participacion_pct": 4.5461
+      },
+      {
+        "proveedor": "ESTRUCTURAS METALICAS Y MODULARES POR COLOMBIA",
+        "documento": "901999205",
+        "valor": 6084622190.2,
+        "contratos": 1,
+        "participacion_pct": 4.4914
+      },
+      {
+        "proveedor": "ING ADRIANA VELASQUEZ",
+        "documento": "52215746",
+        "valor": 5356302923.44,
+        "contratos": 2,
+        "participacion_pct": 3.9538
+      },
+      {
+        "proveedor": "EMPRESAS PUBLICAS MUNICIPALES DE SIBATE S.C.A. E.S.P.",
+        "documento": "900171710",
+        "valor": 5249758901.0,
+        "contratos": 8,
+        "participacion_pct": 3.8751
+      },
+      {
+        "proveedor": "SOSDOM S.A.S",
+        "documento": "829001805",
+        "valor": 4320826364.59,
+        "contratos": 1,
+        "participacion_pct": 3.1894
+      },
+      {
+        "proveedor": "CONSORCIO CE OBRAS ESJIM",
+        "documento": "901959013",
+        "valor": 3661265206.84,
+        "contratos": 1,
+        "participacion_pct": 2.7026
+      },
+      {
+        "proveedor": "CONSORCIO MATIU",
+        "documento": "902019453",
+        "valor": 3516797907.0,
+        "contratos": 1,
+        "participacion_pct": 2.5959
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8180657",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 8300000000.0,
+        "fecha_firma": "2025-08-11",
+        "objeto": "Contrato de empréstito de deuda pública interna y pignoración de rentas entre el municipio de Sibaté y Bancolombia."
+      },
+      {
+        "id": "CO1.PCCNTR.9553420",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "Consorcio Pablo Neruda S&A.",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 6584295859.68,
+        "fecha_firma": "2026-06-10",
+        "objeto": "CONSTRUCCIÓN DEL CENTRO PARA EL DESARROLLO SOCIAL; CULTURAL Y COMUNITARIO DE PABLO NERUDA; GARCIA Y CHACUA EN EL MUNICIPIO DE SIBATÉ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8452233",
+        "entidad": "ESCUELA DE SUBOFICIALES Y NIVEL EJECUTIVO  GONZALO JIMENEZ DE QUESADA",
+        "proveedor": "ESTRUCTURAS METALICAS Y MODULARES POR COLOMBIA",
+        "modalidad": "Licitación pública",
+        "valor": 6084622190.2,
+        "fecha_firma": "2025-10-20",
+        "objeto": "ADQUISICIÓN E INSTALACIÓN DE SISTEMAS CONSTRUCTIVOS MODULARES PARA VESTIER; AULAS; GARITA Y BATERÍAS SANITARIAS; COMPLEMENTARIOS PARA EL FUNCIONAMIENTO DE ACTIVIDADES ACADÉMICAS; PARA LA ESCUELA DE SUBOFICIALES Y NIVEL EJECUTIVO GONZALO JIMÉNEZ DE QUESADA."
+      },
+      {
+        "id": "CO1.PCCNTR.7964684",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "ING ADRIANA VELASQUEZ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4885458629.44,
+        "fecha_firma": "2025-06-12",
+        "objeto": "CONSTRUCCIÓN PLAZA DE MERCADO DEL MUNICIPIO DE SIBATÉ CUNDINAMARCA; EN EL MARCO DEL CONVENIO ICCU-861-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8400199",
+        "entidad": "ESCUELA DE SUBOFICIALES Y NIVEL EJECUTIVO  GONZALO JIMENEZ DE QUESADA",
+        "proveedor": "SOSDOM S.A.S",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 4320826364.59,
+        "fecha_firma": "2025-10-03",
+        "objeto": "CONSTRUCCIÓN DE LA PRIMERA FASE DE LA PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES (PTAR) PARA LA ESCUELA DE SUBOFICIALES Y NIVEL EJECUTIVO - GONZALO JIMENEZ DE QUESADA (ESJIM) A PRECIOS UNITARIOS FIJOS SIN FORMULA DE REAJUSTE."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE SIBATE CUNDINAMARCA",
+        "contratos": 53,
+        "valor": 941864076.86
+      },
+      {
+        "entidad": "ESCUELA DE SUBOFICIALES Y NIVEL EJECUTIVO  GONZALO JIMENEZ DE QUESADA",
+        "contratos": 121,
+        "valor": 28360171552.33
+      },
+      {
+        "entidad": "IMDERS SIBATÉ",
+        "contratos": 290,
+        "valor": 5865803076.48
+      },
+      {
+        "entidad": "MUNICIPIO DE SIBATE",
+        "contratos": 1494,
+        "valor": 107238785425.99
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 36,
+    "valor_obras": 39506392564.73,
+    "obras_vencidas_abiertas": 22,
+    "valor_obras_vencidas_abiertas": 8066921505.18,
+    "pct_obras_vencidas_abiertas": 61.111111111111114,
+    "pct_pagado_obras_vencidas_abiertas": 35.655,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8007540",
+        "entidad": "ESCUELA DE SUBOFICIALES Y NIVEL EJECUTIVO  GONZALO JIMENEZ DE QUESADA",
+        "proveedor": "CONSORCIO CE OBRAS ESJIM",
+        "estado": "Modificado",
+        "valor": 3661265206.84,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LAS INSTALACIONES DE LA ESCUELA GONZALO JIMÉNEZ DE QUESADA; CON EJECUCIÓN POR TRACTO SUCESIVO; A PRECIOS UNITARIOS FIJOS SIN FÓRMULA DE REAJUSTE"
+      },
+      {
+        "id": "CO1.PCCNTR.8730257",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "MAVING SAS",
+        "estado": "Modificado",
+        "valor": 603801192.64,
+        "pagado": 317583825.0,
+        "fecha_fin": "2026-09-07",
+        "objeto": "REHABILITACION DE LA MALLA VIAL RURAL DEL MUNICIPIO DE SIBATE - CUNDINAMARCA - VEREDA SAN MIGUEL; PEÑON."
+      },
+      {
+        "id": "CO1.PCCNTR.7821390",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "CONSORCIO BBCOLS SIBATE 2025",
+        "estado": "Modificado",
+        "valor": 546519672.07,
+        "pagado": 384103423.27,
+        "fecha_fin": "2026-03-19",
+        "objeto": "ADECUACIONES PARA LA MITIGACIÓN DEL RIESGO GENERADOS POR LOS FENÓMENOS NATURALES; PRIORIZADOS POR EL CONSEJO MUNICIPAL DE GESTIÓN DE RIESGO"
+      },
+      {
+        "id": "CO1.PCCNTR.6517895",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "SONA INGENIEROS SAS",
+        "estado": "Modificado",
+        "valor": 510968475.0,
+        "pagado": 510962894.0,
+        "fecha_fin": "2024-12-04",
+        "objeto": "REPARCHEO Y BACHEO DE CORREDORES VIALES EN EL MUNICIPIO DE SIBATÉ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8037073",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "SONA INGENIEROS SAS",
+        "estado": "Modificado",
+        "valor": 487517929.41,
+        "pagado": 383457295.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "REPARCHEO Y BACHEO DE CORREDORES VIALES EN EL MUNICIPIO DE SIBATÉ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7069096",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "ING ADRIANA VELASQUEZ",
+        "estado": "Modificado",
+        "valor": 470844294.0,
+        "pagado": 470844294.0,
+        "fecha_fin": "2025-04-30",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DE LA INFRAESTRUCTURA EDUCATIVA DEL MUNICIPIO DE SIBATE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8674702",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "CONSORCIO EQUIPAMENTOS CCO",
+        "estado": "Modificado",
+        "valor": 404987121.54,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-31",
+        "objeto": "REHABILITACIÓN Y ADECUACIÓN DE LOS EQUIPAMIENTOS MUNICIPALES."
+      },
+      {
+        "id": "CO1.PCCNTR.6981446",
+        "entidad": "IMDERS SIBATÉ",
+        "proveedor": "GAYRA CONSTRUCCIONES S.A.S.",
+        "estado": "Modificado",
+        "valor": 363607880.0,
+        "pagado": 110248306.0,
+        "fecha_fin": "2025-02-10",
+        "objeto": "MANTENIMIENTO Y ADECUACION DE LOS ESCENARIOS ADMINISTRADOS POR EL INSTITUTO MUNICIPAL \nDEL DEPORTE Y LA RECREACION DE SIBATE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7920080",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "DISTRIBUIDORA FERRETERA DE COLOMBIA DISFERCO A&A SAS",
+        "estado": "Modificado",
+        "valor": 294842317.0,
+        "pagado": 173498458.0,
+        "fecha_fin": "2026-02-28",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CHACUA A LA VEREDA SAN EUGENIO; EN EL SECTOR PRIMAVERA DEL MUNICIPIO DE SIBATÉ CUNDINAMARCA; EN EL MARCO DEL CONVENIO ICCU 607-2024 Y MEJORAMIENTO EN LA VÍA QUE CONDUCE DE LA VEREDA DELICIAS AL SECTOR LA CAJITA DEL MUNICIPIO DE SIBATÉ CUNDINAMARCA; EN EL MARCO DEL CONVENIO ICCU-803-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7931947",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "Proyectos de Ingeniería Cumbre S.A.S.",
+        "estado": "Modificado",
+        "valor": 104135017.4,
+        "pagado": 101636513.6,
+        "fecha_fin": "2025-11-08",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA\nROMERAL A LA VEREDA BRADAMONTE; EN EL SECTOR EL CHUSCAL DEL MUNICIPIO DE\nSIBATÉ CUNDINAMARCA; EN EL MARCO DEL CONVENIO ICCU-668-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9450387",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "Proyectos de Ingeniería Cumbre S.A.S.",
+        "estado": "En ejecución",
+        "valor": 100686110.7,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-31",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE A LA VEREDA SAN BENITO CENTRO POBLADO AL SECTOR EL HOYITO DEL MUNICIPIO DE SIBATÉ; CUNDINAMARCA EN EL MARCO DEL CONVENIO ICCU-1478-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.9457564",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "INGEPROAR S.A.S.",
+        "estado": "En ejecución",
+        "valor": 93781655.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-11",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA PERICO A LA VEREDA AL RAMAL DEL CARDONAL BAJO; SECTOR LOS COPETONES DEL MUNICIPIO DE SIBATÉ CUNDINAMARCA; EN EL MARCO DEL CONVENIO ICCU-1010-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.8319278",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "CONALAR INGENIERIA",
+        "estado": "Modificado",
+        "valor": 87936781.78,
+        "pagado": 87936781.78,
+        "fecha_fin": "2025-12-30",
+        "objeto": "ADECUACIÓN Y MANTENIMIENTO DEL ACCESO PEATONAL DE LA VEREDA LA UNIÓN SECTOR SAN JOSÉ Y PIE DE ALTO DEL MUNICIPIO DE SIBATE CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8304475",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "AVANCEMOS INGENIERIA CUNDINAMARCA SAS",
+        "estado": "Modificado",
+        "valor": 49324270.0,
+        "pagado": 49324270.0,
+        "fecha_fin": "2025-12-14",
+        "objeto": "CONSTRUCCION ADECUACIÓN Y MANTENIMIENTO DE REDUCTORES DE VELOCIDAD EN DIFERENTES SECTORES DEL MUNICIPIO DE SIBATÉ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8496931",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "GRUPO CASTRILLON HERMANOS SAS",
+        "estado": "Modificado",
+        "valor": 47691358.8,
+        "pagado": 47691358.8,
+        "fecha_fin": "2025-12-05",
+        "objeto": "ADECUACIÓN Y MANTENIMIENTO DEL COLISEO DE FERIAS; PARA EL DESARROLLO DE ACTIVIDADES AGROPECUARIAS."
+      },
+      {
+        "id": "CO1.PCCNTR.8421872",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "CONSTRUCCIONES Y MULTISERVICIOS SANCHEZ HERRERA SAS",
+        "estado": "Modificado",
+        "valor": 39613415.0,
+        "pagado": 39571305.84,
+        "fecha_fin": "2025-12-28",
+        "objeto": "MANTENIMIENTO Y LIMPIEZA DE OBRAS DE ARTE EN LAS VÍAS TERCIARIAS DEL MUNICIPIO DE SIBATÉ CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7143452",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "INGEPLUS PROYECTOS E INGENIERIA SAS",
+        "estado": "En ejecución",
+        "valor": 36370712.0,
+        "pagado": 36370712.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MANTENIMIENTO Y LIMPIEZA DE VIAS TERCIARIAS MEDIANTE ROCERIA VIAL EN EL MUNICIPIO DE SIBATE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7148874",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "INGEPLUS PROYECTOS E INGENIERIA SAS",
+        "estado": "En ejecución",
+        "valor": 36074350.0,
+        "pagado": 36074350.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "MANTENIMIENTO Y LIMPIEZA DE OBRAS DE ARTE EN LAS VIAS TERCIARIAS DEL MUNICIPIO DE SIBATE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7973660",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "CONSORCIO MANTENIMIENTOS 25",
+        "estado": "Modificado",
+        "valor": 35164402.0,
+        "pagado": 35164402.0,
+        "fecha_fin": "2025-07-19",
+        "objeto": "ADECUACIÓN E INSTALACIÓN DE LA CUBIERTA DEL\nESCENARIO DEPORTIVO DEL BARRIO SAN MARTÍN DEL\nMUNICIPIO DE SIBATÉ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8480267",
+        "entidad": "MUNICIPIO DE SIBATE",
+        "proveedor": "INGENIERIA VIAL & PROYECTOS S.A.S",
+        "estado": "Modificado",
+        "valor": 34096124.0,
+        "pagado": 34096124.0,
+        "fecha_fin": "2025-12-29",
+        "objeto": "MANTENIMIENTO DE LA SEÑALIZACIÓN VIAL PARA EL MEJORAR LAS CONDICIONES DE SEGURIDAD VIA Y MOVILIDAD EN EL MUNICIPIO DE SIBATÉ CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Sibaté",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 59.5,
+  "nivel": "medio",
+  "posicion": 21.0,
+  "total_rankeados": 71
+}

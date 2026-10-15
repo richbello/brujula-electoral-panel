@@ -1,0 +1,160 @@
+{
+  "resumen": {
+    "contratos": 17,
+    "valor_total": 3274036623.16,
+    "entidades": 1,
+    "proveedores": 12
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 52.9412,
+    "pct_directa_valor": 5.0235,
+    "hhi": 4735.769349615746,
+    "top1_proveedor_pct": 64.65663563002086,
+    "top5_proveedores_pct": 96.16302199824656,
+    "pareto_proveedores_80pct_valor": 2,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "documento": "900516720",
+        "valor": 2116881929.83,
+        "contratos": 5,
+        "participacion_pct": 64.6566
+      },
+      {
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "documento": "830105879",
+        "valor": 719299218.0,
+        "contratos": 1,
+        "participacion_pct": 21.9698
+      },
+      {
+        "proveedor": "FUNDACION SAVIEZA",
+        "documento": "900113666",
+        "valor": 273385620.33,
+        "contratos": 2,
+        "participacion_pct": 8.3501
+      },
+      {
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA DE APOSENTOS",
+        "documento": "9006405556",
+        "valor": 19422895.0,
+        "contratos": 1,
+        "participacion_pct": 0.5932
+      },
+      {
+        "proveedor": "Junta de Accion Comunal de la Vereda de Coquira",
+        "documento": "900640802",
+        "valor": 19422895.0,
+        "contratos": 1,
+        "participacion_pct": 0.5932
+      },
+      {
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA NUTRIAS",
+        "documento": "9007834275",
+        "valor": 19422895.0,
+        "contratos": 1,
+        "participacion_pct": 0.5932
+      },
+      {
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA LA FRAGUA",
+        "documento": "900793520",
+        "valor": 19422895.0,
+        "contratos": 1,
+        "participacion_pct": 0.5932
+      },
+      {
+        "proveedor": "JUNTA VEREDA PAUNITA SECTOR SAN ANTONIO",
+        "documento": "901006764",
+        "valor": 19422895.0,
+        "contratos": 1,
+        "participacion_pct": 0.5932
+      },
+      {
+        "proveedor": "JUNTA DE ACCION COMUNAL PUNTA DE CRUZ",
+        "documento": "9010171667",
+        "valor": 19422895.0,
+        "contratos": 1,
+        "participacion_pct": 0.5932
+      },
+      {
+        "proveedor": "JAC LLANO GRANDE",
+        "documento": "901021091",
+        "valor": 19422895.0,
+        "contratos": 1,
+        "participacion_pct": 0.5932
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9567262",
+        "entidad": "ALCALDIA DE SUSA",
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 967685347.0,
+        "fecha_firma": "2026-06-16",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y HUMANOS CON ENTIDAD SIN ANIMO DE LUCRO DE RECONOCIDA IDONEIDAD PARA LLEVAR A CABO LA PRESTACION DE SERVICIOS LOGISTICOS; ARTISTICOS; CULTURALES; DEPORTIVOS; RECREATIVOS; TURISTICOS Y AGROPECUARIOS EN EL MUNICIPIO DE SUSA; EN CUMPLIMIENTO DE LOS PROYECTOS Y METAS DEL PLAN DE DESARROLLO 2024 2027"
+      },
+      {
+        "id": "CO1.PCCNTR.7991898",
+        "entidad": "ALCALDIA DE SUSA",
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 872234935.0,
+        "fecha_firma": "2025-06-18",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS CON ENTIDAD SIN ÁNIMO DE LUCRO (ESAL) DE RECONOCIDA IDONEIDAD PARA LLEVAR A CABO LA PRESTACIÓN DE SERVICIOS LOGÍSTICOS; ARTÍSTICOS; CULTURALES; DEPORTIVOS; RECREATIVOS; TURISTICOS Y AGROPECUARIOS EN EL MUNICIPIO DE SUSA A MONTO AGOTABLE VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.6462715",
+        "entidad": "ALCALDIA DE SUSA",
+        "proveedor": "CORPORACION INTEGRAL DE SERVICIOS POR COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 719299218.0,
+        "fecha_firma": "2024-06-25",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS CON ENTIDAD SIN ÁNIMO DE LUCRO (ESAL) DE RECONOCIDA IDONEIDAD PARA LLEVAR A CABO LA PRESTACIÓN DE SERVICIOS LOGÍSTICOS; ARTÍSTICOS; CULTURALES; DEPORTIVOS; RECREATIVOS; TURISTICOS Y AGROPECUARIOS EN EL MUNICIPIO DE SUSA A MONTO AGOTABLE VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8707657",
+        "entidad": "ALCALDIA DE SUSA",
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 173383245.31,
+        "fecha_firma": "2025-12-15",
+        "objeto": "AUNAR ESFUERZOS CON ENTIDAD SIN ÁNIMO DE LUCRO DE RECONOCIDA IDONEIDAD ENCAMINADOS A LOGRAR EL CUMPLIMIENTO DE LAS METAS DEL PLAN DE DESARROLLO RENACER NAVIDEÑO EN EL MUNICIPIO DE SUSA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7170420",
+        "entidad": "ALCALDIA DE SUSA",
+        "proveedor": "FUNDACION SAVIEZA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 144370037.0,
+        "fecha_firma": "2024-12-26",
+        "objeto": "CONVENIO DE COOPERACIÓN CON ESAL PARA EL DESARROLLO DE ACTIVIDADES SOCIALES EN BENEFICIO DE LA POBLACIÓN ADULTO MAYOR CON EL FIN DE DAR CUMPLIMIENTO AL PLAN DE DESARROLLO DEL MUNICIPIO DE SUSA CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA DE SUSA",
+        "contratos": 17,
+        "valor": 3274036623.16
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Susa",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

@@ -1,0 +1,144 @@
+{
+  "resumen": {
+    "contratos": 10,
+    "valor_total": 146133265.0,
+    "entidades": 2,
+    "proveedores": 7
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 3004.3802303052757,
+    "top1_proveedor_pct": 39.04381387769582,
+    "top5_proveedores_pct": 96.89722254546218,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 30.0,
+    "top_proveedores": [
+      {
+        "proveedor": "AXIS SUMINISTROS SAS",
+        "documento": "900957688",
+        "valor": 57056000.0,
+        "contratos": 1,
+        "participacion_pct": 39.0438
+      },
+      {
+        "proveedor": "DISTRIBUCIONES TOPALXE SAS",
+        "documento": "800202522",
+        "valor": 51802120.0,
+        "contratos": 3,
+        "participacion_pct": 35.4485
+      },
+      {
+        "proveedor": "DORA ASTRID GUZMAN RAMIREZ",
+        "documento": "21178232",
+        "valor": 18664000.0,
+        "contratos": 1,
+        "participacion_pct": 12.7719
+      },
+      {
+        "proveedor": "VETERINARIA RBC S.A.S.",
+        "documento": "900887066",
+        "valor": 10000000.0,
+        "contratos": 1,
+        "participacion_pct": 6.8431
+      },
+      {
+        "proveedor": "PROVEEDOR DE LOS LLANOS SAS",
+        "documento": "901257659",
+        "valor": 4076955.0,
+        "contratos": 1,
+        "participacion_pct": 2.7899
+      },
+      {
+        "proveedor": "SANDRA PATRICIA RODRIGUEZ",
+        "documento": "52523942",
+        "valor": 3200000.0,
+        "contratos": 2,
+        "participacion_pct": 2.1898
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 1334190.0,
+        "contratos": 1,
+        "participacion_pct": 0.913
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8328347",
+        "entidad": "E.S.E. REGIÓN DE SALUD MEDINA",
+        "proveedor": "AXIS SUMINISTROS SAS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 57056000.0,
+        "fecha_firma": "2025-09-22",
+        "objeto": "ADQUISICIÓN DE DISPOSITIVOS MÉDICOS PARA LOS EQUIPOS BÁSICOS EN SALUD DE LOS MUNICIPIOS DE MEDINA Y PARATEBUENO CUNDINAMARCA DE LA EMPRESA SOCIAL DEL ESTADO REGIÓN DE SALUD MEDINA; EN EL MARCO DE LA RESOLUCIÓN 0001928 DEL 4 DE OCTUBRE DE 2024 EMITIDA POR EL MINISTERIO DE SALUD Y PROTECCIÓN SOCIAL."
+      },
+      {
+        "id": "CO1.PCCNTR.8579225",
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE",
+        "proveedor": "DISTRIBUCIONES TOPALXE SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 28113060.0,
+        "fecha_firma": "2025-11-12",
+        "objeto": "COMPRA DE MATERIALES PEDAGOGICOS; PAPELERIA Y ELEMENTOS DEPORTIVOS PARA LA INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE MEDINA CUNDINAMARCA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8654057",
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE",
+        "proveedor": "DORA ASTRID GUZMAN RAMIREZ",
+        "modalidad": "Contratación régimen especial",
+        "valor": 18664000.0,
+        "fecha_firma": "2025-12-01",
+        "objeto": "SUMINISTRO DE MATERIALES DE FERRETERIA ELECTRICOS Y HORTALIZAS PARA LA INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE MEDINA PARA LA VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8545152",
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE",
+        "proveedor": "DISTRIBUCIONES TOPALXE SAS",
+        "modalidad": "Contratación régimen especial",
+        "valor": 15689780.0,
+        "fecha_firma": "2025-11-06",
+        "objeto": "COMPRA DE BIENES MUEBLES E INMUBELES DE TIPO PEDAGOGICOS Y TECNOLOGICOS: PARA LOS Y LAS ESTUDIANETS DE LA INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE MEDINA CUNDINAMARCA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8483770",
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE",
+        "proveedor": "VETERINARIA RBC S.A.S.",
+        "modalidad": "Contratación régimen especial",
+        "valor": 10000000.0,
+        "fecha_firma": "2025-10-22",
+        "objeto": "SUMINISTRO DE INSUMOS PARA EL PROYECTO PRODUCTIVO AGRICOLA Y PECUARIOS DE LA INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADIJE VIGENCIA 2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "E.S.E. REGIÓN DE SALUD MEDINA",
+        "contratos": 1,
+        "valor": 57056000.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA RURAL DEPARTAMENTAL GAZADUJE",
+        "contratos": 9,
+        "valor": 89077265.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Medina",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

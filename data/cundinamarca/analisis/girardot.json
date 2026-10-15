@@ -1,0 +1,330 @@
+{
+  "resumen": {
+    "contratos": 6388,
+    "valor_total": 313569037956.9,
+    "entidades": 15,
+    "proveedores": 2303
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 91.6249,
+    "pct_directa_valor": 60.2357,
+    "hhi": 136.33271485292755,
+    "top1_proveedor_pct": 5.3100057431747425,
+    "top5_proveedores_pct": 20.534949734714115,
+    "pareto_proveedores_80pct_valor": 539,
+    "pct_con_adicion": 33.015028177833436,
+    "top_proveedores": [
+      {
+        "proveedor": "Banco Davivienda",
+        "documento": "8600343137",
+        "valor": 16500000000.0,
+        "contratos": 1,
+        "participacion_pct": 5.31
+      },
+      {
+        "proveedor": "BBOGOTA",
+        "documento": "860002964",
+        "valor": 16500000000.0,
+        "contratos": 1,
+        "participacion_pct": 5.31
+      },
+      {
+        "proveedor": "Quack de Colombia SAS",
+        "documento": "900343131",
+        "valor": 11628704175.0,
+        "contratos": 3,
+        "participacion_pct": 3.7423
+      },
+      {
+        "proveedor": "UT PAE GIRARDOT",
+        "documento": "902026029",
+        "valor": 10248671337.87,
+        "contratos": 1,
+        "participacion_pct": 3.2982
+      },
+      {
+        "proveedor": "UT POR LOS NINOS DE GIRARDOT",
+        "documento": "901907638",
+        "valor": 8931721315.0,
+        "contratos": 1,
+        "participacion_pct": 2.8744
+      },
+      {
+        "proveedor": "AGENCIA LOGÍSTICA DE GESTIÓN INMOBILIARIA Y DE SERVICIOS DE CUNDINAMARCA",
+        "documento": "830021022",
+        "valor": 8446505308.0,
+        "contratos": 4,
+        "participacion_pct": 2.7182
+      },
+      {
+        "proveedor": "MARCACTIVA",
+        "documento": "900309848",
+        "valor": 7909999940.0,
+        "contratos": 1,
+        "participacion_pct": 2.5456
+      },
+      {
+        "proveedor": "CARDOTAL SOLUCIONES SAS",
+        "documento": "901006319",
+        "valor": 6530228045.77,
+        "contratos": 47,
+        "participacion_pct": 2.1015
+      },
+      {
+        "proveedor": "LOGISEVENT S.A.S.",
+        "documento": "901791901",
+        "valor": 5552438666.17,
+        "contratos": 38,
+        "participacion_pct": 1.7869
+      },
+      {
+        "proveedor": "JORGE RUBIO",
+        "documento": "93396950",
+        "valor": 5492000806.82,
+        "contratos": 2,
+        "participacion_pct": 1.7674
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.10030454",
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "proveedor": "BBOGOTA",
+        "modalidad": "Contratación directa",
+        "valor": 16500000000.0,
+        "fecha_firma": "2026-10-06",
+        "objeto": "CONTRATO DE EMPRESTITO DE DEUDA PUBLICA INTERNA A LARGO PLAZO Y PIGNORACION DE RENTAS; CELEBRADO ENTRE EL MUNICIPIO DE GIRARDOT Y EL BANCO DE BOGOTA; DESTINADO A LA FINANCIACION DE LOS PROYECTOS DE INVERSION ESTABLECIDOS EN EL ACUERDO MUNICIPAL 012 DE 2026 Y EL PLAN DE DESARROLLO MUNICIPAL"
+      },
+      {
+        "id": "CO1.PCCNTR.10030803",
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "proveedor": "Banco Davivienda",
+        "modalidad": "Contratación directa",
+        "valor": 16500000000.0,
+        "fecha_firma": "2026-10-06",
+        "objeto": "CONTRATO DE EMPRESTITO DE DEUDA PUBLICA INTERNA A LARGO PLAZO Y PIGNORACION DE RENTAS; CELEBRADO ENTRE EL MUNICIPIO DE GIRARDOT Y EL BANCO DAVIVIENDA SA; DESTINADO A LA FINANCIACION DE LOS PROYECTOS DE INVERSION ESTABLECIDOS EN EL ACUERDO MUNICIPAL 012 DE 2026 Y EL PLAN DE DESARROLLO MUNICIPAL"
+      },
+      {
+        "id": "CO1.PCCNTR.8979186",
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "proveedor": "UT PAE GIRARDOT",
+        "modalidad": "Licitación pública",
+        "valor": 10248671337.87,
+        "fecha_firma": "2026-01-24",
+        "objeto": "CONTRATAR LA OPERACIÓN DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR Y OTROS ASUNTOS NUTRICIONALES; PARA LOS ESTUDIANTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES EN EL MUNICIPIO DE GIRARDOT CUNDINAMARCA; PARA LA VIGENCIA 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.7285067",
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "proveedor": "UT POR LOS NINOS DE GIRARDOT",
+        "modalidad": "Licitación pública",
+        "valor": 8931721315.0,
+        "fecha_firma": "2025-01-27",
+        "objeto": "CONTRATAR LA OPERACIÓN DEL PROGRAMA DE ALIMENTACION ESCOLAR Y OTROS ASUNTOS NUTRICIONALES; PARA LOS ESTUDIANTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES EN EL MUNICIPIO DE GIRARDOT - CUNDINAMARCA; PARA LA VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.10028904",
+        "entidad": "INSTITUTO MUNICIPAL DE TURISMO CULTURA Y FOMENTO DE GIRARDOT",
+        "proveedor": "MARCACTIVA",
+        "modalidad": "Licitación pública",
+        "valor": 7909999940.0,
+        "fecha_firma": "2026-10-02",
+        "objeto": "CONTRATAR LOS SERVICIOS INTEGRALES DE LOGÍSTICA; PRODUCCIÓN TÉCNICA Y ARTÍSTICA PARA LA PLANEACIÓN; ORGANIZACIÓN Y REALIZACIÓN DEL REINADO SEÑORITA GIRARDOT Y DE LA VERSIÓN 55 DEL REINADO NACIONAL DEL TURISMO; DE CONFORMIDAD CON LAS ESPECIFICACIONES TÉCNICAS Y DEMÁS CONDICIONES ESTABLECIDAS POR EL INSTITUTO MUNICIPAL DE TURISMO; CULTURA Y FOMENTO DE GIRARDOT."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "contratos": 4014,
+        "valor": 210718359972.72
+      },
+      {
+        "entidad": "CARCEL Y PENITENCIARIA DE MEDIA SEGURIDAD DE GIRARDOT",
+        "contratos": 54,
+        "valor": 1829347113.0
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE GIRARDOT",
+        "contratos": 251,
+        "valor": 3110782842.24
+      },
+      {
+        "entidad": "CORPORACION PRODESARROLLO Y SEGURIDAD DEL MUNICIPIO DE GIRARDOT",
+        "contratos": 253,
+        "valor": 8560949217.67
+      },
+      {
+        "entidad": "EMPRESA SOCIAL DEL ESTADO HOSPITAL DE GIRARDOT",
+        "contratos": 4,
+        "valor": 3310426667.0
+      },
+      {
+        "entidad": "IEMEP",
+        "contratos": 35,
+        "valor": 355240597.31
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA FUNDADORES RAMON BUENO Y JOSE TRIANA - GIRARDOT",
+        "contratos": 7,
+        "valor": 74642016.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA NUEVO HORIZONTE - GIRARDOT",
+        "contratos": 20,
+        "valor": 230388062.43
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA POLICARPA SALAVARRIETA",
+        "contratos": 32,
+        "valor": 377694683.98
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA RURAL LUIS ANTONIO DUQUE PEÑA",
+        "contratos": 21,
+        "valor": 208181812.94
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA TECNICA ATANASIO GIRARDOT",
+        "contratos": 26,
+        "valor": 283484427.51
+      },
+      {
+        "entidad": "INSTITUCIÓN EDUCATIVA TÉCNICA FRANCISCO MANZANERA HENRIQUEZ",
+        "contratos": 27,
+        "valor": 459691394.75
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE TURISMO CULTURA Y FOMENTO DE GIRARDOT",
+        "contratos": 317,
+        "valor": 28405292305.44
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE GIRARDOT",
+        "contratos": 176,
+        "valor": 2660520432.0
+      },
+      {
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CTDPE",
+        "contratos": 1127,
+        "valor": 52984036411.91
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 24,
+    "valor_obras": 16518015848.41,
+    "obras_vencidas_abiertas": 10,
+    "valor_obras_vencidas_abiertas": 5278473007.42,
+    "pct_obras_vencidas_abiertas": 41.66666666666667,
+    "pct_pagado_obras_vencidas_abiertas": 49.3992,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8274161",
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "proveedor": "JMV",
+        "estado": "Modificado",
+        "valor": 1813520637.0,
+        "pagado": 458956137.0,
+        "fecha_fin": "2026-06-30",
+        "objeto": "CONSTRUCCION DE CUBIERTA EN ESTRUCTURA METALICA Y MEJORAMIENTO DEL POLIDEPORTIVO DEL BARRIO EL DIAMANTE DEL MUNICIPIO DE GIRARDOT; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7070957",
+        "entidad": "CORPORACION PRODESARROLLO Y SEGURIDAD DEL MUNICIPIO DE GIRARDOT",
+        "proveedor": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "estado": "Modificado",
+        "valor": 1800000000.0,
+        "pagado": 1100000000.0,
+        "fecha_fin": "2026-07-26",
+        "objeto": "CONVENIO INTERADMINISTRATIVO No. 01 DE 2024 CELEBRADO ENTRE LA CORPORACIÓN PRODESARROLLO Y SEGURIDAD DEL MUNICIPIO DE GIRARDOT Y EL MUNICIPIO DE GIRARDOT - CUNDINAMARCA; CUYO OBJETO ES: AUNAR ESFUERZOS FINANCIEROS; TÉCNICOS Y ADMINISTRATIVOS ENTRE LA CORPORACIÓN PRODESARROLLO Y SEGURIDAD DEL MUNICIPIO DE GIRARDOT Y EL MUNICIPIO DE GIRARDOT PARA LA CONSTRUCCIÓN DE OBRAS PARA EL CONTROL DE EROSIÓN Y PASO VEHICULAR EN LA RIBERA DEL LA QUEBRADA SAN JORGE EN LA INTERSECCIÓN DE LA AVENIDA KENNEDY"
+      },
+      {
+        "id": "CO1.PCCNTR.8012928",
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "proveedor": "CONSORCIO DEMOLICIONES 2025",
+        "estado": "Modificado",
+        "valor": 639992524.16,
+        "pagado": 639989566.75,
+        "fecha_fin": "2025-11-13",
+        "objeto": "CONTRATAR LAS LABORES DE DEMOLICIÓN DE LAS INFRAESTRUCTURAS QUE SE ENCUENTREN EN RIESGO DE COLAPSO Y/O AMENAZA Y RUINA DEL MUNICIPIO DE GIRARDOT"
+      },
+      {
+        "id": "CO1.PCCNTR.9465580",
+        "entidad": "ALCALDIA MUNICIPAL DE GIRARDOT",
+        "proveedor": "ESTUDIOS DISEÑOS Y CONSTRUCCIONES CARLOS NIETO S.A.S.",
+        "estado": "Modificado",
+        "valor": 598923605.0,
+        "pagado": 408577330.0,
+        "fecha_fin": "2026-09-11",
+        "objeto": "CONTRATO DE OBRA PARA EL SUMINISTRO E INSTALACION DE SEÑALIZACION VERTICAL; REDUCTORES DE VELOCIDAD y DEMARCACION VIAL EN EL MUNICIPIO DE GIRARDOT CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8571107",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CTDPE",
+        "proveedor": "RF ELEVARQ SAS",
+        "estado": "Modificado",
+        "valor": 247796042.63,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-30",
+        "objeto": "CONTRATAR LA COMPRA Y ADECUACIÓN DEL ASCENSOR DE ACUERDO A LA NORMATIVIDAD VIGENTE PARA EL BLOQUE B DE FORMACIÓN PARA EL CENTRO DE LA TECNOLOGÍA DEL DISEÑO Y LA PRODUCTIVIDAD EMPRESARIAL."
+      },
+      {
+        "id": "CO1.PCCNTR.8778973",
+        "entidad": "INSTITUTO MUNICIPAL DE TURISMO CULTURA Y FOMENTO DE GIRARDOT",
+        "proveedor": "OL INGENIERIA DE CONSTRUCCION S.A.S",
+        "estado": "Modificado",
+        "valor": 58235176.44,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-15",
+        "objeto": "CONTRATAR EL MANTENIMIENTO Y ADECUACIÓN DE LAS INSTALACIONES COLISEO DE FERIAS JOSÉ ALONSO ESCANDÓN A CARGO DEL INSTITUTO MUNICIPAL DE TURISMO; CULTURA Y FOMENTO DE GIRARDOT"
+      },
+      {
+        "id": "CO1.PCCNTR.8646201",
+        "entidad": "INSTITUCION EDUCATIVA RURAL LUIS ANTONIO DUQUE PEÑA",
+        "proveedor": "STOA INGENIERIA DE AVANZADA LTDA",
+        "estado": "Modificado",
+        "valor": 47122940.94,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-11",
+        "objeto": "CONSTRUCCIÓN Y MEJORAMIENTO BATERÍAS DE BAÑOS PARA PREESCOLAR Y BÁSICA PRIMARIA DE LA INSTITUCIÓN EDUCATIVA RURAL LUIS ANTONIO DUQUE PEÑA GIRARDOT CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9511331",
+        "entidad": "INSTITUCIÓN EDUCATIVA TÉCNICA FRANCISCO MANZANERA HENRIQUEZ",
+        "proveedor": "INGENIAMOS COLOMBIA SAS",
+        "estado": "Modificado",
+        "valor": 37105774.75,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-15",
+        "objeto": "MANTENIMIENTO A LA INFRAESTRUCTURA EDUCATIVA CONSISTENTE EN LA REPARACIÓN DE LAS UNIDADES SANITARIAS E IMPERMEABILIZACIÓN Y LIMPIEZA DE LA SEDE PRINCIPAL DE LA INSTITUCIÓN EDUCATIVA TÉCNICA FRANCISCO MANZANERA HENRÍQUEZ DE GIRARDOT - CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7885202",
+        "entidad": "INSTITUCION EDUCATIVA POLICARPA SALAVARRIETA",
+        "proveedor": "jvale ingenieria",
+        "estado": "Modificado",
+        "valor": 19514558.5,
+        "pagado": 0.0,
+        "fecha_fin": "2025-06-24",
+        "objeto": "MANTENIMIENTO DE INFRAESTRUCTURA DE TRES SALONES DE PRIMARIA Y TRES SALONES DE SECUNDARIA EN LA SEDE PRINCIPAL DE LA INSTITUCIÓN EDUCATIVA POLICARPA SALAVARRIETA DEL MUNICIPIO DE GIRARDOT - CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8679774",
+        "entidad": "INSTITUCION EDUCATIVA TECNICA ATANASIO GIRARDOT",
+        "proveedor": "INCODIAQ",
+        "estado": "Modificado",
+        "valor": 16261748.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "REMODELACION DE LA UNIDAD SANITARIA A ESCALA EN LA SEDE PRINCIPAL EN EL MARCO DEL PROYECTO DE PRIMERA INFANCIA DE LA INSTITUCIÓN EDUCATIVA TÉCNICA ATANASIO GIRARDOT DEL MUNICIPIO DE GIRARDOT CUNDINAMARCA."
+      }
+    ]
+  },
+  "municipio": "Girardot",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 53.5,
+  "nivel": "medio",
+  "posicion": 29.0,
+  "total_rankeados": 71
+}

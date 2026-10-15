@@ -1,0 +1,169 @@
+{
+  "resumen": {
+    "contratos": 363,
+    "valor_total": 16717274502.27,
+    "entidades": 3,
+    "proveedores": 251
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 87.3278,
+    "pct_directa_valor": 52.1181,
+    "hhi": 260.5845719747132,
+    "top1_proveedor_pct": 8.963667022355883,
+    "top5_proveedores_pct": 31.98506408710784,
+    "pareto_proveedores_80pct_valor": 103,
+    "pct_con_adicion": 35.53719008264463,
+    "top_proveedores": [
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 1452965288.0,
+        "contratos": 3,
+        "participacion_pct": 8.9637
+      },
+      {
+        "proveedor": "TRANSPORTES Y SUMINISTROS BC SAS",
+        "documento": "900923399",
+        "valor": 1059689405.52,
+        "contratos": 2,
+        "participacion_pct": 6.5375
+      },
+      {
+        "proveedor": "CONSTRUCTION SUPPLIES AND CONSULTING SAS",
+        "documento": "830095316",
+        "valor": 984469671.0,
+        "contratos": 3,
+        "participacion_pct": 6.0734
+      },
+      {
+        "proveedor": "Palermo Entertainment SAS",
+        "documento": "901655341",
+        "valor": 931840844.0,
+        "contratos": 1,
+        "participacion_pct": 5.7487
+      },
+      {
+        "proveedor": "MUNDIAL CATERPILLAR",
+        "documento": "16050667",
+        "valor": 755652620.0,
+        "contratos": 1,
+        "participacion_pct": 4.6618
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 528153232.0,
+        "contratos": 2,
+        "participacion_pct": 3.2583
+      },
+      {
+        "proveedor": "ESE HOSPITAL SAN ANTONIO DE GUATAVITA",
+        "documento": "860035447",
+        "valor": 393017668.0,
+        "contratos": 2,
+        "participacion_pct": 2.4246
+      },
+      {
+        "proveedor": "FUNDACION CREAAA",
+        "documento": "900132666",
+        "valor": 278787000.0,
+        "contratos": 4,
+        "participacion_pct": 1.7199
+      },
+      {
+        "proveedor": "CONSULTORÍA ESTRUCTURAL Y DE CONSTRUCCIÓN SAS",
+        "documento": "900160387",
+        "valor": 251130681.73,
+        "contratos": 1,
+        "participacion_pct": 1.5493
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 196140458.0,
+        "contratos": 2,
+        "participacion_pct": 1.21
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8459109",
+        "entidad": "ALCALDIA MUNICIPAL DE GUASCA",
+        "proveedor": "Palermo Entertainment SAS",
+        "modalidad": "Licitación pública",
+        "valor": 931840844.0,
+        "fecha_firma": "2025-10-16",
+        "objeto": "PRESTACIÓN DE SERVICIOS LOGÍSTICOS  Y ADQUISICIÓN DE ELEMENTOS Y OBSEQUIOS PARA LA ORGANIZACIÓN; COORDINACIÓN Y REALIZACIÓN DE LA CELEBRACIÓN DEL DÍA DEL CAMPESINO; EXPOSICIONES AGROPECUARIAS; DE EMPRENDIMIENTOS; RENDICION DE CUENTAS Y CELEBRACIÓN DEL XXVIII FESTIVAL DEL RITO DE CORRER LA TIERRA Y OTRAS ACTIVIDADES DE LA SECRETARIA DE AGRICULTURA MEDIO AMBIENTE Y DESARROLLO ECONÓMICO; OFICINA ASESORA DE PLANEACION; SECRETARIA DE HACIENDA Y OFICINA DE CULTURA Y TURISMO EN EL MARCO DEL PLAN DE DES"
+      },
+      {
+        "id": "CO1.PCCNTR.8506705",
+        "entidad": "ALCALDIA MUNICIPAL DE GUASCA",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Licitación pública",
+        "valor": 883289683.0,
+        "fecha_firma": "2025-10-28",
+        "objeto": "SUMINISTRO DE BIENES Y SERVICIOS PARA LA REALIZACION DE EVENTOS; ACTIVIDADES; CAPACITACIONES Y SALIDAS PARA DAR CUMPLIMIENTO A LOS PROGRAMAS DE LA SECRETARÍA DE DESARROLLO SOCIAL Y  SECRETARIA DE GOBIERNO; SEGURIDAD Y CONVIVENCIA CIUDADANA EN EL MARCO DEL PLAN DE DESARROLLO GUASCA COMPROMISO DE TODOS 2024-2027"
+      },
+      {
+        "id": "CO1.PCCNTR.8103800",
+        "entidad": "ALCALDIA MUNICIPAL DE GUASCA",
+        "proveedor": "MUNDIAL CATERPILLAR",
+        "modalidad": "Licitación pública",
+        "valor": 755652620.0,
+        "fecha_firma": "2025-07-23",
+        "objeto": "SERVICIO DE MANTENIMIENTO CORRECTIVO Y PREVENTIVO INCLUIDO AUTOPARTES; INSUMOS Y MANO DE OBRA PARA MAQUINARIA AMARILLA; VEHÍCULOS; BUS; TRACTOR Y MOTOCICLETAS QUE HACEN PARTE DEL PARQUE AUTOMOTOR DE LA ALCALDÍA MUNICIPAL DE GUASCA Y PARA LOS VEHÍCULOS INTEGRANTES DE LOS ENTES DE SEGURIDAD (POLICÍA NACIONAL Y EJERCITO) QUE SE ENCUENTRAN AL SERVICIO DEL MUNICIPIO."
+      },
+      {
+        "id": "CO1.PCCNTR.9669036",
+        "entidad": "ALCALDIA MUNICIPAL DE GUASCA",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 564071185.0,
+        "fecha_firma": "2026-07-16",
+        "objeto": "SUMINISTRO DE BIENES Y SERVICIOS INCLUYE LOGÍSTICA PARA EL DESARROLLO; DOTACIÓN Y FUNCIONAMIENTO DE LAS ESCUELAS DE FORMACIÓN DEPORTIVAS Y CULTURALES Y LAS ACTIVIDADES DE LA OFICINA DE CULTURA Y TURISMO Y LA OFICINA DE JUVENTUD; DEPORTES Y RECREACIÓN"
+      },
+      {
+        "id": "CO1.PCCNTR.8318094",
+        "entidad": "ALCALDIA MUNICIPAL DE GUASCA",
+        "proveedor": "TRANSPORTES Y SUMINISTROS BC SAS",
+        "modalidad": "Licitación pública",
+        "valor": 560045385.52,
+        "fecha_firma": "2025-09-15",
+        "objeto": "SUMINISTRO Y TRANSPORTE DE MATERIAL GRANULAR DE CANTERA Y ALQUILER DE VIBRO COMPACTADOR Y MOTONIVELADORA PARA EL MANTENIMIENTO DE LA MALLA VIAL Y OBRAS COMPLEMENTARIAS DEL MUNICIPIO DE GUASCA CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE GUASCA",
+        "contratos": 345,
+        "valor": 16514036657.27
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE GUASCA",
+        "contratos": 6,
+        "valor": 136506700.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE GUASCA",
+        "contratos": 11,
+        "valor": 66731145.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 6,
+    "valor_obras": 1350894068.8,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": 0.0,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Guasca",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 53.1,
+  "nivel": "medio",
+  "posicion": 30.0,
+  "total_rankeados": 71
+}

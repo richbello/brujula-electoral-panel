@@ -1,0 +1,280 @@
+{
+  "resumen": {
+    "contratos": 1016,
+    "valor_total": 33775674523.52,
+    "entidades": 3,
+    "proveedores": 339
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 87.3031,
+    "pct_directa_valor": 36.9543,
+    "hhi": 274.47168947909154,
+    "top1_proveedor_pct": 7.937426710347848,
+    "top5_proveedores_pct": 30.138044940955254,
+    "pareto_proveedores_80pct_valor": 83,
+    "pct_con_adicion": 17.81496062992126,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACION PARA EL DESARROLLO INTEGRAL PARA EL TERRITORIO",
+        "documento": "901695102",
+        "valor": 2378023748.35,
+        "contratos": 4,
+        "participacion_pct": 7.9374
+      },
+      {
+        "proveedor": "UNION TEMPORAL MORO MORALES INGENIERIA 2026",
+        "documento": "902059530",
+        "valor": 2271655820.0,
+        "contratos": 1,
+        "participacion_pct": 7.5824
+      },
+      {
+        "proveedor": "POLARIS INGENIERIA Y CONSULTORIA SAS",
+        "documento": "901962151",
+        "valor": 1550793136.72,
+        "contratos": 4,
+        "participacion_pct": 5.1763
+      },
+      {
+        "proveedor": "CONSORCIO MARIA AUXILIADORA 2025",
+        "documento": "901931350",
+        "valor": 1455023608.0,
+        "contratos": 1,
+        "participacion_pct": 4.8566
+      },
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 1373750723.0,
+        "contratos": 6,
+        "participacion_pct": 4.5853
+      },
+      {
+        "proveedor": "COMERCIALIZADORA EL CANEY S.A.S.",
+        "documento": "900526103",
+        "valor": 1370195060.0,
+        "contratos": 24,
+        "participacion_pct": 4.5735
+      },
+      {
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "documento": "900136128",
+        "valor": 1191117077.0,
+        "contratos": 1,
+        "participacion_pct": 3.9757
+      },
+      {
+        "proveedor": "TOCAGUA E.S.P.",
+        "documento": "808003342",
+        "valor": 740000000.0,
+        "contratos": 2,
+        "participacion_pct": 2.47
+      },
+      {
+        "proveedor": "SERVICIOS GENERALES DE INGENIERIA",
+        "documento": "900434933",
+        "valor": 669986171.23,
+        "contratos": 2,
+        "participacion_pct": 2.2363
+      },
+      {
+        "proveedor": "CARDOTAL SOLUCIONES SAS",
+        "documento": "901006319",
+        "valor": 647539548.0,
+        "contratos": 2,
+        "participacion_pct": 2.1614
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9495348",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "CONSORCIO EQUIPACENTRO AGUA DE DIOS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 3816043586.08,
+        "fecha_firma": "2026-05-26",
+        "objeto": "CONSTRUCCIÓN DEL EQUIPAMIENTO  CENTRO MULTIFUNCIONAL FASE 1 EN EL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9452957",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "UNION TEMPORAL MORO MORALES INGENIERIA 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2271655820.0,
+        "fecha_firma": "2026-04-27",
+        "objeto": "CONSTRUCCION Y ADECUACIÓN DEL EQUIPAMIENTO INSTITUCIONAL Y COMERCIAL FASE 1 EN EL MUNICIPIO DE AGUA DE DIOS DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7689428",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "CONSORCIO MARIA AUXILIADORA 2025",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 1455023608.0,
+        "fecha_firma": "2025-06-03",
+        "objeto": "ESTUDIOS Y DISEÑOS PRA LA REHABILITACION DE LA ESCUELA MARIA AUXILIADORA DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA DE ACUERDO A CONVENIO ICCU 603 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8177105",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1191117077.0,
+        "fecha_firma": "2025-08-08",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA EJECUCION  DE LA AGENDA INSTITUCIONAL; CULTURAL Y RECREODEPORTIVA DEL SEGUNDO SEMESTRE  DE LA VIGENCIA 2025 EN CUMPLIMIENTO DE LAS METAS ESTABLECIDAS EN EL  PLAN DE DESARROLLO PROYECCIÓN Y SENTIDO SOCIAL 2024-2027."
+      },
+      {
+        "id": "CO1.PCCNTR.9784120",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "FUNDACION PARA EL DESARROLLO INTEGRAL PARA EL TERRITORIO",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 970218269.8,
+        "fecha_firma": "2026-08-07",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA EJECUCIÓN DE LA AGENDA INSTITUCIONAL; CULTURAL Y RECREO-DEPORTIVA DEL SEGUNDO SEMESTRE DE LA VIGENCIA 2026; EN CUMPLIMIENTO DE LAS METAS ESTABLECIDAS EN EL PLAN DE DESARROLLO PROYECCIÓN Y SENTIDO SOCIAL 2024-2027"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO AGUA DE DIOS",
+        "contratos": 8,
+        "valor": 90683558.0
+      },
+      {
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "contratos": 992,
+        "valor": 33572169848.52
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE AGUA DE DIOS",
+        "contratos": 10,
+        "valor": 112821117.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 19,
+    "valor_obras": 8836039511.26,
+    "obras_vencidas_abiertas": 11,
+    "valor_obras_vencidas_abiertas": 1489773984.21,
+    "pct_obras_vencidas_abiertas": 57.89473684210527,
+    "pct_pagado_obras_vencidas_abiertas": 76.8726,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9385364",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "SERVICIOS GENERALES DE INGENIERIA",
+        "estado": "Modificado",
+        "valor": 400000000.0,
+        "pagado": 120000000.0,
+        "fecha_fin": "2026-09-14",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE DEL CASCO URBANO CONDUCE A LA VEREDA IBAÑEZ SECTOR EL PARAISO DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA. (CONVENIO 848 DE 2025 - ICCU) y MEJORAMIENTO DE LA VÍA QUE DEL CASCO URBANO CONDUCE A LA VEREDA LA ESMERALDA SECTOR CURVA DE ARMANDI DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA (CONVENIO 719 DE 2025 - ICCU) y MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO HACIA LA VEREDA IBAÑEZ SECTOR RECEBERA ALTA DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA (CONVENIO 877"
+      },
+      {
+        "id": "CO1.PCCNTR.8472888",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "DELIA ROCIO GARCIA RIVERA",
+        "estado": "Modificado",
+        "valor": 389390752.02,
+        "pagado": 389390752.02,
+        "fecha_fin": "2026-02-08",
+        "objeto": "MEJORAMIENTO Y ADECUACION LOCATIVA DE LA INFRAESTRUCTURA DEL CENTRO DE DESARROLLO INFANTIL CDI PARA EL FORTALECIMIENTO DE LA ATENCION A LA PRIMERA INFANCIA DEL MUNICIPIO DE AGUA DE DIOS  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9367411",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "SC DISEÑO Y CONSTRUCCION",
+        "estado": "Modificado",
+        "valor": 340000000.0,
+        "pagado": 322994080.99,
+        "fecha_fin": "2026-09-14",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO HACIA LA VEREDA LA BALSITA SECTOR LOS BOYACOS DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA (CONVENIO 853 DE 2025 - ICCU) MEJORAMIENTO DE LA VIA QUE DEL CASCO URBANO CONDUCE A LA VEREDA LETICIA SECTOR BUENOS AIRES DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA (CONVENIO 1114 DE 2025 - ICCU) y MEJORAMIENTO DE LA VIA QUE DEL CASCO URBANO CONDUCE A LA VEREDA AGUA FRIA SECTOR NICARAGUA DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA CONVENIO 1229 DE 2025 -"
+      },
+      {
+        "id": "CO1.PCCNTR.7019436",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "BLACKMONT INGENIERIAS SAS",
+        "estado": "Modificado",
+        "valor": 177301016.0,
+        "pagado": 177301016.0,
+        "fecha_fin": "2025-02-22",
+        "objeto": "MEJORAMIENTO Y/O ADECUACION DEL EQUIPAMIENTO MUNICIPAL (CEMENTERIO PALACIO MUNICIPAL ESCUELA EL HOBAL Y ESCENARIOS DEPORTIVOS)DEL MUNICIPIO DE AGUA DE DIOS  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8506854",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "SERVICIOS DE INGENIERIA MECANICOS AMBIENTALES Y CIVILES",
+        "estado": "Modificado",
+        "valor": 111942668.19,
+        "pagado": 111942668.18,
+        "fecha_fin": "2026-01-30",
+        "objeto": "MEJORAMIENTO Y ADECUACION DEL EQUIPAMIENTO MUNICIPAL ESCUELA FRANCISCO VAN GALEN DEL MUNICIPIO DE AGUA DE DIOS CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9453703",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "CARDOTAL SOLUCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 47539548.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-20",
+        "objeto": "SERVICIOS DE MANO DE OBRA PARA LA EJECUCIÓN DE ARREGLOS LOCATIVOS EN LAS VIVIENDAS DE FAMILIAS BENEFICIARIAS; CONFORME A LO ESTABLECIDO EN EL ACUERDO  003 DE  2025; EN EL MARCO DEL PROGRAMA DE MEJORAMIENTO DE VIVIENDA DEL MUNICIPIO DE AGUA DE DIOS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7158212",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA LAS ARRAYANAS",
+        "estado": "Modificado",
+        "valor": 7122833.36,
+        "pagado": 7122833.36,
+        "fecha_fin": "2025-02-04",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS ENTRE EL MUNICIPIO DE AGUA DE DIOS CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA SAN JOSE SECTOR LAS ARRAYANAS PARA LA CONSTRUCCION DE UN MURO EN CONCRETO CICLOPEO."
+      },
+      {
+        "id": "CO1.PCCNTR.7158534",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "JUNTA DE ACCION COMUNAL DEL BARRIO PATIO BONITO",
+        "estado": "Modificado",
+        "valor": 4499400.0,
+        "pagado": 4499400.0,
+        "fecha_fin": "2025-01-12",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS TECNICOS Y FINANCIEROS ENTRE EL MUNICIPIO DE AGUA DE DIOS CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DEL BARRIO PATIO BONITO PARA LA CONSTRUCCION DE UN TRAMO DE 36 ML DE LA RED DE ALCANTARILADO EN TUBERIA DE 12"
+      },
+      {
+        "id": "CO1.PCCNTR.7158225",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "OAC JUNTA DE ACCION COMUNAL DE LA VEREDA EGIPTO",
+        "estado": "Modificado",
+        "valor": 3992588.88,
+        "pagado": 3992588.88,
+        "fecha_fin": "2025-02-08",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS ENTRE EL MUNICIPIO DE AGUA DE DIOS CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA IBAÑEZ SECTOR EGIPTO PARA LA CONSTRUCCION DEL CABEZOTE DE UNA ALCANTARILLA"
+      },
+      {
+        "id": "CO1.PCCNTR.7158217",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA IBANEZ",
+        "estado": "Modificado",
+        "valor": 3992588.88,
+        "pagado": 3992588.44,
+        "fecha_fin": "2025-02-04",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS ENTRE EL MUNICIPIO DE AGUA DE DIOS CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA IBAÑEZ PARA LA CONSTRUCCION DEL CABEZOTE DE UNA ALCANTARILLA"
+      },
+      {
+        "id": "CO1.PCCNTR.7160958",
+        "entidad": "MUNICIPIO DE AGUA DE DIOS",
+        "proveedor": "JUNTA DE ACCIÓN COMUNAL VEREDA AGUA FRÍA",
+        "estado": "Modificado",
+        "valor": 3992588.88,
+        "pagado": 3992588.88,
+        "fecha_fin": "2025-02-04",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS ENTRE EL MUNICIPIO DE AGUA DE DIOS CUNDINAMARCA Y LA JUNTA DE ACCIÓN COMUNAL DE LA VEREDA AGUA FRIA PARA LA CONSTRUCCION DEL CABEZOTE DE UNA ALCANTARILLA."
+      }
+    ]
+  },
+  "municipio": "Agua De Dios",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 51.6,
+  "nivel": "medio",
+  "posicion": 33.0,
+  "total_rankeados": 71
+}

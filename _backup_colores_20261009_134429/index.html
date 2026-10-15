@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1C2E;--gold:#C8A560;--bg:#F4F6F9;--muted:#5B6B80;--line:#E2E7EE;--ok:#2E9E7B;--warn:#B7791F}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff}
+.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#AEB9C8;margin-top:2px}
+.hero{max-width:1200px;margin:0 auto;padding:48px 32px 8px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+h1{font-size:34px;font-weight:700;margin:10px 0;letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:700px;line-height:1.6}
+.sec{max-width:1200px;margin:0 auto;padding:32px 32px 0}
+.sec h3{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s,transform .2s}
+.card:hover{border-color:var(--gold);box-shadow:0 10px 30px rgba(15,28,46,.08);transform:translateY(-2px)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.num{font-size:13px;font-weight:700;color:var(--gold)}
+.tag{font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px}
+.real{background:#E6F4EF;color:var(--ok)}.demo{background:#FBF1E0;color:var(--warn)}
+.card h2{font-size:19px;font-weight:700;margin-bottom:8px}
+.card p{font-size:14px;color:var(--muted);line-height:1.55;flex:1}
+.go{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;font-weight:600}
+.card:hover .go{color:var(--gold)}
+footer{max-width:1200px;margin:0 auto;padding:40px 32px 48px;font-size:12px;color:var(--muted);line-height:1.6}
+@media(max-width:700px){.bar,.hero,.sec,footer{padding-left:18px;padding-right:18px}h1{font-size:26px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Inteligencia de campaña</small></div></div></header>
+
+<section class="hero">
+<div class="eyebrow">Plataforma de inteligencia electoral</div>
+<h1>Bogotá y Soacha 2027</h1>
+<p class="lead">Resultados electorales históricos, conversación en redes sociales, gestión fiscal y seguridad del proceso, integrados en un solo lugar para la toma de decisiones de campaña.</p>
+</section>
+
+<section class="sec"><h3>Inteligencia electoral</h3><div class="grid">
+<a class="card" href="resultados-historicos.html"><div class="top"><span class="num">01</span><span class="tag real">Registraduría</span></div><h2>Resultados Históricos Elecciones</h2><p>Concejo y JAL de Bogotá 2019 a 2023, Congreso 2026 y Soacha 2023. Huella geográfica por candidato, partidos y tendencias, análisis territorial y simulador D'Hondt.</p><div class="go">Abrir módulo &rarr;</div></a>
+<a class="card" href="soacha-2027.html"><div class="top"><span class="num">02</span><span class="tag real">Datos reales</span></div><h2>Pulso Social en Redes</h2><p>Sentimiento, temas dominantes y toxicidad de la conversación sobre los candidatos de Soacha en YouTube y TikTok.</p><div class="go">Abrir módulo &rarr;</div></a>
+</div></section>
+
+<section class="sec"><h3>Módulos en desarrollo</h3><div class="grid">
+<a class="card" href="modulos-3-integrados.html#fiscal"><div class="top"><span class="num">03</span><span class="tag demo">Demostración</span></div><h2>Análisis Fiscal</h2><p>Ejecución presupuestal, concentración de contratistas y hallazgos de auditoría de la administración municipal.</p><div class="go">Abrir módulo &rarr;</div></a>
+<a class="card" href="modulos-3-integrados.html#seguridad"><div class="top"><span class="num">04</span><span class="tag demo">Demostración</span></div><h2>Seguridad Electoral</h2><p>Integridad por puesto de votación, ElectoralBio (E-14 con OCR y GPS) y monitoreo de suplantación y desinformación.</p><div class="go">Abrir módulo &rarr;</div></a>
+<a class="card" href="modulos-3-integrados.html#scoring"><div class="top"><span class="num">05</span><span class="tag demo">Demostración</span></div><h2>Scoring Integral</h2><p>Índice compuesto por candidato: 40 % electoral, 35 % fiscal y 25 % social.</p><div class="go">Abrir módulo &rarr;</div></a>
+</div></section>
+
+<footer>Fuentes: Registraduría Nacional del Estado Civil, YouTube y TikTok. Los módulos marcados como demostración usan cifras ilustrativas que serán reemplazadas por datos de SECOP II, Contraloría y Registraduría.</footer>
+</body>
+</html>

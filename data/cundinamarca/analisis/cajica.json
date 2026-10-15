@@ -1,0 +1,340 @@
+{
+  "resumen": {
+    "contratos": 3955,
+    "valor_total": 397629257896.06,
+    "entidades": 7,
+    "proveedores": 1581
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 88.6726,
+    "pct_directa_valor": 49.9747,
+    "hhi": 227.41565519778402,
+    "top1_proveedor_pct": 8.979464999223683,
+    "top5_proveedores_pct": 26.04579996542308,
+    "pareto_proveedores_80pct_valor": 229,
+    "pct_con_adicion": 25.13274336283186,
+    "top_proveedores": [
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PÚBLICOS CAJICA SA ESP",
+        "documento": "8320023865",
+        "valor": 32787463940.55,
+        "contratos": 26,
+        "participacion_pct": 8.9795
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 30000000000.0,
+        "contratos": 1,
+        "participacion_pct": 8.2161
+      },
+      {
+        "proveedor": "UNION TEMPORAL FECON",
+        "documento": "901999888",
+        "valor": 12331236676.0,
+        "contratos": 1,
+        "participacion_pct": 3.3771
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 10389448526.0,
+        "contratos": 6,
+        "participacion_pct": 2.8453
+      },
+      {
+        "proveedor": "UNION TEMPORAL AF 2025",
+        "documento": "901885393",
+        "valor": 9595036542.0,
+        "contratos": 1,
+        "participacion_pct": 2.6278
+      },
+      {
+        "proveedor": "EMPRESA SOCIAL DEL ESTADO HOSPITAL PROFESOR JORGE CAVELIER",
+        "documento": "832002436",
+        "valor": 8333656009.8,
+        "contratos": 23,
+        "participacion_pct": 2.2823
+      },
+      {
+        "proveedor": "CEROM DE COLOMBIA SAS",
+        "documento": "820003010",
+        "valor": 8180673004.0,
+        "contratos": 1,
+        "participacion_pct": 2.2404
+      },
+      {
+        "proveedor": "Multiservicios MILIGI SAS",
+        "documento": "900692307",
+        "valor": 7677550317.33,
+        "contratos": 11,
+        "participacion_pct": 2.1026
+      },
+      {
+        "proveedor": "FUNDACION CREINSER",
+        "documento": "832006783",
+        "valor": 7377942842.5,
+        "contratos": 5,
+        "participacion_pct": 2.0206
+      },
+      {
+        "proveedor": "NUTRIGANADO SAS",
+        "documento": "832009796",
+        "valor": 7059153100.0,
+        "contratos": 2,
+        "participacion_pct": 1.9333
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7154608",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 30000000000.0,
+        "fecha_firma": "2024-12-19",
+        "objeto": "PRESTAMO DE BANCOLOMBIA AL MUNICIPIO DE CAJICÁ DEL MONTO DE OPERACIÓN POR VALOR DE $30.000.000.000"
+      },
+      {
+        "id": "CO1.PCCNTR.8701294",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "CONSORCIO GEOVIAL 2025,",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 14416722319.0,
+        "fecha_firma": "2025-12-19",
+        "objeto": "CONSTRUCCIÓN DE LA FASE 1 DE LA VÍA CANELÓN - UNIVERSIDAD MANUELA BELTRÁN; QUE CONDUCE DE LA CARRERA 5 A LA CARRERA 6 EN EL MARCO DEL CONVENIO No. ICCU-411-2025 SUSCRITO ENTRE EL ICCU Y EL MUNICIPIO DE CAJICÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8458572",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "UNION TEMPORAL FECON",
+        "modalidad": "Licitación pública",
+        "valor": 12331236676.0,
+        "fecha_firma": "2025-10-20",
+        "objeto": "PRESTACIÓN DE SERVICIOS DE SEGURIDAD Y VIGILANCIA PARA LA PROTECCIÓN DE BIENES DEL MUNICIPIO DE CAJICÁ O CARGO DE ESTE"
+      },
+      {
+        "id": "CO1.PCCNTR.9922374",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "UT VS CAJICA",
+        "modalidad": "Licitación pública",
+        "valor": 10491875102.0,
+        "fecha_firma": "2026-09-16",
+        "objeto": "PRESTACIÓN DE SERVICIOS DE SEGURIDAD Y VIGILANCIA PARA LA PROTECCIÓN DE BIENES DEL MUNICIPIO DE CAJICÁ O CARGO DE ESTE"
+      },
+      {
+        "id": "CO1.PCCNTR.6960781",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "UNION TEMPORAL AF 2025",
+        "modalidad": "Licitación pública",
+        "valor": 9595036542.0,
+        "fecha_firma": "2024-11-01",
+        "objeto": "PRESTACIÓN DE SERVICIOS DE SEGURIDAD Y VIGILANCIA PARA LA PROTECCIÓN DE BIENES DEL MUNICIPIO DE CAJICÁ O CARGO DE ESTE"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "contratos": 2136,
+        "valor": 330968896553.23
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE CAJICÁ",
+        "contratos": 49,
+        "valor": 2141887571.17
+      },
+      {
+        "entidad": "INSDEPORTES CAJICA",
+        "contratos": 414,
+        "valor": 14285902532.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE CULTURA Y TURISMO DE CAJICA",
+        "contratos": 822,
+        "valor": 30319494723.66
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE DEPORTE Y RECREACION DE CAJICA",
+        "contratos": 219,
+        "valor": 8017038467.0
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE VIVIENDA DE INTERÉS SOCIAL CAJICA",
+        "contratos": 105,
+        "valor": 8182598378.0
+      },
+      {
+        "entidad": "PERSONERIA DE CAJICA",
+        "contratos": 134,
+        "valor": 3713439671.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 85,
+    "valor_obras": 48983610748.63,
+    "obras_vencidas_abiertas": 15,
+    "valor_obras_vencidas_abiertas": 6188043056.66,
+    "pct_obras_vencidas_abiertas": 17.647058823529413,
+    "pct_pagado_obras_vencidas_abiertas": 60.916,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7170937",
+        "entidad": "INSTITUTO MUNICIPAL DE VIVIENDA DE INTERÉS SOCIAL CAJICA",
+        "proveedor": "CONSORCIO VIS 2024",
+        "estado": "Modificado",
+        "valor": 1813271814.0,
+        "pagado": 1770753525.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "CONTRATO DE OBRA PÚBLICA PARA LA CONSTRUCCIÓN\nDE VIVIENDAS EN SITIO PROPIO EN EL MUNICIPIO DE\nCAJICÁ."
+      },
+      {
+        "id": "CO1.PCCNTR.8337791",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "DICOIN DISEÑOS CONSTRUCCIONES E INTERVENTORIAS SAS",
+        "estado": "Modificado",
+        "valor": 1275601920.67,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-30",
+        "objeto": "CONTRATO DE CONSTRUCCIÓN DE LA CUBIERTA DEL POLIDEPORTIVO DE CALAHORRA DEL MUNICIPIO DE CAJICA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8748268",
+        "entidad": "INSTITUTO MUNICIPAL DE VIVIENDA DE INTERÉS SOCIAL CAJICA",
+        "proveedor": "ORTIZ Y CARRILLO INGENIERIA S.A.S",
+        "estado": "Modificado",
+        "valor": 1167969161.0,
+        "pagado": 481583462.0,
+        "fecha_fin": "2026-10-05",
+        "objeto": "EJECUCIÓN DE MEJORAMIENTOS DE VIVIENDAS EN SITIO PROPIO DISPERSAS EN EL MUNICIPIO DE CAJICÁ."
+      },
+      {
+        "id": "CO1.PCCNTR.8515184",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "CONSORCIO EL ROCIO 2025",
+        "estado": "Modificado",
+        "valor": 719088052.0,
+        "pagado": 719088052.0,
+        "fecha_fin": "2026-05-17",
+        "objeto": "CONTRATO DE OBRA PUBLICA PARA LA CONSTRUCCIÓN DEL PARQUE EN EL SECTOR EL ROCÍO EN EL MARCO DE LOS PRESUPUESTOS PARTICIPATIVOS DEL MUNICIPIO DE CAJICÁ; CUNDINAMARCA. BPIN 2024251260010"
+      },
+      {
+        "id": "CO1.PCCNTR.8689260",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "CONSORCIO CAJICA COMUNAL",
+        "estado": "Suspendido",
+        "valor": 646798958.0,
+        "pagado": 360279097.0,
+        "fecha_fin": "2026-09-17",
+        "objeto": "MEJORAMIENTO DE LAS SEDES DE LAS JUNTAS DE ACCION COMUNAL CENTRO Y VEREDA CHUNTAME EN EL MARCO DE LOS PRESUPUESTOS PARTICIPATIVOS DEL MUNICIPIO DE CAJICA  CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8717551",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "UT GESTION COLOMBIA",
+        "estado": "Modificado",
+        "valor": 311201125.0,
+        "pagado": 187693087.99,
+        "fecha_fin": "2026-09-05",
+        "objeto": "MEJORAMIENTO DE PARQUES EN EL MARCO DE LOS PRESUPUESTOS PARTICIPATIVOS DEL MUNICIPIO DE CAJICÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8272903",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "GRUPO KONEXO SAS",
+        "estado": "Modificado",
+        "valor": 95110601.59,
+        "pagado": 95110601.0,
+        "fecha_fin": "2025-11-24",
+        "objeto": "MANTENIMIENTO DE CICLORUTAS Y BICI CARRILES DEL MUNICIPIO DE CAJICÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8482229",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA CANELON",
+        "estado": "En ejecución",
+        "valor": 20500000.0,
+        "pagado": 20000000.0,
+        "fecha_fin": "2025-12-23",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL DE CANELON PARA EL MANTENIMIENTO DE LA CUBIERTA DEL SALON COMUNAL"
+      },
+      {
+        "id": "CO1.PCCNTR.8373548",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JUNTA DE ACCION COMUNAL BARRIO LA ESTACION",
+        "estado": "En ejecución",
+        "valor": 20500000.0,
+        "pagado": 20000000.0,
+        "fecha_fin": "2025-11-30",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL LA ESTACION PARA EL MANTENIMIENTO Y ADECUACION DE LOS PARQUES COMUNALES UBICADOS SOBRE LA CRA 7 ESTE ENTRE LAS CALLE 7 Y LA CALLE 4B"
+      },
+      {
+        "id": "CO1.PCCNTR.8482513",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JUNTA DE ACCION COMUNAL BARRIO SANTA CRUZ",
+        "estado": "En ejecución",
+        "valor": 20500000.0,
+        "pagado": 20000000.0,
+        "fecha_fin": "2025-12-23",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL DE SANTA CRUZ PARA EL MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LOS PARQUES DEL SECTOR"
+      },
+      {
+        "id": "CO1.PCCNTR.8422438",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA LA CUMBRE",
+        "estado": "Modificado",
+        "valor": 20500000.0,
+        "pagado": 20000000.0,
+        "fecha_fin": "2026-01-23",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL LA CUMBRE PARA EL MANTENIMIENTO Y REHABILITACION DE LA PLACA HUELLA PRINCIPAL DEL SECTOR LA CUMBRE.\nCONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL LA CUMBRE PARA EL MANTENIMIENTO Y REHABILITACION DE LA PLACA HUELLA PRINCIPAL DEL SECTOR LA CUMBRE.\nCONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL LA CUMBRE PARA EL MANTENIMIENTO Y REHABILITACION DE LA PLACA HUELLA"
+      },
+      {
+        "id": "CO1.PCCNTR.8545594",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JAC VEREDA BUIENA SUERTE",
+        "estado": "En ejecución",
+        "valor": 20500000.0,
+        "pagado": 20000000.0,
+        "fecha_fin": "2025-12-21",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL DE BUENA SUERTE PARA REALIZAR ACTIVIDADES DE NIVELACIÓN; SUMINISTRO Y SIEMBRA DE VEGETACION EN EL PREDIO LA ESPERANZA"
+      },
+      {
+        "id": "CO1.PCCNTR.8422211",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA QUEBRADA DEL CAMPO",
+        "estado": "En ejecución",
+        "valor": 20500000.0,
+        "pagado": 20000000.0,
+        "fecha_fin": "2025-12-07",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL DE QUEBRADA DEL CAMPO PARA EL MANTENIMIENTO Y LA FINALIZACION DEL AISLAMIENTO DE ALTO IMPACTO DEL CAMPO DEPORTIVO."
+      },
+      {
+        "id": "CO1.PCCNTR.8419473",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JUNTA DE ACCION COMUNAL SANTA INES",
+        "estado": "Modificado",
+        "valor": 20500000.0,
+        "pagado": 20000000.0,
+        "fecha_fin": "2025-12-09",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICÁ Y LA JUNTA DE ACCIÓN COMUNAL DE SANTA INÉS PARA LA ETAPA 1 DE LA INSTALACIÓN DE GRADERÍA EN ESTRUCTURA METÁLICA EN EL POLIDEPORTIVO DEL SECTOR DE SANTA INÉS"
+      },
+      {
+        "id": "CO1.PCCNTR.6868629",
+        "entidad": "ALCALDIA MUNICIPIO DE CAJICA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA CALAHORRA",
+        "estado": "En ejecución",
+        "valor": 15501424.4,
+        "pagado": 15000000.0,
+        "fecha_fin": "2024-12-16",
+        "objeto": "CONVENIO SOLIDARIO ENTRE EL MUNICIPIO DE CAJICA Y LA JUNTA DE ACCION COMUNAL DE CALAHORRA PARA EL CAMBIO DEL PISO DEL SALON COMUNAL"
+      }
+    ]
+  },
+  "municipio": "Cajicá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 50.0,
+  "nivel": "medio",
+  "posicion": 37.0,
+  "total_rankeados": 71
+}

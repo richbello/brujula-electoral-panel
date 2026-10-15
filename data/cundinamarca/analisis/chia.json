@@ -1,0 +1,295 @@
+{
+  "resumen": {
+    "contratos": 6615,
+    "valor_total": 738898090703.35,
+    "entidades": 6,
+    "proveedores": 2659
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 92.2751,
+    "pct_directa_valor": 48.7949,
+    "hhi": 215.62047736065702,
+    "top1_proveedor_pct": 8.877673976345843,
+    "top5_proveedores_pct": 27.186342660835322,
+    "pareto_proveedores_80pct_valor": 502,
+    "pct_con_adicion": 22.721088435374153,
+    "top_proveedores": [
+      {
+        "proveedor": "Unión Temporal Avanzando y Nutriendo en Acción",
+        "documento": "901901791",
+        "valor": 64938000000.0,
+        "contratos": 1,
+        "participacion_pct": 8.8777
+      },
+      {
+        "proveedor": "BANCO AGRARIO DE COLOMBIA S.A.",
+        "documento": "800037800",
+        "valor": 40000000000.0,
+        "contratos": 1,
+        "participacion_pct": 5.4684
+      },
+      {
+        "proveedor": "FUNDACION MUCIPALIDAD",
+        "documento": "830051472",
+        "valor": 35291841101.33,
+        "contratos": 5,
+        "participacion_pct": 4.8247
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE CHIA E.S.P.",
+        "documento": "899999714",
+        "valor": 32685284328.260002,
+        "contratos": 14,
+        "participacion_pct": 4.4684
+      },
+      {
+        "proveedor": "SEGURIDAD FENIX DE COLOMBIA LTDA",
+        "documento": "800234493",
+        "valor": 25946279530.0,
+        "contratos": 7,
+        "participacion_pct": 3.5471
+      },
+      {
+        "proveedor": "UT CHIA 2024",
+        "documento": "901885334",
+        "valor": 25167284896.0,
+        "contratos": 1,
+        "participacion_pct": 3.4406
+      },
+      {
+        "proveedor": "UNION TEMPORAL IDEANDO SOLUCIONES",
+        "documento": "901804475",
+        "valor": 16688081323.0,
+        "contratos": 2,
+        "participacion_pct": 2.2814
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 16089169817.0,
+        "contratos": 16,
+        "participacion_pct": 2.1996
+      },
+      {
+        "proveedor": "UNION TEMPORAL EQUIPOS CHIA",
+        "documento": "901901796",
+        "valor": 15283777452.0,
+        "contratos": 1,
+        "participacion_pct": 2.0894
+      },
+      {
+        "proveedor": "cuerpo de bomberos voluntarios de chía",
+        "documento": "800119135",
+        "valor": 12287066000.0,
+        "contratos": 3,
+        "participacion_pct": 1.6798
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7180851",
+        "entidad": "ALCALDIA MUNICIPAL DE CHIA",
+        "proveedor": "Unión Temporal Avanzando y Nutriendo en Acción",
+        "modalidad": "Licitación pública",
+        "valor": 64938000000.0,
+        "fecha_firma": "2024-12-28",
+        "objeto": "SUMINISTRO DE ALIMENTACIÓN ESCOLAR A TRAVÉS DEL CUAL SE BRINDE UN COMPLEMENTO ALIMENTARIO Y/O TIPO ALMUERZO A LOS NIÑOS; NIÑAS Y ADOLESCENTES DE LAS INSTITUCIONES EDUCATIVAS OFICIALES (IEO) DEL MUNICIPIO DE CHÍA; DE ACUERDO CON LOS LINEAMIENTOS TÉCNICOS Y ADMINISTRATIVOS DEL PROGRAMA DE ALIMENTACIÓN"
+      },
+      {
+        "id": "CO1.PCCNTR.7144220",
+        "entidad": "ALCALDIA MUNICIPAL DE CHIA",
+        "proveedor": "BANCO AGRARIO DE COLOMBIA S.A.",
+        "modalidad": "Contratación directa",
+        "valor": 40000000000.0,
+        "fecha_firma": "2024-12-24",
+        "objeto": "PRÉSTAMO A TÍTULO DE EMPRÉSTITO DE LARGO PLAZO DE DEUDA PÚBLICA POR LA SUMA DE CUARENTA MIL MILLONES DE PESOS M/CTE ($40.000.000.000.oo) CELEBRADO ENTRE EL MUNICIPIO DE CHIA Y EL BANCO AGRARIO"
+      },
+      {
+        "id": "CO1.PCCNTR.6964237",
+        "entidad": "ALCALDIA MUNICIPAL DE CHIA",
+        "proveedor": "UT CHIA 2024",
+        "modalidad": "Licitación pública",
+        "valor": 25167284896.0,
+        "fecha_firma": "2024-10-31",
+        "objeto": "PRESTACIÓN DEL SERVICIO DE VIGILANCIA Y SEGURIDAD PRIVADA EN LOS EDIFICIOS DE LA ALCALDIA MUNICIPAL DE CHIA Y EN LAS INSTITUCIONES EDUCATIVAS OFICIALES DEL MUNICIPIO A TRAVES DE MEDIOS HUMANOS; EN LAS MODALIDADES FIJA; MOVIL; CON ARMA; SIN ARMA"
+      },
+      {
+        "id": "CO1.PCCNTR.7041626",
+        "entidad": "ALCALDIA MUNICIPAL DE CHIA",
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE CHIA E.S.P.",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 16780173422.25,
+        "fecha_firma": "2024-11-20",
+        "objeto": "AUNAR ESFUERZOS TECNICOS Y FINANCIEROS ENTRE LA EMPRESA DE SERVICIOS PUBLICOS DE CHIA  EMSERCHIA E.S.P. Y EL MUNICIPIO DE CHÍA PARA LA IMPLEMENTACION Y MEJORAMIENTO DEL SISTEMA DE ACUEDUCTO Y ALCANTARILLADO SANITARIO Y PLUVIAL DEL MUNICIPIO DE CHÍA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7176604",
+        "entidad": "ALCALDIA MUNICIPAL DE CHIA",
+        "proveedor": "UNION TEMPORAL EQUIPOS CHIA",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 15283777452.0,
+        "fecha_firma": "2024-12-27",
+        "objeto": "ADQUISICION DE VEHICULOS PARA EL FUNCIONAMIENTO DE LA ADMINISTRACION CENTRAL; LA POLICIA; EL EJERCITO NACIONAL Y EL CUERPO DE BOMBEROS DEL MUNICIPIO DE CHIA  CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE CHIA",
+        "contratos": 3320,
+        "valor": 580032594554.33
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL CHIA",
+        "contratos": 130,
+        "valor": 4039945058.67
+      },
+      {
+        "entidad": "IDUVI",
+        "contratos": 199,
+        "valor": 25847201818.88
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL DE RECREACIÓN Y DEPORTES DE CHIA",
+        "contratos": 1167,
+        "valor": 50612973286.5
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE CHIA",
+        "contratos": 137,
+        "valor": 4004845896.0
+      },
+      {
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CDA",
+        "contratos": 1573,
+        "valor": 74360530088.97
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 27,
+    "valor_obras": 24409591358.41,
+    "obras_vencidas_abiertas": 11,
+    "valor_obras_vencidas_abiertas": 9977029225.03,
+    "pct_obras_vencidas_abiertas": 40.74074074074074,
+    "pct_pagado_obras_vencidas_abiertas": 78.0696,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7095644",
+        "entidad": "IDUVI",
+        "proveedor": "CUMBRE INGENIERÍA SAS",
+        "estado": "Modificado",
+        "valor": 2320976924.0,
+        "pagado": 2320976924.0,
+        "fecha_fin": "2025-10-02",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LA PLAZA DE MERCADO EL CACIQUE DEL MUNICIPIO DE CHIA CUNDINAMARCA;"
+      },
+      {
+        "id": "CO1.PCCNTR.7147898",
+        "entidad": "IDUVI",
+        "proveedor": "VISUAR",
+        "estado": "Modificado",
+        "valor": 1659429858.0,
+        "pagado": 1480927387.16,
+        "fecha_fin": "2026-01-30",
+        "objeto": "MANTENIMIENTO; ADECUACIÓN Y MEJORAMIENTO DE LA CASA DE LA CULTURA Y AUDITORIO ZEA MAYS DEL MUNICIPIO DE CHIA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8393477",
+        "entidad": "IDUVI",
+        "proveedor": "ORTIZ Y CARRILLO INGENIERIA S.A.S",
+        "estado": "Modificado",
+        "valor": 1647596564.0,
+        "pagado": 1647596564.0,
+        "fecha_fin": "2026-01-31",
+        "objeto": "CONSTRUCCIÓN Y ADECUACIÓN DE CERRAMIENTOS Y OBRAS COMPLEMENTARIAS EN LOS PREDIOS DE IMPORTANCIA ESTRATEGICA HIDRICA Y AMBIENTAL DEL MUNICIPIO DE CHÍA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8100263",
+        "entidad": "ALCALDIA MUNICIPAL DE CHIA",
+        "proveedor": "CONSORCIO PUENTES CIC",
+        "estado": "Suspendido",
+        "valor": 1371650633.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-24",
+        "objeto": "INTERVENCIÓN DE REDES ELÉCTRICAS AÉREAS Y CONSTRUCCIÓN RAMPA COSTADO NORTE DEL PUENTE PEATONAL LOCALIZADO EN LA VÍA QUE DEL SECTOR LA CARO CONDUCE AL CASCO URBANO DEL MUNICIPIO DE CHÍA; EN EL PR7 DEL CORREDOR VIAL BOGOTÁ - CHÍA"
+      },
+      {
+        "id": "CO1.PCCNTR.8640195",
+        "entidad": "IDUVI",
+        "proveedor": "ORTIZ Y CARRILLO INGENIERIA S.A.S",
+        "estado": "Modificado",
+        "valor": 629556687.0,
+        "pagado": 629556687.0,
+        "fecha_fin": "2026-06-05",
+        "objeto": "OBRAS DE MANTENIMIENTO Y ADECUACIÓN DE INFRAESTRUCTURA EN EL MUNICIPIO DE CHÍA CUNDINAMARCA; CONSISTENTE EN: 1. MANTENIMIENTO Y ADECUACIÓN DEL POLIDEPORTIVO MERCEDES DE CALAHORRA. 2. MANTENIMIENTO Y ADECUACIÓN DE LA BIBLIOTECA PÚBLICA MERCEDES DE CALAHORRA"
+      },
+      {
+        "id": "CO1.PCCNTR.8545085",
+        "entidad": "IDUVI",
+        "proveedor": "CONSORCIO INFRADESARROLLO",
+        "estado": "Modificado",
+        "valor": 623787514.0,
+        "pagado": 263618396.0,
+        "fecha_fin": "2026-06-20",
+        "objeto": "OBRAS DE CONSTRUCCIÓN; MANTENIMIENTO Y ADECUACIÓN DE INFRAESTRUCTURA EN EL MUNICIPIO DE CHÍA CUNDINAMARCA; CONSISTENTE EN: 1. MANTENIMIENTO Y ADECUACIÓN DE PARQUES INFANTILES UBICADOS EN LA ZONA RURAL Y URBANA DEL MUNICIPIO. 2. CONSTRUCCIÓN Y MANTENIMIENTO DE CERRAMIENTO EN LA VEREDA SAMARIA PREDIO EL CARMEN. 3. CONSTRUCCIÓN Y MANTENIMIENTO DE CERRAMIENTO Y MALLA CONTRA IMPACTO EN LA VEREDA SAMARIA EN EL PREDIO VILLA PATRICIA"
+      },
+      {
+        "id": "CO1.PCCNTR.7017123",
+        "entidad": "IDUVI",
+        "proveedor": "CONSORCIO CERRAMIENTOS 2024",
+        "estado": "Modificado",
+        "valor": 543800000.0,
+        "pagado": 543800000.0,
+        "fecha_fin": "2025-03-31",
+        "objeto": "CONSTRUCCIÓN Y MANTENIMIENTO DE CERRAMIENTOS Y OBRAS COMPLEMENTARIAS EN EL SECTOR DE BOJACA; BACHUE; SAN LUIS Y SANTA LUCIA PREDIOS PROPIEDAD DEL MUNICIPIO DE CHIA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7003901",
+        "entidad": "IDUVI",
+        "proveedor": "INVERSIONES DAJUSANCHEZ S.A.S.",
+        "estado": "Modificado",
+        "valor": 536272647.0,
+        "pagado": 536272647.0,
+        "fecha_fin": "2025-04-15",
+        "objeto": "MANTENIMIENTO; MEJORAMIENTO Y ADECUACIÓN DEL PARQUE PRINCIPAL SANTANDER DEL MUNICIPIO DE CHIA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8490423",
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CDA",
+        "proveedor": "Union Temporal Ch Bojaca",
+        "estado": "Modificado",
+        "valor": 311379979.0,
+        "pagado": 311379979.0,
+        "fecha_fin": "2026-05-29",
+        "objeto": "Contratar las obras de adecuación y construcción en las edificaciones que\nhacen parte del Centro de Desarrollo Agroempresarial del SENA"
+      },
+      {
+        "id": "CO1.PCCNTR.7109004",
+        "entidad": "INSTITUTO MUNICIPAL DE RECREACIÓN Y DEPORTES DE CHIA",
+        "proveedor": "JR FONSECA ING",
+        "estado": "Modificado",
+        "valor": 277677381.03,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-26",
+        "objeto": "ADECUACIÓN; SUMINISTRO E INSTALACIÓN DEL PARQUE INFANTIL A CARGO DEL INSTITUTO MUNICIPAL DE RECREACION Y DEPORTES DE CHÍA PARA EL FORTALECIMIENTO Y GENERACIÓN DE ESPACIOS RECREATIVOS Y COMUNITARIOS EN SAMARIA"
+      },
+      {
+        "id": "CO1.PCCNTR.7874832",
+        "entidad": "IDUVI",
+        "proveedor": "ORTIZ Y CARRILLO INGENIERIA S.A.S",
+        "estado": "Modificado",
+        "valor": 54901038.0,
+        "pagado": 54901038.0,
+        "fecha_fin": "2025-07-25",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN CERRAMIENTO DEL PARQUEADERO DE LA SECRE-TARÍA DE MOVILIDAD DEL MUNICIPIO DE CHÍA CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Chía",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 50.6,
+  "nivel": "medio",
+  "posicion": 34.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,471 @@
+{
+  "resumen": {
+    "contratos": 13888,
+    "valor_total": 2306020907786.38,
+    "entidades": 23,
+    "proveedores": 5483
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 55.3139,
+    "pct_directa_valor": 66.164,
+    "hhi": 397.90203801064945,
+    "top1_proveedor_pct": 11.08872463298289,
+    "top5_proveedores_pct": 40.5223699427535,
+    "pareto_proveedores_80pct_valor": 175,
+    "pct_con_adicion": 21.442972350230416,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 250000000000.0,
+        "contratos": 2,
+        "participacion_pct": 11.0887
+      },
+      {
+        "proveedor": "Banco Davivienda",
+        "documento": "8600343137",
+        "valor": 231000000000.0,
+        "contratos": 2,
+        "participacion_pct": 10.246
+      },
+      {
+        "proveedor": "BANCO BILBAO VIZCAYA ARGENTARIA S.A. (OFICIAL)",
+        "documento": "860003020",
+        "valor": 166510000000.0,
+        "contratos": 3,
+        "participacion_pct": 7.3855
+      },
+      {
+        "proveedor": "BANCO AV VILLAS",
+        "documento": "860035827",
+        "valor": 147195000000.0,
+        "contratos": 4,
+        "participacion_pct": 6.5288
+      },
+      {
+        "proveedor": "BANCO AGRARIO DE COLOMBIA S.A.",
+        "documento": "800037800",
+        "valor": 118889017436.0,
+        "contratos": 1,
+        "participacion_pct": 5.2733
+      },
+      {
+        "proveedor": "SEGUROS DEL ESTADO S.A.",
+        "documento": "860009578",
+        "valor": 63734142120.0,
+        "contratos": 13,
+        "participacion_pct": 2.8269
+      },
+      {
+        "proveedor": "UNIÓN TEMPORAL APOYO INTEGRAL A LA ADMINISTRACIÓN TRIBUTARIA DEPARTAMENTAL 2.026",
+        "documento": "902064845",
+        "valor": 62904828000.0,
+        "contratos": 1,
+        "participacion_pct": 2.7901
+      },
+      {
+        "proveedor": "COOPERATIVA MULTIACTIVA MINUTO DE DIOS",
+        "documento": "830086712",
+        "valor": 60896375252.0,
+        "contratos": 2,
+        "participacion_pct": 2.7011
+      },
+      {
+        "proveedor": "FINANCIERA DE DESARROLLO TERRITORIAL S.A.",
+        "documento": "800096329",
+        "valor": 40000000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.7742
+      },
+      {
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "documento": "900258772",
+        "valor": 35589364958.0,
+        "contratos": 12,
+        "participacion_pct": 1.5786
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7848622",
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA-SECRETARIA DE HACIENDA",
+        "proveedor": "Banco Davivienda",
+        "modalidad": "Contratación directa",
+        "valor": 195000000000.0,
+        "fecha_firma": "2025-05-06",
+        "objeto": "EL PRESTAMISTA se obliga para con EL PRESTATARIO a prestarle; a título de empréstito interno; la suma de CIENTO NOVENTA Y CINCO MIL MILLONES DE PESOS M/CTE. ($195.000.000.000). Línea Finagro; en la modalidad de empréstito de largo plazo de deuda pública interna."
+      },
+      {
+        "id": "CO1.PCCNTR.7951079",
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA-SECRETARIA DE HACIENDA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 159315000000.0,
+        "fecha_firma": "2025-06-05",
+        "objeto": "EL PRESTAMISTA ha acordado prestar a EL PRESTATARIO hasta la suma CIENTO CINCUENTA Y NUEVE MIL TRESCIENTOS QUINCE MILLONES PESOS M/CTE ($159.315.000.000) la cual se entregará a su perfeccionamiento y una vez se haya acreditado el cumplimiento de la totalidad de los requisitos legales."
+      },
+      {
+        "id": "CO1.PCCNTR.8652069",
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA-SECRETARIA DE HACIENDA",
+        "proveedor": "BANCO BILBAO VIZCAYA ARGENTARIA S.A. (OFICIAL)",
+        "modalidad": "Contratación directa",
+        "valor": 150000000000.0,
+        "fecha_firma": "2025-11-28",
+        "objeto": "EL PRESTAMISTA se obliga para con EL PRESTATARIO a prestarle; a título de empréstito interno; la suma de CIENTO CINCUENTA MIL MILLONES DE PESOS $150.000.000.000 M/CTE en la modalidad de empréstito de largo plazo de deuda pública interna"
+      },
+      {
+        "id": "CO1.PCCNTR.6949984",
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA-SECRETARIA DE HACIENDA",
+        "proveedor": "BANCO AGRARIO DE COLOMBIA S.A.",
+        "modalidad": "Contratación directa",
+        "valor": 118889017436.0,
+        "fecha_firma": "2024-10-25",
+        "objeto": "EL PRESTAMISTA ha acordado prestar al EL PRESTATARIO hasta la suma de CIENTO DIECIOCHO MIL OCHOCIENTOS OCHENTA Y NUEVE MILLONES DIECISIETE MIL CUATROCIENTOS TREINTA Y SEIS PESOS M/L ($118.889.017.436); para sustituir la deuda relacionada en la CONSIDERACIÓN 9; la cual se entregará a su perfeccionamiento y una vez se haya acreditado el cumplimiento de la totalidad de los requisitos legales."
+      },
+      {
+        "id": "CO1.PCCNTR.7753477",
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA-SECRETARIA DE HACIENDA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 90685000000.0,
+        "fecha_firma": "2025-04-07",
+        "objeto": "EL PRESTAMISTA HA ACORDADO PRESTAR AL PRESTATARIO HASTA LA SUMA DE NOVENTA MIL SEISCIENTOS OCHENTA Y CINCO MILLONES DE PESOS M/CTE ($90.685.000.000); PARA SUSTITUIR LA DEUDA RELACIONADA EN LA CONSIDERACIÓN 9; LA CUAL SE ENTREGA A SU PERFECCIONAMIENTO Y UNA VEZ SE HAYA ACREDITADO EL CUMPLIMIENTO DE LA TOTALIDAD DE LOS REQUISITOS LEGALES."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA DE VERGARA CUNDINAMARCA",
+        "contratos": 358,
+        "valor": 7462583871.0
+      },
+      {
+        "entidad": "ALCALDIA MUNICIPIO CARMEN DE CARUPA",
+        "contratos": 470,
+        "valor": 13440279638.08
+      },
+      {
+        "entidad": "ALCALDÍA MUNICIPAL DE JERUSALEN",
+        "contratos": 2,
+        "valor": 265330778.3
+      },
+      {
+        "entidad": "ASAMBLEA DEPARTAMENTAL DE CUNDINAMARCA",
+        "contratos": 406,
+        "valor": 13411907040.0
+      },
+      {
+        "entidad": "Asocentro",
+        "contratos": 83,
+        "valor": 6629763394.0
+      },
+      {
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE ESPECIALIZADA INTELIGENCIA",
+        "contratos": 216,
+        "valor": 36682821340.67
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE FUSAGASUGA",
+        "contratos": 53,
+        "valor": 742722217.0
+      },
+      {
+        "entidad": "Contraloría Municipal de Soacha",
+        "contratos": 38,
+        "valor": 297825417.78
+      },
+      {
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "contratos": 1558,
+        "valor": 415954783370.66
+      },
+      {
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA-SECRETARIA DE HACIENDA",
+        "contratos": 1178,
+        "valor": 1255260157393.27
+      },
+      {
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA-SECRETARIA DE LA MUJER Y EQUIDAD DE GENERO+",
+        "contratos": 631,
+        "valor": 47007394097.0
+      },
+      {
+        "entidad": "EMPRESA SOCIAL DEL ESTADO HOSPITAL PROFESOR JORGE CAVELIER",
+        "contratos": 1,
+        "valor": 143120000.0
+      },
+      {
+        "entidad": "ESCUELA DE FORMACION INPEC",
+        "contratos": 955,
+        "valor": 12628255673.74
+      },
+      {
+        "entidad": "ESCUELA DE SUBOFICIALES  FAC CT ANDRES M DIAZ",
+        "contratos": 236,
+        "valor": 19556228709.04
+      },
+      {
+        "entidad": "ESE HOSPITAL NUESTRA SEÑORA DE LAS MERCEDES FUNZA DEL MUNICIPIO DE FUNZA",
+        "contratos": 2248,
+        "valor": 185640993164.0
+      },
+      {
+        "entidad": "ESE HOSPITAL SALAZAR DE VILLETA",
+        "contratos": 2912,
+        "valor": 89393946569.45
+      },
+      {
+        "entidad": "FONDO DE PASIVO SOCIAL DE FERROCARRILES NACIONALES DE COLOMBIA ENTIDAD",
+        "contratos": 1306,
+        "valor": 109074496134.96
+      },
+      {
+        "entidad": "INDER SESQUILE",
+        "contratos": 60,
+        "valor": 1226909226.0
+      },
+      {
+        "entidad": "MUNICIPIO DE ANAPOIMA/",
+        "contratos": 888,
+        "valor": 74916607615.78
+      },
+      {
+        "entidad": "MUNICIPIO DE CABRERA",
+        "contratos": 2,
+        "valor": 183851250.0
+      },
+      {
+        "entidad": "MUNICIPIO DE GRANADA CUNDINAMARCA",
+        "contratos": 7,
+        "valor": 271107214.0
+      },
+      {
+        "entidad": "MUNICIPIO DE PANDI",
+        "contratos": 251,
+        "valor": 15511578628.65
+      },
+      {
+        "entidad": "MUNICIPIO DE UNE",
+        "contratos": 1,
+        "valor": 318245043.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 94,
+    "valor_obras": 42363002460.34,
+    "obras_vencidas_abiertas": 65,
+    "valor_obras_vencidas_abiertas": 12164900072.84,
+    "pct_obras_vencidas_abiertas": 69.14893617021278,
+    "pct_pagado_obras_vencidas_abiertas": 49.7416,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7926004",
+        "entidad": "ESCUELA DE FORMACION INPEC",
+        "proveedor": "CORTES IBARRA INGENIERÍA SAS",
+        "estado": "Modificado",
+        "valor": 1199597900.37,
+        "pagado": 0.0,
+        "fecha_fin": "2025-09-30",
+        "objeto": "CONTRATAR EL SERVICIO DE CONSTRUCCION; ADECUACION; MANTENIMIENTO DE AREAS ARQUITECTONICAS Y RED CONTRA INCENDIOS SEGUNDA FASE PARA LA ESCUELA DE FORMACION INPEC"
+      },
+      {
+        "id": "CO1.PCCNTR.7911876",
+        "entidad": "ESCUELA DE SUBOFICIALES  FAC CT ANDRES M DIAZ",
+        "proveedor": "JORGE HERNAN GUTIERREZ RIVERA",
+        "estado": "Modificado",
+        "valor": 1154548354.81,
+        "pagado": 1154548354.81,
+        "fecha_fin": "2025-10-10",
+        "objeto": "MANTENIMIENTO Y ADECUACION DEL ESCENARIO DEPORTIVO PISTA DE ATLETISMO DE LA ESCUELA DE SUBOFICIALES CT ANDRES M DIAZ"
+      },
+      {
+        "id": "CO1.PCCNTR.6464124",
+        "entidad": "ESCUELA DE SUBOFICIALES  FAC CT ANDRES M DIAZ",
+        "proveedor": "DEJO CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 1109440867.0,
+        "pagado": 1109440867.0,
+        "fecha_fin": "2025-04-20",
+        "objeto": "MANTENIMIENTO PREVENTIVO CORRECTIVO Y MEJORATIVO DE LAS INSTALACIONES DE LA ESCUELA DE SUBOFICIALES CT ANDRES M DÍAZ"
+      },
+      {
+        "id": "CO1.PCCNTR.6516711",
+        "entidad": "ESCUELA DE FORMACION INPEC",
+        "proveedor": "CONSORCIO OPS 2024.",
+        "estado": "Modificado",
+        "valor": 849456547.66,
+        "pagado": 0.0,
+        "fecha_fin": "2024-10-30",
+        "objeto": "CONTRATAR EL SERVICIO DE CONSTRUCCION; ADECUACION Y MANTENIMIENTO DE AREAS ARQUITECTONICAS PARA LA ESCUELA DE FORMACION INPEC"
+      },
+      {
+        "id": "CO1.PCCNTR.7907272",
+        "entidad": "ESCUELA DE SUBOFICIALES  FAC CT ANDRES M DIAZ",
+        "proveedor": "AVANZAR INGENIERIA HAL SAS",
+        "estado": "Modificado",
+        "valor": 845691370.09,
+        "pagado": 845691370.09,
+        "fecha_fin": "2025-10-30",
+        "objeto": "MANTENIMIENTO PREVENTIVO; CORRECTIVO Y MEJORATIVO DE LAS INSTALACIONES DE LA ESCUELA DE SUBOFICIALES CT ANDRÉS M DÍAZ"
+      },
+      {
+        "id": "CO1.PCCNTR.8460588",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE ESPECIALIZADA INTELIGENCIA",
+        "proveedor": "MONVAL GROUP S.A.S",
+        "estado": "Modificado",
+        "valor": 699360477.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-22",
+        "objeto": "SERVICIOS DE INSTALACION Y ADECUACION DE TECHOS Y CUBIERTA PARA LOS EXTERIORES DE LA ESICI"
+      },
+      {
+        "id": "CO1.PCCNTR.9415017",
+        "entidad": "ESE HOSPITAL NUESTRA SEÑORA DE LAS MERCEDES FUNZA DEL MUNICIPIO DE FUNZA",
+        "proveedor": "arkan arquitectura",
+        "estado": "Modificado",
+        "valor": 504329534.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-14",
+        "objeto": "REALIZAR LA ADECUACIÓN MENOR PARA LA E.S.E HOSPITAL NUESTRA SEÑORA DE LAS MERCEDES DEL MUNICIPIO DE FUNZA; CUNDINAMARCA EN CUMPLIMIENTO DE LAS CONDICIONES DE HABILITACIÓN ESTABLECIDAS EN LA RESOLUCIÓN 3100 DE 2019 DE CONFORMIDAD A LA RESOLUCIÓN 1487 DEL 21 DE JULIO DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.9474652",
+        "entidad": "MUNICIPIO DE ANAPOIMA/",
+        "proveedor": "Guarium",
+        "estado": "En ejecución",
+        "valor": 448892409.0,
+        "pagado": 355605397.0,
+        "fecha_fin": "2026-09-08",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CIRCACIA HACIA LA VEREDA LA GUASIMA SECTOR SANTA ROSA MUNICIPIO DE ANAPOIMA DEPARTAMENTO DE CUNDINAMARCA (CONVENIO ICCU-750- 2025) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA LUTAIMA HACIA LA VEREDA P ALMICHERA SECTOR NOPE MUNICIPIO DE ANAPOIMA; DEPARTAMENTO DE CUNDINAMARCA (CONVENIO ICCU-756-2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8717308",
+        "entidad": "ESE HOSPITAL SALAZAR DE VILLETA",
+        "proveedor": "CONSORCIO CONSTRUSALAZAR",
+        "estado": "Modificado",
+        "valor": 394913764.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-18",
+        "objeto": "CONSTRUCCION DEL SERVICIO DE IMÁGENES DIAGNOSTICAS IONIZANTES DEL CENTRO DE SALUD LA PEÑA; ADSCRITO A LA E.S.E. HOSPITAL SALAZAR DE VILLETA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9182233",
+        "entidad": "MUNICIPIO DE ANAPOIMA/",
+        "proveedor": "INGENIERIA CONSTRUCCION Y VIAS DE COLOMBIA S.A.S.",
+        "estado": "Modificado",
+        "valor": 387612397.0,
+        "pagado": 352148878.02,
+        "fecha_fin": "2026-07-18",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA EL ROSARIO HACIA LA VEREDA SANTA ANA SECTOR EL PEDREGAL MUNICIPIO DE ANAPOIMA; DEPARTAMENTO CUNDINAMARCA (CONVENIO ICCU-466-2025); MEJORAMIENTO DE LA VÍAQUE CONDUCE DE LA VEREDA HIGUERON HACIA LA VEREDA LA CHICASECTOR LA PARRILLA MUNICIPIO DE ANAPOIMA; DEPARTAMENTO DE CUNDINAMARCA (CONVENIO ICCU-542-2025) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA LA ESMERALDA HACIA LA VEREDA PANAMA SECTOR EL RUBI MUNICIPIO DE ANAPOIMA..."
+      },
+      {
+        "id": "CO1.PCCNTR.9402119",
+        "entidad": "MUNICIPIO DE PANDI",
+        "proveedor": "PEDRO POSADA GRACIA",
+        "estado": "Modificado",
+        "valor": 386226400.0,
+        "pagado": 386226400.0,
+        "fecha_fin": "2026-09-04",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA ZONA URBANA; A LA VEREDA SANTA HELENA ALTA EN EL SECTOR LA SOLEDAD; DEL MUNICIPIO DE PANDI; CUNDINAMARCA CONVENIO No. ICCU-CTO-1385-2025; DE LA VIA QUE CONDUCE DE LA ZONA URBANA A LA VEREDA BUENOS AIRES EN EL SECTOR TRAVESÍA LAS ESCUELAS; DEL MUNICIPIO DE PANDI; CUNDINAMARCA CONVENIO No. ICCU-1450-2025; VIA QUE CONDUCE DE LA ZONA URBANA; A LA VEREDA GUACANONZO ALTO EN EL SECTOR LAS ANGUSTIAS; DEL MUNICIPIO DE PANDI; CUNDINAMARCA CONVENIO No. ICCU-CTO-1428"
+      },
+      {
+        "id": "CO1.PCCNTR.9356452",
+        "entidad": "MUNICIPIO DE ANAPOIMA/",
+        "proveedor": "JASA LTDA",
+        "estado": "Modificado",
+        "valor": 366053503.0,
+        "pagado": 56298292.0,
+        "fecha_fin": "2026-08-27",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA PANAMA HACIA LA VEREDA LA ESMERALDA SECTOR VILLA BONITA MUNICIPIO DE ANAPOIMA; DEPARTAMENTO DE CUNDINAMARCA (CONVENIO ICCU -557-2025) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SAN JOSE HACIA LA VEREDA LAS MERCEDES SECTOR LA CAPOTA MUNICIPIO DE ANAPOIMA; DEPARTAMENTO DE CUNDINAMARA. (CONVENIO ICCU -530-2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8421283",
+        "entidad": "ALCALDIA MUNICIPIO CARMEN DE CARUPA",
+        "proveedor": "BLACKMONT INGENIERIAS SAS",
+        "estado": "En ejecución",
+        "valor": 357766280.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "CONTRATO DE OBRA PUBLICA PARA EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO HACIA LA VEREDA PLAYA SECTOR EL PUENTE RÍO DEL MUNICIPIO DE CARMEN DE CARUPA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9402534",
+        "entidad": "MUNICIPIO DE PANDI",
+        "proveedor": "JQ INGENIERIA CIVIL SAS",
+        "estado": "En ejecución",
+        "valor": 292203918.0,
+        "pagado": 194802612.0,
+        "fecha_fin": "2026-09-30",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA ZONA URBANA; A LAVEREDA MERCADILLO EN EL SECTOR EL CAMBULO DEL MUNICIPIO DE PANDI DEPARTAMENTO DE CUNDINAMARCA DEL CONVENIO No. ICCU-1324-2025; VIA QUE CONDUCE DE LA ZONA URBANA A LA VEREDA MERCADILLO EN EL SECTOR LA CHISGUA DEL MUNICIPIO DE PANDI DEPARTAMENTO DE CUNDINAMARCA CONVENIO No. ICCU 1325-2025; VIA QUE CONDUCE DE LA ZONA URBANA A LA VEREDA SAN MIGUEL EN EL SECTOR EL PORTON DEL MUNICIPIO DE PANDI DEPARTAMENTO DE CUNDINAMARCA CONVENIO No. 1326-202"
+      },
+      {
+        "id": "CO1.PCCNTR.8058143",
+        "entidad": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "proveedor": "MUNICIPIO DE LA PEÑA CUNDINAMARCA",
+        "estado": "En ejecución",
+        "valor": 289215720.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-05",
+        "objeto": "AUNAR ESFUERZOS ENTRE EL DEPARTAMENTO DE\nCUNDINAMARCA - SECRETARÍA DE EDUCACIÓN Y LOS MUNICIPIOS\nFOCALIZADOS PARA LA ESTRATEGIA DE MOVILIDAD ESCOLAR; DIRIGIDO A\nESTUDIANTES DE LAS IED OFICIALES; ASEGURANDO LAS CONDICIONES\nNECESARIAS PARA SU ACCESO Y PERMANENCIA EN EL SISTEMA\nEDUCATIVO."
+      },
+      {
+        "id": "CO1.PCCNTR.7886046",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE ESPECIALIZADA INTELIGENCIA",
+        "proveedor": "ARMELCO SAS",
+        "estado": "En ejecución",
+        "valor": 255018376.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-30",
+        "objeto": "SERVICIOS DE MANTENIMIENTO DE BIENES INMUEBLES PARA LAS UNIDADES CENTRALIZADAS POR LA CENAC IMI"
+      },
+      {
+        "id": "CO1.PCCNTR.9399848",
+        "entidad": "ESE HOSPITAL NUESTRA SEÑORA DE LAS MERCEDES FUNZA DEL MUNICIPIO DE FUNZA",
+        "proveedor": "INKAG CONSULTORÌA INGENIERÌA SAS",
+        "estado": "Modificado",
+        "valor": 210233452.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-30",
+        "objeto": "REALIZAR LAS ADECUACIONES AL ÁREA DE CONSULTA EXTERNA DEL CENTRO DE SALUD DEL HATO DE LA E.S.E. DEL ORDEN DEPARTAMENTAL HOSPITAL NUESTRA SEÑORA DE LAS MERCEDES DE FUNZA EN CUMPLIMIENTO DE LAS CONDICIONES DE HABILITACIÓN ESTABLECIDAS EN LA RESOLUCIÓN 3100 DE 2019 Y EN LA TIPOLOGÍA DE LA RED DEPARTAMENTAL PP1. DE CONFORMIDAD A LA RESOLUCION 1487 DEL 21 DE JULIO DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.8750430",
+        "entidad": "MUNICIPIO DE PANDI",
+        "proveedor": "WILLIAM FERIA DIAZ",
+        "estado": "Modificado",
+        "valor": 187073596.26,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-30",
+        "objeto": "REPOSICION DE REDES DE ALCANTARILLADO SANITARIO DE LA CARRERA 5 ENTRE LAS CALLES 4 Y 3 DEL CASCO URBANO DEL MUNICIPIO DE PANDI; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9330228",
+        "entidad": "MUNICIPIO DE ANAPOIMA/",
+        "proveedor": "Guarium",
+        "estado": "En ejecución",
+        "valor": 148702133.0,
+        "pagado": 148702133.0,
+        "fecha_fin": "2026-04-22",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA APICATA HACIA EL CASCO URBANO SECTOR APOSENTOS MUNICIPIO DE ANAPOIMA; DEPARTAMENTO DE CUNDINAMARCA. CONVENIO ICCU-692-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9399849",
+        "entidad": "ESE HOSPITAL NUESTRA SEÑORA DE LAS MERCEDES FUNZA DEL MUNICIPIO DE FUNZA",
+        "proveedor": "INKAG CONSULTORÌA INGENIERÌA SAS",
+        "estado": "Modificado",
+        "valor": 142224754.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-30",
+        "objeto": "REALIZAR LAS ADECUACIONES AL ÁREA DE CONSULTA EXTERNA DEL CENTRO DE SALUD DE SIETE TROJES DE LA E.S.E. DEL ORDEN DEPARTAMENTAL HOSPITAL NUESTRA SEÑORA DE LAS MERCEDES DE FUNZA EN CUMPLIMIENTO DE LAS CONDICIONES DE HABILITACIÓN ESTABLECIDAS EN LA RESOLUCIÓN 3100 DE 2019 Y EN LA TIPOLOGÍA DE LA RED DEPARTAMENTAL PP1. DE CONFORMIDAD A LA RESOLUCION 1487 DEL 21 DE JULIO DE 2025."
+      }
+    ]
+  },
+  "municipio": "No Definido",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Contratos sin municipio definido en SECOP II."
+}

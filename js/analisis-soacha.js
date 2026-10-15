@@ -59,7 +59,7 @@
 
   /* ---------- estilos ---------- */
   const CSS = `
-  #bt-root{--ink:#0F1C2E;--forest:#13273D;--forest2:#1E3A57;--gold:#C8A560;--gold-d:#A98841;--gold-s:#F4EDDA;--paper:#F4F6F9;--card:#fff;--line:#E2E8F0;--muted:#6B7A90;--soft:#F4F6F9;
+  #bt-root{--ink:#150B3D;--forest:#241465;--forest2:#2E1A7A;--gold:#FFB020;--gold-d:#E08A00;--gold-s:#FFF3D6;--paper:#F3F1FF;--card:#fff;--line:#E0D9F7;--muted:#6B5E90;--soft:#F3F1FF;
     position:fixed;inset:0;z-index:9990;background:var(--paper);color:var(--ink);font-family:inherit;display:none;flex-direction:column;-webkit-font-smoothing:antialiased}
   #bt-root.bt-open{display:flex}
   #bt-root *{box-sizing:border-box}
@@ -69,11 +69,11 @@
   .bt-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
   .bt-kicker{color:var(--gold);font-weight:600;font-size:14px;margin:0 0 4px}
   .bt-title{margin:0;font-size:30px;line-height:1.1;font-weight:800;letter-spacing:.01em}
-  .bt-sub{margin:6px 0 0;color:#c9d1c8;font-size:14px}
+  .bt-sub{margin:6px 0 0;color:#C2E8D4;font-size:14px}
   .bt-close{background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:10px;padding:9px 16px;font-weight:600;cursor:pointer;font-size:14px}
   .bt-close:hover{border-color:var(--gold);color:var(--gold)}
   .bt-nav{display:flex;gap:4px;margin-top:18px;overflow-x:auto}
-  .bt-nav button{background:transparent;border:0;color:#c9d1c8;padding:12px 18px;font-size:15px;font-weight:600;cursor:pointer;border-radius:10px 10px 0 0;white-space:nowrap}
+  .bt-nav button{background:transparent;border:0;color:#C2E8D4;padding:12px 18px;font-size:15px;font-weight:600;cursor:pointer;border-radius:10px 10px 0 0;white-space:nowrap}
   .bt-nav button:hover{color:#fff}
   .bt-nav button[aria-selected=true]{background:var(--paper);color:var(--ink)}
   .bt-main{flex:1;overflow-y:auto;padding:32px}
@@ -87,12 +87,12 @@
   .bt-stat b{display:block;font-size:30px;font-weight:800;line-height:1.1}
   .bt-stat span{display:block;color:var(--muted);font-size:13px;margin-top:8px}
   .bt-stat.bt-accent{background:var(--forest);border-color:var(--forest);color:#fff}
-  .bt-stat.bt-accent small,.bt-stat.bt-accent span{color:#c9d1c8}
+  .bt-stat.bt-accent small,.bt-stat.bt-accent span{color:#C2E8D4}
   .bt-stat.bt-accent b{color:var(--gold)}
   .bt-find{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
   .bt-note{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:4px 14px 14px 4px;padding:18px 22px}
   .bt-note h4{margin:0 0 6px;font-size:16px;font-weight:700}
-  .bt-note p{margin:0;color:#3d4a40;font-size:14.5px;line-height:1.55}
+  .bt-note p{margin:0;color:#3B3560;font-size:14.5px;line-height:1.55}
   .bt-panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
   .bt-panel-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line)}
   .bt-panel-h h3{margin:0;font-size:17px;font-weight:700}
@@ -109,11 +109,11 @@
   .bt-seats{display:inline-flex;gap:3px;margin-left:10px;vertical-align:middle}
   .bt-seats i{width:9px;height:9px;border-radius:50%;background:var(--gold);display:inline-block}
   .bt-table{width:100%;border-collapse:collapse;font-size:14px}
-  .bt-table th{text-align:left;font-weight:600;color:var(--muted);font-size:13px;padding:11px 22px;border-bottom:1px solid var(--line);background:#faf9f5}
+  .bt-table th{text-align:left;font-weight:600;color:var(--muted);font-size:13px;padding:11px 22px;border-bottom:1px solid var(--line);background:#FFFBF0}
   .bt-table td{padding:11px 22px;border-bottom:1px solid var(--soft);font-variant-numeric:tabular-nums}
   .bt-table tr:last-child td{border-bottom:0}
   .bt-table td.r,.bt-table th.r{text-align:right}
-  .bt-up{color:#2f7a45;font-weight:600}.bt-down{color:#a2402f;font-weight:600}
+  .bt-up{color:#0E9F52;font-weight:600}.bt-down{color:#D62246;font-weight:600}
   .bt-grid2{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:start}
   .bt-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
   .bt-chip{background:var(--card);border:1px solid var(--line);color:var(--ink);padding:9px 16px;border-radius:999px;font-weight:600;font-size:14px;cursor:pointer}
@@ -125,7 +125,7 @@
   .bt-seg button[aria-pressed=true]{background:var(--gold);color:var(--forest)}
   .bt-tag{display:inline-block;background:var(--gold-s);color:var(--gold-d);font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;margin-left:8px;vertical-align:middle}
   .bt-stat .bt-tag{display:inline-block;margin:6px 0 0}
-  .bt-list{margin:0;padding:14px 22px;columns:2;column-gap:28px;font-size:13.5px;color:#3d4a40;list-style:none}
+  .bt-list{margin:0;padding:14px 22px;columns:2;column-gap:28px;font-size:13.5px;color:#3B3560;list-style:none}
   .bt-list li{padding:4px 0;break-inside:avoid}
   .bt-sim{display:grid;grid-template-columns:1fr 1.1fr;gap:20px;align-items:start}
   .bt-slider{display:grid;grid-template-columns:1fr 150px 64px;gap:14px;align-items:center;padding:10px 22px;border-bottom:1px solid var(--soft);font-size:14px}
@@ -136,7 +136,7 @@
   .bt-btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
   .bt-src{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;line-height:1.6}
   .bt-muted{color:var(--muted)}
-  #bt-launch{position:fixed;right:24px;bottom:96px;z-index:9980;background:var(--bt-gold,#C8A560);color:#13273D;border:0;border-radius:12px;padding:13px 20px;font-weight:700;font-family:inherit;box-shadow:0 6px 20px rgba(38,53,42,.25);cursor:pointer}
+  #bt-launch{position:fixed;right:24px;bottom:96px;z-index:9980;background:var(--bt-gold,#FFB020);color:#241465;border:0;border-radius:12px;padding:13px 20px;font-weight:700;font-family:inherit;box-shadow:0 6px 20px rgba(38,53,42,.25);cursor:pointer}
   @media (max-width:900px){.bt-stats{grid-template-columns:repeat(2,1fr)}.bt-find,.bt-grid2,.bt-sim{grid-template-columns:1fr}.bt-main{padding:20px 16px}.bt-top{padding:14px 16px 0}.bt-row{grid-template-columns:1fr auto}.bt-row .bt-track{grid-column:1/-1;order:3}.bt-list{columns:1}.bt-slider{grid-template-columns:1fr 110px 56px;padding:10px 16px}}
   @media (prefers-reduced-motion:reduce){.bt-fill{transition:none}}
   `;

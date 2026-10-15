@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vigilancia Fiscal IA · Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --navy:#0F1C2E; --gold:#C8A560; --bg:#F4F6F9; --muted:#5B6B80; --line:#E2E7EE; --ok:#2E9E7B; --bad:#C0485A; --warn:#B7791F; --crit:#8B0000; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:Inter,"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--navy); }
+header { background:var(--navy); color:#fff; }
+.bar { max-width:1200px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; gap:14px; }
+.mark { width:38px; height:38px; border:2px solid var(--gold); border-radius:50%; display:grid; place-items:center; }
+.mark span { width:2px; height:16px; background:var(--gold); transform:rotate(25deg); border-radius:2px; }
+.brand { flex:1; }
+.brand b { font-size:18px; font-weight:700; }
+.brand em { font-style:normal; color:var(--gold); }
+.brand small { display:block; font-size:12px; color:#AEB9C8; margin-top:2px; }
+.back { color:#fff; text-decoration:none; font-size:13px; font-weight:600; border:1px solid rgba(255,255,255,.25); padding:9px 14px; border-radius:8px; }
+.back:hover { border-color:var(--gold); color:var(--gold); }
+main { max-width:1200px; margin:0 auto; padding:32px; }
+.demo { background:#FBF1E0; color:#8A5A12; border:1px solid #F0DDB8; border-radius:8px; padding:12px 16px; font-size:13px; margin-bottom:24px; }
+h2 { font-size:22px; font-weight:700; margin-bottom:4px; }
+.sub { color:var(--muted); font-size:14px; margin-bottom:22px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-bottom:24px; }
+.kpi { background:#fff; border:1px solid var(--line); border-radius:10px; padding:18px 20px; }
+.kpi small { display:block; font-size:12px; color:var(--muted); margin-bottom:8px; }
+.kpi b { font-size:24px; font-weight:700; }
+.panel { background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px 24px; margin-bottom:20px; }
+.panel h3 { font-size:15px; margin-bottom:14px; }
+.form-group { margin-bottom:14px; }
+.form-group label { display:block; font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:6px; }
+.form-group input, .form-group select { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
+button { background:var(--navy); color:#fff; border:none; border-radius:8px; padding:10px 20px; font-weight:700; font-size:13px; cursor:pointer; }
+button:hover { background:#1a2a42; }
+button:disabled { background:#94a3b8; cursor:default; }
+table { width:100%; border-collapse:collapse; font-size:13px; margin-top:14px; }
+th { text-align:left; font-size:11px; font-weight:700; color:var(--muted); padding:8px 10px; border-bottom:2px solid var(--line); }
+td { padding:10px 8px; border-bottom:1px solid var(--line); }
+tr:hover { background:#f8fafc; cursor:pointer; }
+.pill { display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; }
+.crit { background:#FFE6E6; color:var(--crit); }
+.alta { background:#F9E5E8; color:var(--bad); }
+.media { background:#FBF1E0; color:var(--warn); }
+.loading { color:#2563eb; font-weight:700; }
+.detail { display:none; background:#f8fafc; padding:14px 10px; border-top:1px solid var(--line); }
+.detail.open { display:table-row; }
+.detail-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; font-size:12px; }
+.detail-field label { font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:0.5px; }
+.detail-field value { font-size:13px; color:#334155; margin-top:2px; display:block; }
+@media(max-width:800px) { main { padding:18px; } .bar { padding-left:18px; padding-right:18px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="mark"><span></span></div>
+    <div class="brand">
+      <b>Estrategia <em>Electoral</em> 2027</b>
+      <small>Vigilancia Fiscal IA · SIRI × Boletín</small>
+    </div>
+    <a class="back" href="index.html">&larr; Inicio</a>
+  </div>
+</header>
+
+<main>
+<div class="demo"><strong>Datos reales:</strong> Cruzamiento de SIRI (Procuraduría) y Boletín de Responsables Fiscales (Contraloría) para Soacha 2027.</div>
+
+<h2>Vigilancia Fiscal IA</h2>
+<p class="sub">Soacha · detección de personas y empresas con antecedentes disciplinarios o fiscales</p>
+
+<!-- KPIs -->
+<div class="kpis" id="kpis-container">
+  <div class="kpi"><small>Alertas ALTAS</small><b class="loading">—</b></div>
+  <div class="kpi"><small>Alertas MEDIAS</small><b class="loading">—</b></div>
+  <div class="kpi"><small>Registros SIRI</small><b class="loading">—</b></div>
+  <div class="kpi"><small>Registros Boletín</small><b class="loading">—</b></div>
+</div>
+
+<!-- Panel de búsqueda -->
+<div class="panel">
+  <h3>Buscar por documento (CC/NIT)</h3>
+  <div style="display:flex; gap:12px; flex-wrap:wrap;">
+    <input type="text" id="doc-input" placeholder="Ej: 51699228" style="flex:1; min-width:200px;" />
+    <button onclick="buscarDocumento()">Buscar</button>
+    <button onclick="limpiarBusqueda()" style="background:#f1f5f9; color:var(--muted); border:1px solid var(--line);">Limpiar</button>
+  </div>
+  <div id="doc-result" style="margin-top:14px;"></div>
+</div>
+
+<!-- Tabla de alertas -->
+<div class="panel">
+  <h3>Alertas detectadas</h3>
+  
+  <div class="form-group">
+    <label>Filtrar por nivel</label>
+    <select id="filtro-nivel" onchange="actualizarTabla()">
+      <option value="">Todas las alertas</option>
+      <option value="CRITICA">Críticas (SIRI + Boletín)</option>
+      <option value="ALTA">Altas (Solo SIRI)</option>
+      <option value="MEDIA">Medias (Solo Boletín)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Buscar en tabla</label>
+    <input type="text" id="busca-tabla" placeholder="Nombre, documento, sanción..." onkeyup="actualizarTabla()" />
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:20px;"></th>
+        <th>Nivel</th>
+        <th>Persona / Empresa</th>
+        <th>Documento</th>
+        <th>Sanción</th>
+        <th>Fuente</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-alertas">
+      <tr><td colspan="6" style="text-align:center; color:var(--muted); padding:20px;"><span class="loading">Cargando alertas…</span></td></tr>
+    </tbody>
+  </table>
+
+  <div id="contador-alertas" style="margin-top:12px; font-size:12px; color:var(--muted);"></div>
+</div>
+</main>
+
+<script>
+let datosCompletos = {};
+let alertasFiltradas = [];
+
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("./data/modulos/vigilancia_soacha_2027.json");
+    if (!response.ok) throw new Error("No se pudo cargar el archivo");
+    
+    datosCompletos = await response.json();
+    console.log("Alertas cargadas:", datosCompletos.alertas.length);
+    
+    document.querySelectorAll(".kpi b.loading").forEach((el, idx) => {
+      if (idx === 0) el.textContent = datosCompletos.altas;
+      if (idx === 1) el.textContent = datosCompletos.medias;
+      if (idx === 2) el.textContent = datosCompletos.registros_siri;
+      if (idx === 3) el.textContent = datosCompletos.registros_boletin;
+    });
+    
+    actualizarTabla();
+  } catch (err) {
+    console.error("Error:", err);
+    document.getElementById("tabla-alertas").innerHTML = `<tr><td colspan="6" style="text-align:center; color:var(--crit); padding:20px;">Error al cargar datos. Verifica que vigilancia_soacha_2027.json exista en data/modulos/</td></tr>`;
+  }
+});
+
+function actualizarTabla() {
+  const filtro = document.getElementById("filtro-nivel").value;
+  const busca = document.getElementById("busca-tabla").value.toLowerCase();
+  
+  alertasFiltradas = datosCompletos.alertas.filter(a => {
+    const okNivel = !filtro || a.nivel === filtro;
+    const okBusca = !busca || a.proveedor_secop.toLowerCase().includes(busca) || a.documento.includes(busca) || a.sancion.toLowerCase().includes(busca);
+    return okNivel && okBusca;
+  });
+  
+  const html = alertasFiltradas.map((a, idx) => {
+    const color = a.nivel === "CRITICA" ? "crit" : a.nivel === "ALTA" ? "alta" : "media";
+    return `
+      <tr onclick="toggleDetail(${idx})">
+        <td style="cursor:pointer; color:var(--muted);">▶</td>
+        <td><span class="pill ${color}">${a.nivel}</span></td>
+        <td><strong>${a.proveedor_secop}</strong></td>
+        <td><code style="font-size:11px;">${a.documento}</code></td>
+        <td>${a.sancion.substring(0, 40)}…</td>
+        <td style="font-size:11px;">${a.fuente.split(" · ")[0]}</td>
+      </tr>
+      <tr class="detail" id="detail-${idx}">
+        <td colspan="6" style="padding:16px;">
+          <div class="detail-grid">
+            <div class="detail-field"><label>Documento</label><value>${a.documento}</value></div>
+            <div class="detail-field"><label>Nombre</label><value>${a.nombre_fuente}</value></div>
+            <div class="detail-field"><label>Sanción</label><value>${a.sancion}</value></div>
+            <div class="detail-field"><label>Tipo</label><value>${a.tipo}</value></div>
+            <div class="detail-field"><label>Fecha</label><value>${a.fecha_sancion || "—"}</value></div>
+            <div class="detail-field"><label>Autoridad</label><value>${a.autoridad}</value></div>
+            <div class="detail-field"><label>Estado</label><value>${a.vigente === "SÍ" ? "✓ Vigente" : "—"}</value></div>
+            <div class="detail-field"><label>Fuente</label><value>${a.fuente}</value></div>
+          </div>
+        </td>
+      </tr>
+    `;
+  }).join("");
+  
+  document.getElementById("tabla-alertas").innerHTML = html || "<tr><td colspan=\"6\" style=\"text-align:center; padding:20px; color:var(--muted);\">Sin alertas.</td></tr>";
+  document.getElementById("contador-alertas").textContent = `${alertasFiltradas.length} de ${datosCompletos.alertas.length} alertas`;
+}
+
+function toggleDetail(idx) {
+  const detail = document.getElementById(`detail-${idx}`);
+  detail.classList.toggle("open");
+}
+
+function buscarDocumento() {
+  const doc = document.getElementById("doc-input").value.trim();
+  if (!doc) return alert("Ingresa un documento");
+  const resultado = datosCompletos.alertas.filter(a => a.documento.includes(doc));
+  const resultDiv = document.getElementById("doc-result");
+  if (resultado.length === 0) {
+    resultDiv.innerHTML = `<div style="padding:12px; background:#E6F4EF; border:1px solid var(--ok); border-radius:6px; color:var(--ok); font-size:13px;">OK: El documento ${doc} no aparece en SIRI ni Boletín.</div>`;
+  } else {
+    resultDiv.innerHTML = `<div style="padding:12px; background:#FFE6E6; border:1px solid var(--crit); border-radius:6px; color:var(--crit); font-size:13px; margin-bottom:12px;">⚠️ ${resultado.length} antecedente(s) para ${doc}</div>${resultado.map(a => `<div style="padding:12px; background:#FEF2F2; border:1px solid #FECACA; border-radius:6px; margin-bottom:8px;"><div style="font-weight:700;">${a.proveedor_secop}</div><div style="font-size:12px; margin-top:4px;"><b>Sanción:</b> ${a.sancion} | <b>Tipo:</b> ${a.tipo}</div></div>`).join("")}`;
+  }
+}
+
+function limpiarBusqueda() {
+  document.getElementById("doc-input").value = "";
+  document.getElementById("doc-result").innerHTML = "";
+  document.getElementById("filtro-nivel").value = "";
+  document.getElementById("busca-tabla").value = "";
+  actualizarTabla();
+}
+</script>
+</body>
+</html>

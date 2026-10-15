@@ -1,0 +1,360 @@
+{
+  "resumen": {
+    "contratos": 1553,
+    "valor_total": 83849114644.94,
+    "entidades": 5,
+    "proveedores": 597
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 81.5196,
+    "pct_directa_valor": 41.9141,
+    "hhi": 178.0511467512075,
+    "top1_proveedor_pct": 8.61369261569146,
+    "top5_proveedores_pct": 23.15978314886471,
+    "pareto_proveedores_80pct_valor": 173,
+    "pct_con_adicion": 9.01481004507405,
+    "top_proveedores": [
+      {
+        "proveedor": "COOPERATIVA DE TRABAJO ASOCIADO PRESTADORA DE BIENES Y SERVICIOS UBATE  COPBISER UBATE",
+        "documento": "832007306",
+        "valor": 6875133351.0,
+        "contratos": 7,
+        "participacion_pct": 8.6137
+      },
+      {
+        "proveedor": "EMSERVILLA S.A E.S.P",
+        "documento": "900802091",
+        "valor": 3584156571.0,
+        "contratos": 8,
+        "participacion_pct": 4.4905
+      },
+      {
+        "proveedor": "CONSORCIO IDEC 2026",
+        "documento": "641513651",
+        "valor": 3172562760.38,
+        "contratos": 1,
+        "participacion_pct": 3.9748
+      },
+      {
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "documento": "900088206",
+        "valor": 2454459816.41,
+        "contratos": 2,
+        "participacion_pct": 3.0751
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 2398976521.0,
+        "contratos": 6,
+        "participacion_pct": 3.0056
+      },
+      {
+        "proveedor": "E.S.E. HOSPITAL EL SALVADOR DE UBATE",
+        "documento": "899999147",
+        "valor": 1857603289.44,
+        "contratos": 4,
+        "participacion_pct": 2.3273
+      },
+      {
+        "proveedor": "Inversion Comercial  y Servicios S.A.S.",
+        "documento": "900352202",
+        "valor": 1822426369.8200002,
+        "contratos": 7,
+        "participacion_pct": 2.2833
+      },
+      {
+        "proveedor": "Fundación Casa de la Providencia de Ubaté",
+        "documento": "860021648",
+        "valor": 1534705800.0,
+        "contratos": 3,
+        "participacion_pct": 1.9228
+      },
+      {
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "documento": "900516720",
+        "valor": 1529420003.42,
+        "contratos": 16,
+        "participacion_pct": 1.9162
+      },
+      {
+        "proveedor": "SISAN SAS",
+        "documento": "900527732",
+        "valor": 1448841149.88,
+        "contratos": 4,
+        "participacion_pct": 1.8152
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9454851",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "CONSORCIO IDEC 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 3172562760.38,
+        "fecha_firma": "2026-07-08",
+        "objeto": "CONSTRUCCIÓN DE GRADERÍAS Y OBRAS COMPLEMENTARIAS PARA DAR CUMPLIMIENTO AL CONVENIO SUSCRITO ENTRE EL INSTITUTO DE CAMINOS Y CONSTRUCCIONES DE CUNDINAMARCA (ICCU) Y EL MUNICIPIO DE UBATE No. ICCU-CTO-748-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9614348",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "CONSORCIO PROFESIONALES 238",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2607794039.72,
+        "fecha_firma": "2026-07-15",
+        "objeto": "MEJORAMIENTO DE VIAS URBANAS EN ASFALTO EN EL MUNICIPIO DE UBATE CUNDINAMARCA BAJO EL CONVENIO ICCU 1204 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9348070",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "COOPERATIVA DE TRABAJO ASOCIADO PRESTADORA DE BIENES Y SERVICIOS UBATE  COPBISER UBATE",
+        "modalidad": "Licitación pública",
+        "valor": 2521761201.0,
+        "fecha_firma": "2026-02-20",
+        "objeto": "PRESTACIÓN DE SERVICIOS DE OPERACIÓN; MANTENIMIENTO Y APOYO A LA GESTIÓN ADMINISTRATIVA DE LA ALCALDÍA MUNICIPAL DE UBATÉ; BAJO CUENTA Y RIESGO DEL CONTRATISTA"
+      },
+      {
+        "id": "CO1.PCCNTR.7566387",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "COOPERATIVA DE TRABAJO ASOCIADO PRESTADORA DE BIENES Y SERVICIOS UBATE  COPBISER UBATE",
+        "modalidad": "Licitación pública",
+        "valor": 2356874748.0,
+        "fecha_firma": "2025-02-27",
+        "objeto": "PRESTACIÓN DE SERVICIOS DE OPERACIÓN; MANTENIMIENTO Y APOYO A LA GESTIÓN ADMINISTRATIVA DE LA ALCALDÍA MUNICIPAL DE UBATÉ; BAJO CUENTA Y RIESGO DEL CONTRATISTA"
+      },
+      {
+        "id": "CO1.PCCNTR.9361594",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1996569748.0,
+        "fecha_firma": "2026-03-25",
+        "objeto": "ESTUDIOS; DISEÑOS Y CONSTRUCCIÓN DEL CENTRO DE CONVIVENCIA CIUDADANA PAZ A LO BIEN TIPO 1 DEL MUNICIPIO DE UBATÉ; EN MARCADO DENTRO DEL CONVENIO INTERADMINISTRATIVO DE COFINANCIACIÓN No. 2302 DE 2025 CELEBRADO ENTRE LA NACIÓN- MINISTERIO DEL INTERIOR - FONDO NACIONAL DE SEGURIDAD Y CONVIVENCIA CIUDADANA; FONSECON CON EL MUNICIPIO DE UBATÉ; CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE UBATE",
+        "contratos": 29,
+        "valor": 731107915.0
+      },
+      {
+        "entidad": "E.S.E. HOSPITAL EL SALVADOR DE UBATE",
+        "contratos": 1,
+        "valor": 99003716.0
+      },
+      {
+        "entidad": "ESTABLECIMIENTO PENITENCIARIO DE MEDIANA SEGURIDAD Y CARCELARIO DE UBATE",
+        "contratos": 52,
+        "valor": 429074452.0
+      },
+      {
+        "entidad": "MUNICIPIO DE UBATE",
+        "contratos": 1446,
+        "valor": 82536268036.94
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE UBATE",
+        "contratos": 6,
+        "valor": 53660525.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 40,
+    "valor_obras": 19645873392.9,
+    "obras_vencidas_abiertas": 18,
+    "valor_obras_vencidas_abiertas": 6362397069.75,
+    "pct_obras_vencidas_abiertas": 45.0,
+    "pct_pagado_obras_vencidas_abiertas": 20.8645,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8675694",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "JR FONSECA ING",
+        "estado": "Modificado",
+        "valor": 864778629.96,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-29",
+        "objeto": "DEMOLICIÓN Y CONSTRUCCIÓN DEL CERRAMIENTO PERIMETRAL DEL ESTADIO MUNICIPAL CON EL FIN DE MEJORAR LAS CONDICIONES DE LA INFRAESTRUCTURA DEPORTIVA DEL MUNICIPIO DE UBATÉ"
+      },
+      {
+        "id": "CO1.PCCNTR.9382434",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "CONSORCIO PRORUSSI 2026",
+        "estado": "Aprobado",
+        "valor": 571149891.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-26",
+        "objeto": "EJECUCIÓN DE LAS OBRAS DE MEJORAMIENTO DE VIVIENDA EN LA MODALIDAD DE REPARACIONES LOCATIVAS EN LOS HOGARES VULNERABLES DE LA ZONA RURAL Y URBANA DEL MUNICIPIO DE UBATÉ PARA LA MEJORA DE SUS CONDICIONES DE HABITABILIDAD"
+      },
+      {
+        "id": "CO1.PCCNTR.8239219",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "Modificado",
+        "valor": 457890068.41,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-03",
+        "objeto": "MANTENIMIENTO Y/O RESTAURACIÓN DE LA INFRAESTRUCTURA A CARGO DE LA ALCALDÍA MUNICIPAL DE LA VILLA DE SAN DIEGO DE UBATÉ"
+      },
+      {
+        "id": "CO1.PCCNTR.8689031",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "CB SALMER SAS",
+        "estado": "Modificado",
+        "valor": 429103433.75,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-30",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE DESDE EL CASCO URBANO CONDUCE A LA VEREDA SOAGA SECTOR LA Y MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA GUATANCUY AL SECTOR EL CEDRO MONSERRATE Y MEJORAMIENTO DE LA VIA QUE DESDE EL CASCO URBANO CONDUCE AL SECTOR EL CEDRO LA LECHERIA"
+      },
+      {
+        "id": "CO1.PCCNTR.9706617",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "CONSORCIO OREMOJI",
+        "estado": "En ejecución",
+        "valor": 399994520.88,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-13",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA APARTADERO SECTOR LAS BRISAS CURVA SAN JOSE MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA GUATANCUY SECTOR LOS PINZON MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA SUCUNCHOQUE SECTOR SAN LUIS BAJO LAS ROCAS Y MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA SUCUNCHOQUE SECTOR LA LAJA EL SENDERO DEL MUNICIPIO VILLA DE SAN DIEGO DE UBATE SEGUN CONVENIOS ICCU N° 994 995 989 1396 DE 202"
+      },
+      {
+        "id": "CO1.PCCNTR.7930183",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "Inversion Comercial  y Servicios S.A.S.",
+        "estado": "Aprobado",
+        "valor": 395151662.1,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-03",
+        "objeto": "OBRA PARA LA INSTALACION DE SEÑALIZACION Y REDUCTORES DE VELOCIDAD EN EL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE"
+      },
+      {
+        "id": "CO1.PCCNTR.8688830",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "Inversion Comercial  y Servicios S.A.S.",
+        "estado": "Suspendido",
+        "valor": 389778620.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-15",
+        "objeto": "OBRA PARA LA INSTALACION DE SEÑALIZACION Y REDUCTORES DE VELOCIDAD EN EL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE"
+      },
+      {
+        "id": "CO1.PCCNTR.8251093",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "SISAN SAS",
+        "estado": "Modificado",
+        "valor": 369908876.0,
+        "pagado": 332917988.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO DE LA MALLA VIAL URBANA EN ADOQUÍN Y PIEDRA DEL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE"
+      },
+      {
+        "id": "CO1.PCCNTR.8012738",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "Inversion Comercial  y Servicios S.A.S.",
+        "estado": "Modificado",
+        "valor": 369902239.2,
+        "pagado": 332912015.28,
+        "fecha_fin": "2025-10-03",
+        "objeto": "SUMINISTRO; INSTALACION Y MANTENIMIENTO DE DISPOSITIVOS DE SEÑALIZACION LUMINOSA (SEMAFOROS) DEL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE"
+      },
+      {
+        "id": "CO1.PCCNTR.8386754",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "SISAN SAS",
+        "estado": "Modificado",
+        "valor": 361772955.0,
+        "pagado": 325595660.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE DESDE EL CASCO URBANO CONDUCE A LA VEREDA SOAGA CENTRO SECTOR LAS MANAS MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA GUATANCUY MATA DE UVO SECTOR LA COOPERATIVA Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SOAGA A LA VEREDA GUATANCUY TRAMO 1 SECTOR LAS ESCALERAS Y TRAMO 2 SECTOR LA COOPERATIVA"
+      },
+      {
+        "id": "CO1.PCCNTR.8263871",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "ROVINCOLL SAS",
+        "estado": "Modificado",
+        "valor": 353303830.0,
+        "pagado": 125321532.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MANTENIMIENTO DE LOS DIFERENTES ESCENARIOS DEPORTIVOS DEL ÁREA URBANA Y/O RURAL DEL MUNICIPIO DE UBATE"
+      },
+      {
+        "id": "CO1.PCCNTR.8092303",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "ECOBRAS CIVILES SAS",
+        "estado": "Modificado",
+        "valor": 299982999.45,
+        "pagado": 119993199.78,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA VOLCAN UNO SECTOR VILLA HERMOSA; MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA APARTADERO BAJO SECTOR VIENTO LIBRE - VILLA YURY Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL BARRIO SANTA BARBARA SECTOR EL CERRITO A LA VEREDA APARTADERO BAJO SECTOR VIENTO LIBRE DEL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9359577",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "CONSORCIO LAS BRISAS",
+        "estado": "Modificado",
+        "valor": 299020539.68,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-27",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE DESDE EL CASCO URBANO CONDUCE A LA VEREDA SUCUNCHOQUE SECTOR LA LAJA - CASA VIEJA; MEJORAMIENTO DE LA VÍA QUE DESDE EL CASCO URBANO CONDUCE A LA VEREDA TAUSAVITA SECTOR ALTO - BUJIO Y MEJORAMIENTO DE LA VÍA QUE DESDE EL CASCO URBANO CONDUCE A LA VEREDA APARTADERO BAJO SECTOR LAS BRISAS - LA LECHERÍA DEL MUNICIPIO DE VILLA DE SAN DIEGO DE UBATE"
+      },
+      {
+        "id": "CO1.PCCNTR.9375941",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "PROADI S.A.S",
+        "estado": "Modificado",
+        "valor": 287647744.57,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-27",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE DESDE EL CASCO URBANO CONDUCE A LA VEREDA SOAGA; SECTOR LAS MALVINAS Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA VOLCÁN SECTOR LA DOBLECURVA DEL MUNICIPIO DE UBATE; DEPARTAMENTO DE CUNDINAMARCA (SEGÚN CONVENIOS INTERADMINISTRATIVOS ICCU 643 DE 2025 Y 661 DE 2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.7863749",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "EARR S.A.S",
+        "estado": "Modificado",
+        "valor": 198000023.75,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MEJORAMIENTO DE LAS VÍAS QUE DESDE LA VEREDA EL VOLCAN CONDUCE A LA VEREDA SUCUNCHOQUE SECTOR EL BASURA Y QUE DEL CASCO URBANO CONDUCE A LA VEREDA GUATANCUY SECTOR EL CEDRO LA LECHERIA DEL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE; DEPARTAMENTO DE CUNDINAMARCA (SEGÚN CONVENIOS INTERADMINISTRATIVOS ICCU 754 DE 2024 Y 777 DE 2024)"
+      },
+      {
+        "id": "CO1.PCCNTR.9500625",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "INGENIERIA Y PROYECTOS CIVILES",
+        "estado": "Modificado",
+        "valor": 129596691.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-08",
+        "objeto": "OBRA PARA LA CONSTRUCCIÓN DE UNA ZONA COMERCIAL EN LA PLAZA DE GANADO DEL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE"
+      },
+      {
+        "id": "CO1.PCCNTR.8689298",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "PROADI S.A.S",
+        "estado": "Modificado",
+        "valor": 102260586.0,
+        "pagado": 90740172.88,
+        "fecha_fin": "2026-03-16",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DESDE EL CASCO URBANO A LA VEREDA SUCUNCHOQUE SECTOR SAN LUIS LA LAGUNA DEL MUNICIPIO VILLA DE SAN DIEGO DE UBATE SEGUN CONVENIO ICCU-360-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8526330",
+        "entidad": "MUNICIPIO DE UBATE",
+        "proveedor": "CONSORCIO FQ UBATE",
+        "estado": "Suspendido",
+        "valor": 83153759.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-18",
+        "objeto": "OBRA PARA REALIZAR AMPLIACION; MANTENIMIENTO; MEJORAMIENTO DE RED DE CICLORUTAS DEL MUNICIPIO DE LA VILLA DE SAN DIEGO DE UBATE"
+      }
+    ]
+  },
+  "municipio": "Villa De San Diego De Ubate",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 32.7,
+  "nivel": "bajo",
+  "posicion": 63.0,
+  "total_rankeados": 71
+}

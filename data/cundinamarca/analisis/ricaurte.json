@@ -1,0 +1,200 @@
+{
+  "resumen": {
+    "contratos": 2332,
+    "valor_total": 105799457742.12,
+    "entidades": 5,
+    "proveedores": 738
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 63.2075,
+    "pct_directa_valor": 43.1918,
+    "hhi": 210.25116286000718,
+    "top1_proveedor_pct": 7.348000271086619,
+    "top5_proveedores_pct": 24.733093279282237,
+    "pareto_proveedores_80pct_valor": 180,
+    "pct_con_adicion": 18.13893653516295,
+    "top_proveedores": [
+      {
+        "proveedor": "PROVISIONAR S.A.S.",
+        "documento": "900767429",
+        "valor": 7721937962.0,
+        "contratos": 8,
+        "participacion_pct": 7.348
+      },
+      {
+        "proveedor": "CUNDEPORTES RICAURTE",
+        "documento": "808000021",
+        "valor": 4877567553.0,
+        "contratos": 9,
+        "participacion_pct": 4.6414
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 4875246705.0,
+        "contratos": 6,
+        "participacion_pct": 4.6392
+      },
+      {
+        "proveedor": "FUNDEOG",
+        "documento": "900981084",
+        "valor": 4473825100.0,
+        "contratos": 4,
+        "participacion_pct": 4.2572
+      },
+      {
+        "proveedor": "UNION TEMPORAL ALIMENTANDO FUTURO RICAURTE 2026",
+        "documento": "902087724",
+        "valor": 4043176200.0,
+        "contratos": 1,
+        "participacion_pct": 3.8474
+      },
+      {
+        "proveedor": "FIPA",
+        "documento": "900919844",
+        "valor": 3931425640.0,
+        "contratos": 3,
+        "participacion_pct": 3.741
+      },
+      {
+        "proveedor": "FACOMPAZ",
+        "documento": "901111918",
+        "valor": 3860753764.0,
+        "contratos": 4,
+        "participacion_pct": 3.6738
+      },
+      {
+        "proveedor": "Consorcio Polideportivo L&O",
+        "documento": "902011293",
+        "valor": 2753438655.0,
+        "contratos": 1,
+        "participacion_pct": 2.6201
+      },
+      {
+        "proveedor": "EMPRESA DE SERVICIOS PUBLICOS DE ALCANTARILLADO */",
+        "documento": "900639486",
+        "valor": 2699553766.37,
+        "contratos": 2,
+        "participacion_pct": 2.5688
+      },
+      {
+        "proveedor": "CARDOTAL SOLUCIONES SAS",
+        "documento": "901006319",
+        "valor": 2530841860.0,
+        "contratos": 7,
+        "participacion_pct": 2.4083
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7976899",
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "proveedor": "PROVISIONAR S.A.S.",
+        "modalidad": "Licitación pública",
+        "valor": 4374351000.0,
+        "fecha_firma": "2025-06-16",
+        "objeto": "SDS13-SUMINISTRO MERCADOS CON DESTINO AL PROGRAMA ATENCIÓN Y APOYO A POBLACIÓN VULNERABLE DIRIGIDO AL ADULTO MAYOR; FAMILIA; MUJERES CABEZA DE HOGAR; PADRES CABEZA DE HOGAR; PERSONAS EN CONDICIÓN DE DISCAPACIDAD Y POBLACIÓN VICTIMA DEL CONFLICTO ARMADO DEL MUNICIPIO DE RICUARTE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9676641",
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "proveedor": "UNION TEMPORAL ALIMENTANDO FUTURO RICAURTE 2026",
+        "modalidad": "Licitación pública",
+        "valor": 4043176200.0,
+        "fecha_firma": "2026-07-23",
+        "objeto": "SDS1-SUMINISTRO MERCADOS INCLUIDA SU DISRIBUCIÓN PARA EL MEJORAMIENTO DEL COMPONENTE NUTRICIONAL Y DE ASEO DE LA POBLACIÓN VULNERABLE DIRIGIDA AL ADULTO MAYOR; FAMILIA; MUJERES CABEZA DE HOGAR; PADRES CABEZA DE HOGAR; PERSONAS EN CONDICIÓN DE DISCAPACIDAD Y POBLACIÓN VICTIMA DEL CONFLICTO ARMADO DEL MUNICIPIO DE RICUARTE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9511517",
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "proveedor": "FIPA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 3548854640.0,
+        "fecha_firma": "2026-05-14",
+        "objeto": "STC39- AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS Y FINANCIEROS PARA LA ORGANIZACIÓN Y EJECUCIÓN DE METAS; ACTIVIDADES DE PROMOCIÓN Y FOMENTO DEL TURISMO; LA CULTURA; RECREACIÓN Y EL APROVECHAMIENTO DEL TIEMPO LIBRE Y LA INTEGRACIÓN SOCIAL Y COMUNITARIA DEL MUNICIPIO DE RICAURTE CUNDINAMARCA VIGENCIA 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.5700172",
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "proveedor": "Consorcio Polideportivo L&O",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2753438655.0,
+        "fecha_firma": "2024-03-12",
+        "objeto": "CONSTRUCCIÓN POLIDEPORTIVO CUBIERTO EN EL PREDIO DE EQUIPAMIENTO PUBLICO DE LA VEREDA CASABLANCA DEL MUNICIPIO DE RICAURTE - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8137047",
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "proveedor": "AVANGAS SAS E.S.P",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 2496058528.0,
+        "fecha_firma": "2025-07-29",
+        "objeto": "SINFRA-SP-018 AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL FORTALECIMIENTO AL PROGRAMA DE GASIFICACIÓN DOMICILIARIA; MEDIANTE EL SUBSIDIO DEL DERECHO DE CONEXIÓN E INSTALACIÓN INTERNA A LOS ESTRATOS 1 Y 2 DE POR REDES PARA LAS VEREDAS CALLEJÓN; CASABLANCA Y EL PORTAL DEL MUNICIPIO DE RICAURTE DEPARTAMENTO DE CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "contratos": 1396,
+        "valor": 91757164054.12
+      },
+      {
+        "entidad": "CUNDEPORTES RICAURTE",
+        "contratos": 191,
+        "valor": 3377513772.0
+      },
+      {
+        "entidad": "EMPRESA SOCIAL DEL ESTADO CENTRO SALUD RICAURTE",
+        "contratos": 626,
+        "valor": 8049464761.0
+      },
+      {
+        "entidad": "PERSONERÍA MUNICIPAL RICAURTE",
+        "contratos": 61,
+        "valor": 1283517299.0
+      },
+      {
+        "entidad": "concejo municipal de ricaurte",
+        "contratos": 55,
+        "valor": 1331797856.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 17,
+    "valor_obras": 5508296543.4,
+    "obras_vencidas_abiertas": 2,
+    "valor_obras_vencidas_abiertas": 121803709.0,
+    "pct_obras_vencidas_abiertas": 11.76470588235294,
+    "pct_pagado_obras_vencidas_abiertas": 28.8148,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9485151",
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "proveedor": "GRUPO EMPRESARIAL GRAN FERRETERO SAS",
+        "estado": "Modificado",
+        "valor": 72831468.0,
+        "pagado": 35097497.0,
+        "fecha_fin": "2026-07-31",
+        "objeto": "SINFRA 025 - OBRAS DE REPARCHEO DEL CAMELLON QUE COMUNICA LA VIA SOPAPO Y EL CAMELLON LOS NEIVANOS SECTOR MONTE VERDE EN LA VEREDA LIMONCITOS DEL MUNICIPIO DE RICAURTE - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9639899",
+        "entidad": "ALCALDIA MUNICIPIO DE RICAURTE",
+        "proveedor": "GRUPO EMPRESARIAL GRAN FERRETERO SAS",
+        "estado": "En ejecución",
+        "valor": 48972241.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-26",
+        "objeto": "SINFRA 026 - MANTENIMIENTO Y ADECUACION DEL PUNTO VIVE DIGITAL DE LA ZONA URBANA DEL MUNICIPIO DE RICAURTE; CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Ricaurte",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 34.5,
+  "nivel": "medio",
+  "posicion": 60.0,
+  "total_rankeados": 71
+}

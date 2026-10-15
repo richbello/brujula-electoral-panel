@@ -10,26 +10,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0F1C2E;          /* verde truffle, estructura */
-  --ink-2:#0A1626;
-  --ink-3:#0A1626;
-  --paper:#F4F6F9;        /* fondo de trabajo */
+  --ink:#150B3D;          /* verde truffle, estructura */
+  --ink-2:#0D0628;
+  --ink-3:#0D0628;
+  --paper:#F3F1FF;        /* fondo de trabajo */
   --surface:#ffffff;
-  --line:#E2E8F0;
-  --line-strong:#CBD5E1;
-  --text:#1C2A3F;
-  --muted:#6B7A90;
-  --muted-2:#94A3B8;
-  --brass:#C8A560;        /* la aguja de la brújula: oro mate */
-  --brass-deep:#A98841;
-  --brass-soft:#F4EDDA;
-  --scale-0:#e8eef6;      /* escala de fuerza (azul secuencial) */
-  --scale-1:#b9cbe4;
-  --scale-2:#7c9cc9;
-  --scale-3:#4a72a8;
-  --scale-4:#274d80;
-  --ok:#2E9E7B;
-  --down:#C0485A;
+  --line:#E0D9F7;
+  --line-strong:#C9BAED;
+  --text:#241552;
+  --muted:#6B5E90;
+  --muted-2:#9A8CC0;
+  --brass:#FFB020;        /* la aguja de la brújula: oro mate */
+  --brass-deep:#E08A00;
+  --brass-soft:#FFF3D6;
+  --scale-0:#E7DFFB;      /* escala de fuerza (azul secuencial) */
+  --scale-1:#A5C8FF;
+  --scale-2:#60A5FA;
+  --scale-3:#1D4ED8;
+  --scale-4:#3B23A6;
+  --ok:#00C97B;
+  --down:#FF2D6F;
   --radius:10px;
   --shadow:0 1px 2px rgba(19,32,51,.06), 0 8px 24px rgba(19,32,51,.05);
   font-variant-numeric:tabular-nums;
@@ -56,27 +56,27 @@ button{font-family:inherit}
   display:flex;align-items:center;gap:14px;
   padding:calc(12px + env(safe-area-inset-top,0px)) 22px 12px;
   background:var(--ink);color:#fff;
-  border-bottom:1px solid #0c1523;
+  border-bottom:1px solid #0C0526;
 }
 .brand{display:flex;align-items:center;gap:11px;min-width:0}
 .compass{width:30px;height:30px;flex:0 0 auto;filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
 .brand .name{font-family:"Archivo";font-weight:800;font-size:17px;color:#fff;letter-spacing:-.02em;white-space:nowrap}
 .brand .name b{color:var(--brass)}
-.brand .sub{font-size:12px;color:#9fb0c6;margin-top:-2px;white-space:nowrap}
+.brand .sub{font-size:12px;color:#A294C9;margin-top:-2px;white-space:nowrap}
 .topbar .spacer{flex:1}
 .meta-pill{
-  display:none;align-items:center;gap:7px;font-size:12.5px;color:#b7c4d6;
-  padding:5px 11px;border:1px solid #33445c;border-radius:99px;
+  display:none;align-items:center;gap:7px;font-size:12.5px;color:#B3A0E6;
+  padding:5px 11px;border:1px solid #3A1F8C;border-radius:99px;
 }
 .meta-pill b{color:#fff;font-weight:600}
 @media(min-width:820px){.meta-pill{display:inline-flex}}
 .btn-load{
   display:inline-flex;align-items:center;gap:8px;
-  background:var(--brass);color:#231802;border:none;cursor:pointer;
+  background:var(--brass);color:#2B1400;border:none;cursor:pointer;
   font-weight:600;font-size:13.5px;padding:9px 15px;border-radius:8px;
   transition:background .15s;
 }
-.btn-load:hover{background:#cf9a41}
+.btn-load:hover{background:#F59E0B}
 .btn-load svg{width:15px;height:15px}
 
 /* ---------- Estructura ---------- */
@@ -86,40 +86,40 @@ button{font-family:inherit}
 
 /* ---------- Rail de candidatos ---------- */
 .rail{
-  background:var(--ink);color:#e8edf4;
-  border-right:1px solid #0c1523;
+  background:var(--ink);color:#E7DFFB;
+  border-right:1px solid #0C0526;
   display:flex;flex-direction:column;
   max-height:none;
 }
 @media(min-width:900px){.rail{position:sticky;top:55px;height:calc(100vh - 55px)}}
-.rail-head{padding:16px 16px 12px;border-bottom:1px solid #223349}
-.rail-head .lbl{font-size:11.5px;color:#8fa0b7;text-transform:none;font-weight:600;letter-spacing:.02em}
+.rail-head{padding:16px 16px 12px;border-bottom:1px solid #281663}
+.rail-head .lbl{font-size:11.5px;color:#9184BC;text-transform:none;font-weight:600;letter-spacing:.02em}
 .rail-head h2{color:#fff;font-size:15px;font-weight:600;margin-top:1px}
 .search{position:relative;margin-top:11px}
 .search input{
-  width:100%;background:#0e1a2b;border:1px solid #2a3d55;color:#fff;
+  width:100%;background:#140A38;border:1px solid #30197A;color:#fff;
   padding:9px 12px 9px 33px;border-radius:8px;font-size:13.5px;font-family:inherit;
 }
-.search input::placeholder{color:#6b7d95}
+.search input::placeholder{color:#6A5D93}
 .search input:focus{outline:2px solid var(--brass);outline-offset:0;border-color:transparent}
-.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:#6b7d95}
+.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:#6A5D93}
 .rail-list{overflow-y:auto;flex:1;padding:6px 8px 20px}
 .rail-list::-webkit-scrollbar{width:9px}
-.rail-list::-webkit-scrollbar-thumb{background:#2a3d55;border-radius:9px;border:2px solid var(--ink)}
+.rail-list::-webkit-scrollbar-thumb{background:#30197A;border-radius:9px;border:2px solid var(--ink)}
 .cand{
   display:block;width:100%;text-align:left;cursor:pointer;
   background:transparent;border:none;border-left:3px solid transparent;
-  padding:9px 11px;border-radius:0 7px 7px 0;color:#cdd7e4;margin:1px 0;
+  padding:9px 11px;border-radius:0 7px 7px 0;color:#CBBCEE;margin:1px 0;
   transition:background .12s;
 }
-.cand:hover{background:#1b2b40}
-.cand.active{background:#20344c;border-left-color:var(--brass)}
+.cand:hover{background:#20124F}
+.cand.active{background:#26155C;border-left-color:var(--brass)}
 .cand .cn{font-size:13.5px;font-weight:600;color:#fff;line-height:1.25;
   display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-.cand .cp{font-size:11.5px;color:#93a4bb;margin-top:2px;
+.cand .cp{font-size:11.5px;color:#9487BE;margin-top:2px;
   display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 .cand .cv{font-size:11.5px;color:var(--brass);font-weight:600;margin-top:2px}
-.cand.active .cv{color:#e0b45f}
+.cand.active .cv{color:#FFC53D}
 
 /* ---------- Área principal ---------- */
 .main{padding:22px;min-width:0}
@@ -205,12 +205,12 @@ button{font-family:inherit}
 .metas-ctrl .target input:focus{outline:2px solid var(--brass);border-color:transparent}
 .metas-ctrl .hint{font-size:12.5px;color:var(--muted-2);margin-top:10px}
 .metas-ctrl .quick{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
-.chip{background:var(--brass-soft);color:var(--brass-deep);border:1px solid #e7d4a8;cursor:pointer;
+.chip{background:var(--brass-soft);color:var(--brass-deep);border:1px solid #FFD98C;cursor:pointer;
   font-size:12px;font-weight:600;padding:5px 11px;border-radius:99px}
-.chip:hover{background:#f0e2c2}
+.chip:hover{background:#FFE8B0}
 .meta-row{display:grid;grid-template-columns:26px 1fr 92px 92px;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line)}
 .meta-row:last-child{border-bottom:none}
-.meta-row.h{background:#f7f9fc;position:sticky;top:0}
+.meta-row.h{background:#F6F4FF;position:sticky;top:0}
 .meta-row.h span{font-size:11px;color:var(--muted);font-weight:600;text-align:right}
 .meta-row.h span:nth-child(2){text-align:left}
 .meta-row .rank{font-family:"Archivo";font-weight:700;font-size:12px;color:var(--muted-2);text-align:right}
@@ -225,27 +225,27 @@ button{font-family:inherit}
 .empty-inline{padding:40px 20px;text-align:center;color:var(--muted)}
 
 /* Selector de corporación y localidad */
-.seg{display:flex;flex-wrap:wrap;gap:2px;background:#0e1a2b;border:1px solid #2a3d55;border-radius:9px;padding:3px;margin-top:10px}
-.seg button{flex:1 1 auto;background:none;border:none;color:#9fb0c6;font-size:13px;font-weight:600;padding:7px 6px;border-radius:6px;cursor:pointer}
+.seg{display:flex;flex-wrap:wrap;gap:2px;background:#140A38;border:1px solid #30197A;border-radius:9px;padding:3px;margin-top:10px}
+.seg button{flex:1 1 auto;background:none;border:none;color:#A294C9;font-size:13px;font-weight:600;padding:7px 6px;border-radius:6px;cursor:pointer}
 .seg button:hover{color:#fff}
-.seg button.on{background:var(--brass);color:#231802}
-#segTerr button.on{background:#e8edf4;color:var(--ink)}
+.seg button.on{background:var(--brass);color:#2B1400}
+#segTerr button.on{background:#E7DFFB;color:var(--ink)}
 #segTerr:empty,#segCorp:empty{display:none}
 .seg button:disabled{opacity:.4;cursor:not-allowed}
 .seg button:focus-visible,.cand:focus-visible,.tab:focus-visible,.chip:focus-visible,.btn-load:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
-.locsel{width:100%;margin-top:9px;background:#0e1a2b;border:1px solid #2a3d55;color:#fff;border-radius:8px;
+.locsel{width:100%;margin-top:9px;background:#140A38;border:1px solid #30197A;color:#fff;border-radius:8px;
   padding:8px 10px;font-family:inherit;font-size:13.5px}
 .locsel:focus{outline:2px solid var(--brass);border-color:transparent}
-.rail-sec{padding:14px 11px 5px;font-size:11.5px;font-weight:600;color:#8fa0b7;border-top:1px solid #223349;margin-top:8px}
+.rail-sec{padding:14px 11px 5px;font-size:11.5px;font-weight:600;color:#9184BC;border-top:1px solid #281663;margin-top:8px}
 .rail-sec:first-child{border-top:none;margin-top:0;padding-top:6px}
-.rail-sec small{display:block;font-weight:400;color:#6b7d95;margin-top:1px}
-.cand.lista .cn{color:#cdd7e4}
+.rail-sec small{display:block;font-weight:400;color:#6A5D93;margin-top:1px}
+.cand.lista .cn{color:#CBBCEE}
 
 /* Modos: candidatos / análisis */
-.modes{display:flex;gap:2px;background:#0e1a2b;border:1px solid #2a3d55;border-radius:9px;padding:3px;margin-left:20px}
-.modes button{background:none;border:none;color:#9fb0c6;font-size:13px;font-weight:600;padding:7px 13px;border-radius:6px;cursor:pointer;white-space:nowrap}
+.modes{display:flex;gap:2px;background:#140A38;border:1px solid #30197A;border-radius:9px;padding:3px;margin-left:20px}
+.modes button{background:none;border:none;color:#A294C9;font-size:13px;font-weight:600;padding:7px 13px;border-radius:6px;cursor:pointer;white-space:nowrap}
 .modes button:hover{color:#fff}
-.modes button.on{background:#e8edf4;color:var(--ink)}
+.modes button.on{background:#E7DFFB;color:var(--ink)}
 .modes button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 @media(max-width:760px){.brand .sub{display:none}.modes{margin-left:8px}.modes button{padding:7px 9px;font-size:12.5px}.btn-load .lbl-txt{display:none}}
 body.modo-anal .search,body.modo-anal .rail-list{display:none}
@@ -261,8 +261,8 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
 .party{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;width:100%;text-align:left;
   background:none;border:none;border-bottom:1px solid var(--line);border-left:3px solid transparent;padding:11px 16px;cursor:pointer;font-family:inherit}
 .party:last-child{border-bottom:none}
-.party:hover{background:#f7f9fc}
-.party.sel{border-left-color:var(--brass);background:#fbf7ee}
+.party:hover{background:#F6F4FF}
+.party.sel{border-left-color:var(--brass);background:#FFF8E8}
 .party.static{cursor:default}.party.static:hover{background:none}
 .party .pn{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.25}
 .party .ps{font-size:11.5px;color:var(--muted);margin-top:2px}
@@ -320,10 +320,10 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
 <div class="topbar">
   <div class="brand">
     <svg class="compass" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="24" cy="24" r="21" stroke="#C8A560" stroke-width="2.5"/>
+      <circle cx="24" cy="24" r="21" stroke="#FFB020" stroke-width="2.5"/>
       <circle cx="24" cy="24" r="3" fill="#fff"/>
-      <path d="M24 7 L28 22 L24 24 L20 22 Z" fill="#C8A560"/>
-      <path d="M24 41 L20 26 L24 24 L28 26 Z" fill="#f2f5f9"/>
+      <path d="M24 7 L28 22 L24 24 L20 22 Z" fill="#FFB020"/>
+      <path d="M24 41 L20 26 L24 24 L28 26 Z" fill="#F2EFFF"/>
     </svg>
     <div>
       <div class="name">Estrategia <b>Electoral 2027</b></div>
@@ -431,7 +431,7 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
         <div class="panel-head">
           <div><h3>Pulso social en redes</h3><p>Sentimiento del público en redes sociales.</p></div>
         </div>
-        <div id="pulsoContent" style="padding:20px;text-align:center;color:#94A3B8">Cargando análisis de redes...</div>
+        <div id="pulsoContent" style="padding:20px;text-align:center;color:#9A8CC0">Cargando análisis de redes...</div>
       </section>
     </div>
     <div id="anal" style="display:none"></div>
@@ -450,7 +450,7 @@ const num1=x=>x==null?"—":x.toLocaleString("es-CO",{minimumFractionDigits:1,ma
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const MIN=new Set(["de","del","la","las","los","y","el"]);
 const cap=t=>String(t).toLowerCase().split(" ").map((w,i)=>i>0&&MIN.has(w)?w:w.charAt(0).toUpperCase()+w.slice(1)).join(" ");
-const scaleColor=t=>{const c=["#b9cbe4","#7c9cc9","#4a72a8","#274d80","#132033"];return c[Math.min(c.length-1,Math.floor(t*c.length))];};
+const scaleColor=t=>{const c=["#A5C8FF","#60A5FA","#1D4ED8","#3B23A6","#1A0F45"];return c[Math.min(c.length-1,Math.floor(t*c.length))];};
 const src=()=>modo==="anal"?ANAL:DATA;
 const T=()=>src().territorios[terr];
 const C=()=>T().corp[corp];
@@ -594,7 +594,7 @@ function renderRail(){
     (!f||c.n.toUpperCase().includes(f)||c.pt.toUpperCase().includes(f))&&(uFiltro<0||c.l===uFiltro));
   const per=items.filter(x=>!x.c.ls),lis=items.filter(x=>x.c.ls);
   $("#candCount").textContent=fmt(per.length);$("#candWord").textContent=per.length===1?"candidato":"candidatos";
-  if(!items.length){el.innerHTML='<div style="padding:20px;color:#7d8ea6;font-size:13px">Ningún resultado. Prueba otro nombre o cambia el filtro.</div>';return;}
+  if(!items.length){el.innerHTML='<div style="padding:20px;color:#7D6FA8;font-size:13px">Ningún resultado. Prueba otro nombre o cambia el filtro.</div>';return;}
   const MAX=400;
   const sec=(t,sub)=>{const d=document.createElement("div");d.className="rail-sec";d.innerHTML=esc(t)+(sub?`<small>${esc(sub)}</small>`:"");el.appendChild(d);};
   const btn=({c,i})=>{const b=document.createElement("button");b.className="cand"+(c.ls?" lista":"")+(i===sel?" active":"");
@@ -661,7 +661,7 @@ function renderPuestos(c){
     r.innerHTML=`<div class="rank num">${k+1}</div><div class="pinfo"><div class="pn">${esc(p.n)}</div><div class="pl">${esc(uNom(p.l))}</div></div>
       <div class="pmet"><div class="pv num">${fmt(v)}</div><div class="ps num">${(v/c.v*100).toFixed(1)}%</div></div>
       <div class="pbar"><i style="width:${(t*100).toFixed(1)}%;background:${scaleColor(t)}"></i></div>`;el.appendChild(r);});
-  if(c.p.length>60){const d=document.createElement("div");d.style.cssText="padding:12px 16px;font-size:12.5px;color:#94A3B8";d.textContent="Y "+(c.p.length-60)+" puestos más con votos.";el.appendChild(d);}
+  if(c.p.length>60){const d=document.createElement("div");d.style.cssText="padding:12px 16px;font-size:12.5px;color:#9A8CC0";d.textContent="Y "+(c.p.length-60)+" puestos más con votos.";el.appendChild(d);}
 }
 function renderUnidades(c,porU){
   const el=$("#locList");el.innerHTML="";const max=porU[0].v;
@@ -860,27 +860,27 @@ function renderPulso(datos) {
   el.innerHTML = "";
   
   let html = `<div style="max-width:800px;margin:0 auto">
-    <p style="font-size:12px;color:#94A3B8;margin-bottom:20px">Actualizado: ${datos.actualizado}</p>`;
+    <p style="font-size:12px;color:#9A8CC0;margin-bottom:20px">Actualizado: ${datos.actualizado}</p>`;
   
   const cands = Object.entries(datos.candidatos).sort((a,b) => b[1].sentimiento_promedio - a[1].sentimiento_promedio);
   
   cands.forEach(([nombre, d]) => {
     const score = d.sentimiento_promedio;
-    const color = score > 0.5 ? "#2E9E7B" : score < -0.5 ? "#C0485A" : "#94A3B8";
+    const color = score > 0.5 ? "#00C97B" : score < -0.5 ? "#FF2D6F" : "#9A8CC0";
     const anchoPct = Math.abs(score) * 100;
     
-    html += `<div style="margin-bottom:22px;padding:14px;background:#f7f9fc;border-radius:10px;border-left:3px solid ${color}">
+    html += `<div style="margin-bottom:22px;padding:14px;background:#F6F4FF;border-radius:10px;border-left:3px solid ${color}">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <strong style="color:#0F1C2E">${esc(nombre)}</strong>
+        <strong style="color:#150B3D">${esc(nombre)}</strong>
         <span style="font-size:18px;font-weight:700;color:${color}">${score.toFixed(2)}</span>
       </div>
-      <div style="height:8px;background:#e8eef6;border-radius:4px;overflow:hidden;margin-bottom:8px">
+      <div style="height:8px;background:#E7DFFB;border-radius:4px;overflow:hidden;margin-bottom:8px">
         <i style="display:block;height:100%;width:${anchoPct}%;background:${color};border-radius:4px"></i>
       </div>
-      <div style="font-size:12px;color:#94A3B8;margin-bottom:8px">${d.posts} posts analizados</div>`;
+      <div style="font-size:12px;color:#9A8CC0;margin-bottom:8px">${d.posts} posts analizados</div>`;
     
     if (d.temas && d.temas.length > 0) {
-      html += `<div style="font-size:11px">Temas: ${d.temas.map(t => `<span style="display:inline-block;background:#f0e2c2;padding:2px 6px;border-radius:3px;margin-right:4px">${esc(t.tema)} (${t.menciones})</span>`).join("")}</div>`;
+      html += `<div style="font-size:11px">Temas: ${d.temas.map(t => `<span style="display:inline-block;background:#FFE8B0;padding:2px 6px;border-radius:3px;margin-right:4px">${esc(t.tema)} (${t.menciones})</span>`).join("")}</div>`;
     }
     
     html += `</div>`;
@@ -901,7 +901,7 @@ DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
 <div style="position: fixed; top: 100px; right: 20px; z-index: 998;">
     <a href="soacha-2027.html" style="
         display: inline-block;
-        background: #C8A560;
+        background: #FFB020;
         color: white;
         padding: 12px 18px;
         border-radius: 6px;
@@ -911,9 +911,9 @@ DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
         box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
         transition: all 0.3s ease;
         font-family: 'Archivo', sans-serif;
-    " onmouseover="this.style.background='#A98841'" onmouseout="this.style.background='#C8A560'">
+    " onmouseover="this.style.background='#E08A00'" onmouseout="this.style.background='#FFB020'">
         Electoral 2027
     </a>
 </div><script src="js/analisis-soacha.js" defer></script>
-<a href="index.html" style="position:fixed;left:20px;bottom:20px;z-index:9999;background:#0F1C2E;color:#fff;border:1px solid #C8A560;padding:10px 16px;border-radius:8px;font:600 13px Inter,Segoe UI,sans-serif;text-decoration:none">&larr; Inicio</a></body>
+<a href="index.html" style="position:fixed;left:20px;bottom:20px;z-index:9999;background:#150B3D;color:#fff;border:1px solid #FFB020;padding:10px 16px;border-radius:8px;font:600 13px Inter,Segoe UI,sans-serif;text-decoration:none">&larr; Inicio</a></body>
 </html>

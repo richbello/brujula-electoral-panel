@@ -1,0 +1,375 @@
+{
+  "resumen": {
+    "contratos": 2413,
+    "valor_total": 107751785271.06,
+    "entidades": 4,
+    "proveedores": 921
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 31.7033,
+    "pct_directa_valor": 17.1583,
+    "hhi": 100.24800642925342,
+    "top1_proveedor_pct": 3.9694575841676385,
+    "top5_proveedores_pct": 15.804059128187436,
+    "pareto_proveedores_80pct_valor": 207,
+    "pct_con_adicion": 8.868628263572315,
+    "top_proveedores": [
+      {
+        "proveedor": "RAPIOBRAS",
+        "documento": "901007203",
+        "valor": 3828050204.9700003,
+        "contratos": 2,
+        "participacion_pct": 3.9695
+      },
+      {
+        "proveedor": "SERVICIOS TEMPORALES DE GUADUAS E.U",
+        "documento": "8320025291",
+        "valor": 3569060768.0,
+        "contratos": 18,
+        "participacion_pct": 3.7009
+      },
+      {
+        "proveedor": "ESTEBAN BERMUDEZ GOMEZ",
+        "documento": "3050154",
+        "valor": 3050000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.1627
+      },
+      {
+        "proveedor": "Llanopozos",
+        "documento": "800147021",
+        "valor": 2645363653.22,
+        "contratos": 1,
+        "participacion_pct": 2.7431
+      },
+      {
+        "proveedor": "PARTEQUIPOS MAQUINARIA S.A.S",
+        "documento": "830116807",
+        "valor": 2148583000.0,
+        "contratos": 1,
+        "participacion_pct": 2.228
+      },
+      {
+        "proveedor": "SUPRISA S.A.S",
+        "documento": "900503041",
+        "valor": 1898064481.24,
+        "contratos": 12,
+        "participacion_pct": 1.9682
+      },
+      {
+        "proveedor": "GRUPO CONSTRUCCENTER SAS",
+        "documento": "9000854564",
+        "valor": 1895037884.79,
+        "contratos": 1,
+        "participacion_pct": 1.965
+      },
+      {
+        "proveedor": "cuerpo de bomberos voluntarios de guaduas",
+        "documento": "900155282",
+        "valor": 1552500000.0,
+        "contratos": 4,
+        "participacion_pct": 1.6098
+      },
+      {
+        "proveedor": "AXIS SUMINISTROS SAS",
+        "documento": "900957688",
+        "valor": 1508479680.2,
+        "contratos": 3,
+        "participacion_pct": 1.5642
+      },
+      {
+        "proveedor": "SIGLO XXII SAS",
+        "documento": "900773297",
+        "valor": 1400000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.4517
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8016791",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "ESTEBAN BERMUDEZ GOMEZ",
+        "modalidad": "Contratación directa",
+        "valor": 3050000000.0,
+        "fecha_firma": "2025-06-25",
+        "objeto": "COMPRA DE UN PREDIO IDENTIFICADO CON MATRÍCULA INMOBILIARIA NO. 162-10139; UBICADO EN LA CALLE 4 NO. 2 -76/80/84/86 DEL BARRIO CENTRO DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA; CON EL FIN DE MEJORAR LA PRESTACIÓN DE LA OFERTA INSTITUCIONAL DE LA CASA DE GOBIERNO MUNICIPAL; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO NO. 271 DE 2025 SUSCRITO CON EL INSTITUTO DE INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA - ICCU."
+      },
+      {
+        "id": "CO1.PCCNTR.9628288",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "Llanopozos",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 2645363653.22,
+        "fecha_firma": "2026-07-10",
+        "objeto": "REALIZAR EL ESTUDIO DE PROSPECCIÓN DE AGUAS SUBTERRÁNEAS PARA EL ABASTECIMIENTO DEL ACUEDUCTO DEL CASCO URBANO Y DEL ACUEDUCTO DEL CORREGIMIENTO DE PUERTO BOGOTÁ DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9903705",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO VIAS06 EDPLAQ",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2253519908.0,
+        "fecha_firma": "2026-10-01",
+        "objeto": "MEJORAMIENTO DE VÍAS TERCIARIAS MEDIANTE LA  CONSTRUCCIÓN DE PLACA HUELLA EN SITIOS PRIORIZADOS DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9867892",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO PAVI GUADUAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2237106744.0,
+        "fecha_firma": "2026-09-15",
+        "objeto": "MEJORAMIENTO Y REHABILITACIÓN DE LA INFRAESTRUCTURA VIAL URBANA DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9825214",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO VIAS EMPEDRADAS GUADUAS 2026",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2205709313.31,
+        "fecha_firma": "2026-09-25",
+        "objeto": "MEJORAMIENTO Y CONSERVACIÓN DE LAS VÍAS EMPEDRADAS DEL CENTRO HISTÓRICO DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "contratos": 761,
+        "valor": 55151208945.8
+      },
+      {
+        "entidad": "CONCEJO MUNICIPIO DE GUADUAS",
+        "contratos": 20,
+        "valor": 186990000.0
+      },
+      {
+        "entidad": "ESE HOSPITAL SAN JOSE DE GUADUAS",
+        "contratos": 1415,
+        "valor": 45106584928.14
+      },
+      {
+        "entidad": "ESTABLECIMIENTO PENITENCIARIO LA ESPERANZA DE GUADUAS",
+        "contratos": 86,
+        "valor": 7307001397.12
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 35,
+    "valor_obras": 18124728452.46,
+    "obras_vencidas_abiertas": 22,
+    "valor_obras_vencidas_abiertas": 6332526611.12,
+    "pct_obras_vencidas_abiertas": 62.857142857142854,
+    "pct_pagado_obras_vencidas_abiertas": 9.1399,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9867892",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO PAVI GUADUAS",
+        "estado": "Aprobado",
+        "valor": 2237106744.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-28",
+        "objeto": "MEJORAMIENTO Y REHABILITACIÓN DE LA INFRAESTRUCTURA VIAL URBANA DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9844389",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "ACRUX ARQUITECTURA",
+        "estado": "Aprobado",
+        "valor": 703743825.65,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-30",
+        "objeto": "CONSTRUCCIÓN DE OBRAS COMPLEMENTARIAS DE VÍAS Y ESPACIO PÚBLICO ASOCIADAS AL PUENTE VEHICULAR SOBRE EL RÍO LIMONAR; BARRIO TOMÁS CIPRIANO DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9348263",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "COARCO SAS",
+        "estado": "Modificado",
+        "valor": 380603587.1,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-10",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA EL HATO A LA VEREDA TOTUMAL Ó VIJAGUAL SECTOR LA LOMA DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA CONVENIO No. ICCU 1359 - 2025; MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA CUATRO ESQUINAS SECTOR CAÑO EL TUERTO DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA CONVENIO No. ICCU 1373 - 2025 Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA AGUA CLARA SECTOR LA ESCUELA DEL MUNICIPIO DE GUADUAS CONVENIO No. ICCU 1405 - 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8942588",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CS PH2025",
+        "estado": "En ejecución",
+        "valor": 350000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-03",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA EL HATILLO A LA VEREDA CAMPEONA SECTOR POZO LA TORRE DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA (CONVENIO No. ICCU 1077 - 2025); MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA SAN MIGUEL A LA VEREDA CARBONERA EN EL SECTOR EL CURAL DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA (CONVENIO No. ICCU 1311 - 2025) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA EL TRIGO A LA VEREDA LA CABAÑA SECTOR EL REFUGIO DEL MUNICIPIO DE GUADUAS; DEPARTAMENTO"
+      },
+      {
+        "id": "CO1.PCCNTR.8663550",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "ESTRUCTURAR INGENIERIA Y PROYECTOS SAS",
+        "estado": "Modificado",
+        "valor": 299999992.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-20",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA INSPECCIÓN DE GUADURERO A LA VEREDA BARBASCALES SECTOR LA ZETA EN EL MUNICIPIO DE GUADUAS; CUNDINAMARCA CONVENIO No. ICCU 610-2025; MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA INSPECCIÓN DE GUADUERO A LA VEREDA BARBASCALES SECTOR LA ESCUELA EN EL MUNICIPIO DE GUADUAS CONVENIO No. ICCU 479-2025; MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VÍA NACIONAL 50-08 KM 48 A LA VEREDA EL BALÚ EN EL SECTOR CASA VARGAS DEL MUNICIPIO DE GUADUAS CUNDINAMARCA CONVENIO 751"
+      },
+      {
+        "id": "CO1.PCCNTR.8276767",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO 2 INTERDEPORTES GUADUAS 2025",
+        "estado": "Modificado",
+        "valor": 298000000.0,
+        "pagado": 29800000.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DEL POLIDEPORTIVO LA BOMBONERA EN EL CORREGIMIENTO DE PUERTO BOGOTÁ; MUNICIPIO DE GUADUAS CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8614233",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO PLACA HUELLA 2026",
+        "estado": "Modificado",
+        "valor": 297023273.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-09",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CORREGIMIENTO LA PAZ A LA VEREDA CARRAPAL EN EL SECTOR LA BATEA DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA (CONVENIO No. ICCU 489 - 2025); MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA ACEROS Y PITAL SECTOR PUENTE SANDINO DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA (CONVENIO No. ICCU 507 - 2025) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA CAMPEONA SECTOR LOS CÁRDENAS DEL MUNICIPIO DE GUADUAS; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7952384",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "INMARLI SAS",
+        "estado": "En ejecución",
+        "valor": 289996227.08,
+        "pagado": 289996227.0,
+        "fecha_fin": "2025-11-14",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DESDE EL CORREGIMIENTO DE LA PAZ A LA VEREDA MONTAÑA NEGRA EN EL SECTOR 1 EL CORRAL Y EN EL SECTOR 2 EL GUAMO DEL MUNICIPIO DE GUADUAS CUNDINAMARCA (CONVENIO ICCU 687-2024) Y MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA CARBONERA SECTOR 1 BUENA VISTA Y EN EL SECTOR 2 LAS QUEBRADAS DEL MUNICIPIO DE GUADUAS CUNDINAMARCA (CONVENIO ICCU 681-2024)"
+      },
+      {
+        "id": "CO1.PCCNTR.8153848",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "ELKA INGENIERIA Y SUMINISTROS SAS",
+        "estado": "Modificado",
+        "valor": 269993727.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-27",
+        "objeto": "EJECUCIÓN DE LAS OBRAS MINIMAS Y REPARACIONES LOCATIVAS PARA LA MITIGACIÓN DEL RIESGO Y PROTECCIÓN DE BIENES INMUEBLES DE INTERES CULTURAL Y PATRIMONIAL UBICADOS EN EL CENTRO HISTORICO"
+      },
+      {
+        "id": "CO1.PCCNTR.8124472",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO VIAL 2025",
+        "estado": "Modificado",
+        "valor": 219825000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-18",
+        "objeto": "MANTENIMIENTO RUTINARIO DE VÍAS URBANAS EN PAVIMENTO FLEXIBLE DEL MUNICIPIO DE GUADUAS CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8202841",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "ELKA INGENIERIA Y SUMINISTROS SAS",
+        "estado": "Modificado",
+        "valor": 200000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-10",
+        "objeto": "MANTENIMIENTO; MEJORAMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA FÍSICA DE LAS INSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8504572",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "MAXEL ES INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 139260993.0,
+        "pagado": 139260993.0,
+        "fecha_fin": "2026-02-11",
+        "objeto": "MANTENIMIENTO; MEJORAMIENTO Y ADECUACIÓN DE LOS ESCENARIOS DEPORTIVOS PRIORITARIOS DEL MUNICIPIO DE GUADUAS CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8220113",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "VICTOR CAMARGO IB CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 129999673.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-11",
+        "objeto": "MEJORAMIENTO Y ADECUACIÓN DEL SISTEMA DE ALCANTARILLADO DE AGUAS LLUVIAS EN EL BARRIO SAN JOSÉ DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8250372",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "ADENAWER MAHECHA MAHECHA",
+        "estado": "Modificado",
+        "valor": 119729765.99,
+        "pagado": 119729765.99,
+        "fecha_fin": "2025-11-15",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DE LA INFRAESTRUCTURA FÍSICA DE LA PLAZA DE FERIAS SANTA MARÍA DE LAS GUADUAS Y DE LA PLAZA DE FERIAS DEL CENTRO POBLADO DE LA PAZ EN EL MUNICIPIO DE GUADUAS CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8693224",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "SP INGENIERIA Y CONSTRUCCION SAS",
+        "estado": "Modificado",
+        "valor": 99999625.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-09",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA AGUACLARA SECTOR VILLA DANIELA DEL MUNICIPIO DE GUADUAS CUNDINAMARCA (CONVENIO No. ICCU 814-2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.9029347",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO INGENIEROS ASOCIADOS",
+        "estado": "En ejecución",
+        "valor": 99982900.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-13",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA CHIPAUTÁ SECTOR LA Y DEL MUNICIPIO DE GUADUAS; DEPARTAMENTO DE CUNDINAMARCA (CONVENIO No. ICCU 1495 - 2025)"
+      },
+      {
+        "id": "CO1.PCCNTR.8312373",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "CONSORCIO CB TOLIMA",
+        "estado": "Modificado",
+        "valor": 56954271.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "REALIZAR EL MANTENIMIENTO Y ADECUACIÓN DE PUENTES VEHICULARES E INSTALACIÓN DE BARANDAS METALICAS PARA PROTECCION VEHICULAR EN EL MUNICIPIO DE GUADUAS CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8595929",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "ADENAWER MAHECHA MAHECHA",
+        "estado": "En ejecución",
+        "valor": 39647182.3,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-24",
+        "objeto": "MANTENIMIENTO Y MEJORAMIENTO DEL ESPACIO PUBLICO DE LA PLAZOLETA DE ACOSTA DEL MUNICIPIO DE GUADUAS; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9628499",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "LOVALL REPRESENTACIONES S.A.S.",
+        "estado": "Modificado",
+        "valor": 36665200.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-05",
+        "objeto": "CONTRATO DE OBRA PÚBLICA PARA LA SEÑALIZACIÓN VERTICAL E INSTALACIÓN DE DISPOSITIVOS REDUCTORES DE VELOCIDAD; ORIENTADOS AL MEJORAMIENTO DE LA INFRAESTRUCTURA Y LA SEGURIDAD VIAL"
+      },
+      {
+        "id": "CO1.PCCNTR.8268440",
+        "entidad": "ALCALDIA MUNICIPAL DE GUADUAS",
+        "proveedor": "FERRERIA S.A.S.",
+        "estado": "Modificado",
+        "valor": 32759995.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-10",
+        "objeto": "REALIZAR LAS ACTIVIDADES INHERENTES AL SUMINISTRO E IMPLEMENTACIÓN DE ELEMENTOS DE SEÑALIZACIÓN EN LA RED VIAL TERCIARIA DEL MUNICIPIO DE GUADUAS CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Guaduas",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 27.4,
+  "nivel": "bajo",
+  "posicion": 68.0,
+  "total_rankeados": 71
+}

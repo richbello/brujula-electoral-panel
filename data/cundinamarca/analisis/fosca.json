@@ -1,0 +1,132 @@
+{
+  "resumen": {
+    "contratos": 6,
+    "valor_total": 62803600.0,
+    "entidades": 1,
+    "proveedores": 6
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 33.3333,
+    "pct_directa_valor": 56.5254,
+    "hhi": 2442.9685016890658,
+    "top1_proveedor_pct": 39.80663528842296,
+    "top5_proveedores_pct": 94.34841314829086,
+    "pareto_proveedores_80pct_valor": 4,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "JUAN DAVID RODRIGUEZ GOMEZ",
+        "documento": "1073607017",
+        "valor": 25000000.0,
+        "contratos": 1,
+        "participacion_pct": 39.8066
+      },
+      {
+        "proveedor": "CONSTRUYE VERDE PROYECTOS Y SUMINISTROS SAS",
+        "documento": "901463618",
+        "valor": 11490000.0,
+        "contratos": 1,
+        "participacion_pct": 18.2951
+      },
+      {
+        "proveedor": "SONIA EDITH PUERTO TIBAMOSCA",
+        "documento": "1058274354",
+        "valor": 10500000.0,
+        "contratos": 1,
+        "participacion_pct": 16.7188
+      },
+      {
+        "proveedor": "Daniel Felipe Carrillo Quevedo",
+        "documento": "1000322727",
+        "valor": 8194200.0,
+        "contratos": 1,
+        "participacion_pct": 13.0473
+      },
+      {
+        "proveedor": "MANCERA HERNANDEZ S.A.S",
+        "documento": "901901659",
+        "valor": 4070000.0,
+        "contratos": 1,
+        "participacion_pct": 6.4805
+      },
+      {
+        "proveedor": "jyk mantenimientos",
+        "documento": "80068814",
+        "valor": 3549400.0,
+        "contratos": 1,
+        "participacion_pct": 5.6516
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9691276",
+        "entidad": "Personeria Municipal de Fosca",
+        "proveedor": "JUAN DAVID RODRIGUEZ GOMEZ",
+        "modalidad": "Contratación directa",
+        "valor": 25000000.0,
+        "fecha_firma": "2026-07-22",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES COMO ABOGADO DE LA PERSONERIA MUNICIPAL DE FOSCA CUNDINAMARCA; EN LA GESTIÓN DE LAS ACTUACIONES DISCIPLINARIAS QUE LE SEAN ASIGNADAS."
+      },
+      {
+        "id": "CO1.PCCNTR.8743449",
+        "entidad": "Personeria Municipal de Fosca",
+        "proveedor": "CONSTRUYE VERDE PROYECTOS Y SUMINISTROS SAS",
+        "modalidad": "Mínima cuantía",
+        "valor": 11490000.0,
+        "fecha_firma": "2025-12-31",
+        "objeto": "COMPRA DE EQUIPOS DE COMPUTO Y ELEMENTOS TEGNOLOGICOS PARA EL FORTALECIMIENTO DE LAS LABORES DE LA PERSONERIA MUNICIPAL DE FOSCA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9873193",
+        "entidad": "Personeria Municipal de Fosca",
+        "proveedor": "SONIA EDITH PUERTO TIBAMOSCA",
+        "modalidad": "Contratación directa",
+        "valor": 10500000.0,
+        "fecha_firma": "2026-08-28",
+        "objeto": "PRESTAR SERVICIOS PROFESIONALES PARA LA RENDICIÓN Y MONITOREO DE LOS DIFERENTES INFORMES Y EVALUACIÓN DEL MODELO INTEGRADO DE PLANEACIÓN Y GESTIÓN MIPG Y FURAG"
+      },
+      {
+        "id": "CO1.PCCNTR.6918164",
+        "entidad": "Personeria Municipal de Fosca",
+        "proveedor": "Daniel Felipe Carrillo Quevedo",
+        "modalidad": "Mínima cuantía",
+        "valor": 8194200.0,
+        "fecha_firma": "2024-10-18",
+        "objeto": "SUMINISTRO DOTACIÓN QUE CONSISTE EN VESTIDO Y CALZADO DE LABOR CON DESTINO AL SECRETARIO DE LA PERSONERIA; Y SUMINISTRO DE MATERIALES; EQUIPOS Y ELEMENTOS DE OFICINA PARA EL FUNCIONAMIENTO DE LA PERSONERIA MUNICIPAL DE FOSCA- CUNDINAMARCA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8481366",
+        "entidad": "Personeria Municipal de Fosca",
+        "proveedor": "MANCERA HERNANDEZ S.A.S",
+        "modalidad": "Mínima cuantía",
+        "valor": 4070000.0,
+        "fecha_firma": "2025-10-23",
+        "objeto": "COMPRA DE MUEBLES; EQUIPOS Y SUMINISTROS PARA EL DESPACHO DE LA PERSONERÍA MUNICIPAL DE FOSCA CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Personeria Municipal de Fosca",
+        "contratos": 6,
+        "valor": 62803600.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Fosca",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

@@ -1,0 +1,260 @@
+{
+  "resumen": {
+    "contratos": 3981,
+    "valor_total": 315452304973.01,
+    "entidades": 7,
+    "proveedores": 1560
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 88.9224,
+    "pct_directa_valor": 49.4164,
+    "hhi": 322.8439877005096,
+    "top1_proveedor_pct": 11.344938696097348,
+    "top5_proveedores_pct": 34.83176260177348,
+    "pareto_proveedores_80pct_valor": 167,
+    "pct_con_adicion": 19.86937955287616,
+    "top_proveedores": [
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 35000000000.0,
+        "contratos": 1,
+        "participacion_pct": 11.3449
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Urbano de La Ceja",
+        "documento": "901105143",
+        "valor": 22862014097.0,
+        "contratos": 1,
+        "participacion_pct": 7.4105
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 19187618006.0,
+        "contratos": 6,
+        "participacion_pct": 6.2195
+      },
+      {
+        "proveedor": "COOVISER C.T.A",
+        "documento": "800028582",
+        "valor": 17345700551.0,
+        "contratos": 4,
+        "participacion_pct": 5.6225
+      },
+      {
+        "proveedor": "CONSORCIO MADRID CIVIL",
+        "documento": "71746502",
+        "valor": 13063308042.0,
+        "contratos": 1,
+        "participacion_pct": 4.2344
+      },
+      {
+        "proveedor": "CONSORCIO MADRID*",
+        "documento": "901977765",
+        "valor": 10108442037.0,
+        "contratos": 1,
+        "participacion_pct": 3.2766
+      },
+      {
+        "proveedor": "EMPRESA PÚBLICA DE MADRID (proveedor)",
+        "documento": "901255451",
+        "valor": 6594475108.03,
+        "contratos": 11,
+        "participacion_pct": 2.1375
+      },
+      {
+        "proveedor": "DICOVA S.A.S",
+        "documento": "900423773",
+        "valor": 6279361923.0,
+        "contratos": 16,
+        "participacion_pct": 2.0354
+      },
+      {
+        "proveedor": "U.T BIENESTAR Y AMOR MADRID",
+        "documento": "902019242",
+        "valor": 5866926000.0,
+        "contratos": 1,
+        "participacion_pct": 1.9017
+      },
+      {
+        "proveedor": "PROSOI.SAS",
+        "documento": "900643646",
+        "valor": 5831716393.5,
+        "contratos": 1,
+        "participacion_pct": 1.8903
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8366171",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "BANCOLOMBIA",
+        "modalidad": "Contratación directa",
+        "valor": 35000000000.0,
+        "fecha_firma": "2025-10-15",
+        "objeto": "EMPRESTITO ENTRE EL MUNICIPIO DE MADRID Y BANCOLOMBIA"
+      },
+      {
+        "id": "CO1.PCCNTR.8428105",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "Empresa de Desarrollo Urbano de La Ceja",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 22862014097.0,
+        "fecha_firma": "2025-10-07",
+        "objeto": "GERENCIA INTEGRAL PARA LA EJECUCION DE PROYECTOS DE INVERSION EN CUMPLIMIENTO DEL PLAN DE DESARROLLO COSECHANDO CON AMOR POR MADRID"
+      },
+      {
+        "id": "CO1.PCCNTR.9538312",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "CONSORCIO MADRID CIVIL",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 13063308042.0,
+        "fecha_firma": "2026-07-15",
+        "objeto": "Construcción del centro de vida sensorial del municipio de Madrid Cundinamarca."
+      },
+      {
+        "id": "CO1.PCCNTR.8177602",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "CONSORCIO MADRID*",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 10108442037.0,
+        "fecha_firma": "2025-08-29",
+        "objeto": "Conservación; mantenimiento y mejoramiento de la malla vial; en el municipio de Madrid Cundinamarca."
+      },
+      {
+        "id": "CO1.PCCNTR.9253808",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "modalidad": "Contratación régimen especial",
+        "valor": 7500000000.0,
+        "fecha_firma": "2026-01-30",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS Y FINANCIEROS; PARA DESARROLLAR EL PROGRAMA DE ATENCIÓN INTEGRAL DE LOS NIÑOS Y NIÑAS DE PRIMERA INFANCIA; A TRAVÉS DE LA ADMINISTRACIÓN DEL JARDÍN DE LOS SUENOS; CAMPO DE ILUSIONES Y CLAVELES DE AMOR PROPIEDAD DEL MUNICIPIO DE MADRID CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "contratos": 2771,
+        "valor": 254286779857.55
+      },
+      {
+        "entidad": "COMANDO AEREO DE MANTENIMIENTO",
+        "contratos": 207,
+        "valor": 40078757016.29
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE MADRID",
+        "contratos": 115,
+        "valor": 3125833974.1
+      },
+      {
+        "entidad": "EMPRESA PUBLICA DE MADRID",
+        "contratos": 19,
+        "valor": 438269264.0
+      },
+      {
+        "entidad": "ESM COMANDO AÉREO DE MANTENIMIENTO",
+        "contratos": 23,
+        "valor": 624548455.2
+      },
+      {
+        "entidad": "INSTITUTO MUNICIPAL PARA EL DEPORTE Y LA RECREACION DE MADRID",
+        "contratos": 683,
+        "valor": 12943734015.87
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE MADRID",
+        "contratos": 107,
+        "valor": 3954382390.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 19,
+    "valor_obras": 54499334264.08,
+    "obras_vencidas_abiertas": 7,
+    "valor_obras_vencidas_abiertas": 12753031282.0,
+    "pct_obras_vencidas_abiertas": 36.84210526315789,
+    "pct_pagado_obras_vencidas_abiertas": 8.6552,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8405203",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "CONSORCIO P5",
+        "estado": "Modificado",
+        "valor": 3991800271.0,
+        "pagado": 275855845.0,
+        "fecha_fin": "2026-09-13",
+        "objeto": "CONSTRUCCIÓN DE OBRAS DE URBANISMO EN EL COLEGIO DE LA VEREDA PUENTE PIEDRA DEL MUNICIPIO DE MADRID CUNDINAMARCA Y OBRAS COMPLEMENTARIAS."
+      },
+      {
+        "id": "CO1.PCCNTR.6779547",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "CONSORCIO POZO MADRID 2024 LP 006 2024",
+        "estado": "Modificado",
+        "valor": 3788952545.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-23",
+        "objeto": "CONSTRUCCIÓN DE POZO PROFUNDO PARA EL ABASTECIMIENTO DE AGUA POTABLE EN LA VEREDA PUENTE PIEDRA EN EL MUNICIPIO DE MADRID"
+      },
+      {
+        "id": "CO1.PCCNTR.8746263",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "Consorcio Parques Madrid 2508",
+        "estado": "Suspendido",
+        "valor": 2957602417.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-01",
+        "objeto": "CONSTRUCCION Y/O MANTENIMIENTO DE UN PARQUE MÚLTIPLE Y RECREATIVO EN EL BARRIO SOSIEGO DEL MUNICIPIO DE MADRID; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8730192",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "CONSORCIO MANTENIMIENTOS MADRID 2025",
+        "estado": "Suspendido",
+        "valor": 1272102879.0,
+        "pagado": 327179884.0,
+        "fecha_fin": "2026-09-01",
+        "objeto": "MEJORAMIENTO; MANTENIMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA FÍSICA INSTITUCIONAL; ADMINISTRATIVA Y COMUNAL A NOMBRE DEL MUNICIPIO DE MADRID; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7147060",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "FUNDACION PARA EL DESARROLLO SOSTENIBLE Y LA PARTICIPACION CIUDADANA",
+        "estado": "En ejecución",
+        "valor": 287772123.0,
+        "pagado": 287772123.0,
+        "fecha_fin": "2024-12-30",
+        "objeto": "AISLAMIENTO Y MANTENIMIENTO PARA LA PRESERVACION DE LOS PREDIOS DE CONSERVACION DEL MUNICIPIO DE MADRID CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8707213",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "SEÑALVIAS SAS",
+        "estado": "Modificado",
+        "valor": 241804867.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-02",
+        "objeto": "MEJORAMIENTO; MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LA RED SEMAFÓRICA EN ARAS DE CONTINUAR CON LOS OBJETIVOS DEL PLAN LOCAL DE SEGURIDAD VIAL EN EL MUNICIPIO DE MADRID CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8223175",
+        "entidad": "ALCALDÍA MUNICIPAL DE MADRID CUNDINAMARCA",
+        "proveedor": "JR2 INGENIERIA INTEGRAL SAS",
+        "estado": "Modificado",
+        "valor": 212996180.0,
+        "pagado": 212991934.0,
+        "fecha_fin": "2025-12-15",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA LA CUESTA A LA VEREDA PUENTE PIEDRA EN EL SECTOR PABLO VI DEL MUNICIPIO DE MADRID; CUNDINAMARCA (CONV ICCU 929 DE 2024)."
+      }
+    ]
+  },
+  "municipio": "Madrid",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 55.7,
+  "nivel": "medio",
+  "posicion": 24.0,
+  "total_rankeados": 71
+}

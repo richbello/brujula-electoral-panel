@@ -1,0 +1,265 @@
+{
+  "resumen": {
+    "contratos": 604,
+    "valor_total": 21702144510.9,
+    "entidades": 2,
+    "proveedores": 214
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 83.6093,
+    "pct_directa_valor": 48.8222,
+    "hhi": 214.16117630351712,
+    "top1_proveedor_pct": 8.998115033956624,
+    "top5_proveedores_pct": 24.570296749875155,
+    "pareto_proveedores_80pct_valor": 84,
+    "pct_con_adicion": 18.211920529801322,
+    "top_proveedores": [
+      {
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "documento": "900516720",
+        "valor": 1928638046.0,
+        "contratos": 19,
+        "participacion_pct": 8.9981
+      },
+      {
+        "proveedor": "ESTACION DE SERVICO LA RAMADA LTDA",
+        "documento": "900215981",
+        "valor": 1086391386.2,
+        "contratos": 6,
+        "participacion_pct": 5.0686
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 789658353.0,
+        "contratos": 4,
+        "participacion_pct": 3.6842
+      },
+      {
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "documento": "900088206",
+        "valor": 754808008.39,
+        "contratos": 2,
+        "participacion_pct": 3.5216
+      },
+      {
+        "proveedor": "CONSTRUCIVILES ELITE SAS",
+        "documento": "800165517",
+        "valor": 706852651.0,
+        "contratos": 3,
+        "participacion_pct": 3.2978
+      },
+      {
+        "proveedor": "SISAN SAS",
+        "documento": "900527732",
+        "valor": 685973578.0,
+        "contratos": 3,
+        "participacion_pct": 3.2004
+      },
+      {
+        "proveedor": "E.S.E. HOSPITAL EL SALVADOR DE UBATE",
+        "documento": "899999147",
+        "valor": 670666868.8,
+        "contratos": 4,
+        "participacion_pct": 3.129
+      },
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 490000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.2861
+      },
+      {
+        "proveedor": "FAINSCO ESAL",
+        "documento": "901149702",
+        "valor": 460000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.1461
+      },
+      {
+        "proveedor": "WORKING PROJECTS SAS",
+        "documento": "900486425",
+        "valor": 419000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.9549
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8366825",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 588890307.0,
+        "fecha_firma": "2025-10-02",
+        "objeto": "OPTIMIZACION; MEJORAMIENTO DE LA INFRAESTRUCTURA DE LA PLANTA DE TRATAMIENTO DE AGUA POTABLE ACUEDUCTO MUNICIPAL (PTAP) DE LENGUAZAQUE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8025293",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 529484386.0,
+        "fecha_firma": "2025-06-27",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS CON ENTIDAD SIN ÁNIMO DE LUCRO (ESAL) DE RECONOCIDA IDONEIDAD PARA LLEVAR A CABO EL CONTRATO DE PRESTACIÓN DE SERVICIOS LOGÍSTICOS Y ARTÍSTICOS DE LOS EVENTOS CULTURALES; DEPORTIVOS Y SOCIALES DEL MUNICIPIO DE LENGUAZAQUE A MONTO AGOTABLE."
+      },
+      {
+        "id": "CO1.PCCNTR.9219775",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 499996260.0,
+        "fecha_firma": "2026-01-30",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; ECONÓMICOS; TÉCNICOS Y HUMANOS PARA LA ORGANIZACION DE LAS ACTIVIDADES DEPORTIVAS; RECREATIVAS; ARTISTICAS; AGROPECUARIAS; TURISTICAS; COMERCIALES Y CULTURALES EN EL MARCO DEL FESTIVAL LA LEYENDA DEL ZAQUE EN EL MARCO DE LA ESTRATEGIA RENOVAMOS LENGUAZAQUE EN CUMPLIMIENTO DE LAS METAS DEL PLAN DE DESARROLLO; A CELEBRARSE EN EL MUNICIPIO DE LENGUAZAQUE."
+      },
+      {
+        "id": "CO1.PCCNTR.7322501",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 490000000.0,
+        "fecha_firma": "2025-01-29",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; ECONÓMICOS; TÉCNICOS Y HUMANOS PARA LA ORGANIZACION DE LAS ACTIVIDADES DEPORTIVAS; RECREATIVAS; ARTISTICAS; AGROPECUARIAS; TURISTICAS; COMERCIALES Y CULTURALES EN EL MARCO DEL FESTIVAL LA LEYENDA DEL ZAQUE EN EL MARCO DE LA ESTREGIA RENOVAMOS LENGUAZAQUE EN CUMPLIMIENTO DE LAS METAS DEL PLAN DE DESARROLLO A CELEBRARSE EN EL MUNICIPIO DE LENGUAZAQUE."
+      },
+      {
+        "id": "CO1.PCCNTR.6788603",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "CORPORACION DEPORTIVA EVENDINAMICA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 480598000.0,
+        "fecha_firma": "2024-09-25",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS CON ENTIDAD SIN ÁNIMO DE LUCRO (ESAL) DE RECONOCIDA IDONEIDAD PARA LLEVAR A CABO EL CONTRATO DE PRESTACIÓN DE SERVICIOS LOGÍSTICOS Y ARTÍSTICOS DE LOS EVENTOS CULTURALES DEL MUNICIPIO DE LENGUAZAQUE A MONTO AGOTABLE."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "contratos": 595,
+        "valor": 21647861510.9
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE LENGUAZAQUE",
+        "contratos": 9,
+        "valor": 54283000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 10,
+    "valor_obras": 2382352939.63,
+    "obras_vencidas_abiertas": 10,
+    "valor_obras_vencidas_abiertas": 2382352939.63,
+    "pct_obras_vencidas_abiertas": 100.0,
+    "pct_pagado_obras_vencidas_abiertas": 15.2715,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8366825",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "Modificado",
+        "valor": 588890307.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-11",
+        "objeto": "OPTIMIZACION; MEJORAMIENTO DE LA INFRAESTRUCTURA DE LA PLANTA DE TRATAMIENTO DE AGUA POTABLE ACUEDUCTO MUNICIPAL (PTAP) DE LENGUAZAQUE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6643201",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "COMERCIALIZADORA CONSTRUCCIÓN INGENIERÍA Y ARQUITECTURA GALERIAS LTDA",
+        "estado": "En ejecución",
+        "valor": 363821843.14,
+        "pagado": 363821842.75,
+        "fecha_fin": "2024-11-22",
+        "objeto": "MANTENIMIENTO; MEJORAMIENTO Y ADECUACIÓN DE LAS INSTALACIONES DE LA ALCALDÍA MUNICIPAL DE LEGUAZAQUE; DE CONFIRMIDAD CON EL PLIEGO DE CONDICIONES PC-1."
+      },
+      {
+        "id": "CO1.PCCNTR.8013922",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "CALING S.A.S",
+        "estado": "Modificado",
+        "valor": 326782686.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-09",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA FARACIA PANTANITOS SECTOR PALO SECO DEL MUNICIPIO DE LENGUAZAQUE; CUNDINAMARCA SEGÚN LO ESTABLECIDO POR ICCU-CTO-572 DE 2024; y EL MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA FARACIA PANTANITOS SECTOR LA LOMITA DEL MUNICIPIO DE LENGUAZAQUE; CUNDINAMARCA SEGÚN LO ESTBLECIDO POR ICCU-CTO-513-2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9523378",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "SC DISEÑO Y CONSTRUCCION",
+        "estado": "En ejecución",
+        "valor": 200000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-22",
+        "objeto": "ACEPTADO A TRAVÉS DE LA PLATAFORMA SECOP II"
+      },
+      {
+        "id": "CO1.PCCNTR.6805454",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "SISAN SAS",
+        "estado": "En ejecución",
+        "valor": 199973578.0,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-25",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA TIBITA EL CARMEN A LA VEREDA TIBITA CENTRO SECTOR TRES CAMINOS DEL MUNICIPIO DE LENGUAZAQUE; CUNDINAMARCA; SEGÚN LO ESTABLECIDO EN EL CONVENIO ICCU 658 DE 2023; MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA LA GLORIETA A LA VEREDA ESPINAL CARRIZAL SECTOR LA VIRGEN DEL MUNICIPIO DE LENGUAZAQUE; CUNDINAMARCA; SEGÚN LO ESTABLECIDO EN EL CONVENIO ICCU 787 DE 2023."
+      },
+      {
+        "id": "CO1.PCCNTR.8696155",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "FAPAIS",
+        "estado": "En ejecución",
+        "valor": 169995034.1,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-23",
+        "objeto": "AMPLIACIÓN; MANTENIMIENTO Y REHABILITACION DE REDES DE ALCANTARILLADO Y ACUEDUCTO; DEL BARRIO CASALOMA I Y LIMITES ENTRE EL BARRIO INDUSTRIAL Y SAN ANTONIO DEL MUNICIPIO DE LENGUAZAQUE"
+      },
+      {
+        "id": "CO1.PCCNTR.8026076",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "CONSTRUCAL SAS",
+        "estado": "Modificado",
+        "valor": 166973000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-23",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA TIBITA HATICO SECTOR EL BALCON DEL MUNICIPIO DE LENGUAZAQUE; CUNDINAMARCA; SEGÚN LO ESTBLECIDO POR ICCUCTO-752 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7175326",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "Modificado",
+        "valor": 165917701.39,
+        "pagado": 0.0,
+        "fecha_fin": "2025-06-08",
+        "objeto": "MANTENIMIENTO; MEJORAMIENTO Y ADECUACIÓN DE LAS SEDES EDUCATIVAS DEL MUNICIPIO LENGUAZAQUE"
+      },
+      {
+        "id": "CO1.PCCNTR.9523174",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "SERVICIOS GENERALES DE INGENIERIA",
+        "estado": "En ejecución",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-22",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA GACHANECA SECTOR LA HUELLA DEL MUNICIPIO DE LENGUAZAQUE; CUNDINAMARCA; SEGÚN EL CONVENIO SUSCRITO POR ICCU-CTO-523 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9525479",
+        "entidad": "MUNICIPIO DE LENGUAZAQUE",
+        "proveedor": "CONSORCIO PH CHIRVANEQUE.",
+        "estado": "Modificado",
+        "valor": 99998790.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-22",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA CHIRVANEQUE SECTOR LOS NOGALES DEL MUNICIPIO DE LENGUAZAQUE; CUNDINAMARCA; SEGÚN EL CONVENIO SUSCRITO POR ICCU-CTO-1443-2025"
+      }
+    ]
+  },
+  "municipio": "Lenguazaque",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 69.3,
+  "nivel": "alto",
+  "posicion": 9.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,164 @@
+{
+  "resumen": {
+    "contratos": 35,
+    "valor_total": 815819000.0,
+    "entidades": 2,
+    "proveedores": 19
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 88.5714,
+    "pct_directa_valor": 51.7679,
+    "hhi": 2254.712436264807,
+    "top1_proveedor_pct": 44.79548772460558,
+    "top5_proveedores_pct": 69.55588188066226,
+    "pareto_proveedores_80pct_valor": 8,
+    "pct_con_adicion": 2.857142857142857,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACION LATINOAMERICANA DE LA CULTURA Y EL FOLCLOR",
+        "documento": "826003210",
+        "valor": 365450100.0,
+        "contratos": 1,
+        "participacion_pct": 44.7955
+      },
+      {
+        "proveedor": "JAIRO GIOVANNI BELTRAN NIETO",
+        "documento": "79893447",
+        "valor": 64250000.0,
+        "contratos": 2,
+        "participacion_pct": 7.8755
+      },
+      {
+        "proveedor": "angelica mendez gonzalez",
+        "documento": "1024584810",
+        "valor": 61150000.0,
+        "contratos": 4,
+        "participacion_pct": 7.4955
+      },
+      {
+        "proveedor": "Erick Bbonilla",
+        "documento": "1004064081",
+        "valor": 39100000.0,
+        "contratos": 3,
+        "participacion_pct": 4.7927
+      },
+      {
+        "proveedor": "Wilson Cruz Monroy",
+        "documento": "1070781261",
+        "valor": 37500000.0,
+        "contratos": 3,
+        "participacion_pct": 4.5966
+      },
+      {
+        "proveedor": "IVAN ARLEY TRIANA FORERO",
+        "documento": "1016038554",
+        "valor": 33082500.0,
+        "contratos": 3,
+        "participacion_pct": 4.0551
+      },
+      {
+        "proveedor": "NBR CONSULTORIA Y LOGISTICA S.A.S.",
+        "documento": "901447041",
+        "valor": 27050000.0,
+        "contratos": 2,
+        "participacion_pct": 3.3157
+      },
+      {
+        "proveedor": "Diana Fernanda Gómez Cárdenas",
+        "documento": "1079232447",
+        "valor": 26250000.0,
+        "contratos": 2,
+        "participacion_pct": 3.2176
+      },
+      {
+        "proveedor": "CRISTIAN DAVID CALDERON GALLEGO*",
+        "documento": "1072466504",
+        "valor": 25750000.0,
+        "contratos": 2,
+        "participacion_pct": 3.1563
+      },
+      {
+        "proveedor": "Yohan Stevens Colmenares Acero",
+        "documento": "1079233416",
+        "valor": 25750000.0,
+        "contratos": 2,
+        "participacion_pct": 3.1563
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6446188",
+        "entidad": "ALCALDIA MUNICIPAL DE SUPATA",
+        "proveedor": "FUNDACION LATINOAMERICANA DE LA CULTURA Y EL FOLCLOR",
+        "modalidad": "Contratación régimen especial",
+        "valor": 365450100.0,
+        "fecha_firma": "2024-06-25",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; ECONÓMICOS; TÉCNICOS Y HUMANOS PARA ORGANIZAR; PROGRAMAR; EJECUTAR Y APOYAR LOGÍSTICAMENTE LAS ACTIVIDADES ARTISTICAS; CULTURALES; FOLCLÓRICAS; DEPORTIVAS; Y AGROPECUARIAS A DESARROLLARSE EN EL MUNICIPIO DE SUPATÁ CUNDINAMARCA EN LA VIGENCIA 2024."
+      },
+      {
+        "id": "CO1.PCCNTR.8814453",
+        "entidad": "PERSONERIA MUNICIPAL DE SUPATA",
+        "proveedor": "JAIRO GIOVANNI BELTRAN NIETO",
+        "modalidad": "Contratación directa",
+        "valor": 35000000.0,
+        "fecha_firma": "2026-01-09",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES EN DERECHO PARA APOYAR EN LOS ASUNTOS ADMINISTRATIVOS; DISCIPLINARIOS; CONTRACTUALES Y DE COMPETENCIA DE LA PERSONERIA MUNICIPAL DE SUPATA (CUNDINAMARCA)"
+      },
+      {
+        "id": "CO1.PCCNTR.7210473",
+        "entidad": "PERSONERIA MUNICIPAL DE SUPATA",
+        "proveedor": "JAIRO GIOVANNI BELTRAN NIETO",
+        "modalidad": "Contratación directa",
+        "valor": 29250000.0,
+        "fecha_firma": "2025-01-08",
+        "objeto": "PRESTACIÓN DE SERVICIOS PROFESIONALES EN DERECHO PARA APOYAR EN LOS ASUNTOS ADMINISTRATIVOS; DISCIPLINARIOS; CONTRACTUALES Y DE COMPETENCIA DE LA PERSONERIA MUNICIPAL DE SUPATA (CUNDINAMARCA)"
+      },
+      {
+        "id": "CO1.PCCNTR.8814750",
+        "entidad": "PERSONERIA MUNICIPAL DE SUPATA",
+        "proveedor": "angelica mendez gonzalez",
+        "modalidad": "Contratación directa",
+        "valor": 28600000.0,
+        "fecha_firma": "2026-01-09",
+        "objeto": "PRESTACION DE SERVICIOS DE APOYO A LA GESTION MEDIANTE LA ATENCION A LA COMUNIDAD; PROYECCION DE DOCUMENTOS Y DEMAS ACTUACIONES ADMINISTRATIVAS Y SERVICIOS PRESTADOS EN LA PERSONERIA MUNICIPAL DE SUPATA (CUNDINAMARCA)"
+      },
+      {
+        "id": "CO1.PCCNTR.7496098",
+        "entidad": "ALCALDIA MUNICIPAL DE SUPATA",
+        "proveedor": "Andres Alejandro Farias Rocha",
+        "modalidad": "Contratación directa",
+        "valor": 25000000.0,
+        "fecha_firma": "2025-02-14",
+        "objeto": "PRESTAR LOS SERVICIOS COMO INSTRUCTOR DE LA ESCUELA DE FORMACION DEPORTIVA DE FUTBOL DE SALON DEL MUNICIPIO DE SUPATÁ CUNDINAMARCA EN EL MARCO DEL CONVENIO DE INDEPORTES CI-182-2025."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE SUPATA",
+        "contratos": 24,
+        "valor": 654382600.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE SUPATA",
+        "contratos": 11,
+        "valor": 161436400.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Supatá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 63.9,
+  "nivel": "medio",
+  "posicion": 16.0,
+  "total_rankeados": 71
+}

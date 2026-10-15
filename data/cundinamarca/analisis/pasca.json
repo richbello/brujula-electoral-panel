@@ -1,0 +1,61 @@
+{
+  "resumen": {
+    "contratos": 1,
+    "valor_total": 17455000.0,
+    "entidades": 1,
+    "proveedores": 1
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 10000.0,
+    "top1_proveedor_pct": 100.0,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "LADY HERMILA LOPEZ GOMEZ",
+        "documento": "1084250805",
+        "valor": 17455000.0,
+        "contratos": 1,
+        "participacion_pct": 100.0
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7060670",
+        "entidad": "Institución Educativa Normal Superior Nuestra Señora de la Encarnación",
+        "proveedor": "LADY HERMILA LOPEZ GOMEZ",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 17455000.0,
+        "fecha_firma": "2024-11-27",
+        "objeto": "COMPRA DE TELEVISORES SMART TV; TEATROS EN CASA; IMPRESORA DE ETIQUETAS; LECTOR DE CÓDIGOS DE BARRAS; ROLLO DE RÓTULOS E  IMPRESORAS MULTIFUNCIONAL PARA LA SEDE PRINCIPAL DE LA INSTITUCIÓN EDUCATIVA NORMAL SUPERIOR DEL MUNICIPIO PASCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Institución Educativa Normal Superior Nuestra Señora de la Encarnación",
+        "contratos": 1,
+        "valor": 17455000.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Pasca",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

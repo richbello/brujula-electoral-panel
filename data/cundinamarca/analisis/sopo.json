@@ -1,0 +1,185 @@
+{
+  "resumen": {
+    "contratos": 1649,
+    "valor_total": 125526783596.89,
+    "entidades": 4,
+    "proveedores": 762
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 90.1152,
+    "pct_directa_valor": 65.428,
+    "hhi": 456.4462253570104,
+    "top1_proveedor_pct": 17.374012679112653,
+    "top5_proveedores_pct": 39.06573161854017,
+    "pareto_proveedores_80pct_valor": 180,
+    "pct_con_adicion": 11.34020618556701,
+    "top_proveedores": [
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 21189276890.16,
+        "contratos": 29,
+        "participacion_pct": 17.374
+      },
+      {
+        "proveedor": "GEOTER EICE SAS (PROV)",
+        "documento": "901857821",
+        "valor": 7607890908.0,
+        "contratos": 1,
+        "participacion_pct": 6.238
+      },
+      {
+        "proveedor": "EMSERSOPÓ - E.S.P. (Proveedor)",
+        "documento": "832003318",
+        "valor": 7269288168.98,
+        "contratos": 11,
+        "participacion_pct": 5.9604
+      },
+      {
+        "proveedor": "CORPEGESA",
+        "documento": "901824447",
+        "valor": 6446409865.35,
+        "contratos": 5,
+        "participacion_pct": 5.2857
+      },
+      {
+        "proveedor": "CONSORCIO CCG PARQUE SOPO",
+        "documento": "902083394",
+        "valor": 5131545362.0,
+        "contratos": 1,
+        "participacion_pct": 4.2076
+      },
+      {
+        "proveedor": "OUTSOURCING MULTISERVICIOS INTEGRALES EMPRESARIALES LTDA",
+        "documento": "832003653",
+        "valor": 3057756565.87,
+        "contratos": 3,
+        "participacion_pct": 2.5072
+      },
+      {
+        "proveedor": "UT SEGURIDAD SOPO 2025",
+        "documento": "901927579",
+        "valor": 2732849946.0,
+        "contratos": 1,
+        "participacion_pct": 2.2408
+      },
+      {
+        "proveedor": "Fundación Social y Deportiva Colombia",
+        "documento": "900497553",
+        "valor": 2111315286.0,
+        "contratos": 5,
+        "participacion_pct": 1.7312
+      },
+      {
+        "proveedor": "UNION TEMPORAL VIGILANCIA SOPO 2024",
+        "documento": "901825306",
+        "valor": 2091593281.0,
+        "contratos": 1,
+        "participacion_pct": 1.715
+      },
+      {
+        "proveedor": "BANCO AGRARIO DE COLOMBIA S.A.",
+        "documento": "800037800",
+        "valor": 1900000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.5579
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8741410",
+        "entidad": "ALCALDÍA MUNICIPAL DE SOPO",
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 9047108314.82,
+        "fecha_firma": "2025-12-29",
+        "objeto": "CONTRATAR LA GERENCIA INTEGRAL PARA ADELANTAR EL PROYECTO DE CONSTRUCCIÓN DEL ESCENARIO CULTURAL PARA LAS ARTES ESCÉNICAS DEL MUNICIPIO DE SOPÓ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7189322",
+        "entidad": "ALCALDÍA MUNICIPAL DE SOPO",
+        "proveedor": "GEOTER EICE SAS (PROV)",
+        "modalidad": "Contratación directa",
+        "valor": 7607890908.0,
+        "fecha_firma": "2024-12-31",
+        "objeto": "PRESTAR EL SERVICIO PÚBLICO DE GESTIÓN CATASTRAL PARA REALIZAR LA ACTUALIZACIÓN; CONSERVACIÓN Y DIFUSIÓN CATASTRAL DEL MUNICIPIO DE SOPÓ."
+      },
+      {
+        "id": "CO1.PCCNTR.8661118",
+        "entidad": "ALCALDÍA MUNICIPAL DE SOPO",
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 5296863945.0,
+        "fecha_firma": "2025-12-02",
+        "objeto": "CONTRATAR LA GERENCIA INTEGRAL PARA ADELANTAR EL PROYECTO DE MANTENIMIENTO; ADECUACIÓN; CONSTRUCCIÓN Y REHABILITACIÓN DE VÍAS URBANAS Y RURALES DEL MUNICIPIO DE SOPÓ."
+      },
+      {
+        "id": "CO1.PCCNTR.9614237",
+        "entidad": "ALCALDÍA MUNICIPAL DE SOPO",
+        "proveedor": "CONSORCIO CCG PARQUE SOPO",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 5131545362.0,
+        "fecha_firma": "2026-07-15",
+        "objeto": "CONSTRUCCIÓN DEL PARQUE CIUDAD DE LOS NIÑOS DEL MUNICIPIO DE SOPÓ CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO NO ICCU 606 DE 2025 SUSCRITOS ENTRE EL MUNICIPIO DE SOPÓ Y EL ICCU"
+      },
+      {
+        "id": "CO1.PCCNTR.8560985",
+        "entidad": "ALCALDÍA MUNICIPAL DE SOPO",
+        "proveedor": "EMSERSOPÓ - E.S.P. (Proveedor)",
+        "modalidad": "Contratación directa",
+        "valor": 2901636009.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; FINANCIEROS Y ADMINISTRATIVOS PARA LA OPTIMIZACIÓN DEL SISTEMA DE ACUEDUCTO URBANO DEL MUNICIPIO DE SOPÓ."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDÍA MUNICIPAL DE SOPO",
+        "contratos": 1548,
+        "valor": 123626378520.52
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE SOPO",
+        "contratos": 63,
+        "valor": 1025021500.37
+      },
+      {
+        "entidad": "E.S.E. HOSPITAL DIVINO SALVADOR DE SOPO",
+        "contratos": 1,
+        "valor": 487500000.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE SOPO",
+        "contratos": 26,
+        "valor": 387883576.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 8,
+    "valor_obras": 9590394005.87,
+    "obras_vencidas_abiertas": 1,
+    "valor_obras_vencidas_abiertas": 699653887.0,
+    "pct_obras_vencidas_abiertas": 12.5,
+    "pct_pagado_obras_vencidas_abiertas": 89.9991,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8251660",
+        "entidad": "ALCALDÍA MUNICIPAL DE SOPO",
+        "proveedor": "CONSORCIO SAN AGUSTIN",
+        "estado": "Modificado",
+        "valor": 699653887.0,
+        "pagado": 629682477.0,
+        "fecha_fin": "2026-03-26",
+        "objeto": "CONSTRUCCIÓN PLACA PARA CANCHA MÚLTIPLE; UNA GRADERÍA; CUBIERTA Y URBANISMO PARA EL SECTOR SAN AGUSTÍN FASE 1 DEL MUNICIPIO DE SOPÓ; CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO No ICCU 660 DE 2024 SUSCRITOS ENTRE EL MUNICIPIO DE SOPÓ Y EL ICCU Y SE DICTAN OTRAS DISPOSICIONES"
+      }
+    ]
+  },
+  "municipio": "Sopó",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 54.1,
+  "nivel": "medio",
+  "posicion": 26.0,
+  "total_rankeados": 71
+}

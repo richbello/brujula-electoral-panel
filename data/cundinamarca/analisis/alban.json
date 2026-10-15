@@ -1,0 +1,250 @@
+{
+  "resumen": {
+    "contratos": 609,
+    "valor_total": 20842031844.04,
+    "entidades": 3,
+    "proveedores": 238
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 70.1149,
+    "pct_directa_valor": 41.573,
+    "hhi": 204.7021884801482,
+    "top1_proveedor_pct": 6.677709295498124,
+    "top5_proveedores_pct": 25.309585482117757,
+    "pareto_proveedores_80pct_valor": 79,
+    "pct_con_adicion": 10.016420361247947,
+    "top_proveedores": [
+      {
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "documento": "832003417",
+        "valor": 1359742892.0,
+        "contratos": 7,
+        "participacion_pct": 6.6777
+      },
+      {
+        "proveedor": "S´INGENIERIA R&R SAS",
+        "documento": "900230848",
+        "valor": 1114110833.0,
+        "contratos": 1,
+        "participacion_pct": 5.4714
+      },
+      {
+        "proveedor": "DIVERARTS SOLUTIONS SAS",
+        "documento": "901874013",
+        "valor": 1032600000.0,
+        "contratos": 2,
+        "participacion_pct": 5.0711
+      },
+      {
+        "proveedor": "ESTRUCTURAR INGENIERIA Y PROYECTOS SAS",
+        "documento": "900359365",
+        "valor": 845465727.0,
+        "contratos": 1,
+        "participacion_pct": 4.1521
+      },
+      {
+        "proveedor": "IMPORTADORA DISMAQ SAS",
+        "documento": "900162075",
+        "valor": 801723427.0,
+        "contratos": 4,
+        "participacion_pct": 3.9373
+      },
+      {
+        "proveedor": "LUBRICANTES Y COMBUSTIBLES EL TRIANGULO SAS",
+        "documento": "900061021",
+        "valor": 627488826.3,
+        "contratos": 10,
+        "participacion_pct": 3.0816
+      },
+      {
+        "proveedor": "MANUEL RICARDO CASTIBLANCO CORTES",
+        "documento": "1020819930",
+        "valor": 625284882.0,
+        "contratos": 2,
+        "participacion_pct": 3.0708
+      },
+      {
+        "proveedor": "Camilo Castro",
+        "documento": "7223136",
+        "valor": 440613656.0,
+        "contratos": 2,
+        "participacion_pct": 2.1639
+      },
+      {
+        "proveedor": "COPREVISION CORPORACION PARA EL DESARROLLO HUMANO",
+        "documento": "900400641",
+        "valor": 424818767.0,
+        "contratos": 8,
+        "participacion_pct": 2.0863
+      },
+      {
+        "proveedor": "EMPRESA SOCIAL DEL ESTADO HOSPITAL SAN RAFAEL DE FACATATIVA",
+        "documento": "899999151",
+        "valor": 390869517.0,
+        "contratos": 5,
+        "participacion_pct": 1.9196
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9460860",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "S´INGENIERIA R&R SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1114110833.0,
+        "fecha_firma": "2026-04-21",
+        "objeto": "ESTUDIOS; DISEÑOS; MODERNIZACIÓN; IMPLEMENTACIÓN Y PUESTA EN FUNCIONAMIENTO DEL CIRCUITO CERRADO DE TELEVISION - CCTV; ORIENTADO AL FORTALECIMIENTO DEL SISTEMA INTEGRADO DE EMERGENCIAS Y SEGURIDAD SIES  EN EL MUNICIPIO DE ALBÁN; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9790270",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "DIVERARTS SOLUTIONS SAS",
+        "modalidad": "Licitación pública",
+        "valor": 995000000.0,
+        "fecha_firma": "2026-08-10",
+        "objeto": "PRESTAR LOS SERVICIOS DE APOYO LOGÍSTICO PARA LA REALIZACIÓN DE LAS DIFERENTES ACTIVIDADES TURÍSTICAS; CULTURALES Y TRADICIONALES; ENTRE ELLAS EL 58.º FESTIVAL TURÍSTICO; CULTURAL Y GASTRONÓMICO; EL 20.º FESTIVAL DE COMPARSAS AMBIENTALES LA SIERRA DEL AGUA VIVA Y LA CELEBRACIÓN DEL DÍA DEL CAMPESINO; PROGRAMADAS EN EL MUNICIPIO DE ALBÁN; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8281628",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "ESTRUCTURAR INGENIERIA Y PROYECTOS SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 845465727.0,
+        "fecha_firma": "2025-09-05",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA CHIMBE A LA VEREDA GUAYACUNDO BAJO EN EL SECTOR ENTABLE; DEL MUNICIPIO DE ALBAN CUNDINAMARCA DE CONFORMIDAD CON EL CONVENIO INTERADMINISTRATIVO ICCU NO 552 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8155420",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "EMPRESA DE FOMENTO Y DESARROLLO SOSTENIBLE DE OCCIDENTE",
+        "modalidad": "Contratación directa",
+        "valor": 725987010.0,
+        "fecha_firma": "2025-08-01",
+        "objeto": "GERENCIA PARA LA ADMINISTRACIÓN DEL PROYECTO PARA LA ORGANIZACIÓN Y REALIZACIÓN DEL 57° FESTIVAL TURISTICO; CULTURAL Y GASTRONOMICO Y EL 19° FESTIVAL DE COMPARSAS AMBIENTALES LA SIERRA DEL AGUA VIVA EN EL MUNICIPIO DE ALBÁN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9584375",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "CONSORCIO ACUEDUCTO VEREDAL",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 479616653.0,
+        "fecha_firma": "2026-07-14",
+        "objeto": "AJUSTE A LOS ESTUDIOS Y DISEÑOS PARA LA OPTIMIZACIÓN DEL ACUEDUCTO VEREDAL DEL SECTOR CHIPAGRE; MUNICIPIO DE ALBÁN"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Concejo Municipal de Albán Cundinamarca",
+        "contratos": 9,
+        "valor": 46535267.0
+      },
+      {
+        "entidad": "MUNICIPIO DE ALBAN",
+        "contratos": 591,
+        "valor": 20723207457.04
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL ALBAN CUNDINAMARCA",
+        "contratos": 9,
+        "valor": 72289120.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 14,
+    "valor_obras": 4180433536.05,
+    "obras_vencidas_abiertas": 8,
+    "valor_obras_vencidas_abiertas": 1913450577.91,
+    "pct_obras_vencidas_abiertas": 57.14285714285714,
+    "pct_pagado_obras_vencidas_abiertas": 12.3712,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8281628",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "ESTRUCTURAR INGENIERIA Y PROYECTOS SAS",
+        "estado": "Modificado",
+        "valor": 845465727.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-08",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DE LA VEREDA CHIMBE A LA VEREDA GUAYACUNDO BAJO EN EL SECTOR ENTABLE; DEL MUNICIPIO DE ALBAN CUNDINAMARCA DE CONFORMIDAD CON EL CONVENIO INTERADMINISTRATIVO ICCU NO 552 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.8556842",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "MANUEL RICARDO CASTIBLANCO CORTES",
+        "estado": "Modificado",
+        "valor": 340672456.0,
+        "pagado": 167952155.9,
+        "fecha_fin": "2026-06-23",
+        "objeto": "MEJORAMIENTO DE VIAS TERCIARIAS MEDIANTE CONSTRUCCION DE PLACA HUELLAS EN EL EJE VIAL QUE COMUNICA LAS VEREDAS NAMAY ALTA; NAMAY BAJO Y MARIA BAJA DEL MUNICIPIO DE ALBAN CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8528232",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "CONSORCIO AP CHIMBE",
+        "estado": "Modificado",
+        "valor": 324273315.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-27",
+        "objeto": "I. MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA CHIMBE HACIA EL CASCO URBANO SECTOR BORUGAS II.MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA GUAYACUNDO ALTO HACIA EL CASCO URBANO SECTOR ALTO DE GASCAS. III. MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA VEREDA NAMAY BAJO HACIA LA VEREDA NAMAY ALTO SECTOR PUESTO DE SALUD MUNICIPIO DE ALBÁN; DEPARTAMENTO DE CUNDINAMARCA EN CUMPLIMIENTO A LOS CONVENIOS INTERADMINISTRATIVOS ICCU 448-407 Y 528; RESPECTIVAMENTE."
+      },
+      {
+        "id": "CO1.PCCNTR.7673373",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "ARCADIA INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 229212778.0,
+        "pagado": 68763833.4,
+        "fecha_fin": "2025-12-15",
+        "objeto": "LA CONSTRUCCIÓN LA VÍA GAVIONES DENOMINADA  CHIMBE EL PUENTE VILLETA; ENTRE LAS VEREDAS \n DE GUAYACUNDO BAJO SECTOR LA CONCORDIA Y EL \nENTABLE Y CAMINO REAL ENTRE GARBANZAL Y \nPANTANILLO CONVENIO INTERADMINISTRATIVO NO. \n7000000079 CELEBRADO ENTRE CENIT TRANSPORTE Y  LOGÍSTICA DE HIDROCARBUROS SAS Y EL MUNICIPIO DE ALBÁN"
+      },
+      {
+        "id": "CO1.PCCNTR.9418133",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "DICONS DISEÑO Y CONSTRUCCION DE PROYECTOS DE INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 101087936.54,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-28",
+        "objeto": "CONSTRUCCIÓN DE OBRAS DE INGENIERÍA Y BIOINGENIERÍA EN LA VEREDA MARÍA BAJA SECTOR COCHENDA Y VEREDA JAVA SECTOR MARÍA ALTA UBICADOS EN EL MUNICIPIO DE ALBÁN; CUNDINAMARCA SEGÚN CONVENIO INTERADMINISTRATIVO UAEGRD-CD-CVI-152-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.7074725",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "SOLUCIONES INTEGRALES GENFO LTDA SOLUCIONES INTEGRALES DE GERENCIA PARA EL FOMENTO LTDA",
+        "estado": "Modificado",
+        "valor": 34941295.37,
+        "pagado": 0.0,
+        "fecha_fin": "2025-03-04",
+        "objeto": "MANTENIMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA FÍSICA DEL CDI LUNA NUEVA SEDE A DEL CASCO URBANO Y SEDE B DEL CENTRO POBLADO DE CHIMBE DEL MUNICIPIO DE ALBÁN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7163203",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "ASOCIACIÓN  DE DESARROLLO COMUNAL DE LA MARÍA",
+        "estado": "Modificado",
+        "valor": 21000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-05-20",
+        "objeto": "AUNAR ESFUERZOS ENTRE LA ALCALDIA DEL MUNICIPIO DE ALBAN Y LA JUNTA DE DESARROLLO COMUNAL DE LA MARIA PARA LA CONSTRUCCION DE UN CAMINO PEATONAL PARA MEJORAR LA SEGURIDAD VIAL DEL SECTOR LOS MARTINEZ EN LA VEREDA LA MARIA BAJA EN EL MUNICIPIO DE ALBAN; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7162547",
+        "entidad": "MUNICIPIO DE ALBAN",
+        "proveedor": "ASOCIACIÓN  DE DESARROLLO COMUNAL DE LA MARÍA",
+        "estado": "Modificado",
+        "valor": 16797070.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-05-20",
+        "objeto": "AUNAR ESFUERZOS ENTRE LA ALCALDIA DEL MUNICIPIO DE ALBÁN Y LA JUNTA DE DESARROLLO COMUNAL DE LA MARIA PARA EL MANTENIMIENTO Y ADECUACIÓN DE LA INFRAESTRUCTURA FÍSICA DEL RESTAURANTE ESCOLAR ESCUELA LA MARIA BAJA DEL MUNICIPIO DE ALBAN CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Albán",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 43.0,
+  "nivel": "medio",
+  "posicion": 50.0,
+  "total_rankeados": 71
+}

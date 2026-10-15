@@ -1,0 +1,93 @@
+{
+  "resumen": {
+    "contratos": 3,
+    "valor_total": 37397600.0,
+    "entidades": 1,
+    "proveedores": 3
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 33.3333,
+    "pct_directa_valor": 8.0219,
+    "hhi": 7864.602826645978,
+    "top1_proveedor_pct": 88.23988705157551,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 33.33333333333333,
+    "top_proveedores": [
+      {
+        "proveedor": "SOINTEG INGENIERIA SAS",
+        "documento": "900932403",
+        "valor": 32999600.0,
+        "contratos": 1,
+        "participacion_pct": 88.2399
+      },
+      {
+        "proveedor": "LEDY LORENA BELTRAN ACOSTA",
+        "documento": "20888270",
+        "valor": 3000000.0,
+        "contratos": 1,
+        "participacion_pct": 8.0219
+      },
+      {
+        "proveedor": "NESTOR JAIME MORENO AGATON",
+        "documento": "6804586",
+        "valor": 1398000.0,
+        "contratos": 1,
+        "participacion_pct": 3.7382
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8675658",
+        "entidad": "CONCEJO PANDI",
+        "proveedor": "SOINTEG INGENIERIA SAS",
+        "modalidad": "Mínima cuantía",
+        "valor": 32999600.0,
+        "fecha_firma": "2025-12-04",
+        "objeto": "COMPRAVENTA DE EQUIPOS Y ELEMENTOS DE OFICINA CON DESTINO AL CONCEJO MUNICIPAL DE PANDI DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8722504",
+        "entidad": "CONCEJO PANDI",
+        "proveedor": "LEDY LORENA BELTRAN ACOSTA",
+        "modalidad": "Contratación directa",
+        "valor": 3000000.0,
+        "fecha_firma": "2025-12-20",
+        "objeto": "PRESTAR SERVICIOS PROFESIONALES DE ASESORAMIENTO PARA LA ACTUALIZACION; EVALUACION Y SEGUIMIENTO DEL MODELO ESTÁNDAR DE CONTROL INTERNO (MECI) DE ACUERDO A LA LEY 1499 DEL CONCEJO MUNICIPAL DE PANDI CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8722108",
+        "entidad": "CONCEJO PANDI",
+        "proveedor": "NESTOR JAIME MORENO AGATON",
+        "modalidad": "Mínima cuantía",
+        "valor": 1398000.0,
+        "fecha_firma": "2025-12-20",
+        "objeto": "COMPRA VENTA DE (DOTACIÓN) DE CALZADO Y VESTIDOS DE LABOR PARA LA SECRETARIA DEL CONCEJO MUNICIPAL DE PANDI - CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO PANDI",
+        "contratos": 3,
+        "valor": 37397600.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Pandi",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

@@ -1,0 +1,61 @@
+{
+  "resumen": {
+    "contratos": 1,
+    "valor_total": 753392464.0,
+    "entidades": 1,
+    "proveedores": 1
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 10000.0,
+    "top1_proveedor_pct": 100.0,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 1,
+    "pct_con_adicion": 0.0,
+    "top_proveedores": [
+      {
+        "proveedor": "CODESBIF",
+        "documento": "900151981",
+        "valor": 753392464.0,
+        "contratos": 1,
+        "participacion_pct": 100.0
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8640905",
+        "entidad": "ALCALDIA MUNICIPAL PARATEBUENO",
+        "proveedor": "CODESBIF",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 753392464.0,
+        "fecha_firma": "2025-11-28",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; OPERATIVOS Y FINANCIEROS PARA REALIZAR LAS DIFERENTES ACTIVIDADES DENTRO DEL PROYECTO MES DE LA ALEGRÍA CONCORDANTES CON EL PLAN DE DESARROLLO PARATEBUENO SE PONE BUENO 2024 - 2027"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL PARATEBUENO",
+        "contratos": 1,
+        "valor": 753392464.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Paratebueno",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

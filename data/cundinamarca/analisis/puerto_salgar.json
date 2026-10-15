@@ -1,0 +1,280 @@
+{
+  "resumen": {
+    "contratos": 1627,
+    "valor_total": 63986274328.21,
+    "entidades": 5,
+    "proveedores": 537
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 72.7105,
+    "pct_directa_valor": 42.7641,
+    "hhi": 155.53934057595563,
+    "top1_proveedor_pct": 6.279623067587753,
+    "top5_proveedores_pct": 20.63340522156075,
+    "pareto_proveedores_80pct_valor": 152,
+    "pct_con_adicion": 16.717885679164105,
+    "top_proveedores": [
+      {
+        "proveedor": "GMZ CONSTRUCTORES SAS",
+        "documento": "901639965",
+        "valor": 3935490023.0,
+        "contratos": 1,
+        "participacion_pct": 6.2796
+      },
+      {
+        "proveedor": "AGUA Y BOSQUE",
+        "documento": "900208787",
+        "valor": 2726177279.0,
+        "contratos": 7,
+        "participacion_pct": 4.35
+      },
+      {
+        "proveedor": "Con Futuro",
+        "documento": "900493259",
+        "valor": 2473943190.0,
+        "contratos": 2,
+        "participacion_pct": 3.9475
+      },
+      {
+        "proveedor": "Corporación Colombia Digital",
+        "documento": "830101214",
+        "valor": 1975509659.0,
+        "contratos": 1,
+        "participacion_pct": 3.1522
+      },
+      {
+        "proveedor": "GES SAS",
+        "documento": "900479757",
+        "valor": 1820000000.0,
+        "contratos": 3,
+        "participacion_pct": 2.9041
+      },
+      {
+        "proveedor": "CORPORACION EMPRESARIAL DEL MAGDALENA",
+        "documento": "810005629",
+        "valor": 1781488139.0,
+        "contratos": 11,
+        "participacion_pct": 2.8426
+      },
+      {
+        "proveedor": "YISED YORLADIS CARDONA ROJAS",
+        "documento": "24651700",
+        "valor": 1545070288.0,
+        "contratos": 12,
+        "participacion_pct": 2.4654
+      },
+      {
+        "proveedor": "ESE HOSPITAL SAN FELIX LA DORADA",
+        "documento": "810000913",
+        "valor": 1441118918.0,
+        "contratos": 2,
+        "participacion_pct": 2.2995
+      },
+      {
+        "proveedor": "CASA QUIMICOS SAS",
+        "documento": "830147635",
+        "valor": 1425494156.0,
+        "contratos": 6,
+        "participacion_pct": 2.2746
+      },
+      {
+        "proveedor": "EMPRESA AUTONOMA GUATAPE",
+        "documento": "800105497",
+        "valor": 1385000201.0,
+        "contratos": 1,
+        "participacion_pct": 2.21
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9777095",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "GMZ CONSTRUCTORES SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 3935490023.0,
+        "fecha_firma": "2026-09-17",
+        "objeto": "AMPLIACIÓN Y MEJORAMIENTO DE LA SEDE PRINCIPAL INSTITUCION EDUCATIVA DEPARTAMENTAL POLICARPA SALAVARRIETA DEL MUNICIPIO DE PUERTO SALGAR; DEPARTAMENTO DE CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7111550",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "Corporación Colombia Digital",
+        "modalidad": "Contratación Directa (con ofertas)",
+        "valor": 1975509659.0,
+        "fecha_firma": "2024-12-05",
+        "objeto": "CONTRATO INTERADMINISTRATIVO ENTRE EL MUNICIPIO DE PUERTO SALGAR CUNDINAMARCA Y LA CORPORACION COLOMBIA DIGITAL EN LA PRESTACION DE SERVICIOS PARA LA EJECUCION DE LOS COMPONENTES 2;3;4; DEL PROYECTO DE INNOVACIÓN TECNOLÓGICA QUE PERMITA EL FORTALECIMIENTO DE LA TRANSFORMACIÓN DIGITAL DEL MUNICIPIO DE PUERTO SALGAR CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8561119",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "EMPRESA AUTONOMA GUATAPE",
+        "modalidad": "Contratación directa",
+        "valor": 1385000201.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "ADMINISTRACIÓN DELEGADA DE RECURSOS PARA LA CONSTRUCCIÓN DE PAVIMENTO RÍGIDO EN EL BARRIO LA ESPERANZA II DEL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8483780",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "CONSORCIO ACERA BAQUERO INGENIERÍA",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 1310574176.0,
+        "fecha_firma": "2025-11-13",
+        "objeto": "ESTUDIOS Y DISEÑOS PARA LA CONSTRUCCIÓN DEL PLAN MAESTRO DE ACUEDUCTO Y ALCANTARILLADO DEL CASCO URBANO DEL MUNICIPIO DE PUERTO SALGAR."
+      },
+      {
+        "id": "CO1.PCCNTR.9324130",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "Con Futuro",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 1257498030.0,
+        "fecha_firma": "2026-02-06",
+        "objeto": "AUNAR ESFUERZOS TECNICOS FINANCIEROS Y ADMINISTRATIVOS PARA EL DESARROLLO; FUNCIONAMIENTO ATENCION INTEGRAL DE LOS ADULTOS MAYORES DEL CBA Y BENEFICIARIOS DEL CENTRO DIA DEL MUNICIPIO DE PUERTO SALGAR CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "contratos": 1344,
+        "valor": 52971304643.35
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE PUERTO SALGAR",
+        "contratos": 19,
+        "valor": 306431523.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PÚBLICOS DE PUERTO SALGAR CUNDINAMARCA",
+        "contratos": 176,
+        "valor": 7167561536.86
+      },
+      {
+        "entidad": "ESM COMANDO AEREO DE COMBATE NO 1",
+        "contratos": 56,
+        "valor": 3278490447.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE PUERTO SALGAR",
+        "contratos": 25,
+        "valor": 262486178.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 34,
+    "valor_obras": 12752695720.66,
+    "obras_vencidas_abiertas": 10,
+    "valor_obras_vencidas_abiertas": 3931509376.0,
+    "pct_obras_vencidas_abiertas": 29.411764705882355,
+    "pct_pagado_obras_vencidas_abiertas": 70.3039,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8561119",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "EMPRESA AUTONOMA GUATAPE",
+        "estado": "Modificado",
+        "valor": 1385000201.0,
+        "pagado": 1124409734.0,
+        "fecha_fin": "2026-07-08",
+        "objeto": "ADMINISTRACIÓN DELEGADA DE RECURSOS PARA LA CONSTRUCCIÓN DE PAVIMENTO RÍGIDO EN EL BARRIO LA ESPERANZA II DEL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8101541",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "AGUA Y BOSQUE",
+        "estado": "Modificado",
+        "valor": 1030215734.0,
+        "pagado": 1030215734.0,
+        "fecha_fin": "2025-11-30",
+        "objeto": "REALIZAR ACTIVIDADES DE RECUPERACIÓN PARA LA CONSERVACIÓN DE LAS MÁRGENES RIBEREÑAS SOBRE EL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9737924",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "AGUA Y BOSQUE",
+        "estado": "Modificado",
+        "valor": 798912545.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-23",
+        "objeto": "REALIZAR ACTIVIDADES DE RECUPERACIÓN PARA LA CONSERVACIÓN DE LAS MÁRGENES RIBEREÑAS SOBRE EL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7887544",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "JUNTA DE ACCION COMUNAL BARRIO SEIS DE ENERO",
+        "estado": "Modificado",
+        "valor": 398000000.0,
+        "pagado": 398000000.0,
+        "fecha_fin": "2025-08-06",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA ALCALDIA DE PUERTO SALGAR-CUNDINAMARCA CON LA JAC DEL BARRIO 6 DE ENERO PARA LA CONSTRUCCION DE PAVIMENTO RIGIDO DE LA PRIMERA FASE DE LA CALLE 15A EN EL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8202702",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "JUNTA DE ACCION COMUNAL PUERTO LIBRE, MUNICIPIO DE PUERTO SALGAR",
+        "estado": "Modificado",
+        "valor": 216000000.0,
+        "pagado": 108000000.0,
+        "fecha_fin": "2026-07-02",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS Y FINANCIEROS ENTRE LA ALCALDÍA DE PUERTO SALGAR-CUNDINAMARCA CON LA JAC DEL BARRIO CENTRO DE PUERTO LIBRE PARA EL MEJORAMIENTO DE LA CALLE 5 EN EL CENTRO POBLADO DE PUERTO LIBRE DEL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.6879606",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "CONSTRUCCIONES Y PROYECTOS HYC S.A.S",
+        "estado": "Modificado",
+        "valor": 36000000.0,
+        "pagado": 36000000.0,
+        "fecha_fin": "2024-12-23",
+        "objeto": "REHABILITACIÓN DE TRES INSTITUCIONES EDUCATIVAS DEL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7161448",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "URIEL RODRIGUEZ RODRIGUEZ",
+        "estado": "Modificado",
+        "valor": 36000000.0,
+        "pagado": 36000000.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "REHABILITACIÓN DE LA INFRAESTRUCTURA DEL ANCIANATO MUNICIPAL DE LA SANTÍSIMA TRINIDAD DEL MUNICIPIO DE PUERTO SALGAR CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7774290",
+        "entidad": "EMPRESA DE SERVICIOS PÚBLICOS DE PUERTO SALGAR CUNDINAMARCA",
+        "proveedor": "LADY KATERINE BETANCOURT ALBARRACIN",
+        "estado": "En ejecución",
+        "valor": 16680896.0,
+        "pagado": 16680896.0,
+        "fecha_fin": "2025-04-21",
+        "objeto": "REPARACIÓN; ADECUACIÓN Y CAMBIO DE CUBIERTA EN ESTRUCTURA METÁLICA DE LAS OFICINAS ADMINISTRATIVAS DE LA EMPRESA DE SERVICIOS PÚBLICOS DE PUERTO SALGAR; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8465141",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "JB ELECTRIFICACIONES SAS",
+        "estado": "En ejecución",
+        "valor": 11800000.0,
+        "pagado": 11800000.0,
+        "fecha_fin": "2025-12-16",
+        "objeto": "ADQUISICIÓN Y ADECUACIÓN DE MOBILIARIO NO CONSUMIBLE PARA APOYAR LA CORRECTA EJECUCIÓN; FUNCIONAMIENTO Y PRESTACIÓN DEL SERVICIO DE LOS EDIFICIOS MUNICIPALES DE LA ALCALDÍA DE PUERTO SALGAR; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8487816",
+        "entidad": "ALCALDIA MUNICIPAL DE PUERTO SALGAR",
+        "proveedor": "JB ELECTRIFICACIONES SAS",
+        "estado": "En ejecución",
+        "valor": 2900000.0,
+        "pagado": 2900000.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "MANTENIMIENTO Y PUESTA EN MARCHA DE LAS CONEXIONES ELÉCTRICAS DEL PARQUE EL BRACERO DEL MUNICIPIO DE PUERTO SALGAR; CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Puerto Salgar",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 30.2,
+  "nivel": "bajo",
+  "posicion": 67.0,
+  "total_rankeados": 71
+}

@@ -1,0 +1,300 @@
+{
+  "resumen": {
+    "contratos": 491,
+    "valor_total": 19332370406.15,
+    "entidades": 1,
+    "proveedores": 202
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 72.3014,
+    "pct_directa_valor": 27.1506,
+    "hhi": 383.37990175355657,
+    "top1_proveedor_pct": 13.81929053967215,
+    "top5_proveedores_pct": 35.873387660135464,
+    "pareto_proveedores_80pct_valor": 66,
+    "pct_con_adicion": 17.10794297352342,
+    "top_proveedores": [
+      {
+        "proveedor": "Construcciones Kyoto S.A.S",
+        "documento": "830045448",
+        "valor": 2601330792.98,
+        "contratos": 1,
+        "participacion_pct": 13.8193
+      },
+      {
+        "proveedor": "C&C SAS",
+        "documento": "901078182",
+        "valor": 1278616666.0,
+        "contratos": 1,
+        "participacion_pct": 6.7925
+      },
+      {
+        "proveedor": "FUNDACION ECOPAZ COLOMBIA",
+        "documento": "900989554",
+        "valor": 1276566999.0,
+        "contratos": 7,
+        "participacion_pct": 6.7816
+      },
+      {
+        "proveedor": "HYDRAMETAL SOLUCIONES SAS",
+        "documento": "900604822",
+        "valor": 886490500.0,
+        "contratos": 1,
+        "participacion_pct": 4.7094
+      },
+      {
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "documento": "901128938",
+        "valor": 709769195.0,
+        "contratos": 6,
+        "participacion_pct": 3.7706
+      },
+      {
+        "proveedor": "comercializadora mgeh sas",
+        "documento": "900969026",
+        "valor": 686612609.62,
+        "contratos": 19,
+        "participacion_pct": 3.6476
+      },
+      {
+        "proveedor": "DISTRIBUIDORA DE COMBUSTIBLES MORALES VARGAS S.A.S.",
+        "documento": "900395862",
+        "valor": 575152065.3299999,
+        "contratos": 4,
+        "participacion_pct": 3.0554
+      },
+      {
+        "proveedor": "JAVIER WILFREDO GARAY ROMERO",
+        "documento": "3023298",
+        "valor": 385009682.36,
+        "contratos": 3,
+        "participacion_pct": 2.0453
+      },
+      {
+        "proveedor": "CONTECOR S.A.S",
+        "documento": "900702893",
+        "valor": 349825078.0,
+        "contratos": 1,
+        "participacion_pct": 1.8584
+      },
+      {
+        "proveedor": "SERPROY: SERVICIOS & SOLUCIONES TECNICAS S.A.S",
+        "documento": "901744789",
+        "valor": 342241350.0,
+        "contratos": 1,
+        "participacion_pct": 1.8181
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9563609",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "Construcciones Kyoto S.A.S",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 2601330792.98,
+        "fecha_firma": "2026-07-03",
+        "objeto": "MEJORAMIENTO DE LA IED JUAN JOSE NEIRA SEDE PRINCIPAL DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA; SEGÚN CONVENIO INTERADMINISTRATIVO No. ICCU-1106-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8252717",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "C&C SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1278616666.0,
+        "fecha_firma": "2025-09-12",
+        "objeto": "CONSTRUCCIÓN DE LA PRIMERA ETAPA DEL PATINÓDROMO EN EL MUNICIPIO DE MACHETÁ; CUNDINAMARCA - SEGÚN CONVENIO No. ICCU 747 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9371185",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "HYDRAMETAL SOLUCIONES SAS",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 886490500.0,
+        "fecha_firma": "2026-03-05",
+        "objeto": "ADQUISICIÓN DE UN VEHÍCULO COMPACTADOR DE RESIDUOS SÓLIDOS CON CAPACIDAD DE 17 YD³; NUEVO; MONTADO SOBRE CHASIS; CON SUS ACCESORIOS; GARANTÍA; CAPACITACIÓN; MATRÍCULA Y DEMÁS CONDICIONES TÉCNICAS; DESTINADO A LA PRESTACIÓN DEL SERVICIO PÚBLICO DE ASEO EN EL MUNICIPIO DE MACHETÁ - CUNDINAMARCA; CONFORME A LAS ESPECIFICACIONES TÉCNICAS DEFINIDAS"
+      },
+      {
+        "id": "CO1.PCCNTR.9808498",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "CONSORCIO ALCANTARILLADO MACHETA",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 468460557.0,
+        "fecha_firma": "2026-09-02",
+        "objeto": "MEJORAMIENTO Y OPTIMIZACIÓN DE LA INFRAESTRUCTURA DE RECOLECCIÓN; CONDUCCIÓN Y TRANSPORTE DE AGUAS RESIDUALES DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA; MEDIANTE LA CONSTRUCCIÓN DE OBRAS DE ALCANTARILLADO SANITARIO EN EL SECTOR LA BOMBA Y LA REHABILITACIÓN DEL TRAMO FINAL DE CONDUCCIÓN HACIA LA PTAR MUNICIPAL"
+      },
+      {
+        "id": "CO1.PCCNTR.9372219",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "CONTECOR S.A.S",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 349825078.0,
+        "fecha_firma": "2026-03-06",
+        "objeto": "MEJORAMIENTO DE LAS VIAS QUE COMUNICAN EL CASCO URBANO CON LA VEREDA LOTAVITA SECTOR LAS TRUCHERAS; LA VEREDA SANTA LIBRADA SECTOR LA 'Y' Y LA VEREDA CASADILLAS BAJO SECTOR EL CUCHARO TRAMO 1 DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA - SEGÚN CONVENIOS No. ICCU-560-2025; ICCU-625-2025 E ICCU-797-2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "MUNICIPIO DE MACHETA",
+        "contratos": 491,
+        "valor": 19332370406.15
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 25,
+    "valor_obras": 6924488565.02,
+    "obras_vencidas_abiertas": 14,
+    "valor_obras_vencidas_abiertas": 2103406240.24,
+    "pct_obras_vencidas_abiertas": 56.00000000000001,
+    "pct_pagado_obras_vencidas_abiertas": 1.682,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8252717",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "C&C SAS",
+        "estado": "Suspendido",
+        "valor": 1278616666.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-31",
+        "objeto": "CONSTRUCCIÓN DE LA PRIMERA ETAPA DEL PATINÓDROMO EN EL MUNICIPIO DE MACHETÁ; CUNDINAMARCA - SEGÚN CONVENIO No. ICCU 747 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9435779",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "JAVIER WILFREDO GARAY ROMERO",
+        "estado": "En ejecución",
+        "valor": 198000289.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-18",
+        "objeto": "MEJORAMIENTO DE LAS VIAS QUE COMUNICAN EL CASCO URBANO CON LA VEREDA SAN MARTIN SECTOR PATIO BONITO Y LA VEREDA CASADILLAS ALTO SECTOR EL ALTO DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA - SEGÚN CONVENIOS No. ICCU-975-2025 E ICCU-1047-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9485913",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "JAVIER WILFREDO GARAY ROMERO",
+        "estado": "Modificado",
+        "valor": 147467528.36,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-01",
+        "objeto": "MEJORAMIENTO DE PLACAS DEPORTIVAS EN LA I.E.D. JUAN JOSÉ NEIRA DE LAS SEDES CENTRO Y RESGUARDO ALTO DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA; SEGUN CONVENIO No. ICCU-1301-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.7826609",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-25",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE COMUNICA EL CASCO URBANO CON LA VEREDA QUEBRADA HONDA SECTOR EL ROBLE DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA - SEGÚN CONVENIO No. ICCU 682 DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9372116",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "GRUPO STROIT SAS",
+        "estado": "Modificado",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-18",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE COMUNICA EL CASCO URBANO CON LA VEREDA GUINA SECTOR LA CHAPA DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA - SEGÚN CONVENIO No. ICCU-558-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8455289",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "DARWIN RIGOBERTO LOPEZ MORENO",
+        "estado": "Modificado",
+        "valor": 39764043.5,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-21",
+        "objeto": "ADECUACIONES PRELIMINARES PARA EL FUNCIONAMIENTO PROVISIONAL DE LA PLAZA DE MERCADO GANADERO DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8635604",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "JAVIER WILFREDO GARAY ROMERO",
+        "estado": "Modificado",
+        "valor": 39541865.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-26",
+        "objeto": "CONSTRUCCIÓN DE UN SEGUNDO TANQUE DE SEDIMENTACIÓN EN LA PLANTA DE TRATAMIENTO DE AGUA POTABLE (PTAP) DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA; INCLUYENDO LA EJECUCIÓN DE OBRAS CIVILES COMPLEMENTARIAS; ADECUACIONES HIDRÁULICAS; INSTALACIÓN DE ACCESORIOS Y PRUEBAS DE FUNCIONAMIENTO"
+      },
+      {
+        "id": "CO1.PCCNTR.8609496",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "estado": "En ejecución",
+        "valor": 39008140.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-02-20",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA QUEBRADA HONDA SECTOR EL NEME DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9544839",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 37100276.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-31",
+        "objeto": "REALIZAR ADECUACIONES EN INFRAESTRUCTURA A CARGO DE LA ALCALDÍA MUNICIPAL DE MACHETÁ; CON EL FIN DE MEJORAR LAS CONDICIONES FÍSICAS Y FUNCIONALES; GARANTIZANDO ESPACIOS ADECUADOS PARA LA ATENCIÓN A LA CIUDADANÍA"
+      },
+      {
+        "id": "CO1.PCCNTR.9923683",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "DISTRIBUCIONES CONSTRUCTIVAS",
+        "estado": "En ejecución",
+        "valor": 34253389.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-10",
+        "objeto": "CONTRATO DE OBRA PARA LA AMPLIACIÓN DEL SISTEMA DE ALUMBRADO PÚBLICO EN LA VEREDA RESGUARDO BAJO SECTOR ALTO DE LA ERA Y LA VEREDA AGUA BLANCA SECTOR LA CUEVA DEL MORGAN DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8689972",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "SOLUCIONES INTEGRALES J.P",
+        "estado": "Modificado",
+        "valor": 33002145.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-27",
+        "objeto": "MANTENIMIENTO CORRECTIVO DE LA PLANTA DE TRATAMIENTO DE AGUA POTABLE (PTAP) DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA; MEDIANTE EL RETIRO Y REPOSICIÓN DEL LECHO FILTRANTE EXISTENTE Y EL SUMINISTRO; INSTALACIÓN Y PUESTA EN FUNCIONAMIENTO DE LAS BOMBAS DOSIFICADORAS"
+      },
+      {
+        "id": "CO1.PCCNTR.9455479",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "GRUPO CASTRILLON HERMANOS SAS",
+        "estado": "Modificado",
+        "valor": 23227178.0,
+        "pagado": 23214903.0,
+        "fecha_fin": "2026-06-09",
+        "objeto": "CONTRATAR LA EJECUCION DE OBRAS DE MANTENIMIENTO CORRECTIVO EN LA RED DE ALCANTARILLADO SANITARIO DEL MUNICIPIO DE MACHETÁ  CUNDINAMARCA; CONSISTENTES EN LA CONSTRUCCIÓN DE UN POZO DE INSPECCIÓN EN LA RED UBICADA EN EL BARRIO VILLA ANDREA Y LA EXCAVACION; RETIRO DE ELEMENTO OBSTRUCTOR Y REPOSICIÓN DE TRAMO DE TUBERIA EN LA RED UBICADA EN EL BARRIO LAS CAMELIAS; CON EL FIN DE RESTABLECER EL ADECUADO FUNCIONAMIENTO DEL SISTEMA Y GARANTIZAR LA CORRECTA CIRCULACIÓN DE LAS AGUAS RESIDUALES"
+      },
+      {
+        "id": "CO1.PCCNTR.8666674",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "DISTRIBUCIONES CONSTRUCTIVAS",
+        "estado": "En ejecución",
+        "valor": 21259965.38,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "CONTRATO DE OBRA PARA LA AMPLIACIÓN DEL ALUMBRADO PÚBLICO EN LA CALLE 1 CON CARRERA 5 DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9356665",
+        "entidad": "MUNICIPIO DE MACHETA",
+        "proveedor": "CONSORCIO OBRAS  ACCIONA-VMJ",
+        "estado": "Modificado",
+        "valor": 12164755.0,
+        "pagado": 12164755.0,
+        "fecha_fin": "2026-03-12",
+        "objeto": "CONSTRUCCIÓN Y ADECUACIÓN DE RAMPAS DE ACCESO PARA GARANTIZAR LA ACCESIBILIDAD DE PERSONAS CON MOVILIDAD REDUCIDA EN LA INSTITUCIÓN EDUCATIVA DEPARTAMENTAL JUAN JOSÉ NEIRA; SEDE PRINCIPAL DEL MUNICIPIO DE MACHETÁ; CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Macheta",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 46.3,
+  "nivel": "medio",
+  "posicion": 44.0,
+  "total_rankeados": 71
+}

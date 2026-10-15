@@ -1,0 +1,225 @@
+{
+  "resumen": {
+    "contratos": 309,
+    "valor_total": 11755551382.57,
+    "entidades": 2,
+    "proveedores": 184
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 69.9029,
+    "pct_directa_valor": 43.3212,
+    "hhi": 218.31019372245464,
+    "top1_proveedor_pct": 8.132328028589665,
+    "top5_proveedores_pct": 25.75483719537876,
+    "pareto_proveedores_80pct_valor": 76,
+    "pct_con_adicion": 28.802588996763756,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACIÓN ODISEA AL RESPLANDOR",
+        "documento": "901855116",
+        "valor": 956000000.0,
+        "contratos": 2,
+        "participacion_pct": 8.1323
+      },
+      {
+        "proveedor": "FUNDACION SOÑANDO POR NUESTRO MUNDO",
+        "documento": "900697354",
+        "valor": 718227714.0,
+        "contratos": 3,
+        "participacion_pct": 6.1097
+      },
+      {
+        "proveedor": "PARQUE DE MAQUINARIA SAS",
+        "documento": "830065444",
+        "valor": 534895406.0,
+        "contratos": 3,
+        "participacion_pct": 4.5502
+      },
+      {
+        "proveedor": "EDS LA CARLOTA SAS",
+        "documento": "901190142",
+        "valor": 468500000.0,
+        "contratos": 3,
+        "participacion_pct": 3.9854
+      },
+      {
+        "proveedor": "FUNDACION SOCIAL Y CULTURAL CREAR",
+        "documento": "900871738",
+        "valor": 350000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.9773
+      },
+      {
+        "proveedor": "Miguel Ángel Gaitán Briceño",
+        "documento": "2976831",
+        "valor": 330000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.8072
+      },
+      {
+        "proveedor": "FUNDACION COLOR ESPERANZA SSSA",
+        "documento": "901636116",
+        "valor": 320000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.7221
+      },
+      {
+        "proveedor": "FUNDESIS",
+        "documento": "901857256",
+        "valor": 254470000.0,
+        "contratos": 1,
+        "participacion_pct": 2.1647
+      },
+      {
+        "proveedor": "E.S.E. HOSPITAL EL SALVADOR DE UBATE",
+        "documento": "899999147",
+        "valor": 247428925.0,
+        "contratos": 3,
+        "participacion_pct": 2.1048
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 217219904.0,
+        "contratos": 3,
+        "participacion_pct": 1.8478
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8401079",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "FUNDACIÓN ODISEA AL RESPLANDOR",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 692000000.0,
+        "fecha_firma": "2025-10-02",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; ECONÓMICOS; TÉCNICOS; OPERATIVOS Y HUMANOS PARA GARANTIZAR LA REALIZACIÓN DEL FESTIVAL TURÍSTICO; CULTURAL; DEPORTIVO Y PECUARIO Y EXALTACIÓN DE LA POBLACIÓN CAMPESINA DE LA CIUDAD PESEBRE DE COLOMBIA ESTABLECIDAS EN EL PLAN DE DESARROLLO DEL MUNICIPIO DE FÚQUENE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.10024567",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "FUNDACION SOÑANDO POR NUESTRO MUNDO",
+        "modalidad": "Contratación directa",
+        "valor": 444400000.0,
+        "fecha_firma": "2026-10-01",
+        "objeto": "PRESTACIÓN DE SERVICIOS ARTÍSTICOS CON LA PUESTA EN ESCENA DE ARTISTAS EN EL MARCO DEL TERCER FESTIVAL TURISTICO Y CULTURAL DE LA CIUDAD PESEBRE DE COLOMBIA - MUNICIPIO DE FÚQUENE 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.6860901",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "FUNDACION SOCIAL Y CULTURAL CREAR",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 350000000.0,
+        "fecha_firma": "2024-10-08",
+        "objeto": "CONVENIO ENTRE LA ESAL Y EL MUNICIPIO DE FÚQUENE PARA LA REALIZACIÓN DEL FESTIVAL TURÍSTICO; CULTURAL; DEPORTIVO Y PECUARIO DE LA CIUDAD PESEBRE DE COLOMBIA ESTABLECIDAS EN EL PLAN DE DESARROLLO MUNICIPAL"
+      },
+      {
+        "id": "CO1.PCCNTR.8086981",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "Miguel Ángel Gaitán Briceño",
+        "modalidad": "Contratación directa",
+        "valor": 330000000.0,
+        "fecha_firma": "2025-07-16",
+        "objeto": "COMPRA DEL PREDIO DENOMINADO LT EL COLISEO; UBICADO EN LA CALLE 6 No. 3 - 82 DEL MUNICIPIO DE FÚQUENE; CUNDINAMARCA; IDENTIFICADO CON EL NÚMERO DE MATRÍCULA INMOBILIARIA 172-94195 Y NÚMERO CATASTRAL 252880100000000010013000000000"
+      },
+      {
+        "id": "CO1.PCCNTR.7195101",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "FUNDACION COLOR ESPERANZA SSSA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 320000000.0,
+        "fecha_firma": "2025-01-03",
+        "objeto": "APOYO LOGÍSTICO PARA LA REALIZACIÓN DEL FESTIVAL ARTÍSTICO; CULTURAL Y DEPORTIVO DE LA VILLA DE CAPELLANÍA ESTABLECIDAS EN EL PLAN DE DESARROLLO MUNICIPAL DEL MUNICIPIO DE FUQUENE CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "Concejo Municipal de Fuquene",
+        "contratos": 3,
+        "valor": 14500000.0
+      },
+      {
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "contratos": 306,
+        "valor": 11741051382.57
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 7,
+    "valor_obras": 694706037.64,
+    "obras_vencidas_abiertas": 6,
+    "valor_obras_vencidas_abiertas": 597310566.64,
+    "pct_obras_vencidas_abiertas": 85.71428571428571,
+    "pct_pagado_obras_vencidas_abiertas": 19.4091,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8201342",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "PERFORACIONES BERNAL S.A.S.",
+        "estado": "Modificado",
+        "valor": 118405000.0,
+        "pagado": 115932321.77,
+        "fecha_fin": "2025-12-30",
+        "objeto": "REHABILITACIÓN Y OPTIMIZACIÓN DE LOS POZOS PROFUNDOS Y ELECTROBOMBAS DE CAPTACIÓN; ADUCCIÓN E IMPULSIÓN QUE FORMAN PARTE DE LAS DIFERENTES PLANTAS DE TRATAMIENTO DE LOS ACUEDUCTOS MUNICIPALES; DEL MUNICIPIO DE FÚQUENE CUNDINAMARCA. CLAUSULA SEGUNDA: VALOR DEL CONTRATO"
+      },
+      {
+        "id": "CO1.PCCNTR.9445009",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "INGENIERIA CONSTRUCCION Y VIAS DE COLOMBIA S.A.S.",
+        "estado": "En ejecución",
+        "valor": 109712355.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-20",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLA PARA EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE EL CASCO URBANO HASTA LA VEREDA NEMOGÁ SECTOR LA CASCAJERA; TRAMO 2 LOS PORROS; DEL MUNICIPIO DE FÚQUENE; DEPARTAMENTO DE CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU-CTO-1261-2025."
+      },
+      {
+        "id": "CO1.PCCNTR.9445011",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "MARSA COLOMBIA LTDA",
+        "estado": "Modificado",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-07-03",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLA PARA EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE EL CASCO URBANO HASTA LA VEREDA NEMOGÁ SECTOR LA LAJA TRAMO 1; DEL MUNICIPIO DE FÚQUENE; DEPARTAMENTO DE CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU-CTO- 1554-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9445013",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "PROMETHEUS",
+        "estado": "En ejecución",
+        "valor": 99799968.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-20",
+        "objeto": "CONSTRUCCIÓN DE PLACA HUELLA PARA EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE EL CASCO URBANO A LA VEREDA CENTRO EN EL SECTOR LA CAPILLA TRAMO 1; DEL MUNICIPIO DE FÚQUENE; DEPARTAMENTO DE CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU-CTO-961-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9444717",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "En ejecución",
+        "valor": 99501778.64,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-19",
+        "objeto": "CONTRATO DE OBRA PÚBLICA PARA LA CONSTRUCCIÓN DE PLACA HUELLA PARA EL MEJORAMIENTO DE LA VÍA QUE CONDUCE DESDE EL CASCO URBANO HASTA LA VEREDA NEMOGÁ SECTOR VÍA BOLIVARIANA; MALPASO TRAMO 1; DEL MUNICIPIO DE FÚQUENE; DEPARTAMENTO DE CUNDINAMARCA; EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU-CTO-841-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9678690",
+        "entidad": "MUNICIPIO DE FUQUENE",
+        "proveedor": "SOLUCIONES GLOBALES CALLEJAS LTDA",
+        "estado": "Modificado",
+        "valor": 69891465.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-15",
+        "objeto": "REHABILITACIÓN Y OPTIMIZACIÓN DE POZO PROFUNDO Y ELECTROBOMBA DE CAPTACIÓN; DE LA PLANTA DE TRATAMIENTO DE LA VAREDA TARAVITA; DEL MUNICIPIO DE FÚQUENE CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Fúquene",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 68.3,
+  "nivel": "alto",
+  "posicion": 10.0,
+  "total_rankeados": 71
+}

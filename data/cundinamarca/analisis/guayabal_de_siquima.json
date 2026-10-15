@@ -1,0 +1,118 @@
+{
+  "resumen": {
+    "contratos": 11,
+    "valor_total": 3273651511.6,
+    "entidades": 1,
+    "proveedores": 4
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 45.4545,
+    "pct_directa_valor": 2.6557,
+    "hhi": 4809.1359054225395,
+    "top1_proveedor_pct": 54.4273119996564,
+    "top5_proveedores_pct": 99.99999999999999,
+    "pareto_proveedores_80pct_valor": 2,
+    "pct_con_adicion": 9.090909090909092,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 1781760522.0,
+        "contratos": 4,
+        "participacion_pct": 54.4273
+      },
+      {
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "documento": "900136128",
+        "valor": 1404953112.0,
+        "contratos": 2,
+        "participacion_pct": 42.917
+      },
+      {
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "documento": "899999114",
+        "valor": 70937877.6,
+        "contratos": 4,
+        "participacion_pct": 2.1669
+      },
+      {
+        "proveedor": "ALCALDIA MUNICIPAL DE FACATATIVA",
+        "documento": "899999328",
+        "valor": 16000000.0,
+        "contratos": 1,
+        "participacion_pct": 0.4888
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.8404872",
+        "entidad": "ALCALDIA MUNICIPAL DE GUAYABAL DE SÍQUIMA",
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 784722517.0,
+        "fecha_firma": "2025-10-02",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS; OPERATIVOS Y FINANCIEROS PARA EL DESARROLLO DE LA AGENDA SOCIAL; AGROPECUARIA E INSTITUCIONAL DEL CUARTO TRIMESTRE DE LA VIGENCIA 2025 DEL MUNICIPIO DE GUAYABAL DE SIQUIMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9340836",
+        "entidad": "ALCALDIA MUNICIPAL DE GUAYABAL DE SÍQUIMA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 765494996.0,
+        "fecha_firma": "2026-02-19",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS;ADMINISTRATIVOS Y FINANCIEROS PARA LAEJECUCION DE LA AGENDA INSTITUCIONAL;CULTURAL DE LA VIGENCIA 2026 EN CUMPLIMIENTO DE LAS METAS\nESTABLECIDAS EN EL PLAN DE DESARROLLO GUAYABAL DE SIQUIMA NUESTRA PASION 2024-2027"
+      },
+      {
+        "id": "CO1.PCCNTR.7930431",
+        "entidad": "ALCALDIA MUNICIPAL DE GUAYABAL DE SÍQUIMA",
+        "proveedor": "CORPORACIÓN INTEGRAL SOLUCIONES INMEDIATAS  HB",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 620230595.0,
+        "fecha_firma": "2025-05-29",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS; OPERATIVOS Y FINANCIEROS PARA EL DESARROLLO DE PARTE DE LA AGENDA SOCIAL; AGROPECUARIA E INSTITUCIONAL DEL MUNICIPIO DE GUAYABAL DE SÍQUIMA - CUNDINAMARCA VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9953443",
+        "entidad": "ALCALDIA MUNICIPAL DE GUAYABAL DE SÍQUIMA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 440261526.0,
+        "fecha_firma": "2026-09-22",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; OPERATIVOS Y FINANCIEROS PARA LA ORGANIZACIÓN Y EJECUCIÓN DE LAS ACTIVIDADES SOCIALES; CULTURALES; RECREATIVAS; DEPORTIVAS; AGROPECUARIAS E INSTITUCIONALES PROGRAMADAS PARA EL CUARTO TRIMESTRE DE LA VIGENCIA 2026 EN EL MUNICIPIO DE GUAYABAL DE SÍQUIMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6961104",
+        "entidad": "ALCALDIA MUNICIPAL DE GUAYABAL DE SÍQUIMA",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 407004000.0,
+        "fecha_firma": "2024-10-29",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS; OPERATIVOS Y FINANCIEROS PARA EL DESARROLLO DE LA AGENDA SOCIAL; AGROPECUARIA E INSTITUCIONAL DEL MUNICIPIO DE GUAYABAL DE SIQUIMA - CUNDINAMARCA."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE GUAYABAL DE SÍQUIMA",
+        "contratos": 11,
+        "valor": 3273651511.6
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Guayabal De Siquima",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

@@ -1,0 +1,260 @@
+{
+  "resumen": {
+    "contratos": 1018,
+    "valor_total": 81789122783.15,
+    "entidades": 5,
+    "proveedores": 627
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 67.1906,
+    "pct_directa_valor": 36.8069,
+    "hhi": 96.66371231669825,
+    "top1_proveedor_pct": 3.861292492106262,
+    "top5_proveedores_pct": 14.901858159130214,
+    "pareto_proveedores_80pct_valor": 203,
+    "pct_con_adicion": 12.966601178781925,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACION DECORPCOM",
+        "documento": "901050350",
+        "valor": 3012748518.34,
+        "contratos": 8,
+        "participacion_pct": 3.8613
+      },
+      {
+        "proveedor": "ESE HOSPITAL SAN RAFAEL DE FUSAGASUGÁ",
+        "documento": "890680025",
+        "valor": 2879136000.0,
+        "contratos": 4,
+        "participacion_pct": 3.69
+      },
+      {
+        "proveedor": "DIANA GIOVANNA YEPES RUBIO",
+        "documento": "35261900",
+        "valor": 2158183691.27,
+        "contratos": 3,
+        "participacion_pct": 2.766
+      },
+      {
+        "proveedor": "MICAB INGENIERIA",
+        "documento": "901712567",
+        "valor": 1807376426.0,
+        "contratos": 1,
+        "participacion_pct": 2.3164
+      },
+      {
+        "proveedor": "JUNICAL MEDICAL SAS",
+        "documento": "901164974",
+        "valor": 1769633909.0,
+        "contratos": 3,
+        "participacion_pct": 2.2681
+      },
+      {
+        "proveedor": "SERVINSALUD I.P.S.",
+        "documento": "900534245",
+        "valor": 1636003896.0,
+        "contratos": 2,
+        "participacion_pct": 2.0968
+      },
+      {
+        "proveedor": "AUTO INVERSIONES COLOMBIA S.A.",
+        "documento": "800020006",
+        "valor": 1478132777.0,
+        "contratos": 1,
+        "participacion_pct": 1.8945
+      },
+      {
+        "proveedor": "MULTISERVICIOS MHM S.A.S.",
+        "documento": "900494377",
+        "valor": 1464627244.0,
+        "contratos": 8,
+        "participacion_pct": 1.8771
+      },
+      {
+        "proveedor": "NOVAMEK S.A.S",
+        "documento": "900491956",
+        "valor": 1443831950.0,
+        "contratos": 3,
+        "participacion_pct": 1.8505
+      },
+      {
+        "proveedor": "SUMINISTROS SAGO SAS",
+        "documento": "900785926",
+        "valor": 1383772428.2,
+        "contratos": 5,
+        "participacion_pct": 1.7735
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6916596",
+        "entidad": "CENAC TOLEMAIDA",
+        "proveedor": "CONSORCIO PROART",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 1810002035.68,
+        "fecha_firma": "2024-10-28",
+        "objeto": "LA PRESTACION DE SERVICIOS DE MANTENIMIENTO DE INSTALACIONES A LOS ALOJAMIENTOS DE TROPA TIPO O Y No. 2; EDIFICIO BLOQUE ADMINISTRATIVO TALLERES; BIENES E INMUEBLES DEL CASINO MIXTO; CASETAS AERONAUTICAS Y LAS AULAS DE BETRA"
+      },
+      {
+        "id": "CO1.PCCNTR.9669274",
+        "entidad": "CENAC TOLEMAIDA",
+        "proveedor": "MICAB INGENIERIA",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 1807376426.0,
+        "fecha_firma": "2026-07-17",
+        "objeto": "CONTRATAR LOS SERVICIOS DE MANTENIMIENTO DE LAS INSTALACIONES Y BIENES INMUEBLES \nDE LAS UNIDADES CENTRALIZADAS POR LA CENACTOL; PARA LA VIGENCIA 2026"
+      },
+      {
+        "id": "CO1.PCCNTR.9538889",
+        "entidad": "CENAC TOLEMAIDA",
+        "proveedor": "AUTO INVERSIONES COLOMBIA S.A.",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 1478132777.0,
+        "fecha_firma": "2026-05-28",
+        "objeto": "EL SUMINISTRO DE REPUESTOS Y SERVICIO DE MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LOS VEHICULOS DEL PARQUE AUTOMOTOR DE LAS UNIDADES CENTRALIZADAS ADMINISTRATIVAMENTE POR LA CENAC TOLEMAIDA; EN LA VIGENCIA 2026."
+      },
+      {
+        "id": "CO1.PCCNTR.8007606",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE REGIONAL TOLEMAIDA",
+        "proveedor": "TOYOCAR'S INGENIERIA AUTOMOTRIZ SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 1284065818.0,
+        "fecha_firma": "2025-06-27",
+        "objeto": "SUMINISTRO DE REPUESTOS Y SERVICIO DE MANTENIMIENTO PREVENTIVO Y CORRECTIVO DE LOS VEHÍCULOS DEL PARQUE AUTOMOTOR DE LAS UNIDADES CENTRALIZADAS ADMINISTRATIVAMENTE; A EJECUTAR VIGENCIA 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8426378",
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE REGIONAL TOLEMAIDA",
+        "proveedor": "CONSORCIO TORRES TOLEMAIDA 2025",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 1149860537.04,
+        "fecha_firma": "2025-10-14",
+        "objeto": "LA CONTRATACIÓN BAJO LA MODALIDAD LLAVE EN MANO QUE INCLUYE LOS ESTUDIOS Y DISEÑOS; PERMISOS;  LICENCIAS; CONSTRUCCIÓN Y PUESTA EN FUNCIONAMIENTO DE UNA TORRE DE PARACAIDISMO DE 14 METROS; UBICADA EN LA ESCUELA DE PARACAIDISMO - ESPAM DEL FUERTE MILITAR DE TOLEMAIDA;  VIGENCIA 2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDÍA MUNICIPAL DE NILO",
+        "contratos": 20,
+        "valor": 5130443467.34
+      },
+      {
+        "entidad": "CENAC TOLEMAIDA",
+        "contratos": 292,
+        "valor": 35782149855.77
+      },
+      {
+        "entidad": "CENTRAL ADMINISTRATIVA Y CONTABLE REGIONAL TOLEMAIDA",
+        "contratos": 2,
+        "valor": 2433926355.04
+      },
+      {
+        "entidad": "DISPENSARIO MEDICO TOLEMAIDA.",
+        "contratos": 624,
+        "valor": 35589655752.24
+      },
+      {
+        "entidad": "EMPRESAS PUBLICAS DE NILO S.A.S. E.S.P. - EMPUNILO S.A.S. E.S.P.",
+        "contratos": 78,
+        "valor": 2852947352.76
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 17,
+    "valor_obras": 8424411336.4,
+    "obras_vencidas_abiertas": 8,
+    "valor_obras_vencidas_abiertas": 2606419791.85,
+    "pct_obras_vencidas_abiertas": 47.05882352941176,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.6916596",
+        "entidad": "CENAC TOLEMAIDA",
+        "proveedor": "CONSORCIO PROART",
+        "estado": "Modificado",
+        "valor": 1810002035.68,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-15",
+        "objeto": "LA PRESTACION DE SERVICIOS DE MANTENIMIENTO DE INSTALACIONES A LOS ALOJAMIENTOS DE TROPA TIPO O Y No. 2; EDIFICIO BLOQUE ADMINISTRATIVO TALLERES; BIENES E INMUEBLES DEL CASINO MIXTO; CASETAS AERONAUTICAS Y LAS AULAS DE BETRA"
+      },
+      {
+        "id": "CO1.PCCNTR.4876301",
+        "entidad": "EMPRESAS PUBLICAS DE NILO S.A.S. E.S.P. - EMPUNILO S.A.S. E.S.P.",
+        "proveedor": "DICB COLOMBIA SAS",
+        "estado": "En ejecución",
+        "valor": 226144144.07,
+        "pagado": 0.0,
+        "fecha_fin": "2024-01-04",
+        "objeto": "AISLAMIENTO DE PREDIOS DE IMPORTANCIA HIDRICA UBICADOS EN LAS DIFERENTES VEREDAS Y REFORESTACION CON ESPECIES NATIVAS EN EL MUNICIPIO DE NILO; EN EL MARCO DEL CONTRATO INTERADMINISTRATIVO 002-2022"
+      },
+      {
+        "id": "CO1.PCCNTR.6809204",
+        "entidad": "CENAC TOLEMAIDA",
+        "proveedor": "CARLOS JAVIER BARRIOS HERNANDEZ",
+        "estado": "Modificado",
+        "valor": 190558009.24,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-06",
+        "objeto": "EL SERVICIO DE MANTENIMIENTO DE LA RED HIDRAULICA Y SANITARIA DEL CENTRO COMERCIAL CON DESTINO AL BATALLON DE APOYO Y SERVICIOS PARA EL ENTRENAMIENTO MILITAR; A EJECUTAR EN LA VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.5431312",
+        "entidad": "EMPRESAS PUBLICAS DE NILO S.A.S. E.S.P. - EMPUNILO S.A.S. E.S.P.",
+        "proveedor": "ARQUITECTURA E INGENIERIA H&L SAS",
+        "estado": "En ejecución",
+        "valor": 172073269.69,
+        "pagado": 0.0,
+        "fecha_fin": "2024-01-05",
+        "objeto": "DISEÑO Y ADECUACIÓN DE BATERÍAS SANITARIAS BATALLÓN AEROTRANSPORTADO N-28 BICOL 28 TOLEMAIDA EN EL MUNICIPIO DE NILO - CUNDINAMARCA; EN EL MARCO DE EJECUCIÒN DEL CONTRATO INTERADMINISTRATIVO 002-2022 DE MANDATO SIN REPRESENTACIÒN; PARA LA GERENCIA INTEGRAL DEL PROYECTO II."
+      },
+      {
+        "id": "CO1.PCCNTR.6998352",
+        "entidad": "CENAC TOLEMAIDA",
+        "proveedor": "CUBIERTACENAC2024",
+        "estado": "Modificado",
+        "valor": 154254480.48,
+        "pagado": 0.0,
+        "fecha_fin": "2025-02-18",
+        "objeto": "MANTENIMIENTO DE LA CUBIERTA DEL \nCENTRO COMERCIAL BASEN UNIDAD CENTRALIZADA POR LA CENAC TOLEMAIDA A EJECUTAR EN LA VIGENCIA 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.7996891",
+        "entidad": "CENAC TOLEMAIDA",
+        "proveedor": "K&J TI & CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 27202684.94,
+        "pagado": 0.0,
+        "fecha_fin": "2025-08-14",
+        "objeto": "CONTRATAR EL MANTENIMIENTO Y ADECUACIÓN DE LA CANCHA SINTÉTICA DEL ECOPARQUE DEL BATALLÓN DE APOYO Y SERVICIOS PARA EL ENTRENAMIENTO (BASEN) UNIDAD CENTRALIZADA POR LA CENTRAL ADMINISTRATIVA Y CONTABLE REGIONAL TOLEMAIDA"
+      },
+      {
+        "id": "CO1.PCCNTR.6294140",
+        "entidad": "ALCALDÍA MUNICIPAL DE NILO",
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "estado": "En ejecución",
+        "valor": 15103021.95,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-31",
+        "objeto": "AUNAR ESFUERZOS PARA LA CONFORMACIÓN DE LA BOLSA COMÚN DE RECURSOS PARA EL FINANCIAMIENTO DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR PAE EN LA ETC CUNDINAMARCA; MEDIANTE LA TRASFERENCIA DE RECURSOS SGP ALIMENTACIÓN ESCOLAR DEL MUNICIPIO DE NILO CON NIT 899999707-8 AL DEPARTAMENTO DE CUNDINAMARCA NIT 899999114-0"
+      },
+      {
+        "id": "CO1.PCCNTR.7060059",
+        "entidad": "ALCALDÍA MUNICIPAL DE NILO",
+        "proveedor": "DEPARTAMENTO DE CUNDINAMARCA - SECRETARIA DE EDUCACION",
+        "estado": "En ejecución",
+        "valor": 11082145.8,
+        "pagado": 0.0,
+        "fecha_fin": "2024-12-25",
+        "objeto": "ACUERDO FORMAL DE AUTORIZACION DE TRANSFERENCIA DE LOS RECURSOS  DEL SISTEMA GENERAL DE PARTICIPACIONES ALIMENTACIÓN ESCOLAR ASIGNADOS POR EL DEPARTAMENTO NACIONAL DE PLANEACIÓN - DNP  AL MUNICIPIO NILO PARA SER GIRADOS AL DEPARTAMENTO DE CUNDINAMARCA ETC; CON EL FIN DE CONFORMAR LA BOLSA COMÚN PARA EL FINANCIAMIENTO DEL PROGRAMA DE ALIMENTACIÓN ESCOLAR DE CONFORMIDAD CON LA RESOLUCIÓN 335  DEL 23 DE DICIEMBRE 2021 Y  SE DICTAN OTRAS DISPOSICIONES"
+      }
+    ]
+  },
+  "municipio": "Nilo",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 25.9,
+  "nivel": "bajo",
+  "posicion": 70.0,
+  "total_rankeados": 71
+}

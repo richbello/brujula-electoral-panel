@@ -1,0 +1,215 @@
+{
+  "resumen": {
+    "contratos": 422,
+    "valor_total": 17772996294.77,
+    "entidades": 2,
+    "proveedores": 239
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 71.564,
+    "pct_directa_valor": 44.285,
+    "hhi": 169.03499793929802,
+    "top1_proveedor_pct": 5.964561874222679,
+    "top5_proveedores_pct": 22.033469483325227,
+    "pareto_proveedores_80pct_valor": 98,
+    "pct_con_adicion": 11.137440758293838,
+    "top_proveedores": [
+      {
+        "proveedor": "ESE HOSPITAL NUESTRA SEÑORA DEL ROSARIO SUESCA",
+        "documento": "832011441",
+        "valor": 1024360396.0,
+        "contratos": 4,
+        "participacion_pct": 5.9646
+      },
+      {
+        "proveedor": "AGROAUTOMOTORA SAS",
+        "documento": "901471102",
+        "valor": 802723191.54,
+        "contratos": 2,
+        "participacion_pct": 4.674
+      },
+      {
+        "proveedor": "FAASCOL",
+        "documento": "9012748221",
+        "valor": 735322763.0,
+        "contratos": 10,
+        "participacion_pct": 4.2816
+      },
+      {
+        "proveedor": "TAPS QUIMICA SAS",
+        "documento": "900889303",
+        "valor": 726173977.6700001,
+        "contratos": 2,
+        "participacion_pct": 4.2283
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 495471879.0,
+        "contratos": 4,
+        "participacion_pct": 2.885
+      },
+      {
+        "proveedor": "FUNDACION D EPROYECTOS PARA EL SER HUMANO",
+        "documento": "900769182",
+        "valor": 484511554.17,
+        "contratos": 6,
+        "participacion_pct": 2.8212
+      },
+      {
+        "proveedor": "ESTACION DE SERVICIO EL DORADO LA PLAYA SAS",
+        "documento": "900161647",
+        "valor": 476887880.0,
+        "contratos": 3,
+        "participacion_pct": 2.7768
+      },
+      {
+        "proveedor": "ARQUILAT",
+        "documento": "900448471",
+        "valor": 376543569.55,
+        "contratos": 6,
+        "participacion_pct": 2.1925
+      },
+      {
+        "proveedor": "FUNDACION SOCIAL PARA COLOMBIA",
+        "documento": "900635643",
+        "valor": 354545027.12,
+        "contratos": 2,
+        "participacion_pct": 2.0644
+      },
+      {
+        "proveedor": "FUNDACION HOGAR SAN FRANCISCO DE ASIS",
+        "documento": "860046667",
+        "valor": 299285324.0,
+        "contratos": 4,
+        "participacion_pct": 1.7427
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9871576",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "CONSORCIO FARALLONES",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 598886651.83,
+        "fecha_firma": "2026-09-21",
+        "objeto": "CONTRATAR LA EJECUCIÓN DE LAS OBRAS PARA EL MEJORAMIENTO DEL ESPACIO PÚBLICO DEL MUNICIPIO DE SUESCA; CONFORME AL PROYECTO DEPARTAMENTAL PUEBLOS DORADOS"
+      },
+      {
+        "id": "CO1.PCCNTR.7966492",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "AGROAUTOMOTORA SAS",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 464456780.0,
+        "fecha_firma": "2025-06-11",
+        "objeto": "SUMINISTRO DE BIENES Y SERVICIOS PARA EL MANTENIMIENTO PREVENTIVO Y CORRECTIVO DEL PARQUE AUTOMOTOR A CARGO DEL MUNICIPIO DE SUESCA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7638411",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "TAPS QUIMICA SAS",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 403500678.0,
+        "fecha_firma": "2025-03-17",
+        "objeto": "SUMINISTRO DE EQUIPOS; ELEMENTOS E INSUMOS REQUERIDOS PARA EL FORTALECIMIENTO Y CORRECTO FUNCIONAMIENTO DE LOS SISTEMAS DE AGUA POTABLE ADMINISTRADOS POR EL MUNICIPIO DE SUESCA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9485819",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "AGROAUTOMOTORA SAS",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 338266411.54,
+        "fecha_firma": "2026-05-04",
+        "objeto": "SUMINISTRO DE BIENES Y SERVICIOS PARA EL MANTENIMIENTO \nPREVENTIVO Y CORRECTIVO DEL PARQUE AUTOMOTOR A CARGO DEL MUNICIPIO DE SUESCA; \nCUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9473234",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "TAPS QUIMICA SAS",
+        "modalidad": "Selección abreviada subasta inversa",
+        "valor": 322673299.67,
+        "fecha_firma": "2026-04-28",
+        "objeto": "ADQUISICIÓN DE EQUIPOS Y ELEMENTOS REQUERIDOS PARA LA OPERACIÓN DE LOS SISTEMAS DE AGUA POTABLE DEL MUNICIPIO DE SUESCA; CUNDINAMARCA."
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "contratos": 415,
+        "valor": 17722381426.75
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE SUESCA",
+        "contratos": 6,
+        "valor": 50614868.02
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 16,
+    "valor_obras": 1693791059.66,
+    "obras_vencidas_abiertas": 5,
+    "valor_obras_vencidas_abiertas": 256114472.5,
+    "pct_obras_vencidas_abiertas": 31.25,
+    "pct_pagado_obras_vencidas_abiertas": 41.3389,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.9588628",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "FREDY SAUL GRIMALDOS MURALLAS",
+        "estado": "Aprobado",
+        "valor": 150239579.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-26",
+        "objeto": "CONTRATAR LA EJECUCIÓN DE LAS OBRAS CORRESPONDIENTES AL PROYECTO DENOMINADO PRIMEROS AUXILIOS PALACIO MUNICIPAL - SEDE ALCALDÍA DE SUESCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7081804",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "INGARQAZ",
+        "estado": "En ejecución",
+        "valor": 35998320.0,
+        "pagado": 35998320.0,
+        "fecha_fin": "2024-12-29",
+        "objeto": "CONTRATAR LAS OBRAS NECESARIAS PARA LA ADECUACIÓN; MANTENIEMIENTO Y REPARACIONES LOCATIVAS DEL ESCENARIO DEPORTIVO VILLA PATRICIA DEL MUNICIPIO DE SUESCA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8587312",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "DESARROLLO URBANO CONSTRUCTORES INMOBILIARIOS S.A.S.",
+        "estado": "En ejecución",
+        "valor": 27846910.0,
+        "pagado": 27846910.0,
+        "fecha_fin": "2025-12-14",
+        "objeto": "CONTRATAR LAS OBRAS NECESARIAS PARA EL MANTENIMIENTO; RESTAURACIÓN Y ADECUACIÓN DE LA UNIDAD DE SERVICIO MIS GRANDES GENIOS UBICADA EN EL CASCO URBANO; PARA MEJORAR LAS CONDICIONES DE LA INFRAESTRUCTURA ASIGNADA PARA LA ATENCIÓN DE NIÑOS EN PRIMERA INFANCIA DEL MUNICIPIO DE SUESCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8587029",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "DESARROLLO URBANO CONSTRUCTORES INMOBILIARIOS S.A.S.",
+        "estado": "Modificado",
+        "valor": 25703720.5,
+        "pagado": 25703720.5,
+        "fecha_fin": "2025-12-30",
+        "objeto": "CONTRATAR LAS OBRAS NECESARIAS PARA LA ADECUACIÓN; MANTENIMIENTO Y REPARACIONES LOCATIVAS DE LAS INSTALACIONES EN DONDE FUNCIONA LA COMISARÍA DE FAMILIA DEL MUNICIPIO DE SUESCA; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8384842",
+        "entidad": "ALCALDIA MUNICIPAL DE SUESCA +",
+        "proveedor": "ARQUILAT",
+        "estado": "En ejecución",
+        "valor": 16325943.0,
+        "pagado": 16325943.0,
+        "fecha_fin": "2025-12-14",
+        "objeto": "CONTRATAR LAS OBRAS PARA LA REDUCCION Y MITIGACION DEL RIESGO PRESENTADO ENTRE EL SECTOR TRES ESQUINAS Y LA CALLE 3 FRENTE AL PIT; EN LA ZONA URBANA MUNICIPIO DE SUESCA; CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Suesca",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 31.5,
+  "nivel": "bajo",
+  "posicion": 65.0,
+  "total_rankeados": 71
+}

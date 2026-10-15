@@ -1,0 +1,118 @@
+{
+  "resumen": {
+    "contratos": 7,
+    "valor_total": 1415544149.57,
+    "entidades": 1,
+    "proveedores": 4
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 0.0,
+    "pct_directa_valor": 0.0,
+    "hhi": 3536.4845210826156,
+    "top1_proveedor_pct": 50.430991558041704,
+    "top5_proveedores_pct": 100.0,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 14.285714285714285,
+    "top_proveedores": [
+      {
+        "proveedor": "MIMESIS",
+        "documento": "900023210",
+        "valor": 713872950.5699999,
+        "contratos": 3,
+        "participacion_pct": 50.431
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 342236340.0,
+        "contratos": 1,
+        "participacion_pct": 24.177
+      },
+      {
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "documento": "832002822",
+        "valor": 272699859.0,
+        "contratos": 1,
+        "participacion_pct": 19.2647
+      },
+      {
+        "proveedor": "Fundación para el adulto mayor Hogar Sara Zapata",
+        "documento": "800088486",
+        "valor": 86735000.0,
+        "contratos": 2,
+        "participacion_pct": 6.1273
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9103060",
+        "entidad": "ALCALDIA MUNICIPAL DE TENA",
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "modalidad": "Contratación régimen especial",
+        "valor": 342236340.0,
+        "fecha_firma": "2026-01-30",
+        "objeto": "AUNAR ESFUERZOS PEDAGÓGICOS; ADMINISTRATIVOS; FINANCIEROS Y TÉCNICOS CON EL FIN DE APORTAR A LA FORMACIÓN INTEGRAL Y DE CALIDAD A TRAVÉS DE LA IMPLEMENTACIÓN EN LA LÍNEA PEDAGÓGICA DE CREA INNOVA CREA INNOVA LAB -CILAB CON PROCESOS FORMATIVOS QUE FORTALEZCAN LAS COMPETENCIAS Y HABILIDADES DEL SIGLO XXI; COMPETENCIAS ESPECÍFICAS Y SOCIOEMOCIONALES EN ESTUDIANTES MATRICULADOS EN ALGÚN GRADO DE EDUCACIÓN BÁSICA Y MEDIA DE LA INSTITUCIONES EDUCATIVAS DEPARTAMENTALES UBICADAS EN EL MUNICIPIO DE TENA"
+      },
+      {
+        "id": "CO1.PCCNTR.8006182",
+        "entidad": "ALCALDIA MUNICIPAL DE TENA",
+        "proveedor": "MIMESIS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 303603326.0,
+        "fecha_firma": "2025-06-27",
+        "objeto": "CONVENIO DE ASOCIACIÓN PARA AUNAR ESFUERZOS ECONÓMICOS; ADMINISTRATIVOS Y LOGÍSTICOS CON EL FIN DE BRINDAR ASISTENCIA INTEGRAL A LOS ADULTOS MAYORES PERTENECIENTES AL PROGRAMA ADULTO MAYOR DEL MUNICIPIO DE TENA"
+      },
+      {
+        "id": "CO1.PCCNTR.8245499",
+        "entidad": "ALCALDIA MUNICIPAL DE TENA",
+        "proveedor": "CORPORACION ACCIÓN LIBRE",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 272699859.0,
+        "fecha_firma": "2025-08-28",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; FINANCIEROS Y ORGANIZACIONALES PARA LA REALIZACIÓN DE LAS ACTIVIDADES ARTÍSTICAS; CULTURALES; RECREATIVAS Y DEPORTIVAS DE LOS EVENTOS EXPOTENA 2025 Y SEMANA DE LA JUVENTUD; CON EL FIN DE PROMOCIONAR Y FORTALECER EL PATRIMONIO CULTURAL E IMATERIAL DEL MUNICIPIO DE TENA-CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9746458",
+        "entidad": "ALCALDIA MUNICIPAL DE TENA",
+        "proveedor": "MIMESIS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 234535673.0,
+        "fecha_firma": "2026-07-31",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS; FINANCIEROS Y LOGÍSTICOS ENTRE EL MUNICIPIO DE TENA Y UNA ENTIDAD SIN ÁNIMO DE LUCRO DE RECONOCIDA IDONEIDAD PARA LA EJECUCIÓN DEL PROGRAMA CENTRO DÍA; MEDIANTE LA PRESTACIÓN DE ATENCIÓN INTEGRAL A LOS ADULTOS MAYORES BENEFICIARIOS DEL MUNICIPIO DE TENA; A TRAVÉS DEL DESARROLLO DE ACCIONES DE PROTECCIÓN; CUIDADO; ALIMENTACIÓN; PROMOCIÓN DE LA SALUD; RECREACIÓN; INTEGRACIÓN SOCIAL Y MEJORAMIENTO DE SU CALIDAD DE VIDA; EN CUMPLIMIENTO DEL PLAN DE DESARROL"
+      },
+      {
+        "id": "CO1.PCCNTR.8692971",
+        "entidad": "ALCALDIA MUNICIPAL DE TENA",
+        "proveedor": "MIMESIS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 175733951.57,
+        "fecha_firma": "2025-12-10",
+        "objeto": "XXV HOMENAJE AL ADULTO MAYOR Y XXIX ENCUENTRO DEPARTAMENTAL DE POETAS EN EL MARCO DEL ANIVERSARIO 43 DE LA INSPECCIÓN DE LA GRAN VÍA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE TENA",
+        "contratos": 7,
+        "valor": 1415544149.57
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 0,
+    "valor_obras": 0.0,
+    "obras_vencidas_abiertas": 0,
+    "valor_obras_vencidas_abiertas": 0.0,
+    "pct_obras_vencidas_abiertas": null,
+    "pct_pagado_obras_vencidas_abiertas": null,
+    "detalle_obras_vencidas_abiertas": []
+  },
+  "municipio": "Tena",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

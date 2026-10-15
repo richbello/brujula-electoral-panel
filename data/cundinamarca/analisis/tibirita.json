@@ -1,0 +1,220 @@
+{
+  "resumen": {
+    "contratos": 82,
+    "valor_total": 4263149870.3,
+    "entidades": 3,
+    "proveedores": 51
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 10.9756,
+    "pct_directa_valor": 1.7341,
+    "hhi": 647.3520063951861,
+    "top1_proveedor_pct": 17.40862869736054,
+    "top5_proveedores_pct": 45.39887286650654,
+    "pareto_proveedores_80pct_valor": 16,
+    "pct_con_adicion": 14.634146341463413,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACION ECOPAZ COLOMBIA",
+        "documento": "900989554",
+        "valor": 596272560.0,
+        "contratos": 2,
+        "participacion_pct": 17.4086
+      },
+      {
+        "proveedor": "comercializadora mgeh sas",
+        "documento": "900969026",
+        "valor": 325128471.0,
+        "contratos": 11,
+        "participacion_pct": 9.4924
+      },
+      {
+        "proveedor": "ALBA CLEMENCIA AYALA MARTIN",
+        "documento": "20743601",
+        "valor": 236825340.0,
+        "contratos": 2,
+        "participacion_pct": 6.9143
+      },
+      {
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "documento": "901128938",
+        "valor": 199755678.0,
+        "contratos": 2,
+        "participacion_pct": 5.832
+      },
+      {
+        "proveedor": "URBARING SAS",
+        "documento": "900423904",
+        "valor": 196999829.0,
+        "contratos": 1,
+        "participacion_pct": 5.7516
+      },
+      {
+        "proveedor": "Fundación Hacemos Región",
+        "documento": "901717806",
+        "valor": 178733198.25,
+        "contratos": 1,
+        "participacion_pct": 5.2183
+      },
+      {
+        "proveedor": "Carlos Alberto Leiva Izquierdo",
+        "documento": "80495789",
+        "valor": 155095000.0,
+        "contratos": 1,
+        "participacion_pct": 4.5281
+      },
+      {
+        "proveedor": "DISTRIANGULO SAS",
+        "documento": "900251139",
+        "valor": 133182980.63,
+        "contratos": 6,
+        "participacion_pct": 3.8884
+      },
+      {
+        "proveedor": "Aseguradora Solidaria de Colombia Entidad Cooperativa.",
+        "documento": "860524654",
+        "valor": 119987876.0,
+        "contratos": 1,
+        "participacion_pct": 3.5031
+      },
+      {
+        "proveedor": "PUBLICIDAD  Y SUMINISTROS  IMPORT & EXPORT SAS",
+        "documento": "901689672",
+        "valor": 105519952.0,
+        "contratos": 4,
+        "participacion_pct": 3.0807
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9613172",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "CONSORCIO ALMEIDAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 549393699.32,
+        "fecha_firma": "2026-07-31",
+        "objeto": "CONSTRUCCION DEL PUENTE VEHICULAR UBICADO EN LA\nVEREDA GUSVITA SOBRE LA QUEBRADA COLORADA PARA COMUNICAR CON LA VEREDA SOCUATA DEL MUNICIPIO DE TIBIRITA; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8520391",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "FUNDACION ECOPAZ COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 307122120.0,
+        "fecha_firma": "2025-10-30",
+        "objeto": "CONTRATO DE APOYO PARA LA EJECUCIÓN DE LOS EVENTOS DE INTERÉS PÚBLICO: DÍA DULCE  REINADO Y HOMENAJE AL ADULTO MAYOR; FIESTA SAN ISIDRO LABRADOR Y FESTIVAL DE INTEGRACIÓN CULTURAL LUDICORECREATIVO ARTÍSTICO Y GENERACIONAL A CELEBRARSE EN EL MUNICIPIO DE TIBIRITA CUNDINAMARCA EN LA VIGENCIA DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.6957501",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "FUNDACION ECOPAZ COLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 289150440.0,
+        "fecha_firma": "2024-10-30",
+        "objeto": "CONTRATO   DE   APOYO   PARA   LA   EJECUCIÓN   DE   LOS   EVENTOS   DE   INTERÉS PÚBLICO:   DÍA   DULCE;  REINADO   DEL   ADULTO   MAYOR;   FIESTA   SAN   ISIDRO LABRADOR;  DÍA   BLANCO   Y   FESTIVAL   DE   INTEGRACIÓN   CULTURAL LUDICORECREATIVO   ARTÍSTICO   Y   GENERACIONAL   A   CELEBRARSE   EN   EL MUNICIPIO DE TIBIRITA-CUNDINAMARCA EN LA VIGENCIA DE 2024"
+      },
+      {
+        "id": "CO1.PCCNTR.9860682",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "CONSORCIO PUENTE SOATAMA",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 288600919.72,
+        "fecha_firma": "2026-10-05",
+        "objeto": "CONSTRUCCIÓN PUENTE VEHICULAR QUEBRADA TOCOLA\nVEREDA SOATAMA; MUNICIPIO DE TIBIRITA; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9827636",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "URBARING SAS",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 196999829.0,
+        "fecha_firma": "2026-09-11",
+        "objeto": "MEJORAMIENTO DE VIVIENDA RURAL CON\nREPARACIONES LOCATIVAS EN EL MUNICIPIO DE TIBIRITA - CONVENIO\nINTERADMINISTRATIVO No. SV-CD-CVI-108-2025"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "CONCEJO MUNICIPAL DE TIBIRITA",
+        "contratos": 5,
+        "valor": 23490715.0
+      },
+      {
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "contratos": 71,
+        "valor": 4199621005.3
+      },
+      {
+        "entidad": "Personeria Municipal de Tibirita",
+        "contratos": 6,
+        "valor": 40038150.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 9,
+    "valor_obras": 1396296738.48,
+    "obras_vencidas_abiertas": 5,
+    "valor_obras_vencidas_abiertas": 341302563.44,
+    "pct_obras_vencidas_abiertas": 55.55555555555556,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8694772",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 100000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-10-07",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO HACIA LA VEREDA SOATAMA DEL MUNICIPIO DE TIBIRITA; CUNDINAMARCA- LOTE 1"
+      },
+      {
+        "id": "CO1.PCCNTR.8694773",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "VDL CONSTRUCCIONES SAS",
+        "estado": "Modificado",
+        "valor": 99755678.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-19",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO HACIA LA VEREDA SOATAMA DEL MUNICIPIO DE TIBIRITA; CUNDINAMARCA- LOTE 2"
+      },
+      {
+        "id": "CO1.PCCNTR.8545054",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "AEM INGENIERIA SAS",
+        "estado": "Modificado",
+        "valor": 97149656.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-04-02",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO HACIA LA VEREDA CAÑADAS SECTOR EL RIO DEL MUNICIPIO DE TIBIRITA; CUNDINAMARCA- CONVENIO ICCU 531-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.9361726",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "GRUPO CASTRILLON HERMANOS SAS",
+        "estado": "Modificado",
+        "valor": 22717229.44,
+        "pagado": 0.0,
+        "fecha_fin": "2026-05-01",
+        "objeto": "MEJORAMIENTO DEL SISTEMA DE ALCANTARILLADO PLUVIAL Y SANITARIO DEL MUNICIPIO DE TIBIRITA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9963791",
+        "entidad": "MUNICIPIO DE TIBIRITA",
+        "proveedor": "LUZ ANGELA  GONZALEZ PINZON",
+        "estado": "Modificado",
+        "valor": 21680000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-09-20",
+        "objeto": "ADQUISIÓN DE\nSERVICIOS EN EL MARCO DE LA CONMEMORACIÓN DEL XXIX FESTIVAL DE PROMESEROS EN EL\nMUNICIPIO DE TIBIRITA CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Tibirita",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 43.4,
+  "nivel": "medio",
+  "posicion": 48.0,
+  "total_rankeados": 71
+}

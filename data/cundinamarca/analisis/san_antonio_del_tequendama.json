@@ -1,0 +1,245 @@
+{
+  "resumen": {
+    "contratos": 724,
+    "valor_total": 25255390328.37,
+    "entidades": 2,
+    "proveedores": 341
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 51.5193,
+    "pct_directa_valor": 43.6895,
+    "hhi": 199.32670207604323,
+    "top1_proveedor_pct": 7.962076075989027,
+    "top5_proveedores_pct": 25.950489538700854,
+    "pareto_proveedores_80pct_valor": 106,
+    "pct_con_adicion": 25.41436464088398,
+    "top_proveedores": [
+      {
+        "proveedor": "E.S.E. HOSPITAL SAN ANTONIO DEL TEQUENDAMA",
+        "documento": "900036553",
+        "valor": 1634935459.83,
+        "contratos": 7,
+        "participacion_pct": 7.9621
+      },
+      {
+        "proveedor": "CONSORCIO UNIDADES RURALES 2025",
+        "documento": "901971097",
+        "valor": 1081418011.35,
+        "contratos": 1,
+        "participacion_pct": 5.2665
+      },
+      {
+        "proveedor": "PROGRESAR S.A. E.S.P - PROVEEDOR",
+        "documento": "900403698",
+        "valor": 1056029041.0,
+        "contratos": 12,
+        "participacion_pct": 5.1428
+      },
+      {
+        "proveedor": "FUNDACION CULTIVA EL ARTE Y LA CULTURA",
+        "documento": "901186943",
+        "valor": 835500000.0,
+        "contratos": 1,
+        "participacion_pct": 4.0689
+      },
+      {
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "documento": "900258772",
+        "valor": 720800000.0,
+        "contratos": 1,
+        "participacion_pct": 3.5103
+      },
+      {
+        "proveedor": "GUIMAC INGENIEROS COMPAÑIA SAS",
+        "documento": "830043342",
+        "valor": 542771708.0,
+        "contratos": 1,
+        "participacion_pct": 2.6433
+      },
+      {
+        "proveedor": "CUERPO DE BOMBEROS VOLUNTARIOS DEL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA, CUNDINAMARCA",
+        "documento": "900695103",
+        "valor": 491347425.0,
+        "contratos": 4,
+        "participacion_pct": 2.3928
+      },
+      {
+        "proveedor": "MEDZA GROUP SAS",
+        "documento": "9004981824",
+        "valor": 489296361.0,
+        "contratos": 1,
+        "participacion_pct": 2.3829
+      },
+      {
+        "proveedor": "LA PREVISORA S.A. COMPAÑÍA DE SEGUROS",
+        "documento": "860002400",
+        "valor": 376289884.0,
+        "contratos": 2,
+        "participacion_pct": 1.8325
+      },
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 320375772.6,
+        "contratos": 5,
+        "participacion_pct": 1.5602
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.6109559",
+        "entidad": "E.S.E. HOSPITAL SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "CONSORCIO HOSPITAL SAN ANTONIO",
+        "modalidad": "Contratación régimen especial",
+        "valor": 4167223977.0,
+        "fecha_firma": "2024-03-19",
+        "objeto": "CONSTRUCCION DE CENTRAL DE URGENCIAS Y HOSPITALIZACION DE LA ESE HOSPITAL SAN ANTONIO DEL TEQUENDAMA DEPARTAMENTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8104942",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "CONSORCIO UNIDADES RURALES 2025",
+        "modalidad": "Seleccion Abreviada Menor Cuantia Sin Manifestacion Interes",
+        "valor": 1081418011.35,
+        "fecha_firma": "2025-08-08",
+        "objeto": "CONSTRUCCIÓN DE 63 UNIDADES SANITARIAS EN EL SECTOR RURAL DEL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6179048",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "FUNDACION CULTIVA EL ARTE Y LA CULTURA",
+        "modalidad": "Contratación directa",
+        "valor": 835500000.0,
+        "fecha_firma": "2024-04-08",
+        "objeto": "El desarrollo conjunto de El Programa para el\ncumplimiento de aquellas funciones legales de El\nMunicipio identificadas en las consideraciones; en\nlos términos establecidos en El Convenio."
+      },
+      {
+        "id": "CO1.PCCNTR.8564289",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "modalidad": "Contratación directa",
+        "valor": 720800000.0,
+        "fecha_firma": "2025-11-07",
+        "objeto": "PRESTAR SERVICIOS DE GERENCIA INTEGRAL DEL PROYECTO: 1. EJECUCIÓN DE LAS OBRAS ESTABLECIDAS EN EL CONVENIO DE COOPERACION NUMERO 001 MEJORA DE VIAS TERCIARIAS SAN ANTONIO DEL TEQUENDAMA SUSCRITO ENTRE FUNDACION ENEL COLOMBIA ENEL COLOMBIA S.A.E.SP Y EL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMMA"
+      },
+      {
+        "id": "CO1.PCCNTR.7931348",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "GUIMAC INGENIEROS COMPAÑIA SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 542771708.0,
+        "fecha_firma": "2025-06-03",
+        "objeto": "CONSTRUCCION PUENTE VEHICULAR VEREDA ZARAGOSA;  QUEBRADA SAN JUANA MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA DEPARTAMENTO DE CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "E.S.E. HOSPITAL SAN ANTONIO DEL TEQUENDAMA",
+        "contratos": 197,
+        "valor": 5921334238.0
+      },
+      {
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "contratos": 527,
+        "valor": 19334056090.37
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 15,
+    "valor_obras": 8017909717.25,
+    "obras_vencidas_abiertas": 8,
+    "valor_obras_vencidas_abiertas": 6286192054.71,
+    "pct_obras_vencidas_abiertas": 53.333333333333336,
+    "pct_pagado_obras_vencidas_abiertas": 0.3938,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.6109559",
+        "entidad": "E.S.E. HOSPITAL SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "CONSORCIO HOSPITAL SAN ANTONIO",
+        "estado": "cedido",
+        "valor": 4167223977.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-03-10",
+        "objeto": "CONSTRUCCION DE CENTRAL DE URGENCIAS Y HOSPITALIZACION DE LA ESE HOSPITAL SAN ANTONIO DEL TEQUENDAMA DEPARTAMENTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8104942",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "CONSORCIO UNIDADES RURALES 2025",
+        "estado": "En ejecución",
+        "valor": 1081418011.35,
+        "pagado": 0.0,
+        "fecha_fin": "2026-03-28",
+        "objeto": "CONSTRUCCIÓN DE 63 UNIDADES SANITARIAS EN EL SECTOR RURAL DEL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7931348",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "GUIMAC INGENIEROS COMPAÑIA SAS",
+        "estado": "Modificado",
+        "valor": 542771708.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-01-25",
+        "objeto": "CONSTRUCCION PUENTE VEHICULAR VEREDA ZARAGOSA;  QUEBRADA SAN JUANA MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9419460",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "GRUPO STROIT SAS",
+        "estado": "Suspendido",
+        "valor": 200000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-13",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DE LA INSPECCIÓN SANTANDERCITO A LA VEREDA LA RAMBLA SECTOR PUERTO RICO DEL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA; DEPARTAMENTO DE CUNDINAMARCA - CONVENIO ICCU-1403-2025 Y MEJORAMIENTO DE LA VIA QUE CONDUCE DEL CASCO URBANO A LA VEREDA QUEBRADA GRANDE SECTOR PIEDRAS BRUJAS DEL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA; CUNDINAMARCA- CONVENIO ICCU-1341-2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8638136",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "CONSORCIO TALUDES 2025",
+        "estado": "Modificado",
+        "valor": 119990127.31,
+        "pagado": 0.0,
+        "fecha_fin": "2026-06-18",
+        "objeto": "CONSTRUCCION DE UN MURO DE ESTABILIZACION TIPO GAVION EN EL SECTOR CONOCIDO COMO LA GRAN VIA; UBICADO EN EL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA CUNDINAMARCA CON EL FIN DE MITIGAR RIESGOS ASOCIADOS A MOVIMIENTOS EN MASA"
+      },
+      {
+        "id": "CO1.PCCNTR.7790045",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "LIMA PROYECTOS SAS",
+        "estado": "En ejecución",
+        "valor": 107347115.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-29",
+        "objeto": "MEJORAMIENTO DE LA VÍA QUE CONDUCE DEL CASCO URBANO A LA VEREDA CAICEDO SECTOR SAN SEBASTIAN EN EL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA DEARTEMANETO D CUNDIMAMR"
+      },
+      {
+        "id": "CO1.PCCNTR.7541883",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "JAC QUEBRDA GRANDE",
+        "estado": "Modificado",
+        "valor": 36400000.0,
+        "pagado": 24755347.42,
+        "fecha_fin": "2025-04-26",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA LA CONSTRUCCIÓN DE LA\nPRIMERA ETAPA DE LA ESCUELA QUEBRADA GRANDE JURISDICCIÓN DE LA I.E.D. SAN ANTONIO DEL TEQUENDAMA\nENTRE LA JUNTA DE ACCIÓN COMUNAL Y EL MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA DEPARTAMENTO DE\nCUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7156747",
+        "entidad": "MUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA",
+        "proveedor": "CONSTRUCTORA EL CASTILLO GUERRERO SAS",
+        "estado": "Modificado",
+        "valor": 31041116.05,
+        "pagado": 0.0,
+        "fecha_fin": "2025-09-19",
+        "objeto": "MANTENIMIENTO Y ADECUACION DE LA INFRAESTRUCTURA FISICA DE LA ESCUELA SANTIVAR JURIDICCION DEL COLEGIO IED MARIANO SANTA MARIA DEL MMUNICIPIO DE SAN ANTONIO DEL TEQUENDAMA"
+      }
+    ]
+  },
+  "municipio": "San Antonio Del Tequendama",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 50.4,
+  "nivel": "medio",
+  "posicion": 35.0,
+  "total_rankeados": 71
+}

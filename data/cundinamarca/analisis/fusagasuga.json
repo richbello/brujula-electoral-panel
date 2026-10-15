@@ -1,0 +1,405 @@
+{
+  "resumen": {
+    "contratos": 4713,
+    "valor_total": 404958743333.95,
+    "entidades": 10,
+    "proveedores": 2286
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 74.4536,
+    "pct_directa_valor": 31.5148,
+    "hhi": 87.01800060001264,
+    "top1_proveedor_pct": 3.231015212223497,
+    "top5_proveedores_pct": 13.559726681611146,
+    "pareto_proveedores_80pct_valor": 374,
+    "pct_con_adicion": 27.880330999363462,
+    "top_proveedores": [
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 12422550819.0,
+        "contratos": 6,
+        "participacion_pct": 3.231
+      },
+      {
+        "proveedor": "SERVIMED SAS",
+        "documento": "808003827",
+        "valor": 12386000000.0,
+        "contratos": 1,
+        "participacion_pct": 3.2215
+      },
+      {
+        "proveedor": "UNION TEMPORAL FUSALIMENTOS",
+        "documento": "901905492",
+        "valor": 10194197849.0,
+        "contratos": 1,
+        "participacion_pct": 2.6514
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 8631451492.0,
+        "contratos": 13,
+        "participacion_pct": 2.245
+      },
+      {
+        "proveedor": "DISTRIBUIDORA COLOMBIANA DE MEDICAMENTOS  Y TECNOLOGIAS EN SALUD SAS - DISCOLMETS S.A.S",
+        "documento": "828002423",
+        "valor": 8500000000.0,
+        "contratos": 1,
+        "participacion_pct": 2.2108
+      },
+      {
+        "proveedor": "LIRA SEGURIDAD LTDA",
+        "documento": "830069707",
+        "valor": 8448787242.59,
+        "contratos": 2,
+        "participacion_pct": 2.1975
+      },
+      {
+        "proveedor": "UNION TEMPORAL AAN 2025",
+        "documento": "901921735",
+        "valor": 8340489552.08,
+        "contratos": 1,
+        "participacion_pct": 2.1693
+      },
+      {
+        "proveedor": "UT FUSA 2026",
+        "documento": "902027206",
+        "valor": 7164074940.0,
+        "contratos": 1,
+        "participacion_pct": 1.8633
+      },
+      {
+        "proveedor": "CUERPO DE BOMBEROS VOLUNTARIOS DE FUSAGASUGA",
+        "documento": "8906801258",
+        "valor": 6696217299.84,
+        "contratos": 7,
+        "participacion_pct": 1.7416
+      },
+      {
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "documento": "901084024",
+        "valor": 5739754074.0,
+        "contratos": 1,
+        "participacion_pct": 1.4929
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.7428847",
+        "entidad": "ESE HOSPITAL SAN RAFAEL DE FUSAGASUGÁ",
+        "proveedor": "SERVIMED SAS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 12386000000.0,
+        "fecha_firma": "2025-02-15",
+        "objeto": "PRESTACION DE SERVICIOS PROFESIONALES Y ESPECIALIZADOS DE TOMA DE IMÁGENES DIAGNOSTICAS; ULTRASONIDO; MAMOGRAFÍAS; TAC ESTUDIOS VASCULARES (DOPPLER ARTERIAL Y VENOSOS); RADIOLOGÍA CONVENCIONAL Y PORTÁTIL DENTRO DE LAS ACTIVIDADES DESCRITAS EN EL POS; IMÁGENES DE APOYO EN CIRUGÍA CON ARCO EN LA C EN LA E.S.E HOSPITAL SAN RAFAEL DE FUSAGASUGÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.5933147",
+        "entidad": "ESE HOSPITAL SAN RAFAEL DE FUSAGASUGÁ",
+        "proveedor": "CONSORCIO INTER FUSA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 11963987234.0,
+        "fecha_firma": "2024-02-21",
+        "objeto": "INTERVENTORÍA INTEGRAL AL CONTRATO DISEÑOS; ESTUDIOS;\nLICENCIAS; PERMISOS Y CONSTRUCCIÓN DE LA\nINFRAESTRUCTURA DE LA E.S.E. HOSPITAL SAN RAFAEL DE\nFUSAGASUGÁ- CUNDINAMARCA BAJO LA MODALIDAD DE LLAVE\nEN MANO Y PLAZOFIJO."
+      },
+      {
+        "id": "CO1.PCCNTR.7241038",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "UNION TEMPORAL FUSALIMENTOS",
+        "modalidad": "Licitación pública",
+        "valor": 10194197849.0,
+        "fecha_firma": "2025-01-17",
+        "objeto": "DESARROLLAR EL PROGRAMA DE ALIMENTACIÓN ESCOLAR; A TRAVÉS DEL CUAL SE BRINDA UN COMPLEMENTO ALIMENTARIO A LOS NIÑOS; NIÑAS; ADOLESCENTES Y JOVENES DE LA MATRICULA DE LAS INSTITUCIONES EDUCATIVAS OFICIALES; REGISTRADOS EN EL SIMAT; EN EL MUNICIPIO DE FUSAGASUGÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.5970654",
+        "entidad": "ESE HOSPITAL SAN RAFAEL DE FUSAGASUGÁ",
+        "proveedor": "DISTRIBUIDORA COLOMBIANA DE MEDICAMENTOS  Y TECNOLOGIAS EN SALUD SAS - DISCOLMETS S.A.S",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 8500000000.0,
+        "fecha_firma": "2024-02-23",
+        "objeto": "REALIZAR LA GESTIÓN INTEGRAL DEL SERVICIO FARMACÉUTICO; QUE INCLUYE EL SUMINISTRO; RECEPCIÓN; ALMACENAMIENTO; DISTRIBUCIÓN Y DISPENSACIÓN DE LOS MEDICAMENTOS Y DISPOSITIVOS MÉDICOS INTRAHOSPITALARIOS POS Y NO POS; Y EL SEGUIMIENTO A LOS PROGRAMAS DE FARMACOVIGILANCIA Y TECNOVIGILANCIA NECESARIOS PARA LA PRESTACIÓN DE LOS SERVICIOS DE SALUD Y ATENCIÓN A LOS USUARIOS DE LA SEDE Y PUESTOS DE SALUD ADSCRITOS A LA E.S.E HOSPITAL SAN RAFAEL DE FUSAGASUGÁ."
+      },
+      {
+        "id": "CO1.PCCNTR.7568621",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "UNION TEMPORAL AAN 2025",
+        "modalidad": "Licitación pública",
+        "valor": 8340489552.08,
+        "fecha_firma": "2025-02-27",
+        "objeto": "PRESTACIÓN DEL SERVICIO DE VIGILANCIA FÍSICA CON Y SIN ARMA PARA GARANTIZAR LA CUSTODIA DE LOS BIENES; PROPIEDAD DEL MUNICIPIO DE FUSAGASUGÁ; INSTITUCIONES EDUCATIVAS OFICIALES \nDEL MUNICIPIO DE FUSAGASUGÁ Y EVENTOS TURÍSTICOS"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "contratos": 2462,
+        "valor": 223619122303.54
+      },
+      {
+        "entidad": "CPMS-FUSAGASUGA**",
+        "contratos": 29,
+        "valor": 486710001.0
+      },
+      {
+        "entidad": "EMPRESA DE SERVICIOS PÚBLICOS DE FUSAGASUGÁ",
+        "contratos": 479,
+        "valor": 75857081520.24
+      },
+      {
+        "entidad": "ESAP TERRITORIAL CUNDINAMARCA",
+        "contratos": 371,
+        "valor": 6694160964.0
+      },
+      {
+        "entidad": "ESCUELA DE POLICIA DE PROVINCIA DE SUMAPAZ INTENDENTE MARITZA BONILLA RUIZ",
+        "contratos": 154,
+        "valor": 13804187285.67
+      },
+      {
+        "entidad": "ESE HOSPITAL SAN RAFAEL DE FUSAGASUGÁ",
+        "contratos": 17,
+        "valor": 48561078142.0
+      },
+      {
+        "entidad": "IDERF",
+        "contratos": 508,
+        "valor": 11005695927.41
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE FUSAGASUGA",
+        "contratos": 246,
+        "valor": 4145955576.33
+      },
+      {
+        "entidad": "PROVINCIA DMINISTRATIVA Y DE PLANIFICACION - PAP DEL SUMAPAZ",
+        "contratos": 15,
+        "valor": 518747329.0
+      },
+      {
+        "entidad": "SENA REGIONAL CUNDINAMARCA Grupo Administrativo CAE",
+        "contratos": 402,
+        "valor": 20266004284.76
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 122,
+    "valor_obras": 30163035238.88,
+    "obras_vencidas_abiertas": 102,
+    "valor_obras_vencidas_abiertas": 17661244452.59,
+    "pct_obras_vencidas_abiertas": 83.60655737704919,
+    "pct_pagado_obras_vencidas_abiertas": 57.2688,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.7887151",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "cimag s.a.s",
+        "estado": "Modificado",
+        "valor": 737394100.94,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-03",
+        "objeto": "ADECUACIÓN Y MEJORAMIENTO DE LA PISTA ATLÉTICA DEL ESTADIO DE FUTBOL FERNANDO MAZUERA VILLEGAS; DEL MUNICIPIO DE FUSAGASUGÁ; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8720819",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "CONSTRUCTORA INGESUR S.A.S.",
+        "estado": "Modificado",
+        "valor": 640000000.0,
+        "pagado": 505959056.0,
+        "fecha_fin": "2026-06-10",
+        "objeto": "SUMINISTRO; INSTALACIÓN; MANTENIMIENTO; ACTUALIZACIÓN; REUBICACIÓN Y/O RETIRO DE ELEMENTOS DE SEÑALIZACIÓN VIAL; DEMARCACIÓN Y DISPOSITIVOS DE SEGURIDAD VIAL EN EL MUNICIPIO DE FUSAGASUGÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.6954164",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DEL BARRIO LUXEMBURGO",
+        "estado": "Modificado",
+        "valor": 566633495.07,
+        "pagado": 0.0,
+        "fecha_fin": "2025-03-13",
+        "objeto": "AUNAR ESFUERZOS CON LA JUNTA ACCIÓN COMUNAL BARRIO LUXEMBURGO DE FUSAGASUGÁ PARA LA CONSTRUCCIÓN DE LA VÍA URBANA EN LA COMUNA CENTRO EN LA CALLE 7-A ENTRE LA CARRERA 12 Y 15 DEL MUNICIPIO DE FUSAGASUGÁ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7093788",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "CONSORCIO FAHS",
+        "estado": "Modificado",
+        "valor": 553988878.72,
+        "pagado": 0.0,
+        "fecha_fin": "2025-10-18",
+        "objeto": "CONSTRUCCIÓN Y REHABILITACIÓN DE RAMPAS Y ANDENES EN LAS COMUNAS EN EL MUNICIPIO DE FUSAGASUGÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8063030",
+        "entidad": "IDERF",
+        "proveedor": "raul  ivan mera buitrago",
+        "estado": "Modificado",
+        "valor": 542918502.1,
+        "pagado": 542918502.1,
+        "fecha_fin": "2025-12-23",
+        "objeto": "CONSTRUCCIÓN E INSTALACIÓN DE PARQUE DE CALISTENIA; PARQUE RECREO DEPORTIVO DE INCLUSIÓN; GIMNASIOS BIOSALUDABLES Y PARQUES INFANTILES EN EL MUNICIPIO DE FUSAGASUGÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7859878",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DEL BARRIO LUXEMBURGO",
+        "estado": "Modificado",
+        "valor": 523210566.34,
+        "pagado": 518030263.7,
+        "fecha_fin": "2025-11-03",
+        "objeto": "ANUAR ESFUERZOS CON LA JUNTA ACCIÓN COMUNAL BARRIO LUXEMBURGO DE FUSAGASUGÁ PARA LA CONSTRUCCIÓN DE LA VÍA URBANA EN LA COMUNA CENTRO EN LA CARRERA 15 ENTRE LA CALLE 7 A Y AV. DE LAS PALMAS DEL MUNICIPIO DE FUSAGASUGÁ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9503161",
+        "entidad": "ESCUELA DE POLICIA DE PROVINCIA DE SUMAPAZ INTENDENTE MARITZA BONILLA RUIZ",
+        "proveedor": "GERMAN  TORRES SAS",
+        "estado": "Modificado",
+        "valor": 458381400.0,
+        "pagado": 122449203.67,
+        "fecha_fin": "2026-10-01",
+        "objeto": "OUTSOURCING PARA EL MANTENIMIENTO PREVENTIVO Y CORRECTIVO Y/O MEJORAS LOCATIVAS DEL LOTE No.1 INSTALACIONES POLICIALES DE LA ESCUELA DE POLICIA PROVINCIA DEL SUMAPAZ INTENDENTE MARITZA BONILLA RUIZ Y LOTE No.2 ESCUELA DE POLICIA GABRIEL GONZALEZ A PRECIOS UNITARIOS FIJOS SIN FORMULA DE REAJUSTE; LOTE 1 ESSUM"
+      },
+      {
+        "id": "CO1.PCCNTR.7861146",
+        "entidad": "IDERF",
+        "proveedor": "raul  ivan mera buitrago",
+        "estado": "Modificado",
+        "valor": 450000000.0,
+        "pagado": 449999959.24,
+        "fecha_fin": "2025-12-15",
+        "objeto": "CONTRATAR POR EL SISTEMA DE PRECIOS UNITARIOS Y A MONTO AGOTABLE EL MANTENIMIENTO PREVENTIVO Y/O CORRECTIVO Y/O ADECUACIÓN DE LOS PARQUE INFANTILES; PARQUES BIOSALUDABLES; PARQUES ALTERNATIVOS Y ESCENARIOS DEPORTIVOS DEL MUNICIPIO DE FUSAGASUGÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7138271",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "reinel anselmo ortiz paez",
+        "estado": "Modificado",
+        "valor": 413768856.84,
+        "pagado": 268690747.97,
+        "fecha_fin": "2025-06-30",
+        "objeto": "CONSTRUCCIÓN DE UNIDADES SANITARIAS EN EL CENTRO AGROTECNOLOGICO DE EXPOSICIONES Y COMERCIALIZACIÓN DE LA REGIÓN DEL SUMAPAZ EN EL MUNICIPIO DE FUSAGASUGÁ; DEPARTAMENTO DE CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7042531",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "EPICO INGENIERIA S.A.S.",
+        "estado": "Modificado",
+        "valor": 361518986.96,
+        "pagado": 325272972.18,
+        "fecha_fin": "2025-08-09",
+        "objeto": "CONSTRUCCIÓN DE REDES DE ALCANTARILLADO EN EL CENTRO POBLADO DE LA AGUADITA DEL MUNICIPIO DE FUSAGASUGÁ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7001141",
+        "entidad": "IDERF",
+        "proveedor": "raul  ivan mera buitrago",
+        "estado": "Modificado",
+        "valor": 356463390.4,
+        "pagado": 356452409.56,
+        "fecha_fin": "2024-12-27",
+        "objeto": "CONSTRUCCIÓN E INSTALACIÓN DE PARQUE DE CALISTENIA; PARQUE RECREO DEPORTIVO DE INCLUSIÓN; GIMNASIOS BIOSALUDABLES Y PARQUES INFANTILES EN EL MUNICIPIO DE FUSAGASUGÁ; CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.6553388",
+        "entidad": "IDERF",
+        "proveedor": "raul  ivan mera buitrago",
+        "estado": "Modificado",
+        "valor": 300000000.0,
+        "pagado": 299999190.82,
+        "fecha_fin": "2024-12-15",
+        "objeto": "CONTRATAR POR EL SISTEMA DE PRECIOS UNITARIOS Y A MONTO AGOTABLE EL MANTENIMIENTO PREVENTIVO Y/O CORRECTIVO Y/O ADECUACIÓN DE LOS PARQUE INFANTILES; PARQUES BIOSALUDABLES; PARQUES DE CALISTENIA Y ESCENARIOS DEPORTIVOS DEL MUNICIPIO DE FUSAGASUGÁ CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9582207",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "ECOMAX S.A.S.",
+        "estado": "Modificado",
+        "valor": 292710000.98,
+        "pagado": 108229856.19,
+        "fecha_fin": "2026-09-30",
+        "objeto": "MANTENIMIENTO PREVENTIVO Y/O CORRECTIVO DE LAS INTERSECCIONES \nSEMAFÓRICAS DEL MUNICIPIO DE FUSAGASUGÁ"
+      },
+      {
+        "id": "CO1.PCCNTR.8320483",
+        "entidad": "IDERF",
+        "proveedor": "UNIÓN TEMPORAL PLACAS 2025",
+        "estado": "Modificado",
+        "valor": 283626562.7,
+        "pagado": 283626562.7,
+        "fecha_fin": "2025-12-04",
+        "objeto": "MEJORAMIENTO Y/O ADECUACIÓN Y/O MANTENIMIENTO DE PLACAS POLIDEPORTIVAS UBICADAS EN EL MUNICIPIO DE FUSAGASUGÁ; CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7046766",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "reinel anselmo ortiz paez",
+        "estado": "Modificado",
+        "valor": 210164099.1,
+        "pagado": 177822507.28,
+        "fecha_fin": "2025-03-09",
+        "objeto": "CONSTRUCCION DE UNIDADES SANITARIAS CON SU RESPECTIVO POZO SEPTICO EN EL SECTOR RURAL DEL MUNICIPO DE FUSAGASUGA."
+      },
+      {
+        "id": "CO1.PCCNTR.8023377",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA TIERRA NEGRA",
+        "estado": "En ejecución",
+        "valor": 202000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-11-05",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO DE LA VÍA DE LA VEREDA TIERRA NEGRA EN EL SECTOR LA ESCUELA ALTO DE LAS BRISAS Y SECTOR FINCA BEJARANO DEL CORREGIMIENTO NORTE DE FUSAGASUGÁ CUNDINAMARCA   EN   EL   MARCO   DEL   CONVENIO INTERADMINISTRATIVO ICCU No. 265 DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.8099477",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA SAN ANTONIO",
+        "estado": "Modificado",
+        "valor": 202000000.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "AUNAR\tESFUERZOS\tTÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO DE LA VÍA DE LA VEREDA SAN ANTONIO TRAMOS: TRAMO 1 VILLA LINDA Y TRAMO 2 VILLA LILIANA DE FUSAGASUGÁ; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU No. 265 DE 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8082072",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "JUNTA DE ACCION COMUNAL DE LA VEREDA JORDAN BAJO",
+        "estado": "En ejecución",
+        "valor": 202000000.0,
+        "pagado": 202000000.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO DE LA VÍA DE LA VEREDA JORDÁN EN EL SECTOR FINCA VILLA MELISA EN EL CORREGIMIENTO ORIENTAL DE FUSAGASUGÁ; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU No. 265 DE 2025."
+      },
+      {
+        "id": "CO1.PCCNTR.8117559",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "JUNTA DE ACCION COMUNAL VEREDA ESPINALITO",
+        "estado": "Modificado",
+        "valor": 202000000.0,
+        "pagado": 200000000.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO DE LA VÍA DE LA VEREDA EL ESPINALITO SECTORES: SECTOR FINCA VILLA MARÍA Y SECTOR DIVINO NIÑO DE FUSAGASUGÁ; CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU No. 265 de 2025"
+      },
+      {
+        "id": "CO1.PCCNTR.8020575",
+        "entidad": "ALCALDIA MUNICIPAL FUSAGASUGA",
+        "proveedor": "Vereda San Jose de Piamonte",
+        "estado": "En ejecución",
+        "valor": 202000000.0,
+        "pagado": 200000000.0,
+        "fecha_fin": "2025-12-31",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ADMINISTRATIVOS Y FINANCIEROS PARA EL MEJORAMIENTO DE LA VIA DE LA VEREDA SAN JOSE DE PIAMONTE EN EL SECTOR FINCA EL PEDREGAL; SECTOR EL GERIATRICO Y SECTOR SANTA CECILIA DEL CORREGIMIENTO OCCIDENTAL DE FUSAGASUGÁ CUNDINAMARCA EN EL MARCO DEL CONVENIO INTERADMINISTRATIVO ICCU No. 265 DE 2025."
+      }
+    ]
+  },
+  "municipio": "Fusagasugá",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:55",
+  "indice_alertas": 47.1,
+  "nivel": "medio",
+  "posicion": 42.0,
+  "total_rankeados": 71
+}

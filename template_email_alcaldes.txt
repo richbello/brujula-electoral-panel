@@ -1,0 +1,111 @@
+================================================================================
+TEMPLATE DE EMAIL PARA ALCALDES DE CUNDINAMARCA
+(Generar copia para cada municipio — personalizar nombre del alcalde)
+================================================================================
+
+ASUNTO: Diagnóstico fiscal de [MUNICIPIO] — Hallazgos de riesgo en contratos
+
+---
+
+Estimado(a) Alcalde/Alcaldesa [NOMBRE],
+
+Le escribo para compartir un diagnóstico técnico de contratos públicos en su municipio.
+
+He analizado los datos de SECOP II (2024-presente) de [MUNICIPIO] y encontré hallazgos que
+podrían ser de su interés:
+
+📊 INDICADORES CLAVE:
+  • [X] obras vencidas sin cerrar (de [TOTAL] contratos = [INDICE]% de riesgo)
+  • Valor total en riesgo: $[VALOR] COP
+  • [SECTOR PRINCIPAL] es el área más expuesta
+  • [HALLAZGO ESPECÍFICO] sin reportar pagos
+
+Estos datos están PÚBLICOS en SECOP II y pueden ser auditados por la Contraloría en
+cualquier momento. El análisis es completamente independiente y verificable.
+
+He preparado un diagnóstico de una página (adjunto: [MUNICIPIO]_diagnostico.pdf) que
+muestra en detalle:
+  ✓ Top 5 obras vencidas (con links para verificar en SECOP)
+  ✓ Distribución por sector
+  ✓ Comparación con otros municipios de Cundinamarca
+  ✓ Indicadores de riesgo
+
+---
+
+🎯 ¿QUÉ SIGNIFICA ESTO?
+
+Un índice de alertas de [INDICE]% significa que aproximadamente 1 de cada [RATIO] contratos
+tiene una obra vencida sin cierre. Esto puede generar:
+
+  • Multas de Contraloría
+  • Bloqueos de próximos desembolsos
+  • Investigaciones de cumplimiento
+  • Demandas de contratistas
+
+La mayoría de municipios Cundinamarca están en 5-8% de índice. [MUNICIPIO] está significativamente
+por encima.
+
+---
+
+💼 ¿CÓMO PODEMOS AYUDAR?
+
+Ofrezco un servicio de AUDITORÍA MENSUAL DE CONTRATOS que proporciona:
+
+✓ Reporte mensual automático con hallazgos nuevos
+✓ Seguimiento de obras vencidas (alertas cuando van a vencer)
+✓ Análisis de concentración de proveedores (riesgo de cartel)
+✓ Identificación de patrones sospechosos en contratación
+
+Valor: $[PRICE_BAJO]M-$[PRICE_ALTO]M COP/mes (10-15 minutos de trabajo para varias horas de análisis)
+Período: 12 meses (alineado con año fiscal)
+
+Este servicio le da INDEPENDENCIA respecto a su equipo legal interno y COBERTURA POLÍTICA
+si hay auditoría externa.
+
+---
+
+📞 PRÓXIMOS PASOS
+
+Puedo ofrecerle:
+  1️⃣ Llamada de 15 minutos para presentar hallazgos específicos
+  2️⃣ Demostración de auditoría con 2 meses sin costo
+  3️⃣ Contrato de 12 meses si ve valor
+
+Sin compromiso. Sin venta agresiva. Solo datos públicos y análisis técnico.
+
+---
+
+☎️ CONTACTO:
+
+Richard Bello
+Economista | Ingeniero Software | Experto en Auditoría Fiscal
+
+Teléfono: +57-320-830-3847
+WhatsApp: +57-320-830-3847
+Email: richbello@gmail.com
+
+¿Hablamos esta semana?
+
+Adjunto: [MUNICIPIO]_diagnostico.pdf
+
+---
+
+P.S. — Los datos de este análisis vienen de SECOP II (bases públicas del gobierno).
+Todo lo que reporto puede ser verificado directamente en:
+https://www.secop.gov.co/
+
+================================================================================
+INSTRUCCIONES DE USO:
+
+1. Personaliza "Estimado(a) [NOMBRE]" con nombre del alcalde
+2. Reemplaza [MUNICIPIO] con nombre del municipio
+3. Reemplaza [INDICE], [TOTAL], [VALOR], [SECTOR] con datos del PDF
+4. Ajusta [PRICE_BAJO] y [PRICE_ALTO] según target (e.g., 0.4M-0.6M para municipios medianos)
+5. Usa SUBRAYADOS o 💡 para enfatizar los puntos clave
+6. Envía a alcalde@[municipio].gov.co (buscar en municipal websites)
+7. Seguimiento: llamada 2 días después si no hay respuesta
+8. Si responde negativamente: guardar en CRM para después de elecciones 2027
+
+TONO: Profesional pero accesible. Técnico pero no abrumador. Datos, no miedo.
+
+================================================================================

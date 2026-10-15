@@ -1,0 +1,167 @@
+{
+  "resumen": {
+    "contratos": 11,
+    "valor_total": 983635470.45,
+    "entidades": 3,
+    "proveedores": 8
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 9.0909,
+    "pct_directa_valor": 1.8465,
+    "hhi": 4166.190464848766,
+    "top1_proveedor_pct": 60.4882681515951,
+    "top5_proveedores_pct": 96.76833126143191,
+    "pareto_proveedores_80pct_valor": 3,
+    "pct_con_adicion": 18.181818181818183,
+    "top_proveedores": [
+      {
+        "proveedor": "FUNDACOLOMBIA",
+        "documento": "832003642",
+        "valor": 594984061.0,
+        "contratos": 2,
+        "participacion_pct": 60.4883
+      },
+      {
+        "proveedor": "FAINSCO ESAL",
+        "documento": "901149702",
+        "valor": 155954535.0,
+        "contratos": 2,
+        "participacion_pct": 15.8549
+      },
+      {
+        "proveedor": "ACOPASOS",
+        "documento": "860080206",
+        "valor": 152000000.0,
+        "contratos": 2,
+        "participacion_pct": 15.4529
+      },
+      {
+        "proveedor": "INTEGROS COMERCIALIZADORA S.A.S.",
+        "documento": "901476039",
+        "valor": 30746600.0,
+        "contratos": 1,
+        "participacion_pct": 3.1258
+      },
+      {
+        "proveedor": "JUNTA ACCION COMUNAL CENTRAL DE EL OCASO",
+        "documento": "832007969",
+        "valor": 18162434.45,
+        "contratos": 1,
+        "participacion_pct": 1.8465
+      },
+      {
+        "proveedor": "MENELEC SAS",
+        "documento": "901618150",
+        "valor": 16318708.0,
+        "contratos": 1,
+        "participacion_pct": 1.659
+      },
+      {
+        "proveedor": "KRUSSET SAS",
+        "documento": "900215049",
+        "valor": 8745072.0,
+        "contratos": 1,
+        "participacion_pct": 0.8891
+      },
+      {
+        "proveedor": "Representaciones y Distribuciones Nosotros SAS",
+        "documento": "8002359979",
+        "valor": 6724060.0,
+        "contratos": 1,
+        "participacion_pct": 0.6836
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9585832",
+        "entidad": "ALCALDIA ZIPACON",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 406999850.0,
+        "fecha_firma": "2026-06-23",
+        "objeto": "AUNAR ESFUERZOS TECNICOS; ADMINISTRATIVOS; FINANCIEROS  Y LOGISTICOS PARA LA REALIZACIÓN; ORGANIZACIÓN; PLANEACION  Y EJECUCION DE LAS  ACTIVIDADES CULTURALES; RECREACIONALES ; AGROPECUARIAS Y   TURISTICAS   EN EL MARCO DE LAS CELEBRACIONES CAMPESINAS;  CARNAVALES DE  SAN PEDRO  Y  ANIVERSARIO  DEL MUNICIPIO DE  ZIPACON CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.8497205",
+        "entidad": "ALCALDIA ZIPACON",
+        "proveedor": "FUNDACOLOMBIA",
+        "modalidad": "Contratación régimen especial",
+        "valor": 187984211.0,
+        "fecha_firma": "2025-10-24",
+        "objeto": "AUNAR ESFUERZOS TÉCNICOS; ECONÓMICOS Y ADMINISTRATIVOS PARA LA EJECUCIÓN DE ACTIVIDADES INFORMATIVAS; CULTURALES; DEPORTIVAS Y SOCIALES DEL MUNICIPIO DE ZIPACÓN CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.9500618",
+        "entidad": "ALCALDIA ZIPACON",
+        "proveedor": "ACOPASOS",
+        "modalidad": "Contratación régimen especial (con ofertas)",
+        "valor": 80000000.0,
+        "fecha_firma": "2026-05-07",
+        "objeto": "AUNAR ESFUERZOS LOGISTICOS; TECNICOS; FINANCIEROS Y ADMINISTRATIVOS PARA LA REALIZACIÓN DE LA FERIA EQUINA GRADO B EN EL FORTALECIMIENTO DE LAS ACTIVIDADES CULTURALES TURISTICAS Y DE COMERCIALIZACIÓN AGROPECUARIA EN EL MUNICIPIO DE ZIPACON - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7119064",
+        "entidad": "ALCALDIA ZIPACON",
+        "proveedor": "FAINSCO ESAL",
+        "modalidad": "Contratación régimen especial",
+        "valor": 78000000.0,
+        "fecha_firma": "2024-12-06",
+        "objeto": "AUNAR ESFUERZO PARA LA REALIZACIÓN DE LAS ACTIVIDADES CULTURALES Y ARTÍSTICAS QUE SE DESARROLLARÁN EN LA FERIAS Y FIESTAS EN LA VEREDA EL OCASO DEL MUNICIPIO DE ZIPACON - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8679017",
+        "entidad": "ALCALDIA ZIPACON",
+        "proveedor": "FAINSCO ESAL",
+        "modalidad": "Contratación régimen especial",
+        "valor": 77954535.0,
+        "fecha_firma": "2025-12-05",
+        "objeto": "AUNAR ESFUERZOS ADMINISTRATIVOS; TÉCNICOS; LOGÍSTICOS Y FINANCIEROS PARA LA EJECUCIÓN CONJUNTA DE LAS ACTIVIDADES CULTURALES Y ARTÍSTICAS PROPIAS DE LAS TRADICIONALES FERIAS Y FIESTAS DEL SECTOR EL OCASO DEL MUNICIPIO DE ZIPACÓN; CUNDINAMARCA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA ZIPACON",
+        "contratos": 7,
+        "valor": 921101030.45
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA DEPARTAMENTAL CARTAGENA",
+        "contratos": 2,
+        "valor": 25063780.0
+      },
+      {
+        "entidad": "INSTITUCION EDUCATIVA DEPARTAMENTAL ZIPACON",
+        "contratos": 2,
+        "valor": 37470660.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 1,
+    "valor_obras": 18162434.45,
+    "obras_vencidas_abiertas": 1,
+    "valor_obras_vencidas_abiertas": 18162434.45,
+    "pct_obras_vencidas_abiertas": 100.0,
+    "pct_pagado_obras_vencidas_abiertas": 0.0,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8127692",
+        "entidad": "ALCALDIA ZIPACON",
+        "proveedor": "JUNTA ACCION COMUNAL CENTRAL DE EL OCASO",
+        "estado": "En ejecución",
+        "valor": 18162434.45,
+        "pagado": 0.0,
+        "fecha_fin": "2025-09-25",
+        "objeto": "COMPLEMENTAR ESFUERZOS INSTITUCIONALES; COMUNITARIOS; ECONÓMICOS Y SOCIALES ENTRE LAS PARTES PARA EJECUTAR Y PONER EN MARCHA UN PROYECTO QUE PERMITA REALIZAR EL MEJORAMIENTO DE LA VÍA EN EL SECTOR CARRERA 4A DEL MATADERO ANTIGUO; DEL SECTOR EL OCASO DEL MUNICIPIO DE ZIPACÓN CUNDINAMARCA"
+      }
+    ]
+  },
+  "municipio": "Zipacón",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": null,
+  "nivel": "sin ranking",
+  "posicion": null,
+  "total_rankeados": 71,
+  "nota": "Menos de 30 contratos en el periodo; no entra al ranking."
+}

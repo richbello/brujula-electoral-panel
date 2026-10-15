@@ -1,0 +1,210 @@
+{
+  "resumen": {
+    "contratos": 380,
+    "valor_total": 14719870261.69,
+    "entidades": 3,
+    "proveedores": 217
+  },
+  "modulo_04_contratos": {
+    "pct_contratos_directa": 75.7895,
+    "pct_directa_valor": 50.6411,
+    "hhi": 156.92492702744067,
+    "top1_proveedor_pct": 5.348058283957317,
+    "top5_proveedores_pct": 20.597282456251868,
+    "pareto_proveedores_80pct_valor": 97,
+    "pct_con_adicion": 15.526315789473685,
+    "top_proveedores": [
+      {
+        "proveedor": "INVERCON GYG  SAS",
+        "documento": "900299496",
+        "valor": 787096481.0,
+        "contratos": 1,
+        "participacion_pct": 5.3481
+      },
+      {
+        "proveedor": "COMPAÑÍA DE DESARROLLO TERRITORIAL",
+        "documento": "830105897",
+        "valor": 689879400.0,
+        "contratos": 2,
+        "participacion_pct": 4.6875
+      },
+      {
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "documento": "901675985",
+        "valor": 614433277.3299999,
+        "contratos": 2,
+        "participacion_pct": 4.1749
+      },
+      {
+        "proveedor": "SUMINISTROS Y CONTRATOS SAN JOSE SAS",
+        "documento": "900735538",
+        "valor": 478752796.52,
+        "contratos": 1,
+        "participacion_pct": 3.253
+      },
+      {
+        "proveedor": "SERVICIOS GENERALES DE INGENIERIA",
+        "documento": "900434933",
+        "valor": 461227697.0,
+        "contratos": 1,
+        "participacion_pct": 3.1339
+      },
+      {
+        "proveedor": "GRUPO COMERCIAL ALFA",
+        "documento": "900719195",
+        "valor": 449916998.56,
+        "contratos": 5,
+        "participacion_pct": 3.057
+      },
+      {
+        "proveedor": "FUNDACIÓN DE FORMACIÓN Y APOYO MUSICAL DE COLOMBIA",
+        "documento": "830137695",
+        "valor": 348048078.0,
+        "contratos": 3,
+        "participacion_pct": 2.3649
+      },
+      {
+        "proveedor": "SOLUCIONES INTEGRALES E INGENIERIA INTEREG SAS",
+        "documento": "901915244",
+        "valor": 298042486.0,
+        "contratos": 1,
+        "participacion_pct": 2.0251
+      },
+      {
+        "proveedor": "BENEFICENCIA DE CUNDINAMARCA",
+        "documento": "899999072",
+        "valor": 294605732.7,
+        "contratos": 3,
+        "participacion_pct": 2.0017
+      },
+      {
+        "proveedor": "FUNDACION DE ARABITROS ASOCIADOS DE CUNDINAMARCA SIGLA FUNDEASCUN",
+        "documento": "900503320",
+        "valor": 265109414.99,
+        "contratos": 2,
+        "participacion_pct": 1.8013
+      }
+    ],
+    "contratos_mayor_valor": [
+      {
+        "id": "CO1.PCCNTR.9488266",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "INVERCON GYG  SAS",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 787096481.0,
+        "fecha_firma": "2026-05-06",
+        "objeto": "ESTUDIOS Y DISEÑOS PARA LA CONSTRUCCIÓN DE LAS PLANTAS DE TRATAMIENTO DE AGUAS\nRESIDUALES PTAR DEL CASCO URBANO Y DEL CENTRO POBLADO PEÑAS DE BOQUERÓN DEL MUNICIPIO\nDE SUTATAUSA; INCLUYE COLECTORES"
+      },
+      {
+        "id": "CO1.PCCNTR.8484042",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "Empresa de Desarrollo Territorial Sostenible IVEST IN SABANA",
+        "modalidad": "Contratación directa",
+        "valor": 532435377.33,
+        "fecha_firma": "2025-10-24",
+        "objeto": "GERENCIA INTEGRAL PARA EL MANEJO DE LOS RECURSOS EN EL MARCO DE LOS EVENTOS CONTENIDOS EN EL PLAN DE DESARROLLO MUNICIPAL 2024-2027; PARA LA EJECUCION DEL CONCURSO DE MUSICA CAMPESINA Y OBRA INEDITA RAMIRO BALLEN SILVA Y REQUINTO DE ORO JULIAN DAVID USAQUEN ORTIZ Y EL FESTIVAL CULTURAL; TURISTICO; GASTRONÓMICO Y DE TRADICIONES 2025 EN EL MUNICIPIO DE SUTATAUSA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9430128",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "COMPAÑÍA DE DESARROLLO TERRITORIAL",
+        "modalidad": "Concurso de méritos abierto",
+        "valor": 479879400.0,
+        "fecha_firma": "2026-04-15",
+        "objeto": "ESTUDIOS DETALLADOS DE GESTIÓN DEL RIESGO PARA LOS CENTROS POBLADOS RURALES; LA QUINTA Y EL CHIRCAL EN CUMPLIMIENTO DEL DECRETO 1807 DE 2014;1077 DE 2015 Y EL EOT VIGENTE PARA LOS ESCENARIOS DE INUNDACIÓN; AVENIDA TORRENCIAL Y MOVIMIENTOS EN MASA EN EL MUNICIPIO DE SUTATAUSA CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8268816",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "SUMINISTROS Y CONTRATOS SAN JOSE SAS",
+        "modalidad": "Licitación pública Obra Publica",
+        "valor": 478752796.52,
+        "fecha_firma": "2025-09-02",
+        "objeto": "CONSTRUCCION DE 28 UNIDADES SANITARIAS EN EL SECTOR RURAL DEL MUNICIPIO DE SUTATAUSA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.9404176",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "SERVICIOS GENERALES DE INGENIERIA",
+        "modalidad": "Selección Abreviada de Menor Cuantía",
+        "valor": 461227697.0,
+        "fecha_firma": "2026-03-24",
+        "objeto": "CONTRATO DE OBRA PUBLICA PARA EL MEJORAMIENTO DE LA VÍA QUE CONDUCE LA VÍA NACIONAL RUTA 45 TAUSA - SUTATAUSA HACIA LA VEREDA SANTA BÁRBARA SECTOR EL CHIRCAL; MEJORAMIENTO DE LA VÍA QUE DE LA VEREDA OJO DE AGUA SECTOR EL MIRADOR CONDUCE A LA VEREDA HATO VIEJO; MEJORAMIENTO DE LA VIA QUE CONDUCE A LA VEREDA NAVAL HACIA LA VEREDA EL PEDREGAL EN EL SECTOR LA ESCALERA; MEJORAMIENTO DE LA VÍA QUE DE LA VEREDA SANTA BARBARA SECTOR LA QUINTA CONDUCE A LA VEREDA NOVOA DEL MUNICIPIO DE SUTATAUSA -CUNDINA"
+      }
+    ],
+    "entidades": [
+      {
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "contratos": 363,
+        "valor": 14592922051.69
+      },
+      {
+        "entidad": "CONCEJO MUNICIPAL DE SUTATAUSA CUNDINAMARCA",
+        "contratos": 4,
+        "valor": 20476768.0
+      },
+      {
+        "entidad": "PERSONERIA MUNICIPAL DE SUTATAUSA",
+        "contratos": 13,
+        "valor": 106471442.0
+      }
+    ]
+  },
+  "modulo_05_obras": {
+    "contratos_obra": 5,
+    "valor_obras": 1395758199.8,
+    "obras_vencidas_abiertas": 4,
+    "valor_obras_vencidas_abiertas": 934530502.8,
+    "pct_obras_vencidas_abiertas": 80.0,
+    "pct_pagado_obras_vencidas_abiertas": 29.6879,
+    "detalle_obras_vencidas_abiertas": [
+      {
+        "id": "CO1.PCCNTR.8268816",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "SUMINISTROS Y CONTRATOS SAN JOSE SAS",
+        "estado": "Modificado",
+        "valor": 478752796.52,
+        "pagado": 0.0,
+        "fecha_fin": "2026-08-26",
+        "objeto": "CONSTRUCCION DE 28 UNIDADES SANITARIAS EN EL SECTOR RURAL DEL MUNICIPIO DE SUTATAUSA CUNDINAMARCA."
+      },
+      {
+        "id": "CO1.PCCNTR.7186644",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "QBIKA INGENIERIA SAS",
+        "estado": "En ejecución",
+        "valor": 199292372.28,
+        "pagado": 199292372.28,
+        "fecha_fin": "2025-03-30",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE DESDE LA VEREDA SECTOR EL RUNCHAL 1 CONDUCE A LA VEREDA MOCHILA DEL MUNICIPIO DE SUTATAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.7186149",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "BLACKMONT INGENIERIAS SAS",
+        "estado": "En ejecución",
+        "valor": 178334898.0,
+        "pagado": 0.0,
+        "fecha_fin": "2025-03-30",
+        "objeto": "MEJORAMIENTO DE LA VIA QUE DESDE LA VEREDA CONCUBITA SECTOR LA FISCALA CONDUCE A LA VEREDA NOVOA DEL MUNICIPIO DE SUTATAUSA - CUNDINAMARCA"
+      },
+      {
+        "id": "CO1.PCCNTR.8661176",
+        "entidad": "ALCALDIA MUNICIPAL DE SUTATAUSA",
+        "proveedor": "GPR CONSTRUCTORA INGENIERÍA & ARQUITECTURA S.A.S",
+        "estado": "En ejecución",
+        "valor": 78150436.0,
+        "pagado": 78150436.0,
+        "fecha_fin": "2025-12-30",
+        "objeto": "OPTIMIZACIÓN Y MEJORAMIENTO DE LA PLANTA DE TRATAMIENTO DE AGUA POTABLE  PTAP; UBICADA EN LA VEREDA SANTA BARBARA DEL MUNICIPIO DE SUTATAUSA."
+      }
+    ]
+  },
+  "municipio": "Sutatausa",
+  "periodo_desde": "2024-01-01",
+  "generado": "2026-10-14T11:13:56",
+  "indice_alertas": 58.1,
+  "nivel": "medio",
+  "posicion": 23.0,
+  "total_rankeados": 71
+}
