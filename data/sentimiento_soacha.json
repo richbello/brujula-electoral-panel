@@ -1,22 +1,56 @@
 {
   "meta": {
-    "generado": "2026-10-11T18:09:08.873892+00:00",
+    "generado": "2026-10-15T19:02:44.974464+00:00",
     "fuente": "YouTube Data API v3 - DANNY CAICEDO ",
-    "ventana": "ultimos 61 videos del canal",
-    "total_comentarios": 33,
+    "ventana": "ultimos 63 videos del canal",
+    "total_comentarios": 32,
     "modelo": "claude-haiku-4-5-20251001"
   },
   "candidatos": {
     "DANNY CAICEDO": {
-      "total_posts": 18,
-      "total_comentarios": 33,
+      "total_posts": 17,
+      "total_comentarios": 32,
       "videos": [
+        {
+          "id": "ixajQ_vDO3Q",
+          "titulo": "#Soacha con el agua hasta el cuello. ¿Y el alcalde perico? Desaparecido como siempre.",
+          "fecha": "2026-10-15",
+          "url": "https://www.youtube.com/watch?v=ixajQ_vDO3Q",
+          "vistas": 940,
+          "likes": 34,
+          "n_comentarios_canal": 1,
+          "comentarios_analizados": 0,
+          "score": 0.0,
+          "tema": "Otro",
+          "comentario_neg": "",
+          "comentario_pos": "",
+          "tema_agenda": "Otro",
+          "encuadre": "Informativo",
+          "titular": "Alcalde desaparecido ante crisis de agua"
+        },
+        {
+          "id": "XwgQ-v_OcC8",
+          "titulo": "¡La educación es clave para el futuro de Soacha! 🏛️ Un honor ser parte de la formacion de ustedes.",
+          "fecha": "2026-10-13",
+          "url": "https://www.youtube.com/watch?v=XwgQ-v_OcC8",
+          "vistas": 127,
+          "likes": 1,
+          "n_comentarios_canal": 0,
+          "comentarios_analizados": 0,
+          "score": 0.0,
+          "tema": "Otro",
+          "comentario_neg": "",
+          "comentario_pos": "",
+          "tema_agenda": "Otro",
+          "encuadre": "Informativo",
+          "titular": "Participación en evento educativo de Soacha"
+        },
         {
           "id": "ONSiExmphdQ",
           "titulo": "Si no paga la extorsión, lo matan. Esa es la realidad que se vive hoy en #Soacha. 🚨",
           "fecha": "2026-10-01",
           "url": "https://www.youtube.com/watch?v=ONSiExmphdQ",
-          "vistas": 161,
+          "vistas": 167,
           "likes": 5,
           "n_comentarios_canal": 1,
           "comentarios_analizados": 1,
@@ -26,14 +60,14 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Denuncia",
-          "titular": "Extorsión y asesinatos realidad en Soacha"
+          "titular": "Extorsión y violencia generalizada en Soacha"
         },
         {
           "id": "9EJTbBtcOhc",
           "titulo": "Un hueco menos. Un peligro menos 🚫⚠️Con Zoyla Tapahuecos, seguimos trabajando por #Soacha.",
           "fecha": "2026-09-30",
           "url": "https://www.youtube.com/watch?v=9EJTbBtcOhc",
-          "vistas": 1422,
+          "vistas": 1426,
           "likes": 15,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -43,14 +77,14 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Logro",
-          "titular": "Reparación de huecos con Zoyla Tapahuecos"
+          "titular": "Reparación de huecos avanza en Soacha"
         },
         {
           "id": "E0UDjxIaKiw",
           "titulo": "🚨😡¿Años aguantando el trancón para que ahora la \"solución\" sea cobrarnos peaje? #Soacha",
           "fecha": "2026-09-24",
           "url": "https://www.youtube.com/watch?v=E0UDjxIaKiw",
-          "vistas": 1191,
+          "vistas": 1197,
           "likes": 23,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -59,15 +93,15 @@
           "comentario_neg": "",
           "comentario_pos": "",
           "tema_agenda": "Movilidad",
-          "encuadre": "Ataque a rival",
-          "titular": "Rechazo peaje como solución vial Soacha"
+          "encuadre": "Informativo",
+          "titular": "Rechazo a peaje tras años de congestión"
         },
         {
           "id": "RDY8XttQIB0",
           "titulo": "¡Domingo en #Soacha con Morcilla Fest! 🇵🇱",
           "fecha": "2026-09-20",
           "url": "https://www.youtube.com/watch?v=RDY8XttQIB0",
-          "vistas": 147,
+          "vistas": 148,
           "likes": 3,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -77,14 +111,14 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Convocatoria",
-          "titular": "Domingo en Soacha con Morcilla Fest"
+          "titular": "Participación en evento cultural Morcilla Fest"
         },
         {
           "id": "aeMNiZv_bC8",
           "titulo": "¿Tienen un hueco por denunciar? ¿Qué opinan de la movilidad en #Soacha? ¡Los leo en los comentarios!",
           "fecha": "2026-09-17",
           "url": "https://www.youtube.com/watch?v=aeMNiZv_bC8",
-          "vistas": 1488,
+          "vistas": 1490,
           "likes": 11,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -94,14 +128,14 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Convocatoria",
-          "titular": "Consulta ciudadana sobre huecos y movilidad"
+          "titular": "Solicita denuncias de huecos en vías"
         },
         {
           "id": "WuZnV-Gq_DM",
           "titulo": "¿Perico no tapa los huecos? 😡Pues nos mamamos de esperar. Con #ZoylaTapahuecos los taparemos.",
           "fecha": "2026-09-14",
           "url": "https://www.youtube.com/watch?v=WuZnV-Gq_DM",
-          "vistas": 1314,
+          "vistas": 1316,
           "likes": 15,
           "n_comentarios_canal": 2,
           "comentarios_analizados": 2,
@@ -110,15 +144,15 @@
           "comentario_neg": "",
           "comentario_pos": "❤❤",
           "tema_agenda": "Infraestructura",
-          "encuadre": "Ataque a rival",
-          "titular": "Perico no repara huecos, Zoyla sí"
+          "encuadre": "Informativo",
+          "titular": "Promesa de reparar huecos del municipio"
         },
         {
           "id": "IuerZfeNovI",
           "titulo": "¡Estamos jodidos! La inseguridad crece y en Soacha los delincuentes hacen de las suyas. 🚨",
           "fecha": "2026-09-09",
           "url": "https://www.youtube.com/watch?v=IuerZfeNovI",
-          "vistas": 363,
+          "vistas": 364,
           "likes": 10,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -128,7 +162,7 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Denuncia",
-          "titular": "Inseguridad creciente delincuencia en Soacha"
+          "titular": "Criminalidad en aumento en Soacha"
         },
         {
           "id": "1CAUyGwD2lI",
@@ -144,8 +178,8 @@
           "comentario_neg": "",
           "comentario_pos": "",
           "tema_agenda": "Otro",
-          "encuadre": "Ataque a rival",
-          "titular": "Perico endeuda municipio de Soacha"
+          "encuadre": "Informativo",
+          "titular": "Alcalde incrementa deuda del municipio"
         },
         {
           "id": "18nKamK80rw",
@@ -162,7 +196,7 @@
           "comentario_pos": "",
           "tema_agenda": "Movilidad",
           "encuadre": "Denuncia",
-          "titular": "Trancón diario hace caminar más que conducir"
+          "titular": "Congestión vial hace caminar más viable"
         },
         {
           "id": "Co__Jd9ob8E",
@@ -179,7 +213,7 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Personal",
-          "titular": "Destaca talento local Dra Sandra Ruiz"
+          "titular": "Destaca talento profesional en Soacha"
         },
         {
           "id": "6CiztKK_FUQ",
@@ -194,16 +228,16 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Otro",
-          "encuadre": "Informativo",
-          "titular": "Rechazo comunitario nuevo relleno sanitario Soacha"
+          "tema_agenda": "Infraestructura",
+          "encuadre": "Denuncia",
+          "titular": "Comunidad rechaza posible nuevo relleno sanitario"
         },
         {
           "id": "BHr3HDTISCM",
           "titulo": "¿Sabes qué es el \"volteo de tierras\" y cómo puede afectar a #Soacha? 🚨",
           "fecha": "2026-08-25",
           "url": "https://www.youtube.com/watch?v=BHr3HDTISCM",
-          "vistas": 364,
+          "vistas": 365,
           "likes": 24,
           "n_comentarios_canal": 1,
           "comentarios_analizados": 1,
@@ -211,9 +245,9 @@
           "tema": "Otro",
           "comentario_neg": "Obvio que si beneficia a los amigos del alcalde. Manada de políticos farsantes y mentirosos y ladrones. 😢😮",
           "comentario_pos": "",
-          "tema_agenda": "Otro",
+          "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "Volteo de tierras amenaza municipio Soacha"
+          "titular": "Volteo de tierras y sus efectos en Soacha"
         },
         {
           "id": "6NDHHc_PejE",
@@ -228,9 +262,9 @@
           "tema": "Otro",
           "comentario_neg": "El pot de perico plan de los corruptos",
           "comentario_pos": "",
-          "tema_agenda": "Servicios publicos",
-          "encuadre": "Denuncia",
-          "titular": "POT de Perico causará escasez de agua"
+          "tema_agenda": "Otro",
+          "encuadre": "Ataque a rival",
+          "titular": "POT de Perico condena escasez de agua"
         },
         {
           "id": "1Tkrn_aZC68",
@@ -247,7 +281,7 @@
           "comentario_pos": "❤❤😮super,gracias❤😮😮",
           "tema_agenda": "Otro",
           "encuadre": "Logro",
-          "titular": "Soacha envía 8 toneladas solidaridad al Chocó"
+          "titular": "Ocho toneladas solidaridad Soacha para Chocó"
         },
         {
           "id": "d8OatyS4xaY",
@@ -264,7 +298,7 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Convocatoria",
-          "titular": "Chocó recibe apoyo de Soacha, invita a donar"
+          "titular": "Chocó cuenta con Soacha donaciones solidarias"
         },
         {
           "id": "D-pgLsN6LdE",
@@ -281,7 +315,7 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Personal",
-          "titular": "Soacha apoya al presidente Gustavo Petro"
+          "titular": "Agradecimiento a Gustavo Petro desde Soacha"
         },
         {
           "id": "WHFdCRUixdA",
@@ -296,9 +330,9 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Corrupcion",
+          "tema_agenda": "Infraestructura",
           "encuadre": "Ataque a rival",
-          "titular": "Denuncia desastres del POT de Perico"
+          "titular": "Desastres del POT de Perico en calles"
         },
         {
           "id": "gYhBAeu9jDI",
@@ -315,7 +349,7 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "Soacha convertida en basurero de Bogotá"
+          "titular": "Soacha basurero de Bogotá por POT Perico"
         },
         {
           "id": "3isVn-uETNc",
@@ -330,9 +364,9 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Corrupcion",
+          "tema_agenda": "Infraestructura",
           "encuadre": "Convocatoria",
-          "titular": "Movilización contra POT de Perico en calle"
+          "titular": "Movilización en calle contra POT de Perico"
         },
         {
           "id": "KO9IiSPkRx0",
@@ -349,7 +383,7 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "POT de Perico amenaza la ciudad de Soacha"
+          "titular": "POT de Perico amenaza ciudad de Soacha"
         },
         {
           "id": "FLHQAARUknw",
@@ -366,7 +400,7 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Personal",
-          "titular": "Agradecimiento al presidente Gustavo Petro"
+          "titular": "Agradecimiento presidente Gustavo Petro Soacha"
         },
         {
           "id": "53ziPq1AsqA",
@@ -382,8 +416,8 @@
           "comentario_neg": "",
           "comentario_pos": "",
           "tema_agenda": "Otro",
-          "encuadre": "Personal",
-          "titular": "Promoción de postre Piña Loca en Soacha"
+          "encuadre": "Informativo",
+          "titular": "Postre refrescante Piña Loca en Soacha"
         },
         {
           "id": "iYhbyYDzKrg",
@@ -399,8 +433,8 @@
           "comentario_neg": "",
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
-          "encuadre": "Informativo",
-          "titular": "Actualización sobre nuevo hospital de Soacha"
+          "encuadre": "Denuncia",
+          "titular": "Hospital de Soacha: verdades sobre su situación"
         },
         {
           "id": "DT8XFfmZW6I",
@@ -415,7 +449,7 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Propuestas",
+          "tema_agenda": "Otro",
           "encuadre": "Personal",
           "titular": "Danny Caicedo renuncia a curul de oposición"
         },
@@ -434,7 +468,7 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Informativo",
-          "titular": "Análisis conclusiones elecciones presidenciales"
+          "titular": "Conclusiones elecciones presidenciales Colombia"
         },
         {
           "id": "CQq8auX5hCk",
@@ -447,11 +481,11 @@
           "comentarios_analizados": 5,
           "score": -0.32,
           "tema": "Otro",
-          "comentario_neg": "Pero si son ellos los que están comprando votos que cinicos",
-          "comentario_pos": "",
+          "comentario_neg": "Dios nos ampare",
+          "comentario_pos": "Tigre presidente",
           "tema_agenda": "Otro",
           "encuadre": "Convocatoria",
-          "titular": "Campaña última hora Iván Cepeda presidente"
+          "titular": "Apoyo para Iván Cepeda como presidente"
         },
         {
           "id": "bhhqUC2AQz0",
@@ -467,8 +501,8 @@
           "comentario_neg": "SI COMO.NO......ASI COMO ACABARON COMO MI CASA YA.....ESTE NOS CREE IMBECILES, CUANDO UD NACIO YA HABIAMOS VIVIDO BASTANTE Y NOS CONOCEMOS LA CLASE DE CORRUPTOS, MENTIROSOS Y ENGAÑA BOBOS DE CEPEDA.....  POR ESO FIRMES P",
           "comentario_pos": "",
           "tema_agenda": "Otro",
-          "encuadre": "Propuesta",
-          "titular": "Cinco razones para votar Iván Cepeda"
+          "encuadre": "Ataque a rival",
+          "titular": "Cinco verdades sobre Iván Cepeda explicadas"
         },
         {
           "id": "j6uwwbl_-2M",
@@ -502,24 +536,24 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Convocatoria",
-          "titular": "Respaldo directo a Iván Cepeda presidente"
+          "titular": "Danny Caicedo apoya a Iván Cepeda presidente"
         },
         {
           "id": "WiO3o4aFlGM",
           "titulo": "¿Hasta cuándo el abandono en la Avenida Las Torres? 🚩 Soacha exige soluciones reales",
           "fecha": "2026-06-09",
           "url": "https://www.youtube.com/watch?v=WiO3o4aFlGM",
-          "vistas": 1086,
+          "vistas": 1096,
           "likes": 53,
           "n_comentarios_canal": 1,
-          "comentarios_analizados": 1,
-          "score": 0.8,
+          "comentarios_analizados": 0,
+          "score": 0.0,
           "tema": "Otro",
           "comentario_neg": "",
-          "comentario_pos": "Abelardo arregla esto. Estoy segura!..",
-          "tema_agenda": "Infraestructura",
+          "comentario_pos": "",
+          "tema_agenda": "Movilidad",
           "encuadre": "Denuncia",
-          "titular": "Avenida Las Torres abandonada dos años"
+          "titular": "Avenida Las Torres abandonada en Soacha"
         },
         {
           "id": "6I7N1jNh-u4",
@@ -536,7 +570,7 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Denuncia",
-          "titular": "Crisis de seguridad crítica en Soacha"
+          "titular": "Situación crítica seguridad en Soacha"
         },
         {
           "id": "05v2Hyf9llw",
@@ -553,7 +587,7 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Denuncia",
-          "titular": "Demanda entrega SIES por inseguridad"
+          "titular": "SIES sin funcionar pese a avance construcción"
         },
         {
           "id": "kF4mvz6dWxA",
@@ -570,14 +604,14 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Denuncia",
-          "titular": "Delincuencia descontrolada en Soacha"
+          "titular": "Delincuencia desenfrenada en Soacha alarma ciudadanos"
         },
         {
           "id": "GXDP70OsHoQ",
           "titulo": "La verdad sobre la obra en El Danubio (Soacha) 🚨 ¿Gestión o retraso culposo?",
           "fecha": "2026-05-25",
           "url": "https://www.youtube.com/watch?v=GXDP70OsHoQ",
-          "vistas": 953,
+          "vistas": 954,
           "likes": 12,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -586,15 +620,15 @@
           "comentario_neg": "",
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
-          "encuadre": "Ataque a rival",
-          "titular": "Obra Danubio lista pero no ejecutada"
+          "encuadre": "Logro",
+          "titular": "Obra Danubio arranca tras larga espera"
         },
         {
           "id": "jitoefIk9Dw",
           "titulo": "¿Hasta cuándo nos van a dejar encerrados en Soacha? 🛑 #AutopistaSur | Danny Caicedo",
           "fecha": "2026-05-19",
           "url": "https://www.youtube.com/watch?v=jitoefIk9Dw",
-          "vistas": 1057,
+          "vistas": 1060,
           "likes": 13,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -604,7 +638,7 @@
           "comentario_pos": "",
           "tema_agenda": "Movilidad",
           "encuadre": "Denuncia",
-          "titular": "Cierres viales dejan incomunicados soachunos"
+          "titular": "Cierres de vías dejan a Soacha incomunicada"
         },
         {
           "id": "CdR5L4fppsU",
@@ -621,14 +655,14 @@
           "comentario_pos": "",
           "tema_agenda": "Corrupcion",
           "encuadre": "Denuncia",
-          "titular": "Contratación irregular despoja empleos Soacha"
+          "titular": "Recursos y empleos se desviaban de la ciudad"
         },
         {
           "id": "uH2rPwwTJXo",
           "titulo": "¿POR QUÉ SOACHA PAGA EL TRANSPORTE MÁS CARO? 🚌💸 | La promesa incumplida de Perico",
           "fecha": "2026-05-15",
           "url": "https://www.youtube.com/watch?v=uH2rPwwTJXo",
-          "vistas": 990,
+          "vistas": 992,
           "likes": 19,
           "n_comentarios_canal": 1,
           "comentarios_analizados": 1,
@@ -636,16 +670,16 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Movilidad",
-          "encuadre": "Denuncia",
-          "titular": "Transporte en Soacha caro e incumplimiento"
+          "tema_agenda": "Servicios publicos",
+          "encuadre": "Ataque a rival",
+          "titular": "Alcalde incumplió promesa de tarifa de transporte"
         },
         {
           "id": "cjB2n4CdvCk",
           "titulo": "¿Sabías que este CAMPEÓN es de SOACHA? 🚴‍♂️🏆",
           "fecha": "2026-05-12",
           "url": "https://www.youtube.com/watch?v=cjB2n4CdvCk",
-          "vistas": 864,
+          "vistas": 866,
           "likes": 26,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -655,14 +689,14 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Informativo",
-          "titular": "Ciclista soachuno campeón nacional"
+          "titular": "Ciclista soachuno Daniel Martínez es campeón"
         },
         {
           "id": "flRA3Fm8ZVI",
           "titulo": "La malla vial en #Soacha está muy deteriorada | ¿Dónde está la alcaldía de Julián Sánchez Perico?",
           "fecha": "2026-05-11",
           "url": "https://www.youtube.com/watch?v=flRA3Fm8ZVI",
-          "vistas": 445,
+          "vistas": 447,
           "likes": 1,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -672,7 +706,7 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "Vías deterioradas en Soacha"
+          "titular": "Malla vial deteriorada, alcaldía ausente"
         },
         {
           "id": "pj_k_TpGSJA",
@@ -689,7 +723,7 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Ataque a rival",
-          "titular": "Alcalde incumple en seguridad y SIES"
+          "titular": "Alcalde miente sobre seguridad y SIES"
         },
         {
           "id": "_eGhRDfVCss",
@@ -706,14 +740,14 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Informativo",
-          "titular": "Emprendimiento moda sostenible en Soacha"
+          "titular": "Emprendimiento de moda sostenible en Soacha"
         },
         {
           "id": "G1XONfm9BL0",
           "titulo": "🚨¿COLAPSA SOACHA? La cruda realidad de Parque Campestre y el problema de Hacienda Malachí",
           "fecha": "2026-05-06",
           "url": "https://www.youtube.com/watch?v=G1XONfm9BL0",
-          "vistas": 234,
+          "vistas": 235,
           "likes": 1,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -721,9 +755,9 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Servicios publicos",
+          "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "Crisis infraestructura en Parque Campestre"
+          "titular": "Promesas incumplidas afectan ciudadelas de Soacha"
         },
         {
           "id": "a1ebAoTu5cU",
@@ -735,12 +769,12 @@
           "n_comentarios_canal": 2,
           "comentarios_analizados": 2,
           "score": -0.8,
-          "tema": "Corrupcion",
+          "tema": "Otro",
           "comentario_neg": "El que la hace la paga miserable😢😢",
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Denuncia",
-          "titular": "Conductor atropella perrita y miente"
+          "titular": "Conductor atropelló perrita y incumplió promesa"
         },
         {
           "id": "BOM4b4VEpmM",
@@ -757,7 +791,7 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Ataque a rival",
-          "titular": "Gobierno incumple pavimentación en comunas"
+          "titular": "Gobierno no ha pavimentado ninguna comuna"
         },
         {
           "id": "zUFwZowgmsQ",
@@ -769,19 +803,19 @@
           "n_comentarios_canal": 3,
           "comentarios_analizados": 3,
           "score": 0.0,
-          "tema": "Propuestas",
+          "tema": "Otro",
           "comentario_neg": "Así es....y entre más dan , más les exigen....y ojalá se equivoquen....😞😞😞...",
           "comentario_pos": "Verdad💪💪💪💪💪💪🫶🏻🫶🏻🫶🏻🫶🏻🫶🏻🫶🏻❤️❤️❤️❤️",
           "tema_agenda": "Servicios publicos",
           "encuadre": "Denuncia",
-          "titular": "Soacha ciudad dormitorio sin dignidad laboral"
+          "titular": "Soacha exige empleo local y dignidad laboral"
         },
         {
           "id": "XmrzW2GafgE",
           "titulo": "¿Hasta cuándo Soacha? El abandono total en medio de las inundaciones ⛈️🏚️",
           "fecha": "2026-04-29",
           "url": "https://www.youtube.com/watch?v=XmrzW2GafgE",
-          "vistas": 1072,
+          "vistas": 1093,
           "likes": 28,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -791,7 +825,7 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "Inundaciones por alcantarillado abandonado"
+          "titular": "Inundaciones revelan abandono de alcantarillado"
         },
         {
           "id": "ooK9uy-bjrk",
@@ -806,9 +840,9 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Seguridad",
+          "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "Entornos escolares sin recuperación dos años"
+          "titular": "Entornos escolares siguen en riesgo tras dos años"
         },
         {
           "id": "rlsrKe_oMxc",
@@ -825,7 +859,7 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Informativo",
-          "titular": "Rutas ciclismo y atletismo en Soacha"
+          "titular": "Promoción de rutas deportivas en Corregimiento 1"
         },
         {
           "id": "rtUzHsQOmOs",
@@ -840,16 +874,16 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Propuestas",
+          "tema_agenda": "Otro",
           "encuadre": "Convocatoria",
-          "titular": "Priorizar inversiones sobre distracciones electorales"
+          "titular": "Llamado a votar antes del Mundial"
         },
         {
           "id": "Mz2IxbLKuJg",
           "titulo": "¡TENSIÓN EN #SOACHA! Alcalde 'Perico' se enfrenta a la comunidad de Santa Ana | Entrevista con IA",
           "fecha": "2026-04-25",
           "url": "https://www.youtube.com/watch?v=Mz2IxbLKuJg",
-          "vistas": 1331,
+          "vistas": 1332,
           "likes": 32,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -858,8 +892,8 @@
           "comentario_neg": "",
           "comentario_pos": "",
           "tema_agenda": "Otro",
-          "encuadre": "Denuncia",
-          "titular": "Alcalde enfrenta conflicto con comunidad"
+          "encuadre": "Ataque a rival",
+          "titular": "Alcalde Perico enfrenta comunidad en Santa Ana"
         },
         {
           "id": "TeicFyItd2M",
@@ -876,7 +910,7 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Denuncia",
-          "titular": "Crisis de inseguridad en Comuna 6"
+          "titular": "Comuna 6 vive bajo miedo e inseguridad"
         },
         {
           "id": "ZvitYRcu5SI",
@@ -893,7 +927,7 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Personal",
-          "titular": "Interacción lúdica con ciudadanos en calle"
+          "titular": "Regala postres y bromea con ciudadanos"
         },
         {
           "id": "_GG1z_2QCFE",
@@ -910,14 +944,14 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Personal",
-          "titular": "Trivia histórica y regalos en calles"
+          "titular": "Trivia de historia local con premios"
         },
         {
           "id": "btgk1T9csWE",
           "titulo": "¿La mejor ruta para hacer deporte en Soacha? 🚴‍♂️🌲 #Shorts | #Soacha #DannyCaicedo",
           "fecha": "2026-04-24",
           "url": "https://www.youtube.com/watch?v=btgk1T9csWE",
-          "vistas": 3186,
+          "vistas": 3187,
           "likes": 24,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -927,14 +961,14 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Informativo",
-          "titular": "Promoción de ruta deportiva en corregimiento"
+          "titular": "Promueve Corregimiento 1 como ruta deportiva"
         },
         {
           "id": "ofqc-arh9XA",
           "titulo": "El MEGAPROYECTO que amenaza con COLAPSAR a SOACHA: La verdad de la Hacienda Malachí🚨| Danny Caicedo",
           "fecha": "2026-04-21",
           "url": "https://www.youtube.com/watch?v=ofqc-arh9XA",
-          "vistas": 1076,
+          "vistas": 1080,
           "likes": 13,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -944,7 +978,7 @@
           "comentario_pos": "",
           "tema_agenda": "Infraestructura",
           "encuadre": "Denuncia",
-          "titular": "Megaproyecto urbanístico amenaza colapso municipal"
+          "titular": "Megaproyecto Hacienda Malachí amenaza colapso"
         },
         {
           "id": "r9qAUeP7GEs",
@@ -956,12 +990,12 @@
           "n_comentarios_canal": 1,
           "comentarios_analizados": 1,
           "score": -0.8,
-          "tema": "Corrupcion",
+          "tema": "Servicios publicos",
           "comentario_neg": "Y si subiendo exageradamente el catastro como les da la gana",
           "comentario_pos": "",
-          "tema_agenda": "Corrupcion",
+          "tema_agenda": "Otro",
           "encuadre": "Denuncia",
-          "titular": "Denuncias sobre ejecución presupuestal deficiente"
+          "titular": "Obras paralizadas mientras recursos sin ejecutar"
         },
         {
           "id": "mQQeX4lEkig",
@@ -978,7 +1012,7 @@
           "comentario_pos": "",
           "tema_agenda": "Movilidad",
           "encuadre": "Denuncia",
-          "titular": "Crisis administrativa en Secretaría de Movilidad"
+          "titular": "Crisis en movilidad e irregularidades contractuales"
         },
         {
           "id": "YwYDwdZu_8w",
@@ -993,9 +1027,9 @@
           "tema": "Corrupcion",
           "comentario_neg": "Lo único que Sé Bajó fue los pantalones",
           "comentario_pos": "",
-          "tema_agenda": "Servicios publicos",
+          "tema_agenda": "Otro",
           "encuadre": "Ataque a rival",
-          "titular": "Ciudadanos niegan alivio tributario anunciado"
+          "titular": "Ciudadanía rechaza promesas de alivio tributario"
         },
         {
           "id": "bpUY2GkNvds",
@@ -1012,7 +1046,7 @@
           "comentario_pos": "",
           "tema_agenda": "Seguridad",
           "encuadre": "Ataque a rival",
-          "titular": "Funcionario incapaz y violento en cargo"
+          "titular": "Secretario de Gobierno violenta concejalas y fracasa seguridad"
         },
         {
           "id": "XLRXE3xS3uA",
@@ -1027,16 +1061,16 @@
           "tema": "Otro",
           "comentario_neg": "",
           "comentario_pos": "",
-          "tema_agenda": "Movilidad",
+          "tema_agenda": "Corrupcion",
           "encuadre": "Denuncia",
-          "titular": "Región Metropolitana incumple promesas a Soacha"
+          "titular": "$77 mil millones en burocracia región metropolitana"
         },
         {
           "id": "0HoJqojSh8w",
           "titulo": "El SECRETO de las mejores arepas de Soacha 🤫🇨🇴 | Tradición de La Auténtica Magola",
           "fecha": "2026-04-08",
           "url": "https://www.youtube.com/watch?v=0HoJqojSh8w",
-          "vistas": 391,
+          "vistas": 392,
           "likes": 3,
           "n_comentarios_canal": 0,
           "comentarios_analizados": 0,
@@ -1046,38 +1080,38 @@
           "comentario_pos": "",
           "tema_agenda": "Otro",
           "encuadre": "Personal",
-          "titular": "Visita a emprendimiento local de arepas"
+          "titular": "Secreto mejores arepas Soacha emprendimiento local"
         }
       ],
       "por_plataforma": {
         "youtube": {
-          "score": -0.22,
-          "posts": 18,
-          "comentarios": 33
+          "score": -0.25,
+          "posts": 17,
+          "comentarios": 32
         }
       },
-      "sentimiento_promedio": -0.22,
-      "toxicidad_pct": 51,
+      "sentimiento_promedio": -0.25,
+      "toxicidad_pct": 56,
       "alerta_toxicidad": false,
       "temas": [
         {
           "tema": "Otro",
-          "score": -0.15,
-          "menciones": 26
+          "score": -0.18,
+          "menciones": 27
         },
         {
           "tema": "Corrupcion",
           "score": -0.8,
-          "menciones": 1
-        },
-        {
-          "tema": "Propuestas",
-          "score": 0.8,
-          "menciones": 1
+          "menciones": 2
         },
         {
           "tema": "Gestion",
           "score": -0.8,
+          "menciones": 1
+        },
+        {
+          "tema": "Infraestructura",
+          "score": 0.0,
           "menciones": 1
         }
       ],
@@ -1109,10 +1143,6 @@
         {
           "f": "05 Jun",
           "s": -0.8
-        },
-        {
-          "f": "09 Jun",
-          "s": 0.8
         },
         {
           "f": "20 Jun",
@@ -1156,92 +1186,88 @@
         }
       ],
       "agenda": {
-        "total_videos": 61,
+        "total_videos": 63,
         "desde": "2026-04-08",
-        "hasta": "2026-10-01",
-        "videos_con_conversacion": 18,
-        "pct_sin_conversacion": 70,
-        "vistas_totales": 62299,
+        "hasta": "2026-10-15",
+        "videos_con_conversacion": 17,
+        "pct_sin_conversacion": 73,
+        "vistas_totales": 63438,
         "temas": [
           {
             "tema": "Otro",
-            "videos": 23,
-            "pct": 38,
-            "vistas": 23149,
-            "vistas_prom": 1006,
-            "score": -0.41,
-            "comentarios": 19
+            "videos": 28,
+            "pct": 44,
+            "vistas": 28893,
+            "vistas_prom": 1031,
+            "score": -0.45,
+            "comentarios": 22
           },
           {
             "tema": "Infraestructura",
-            "videos": 13,
-            "pct": 21,
-            "vistas": 15514,
-            "vistas_prom": 1193,
-            "score": 0.27,
+            "videos": 18,
+            "pct": 29,
+            "vistas": 19420,
+            "vistas_prom": 1078,
+            "score": -0.27,
             "comentarios": 4
           },
           {
             "tema": "Seguridad",
-            "videos": 9,
-            "pct": 15,
-            "vistas": 7648,
-            "vistas_prom": 849,
+            "videos": 8,
+            "pct": 13,
+            "vistas": 6574,
+            "vistas_prom": 821,
             "score": -0.8,
             "comentarios": 2
           },
           {
             "tema": "Movilidad",
-            "videos": 6,
-            "pct": 10,
-            "vistas": 5952,
-            "vistas_prom": 992,
-            "score": 0.0,
-            "comentarios": 1
-          },
-          {
-            "tema": "Servicios publicos",
-            "videos": 4,
-            "pct": 7,
-            "vistas": 3779,
-            "vistas_prom": 944,
-            "score": -0.53,
-            "comentarios": 5
+            "videos": 5,
+            "pct": 8,
+            "vistas": 5255,
+            "vistas_prom": 1051,
+            "score": null,
+            "comentarios": 0
           },
           {
             "tema": "Corrupcion",
-            "videos": 4,
-            "pct": 7,
-            "vistas": 4108,
-            "vistas_prom": 1027,
-            "score": -0.8,
-            "comentarios": 1
-          },
-          {
-            "tema": "Propuestas",
             "videos": 2,
             "pct": 3,
-            "vistas": 2149,
-            "vistas_prom": 1074,
+            "vistas": 1236,
+            "vistas_prom": 618,
+            "score": null,
+            "comentarios": 0
+          },
+          {
+            "tema": "Servicios publicos",
+            "videos": 2,
+            "pct": 3,
+            "vistas": 2060,
+            "vistas_prom": 1030,
             "score": 0.0,
-            "comentarios": 1
+            "comentarios": 4
           }
         ],
         "encuadres": [
           {
             "encuadre": "Denuncia",
-            "videos": 26,
-            "pct": 43
+            "videos": 25,
+            "pct": 40
+          },
+          {
+            "encuadre": "Informativo",
+            "videos": 11,
+            "pct": 17
           },
           {
             "encuadre": "Ataque a rival",
             "videos": 9,
-            "pct": 15
+            "pct": 14
           },
           {
             "encuadre": "Personal",
-            "videos": 9,
-            "pct": 15
+            "videos": 8,
+            "pct": 13
           },
           {
             "encuadre": "Convocatoria",
@@ -1249,19 +1275,9 @@
             "pct": 11
           },
           {
-            "encuadre": "Informativo",
-            "videos": 7,
-            "pct": 11
-          },
-          {
             "encuadre": "Logro",
-            "videos": 2,
-            "pct": 3
-          },
-          {
-            "encuadre": "Propuesta",
-            "videos": 1,
-            "pct": 2
+            "videos": 3,
+            "pct": 5
           }
         ]
       },
@@ -1275,8 +1291,8 @@
           "tema": "Otro",
           "url": "https://www.youtube.com/watch?v=CQq8auX5hCk",
           "comentarios": 5,
-          "comentario_pos": "",
-          "comentario_neg": "Pero si son ellos los que están comprando votos que cinicos"
+          "comentario_pos": "Tigre presidente",
+          "comentario_neg": "Dios nos ampare"
         },
         {
           "plataforma": "youtube",
@@ -1305,7 +1321,7 @@
           "fecha": "2026-05-01",
           "score": 0.0,
           "resumen": "Feliz Día del Trabajador... pero Soacha exige más 🛑 (Hoy 1 de Mayo)",
-          "tema": "Propuestas",
+          "tema": "Otro",
           "url": "https://www.youtube.com/watch?v=zUFwZowgmsQ",
           "comentarios": 3,
           "comentario_pos": "Verdad💪💪💪💪💪💪🫶🏻🫶🏻🫶🏻🫶🏻🫶🏻🫶🏻❤️❤️❤️❤️",
@@ -2504,7 +2520,7 @@
     }
   },
   "corporacion": "Concejo de Soacha 2027",
-  "ventana_texto": "61 videos del canal, 2026-04-08 a 2026-10-01",
-  "actualizado": "11 Oct 2026, 06:09 PM",
+  "ventana_texto": "63 videos del canal, 2026-04-08 a 2026-10-15",
+  "actualizado": "15 Oct 2026, 07:02 PM",
   "fuente": "youtube_api"
 }
