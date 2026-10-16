@@ -189,6 +189,61 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
 .vid-score.na{background:var(--paper);color:var(--muted-2);font-weight:500}
 @media(max-width:560px){.vid{grid-template-columns:52px 1fr auto;gap:9px}}
 
+/* ---- rendimiento de contenido ---- */
+.rd-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:6px}
+.rd-kpi{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.rd-kpi b{display:block;font-family:"Archivo";font-size:21px;line-height:1.1;color:var(--ink-2)}
+.rd-kpi span{font-size:11px;color:var(--muted-2);line-height:1.3;display:block;margin-top:3px}
+.rd-card{border:1px solid var(--line);border-radius:10px;padding:16px;margin-top:12px}
+.rd-card h4{margin:0 0 2px;font-size:14px;font-family:"Archivo";color:var(--ink-2)}
+.rd-card .rd-sub{font-size:12px;color:var(--muted);margin:0 0 12px;line-height:1.45}
+.rd-grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rd-grid2 .rd-card{margin-top:12px}
+.rd-row{display:grid;grid-template-columns:118px 1fr 52px;align-items:center;gap:10px;padding:6px 0;font-size:13px;cursor:default}
+.rd-row small{grid-column:1/-1;margin-top:-4px;font-size:11px;color:var(--muted-2)}
+.rd-track{height:10px;background:var(--paper);border-radius:999px;overflow:hidden}
+.rd-fill{height:100%;border-radius:0 4px 4px 0;background:var(--ink-2)}
+.rd-fill.best{background:var(--brass)}
+.rd-val{text-align:right;font-family:"Archivo";font-weight:700;font-size:13px;color:var(--text)}
+.rd-heat{display:grid;gap:2px;font-size:11px}
+.rd-heat .hh{color:var(--muted);font-weight:600;padding:4px 2px;text-align:center;line-height:1.15;align-self:end}
+.rd-heat .hr{color:var(--text);font-weight:500;padding:0 6px 0 0;display:flex;align-items:center;font-size:12px}
+.rd-heat .hc{border-radius:4px;min-height:38px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:"Archivo";font-weight:700;font-size:12px;cursor:default}
+.rd-heat .hc small{font-family:"IBM Plex Sans";font-weight:400;font-size:10px;opacity:.8}
+.rd-heat .hc.empty{background:var(--paper)}
+.rd-legend{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted-2);margin-top:10px}
+.rd-legend i{display:inline-block;width:90px;height:8px;border-radius:4px;background:linear-gradient(90deg,#EAE5FB,#150B3D)}
+.rd-bars{display:flex;align-items:flex-end;gap:6px;height:120px;padding-top:6px;border-bottom:1px solid var(--line)}
+.rd-bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;cursor:default}
+.rd-bar div{width:100%;max-width:34px;border-radius:4px 4px 0 0;background:var(--ink-2);min-height:2px}
+.rd-bar:hover div{background:var(--brass)}
+.rd-bar-lbls{display:flex;gap:6px;margin-top:6px}
+.rd-bar-lbls span{flex:1;text-align:center;font-size:10.5px;color:var(--muted-2);text-transform:capitalize}
+.rd-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rd-scroll>.rd-heat{min-width:560px}
+.rd-scroll>svg{min-width:560px}
+.rd-scatter svg{width:100%;height:auto;display:block;overflow:visible}
+.rd-scatter .ax{font-size:10px;fill:var(--muted-2);font-family:"IBM Plex Sans"}
+.rd-top{margin-top:10px}
+.rd-top a{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line);
+  color:inherit;text-decoration:none;font-size:13px}
+.rd-top a:first-child{border-top:0}
+.rd-top a:hover .t{text-decoration:underline}
+.rd-top .n{width:22px;height:22px;border-radius:50%;background:var(--brass);color:var(--ink-2);display:grid;place-items:center;
+  font-family:"Archivo";font-weight:800;font-size:11px}
+.rd-top .t small{display:block;color:var(--muted-2);font-size:11px;margin-top:2px}
+.rd-top .m{font-family:"Archivo";font-weight:700;font-size:13px;color:var(--ink-2);white-space:nowrap}
+#rdTip{position:fixed;z-index:50;pointer-events:none;background:var(--ink-2);color:#fff;font-size:12px;line-height:1.4;
+  padding:8px 10px;border-radius:8px;max-width:260px;box-shadow:0 6px 20px rgba(13,6,40,.25);opacity:0;transition:opacity .1s}
+#rdTip b{font-family:"Archivo"}
+@media(max-width:620px){
+  .rd-kpis{grid-template-columns:1fr 1fr}
+  .rd-grid2{grid-template-columns:1fr}
+  .rd-row{grid-template-columns:92px 1fr 46px}
+  .rd-heat .hh{font-size:9.5px}
+}
+
 .tox-line{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-top:4px}
 .tox-dot{width:10px;height:10px;border-radius:50%}
 
@@ -380,6 +435,225 @@ function agendaBlock(a){
     <div class="ag-chips">${chips}</div>`;
 }
 
+// ================= Rendimiento de contenido =================
+// Todo se calcula aqui con los campos que ya trae cada video del JSON
+// (vistas, likes, n_comentarios_canal, encuadre, tema_agenda, fecha).
+// YouTube no publica dislikes desde 2021: la aprobacion se mide como
+// likes sobre vistas.
+
+const MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const ACENTOS = {Gestion:'Gestión',Corrupcion:'Corrupción','Servicios publicos':'Servicios públicos'};
+const bonito = s => ACENTOS[s]||s;
+const esc = s => String(s??'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pctTxt = x => (x>=10 ? x.toFixed(0) : x.toFixed(1)) + '%';
+
+function er(v){            // tasa de interaccion del video, en %
+  const vis = v.vistas||0;
+  if(!vis) return 0;
+  return ((v.likes||0) + (v.n_comentarios_canal||0)) / vis * 100;
+}
+function mediana(xs){
+  if(!xs.length) return 0;
+  const s=[...xs].sort((a,b)=>a-b), m=Math.floor(s.length/2);
+  return s.length%2 ? s[m] : (s[m-1]+s[m])/2;
+}
+function agrupar(vs, key){
+  const g={};
+  vs.forEach(v=>{
+    const k=v[key]||'Otro';
+    (g[k]=g[k]||{n:0,vis:0,lik:0,com:0,vids:[]});
+    g[k].n++; g[k].vis+=v.vistas||0; g[k].lik+=v.likes||0; g[k].com+=v.n_comentarios_canal||0; g[k].vids.push(v);
+  });
+  Object.values(g).forEach(d=>{ d.er = d.vis ? (d.lik+d.com)/d.vis*100 : 0; d.visProm = d.vis/d.n; });
+  return g;
+}
+// Indigo de la marca, de claro a oscuro, para magnitudes (un solo tono).
+function seqColor(t){            // t en 0..1
+  const a=[0xEA,0xE5,0xFB], b=[0x15,0x0B,0x3D];
+  const c=a.map((x,i)=>Math.round(x+(b[i]-x)*Math.max(0,Math.min(1,t))));
+  return `rgb(${c.join(',')})`;
+}
+const tip = html => `data-tip="${esc(html)}"`;
+
+function rendimientoBlock(videos){
+  const vs = (videos||[]).filter(v=>v.vistas>0);
+  if(vs.length < 5) return '';
+
+  const totVis = vs.reduce((a,v)=>a+v.vistas,0);
+  const totLik = vs.reduce((a,v)=>a+(v.likes||0),0);
+  const totCom = vs.reduce((a,v)=>a+(v.n_comentarios_canal||0),0);
+  const erGlobal = (totLik+totCom)/totVis*100;
+  const medVis = mediana(vs.map(v=>v.vistas));
+
+  // --- encuadres ---
+  const enc = Object.entries(agrupar(vs,'encuadre')).sort((a,b)=>b[1].er-a[1].er);
+  const encFiables = enc.filter(([,d])=>d.n>=3);
+  const mejorEnc = (encFiables[0]||enc[0]);
+  const maxEr = Math.max(...enc.map(([,d])=>d.er), 0.01);
+  const encRows = enc.map(([k,d])=>`
+    <div class="rd-row" ${tip(`<b>${esc(k)}</b><br>${d.n} videos · ${nFmt(Math.round(d.visProm))} vistas promedio<br>${nFmt(d.lik)} likes · ${d.com} comentarios<br>Interacción: <b>${pctTxt(d.er)}</b>`)}>
+      <div>${esc(k)}</div>
+      <div class="rd-track"><div class="rd-fill ${mejorEnc&&k===mejorEnc[0]?'best':''}" style="width:${d.er/maxEr*100}%"></div></div>
+      <div class="rd-val">${pctTxt(d.er)}</div>
+      <small>${d.n} video${d.n>1?'s':''} · ${nFmt(Math.round(d.visProm))} vistas prom.${d.n<3?' · muestra chica':''}</small>
+    </div>`).join('');
+
+  // --- mapa tema x encuadre ---
+  const temasOrd = Object.entries(agrupar(vs,'tema_agenda')).sort((a,b)=>b[1].n-a[1].n).map(([k])=>k).slice(0,6);
+  const encOrd = enc.map(([k])=>k).slice(0,6);
+  const celdas = {};
+  vs.forEach(v=>{
+    const k=(v.tema_agenda||'Otro')+'|'+(v.encuadre||'Informativo');
+    (celdas[k]=celdas[k]||[]).push(v);
+  });
+  const erCeldas = Object.values(celdas).map(arr=>agrupar(arr,'encuadre')).flatMap(g=>Object.values(g).map(d=>d.er));
+  const maxCelda = Math.max(...erCeldas, 0.01);
+  let heat = `<div class="rd-scroll"><div class="rd-heat" style="grid-template-columns:110px repeat(${encOrd.length},1fr)"><div></div>`;
+  heat += encOrd.map(e=>`<div class="hh">${esc(e)}</div>`).join('');
+  temasOrd.forEach(t=>{
+    heat += `<div class="hr">${esc(bonito(t))}</div>`;
+    encOrd.forEach(e=>{
+      const arr = celdas[t+'|'+e];
+      if(!arr){ heat += `<div class="hc empty"></div>`; return; }
+      const d = Object.values(agrupar(arr,'encuadre'))[0];
+      const k = d.er/maxCelda;
+      heat += `<div class="hc" style="background:${seqColor(0.12+k*0.88)};color:${k>0.45?'#fff':'var(--ink-2)'}"
+        ${tip(`<b>${esc(bonito(t))} · ${esc(e)}</b><br>${d.n} video${d.n>1?'s':''} · ${nFmt(Math.round(d.visProm))} vistas prom.<br>Interacción: <b>${pctTxt(d.er)}</b>`)}>
+        ${pctTxt(d.er)}<small>${d.n} vid.</small></div>`;
+    });
+  });
+  heat += `</div></div><div class="rd-legend">menos interacción <i></i> más interacción · celda vacía = no publicó esa combinación</div>`;
+
+  // --- evolucion mensual (dos graficas, una escala cada una) ---
+  const porMes = {};
+  vs.forEach(v=>{
+    const k=(v.fecha||'').slice(0,7);
+    (porMes[k]=porMes[k]||{n:0,vis:0,eng:0});
+    porMes[k].n++; porMes[k].vis+=v.vistas; porMes[k].eng+=(v.likes||0)+(v.n_comentarios_canal||0);
+  });
+  const meses = Object.keys(porMes).sort();
+  const lblMes = k => MESES[parseInt(k.slice(5,7),10)-1] || k;
+  const maxVisMes = Math.max(...meses.map(m=>porMes[m].vis),1);
+  const erMes = m => porMes[m].vis ? porMes[m].eng/porMes[m].vis*100 : 0;
+  const maxErMes = Math.max(...meses.map(erMes),0.01);
+  const barras = (val, max, fmtv) => `
+    <div class="rd-bars">${meses.map(m=>`
+      <div class="rd-bar" ${tip(`<b>${lblMes(m)} ${m.slice(0,4)}</b><br>${porMes[m].n} videos · ${nFmt(porMes[m].vis)} vistas<br>Interacción: <b>${pctTxt(erMes(m))}</b>`)}>
+        <div style="height:${Math.max(2,val(m)/max*100)}%"></div></div>`).join('')}
+    </div>
+    <div class="rd-bar-lbls">${meses.map(m=>`<span>${lblMes(m)}</span>`).join('')}</div>`;
+
+  // --- dispersion: alcance vs interaccion ---
+  const W=600,H=260,L=40,R=12,T=12,B=30;
+  const lx = x=>Math.log10(Math.max(1,x));
+  const xMin = Math.floor(lx(Math.min(...vs.map(v=>v.vistas))));
+  const xMax = Math.ceil(lx(Math.max(...vs.map(v=>v.vistas))) + 0.001);
+  const yMax = Math.max(...vs.map(er))*1.1 || 1;
+  const px = v => L + (lx(v.vistas)-xMin)/Math.max(0.0001,xMax-xMin)*(W-L-R);
+  const py = v => H-B - er(v)/yMax*(H-T-B);
+  // "Despegaron": mas vistas que la mediana del canal y mejor interaccion que el promedio
+  const indice = v => (v.vistas/medVis) * (er(v)/Math.max(0.01,erGlobal));
+  const top = [...vs].sort((a,b)=>indice(b)-indice(a)).slice(0,5);
+  const topIds = new Set(top.map(v=>v.id));
+  let ticksX='';
+  for(let e=xMin;e<=xMax;e++){
+    const x=L+(e-xMin)/Math.max(0.0001,xMax-xMin)*(W-L-R);
+    ticksX+=`<line x1="${x}" y1="${T}" x2="${x}" y2="${H-B}" stroke="#E0D9F7" stroke-width="1"/>
+      <text class="ax" x="${x}" y="${H-B+16}" text-anchor="middle">${nFmt(10**e)}</text>`;
+  }
+  let ticksY='';
+  for(let i=0;i<=4;i++){
+    const val=yMax*i/4, y=H-B-i/4*(H-T-B);
+    ticksY+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#E0D9F7" stroke-width="1" ${i?'stroke-dasharray="2 3"':''}/>
+      <text class="ax" x="${L-6}" y="${y+3}" text-anchor="end">${val.toFixed(val<10?1:0)}%</text>`;
+  }
+  const yAvg = H-B - erGlobal/yMax*(H-T-B);
+  const xMed = L + (lx(medVis)-xMin)/Math.max(0.0001,xMax-xMin)*(W-L-R);
+  const puntos = vs.filter(v=>!topIds.has(v.id)).map(v=>`
+    <circle cx="${px(v).toFixed(1)}" cy="${py(v).toFixed(1)}" r="5" fill="#150B3D" fill-opacity=".38" stroke="#fff" stroke-width="1.5"
+      ${tip(`<b>${esc(v.titular||v.titulo)}</b><br>${v.fecha} · ${esc(v.encuadre||'')}<br>${nFmt(v.vistas)} vistas · ${pctTxt(er(v))} interacción`)}/>`).join('')
+    + top.map((v,i)=>`
+    <circle cx="${px(v).toFixed(1)}" cy="${py(v).toFixed(1)}" r="9" fill="#FFB020" stroke="#fff" stroke-width="2"
+      ${tip(`<b>${esc(v.titular||v.titulo)}</b><br>${v.fecha} · ${esc(v.encuadre||'')}<br>${nFmt(v.vistas)} vistas · ${pctTxt(er(v))} interacción`)}/>
+    <text x="${px(v).toFixed(1)}" y="${(py(v)+3.5).toFixed(1)}" text-anchor="middle" font-family="Archivo" font-weight="800" font-size="10" fill="#0D0628" pointer-events="none">${i+1}</text>`).join('');
+  const scatter = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Vistas contra tasa de interacción de cada video">
+    ${ticksY}${ticksX}
+    <line x1="${L}" y1="${yAvg}" x2="${W-R}" y2="${yAvg}" stroke="#6B5E90" stroke-width="1" stroke-dasharray="5 4"/>
+    <text class="ax" x="${W-R}" y="${yAvg-5}" text-anchor="end">promedio del canal ${pctTxt(erGlobal)}</text>
+    <line x1="${xMed}" y1="${T}" x2="${xMed}" y2="${H-B}" stroke="#6B5E90" stroke-width="1" stroke-dasharray="5 4"/>
+    <text class="ax" x="${xMed+4}" y="${T+10}">mediana ${nFmt(Math.round(medVis))} vistas</text>
+    ${puntos}
+    <text class="ax" x="${(L+W-R)/2}" y="${H-2}" text-anchor="middle">vistas (escala logarítmica)</text>
+  </svg>`;
+  const topList = top.map((v,i)=>`
+    <a href="${v.url}" target="_blank" rel="noopener">
+      <span class="n">${i+1}</span>
+      <span class="t">${esc(v.titulo)}<small>${v.fecha} · ${esc(v.encuadre||'')} · ${esc(bonito(v.tema_agenda||''))}</small></span>
+      <span class="m">${nFmt(v.vistas)} · ${pctTxt(er(v))}</span>
+    </a>`).join('');
+
+  return `<div class="section-t">Rendimiento de contenido</div>
+    <p class="ag-note">Cómo responde la audiencia a cada tipo de video. La <b>interacción</b> es
+    (likes + comentarios) ÷ vistas: mide cuántos de los que vieron reaccionaron. YouTube no publica
+    los "no me gusta" desde 2021, así que la aprobación se lee en los likes.</p>
+    <div class="rd-kpis">
+      <div class="rd-kpi"><b>${pctTxt(erGlobal)}</b><span>interacción del canal</span></div>
+      <div class="rd-kpi"><b>${(totLik/totVis*1000).toFixed(0)}</b><span>likes por cada 1.000 vistas</span></div>
+      <div class="rd-kpi"><b>${nFmt(Math.round(medVis))}</b><span>vistas de un video típico (mediana)</span></div>
+      <div class="rd-kpi"><b>${mejorEnc?esc(mejorEnc[0]):'—'}</b><span>el encuadre que más mueve a la audiencia</span></div>
+    </div>
+
+    <div class="rd-card">
+      <h4>Qué tipo de video funciona</h4>
+      <p class="rd-sub">Interacción promedio por encuadre. En ámbar, el mejor con al menos 3 videos.</p>
+      ${encRows}
+    </div>
+
+    <div class="rd-card">
+      <h4>Tema × encuadre</h4>
+      <p class="rd-sub">Interacción de cada combinación que publicó. Las celdas oscuras son las que mejor responden.</p>
+      ${heat}
+    </div>
+
+    <div class="rd-grid2">
+      <div class="rd-card">
+        <h4>Vistas por mes</h4>
+        <p class="rd-sub">Alcance total de lo publicado cada mes.</p>
+        ${barras(m=>porMes[m].vis, maxVisMes)}
+      </div>
+      <div class="rd-card">
+        <h4>Interacción por mes</h4>
+        <p class="rd-sub">De cada 100 personas que vieron, cuántas reaccionaron.</p>
+        ${barras(erMes, maxErMes)}
+      </div>
+    </div>
+
+    <div class="rd-card rd-scatter">
+      <h4>Alcance contra interacción</h4>
+      <p class="rd-sub">Cada punto es un video. Arriba a la derecha: llegaron lejos y movieron a la gente.
+      En ámbar, los 5 que más despegaron frente al resto del canal.</p>
+      <div class="rd-scroll">${scatter}</div>
+      <div class="rd-top">${topList}</div>
+    </div>`;
+}
+
+// Tooltip unico para todas las graficas (delegacion: sobrevive al refresco).
+(function(){
+  const t=document.createElement('div'); t.id='rdTip'; document.body.appendChild(t);
+  document.addEventListener('mouseover',e=>{
+    const el=e.target.closest('[data-tip]'); if(!el){t.style.opacity=0;return;}
+    t.innerHTML=el.getAttribute('data-tip'); t.style.opacity=1;
+  });
+  document.addEventListener('mousemove',e=>{
+    if(t.style.opacity!=='1') return;
+    const w=t.offsetWidth,h=t.offsetHeight;
+    let x=e.clientX+14, y=e.clientY+14;
+    if(x+w>innerWidth-8) x=e.clientX-w-14;
+    if(y+h>innerHeight-8) y=e.clientY-h-14;
+    t.style.left=x+'px'; t.style.top=y+'px';
+  });
+})();
+
 function videosBlock(videos){
   if(!videos || !videos.length) return '';
   return `<div class="section-t">${videos.length} videos del canal</div>
@@ -434,6 +708,8 @@ function candCard([nombre,d]){
       ${(d.posts_destacados||[]).map(postBlock).join('') || '<p style="color:var(--muted);font-size:13px">Sin posts destacados en esta ventana.</p>'}
 
       ${agendaBlock(d.agenda)}
+
+      ${rendimientoBlock(d.videos)}
 
       ${videosBlock(d.videos)}
 
