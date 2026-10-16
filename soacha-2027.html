@@ -244,6 +244,17 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
   .rd-heat .hh{font-size:9.5px}
 }
 
+/* ---- comparativa de rendimiento ---- */
+.rc-table{width:100%;border-collapse:collapse;font-size:13px}
+.rc-table th{text-align:right;font-size:11px;font-weight:600;color:var(--muted);padding:0 8px 8px;white-space:nowrap}
+.rc-table th:first-child,.rc-table td:first-child{text-align:left;padding-left:0}
+.rc-table td{text-align:right;padding:10px 8px;border-top:1px solid var(--line);font-family:"Archivo";font-weight:700;color:var(--ink-2);white-space:nowrap}
+.rc-table td:first-child{font-family:"IBM Plex Sans";font-weight:600;white-space:normal}
+.rc-table td:first-child small{display:flex;align-items:center;gap:5px;font-weight:400;color:var(--muted-2);font-size:11px;margin-top:2px}
+.rc-table td.txt{font-family:"IBM Plex Sans";font-weight:500;color:var(--text)}
+.rc-table .lead{background:var(--brass-soft);border-radius:6px}
+.rc-wrap{overflow-x:auto}
+
 .tox-line{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin-top:4px}
 .tox-dot{width:10px;height:10px;border-radius:50%}
 
@@ -286,6 +297,8 @@ h1,h2,h3,.num{font-family:"Archivo",system-ui,sans-serif}
     <p class="sub">Promedio en la ventana analizada. 0 = neutro, 1 = muy favorable.</p>
     <div id="compareRows"></div>
   </div>
+
+  <div class="compare" id="rendBox" style="display:none"></div>
 
   <div id="cands"></div>
 </div>
@@ -402,8 +415,9 @@ function vidRow(v){
   </div>`;
 }
 
-function agendaBlock(a){
+function agendaBlock(a, red){
   if(!a || !a.total_videos) return '';
+  red = red||'YouTube';
   const max = Math.max(...a.temas.map(t=>t.videos), 1);
 
   const temas = a.temas.map(t=>{
@@ -421,7 +435,7 @@ function agendaBlock(a){
   const chips = (a.encuadres||[]).map(e=>
     `<span class="ag-chip">${e.encuadre} <b>${e.pct}%</b></span>`).join('');
 
-  return `<div class="section-t">Agenda del candidato</div>
+  return `<div class="section-t">Agenda del candidato · ${red}</div>
     <p class="ag-note">De qué habla él, no qué opinan de él. Sale del título y la descripción
     de cada video, así que cubre los ${a.total_videos} publicados entre ${a.desde} y ${a.hasta},
     incluidos los que nadie comentó. La columna de la derecha es el sentimiento de los
@@ -475,7 +489,8 @@ function seqColor(t){            // t en 0..1
 }
 const tip = html => `data-tip="${esc(html)}"`;
 
-function rendimientoBlock(videos){
+function rendimientoBlock(videos, red){
+  red = red||'YouTube';
   const vs = (videos||[]).filter(v=>v.vistas>0);
   if(vs.length < 5) return '';
 
@@ -592,10 +607,10 @@ function rendimientoBlock(videos){
       <span class="m">${nFmt(v.vistas)} · ${pctTxt(er(v))}</span>
     </a>`).join('');
 
-  return `<div class="section-t">Rendimiento de contenido</div>
+  return `<div class="section-t">Rendimiento de contenido · ${red}</div>
     <p class="ag-note">Cómo responde la audiencia a cada tipo de video. La <b>interacción</b> es
     (likes + comentarios) ÷ vistas: mide cuántos de los que vieron reaccionaron. YouTube no publica
-    los "no me gusta" desde 2021, así que la aprobación se lee en los likes.</p>
+    ${red==='YouTube'?'los "no me gusta" desde 2021':'los "no me gusta"'}, así que la aprobación se lee en los likes.</p>
     <div class="rd-kpis">
       <div class="rd-kpi"><b>${pctTxt(erGlobal)}</b><span>interacción del canal</span></div>
       <div class="rd-kpi"><b>${(totLik/totVis*1000).toFixed(0)}</b><span>likes por cada 1.000 vistas</span></div>
@@ -654,9 +669,47 @@ function rendimientoBlock(videos){
   });
 })();
 
-function videosBlock(videos){
+// Cuadro comparativo: mismas metricas para cada candidato y red.
+function kpisRed(videos){
+  const vs=(videos||[]).filter(v=>v.vistas>0);
+  if(vs.length<3) return null;
+  const vis=vs.reduce((a,v)=>a+v.vistas,0);
+  const lik=vs.reduce((a,v)=>a+(v.likes||0),0);
+  const com=vs.reduce((a,v)=>a+(v.n_comentarios_canal||0),0);
+  const enc=Object.entries(agrupar(vs,'encuadre')).filter(([,d])=>d.n>=3).sort((a,b)=>b[1].er-a[1].er)[0];
+  const meses=Math.max(1,(new Date(vs[0].fecha)-new Date(vs[vs.length-1].fecha))/(30.4*864e5));
+  return {n:vs.length, porMes:vs.length/meses, med:mediana(vs.map(v=>v.vistas)), er:(lik+com)/vis*100,
+          lpm:lik/vis*1000, enc:enc?enc[0]:'—'};
+}
+function renderRendCompare(cands){
+  const filas=[];
+  Object.entries(cands).forEach(([nombre,d])=>{
+    [['youtube','YouTube',d.videos],['tiktok','TikTok',d.videos_tiktok]].forEach(([k,red,vids])=>{
+      const m=kpisRed(vids); if(m) filas.push({nombre,cliente:d.es_cliente,k,red,...m});
+    });
+  });
+  const box=document.getElementById('rendBox');
+  if(filas.length<2){ box.style.display='none'; return; }
+  const mejor=campo=>Math.max(...filas.map(f=>f[campo]));
+  const celda=(f,campo,txt)=>`<td class="${f[campo]===mejor(campo)?'lead':''}">${txt}</td>`;
+  box.innerHTML=`<h2>Rendimiento comparado</h2>
+    <p class="sub">Mismas métricas para cada candidato y red. En ámbar, el mejor de cada columna.
+    Interacción = (likes + comentarios) ÷ vistas.</p>
+    <div class="rc-wrap"><table class="rc-table">
+      <thead><tr><th>Candidato · red</th><th>Videos</th><th>Por mes</th><th>Vistas típicas</th>
+        <th>Interacción</th><th>Likes / 1.000</th><th>Encuadre que más funciona</th></tr></thead>
+      <tbody>${filas.map(f=>`<tr>
+        <td>${f.nombre}${f.cliente?'<span class="chip-client">TU CLIENTE</span>':''}<small>${PLAT_ICON[f.k]||''} ${f.red}</small></td>
+        ${celda(f,'n',f.n)}${celda(f,'porMes',f.porMes.toFixed(1))}${celda(f,'med',nFmt(Math.round(f.med)))}
+        ${celda(f,'er',pctTxt(f.er))}${celda(f,'lpm',f.lpm.toFixed(0))}
+        <td class="txt">${esc(f.enc)}</td></tr>`).join('')}</tbody>
+    </table></div>`;
+  box.style.display='block';
+}
+
+function videosBlock(videos, red){
   if(!videos || !videos.length) return '';
-  return `<div class="section-t">${videos.length} videos del canal</div>
+  return `<div class="section-t">${videos.length} videos · ${red||'YouTube'}</div>
     <div class="vids">${videos.map(vidRow).join('')}</div>`;
 }
 
@@ -707,11 +760,13 @@ function candCard([nombre,d]){
       <div class="section-t">Publicaciones que marcan la conversación</div>
       ${(d.posts_destacados||[]).map(postBlock).join('') || '<p style="color:var(--muted);font-size:13px">Sin posts destacados en esta ventana.</p>'}
 
-      ${agendaBlock(d.agenda)}
+      ${agendaBlock(d.agenda,'YouTube')}
+      ${rendimientoBlock(d.videos,'YouTube')}
+      ${videosBlock(d.videos,'YouTube')}
 
-      ${rendimientoBlock(d.videos)}
-
-      ${videosBlock(d.videos)}
+      ${agendaBlock(d.agenda_tiktok,'TikTok')}
+      ${rendimientoBlock(d.videos_tiktok,'TikTok')}
+      ${videosBlock(d.videos_tiktok,'TikTok')}
 
     </div>
   </div>`;
@@ -739,6 +794,7 @@ async function cargar(){
     if(fuente==='demostracion' || !fuente) document.getElementById('demoBanner').style.display='flex';
 
     renderCompare(cands);
+    renderRendCompare(cands);
 
     // cliente primero, luego por score desc
     const orden = Object.entries(cands).sort((a,b)=>{
