@@ -46,3 +46,7 @@ _backup*/
 
 data/cundinamarca/*.csv
 data/cundinamarca/*.parquet
+
+# === Defensa del Voto: actas crudas y formularios descargados ===
+data/_e14_*
+e14_*/
