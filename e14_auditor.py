@@ -570,7 +570,6 @@ def extraer(entrada: Path, salida: Path, modelo: str, limite: int | None = None)
                     model=modelo, max_tokens=4096,
                     tools=[{"name": "registrar_e14", "description": "Registra los datos transcritos del E-14.",
                             "input_schema": ESQUEMA_E14}],
-                    tool_choice={"type": "tool", "name": "registrar_e14"},
                     messages=[{"role": "user", "content": [_bloque_archivo(p), {"type": "text", "text": PROMPT_E14}]}],
                 )
                 acta = next(b.input for b in r.content if b.type == "tool_use")
