@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defensa del Voto · E-14</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--card:#fff;
+  --alta:#C8003C;--alta-bg:#FFE3EA;--media:#C25400;--media-bg:#FFEEDD;--baja:#3D5AFE;--baja-bg:#E6EAFF;--ok:#00A866;--g1:#7C4DFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy);font-size:14px}
+header{background:linear-gradient(120deg,#150B3D 0%,#2E1A7A 45%,#5B21B6 100%);color:#fff;border-bottom:3px solid var(--gold)}
+.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;flex:none}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
+.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px;white-space:nowrap}
+.back:hover{border-color:var(--gold);color:var(--gold)}
+main{max-width:1200px;margin:0 auto;padding:28px 32px 56px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#B026FF}
+h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:8px 0 6px}
+.lead{color:var(--muted);max-width:760px;line-height:1.6}
+.demo-banner{margin:18px 0 0;padding:12px 16px;border-radius:10px;background:#FFF4D6;border:1px solid #F5C451;color:#5A3B00;line-height:1.5}
+.demo-banner b{font-weight:700}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:22px 0 18px}
+.tools label{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+select,input[type=search],input[type=text]{font:inherit;font-size:14px;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--navy);min-width:120px}
+#fQ{width:170px}
+.btn{font:inherit;font-size:13px;font-weight:700;padding:10px 14px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer}
+.btn:hover{border-color:var(--g1);color:var(--g1)}
+.btn.pri{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.pri:hover{background:#2E1A7A;color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.spacer{flex:1}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.kpi .v{font-size:30px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4}
+.kpi.alta .v{color:var(--alta)}.kpi.media .v{color:var(--media)}.kpi.foco .v{color:var(--g1)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+.panel h3{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--g1);margin-bottom:14px}
+.tipo{display:grid;grid-template-columns:170px 1fr 34px;gap:10px;align-items:center;margin:7px 0;font-size:13px}
+.tipo .track{height:10px;background:#F0EDFB;border-radius:5px;overflow:hidden}
+.tipo .fill{height:100%;border-radius:5px}
+.tipo .n{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.puestos{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
+.pu{border:1px solid var(--line);border-radius:9px;padding:9px 10px;cursor:pointer;background:#fff;text-align:left;font:inherit;color:inherit}
+.pu:hover,.pu.on{border-color:var(--g1);box-shadow:0 0 0 2px rgba(124,77,255,.15)}
+.pu b{display:block;font-size:13px}.pu small{color:var(--muted);font-size:11px}
+.pu .dots{display:flex;gap:4px;margin-top:6px;font-size:11px;font-weight:700}
+.pu .dots span{padding:1px 6px;border-radius:999px}
+.tablewrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);background:#FAF9FF;position:sticky;top:0}
+td{padding:11px 14px;border-bottom:1px solid #F0EDFB;vertical-align:top}
+td.id{white-space:nowrap}
+tr.row{cursor:pointer}tr.row:hover td{background:#FAF8FF}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
+.pill.alta{background:var(--alta-bg);color:var(--alta)}.pill.media{background:var(--media-bg);color:var(--media)}.pill.baja{background:var(--baja-bg);color:var(--baja)}
+.first{color:var(--muted);font-size:13px;line-height:1.45}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+input[type=checkbox]{width:16px;height:16px;accent-color:var(--g1)}
+/* detalle */
+.scrim{position:fixed;inset:0;background:rgba(21,11,61,.45);display:none;z-index:20}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(620px,100%);background:#fff;z-index:21;transform:translateX(100%);transition:transform .22s ease;display:flex;flex-direction:column}
+.open .scrim{display:block}.open .drawer{transform:none}
+.dh{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:start}
+.dh h2{font-size:20px;font-weight:800;flex:1}.dh small{display:block;color:var(--muted);font-weight:500;font-size:13px;margin-top:3px}
+.db{padding:18px 22px;overflow:auto;flex:1}
+.h{border:1px solid var(--line);border-left-width:4px;border-radius:9px;padding:11px 13px;margin-bottom:9px;line-height:1.5}
+.h.alta{border-left-color:var(--alta)}.h.media{border-left-color:var(--media)}.h.baja{border-left-color:var(--baja)}
+.h .t{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 16px}
+.cifras div{background:#FAF9FF;border-radius:8px;padding:9px}.cifras b{display:block;font-size:17px;font-variant-numeric:tabular-nums}.cifras span{font-size:11px;color:var(--muted)}
+.sub{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--g1);margin:18px 0 10px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.form input,.form select{min-width:0}
+textarea{width:100%;min-height:300px;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:12px;border:1px solid var(--line);border-radius:9px;color:var(--navy);resize:vertical}
+.note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:8px}
+.acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 16px;border-radius:9px;font-weight:600;opacity:0;transition:opacity .2s;z-index:30;pointer-events:none}
+.toast.on{opacity:1}
+footer{max-width:1200px;margin:0 auto;padding:0 32px 48px;font-size:12px;color:var(--muted);line-height:1.6}
+@media(max-width:820px){.cols{grid-template-columns:1fr}.tipo{grid-template-columns:130px 1fr 30px}}
+@media(max-width:700px){.bar,main,footer{padding-left:16px;padding-right:16px}h1{font-size:24px}.form{grid-template-columns:1fr}.cifras{grid-template-columns:repeat(2,1fr)}.kpis{grid-template-columns:1fr 1fr;gap:10px}.kpi{padding:14px}.kpi .v{font-size:24px}#fQ{width:100%}.tools label{flex:1 1 140px}.back{padding:8px 10px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>Estrategia <em>Electoral</em> 2027</b><small>Inteligencia de campaña</small></div><a class="back" href="index.html">&larr; Módulos</a></div></header>
+
+<main>
+  <div class="eyebrow">Módulo 07 · Formularios E-14</div>
+  <h1>Defensa del Voto</h1>
+  <p class="lead">Cada acta de mesa leída y verificada: sumas que no cuadran, votos de más frente al E-11, tachones, firmas faltantes y diferencias entre el E-14, el preconteo y el escrutinio. Las mesas salen ordenadas por gravedad y por los votos en juego para tu lista, con el borrador de reclamación listo para revisar.</p>
+  <div id="banner"></div>
+
+  <div class="tools">
+    <label>Lista a defender<select id="fFoco"></select></label>
+    <label>Gravedad<select id="fSev"><option value="">Todas con hallazgo</option><option value="alta">Alta</option><option value="media">Media</option><option value="baja">Baja</option><option value="todas">Todas las mesas</option></select></label>
+    <label>Tipo<select id="fTipo"><option value="">Todos</option></select></label>
+    <label>Buscar mesa o puesto<input id="fQ" type="search" placeholder="01-005-012"></label>
+    <span class="spacer"></span>
+    <button class="btn" id="bCargar" title="Abrir un e14_auditoria.json generado con e14_auditor.py">Abrir auditoría…</button>
+    <input type="file" id="file" accept=".json,application/json" hidden>
+    <button class="btn pri" id="bLote" disabled>Reclamación de 0 mesas</button>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="cols">
+    <div class="panel"><h3>Hallazgos por tipo</h3><div id="tipos"></div></div>
+    <div class="panel"><h3>Puestos de votación</h3><div class="puestos" id="puestos"></div></div>
+  </div>
+
+  <div class="tablewrap"><table>
+    <thead><tr><th style="width:36px"><input type="checkbox" id="chkAll" aria-label="Seleccionar todas"></th><th>Mesa</th><th>Puesto</th><th>Gravedad</th><th>Hallazgo principal</th><th style="text-align:right">Hallazgos</th><th style="text-align:right">Votos en juego</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table></div>
+</main>
+
+<div id="det"><div class="scrim" id="scrim"></div><aside class="drawer" aria-label="Detalle de mesa">
+  <div class="dh"><h2 id="dTitle"></h2><button class="btn" id="dClose">Cerrar</button></div>
+  <div class="db" id="dBody"></div>
+</aside></div>
+<div class="toast" id="toast"></div>
+
+<footer>Fuente: formularios E-14 publicados por la Registraduría Nacional del Estado Civil o fotografiados por testigos electorales, leídos con <code>e14_auditor.py</code>. Un hallazgo es un indicio para revisar, no una prueba de fraude. El E-14 publicado es la copia de delegados; el que vale en el escrutinio es el de claveros. Los borradores de reclamación deben ser revisados por un abogado antes de radicarlos.</footer>
+
+<script>
+(function(){
+'use strict';
+const TIPOS={suma_lista:'Suma de lista',suma_mesa:'Suma de la mesa',urna_vs_e11:'Urna mayor que E-11',total_vs_urna:'Total distinto a urna',
+  enmendadura:'Enmendadura',firmas:'Firmas de jurados',dif_escrutinio:'Diferencia con escrutinio',dif_preconteo:'Diferencia con preconteo',
+  ilegible:'Acta ilegible',concentracion:'Concentración atípica',nulos_atipicos:'Nulos atípicos',mesa_gemela:'Mesa gemela'};
+const SEVORD={alta:0,media:1,baja:2};
+const COL={alta:'var(--alta)',media:'var(--media)',baja:'var(--baja)'};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>(n==null?'—':Number(n).toLocaleString('es-CO'));
+let D=null,foco='',puestoSel='',selec=new Set(),actual=null;
+
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+// Mismo criterio que impacto_foco() en e14_auditor.py: por fuente, el total de
+// la lista si existe; si no, logo + candidatos. Entre fuentes, la mayor.
+function impacto(m,f){
+  if(!f)return 0;const por={};
+  m.hallazgos.forEach(h=>{if(h.lista===f&&h.diferencia){(por[h.tipo]=por[h.tipo]||[]).push(h)}});
+  let best=0;Object.values(por).forEach(hs=>{
+    const tot=hs.filter(h=>(h.nivel||'total')==='total').map(h=>Math.abs(h.diferencia));
+    const v=tot.length?tot.reduce((a,b)=>a+b,0):hs.reduce((a,h)=>a+Math.abs(h.diferencia),0);
+    best=Math.max(best,v)});
+  return best;
+}
+
+async function cargar(){
+  for(const url of ['data/modulos/e14_auditoria.json','data/modulos/e14_auditoria_demo.json']){
+    try{const r=await fetch(url,{cache:'no-store'});if(r.ok){usar(await r.json(),url);return}}catch(e){}
+  }
+  $('banner').innerHTML='<div class="demo-banner">No se encontró una auditoría publicada. Usa <b>Abrir auditoría…</b> para cargar un <code>e14_auditoria.json</code>.</div>';
+}
+
+function usar(d,origen){
+  if(!d||!Array.isArray(d.mesas)){toast('El archivo no tiene el formato de e14_auditor.py');return}
+  D=d;selec.clear();puestoSel='';
+  const m=d.meta||{};
+  $('banner').innerHTML=m.demo
+    ?'<div class="demo-banner"><b>Datos de demostración.</b> Actas sintéticas con errores sembrados a propósito, para ver el módulo funcionando. Para auditar una elección real, corre <code>e14_auditor.py extraer</code> sobre los E-14 y luego <code>auditar</code>.</div>'
+    :'<div class="demo-banner" style="background:#E9FBF3;border-color:#8FE0BE;color:#0B4A31"><b>'+esc(m.eleccion||'Auditoría')+(m.municipio?' · '+esc(m.municipio):'')+'</b> · generada '+esc((m.generado||'').replace('T',' '))+(origen?' · '+esc(origen):'')+'</div>';
+  const listas=d.listas||[];
+  foco=store.get('e14foco')||m.foco||'';if(foco&&!listas.includes(foco))foco=m.foco||'';
+  $('fFoco').innerHTML='<option value="">Ninguna</option>'+listas.map(l=>'<option'+(l===foco?' selected':'')+'>'+esc(l)+'</option>').join('');
+  const presentes=new Set();d.mesas.forEach(x=>x.hallazgos.forEach(h=>presentes.add(h.tipo)));
+  $('fTipo').innerHTML='<option value="">Todos</option>'+Object.keys(TIPOS).filter(t=>presentes.has(t)).map(t=>'<option value="'+t+'">'+TIPOS[t]+'</option>').join('');
+  render();
+}
+
+function filtradas(){
+  const sev=$('fSev').value,tipo=$('fTipo').value,q=$('fQ').value.trim().toLowerCase();
+  return D.mesas.filter(m=>{
+    if(sev!=='todas'&&!m.hallazgos.length)return false;
+    if(sev&&sev!=='todas'&&m.severidad!==sev)return false;
+    if(tipo&&!m.hallazgos.some(h=>h.tipo===tipo))return false;
+    if(puestoSel&&m.puesto!==puestoSel)return false;
+    if(q&&!(m.mesa_id+' '+(m.puesto_nombre||'')).toLowerCase().includes(q))return false;
+    return true;
+  }).map(m=>Object.assign(m,{_imp:impacto(m,foco)}))
+    .sort((a,b)=>(SEVORD[a.severidad]??9)-(SEVORD[b.severidad]??9)||b._imp-a._imp||a.mesa_id.localeCompare(b.mesa_id));
+}
+
+function render(){
+  if(!D)return;
+  const all=D.mesas,con=all.filter(m=>m.hallazgos.length);
+  const juego=all.reduce((s,m)=>s+impacto(m,foco),0);
+  const mesasFoco=all.filter(m=>impacto(m,foco)>0).length;
+  $('kpis').innerHTML=
+    kpi('',fmt(all.length),'actas auditadas')+
+    kpi('alta',fmt(all.filter(m=>m.severidad==='alta').length),'mesas con error verificable en el acta')+
+    kpi('media',fmt(all.filter(m=>m.severidad==='media').length),'mesas con diferencias entre documentos')+
+    kpi('foco',foco?fmt(juego):'—',foco?'votos de la lista '+esc(foco)+' en juego en '+mesasFoco+' mesa'+(mesasFoco===1?'':'s'):'elige una lista para ver sus votos en juego');
+
+  const cnt={};con.forEach(m=>m.hallazgos.forEach(h=>{cnt[h.tipo]=(cnt[h.tipo]||0)+1}));
+  const max=Math.max(1,...Object.values(cnt));
+  const sevDe=t=>({suma_lista:'alta',suma_mesa:'alta',urna_vs_e11:'alta',total_vs_urna:'alta',enmendadura:'alta',firmas:'alta',dif_escrutinio:'media',dif_preconteo:'media',ilegible:'media'})[t]||'baja';
+  $('tipos').innerHTML=Object.entries(cnt).sort((a,b)=>SEVORD[sevDe(a[0])]-SEVORD[sevDe(b[0])]||b[1]-a[1]).map(([t,n])=>
+    '<div class="tipo"><span>'+esc(TIPOS[t]||t)+'</span><div class="track"><div class="fill" style="width:'+(n/max*100)+'%;background:'+COL[sevDe(t)]+'"></div></div><span class="n">'+n+'</span></div>').join('')||'<div class="first">Sin hallazgos.</div>';
+
+  $('puestos').innerHTML=(D.puestos||[]).map(p=>
+    '<button class="pu'+(p.puesto===puestoSel?' on':'')+'" data-p="'+esc(p.puesto)+'"><b>Puesto '+esc(p.puesto)+'</b><small>'+esc(p.nombre||'Zona '+p.zona)+' · '+p.mesas+' mesas</small><div class="dots">'+
+    (p.alta?'<span style="background:var(--alta-bg);color:var(--alta)">'+p.alta+'</span>':'')+
+    (p.media?'<span style="background:var(--media-bg);color:var(--media)">'+p.media+'</span>':'')+
+    (p.baja?'<span style="background:var(--baja-bg);color:var(--baja)">'+p.baja+'</span>':'')+
+    (!p.alta&&!p.media&&!p.baja?'<span style="color:var(--ok)">limpio</span>':'')+'</div></button>').join('');
+
+  const rows=filtradas();
+  $('tbody').innerHTML=rows.length?rows.map(m=>{
+    const h0=m.hallazgos[0];
+    return '<tr class="row" data-id="'+esc(m.mesa_id)+'"><td><input type="checkbox" class="chk" data-id="'+esc(m.mesa_id)+'"'+(selec.has(m.mesa_id)?' checked':'')+(m.hallazgos.some(h=>h.solicitud)?'':' disabled title="Sin hallazgos reclamables"')+'></td>'+
+      '<td class="id"><b>'+esc(m.mesa_id)+'</b></td><td>'+esc(m.puesto_nombre||m.puesto)+'</td>'+
+      '<td>'+(m.severidad?'<span class="pill '+m.severidad+'">'+m.severidad+'</span>':'<span style="color:var(--ok);font-weight:600">limpia</span>')+'</td>'+
+      '<td class="first">'+(h0?esc(h0.detalle):'—')+'</td><td class="num">'+m.hallazgos.length+'</td><td class="num">'+(m._imp?fmt(m._imp):'—')+'</td></tr>'}).join('')
+    :'<tr><td colspan="7" class="empty">Ninguna mesa coincide con los filtros.</td></tr>';
+  $('chkAll').checked=rows.length>0&&rows.filter(m=>m.hallazgos.some(h=>h.solicitud)).every(m=>selec.has(m.mesa_id));
+  actLote();
+}
+const kpi=(c,v,l)=>'<div class="kpi '+c+'"><div class="v">'+v+'</div><div class="l">'+l+'</div></div>';
+function actLote(){const n=selec.size;$('bLote').disabled=!n;$('bLote').textContent='Reclamación de '+n+' mesa'+(n===1?'':'s')}
+
+// ------------------------------------------------------------ detalle
+function abrir(ids){
+  const mesas=ids.map(id=>D.mesas.find(m=>m.mesa_id===id)).filter(Boolean);if(!mesas.length)return;
+  actual=mesas;const m=mesas[0],uno=mesas.length===1;
+  $('dTitle').innerHTML=uno?'Mesa '+esc(m.mesa_id)+'<small>'+esc(m.puesto_nombre||'Puesto '+m.puesto)+' · zona '+esc(m.zona)+'</small>'
+    :'Reclamación de '+mesas.length+' mesas<small>'+esc(mesas.map(x=>x.mesa_id).join(', '))+'</small>';
+  let html='';
+  if(uno){
+    html+='<div class="cifras"><div><b>'+fmt(m.sufragantes_e11)+'</b><span>Sufragantes E-11</span></div><div><b>'+fmt(m.votos_urna)+'</b><span>Votos en urna</span></div><div><b>'+fmt(m.total_votos)+'</b><span>Total del acta</span></div><div><b>'+(impacto(m,foco)?fmt(impacto(m,foco)):'—')+'</b><span>En juego lista '+esc(foco||'—')+'</span></div></div>';
+    if(m.url)html+='<p style="margin:-6px 0 12px"><a href="'+esc(m.url)+'" target="_blank" rel="noopener">Ver el E-14 original ↗</a></p>';
+    html+='<div class="sub">Hallazgos</div>'+(m.hallazgos.length?m.hallazgos.map(h=>'<div class="h '+h.severidad+'"><div class="t">'+esc(TIPOS[h.tipo]||h.tipo)+' · '+h.severidad+'</div>'+esc(h.detalle)+'</div>').join(''):'<div class="first">Acta sin hallazgos.</div>');
+  }
+  const recl=mesas.some(x=>x.hallazgos.some(h=>h.solicitud));
+  if(recl){
+    html+='<div class="sub">Borrador de reclamación</div><div class="form">'+
+      campo('rNombre','Nombre de quien reclama')+campo('rDoc','Cédula')+
+      '<label>Calidad<select id="rCalidad"><option>testigo electoral</option><option>candidato</option><option>apoderado</option><option>representante legal del partido</option></select></label>'+
+      campo('rLista','Partido o movimiento')+campo('rComision','Comisión escrutadora')+campo('rLugar','Ciudad')+'</div>'+
+      '<textarea id="rTexto" spellcheck="false"></textarea><div class="acts"><button class="btn pri" id="bCopiar">Copiar</button><button class="btn" id="bBajar">Descargar .txt</button></div>'+
+      '<p class="note">Borrador para revisión de un abogado. Antes de radicar: verificar la causal exacta del artículo 192 del Código Electoral, la etapa del escrutinio en que se presenta, los términos y el ejemplar de claveros del E-14. Los hallazgos estadísticos (gravedad baja) no son causal de reclamación y no se incluyen.</p>';
+  }else html+='<p class="note" style="margin-top:14px">Esta mesa solo tiene hallazgos estadísticos, que sirven para priorizar la vigilancia pero no son causal de reclamación.</p>';
+  $('dBody').innerHTML=html;
+  if(recl){
+    ['rNombre','rDoc','rCalidad','rLista','rComision','rLugar'].forEach(k=>{const el=$(k);const v=store.get('e14'+k);if(v)el.value=v;
+      el.addEventListener('input',()=>{store.set('e14'+k,el.value);$('rTexto').value=reclamacion(actual)})});
+    $('rTexto').value=reclamacion(mesas);
+    $('bCopiar').onclick=()=>{navigator.clipboard.writeText($('rTexto').value).then(()=>toast('Copiado'),()=>{$('rTexto').select();toast('Selecciona y copia con Ctrl+C')})};
+    $('bBajar').onclick=()=>{const b=new Blob([$('rTexto').value],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');
+      a.href=URL.createObjectURL(b);a.download='reclamacion_'+(uno?m.mesa_id:mesas.length+'_mesas')+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+  }
+  document.body.classList.add('open');$('det').classList.add('open');$('dBody').scrollTop=0;
+}
+const campo=(id,l)=>'<label>'+l+'<input type="text" id="'+id+'"></label>';
+function cerrar(){$('det').classList.remove('open');document.body.classList.remove('open')}
+
+function reclamacion(mesas){
+  const v=k=>{const el=$(k);return el&&el.value.trim()?el.value.trim():null};
+  const nombre=v('rNombre')||'[NOMBRE]',doc=v('rDoc')||'[CÉDULA]',cal=v('rCalidad')||'testigo electoral',
+        lista=v('rLista')||(foco?'[PARTIDO] (lista '+foco+')':'[PARTIDO O MOVIMIENTO]'),com=v('rComision')||'[ZONAL / MUNICIPAL] de [MUNICIPIO]',lugar=v('rLugar')||(D.meta&&D.meta.municipio)||'[CIUDAD]';
+  const elec=(D.meta&&D.meta.eleccion)||'[ELECCIÓN Y CORPORACIÓN]';
+  const hoy=new Date().toLocaleDateString('es-CO',{day:'numeric',month:'long',year:'numeric'});
+  let hechos=[],sol=new Set(),i=0;
+  mesas.forEach(m=>{
+    const hs=m.hallazgos.filter(h=>h.solicitud);if(!hs.length)return;
+    hechos.push('Mesa '+m.mesa_id+' — '+(m.puesto_nombre||'puesto '+m.puesto)+', zona '+m.zona+':');
+    hs.forEach(h=>{i++;hechos.push('  '+i+'. '+h.detalle);sol.add(h.solicitud)});
+  });
+  const L=[];
+  L.push(lugar+', '+hoy,'','Señores','COMISIÓN ESCRUTADORA '+com.toUpperCase(),'E. S. D.','',
+    'Asunto: Reclamación — '+elec+' — '+(mesas.length===1?'mesa '+mesas[0].mesa_id:mesas.length+' mesas'),'',
+    nombre+', identificado(a) con cédula de ciudadanía No. '+doc+', en calidad de '+cal+' de '+lista+', presento reclamación respecto de '+(mesas.length===1?'la mesa que se relaciona':'las mesas que se relacionan')+' a continuación, con fundamento en el artículo 192 del Código Electoral (Decreto 2241 de 1986) y las normas que lo modifican y complementan [ABOGADO: precisar numeral/causal aplicable].','',
+    'HECHOS','',
+    'Al revisar el formulario E-14 de cada mesa se encontraron las siguientes inconsistencias:','',...hechos,'',
+    'SOLICITUD','',
+    ...[...sol].map((s,k)=>(k+1)+'. Que se ordene la '+s+'.'),
+    (sol.size+1)+'. Que se deje constancia de esta reclamación en el acta general de escrutinio.','',
+    'PRUEBAS','',
+    '1. Formulario(s) E-14 de la(s) mesa(s) relacionada(s), copia de delegados publicada por la Registraduría [ANEXAR].',
+    '2. [Fotografías del E-14 tomadas por los testigos, si las hay].','',
+    'Atentamente,','','','______________________________',nombre,'C.C. '+doc,cal.charAt(0).toUpperCase()+cal.slice(1)+' — '+lista);
+  return L.join('\n');
+}
+
+// ------------------------------------------------------------- eventos
+['fSev','fTipo'].forEach(id=>$(id).addEventListener('change',render));
+$('fQ').addEventListener('input',render);
+$('fFoco').addEventListener('change',e=>{foco=e.target.value;store.set('e14foco',foco);render()});
+$('puestos').addEventListener('click',e=>{const b=e.target.closest('.pu');if(!b)return;puestoSel=puestoSel===b.dataset.p?'':b.dataset.p;render()});
+$('tbody').addEventListener('click',e=>{
+  if(e.target.classList.contains('chk')){const id=e.target.dataset.id;e.target.checked?selec.add(id):selec.delete(id);actLote();return}
+  const tr=e.target.closest('tr.row');if(tr)abrir([tr.dataset.id]);
+});
+$('chkAll').addEventListener('change',e=>{filtradas().filter(m=>m.hallazgos.some(h=>h.solicitud)).forEach(m=>e.target.checked?selec.add(m.mesa_id):selec.delete(m.mesa_id));render()});
+$('bLote').addEventListener('click',()=>abrir([...selec]));
+$('scrim').addEventListener('click',cerrar);$('dClose').addEventListener('click',cerrar);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')cerrar()});
+$('bCargar').addEventListener('click',()=>$('file').click());
+$('file').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{try{usar(JSON.parse(r.result.replace(/^﻿/,'')),f.name);toast('Auditoría cargada: '+f.name)}catch(err){toast('No se pudo leer el archivo')}};r.readAsText(f);e.target.value=''});
+let tt;function toast(t){const el=$('toast');el.textContent=t;el.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>el.classList.remove('on'),2200)}
+
+if(window.__E14__)usar(window.__E14__,'');else cargar();
+})();
+</script>
+</body>
+</html>
