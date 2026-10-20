@@ -68,7 +68,7 @@
   .bt-top{background:var(--forest);color:#fff;padding:18px 32px 0;flex:none}
   .bt-top-row{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
   .bt-kicker{color:var(--gold);font-weight:600;font-size:14px;margin:0 0 4px}
-  .bt-title{margin:0;font-size:30px;line-height:1.1;font-weight:800;letter-spacing:.01em}
+  .bt-title{margin:0;font-size:30px;line-height:1.1;font-weight:800;letter-spacing:.01em;color:#fff}
   .bt-sub{margin:6px 0 0;color:#C2E8D4;font-size:14px}
   .bt-close{background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:10px;padding:9px 16px;font-weight:600;cursor:pointer;font-size:14px}
   .bt-close:hover{border-color:var(--gold);color:var(--gold)}
