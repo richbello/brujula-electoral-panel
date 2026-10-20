@@ -400,7 +400,7 @@ window.VFI_LOCAL = (function () {
 
   async function lote(url, log, offset) {
     for (let intento = 1; intento <= 3; intento++) {
-      const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 120000);
+      const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 60000);
       try {
         const r = await fetch(url, { signal: ctl.signal });
         if (!r.ok) throw new Error("HTTP " + r.status);
@@ -412,6 +412,17 @@ window.VFI_LOCAL = (function () {
     }
   }
 
+  const sinTilde = t => String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .toUpperCase().replace(/\s+/g, " ").trim();
+
+  async function entidadesQueContienen(texto, log) {
+    const buscado = sinTilde(texto);
+    const q = new URLSearchParams({ $q: texto, $select: "nombre_entidad,count(*)",
+      $group: "nombre_entidad", $order: "count(*) DESC", $limit: 5000 });
+    const filas = await lote(SECOP + "?" + q, log, 0) || [];
+    return filas.map(f => f.nombre_entidad).filter(n => n && sinTilde(n).includes(buscado));
+  }
+
   // Misma respuesta que el evento "done" de /api/vfi/analizar-stream.
   async function analizar(entidad, log, maxReg) {
     maxReg = maxReg || 8000;
@@ -420,10 +431,21 @@ window.VFI_LOCAL = (function () {
     log("[SIRI] SIRI cargado: " + B.siri.meta.registros.toLocaleString("es-CO") + " registros");
     log("[Boletín] Boletín cargado: " + B.boletin.meta.registros.toLocaleString("es-CO") + " registros");
 
-    const where = "upper(nombre_entidad) like upper('%" + String(entidad).replace(/'/g, "''") + "%')";
-    log("[SECOP] Descargando contratos de entidades que contengan '" + entidad + "'…");
+    // Un "like '%USME%'" sobre todo SECOP II obliga a recorrer millones de filas y
+    // datos.gov.co lo corta por tiempo. Primero se usa el buscador indexado ($q)
+    // para encontrar los nombres exactos de las entidades y luego se filtra por
+    // igualdad, que sí es rápido.
+    log("[SECOP] Buscando entidades que contengan '" + entidad + "'…");
+    const nombres = await entidadesQueContienen(entidad, log);
+    if (!nombres.length) {
+      log("[SECOP] Ninguna entidad de SECOP II contiene '" + entidad + "'.");
+    } else {
+      log("[SECOP] " + nombres.length + " entidad" + (nombres.length === 1 ? "" : "es") + ": " +
+          nombres.slice(0, 4).join(" · ") + (nombres.length > 4 ? " · …" : ""));
+    }
+    const where = "nombre_entidad in(" + nombres.map(n => "'" + n.replace(/'/g, "''") + "'").join(",") + ")";
     const contratos = [];
-    for (let offset = 0; offset < maxReg; offset += 1000) {
+    for (let offset = 0; nombres.length && offset < maxReg; offset += 1000) {
       const q = new URLSearchParams({ $select: CAMPOS, $where: where, $limit: 1000,
                                       $offset: offset, $order: "id_contrato" });
       const l = await lote(SECOP + "?" + q, log, offset);
@@ -496,7 +518,7 @@ window.VFI_LOCAL = (function () {
   "use strict";
 
   // Cada entrada es [etiqueta visible, texto que se busca].
-  // El backend hace  upper(nombre_entidad) like upper('%<texto>%')  contra
+  // Se buscan las entidades de SECOP II cuyo nombre contiene el texto
   // SECOP II, asi que el valor es una subcadena, no el nombre exacto. Se
   // eligieron subcadenas verificadas contra los nombres reales del dataset,
   // que vienen con acentos inconsistentes y puntuacion sobrante:
