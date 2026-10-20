@@ -39,11 +39,42 @@ for corp, v in TD["corp"].items():
     nv["candidatos"] = cands
     corp_d[corp] = nv
 
+# ---------- Alcaldía (sin votos por puesto en las fuentes: resultado municipal) ----------
+# Nombres de las personas detrás de cada grupo significativo de ciudadanos / coalición.
+# Si un grupo no está aquí se muestra con el nombre del grupo, tal como lo reporta la Registraduría.
+NOMBRES = {
+    "PERICO": "VÍCTOR JULIÁN SÁNCHEZ (PERICO)",
+    "PARA AVANZAR MAS": "DANY RENÉ CAICEDO",
+    "COALICION PACTO HISTORICO ALIANZA VERDE": "HEINER DE JESÚS GAITÁN PARRA",
+    "RESCATEMOS A SOACHA": "GLORIA BETTY ZORRO",
+    "SOACHA CIUDAD PODEROSA": "JUAN CARLOS SALDARRIAGA GAVIRIA",
+    "ALIANZA POR SOACHA": "JORGE GIOVANNY RAMÍREZ MOYA",
+}
+AL = TA["corp"].get("ALCALDE")
+if AL:
+    uni = next(u for u in AL["unidades"] if u["i"] == S)
+    def carrera(col, validos):
+        out = []
+        for p in AL["partidos"]:
+            r = next((u for u in p.get("u", []) if u[0] == S), None)
+            if r and (r[col] or 0) > 0:
+                v = r[3] if col == 2 else round(r[1] * validos)
+                out.append({"n": NOMBRES.get(p["n"], p["n"]), "pt": p["n"], "v": v, "s": r[col]})
+        return sorted(out, key=lambda x: -x["v"])
+    c23 = carrera(2, uni["m23"]["validos"])
+    c19 = carrera(1, uni["m19"]["validos"])
+    corp_d["ALCALDE"] = {
+        "ambito": "territorio",
+        "candidatos": [{**x, "v19": None, "p": [], "l": S} for x in c23],
+        "carrera": {"anio": D["meta"]["anio"], "previo": D["meta"]["anio_previo"],
+                    "m23": uni["m23"], "m19": uni["m19"], "c23": c23, "c19": c19},
+    }
+
 datos = {
     "version": D["version"],
     "meta": {**D["meta"], "filtro": MUN},
     "territorios": {"SOACHA": {
-        "nombre": "Soacha", "unidad": "municipio", "unidades": TD["unidades"],
+        "nombre": "Soacha", "unidad": "municipio", "municipio": True, "unidades": TD["unidades"],
         "puestos": puestos, "corp": corp_d}},
 }
 
@@ -70,7 +101,7 @@ for corp, v in TA["corp"].items():
 anal = {
     "tipo": "analisis", "version": A["version"],
     "meta": {**A["meta"], "filtro": MUN},
-    "territorios": {"SOACHA": {"nombre": "Soacha", "unidad": "municipio",
+    "territorios": {"SOACHA": {"nombre": "Soacha", "unidad": "municipio", "municipio": True,
                                "unidades": TA["unidades"], "corp": corp_a}},
 }
 
