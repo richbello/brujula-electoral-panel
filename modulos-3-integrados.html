@@ -509,6 +509,13 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
          'sanciones ya levantadas. Verifique cada caso en el certificado oficial de la entidad ' +
          'que corresponda antes de afirmarlo en público.</div>';
 
+    if (!RES.registros_boletin || !RES.registros_siri) {
+      const faltan = [!RES.registros_siri && "SIRI (Procuraduría)", !RES.registros_boletin && "Boletín (Contraloría)"].filter(Boolean).join(" y ");
+      h += '<div class="vfi-msg"><b>El servidor no tiene cargado ' + esc(faltan) + '.</b>' +
+           'El cruce contra esa fuente no se hizo, así que "0 alertas" no significa que no haya responsables. ' +
+           'Hay que subir el archivo a backend/datos_entrada en el servidor.</div>';
+    }
+
     h += '<div class="vfi-tarjetas">' +
       tarjeta("Contratos analizados", RES.total_contratos, "#2563EB", "Entidad: " + (RES.entidad||"")) +
       tarjeta("Alertas totales", RES.total_alertas, "#150B3D", "Análisis: " + (RES.fecha_analisis||"")) +
