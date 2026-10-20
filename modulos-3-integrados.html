@@ -319,21 +319,181 @@ show(location.hash.slice(1));
 window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
 
 /* ============================================================
+   MOTOR DE CRUCE LOCAL — SECOP II × SIRI × Boletín
+   Corre completo en el navegador, sin servidor propio:
+     - SIRI y Boletín: data/vigilancia/*.json, servidos por GitHub
+       Pages (se generan con etl_antecedentes.py)
+     - SECOP II: API abierta de datos.gov.co (dataset jbjy-vk9h)
+   Misma lógica de niveles que motor_cruce.py del backend VFI.
+   ============================================================ */
+window.VFI_LOCAL = (function () {
+  "use strict";
+  const SECOP = "https://www.datos.gov.co/resource/jbjy-vk9h.json";
+  const CAMPOS = "id_contrato,documento_proveedor,proveedor_adjudicado,nombre_entidad," +
+                 "valor_del_contrato,estado_contrato,fecha_de_firma,objeto_del_contrato";
+  let carga = null;
+
+  const norm = v => { let s = v == null ? "" : String(v);
+    if (s.includes("-")) s = s.split("-")[0];
+    return s.replace(/[^0-9]/g, ""); };
+
+  function fecha(v) {
+    if (!v) return null;
+    const s = String(v).trim().split("T")[0];
+    let m = s.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{4})$/);
+    if (m) return new Date(+m[3], +m[2] - 1, +m[1]);
+    m = s.match(/^(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})$/);
+    if (m) return new Date(+m[1], +m[2] - 1, +m[3]);
+    return null;
+  }
+  const dmy = d => d ? String(d.getDate()).padStart(2,"0") + "/" +
+    String(d.getMonth()+1).padStart(2,"0") + "/" + d.getFullYear() : "";
+  const ent = v => /^\d+$/.test(String(v||"").trim()) ? parseInt(v, 10) : 0;
+
+  function finInhab(fi, a, m, d) {
+    if (!fi) return null;
+    a = ent(a); m = ent(m); d = ent(d);
+    if (!a && !m && !d) return null;
+    return new Date(fi.getTime() + (a*365 + m*30 + d) * 864e5);
+  }
+
+  // Descarga una sola vez los dos índices.
+  function cargar() {
+    if (!carga) carga = Promise.all(["siri", "boletin"].map(k =>
+      fetch("data/vigilancia/" + k + ".json")
+        .then(r => r.ok ? r.json() : Promise.reject(new Error(k + ": HTTP " + r.status)))))
+      .then(([siri, boletin]) => ({ siri, boletin }))
+      .catch(e => { carga = null; throw e; });
+    return carga;
+  }
+
+  function siriDe(B, doc) {
+    return (B.siri.docs[doc] || []).map(r => ({
+      nombre: r[0], tipo: r[1], sancion: r[2], fecha: r[3], anos: r[4], meses: r[5],
+      dias: r[6], autoridad: r[7], entidad: r[8] }));
+  }
+  function boletinDe(B, doc) {
+    return (B.boletin.docs[doc] || []).map(i => { const r = B.boletin.filas[i];
+      return { nombre: r[0], autoridad: r[1], entidad: r[2], depto: r[3], municipio: r[4] }; });
+  }
+
+  // Misma respuesta que POST /api/vfi/buscar del backend.
+  async function buscar(docTxt) {
+    const B = await cargar();
+    const doc = norm(docTxt);
+    const hallazgos = [];
+    siriDe(B, doc).forEach(s => hallazgos.push({ fuente: "SIRI (Procuraduria)", nombre: s.nombre,
+      tipo: s.tipo, sancion: s.sancion, fecha: s.fecha, autoridad: s.autoridad, entidad: s.entidad }));
+    // El NIT puede llegar con o sin dígito de verificación.
+    const claves = [doc];
+    if (doc.length === 10) claves.push(doc.slice(0, 9));
+    const vistos = new Set();
+    claves.forEach(k => boletinDe(B, k).forEach(b => {
+      const id = b.nombre + "|" + b.entidad + "|" + b.autoridad;
+      if (vistos.has(id)) return; vistos.add(id);
+      hallazgos.push({ fuente: "Boletin (Contraloria)", nombre: b.nombre, tipo: "FISCAL",
+        sancion: "RESPONSABILIDAD FISCAL", fecha: "", autoridad: b.autoridad,
+        entidad: b.entidad ? "Entidad afectada: " + b.entidad : "" });
+    }));
+    return { documento: doc, total: hallazgos.length, hallazgos };
+  }
+
+  async function lote(url, log, offset) {
+    for (let intento = 1; intento <= 3; intento++) {
+      const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 120000);
+      try {
+        const r = await fetch(url, { signal: ctl.signal });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return await r.json();
+      } catch (e) {
+        if (intento === 3) throw new Error("datos.gov.co no respondió (" + e.message + ").");
+        log("[SECOP] SECOP II tardó en responder; reintento " + intento + "/2 en offset " + offset + "…");
+      } finally { clearTimeout(t); }
+    }
+  }
+
+  // Misma respuesta que el evento "done" de /api/vfi/analizar-stream.
+  async function analizar(entidad, log, maxReg) {
+    maxReg = maxReg || 8000;
+    log("[SIRI] Procuraduría (SIRI) y Boletín: cargando índices…");
+    const B = await cargar();
+    log("[SIRI] SIRI cargado: " + B.siri.meta.registros.toLocaleString("es-CO") + " registros");
+    log("[Boletín] Boletín cargado: " + B.boletin.meta.registros.toLocaleString("es-CO") + " registros");
+
+    const where = "upper(nombre_entidad) like upper('%" + String(entidad).replace(/'/g, "''") + "%')";
+    log("[SECOP] Descargando contratos de entidades que contengan '" + entidad + "'…");
+    const contratos = [];
+    for (let offset = 0; offset < maxReg; offset += 1000) {
+      const q = new URLSearchParams({ $select: CAMPOS, $where: where, $limit: 1000,
+                                      $offset: offset, $order: "id_contrato" });
+      const l = await lote(SECOP + "?" + q, log, offset);
+      if (!l || !l.length) break;
+      contratos.push(...l);
+      log("[SECOP] " + contratos.length.toLocaleString("es-CO") + " contratos…");
+      if (l.length < 1000) break;
+    }
+    log("[SECOP] Total contratos SECOP: " + contratos.length.toLocaleString("es-CO") + ". Cruzando…");
+
+    const hoy = new Date(), alertas = [];
+    contratos.forEach(c => {
+      const doc = norm(c.documento_proveedor);
+      if (!doc) return;
+      const ff = fecha(c.fecha_de_firma);
+      const base = { documento: doc, proveedor_secop: c.proveedor_adjudicado || "",
+        entidad: c.nombre_entidad || "", valor: c.valor_del_contrato || "",
+        estado: c.estado_contrato || "",
+        fecha_firma: c.fecha_de_firma ? String(c.fecha_de_firma).split("T")[0] : "",
+        objeto: String(c.objeto_del_contrato || "").slice(0, 200) };
+
+      siriDe(B, doc).forEach(s => {
+        const fi = fecha(s.fecha), fin = finInhab(fi, s.anos, s.meses, s.dias);
+        const tiene = /INHABILIDAD/i.test(s.sancion || "") || !!fin;
+        const vigente = !!(fin && fin > hoy);
+        let nivel, motivo;
+        if (tiene && vigente) {
+          if (ff && fi && ff >= fi) { nivel = "CRITICA"; motivo = "Contrato firmado DESPUES de la inhabilidad"; }
+          else { nivel = "ALTA"; motivo = "Inhabilidad vigente (contrato anterior; vigilar renovacion)"; }
+        } else if (tiene) { nivel = "MEDIA"; motivo = "Antecedente con inhabilidad vencida"; }
+        else { nivel = "INFO"; motivo = "Antecedente sin inhabilidad (multa/amonestacion)"; }
+        alertas.push(Object.assign({}, base, { fuente: "SIRI (Procuraduria)", nivel, motivo,
+          nombre_fuente: s.nombre, tipo: s.tipo, sancion: s.sancion, fecha_sancion: s.fecha,
+          fin_inhabilidad: dmy(fin), vigente: vigente ? "SI" : "NO", autoridad: s.autoridad }));
+      });
+
+      boletinDe(B, doc).forEach(b => alertas.push(Object.assign({}, base, {
+        fuente: "Boletin (Contraloria)", nivel: "ALTA", motivo: "Responsable fiscal con contrato publico",
+        nombre_fuente: b.nombre, tipo: "FISCAL", sancion: "RESPONSABILIDAD FISCAL", fecha_sancion: "",
+        fin_inhabilidad: "", vigente: "SI", autoridad: b.autoridad })));
+    });
+
+    const orden = { CRITICA: 0, ALTA: 1, MEDIA: 2, INFO: 3 };
+    alertas.sort((a, b) => (orden[a.nivel] ?? 9) - (orden[b.nivel] ?? 9));
+    const n = k => alertas.filter(a => a.nivel === k).length;
+    const ahora = new Date();
+    return {
+      entidad, fecha_analisis: ahora.toISOString().slice(0, 10) + " " + ahora.toTimeString().slice(0, 5),
+      total_contratos: contratos.length, registros_siri: B.siri.meta.registros,
+      registros_boletin: B.boletin.meta.registros, total_alertas: alertas.length,
+      criticas: n("CRITICA"), altas: n("ALTA"), medias: n("MEDIA"), info: n("INFO"), alertas
+    };
+  }
+
+  return { cargar, buscar, analizar, norm };
+})();
+
+/* ============================================================
    VIGILANCIA FISCAL IA — puerto del Módulo 09 de
    sistema-gestion-contractual a JS vanilla.
 
    El original es React + Recharts; aquí se usan Chart.js y DOM
    directo, que es lo que carga esta página. La lógica y los
    endpoints son los mismos:
-     GET  /api/vfi/analizar-stream?entidad=  (SSE: progress, done)
-     POST /api/vfi/buscar?doc=
-   El backend tiene CORS abierto, así que responde igual desde
-   este repositorio.
+   Antes llamaba al backend de sistema-gestion-contractual en Render;
+   ahora usa VFI_LOCAL (arriba), que hace el mismo cruce en el
+   navegador con los índices de data/vigilancia/.
    ============================================================ */
 (function () {
   "use strict";
-
-  const API = "https://sistema-gestion-contractual.onrender.com/api/vfi";
 
   // Cada entrada es [etiqueta visible, texto que se busca].
   // El backend hace  upper(nombre_entidad) like upper('%<texto>%')  contra
@@ -397,7 +557,7 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
   let filtro = "TODAS";
   let abierta = null;
   let graficas = {};
-  let es = null;           // EventSource activo
+  let corrida = 0;         // invalida análisis anteriores al relanzar
   let timer = null;
 
   /* ---------------- inicialización ---------------- */
@@ -435,45 +595,34 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
     pintarProgreso(log, 0);
     timer = setInterval(() => pintarProgreso(log, Math.floor((Date.now()-t0)/1000)), 1000);
 
-    es = new EventSource(API + "/analizar-stream?entidad=" + encodeURIComponent(entidad));
+    const id = ++corrida;
+    const anotar = m => { if (id !== corrida) return; log.push(m);
+      pintarProgreso(log, Math.floor((Date.now()-t0)/1000)); };
 
-    es.addEventListener("progress", e => {
-      try { log.push(JSON.parse(e.data)); } catch { log.push(String(e.data)); }
-      pintarProgreso(log, Math.floor((Date.now()-t0)/1000));
-    });
-
-    es.addEventListener("done", e => {
-      try { RES = JSON.parse(e.data); } catch (err) { return fallar("La respuesta del servidor no se pudo leer."); }
-      terminar();
-      pintarResultado();
-    });
-
-    es.addEventListener("error", () => {
-      const segs = Math.floor((Date.now()-t0)/1000);
-      terminar();
-      fallar(segs < 8
-        ? "No se pudo conectar con el servidor de análisis."
-        : "La conexión con el servidor se interrumpió durante el análisis.");
+    VFI_LOCAL.analizar(entidad, anotar).then(r => {
+      if (id !== corrida) return;
+      RES = r; terminar(); pintarResultado();
+    }).catch(err => {
+      if (id !== corrida) return;
+      terminar(); fallar(err.message || String(err));
     });
   }
 
   function terminar() {
-    cerrarStream();
     if (timer) { clearInterval(timer); timer = null; }
     $("vfi-progreso").hidden = true;
     $("vfi-analizar").disabled = false;
     $("vfi-analizar").textContent = "Analizar";
   }
 
-  function cerrarStream() { if (es) { es.close(); es = null; } }
+  function cerrarStream() { corrida++; }
 
   function fallar(motivo) {
     $("vfi-resultado").innerHTML =
       '<div class="vfi-msg"><b>' + esc(motivo) + '</b>' +
-      'El análisis corre en un servidor aparte que se suspende cuando lleva rato sin uso. ' +
-      'Si es la primera consulta del día, puede tardar cerca de un minuto en despertar: ' +
-      'vuelva a oprimir <b style="display:inline">Analizar</b> y espere. ' +
-      'Si falla varias veces seguidas, el servidor está caído.</div>';
+      'Los contratos se consultan en vivo en datos.gov.co, que a veces tarda o se cae. ' +
+      'Vuelva a oprimir <b style="display:inline">Analizar</b> en unos minutos; con entidades ' +
+      'grandes o nombres cortos la consulta es más lenta.</div>';
   }
 
   function pintarProgreso(log, segs) {
@@ -486,7 +635,7 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
       else if (/contratos|SECOP/i.test(t))      { color="#2563EB"; txt="📄 SECOP II: " + t.replace(/\[.*?\]/,"").trim(); }
       return '<div style="color:'+color+'">' + esc(txt) + '</div>';
     }).join("");
-    if (!filas) filas = '<div>Iniciando… si el servidor estaba dormido, el primer arranque tarda.</div>';
+    if (!filas) filas = '<div>Iniciando…</div>';
     $("vfi-progreso").innerHTML =
       '<div class="vfi-prog-top"><b>Procesando análisis…</b><span>'+mm+':'+ss+'</span></div>' +
       '<div class="vfi-log">' + filas + '</div>';
@@ -663,15 +812,11 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
     btn.disabled = true; btn.textContent = "Buscando…";
     caja.innerHTML = '<div class="vfi-msg">Consultando SIRI y el Boletín…</div>';
     try {
-      const r = await fetch(API + "/buscar?doc=" + encodeURIComponent(doc), { method: "POST" });
-      if (!r.ok) throw new Error("El servidor respondió " + r.status + ".");
-      const d = await r.json();
-      if (d.error) throw new Error(d.error);
-      caja.innerHTML = pintarBusqueda(d);
+      caja.innerHTML = pintarBusqueda(await VFI_LOCAL.buscar(doc));
     } catch (err) {
       caja.innerHTML = '<div class="vfi-msg"><b>No se pudo consultar el documento.</b>' +
-        esc(err.message) + ' El servidor de análisis se suspende cuando lleva rato sin uso; ' +
-        'si es la primera consulta del día, espere unos segundos y vuelva a intentar.</div>';
+        esc(err.message) + ' No se pudieron cargar los índices de SIRI y del Boletín; ' +
+        'recargue la página e intente de nuevo.</div>';
     }
     btn.disabled = false; btn.textContent = "Buscar documento";
   }
@@ -681,7 +826,7 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
     if (!hs.length) {
       return '<div class="vfi-msg"><b>Sin antecedentes para el documento ' + esc(d.documento) + '.</b>' +
              'No aparece en los registros de SIRI ni en el Boletín de Responsables Fiscales que ' +
-             'tiene cargados el servidor. Esto no reemplaza el certificado oficial.</div>';
+             'publicó este panel. Esto no reemplaza el certificado oficial.</div>';
     }
     let h = '<div class="vfi-aviso"><b>' + miles(d.total) + ' antecedente' + (d.total===1?"":"s") +
             ' para el documento ' + esc(d.documento) + '.</b> ' +
@@ -707,6 +852,7 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
 
   /* ---------------- limpiar ---------------- */
   function limpiar() {
+    cerrarStream();
     terminar();
     RES = null; filtro = "TODAS"; abierta = null;
     $("vfi-resultado").innerHTML = "";
@@ -1234,14 +1380,13 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
    modulos para una misma persona o empresa.
      - territorio.json    huella contractual y obras vencidas
      - financiadores.json aportes de campana y contratos
-     - backend VFI        antecedentes en SIRI y Boletin, en vivo
+     - VFI_LOCAL          antecedentes en SIRI y Boletin (data/vigilancia)
    Cada bloque dice de donde sale y que alcance tiene, porque una
    ficha que junta senalamientos sin decir su origen es una
    acusacion, no un informe.
    ============================================================ */
 (function () {
   "use strict";
-  const API = "https://sistema-gestion-contractual.onrender.com/api/vfi";
   const FUENTES = {
     territorio: "data/modulos/territorio.json",
     financiadores: "data/modulos/financiadores.json"
@@ -1461,10 +1606,7 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
   async function traerAntecedentes(doc) {
     const caja = $("ficha-antecedentes"), chipAnt = $("ficha-chip-ant");
     try {
-      const r = await fetch(API + "/buscar?doc=" + encodeURIComponent(doc), { method: "POST" });
-      if (!r.ok) throw new Error("El servidor respondió " + r.status + ".");
-      const d = await r.json();
-      if (d.error) throw new Error(d.error);
+      const d = await VFI_LOCAL.buscar(doc);
       const hs = d.hallazgos || [];
       if (chipAnt) { chipAnt.textContent = hs.length ? miles(hs.length) : "ninguno";
         if (hs.length) chipAnt.closest(".ficha-chip").classList.add("on"); }
@@ -1491,9 +1633,8 @@ window.addEventListener('hashchange', ()=>show(location.hash.slice(1)));
     } catch (err) {
       if (chipAnt) chipAnt.textContent = "no consultado";
       caja.innerHTML = '<div class="panel"><h3>Antecedentes · SIRI y Boletín</h3>' +
-        '<p class="note">No se pudo consultar: ' + esc(err.message) + " El servidor de " +
-        "análisis se suspende por inactividad; si es la primera consulta del día puede tardar " +
-        'cerca de un minuto. <button class="vfi-btn gris" id="ficha-reint" ' +
+        '<p class="note">No se pudo consultar: ' + esc(err.message) + " No se pudieron " +
+        'cargar los índices de SIRI y del Boletín. <button class="vfi-btn gris" id="ficha-reint" ' +
         'style="padding:7px 14px;margin-left:8px">Reintentar</button></p></div>';
       const b = $("ficha-reint");
       if (b) b.addEventListener("click", () => {
