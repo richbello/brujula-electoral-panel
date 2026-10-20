@@ -29,9 +29,9 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
     .analisis-content h2 {
-      color: #1a1a1a;
+      color: #1F2533;
       margin-top: 0;
-      border-bottom: 3px solid #FF8A00;
+      border-bottom: 3px solid #C8962F;
       padding-bottom: 10px;
     }
     .analisis-stat {
@@ -41,20 +41,20 @@
       margin: 20px 0;
     }
     .stat-box {
-      background: linear-gradient(135deg, #7C4DFF 0%, #B026FF 100%);
+      background: linear-gradient(135deg, #3F4E8C 0%, #55639E 100%);
       color: white;
       padding: 20px;
       border-radius: 6px;
       text-align: center;
     }
     .stat-box.izquierda { 
-      background: linear-gradient(135deg, #FF6EC7 0%, #FF2D6F 100%); 
+      background: linear-gradient(135deg, #B0607F 0%, #C9475F 100%); 
     }
     .stat-box.derecha { 
-      background: linear-gradient(135deg, #00B2FF 0%, #00E5FF 100%); 
+      background: linear-gradient(135deg, #3F6CA8 0%, #5B8CC0 100%); 
     }
     .stat-box.centro { 
-      background: linear-gradient(135deg, #00E676 0%, #00F5D4 100%); 
+      background: linear-gradient(135deg, #2E8B62 0%, #4AA383 100%); 
     }
     .stat-box h3 { 
       margin: 0; 
@@ -71,15 +71,15 @@
       opacity: 0.8; 
     }
     .analisis-texto {
-      background: #F5F2FF;
+      background: #F4F5F8;
       padding: 15px;
-      border-left: 4px solid #FF8A00;
+      border-left: 4px solid #C8962F;
       margin: 20px 0;
       line-height: 1.6;
       font-size: 14px;
     }
     .close-btn {
-      background: #FF8A00;
+      background: #C8962F;
       color: white;
       border: none;
       padding: 10px 20px;
@@ -91,14 +91,14 @@
       font-weight: bold;
     }
     .close-btn:hover {
-      background: #F57C00;
+      background: #A9792A;
     }
     #analisis-trigger {
       position: fixed;
       bottom: 30px;
       right: 30px;
       z-index: 9998;
-      background: #FF8A00;
+      background: #C8962F;
       color: white;
       border: none;
       padding: 15px 25px;
@@ -109,7 +109,7 @@
       transition: all 0.3s ease;
     }
     #analisis-trigger:hover {
-      background: #F57C00;
+      background: #A9792A;
       transform: scale(1.05);
     }
   `;

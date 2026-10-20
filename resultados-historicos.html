@@ -10,26 +10,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#150B3D;          /* verde truffle, estructura */
-  --ink-2:#0D0628;
-  --ink-3:#0D0628;
-  --paper:#F3F1FF;        /* fondo de trabajo */
+  --ink:#1B2132;          /* azul pizarra, estructura */
+  --ink-2:#121726;
+  --ink-3:#121726;
+  --paper:#F4F5F8;        /* fondo de trabajo */
   --surface:#ffffff;
-  --line:#E0D9F7;
-  --line-strong:#C9BAED;
-  --text:#241552;
-  --muted:#6B5E90;
-  --muted-2:#9A8CC0;
-  --brass:#FFB020;        /* la aguja de la brújula: oro mate */
-  --brass-deep:#E08A00;
-  --brass-soft:#FFF3D6;
-  --scale-0:#E7DFFB;      /* escala de fuerza (azul secuencial) */
-  --scale-1:#A5C8FF;
-  --scale-2:#60A5FA;
-  --scale-3:#1D4ED8;
-  --scale-4:#3B23A6;
-  --ok:#00C97B;
-  --down:#FF2D6F;
+  --line:#E2E5EC;
+  --line-strong:#CBD1DC;
+  --text:#1F2533;
+  --muted:#5B6375;
+  --muted-2:#8A92A3;
+  --brass:#D9A441;        /* oro mate, acento */
+  --brass-deep:#8F6420;
+  --brass-soft:#FAF3E3;
+  --scale-0:#E7EBF2;      /* escala de fuerza (azul secuencial) */
+  --scale-1:#B9CBE3;
+  --scale-2:#7FA3CF;
+  --scale-3:#3F6CA8;
+  --scale-4:#26467A;
+  --ok:#2E9E6E;
+  --down:#C9475F;
   --radius:10px;
   --shadow:0 1px 2px rgba(19,32,51,.06), 0 8px 24px rgba(19,32,51,.05);
   font-variant-numeric:tabular-nums;
@@ -56,27 +56,27 @@ button{font-family:inherit}
   display:flex;align-items:center;gap:14px;
   padding:calc(12px + env(safe-area-inset-top,0px)) 22px 12px;
   background:var(--ink);color:#fff;
-  border-bottom:1px solid #0C0526;
+  border-bottom:1px solid #10141F;
 }
 .brand{display:flex;align-items:center;gap:11px;min-width:0}
 .compass{width:30px;height:30px;flex:0 0 auto;filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
 .brand .name{font-family:"Archivo";font-weight:800;font-size:17px;color:#fff;letter-spacing:-.02em;white-space:nowrap}
 .brand .name b{color:var(--brass)}
-.brand .sub{font-size:12px;color:#A294C9;margin-top:-2px;white-space:nowrap}
+.brand .sub{font-size:12px;color:#A3ABBE;margin-top:-2px;white-space:nowrap}
 .topbar .spacer{flex:1}
 .meta-pill{
-  display:none;align-items:center;gap:7px;font-size:12.5px;color:#B3A0E6;
-  padding:5px 11px;border:1px solid #3A1F8C;border-radius:99px;
+  display:none;align-items:center;gap:7px;font-size:12.5px;color:#AEB6C7;
+  padding:5px 11px;border:1px solid #323B57;border-radius:99px;
 }
 .meta-pill b{color:#fff;font-weight:600}
 @media(min-width:820px){.meta-pill{display:inline-flex}}
 .btn-load{
   display:inline-flex;align-items:center;gap:8px;
-  background:var(--brass);color:#2B1400;border:none;cursor:pointer;
+  background:var(--brass);color:#2A1E08;border:none;cursor:pointer;
   font-weight:600;font-size:13.5px;padding:9px 15px;border-radius:8px;
   transition:background .15s;
 }
-.btn-load:hover{background:#F59E0B}
+.btn-load:hover{background:#C8932F}
 .btn-load svg{width:15px;height:15px}
 
 /* ---------- Estructura ---------- */
@@ -86,40 +86,40 @@ button{font-family:inherit}
 
 /* ---------- Rail de candidatos ---------- */
 .rail{
-  background:var(--ink);color:#E7DFFB;
-  border-right:1px solid #0C0526;
+  background:var(--ink);color:#E7EBF2;
+  border-right:1px solid #10141F;
   display:flex;flex-direction:column;
   max-height:none;
 }
 @media(min-width:900px){.rail{position:sticky;top:55px;height:calc(100vh - 55px)}}
-.rail-head{padding:16px 16px 12px;border-bottom:1px solid #281663}
-.rail-head .lbl{font-size:11.5px;color:#9184BC;text-transform:none;font-weight:600;letter-spacing:.02em}
+.rail-head{padding:16px 16px 12px;border-bottom:1px solid #232B42}
+.rail-head .lbl{font-size:11.5px;color:#8A92A3;text-transform:none;font-weight:600;letter-spacing:.02em}
 .rail-head h2{color:#fff;font-size:15px;font-weight:600;margin-top:1px}
 .search{position:relative;margin-top:11px}
 .search input{
-  width:100%;background:#140A38;border:1px solid #30197A;color:#fff;
+  width:100%;background:#151A28;border:1px solid #2C3550;color:#fff;
   padding:9px 12px 9px 33px;border-radius:8px;font-size:13.5px;font-family:inherit;
 }
-.search input::placeholder{color:#6A5D93}
+.search input::placeholder{color:#5B6375}
 .search input:focus{outline:2px solid var(--brass);outline-offset:0;border-color:transparent}
-.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:#6A5D93}
+.search svg{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:#5B6375}
 .rail-list{overflow-y:auto;flex:1;padding:6px 8px 20px}
 .rail-list::-webkit-scrollbar{width:9px}
-.rail-list::-webkit-scrollbar-thumb{background:#30197A;border-radius:9px;border:2px solid var(--ink)}
+.rail-list::-webkit-scrollbar-thumb{background:#2C3550;border-radius:9px;border:2px solid var(--ink)}
 .cand{
   display:block;width:100%;text-align:left;cursor:pointer;
   background:transparent;border:none;border-left:3px solid transparent;
-  padding:9px 11px;border-radius:0 7px 7px 0;color:#CBBCEE;margin:1px 0;
+  padding:9px 11px;border-radius:0 7px 7px 0;color:#CBD1DC;margin:1px 0;
   transition:background .12s;
 }
-.cand:hover{background:#20124F}
-.cand.active{background:#26155C;border-left-color:var(--brass)}
+.cand:hover{background:#1E2538}
+.cand.active{background:#20283C;border-left-color:var(--brass)}
 .cand .cn{font-size:13.5px;font-weight:600;color:#fff;line-height:1.25;
   display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-.cand .cp{font-size:11.5px;color:#9487BE;margin-top:2px;
+.cand .cp{font-size:11.5px;color:#8A92A3;margin-top:2px;
   display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
 .cand .cv{font-size:11.5px;color:var(--brass);font-weight:600;margin-top:2px}
-.cand.active .cv{color:#FFC53D}
+.cand.active .cv{color:#E3B456}
 
 /* ---------- Área principal ---------- */
 .main{padding:22px;min-width:0}
@@ -186,7 +186,7 @@ button{font-family:inherit}
 .prow .ps{font-size:11.5px;color:var(--muted);margin-top:1px}
 
 /* Análisis por puesto */
-:root{--pz-bastion:#5B3FD9;--pz-solido:#1F9AD6;--pz-oport:#E08A00;--pz-marg:#B8567F}
+:root{--pz-bastion:#4A5BAE;--pz-solido:#3E9BBF;--pz-oport:#A9792A;--pz-marg:#A65A80}
 .btn-csv{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line-strong);color:var(--ink);
   font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:8px;cursor:pointer}
 .btn-csv svg{width:15px;height:15px}
@@ -218,7 +218,7 @@ button{font-family:inherit}
 .pz-tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;border-radius:8px;padding:9px 11px;font-size:12px;line-height:1.45;
   box-shadow:0 8px 24px rgba(19,32,51,.25);min-width:190px;max-width:260px;display:none;z-index:5}
 .pz-tip b{display:block;font-size:12.5px;margin-bottom:3px}
-.pz-tip .r{display:flex;justify-content:space-between;gap:12px;color:#D9D1F5}
+.pz-tip .r{display:flex;justify-content:space-between;gap:12px;color:#C9CFDB}
 .pz-tip .r span:last-child{color:#fff;font-weight:600}
 .pz-zrow{display:grid;grid-template-columns:150px 1fr 150px;gap:12px;align-items:center;padding:9px 18px;border-top:1px solid var(--line)}
 .pz-zrow .zn{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -238,7 +238,7 @@ button{font-family:inherit}
 .pz-ctrl input{min-width:180px}
 .pz-tablewrap{overflow:auto;max-height:620px}
 .pz-table{width:100%;border-collapse:collapse;font-size:12px}
-.pz-table th{position:sticky;top:0;background:#F6F4FF;color:var(--muted);font-weight:600;font-size:11.5px;text-align:right;padding:9px 8px;
+.pz-table th{position:sticky;top:0;background:#F5F6F9;color:var(--muted);font-weight:600;font-size:11.5px;text-align:right;padding:9px 8px;
   border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
 .pz-table th:nth-child(-n+2){text-align:left}
 .pz-table th.sorted{color:var(--ink)}
@@ -250,17 +250,17 @@ button{font-family:inherit}
 .pz-table td.zn{color:var(--muted)}
 .pz-table td b{font-family:"Archivo";color:var(--ink)}
 .pz-table tr.on td{background:var(--brass-soft)}
-.pz-table tr:hover td{background:#FAF8FF}
+.pz-table tr:hover td{background:#F8F9FB}
 .pz-cat{display:inline-flex;align-items:center;gap:5px;font-weight:600}
 .pz-cat i{width:8px;height:8px;border-radius:50%}
-.pz-up{color:#00995D;font-weight:600}.pz-dn{color:var(--down);font-weight:600}
+.pz-up{color:#2E8B62;font-weight:600}.pz-dn{color:var(--down);font-weight:600}
 .pz-sharebar{display:inline-block;vertical-align:middle;width:46px;height:6px;background:var(--scale-0);border-radius:3px;margin-left:6px;position:relative;overflow:hidden}
 .pz-sharebar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
 .pz-empty{padding:28px;text-align:center;color:var(--muted)}
 @media (max-width:900px){.pz-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.pz-zrow{grid-template-columns:110px 1fr 120px}}
 
 /* Alcaldía (resultado municipal, sin puestos) */
-.alc-note{display:flex;gap:10px;align-items:flex-start;background:var(--brass-soft);border:1px solid #FFD98C;color:#7A4A00;border-radius:10px;padding:11px 14px;font-size:12.5px;line-height:1.45;margin-bottom:16px}
+.alc-note{display:flex;gap:10px;align-items:flex-start;background:var(--brass-soft);border:1px solid #EBD3A0;color:#7A5418;border-radius:10px;padding:11px 14px;font-size:12.5px;line-height:1.45;margin-bottom:16px}
 .alc-note svg{width:17px;height:17px;flex:0 0 auto;margin-top:1px}
 .alc-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:16px}
 @media(min-width:1100px){.alc-grid{grid-template-columns:1.25fr 1fr}}
@@ -272,9 +272,9 @@ button{font-family:inherit}
 .alc-row .av b{display:block;font-family:"Archivo";font-size:15px;color:var(--ink)}
 .alc-row .ab{grid-column:1/-1;height:8px;background:var(--scale-0);border-radius:4px;overflow:hidden}
 .alc-row .ab i{display:block;height:100%;border-radius:4px;background:var(--scale-2)}
-.alc-row.me{background:#FFFBF0}
+.alc-row.me{background:#FBF8F1}
 .alc-row.me .ab i{background:var(--brass)}
-.alc-row .win{display:inline-block;font-size:10.5px;font-weight:700;color:#00995D;background:#E6F9F0;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+.alc-row .win{display:inline-block;font-size:10.5px;font-weight:700;color:#2E8B62;background:#E5F3EC;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px}
 .alc-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line)}
 @media(min-width:720px){.alc-tiles{grid-template-columns:repeat(5,minmax(0,1fr))}}
 .alc-tiles>div{background:var(--surface);padding:12px 16px}
@@ -282,7 +282,7 @@ button{font-family:inherit}
 .alc-tiles .v{font-family:"Archivo";font-weight:800;font-size:19px;color:var(--ink);margin-top:3px}
 .alc-tiles .f{font-size:11.5px;color:var(--muted);margin-top:2px}
 .alc-need{width:100%;border-collapse:collapse;font-size:12.5px}
-.alc-need th{background:#F6F4FF;color:var(--muted);font-weight:600;font-size:11.5px;text-align:right;padding:9px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.alc-need th{background:#F5F6F9;color:var(--muted);font-weight:600;font-size:11.5px;text-align:right;padding:9px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .alc-need th:first-child,.alc-need td:first-child{text-align:left}
 .alc-need td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right;color:var(--text)}
 .alc-need td b{font-family:"Archivo";color:var(--ink);font-size:14px}
@@ -309,12 +309,12 @@ button{font-family:inherit}
 .metas-ctrl .target input:focus{outline:2px solid var(--brass);border-color:transparent}
 .metas-ctrl .hint{font-size:12.5px;color:var(--muted-2);margin-top:10px}
 .metas-ctrl .quick{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
-.chip{background:var(--brass-soft);color:var(--brass-deep);border:1px solid #FFD98C;cursor:pointer;
+.chip{background:var(--brass-soft);color:var(--brass-deep);border:1px solid #EBD3A0;cursor:pointer;
   font-size:12px;font-weight:600;padding:5px 11px;border-radius:99px}
-.chip:hover{background:#FFE8B0}
+.chip:hover{background:#F3E4C2}
 .meta-row{display:grid;grid-template-columns:26px 1fr 92px 92px;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line)}
 .meta-row:last-child{border-bottom:none}
-.meta-row.h{background:#F6F4FF;position:sticky;top:0}
+.meta-row.h{background:#F5F6F9;position:sticky;top:0}
 .meta-row.h span{font-size:11px;color:var(--muted);font-weight:600;text-align:right}
 .meta-row.h span:nth-child(2){text-align:left}
 .meta-row .rank{font-family:"Archivo";font-weight:700;font-size:12px;color:var(--muted-2);text-align:right}
@@ -329,27 +329,27 @@ button{font-family:inherit}
 .empty-inline{padding:40px 20px;text-align:center;color:var(--muted)}
 
 /* Selector de corporación y localidad */
-.seg{display:flex;flex-wrap:wrap;gap:2px;background:#140A38;border:1px solid #30197A;border-radius:9px;padding:3px;margin-top:10px}
-.seg button{flex:1 1 auto;background:none;border:none;color:#A294C9;font-size:13px;font-weight:600;padding:7px 6px;border-radius:6px;cursor:pointer}
+.seg{display:flex;flex-wrap:wrap;gap:2px;background:#151A28;border:1px solid #2C3550;border-radius:9px;padding:3px;margin-top:10px}
+.seg button{flex:1 1 auto;background:none;border:none;color:#A3ABBE;font-size:13px;font-weight:600;padding:7px 6px;border-radius:6px;cursor:pointer}
 .seg button:hover{color:#fff}
-.seg button.on{background:var(--brass);color:#2B1400}
-#segTerr button.on{background:#E7DFFB;color:var(--ink)}
+.seg button.on{background:var(--brass);color:#2A1E08}
+#segTerr button.on{background:#E7EBF2;color:var(--ink)}
 #segTerr:empty,#segCorp:empty{display:none}
 .seg button:disabled{opacity:.4;cursor:not-allowed}
 .seg button:focus-visible,.cand:focus-visible,.tab:focus-visible,.chip:focus-visible,.btn-load:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
-.locsel{width:100%;margin-top:9px;background:#140A38;border:1px solid #30197A;color:#fff;border-radius:8px;
+.locsel{width:100%;margin-top:9px;background:#151A28;border:1px solid #2C3550;color:#fff;border-radius:8px;
   padding:8px 10px;font-family:inherit;font-size:13.5px}
 .locsel:focus{outline:2px solid var(--brass);border-color:transparent}
-.rail-sec{padding:14px 11px 5px;font-size:11.5px;font-weight:600;color:#9184BC;border-top:1px solid #281663;margin-top:8px}
+.rail-sec{padding:14px 11px 5px;font-size:11.5px;font-weight:600;color:#8A92A3;border-top:1px solid #232B42;margin-top:8px}
 .rail-sec:first-child{border-top:none;margin-top:0;padding-top:6px}
-.rail-sec small{display:block;font-weight:400;color:#6A5D93;margin-top:1px}
-.cand.lista .cn{color:#CBBCEE}
+.rail-sec small{display:block;font-weight:400;color:#5B6375;margin-top:1px}
+.cand.lista .cn{color:#CBD1DC}
 
 /* Modos: candidatos / análisis */
-.modes{display:flex;gap:2px;background:#140A38;border:1px solid #30197A;border-radius:9px;padding:3px;margin-left:20px}
-.modes button{background:none;border:none;color:#A294C9;font-size:13px;font-weight:600;padding:7px 13px;border-radius:6px;cursor:pointer;white-space:nowrap}
+.modes{display:flex;gap:2px;background:#151A28;border:1px solid #2C3550;border-radius:9px;padding:3px;margin-left:20px}
+.modes button{background:none;border:none;color:#A3ABBE;font-size:13px;font-weight:600;padding:7px 13px;border-radius:6px;cursor:pointer;white-space:nowrap}
 .modes button:hover{color:#fff}
-.modes button.on{background:#E7DFFB;color:var(--ink)}
+.modes button.on{background:#E7EBF2;color:var(--ink)}
 .modes button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 @media(max-width:760px){.brand .sub{display:none}.modes{margin-left:8px}.modes button{padding:7px 9px;font-size:12.5px}.btn-load .lbl-txt{display:none}}
 @media(max-width:640px){.topbar{flex-wrap:wrap;row-gap:10px;column-gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px}
@@ -369,8 +369,8 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
 .party{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;width:100%;text-align:left;
   background:none;border:none;border-bottom:1px solid var(--line);border-left:3px solid transparent;padding:11px 16px;cursor:pointer;font-family:inherit}
 .party:last-child{border-bottom:none}
-.party:hover{background:#F6F4FF}
-.party.sel{border-left-color:var(--brass);background:#FFF8E8}
+.party:hover{background:#F5F6F9}
+.party.sel{border-left-color:var(--brass);background:#FAF4E6}
 .party.static{cursor:default}.party.static:hover{background:none}
 .party .pn{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.25}
 .party .ps{font-size:11.5px;color:var(--muted);margin-top:2px}
@@ -428,10 +428,10 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
 <div class="topbar">
   <div class="brand">
     <svg class="compass" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="24" cy="24" r="21" stroke="#FFB020" stroke-width="2.5"/>
+      <circle cx="24" cy="24" r="21" stroke="#D9A441" stroke-width="2.5"/>
       <circle cx="24" cy="24" r="3" fill="#fff"/>
-      <path d="M24 7 L28 22 L24 24 L20 22 Z" fill="#FFB020"/>
-      <path d="M24 41 L20 26 L24 24 L28 26 Z" fill="#F2EFFF"/>
+      <path d="M24 7 L28 22 L24 24 L20 22 Z" fill="#D9A441"/>
+      <path d="M24 41 L20 26 L24 24 L28 26 Z" fill="#EEF0F5"/>
     </svg>
     <div>
       <div class="name">Estrategia <b>Electoral 2027</b></div>
@@ -576,7 +576,7 @@ const num1=x=>x==null?"—":x.toLocaleString("es-CO",{minimumFractionDigits:1,ma
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const MIN=new Set(["de","del","la","las","los","y","el"]);
 const cap=t=>String(t).toLowerCase().split(" ").map((w,i)=>i>0&&MIN.has(w)?w:w.charAt(0).toUpperCase()+w.slice(1)).join(" ");
-const scaleColor=t=>{const c=["#A5C8FF","#60A5FA","#1D4ED8","#3B23A6","#1A0F45"];return c[Math.min(c.length-1,Math.floor(t*c.length))];};
+const scaleColor=t=>{const c=["#B9CBE3","#7FA3CF","#3F6CA8","#26467A","#1B2A4A"];return c[Math.min(c.length-1,Math.floor(t*c.length))];};
 const src=()=>modo==="anal"?ANAL:DATA;
 const T=()=>src().territorios[terr];
 const C=()=>T().corp[corp];
@@ -723,7 +723,7 @@ function renderRail(){
     (!f||c.n.toUpperCase().includes(f)||c.pt.toUpperCase().includes(f))&&(uFiltro<0||c.l===uFiltro));
   const per=items.filter(x=>!x.c.ls),lis=items.filter(x=>x.c.ls);
   $("#candCount").textContent=fmt(per.length);$("#candWord").textContent=per.length===1?"candidato":"candidatos";
-  if(!items.length){el.innerHTML='<div style="padding:20px;color:#7D6FA8;font-size:13px">Ningún resultado. Prueba otro nombre o cambia el filtro.</div>';return;}
+  if(!items.length){el.innerHTML='<div style="padding:20px;color:#6E7689;font-size:13px">Ningún resultado. Prueba otro nombre o cambia el filtro.</div>';return;}
   const MAX=400;
   const sec=(t,sub)=>{const d=document.createElement("div");d.className="rail-sec";d.innerHTML=esc(t)+(sub?`<small>${esc(sub)}</small>`:"");el.appendChild(d);};
   const btn=({c,i})=>{const b=document.createElement("button");b.className="cand"+(c.ls?" lista":"")+(i===sel?" active":"");
@@ -791,10 +791,10 @@ function agrUnidad(c){const m={};c.p.forEach(([pi,v])=>{const li=T().puestos[pi]
   return Object.entries(m).map(([li,v])=>({li:+li,v})).sort((a,b)=>b.v-a.v);}
 /* ============ Análisis por puesto de votación ============ */
 const PZ_CAT={
-  bastion:{n:"Bastión",c:"var(--pz-bastion)",h:"#5B3FD9"},
-  solido:{n:"Sólido",c:"var(--pz-solido)",h:"#1F9AD6"},
-  oport:{n:"Oportunidad",c:"var(--pz-oport)",h:"#E08A00"},
-  marg:{n:"Marginal",c:"var(--pz-marg)",h:"#B8567F"}};
+  bastion:{n:"Bastión",c:"var(--pz-bastion)",h:"#4A5BAE"},
+  solido:{n:"Sólido",c:"var(--pz-solido)",h:"#3E9BBF"},
+  oport:{n:"Oportunidad",c:"var(--pz-oport)",h:"#A9792A"},
+  marg:{n:"Marginal",c:"var(--pz-marg)",h:"#A65A80"}};
 let PZ={c:null,rows:[],cat:"todos",zona:"",q:"",sort:"v",dir:-1,hi:null};
 
 // Totales por puesto y ganador del puesto, para la corporación activa (se calcula una vez)
@@ -876,14 +876,14 @@ function pzZonasRender(c,A,zonas,zt){
   const card=$("#pzZonasCard");
   if(zonas.length<2){card.style.display="none";return;}card.style.display="";
   $("#pzZonasH").textContent=A.tipo==="comuna"?"Por comuna y corregimiento":(esMuni()?"Por municipio":"Por localidad");
-  $("#pzZonasP").textContent=`La barra es tu % de los votos en cada ${zt}; la marca naranja es tu promedio general (${pct(A.avg)}).`;
+  $("#pzZonasP").textContent=`La barra es tu % de los votos en cada ${zt}; la marca dorada es tu promedio general (${pct(A.avg)}).`;
   const g={};PZ.rows.forEach(r=>{const o=g[r.z]||(g[r.z]={z:r.z,v:0,t:0,n:0,j:0});o.v+=r.v;o.t+=r.t;o.n++;o.j+=r.juego;});
   const L=Object.values(g).map(o=>({...o,sh:o.t?o.v/o.t:0})).sort((a,b)=>b.v-a.v);
   const mx=Math.max(...L.map(o=>o.sh),A.avg,.0001)*1.08;
   $("#pzZonas").innerHTML=L.map(o=>`<div class="pz-zrow" title="${esc(o.z)}: ${fmt(o.v)} de ${fmt(o.t)} votos en ${o.n} puestos">
     <div class="zn">${esc(o.z)}</div>
     <div class="zb"><i style="width:${(o.sh/mx*100).toFixed(1)}%"></i><u style="left:${(A.avg/mx*100).toFixed(1)}%"></u></div>
-    <div class="zv"><b>${fmt(o.v)}</b>${pct(o.sh)} · ${o.n} puestos</div></div>`).join("");
+    <div class="zv"><b>${fmt(o.v)}</b>${pct(o.sh)} · ${o.n} ${o.n===1?"puesto":"puestos"}</div></div>`).join("");
 }
 function pzChart(){
   const el=$("#pzChart"),R=PZ.rows,A=PZ.A,F=new Set(pzFiltrados());
@@ -897,7 +897,7 @@ function pzChart(){
   nice(xMax,6).forEach(v=>{s+=`<text class="ax" x="${X(v)}" y="${H-m.b+16}" text-anchor="middle">${fmt(v)}</text>`;});
   s+=`<text class="axt" x="${m.l+iw/2}" y="${H-6}" text-anchor="middle">Votos totales del puesto (${esc(corpLabel(corp).toLowerCase())})</text>`;
   s+=`<text class="axt" transform="translate(13 ${m.t+ih/2}) rotate(-90)" text-anchor="middle">Tu % en el puesto</text>`;
-  s+=`<line class="avg" x1="${m.l}" x2="${W-m.r}" y1="${Y(A.avg)}" y2="${Y(A.avg)}"/><text class="avgt" x="${m.l+6}" y="${Y(A.avg)-6}" text-anchor="start">Tu promedio ${pct(A.avg)}</text>`;
+  s+=`<line class="avg" x1="${m.l}" x2="${W-m.r}" y1="${Y(A.avg)}" y2="${Y(A.avg)}"/>`;
   const ord=[...R].sort((a,b)=>b.v-a.v);
   ord.forEach(r=>{const on=F.has(r),k=R.indexOf(r);
     s+=`<circle class="pt${PZ.hi===r.pi?" on":""}" data-k="${k}" cx="${X(r.t).toFixed(1)}" cy="${Y(r.sh).toFixed(1)}" r="${Rr(r.v).toFixed(1)}" fill="${PZ_CAT[r.cat].h}" style="opacity:${on?.9:.12}"/>`;});
@@ -1190,5 +1190,5 @@ DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
 </script>
 <script src="js/analisis-modal.js"></script>
 <script src="js/analisis-soacha.js" defer></script>
-<a href="index.html" style="position:fixed;left:20px;bottom:20px;z-index:9999;background:#150B3D;color:#fff;border:1px solid #FFB020;padding:10px 16px;border-radius:8px;font:600 13px Inter,Segoe UI,sans-serif;text-decoration:none">&larr; Inicio</a></body>
+<a href="index.html" style="position:fixed;left:20px;bottom:20px;z-index:9999;background:#1B2132;color:#fff;border:1px solid #D9A441;padding:10px 16px;border-radius:8px;font:600 13px Inter,Segoe UI,sans-serif;text-decoration:none">&larr; Inicio</a></body>
 </html>
