@@ -185,6 +185,80 @@ button{font-family:inherit}
 .prow .pv{font-family:"Archivo";font-weight:700;font-size:15px;color:var(--ink)}
 .prow .ps{font-size:11.5px;color:var(--muted);margin-top:1px}
 
+/* Análisis por puesto */
+:root{--pz-bastion:#5B3FD9;--pz-solido:#1F9AD6;--pz-oport:#E08A00;--pz-marg:#B8567F}
+.btn-csv{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--line-strong);color:var(--ink);
+  font-size:12.5px;font-weight:600;padding:7px 12px;border-radius:8px;cursor:pointer}
+.btn-csv svg{width:15px;height:15px}
+.btn-csv:hover{border-color:var(--brass);background:var(--brass-soft)}
+.pz-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.pz-kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);border-top:3px solid var(--line-strong)}
+.pz-kpi .k{font-size:12px;color:var(--muted);font-weight:600}
+.pz-kpi .v{font-family:"Archivo";font-weight:800;font-size:24px;color:var(--ink);margin-top:4px;line-height:1.1}
+.pz-kpi .v small{font-size:13px;font-weight:600;color:var(--muted);margin-left:4px}
+.pz-kpi .s{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.35}
+.pz-card{margin-bottom:16px}
+.card-h{padding:16px 18px 6px}
+.card-h h3{font-size:15px;font-weight:700;color:var(--ink)}
+.card-h p{font-size:12.5px;color:var(--muted);margin:3px 0 0}
+.pz-legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px}
+.pz-legend span{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--text);font-weight:500}
+.pz-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.pz-legend em{font-style:normal;color:var(--muted)}
+.pz-chart{position:relative;padding:4px 10px 12px}
+.pz-chart svg{display:block;width:100%;height:auto}
+.pz-chart .ax{font-size:11px;fill:var(--muted)}
+.pz-chart .axt{font-size:11.5px;fill:var(--muted);font-weight:600}
+.pz-chart .grid{stroke:var(--line);stroke-width:1}
+.pz-chart .avg{stroke:var(--ink);stroke-width:1.5;stroke-dasharray:5 4;opacity:.55}
+.pz-chart .avgt{font-size:11px;fill:var(--ink);font-weight:700;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+.pz-chart circle.pt{stroke:#fff;stroke-width:2;cursor:pointer;opacity:.9}
+.pz-chart circle.pt:hover,.pz-chart circle.pt.on{opacity:1;stroke:var(--ink)}
+.pz-chart circle.hit{fill:transparent;cursor:pointer}
+.pz-tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;border-radius:8px;padding:9px 11px;font-size:12px;line-height:1.45;
+  box-shadow:0 8px 24px rgba(19,32,51,.25);min-width:190px;max-width:260px;display:none;z-index:5}
+.pz-tip b{display:block;font-size:12.5px;margin-bottom:3px}
+.pz-tip .r{display:flex;justify-content:space-between;gap:12px;color:#D9D1F5}
+.pz-tip .r span:last-child{color:#fff;font-weight:600}
+.pz-zrow{display:grid;grid-template-columns:150px 1fr 150px;gap:12px;align-items:center;padding:9px 18px;border-top:1px solid var(--line)}
+.pz-zrow .zn{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pz-zrow .zb{position:relative;height:18px;background:var(--scale-0);border-radius:4px;overflow:hidden}
+.pz-zrow .zb i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--scale-3),var(--scale-4));border-radius:4px}
+.pz-zrow .zb u{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--brass-deep)}
+.pz-zrow .zv{text-align:right;font-size:12px;color:var(--muted);white-space:nowrap}
+.pz-zrow .zv b{font-family:"Archivo";font-size:14px;color:var(--ink);margin-right:6px}
+.pz-ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:4px 0 12px}
+.pz-chips{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 auto}
+.pz-chips button{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line-strong);color:var(--text);
+  font-size:12px;font-weight:600;padding:6px 11px;border-radius:99px;cursor:pointer}
+.pz-chips button i{width:8px;height:8px;border-radius:50%}
+.pz-chips button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.pz-chips button small{font-weight:500;opacity:.75}
+.pz-ctrl select,.pz-ctrl input{border:1px solid var(--line-strong);border-radius:8px;padding:7px 10px;font-size:12.5px;color:var(--text);background:var(--surface)}
+.pz-ctrl input{min-width:180px}
+.pz-tablewrap{overflow:auto;max-height:620px}
+.pz-table{width:100%;border-collapse:collapse;font-size:12px}
+.pz-table th{position:sticky;top:0;background:#F6F4FF;color:var(--muted);font-weight:600;font-size:11.5px;text-align:right;padding:9px 8px;
+  border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none;z-index:1}
+.pz-table th:nth-child(-n+2){text-align:left}
+.pz-table th.sorted{color:var(--ink)}
+.pz-table th .ar{font-size:10px;margin-left:3px}
+.pz-table td{padding:8px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap;color:var(--text)}
+.pz-table td:nth-child(-n+2){text-align:left}
+.pz-table td.pn{font-weight:600;color:var(--ink);white-space:normal;min-width:170px;max-width:240px;line-height:1.3}
+.pz-table td.rv{white-space:normal;min-width:120px;max-width:170px;line-height:1.3}
+.pz-table td.zn{color:var(--muted)}
+.pz-table td b{font-family:"Archivo";color:var(--ink)}
+.pz-table tr.on td{background:var(--brass-soft)}
+.pz-table tr:hover td{background:#FAF8FF}
+.pz-cat{display:inline-flex;align-items:center;gap:5px;font-weight:600}
+.pz-cat i{width:8px;height:8px;border-radius:50%}
+.pz-up{color:#00995D;font-weight:600}.pz-dn{color:var(--down);font-weight:600}
+.pz-sharebar{display:inline-block;vertical-align:middle;width:46px;height:6px;background:var(--scale-0);border-radius:3px;margin-left:6px;position:relative;overflow:hidden}
+.pz-sharebar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+.pz-empty{padding:28px;text-align:center;color:var(--muted)}
+@media (max-width:900px){.pz-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.pz-zrow{grid-template-columns:110px 1fr 120px}}
+
 /* Localidades */
 .loc-row{display:grid;grid-template-columns:130px 1fr 76px;gap:12px;align-items:center;padding:9px 16px;border-bottom:1px solid var(--line)}
 .loc-row:last-child{border-bottom:none}
@@ -389,15 +463,36 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
         <button class="tab active" data-tab="fuerza">Mapa de fuerza</button>
         <button class="tab" data-tab="localidad" id="tabLoc">Por localidad</button>
         <button class="tab" data-tab="metas">Metas 2027</button>
-        <button class="tab" data-tab="pulso">Pulso social</button> 
       </div>
 
       <section class="panel active" id="panel-fuerza">
         <div class="panel-head">
-          <div><h3>Tus puestos más fuertes</h3><p>Ordenados por votos obtenidos. La barra muestra tu concentración relativa.</p></div>
+          <div><h3>Análisis por puesto de votación</h3><p id="pzSub">Cuánto pesas en cada puesto, frente a tu promedio y a tus rivales.</p></div>
+          <button class="btn-csv" id="pzCsv" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar CSV</button>
         </div>
-        <div class="card"><div class="rowlist" id="puestosList"></div></div>
-        <p class="footnote"><b>Cómo leerlo:</b> el porcentaje es la parte de tus votos totales que salió de ese puesto. Un candidato con pocos puestos concentrados tiene una base territorial clara; uno muy repartido depende del arrastre general.</p>
+        <div class="pz-kpis" id="pzKpis"></div>
+
+        <div class="card pz-card">
+          <div class="card-h"><h3>Mapa de posicionamiento</h3>
+            <p>Cada punto es un puesto. A la derecha, los puestos con más votantes; arriba, donde sacas mayor porcentaje. El tamaño del punto son tus votos.</p>
+            <div class="pz-legend" id="pzLegend"></div></div>
+          <div class="pz-chart" id="pzChart"></div>
+        </div>
+
+        <div class="card pz-card" id="pzZonasCard">
+          <div class="card-h"><h3 id="pzZonasH">Por comuna</h3><p id="pzZonasP">Tus votos y tu porcentaje en cada zona.</p></div>
+          <div id="pzZonas"></div>
+        </div>
+
+        <div class="pz-ctrl">
+          <div class="pz-chips" id="pzChips" role="group" aria-label="Filtrar puestos por tipo"></div>
+          <select id="pzZona" aria-label="Filtrar por zona"></select>
+          <input id="pzQ" type="search" placeholder="Buscar puesto…" aria-label="Buscar puesto">
+        </div>
+        <div class="card"><div class="pz-tablewrap"><table class="pz-table" id="pzTable"></table></div></div>
+        <p class="footnote"><b>Cómo leerlo:</b> <b>% en el puesto</b> es la parte de los votos de esa corporación en el puesto que fue para ti. <b>Índice</b> compara ese porcentaje con tu promedio en todos los puestos de tu circunscripción (100 = igual a tu promedio). <b>Bastión</b>: índice de 130 o más. <b>Sólido</b>: entre 80 y 130. <b>Oportunidad</b>: índice menor a 80 en un puesto grande (más votantes que la mediana). <b>Marginal</b>: índice menor a 80 en un puesto pequeño. <b>Votos en juego</b>: los que ganarías en ese puesto si llegaras a tu porcentaje promedio.</p>
       </section>
 
       <section class="panel" id="panel-localidad">
@@ -427,12 +522,6 @@ body.modo-anal .search,body.modo-anal .rail-list{display:none}
         <p class="footnote"><b>Nota:</b> este reparto asume que tu geografía se mantiene (supuesto validado con el backtest 2019→2023). En una campaña real se ajusta con encuestas y trabajo de territorio.</p>
       </section>
 
-      <section class="panel" id="panel-pulso">
-        <div class="panel-head">
-          <div><h3>Pulso social en redes</h3><p>Sentimiento del público en redes sociales.</p></div>
-        </div>
-        <div id="pulsoContent" style="padding:20px;text-align:center;color:#9A8CC0">Cargando análisis de redes...</div>
-      </section>
     </div>
     <div id="anal" style="display:none"></div>
   </div></main>
@@ -654,14 +743,169 @@ function renderDash(){
 }
 function agrUnidad(c){const m={};c.p.forEach(([pi,v])=>{const li=T().puestos[pi].l;m[li]=(m[li]||0)+v;});
   return Object.entries(m).map(([li,v])=>({li:+li,v})).sort((a,b)=>b.v-a.v);}
+/* ============ Análisis por puesto de votación ============ */
+const PZ_CAT={
+  bastion:{n:"Bastión",c:"var(--pz-bastion)",h:"#5B3FD9"},
+  solido:{n:"Sólido",c:"var(--pz-solido)",h:"#1F9AD6"},
+  oport:{n:"Oportunidad",c:"var(--pz-oport)",h:"#E08A00"},
+  marg:{n:"Marginal",c:"var(--pz-marg)",h:"#B8567F"}};
+let PZ={c:null,rows:[],cat:"todos",zona:"",q:"",sort:"v",dir:-1,hi:null};
+
+// Totales por puesto y ganador del puesto, para la corporación activa (se calcula una vez)
+function pzBase(){
+  const K=C();if(K._pz)return K._pz;
+  const n=T().puestos.length,tot=new Float64Array(n),b1=new Int32Array(n).fill(-1),b2=new Int32Array(n).fill(-1),v1=new Float64Array(n),v2=new Float64Array(n);
+  lista().forEach((x,i)=>x.p.forEach(([pi,v])=>{tot[pi]+=v;if(x.ls)return;
+    if(v>v1[pi]){b2[pi]=b1[pi];v2[pi]=v1[pi];b1[pi]=i;v1[pi]=v;}else if(v>v2[pi]){b2[pi]=i;v2[pi]=v;}}));
+  return K._pz={tot,b1,b2,v1,v2};
+}
+// Zona de cada puesto: comuna/corregimiento si hay JAL por circunscripción; si no, municipio o localidad
+function pzZonas(){
+  const Tt=T();if(Tt._zon)return Tt._zon;
+  const z=Tt.puestos.map(p=>uNom(p.l));let tipo=esMuni()?"municipio":"localidad";
+  const J=Tt.corp.JAL;
+  if(J&&J.ambito==="sub"&&J.circs){const cnt={};
+    J.candidatos.forEach(x=>x.p.forEach(([pi,v])=>{const k=pi+"|"+x.c;cnt[k]=(cnt[k]||0)+v;}));
+    const best={};Object.entries(cnt).forEach(([k,v])=>{const [pi,ci]=k.split("|");if(!best[pi]||v>best[pi][1])best[pi]=[+ci,v];});
+    let hits=0;Object.entries(best).forEach(([pi,[ci]])=>{z[pi]=String(J.circs[ci]).replace(/^.*·\s*/,"");hits++;});
+    if(hits){tipo="comuna";Tt.puestos.forEach((p,i)=>{if(best[i]==null)z[i]="Sin comuna asignada";});}}
+  return Tt._zon={z,tipo};
+}
+function pzAnalizar(c){
+  const B=pzBase(),a=amb(),L=lista(),Z=pzZonas();
+  const enAmb=x=>a==="territorio"?true:(a==="sub"?x.c===c.c:x.l===c.l);
+  const scope=L.map((x,i)=>({x,i})).filter(o=>enAmb(o.x));
+  const ps=new Set();scope.forEach(o=>o.x.p.forEach(([pi])=>ps.add(pi)));
+  const mine=new Map(c.p),party=new Map(),rank=new Map();
+  scope.forEach(({x})=>{const mismo=x.pt===c.pt;x.p.forEach(([pi,v])=>{
+    if(mismo)party.set(pi,(party.get(pi)||0)+v);
+    if(!x.ls&&x!==c&&v>(mine.get(pi)||0))rank.set(pi,(rank.get(pi)||0)+1);});});
+  let sumTot=0;ps.forEach(pi=>sumTot+=B.tot[pi]);
+  const avg=sumTot?c.v/sumTot:0;
+  const tots=[...ps].map(pi=>B.tot[pi]).sort((x,y)=>x-y),med=tots.length?tots[Math.floor(tots.length/2)]:0;
+  const yo=L.indexOf(c);
+  const rows=[...ps].map(pi=>{
+    const t=B.tot[pi],v=mine.get(pi)||0,sh=t?v/t:0,idx=avg?sh/avg:0;
+    const cat=idx>=1.3?"bastion":idx>=.8?"solido":(t>=med?"oport":"marg");
+    const gan=B.b1[pi]===yo,rivI=gan?B.b2[pi]:B.b1[pi],rivV=gan?B.v2[pi]:B.v1[pi];
+    return {pi,n:T().puestos[pi].n,z:Z.z[pi],t,v,sh,idx,cat,pos:c.ls?null:(rank.get(pi)||0)+1,gan:!c.ls&&gan,
+      riv:rivI>=0?L[rivI]:null,dif:v-rivV,pp:party.get(pi)||0,juego:Math.max(0,Math.round(t*avg-v)),pv:c.v?v/c.v:0};});
+  return {rows,avg,med,tipo:Z.tipo,sumTot};
+}
 function renderPuestos(c){
-  const el=$("#puestosList");el.innerHTML="";const max=c.p.length?c.p[0][1]:1;
-  c.p.slice(0,60).forEach(([pi,v],k)=>{const p=T().puestos[pi],t=v/max;
-    const r=document.createElement("div");r.className="prow";
-    r.innerHTML=`<div class="rank num">${k+1}</div><div class="pinfo"><div class="pn">${esc(p.n)}</div><div class="pl">${esc(uNom(p.l))}</div></div>
-      <div class="pmet"><div class="pv num">${fmt(v)}</div><div class="ps num">${(v/c.v*100).toFixed(1)}%</div></div>
-      <div class="pbar"><i style="width:${(t*100).toFixed(1)}%;background:${scaleColor(t)}"></i></div>`;el.appendChild(r);});
-  if(c.p.length>60){const d=document.createElement("div");d.style.cssText="padding:12px 16px;font-size:12.5px;color:#9A8CC0";d.textContent="Y "+(c.p.length-60)+" puestos más con votos.";el.appendChild(d);}
+  const A=pzAnalizar(c);PZ.c=c;PZ.rows=A.rows;PZ.A=A;PZ.cat="todos";PZ.zona="";PZ.q="";PZ.hi=null;PZ.sort="v";PZ.dir=-1;
+  $("#pzQ").value="";
+  const R=A.rows,cnt=k=>R.filter(r=>r.cat===k),sv=a=>a.reduce((s,r)=>s+r.v,0),sj=a=>a.reduce((s,r)=>s+r.juego,0);
+  const bas=cnt("bastion"),op=cnt("oport"),gan=R.filter(r=>r.gan),best=[...R].sort((a,b)=>b.sh-a.sh)[0];
+  const zt=A.tipo==="comuna"?"comuna":(esMuni()?"municipio":"localidad");
+  $("#pzSub").textContent=`${fmt(R.length)} puestos en tu circunscripción · ${fmt(A.sumTot)} votos de ${corpLabel(corp).toLowerCase()} en juego.`;
+  const kp=(k,v,s,col)=>`<div class="pz-kpi" style="border-top-color:${col}"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
+  $("#pzKpis").innerHTML=
+    kp("Tu % promedio por puesto",pct(A.avg),best?`Máximo: ${pct(best.sh)} en ${esc(best.n)}`:"","var(--line-strong)")+
+    (c.ls?kp("Puestos","—","Las listas no compiten por posición","var(--line-strong)")
+      :kp("Puestos que ganas",`${fmt(gan.length)}<small>de ${fmt(R.length)}</small>`,gan.length?`${pct(sv(gan)/c.v,0)} de tus votos salen de ahí`:"Ningún puesto con el primer lugar","var(--ok)"))+
+    kp("Bastiones",`${fmt(bas.length)}<small>puestos</small>`,`${fmt(sv(bas))} votos · ${pct(c.v?sv(bas)/c.v:0,0)} de tu total`,PZ_CAT.bastion.c)+
+    kp("Oportunidades",`${fmt(op.length)}<small>puestos</small>`,`+${fmt(sj(op))} votos si llegas a tu promedio en ellos`,PZ_CAT.oport.c);
+  // Leyenda y chips
+  $("#pzLegend").innerHTML=Object.entries(PZ_CAT).map(([k,o])=>`<span><i style="background:${o.c}"></i>${o.n} <em>${fmt(cnt(k).length)}</em></span>`).join("")
+    +`<span><i style="background:none;border:2px dashed var(--ink);border-radius:0;height:0;width:14px;opacity:.6"></i>Tu promedio (${pct(A.avg)})</span>`;
+  const chips=[["todos","Todos",R.length,null],...Object.entries(PZ_CAT).map(([k,o])=>[k,o.n,cnt(k).length,o.c])];
+  if(!c.ls)chips.push(["gana","Donde ganas",gan.length,"var(--ok)"],["cerca","A menos de 50 votos del 1.º",R.filter(r=>!r.gan&&r.dif<0&&r.dif>=-50).length,null]);
+  $("#pzChips").innerHTML=chips.map(([k,l,n,col])=>`<button type="button" data-k="${k}" class="${k===PZ.cat?"on":""}">${col?`<i style="background:${col}"></i>`:""}${l} <small>${fmt(n)}</small></button>`).join("");
+  $("#pzChips").querySelectorAll("button").forEach(b=>b.onclick=()=>{PZ.cat=b.dataset.k;
+    $("#pzChips").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));pzTabla();pzChart();});
+  const zonas=[...new Set(R.map(r=>r.z))].sort((a,b)=>a.localeCompare(b,"es",{numeric:true}));
+  const zs=$("#pzZona");zs.style.display=zonas.length>1?"":"none";
+  zs.innerHTML=`<option value="">Todas las zonas</option>`+zonas.map(z=>`<option>${esc(z)}</option>`).join("");
+  zs.onchange=()=>{PZ.zona=zs.value;pzTabla();pzChart();};
+  $("#pzQ").oninput=e=>{PZ.q=e.target.value.trim().toUpperCase();pzTabla();};
+  $("#pzCsv").onclick=pzCsv;
+  pzZonasRender(c,A,zonas,zt);pzChart();pzTabla();
+}
+function pzFiltrados(){
+  return PZ.rows.filter(r=>(PZ.cat==="todos"||(PZ.cat==="gana"?r.gan:PZ.cat==="cerca"?(!r.gan&&r.dif<0&&r.dif>=-50):r.cat===PZ.cat))
+    &&(!PZ.zona||r.z===PZ.zona)&&(!PZ.q||r.n.toUpperCase().includes(PZ.q)));
+}
+function pzZonasRender(c,A,zonas,zt){
+  const card=$("#pzZonasCard");
+  if(zonas.length<2){card.style.display="none";return;}card.style.display="";
+  $("#pzZonasH").textContent=A.tipo==="comuna"?"Por comuna y corregimiento":(esMuni()?"Por municipio":"Por localidad");
+  $("#pzZonasP").textContent=`La barra es tu % de los votos en cada ${zt}; la marca naranja es tu promedio general (${pct(A.avg)}).`;
+  const g={};PZ.rows.forEach(r=>{const o=g[r.z]||(g[r.z]={z:r.z,v:0,t:0,n:0,j:0});o.v+=r.v;o.t+=r.t;o.n++;o.j+=r.juego;});
+  const L=Object.values(g).map(o=>({...o,sh:o.t?o.v/o.t:0})).sort((a,b)=>b.v-a.v);
+  const mx=Math.max(...L.map(o=>o.sh),A.avg,.0001)*1.08;
+  $("#pzZonas").innerHTML=L.map(o=>`<div class="pz-zrow" title="${esc(o.z)}: ${fmt(o.v)} de ${fmt(o.t)} votos en ${o.n} puestos">
+    <div class="zn">${esc(o.z)}</div>
+    <div class="zb"><i style="width:${(o.sh/mx*100).toFixed(1)}%"></i><u style="left:${(A.avg/mx*100).toFixed(1)}%"></u></div>
+    <div class="zv"><b>${fmt(o.v)}</b>${pct(o.sh)} · ${o.n} puestos</div></div>`).join("");
+}
+function pzChart(){
+  const el=$("#pzChart"),R=PZ.rows,A=PZ.A,F=new Set(pzFiltrados());
+  if(!R.length){el.innerHTML='<div class="pz-empty">Sin puestos para mostrar.</div>';return;}
+  const W=820,H=340,m={l:52,r:18,t:14,b:42},iw=W-m.l-m.r,ih=H-m.t-m.b;
+  const xMax=Math.max(...R.map(r=>r.t))*1.04,yMax=Math.max(.0001,...R.map(r=>r.sh),A.avg*1.5)*1.08,vMax=Math.max(1,...R.map(r=>r.v));
+  const X=t=>m.l+t/xMax*iw,Y=s=>m.t+ih-s/yMax*ih,Rr=v=>4+Math.sqrt(v/vMax)*10;
+  const nice=(mx,n)=>{const st=Math.pow(10,Math.floor(Math.log10(mx/n)));const s=[1,2,2.5,5,10].map(k=>k*st).find(k=>mx/k<=n)||st*10;const o=[];for(let v=0;v<=mx;v+=s)o.push(v);return o;};
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Dispersión de puestos: votos del puesto contra tu porcentaje">`;
+  nice(yMax,5).forEach(v=>{s+=`<line class="grid" x1="${m.l}" x2="${W-m.r}" y1="${Y(v)}" y2="${Y(v)}"/><text class="ax" x="${m.l-8}" y="${Y(v)+4}" text-anchor="end">${pct(v,v<.1&&v>0?1:0)}</text>`;});
+  nice(xMax,6).forEach(v=>{s+=`<text class="ax" x="${X(v)}" y="${H-m.b+16}" text-anchor="middle">${fmt(v)}</text>`;});
+  s+=`<text class="axt" x="${m.l+iw/2}" y="${H-6}" text-anchor="middle">Votos totales del puesto (${esc(corpLabel(corp).toLowerCase())})</text>`;
+  s+=`<text class="axt" transform="translate(13 ${m.t+ih/2}) rotate(-90)" text-anchor="middle">Tu % en el puesto</text>`;
+  s+=`<line class="avg" x1="${m.l}" x2="${W-m.r}" y1="${Y(A.avg)}" y2="${Y(A.avg)}"/><text class="avgt" x="${m.l+6}" y="${Y(A.avg)-6}" text-anchor="start">Tu promedio ${pct(A.avg)}</text>`;
+  const ord=[...R].sort((a,b)=>b.v-a.v);
+  ord.forEach(r=>{const on=F.has(r),k=R.indexOf(r);
+    s+=`<circle class="pt${PZ.hi===r.pi?" on":""}" data-k="${k}" cx="${X(r.t).toFixed(1)}" cy="${Y(r.sh).toFixed(1)}" r="${Rr(r.v).toFixed(1)}" fill="${PZ_CAT[r.cat].h}" style="opacity:${on?.9:.12}"/>`;});
+  ord.forEach(r=>{const k=R.indexOf(r);s+=`<circle class="hit" data-k="${k}" cx="${X(r.t).toFixed(1)}" cy="${Y(r.sh).toFixed(1)}" r="${Math.max(10,Rr(r.v)+3).toFixed(1)}"/>`;});
+  s+=`</svg><div class="pz-tip" id="pzTip"></div>`;el.innerHTML=s;
+  const tip=$("#pzTip");
+  el.querySelectorAll("circle.hit").forEach(h=>{const r=R[+h.dataset.k];
+    h.onmouseenter=()=>{tip.innerHTML=pzTipHtml(r);tip.style.display="block";};
+    h.onmousemove=e=>{const b=el.getBoundingClientRect();let x=e.clientX-b.left+14,y=e.clientY-b.top+14;
+      if(x+270>b.width)x=e.clientX-b.left-tip.offsetWidth-14;if(y+tip.offsetHeight>b.height)y=e.clientY-b.top-tip.offsetHeight-10;
+      tip.style.left=x+"px";tip.style.top=y+"px";};
+    h.onmouseleave=()=>tip.style.display="none";
+    h.onclick=()=>{PZ.hi=r.pi;PZ.cat="todos";PZ.zona="";PZ.q="";$("#pzQ").value="";$("#pzZona").value="";
+      $("#pzChips").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.k==="todos"));
+      pzChart();pzTabla();const tr=document.querySelector(`#pzTable tr[data-pi="${r.pi}"]`);if(tr)tr.scrollIntoView({behavior:"smooth",block:"center"});};});
+}
+function pzTipHtml(r){
+  const row=(a,b)=>`<div class="r"><span>${a}</span><span>${b}</span></div>`;
+  return `<b>${esc(r.n)}</b>`+row("Zona",esc(r.z))+row("Tus votos",fmt(r.v))+row("Votos del puesto",fmt(r.t))+row("Tu % en el puesto",pct(r.sh))
+    +row("Índice",Math.round(r.idx*100))+row("Tipo",PZ_CAT[r.cat].n)
+    +(r.pos?row("Tu posición","#"+r.pos):"")+(r.riv&&!r.gan?row("Ganó",esc(cap(r.riv.n))):"")+(r.juego?row("Votos en juego","+"+fmt(r.juego)):"");
+}
+const PZ_COLS=[
+  ["n","Puesto",r=>`<td class="pn" title="${esc(r.n)}">${esc(r.n)}</td>`,r=>r.n],
+  ["z","Zona",r=>`<td class="zn">${esc(r.z)}</td>`,r=>r.z],
+  ["v","Tus votos",r=>`<td><b>${fmt(r.v)}</b></td>`,r=>r.v],
+  ["pv","% de tu total",r=>`<td>${pct(r.pv)}</td>`,r=>r.pv],
+  ["t","Votos del puesto",r=>`<td>${fmt(r.t)}</td>`,r=>r.t],
+  ["sh","% en el puesto",r=>`<td>${pct(r.sh)}<span class="pz-sharebar"><i style="width:${Math.min(100,r.sh/Math.max(PZ.A.avg*2,.0001)*100).toFixed(0)}%;background:${PZ_CAT[r.cat].c}"></i></span></td>`,r=>r.sh],
+  ["idx","Índice",r=>`<td>${Math.round(r.idx*100)}</td>`,r=>r.idx],
+  ["cat","Tipo",r=>`<td style="text-align:left"><span class="pz-cat"><i style="background:${PZ_CAT[r.cat].c}"></i>${PZ_CAT[r.cat].n}</span></td>`,r=>["bastion","solido","oport","marg"].indexOf(r.cat)],
+  ["pos","Posición",r=>`<td>${r.pos?"#"+r.pos:"—"}</td>`,r=>r.pos||1e9],
+  ["dif","Frente al rival",r=>`<td class="rv" title="${r.riv?esc(r.riv.n):""}">${r.riv&&r.pos?(r.gan?`<span class="pz-up">+${fmt(r.dif)}</span> sobre ${esc(cap(r.riv.n).split(" ").slice(0,2).join(" "))}`:`<span class="pz-dn">−${fmt(-r.dif)}</span> de ${esc(cap(r.riv.n).split(" ").slice(0,2).join(" "))}`):"—"}</td>`,r=>r.dif],
+  ["pp","Votos del partido",r=>`<td>${fmt(r.pp)}</td>`,r=>r.pp],
+  ["juego","Votos en juego",r=>`<td>${r.juego?"+"+fmt(r.juego):"—"}</td>`,r=>r.juego]];
+function pzTabla(){
+  const F=pzFiltrados(),col=PZ_COLS.find(c=>c[0]===PZ.sort),d=PZ.dir;
+  F.sort((a,b)=>{const x=col[3](a),y=col[3](b);return (typeof x==="string"?x.localeCompare(y,"es",{numeric:true}):x-y)*d;});
+  const head=`<thead><tr>${PZ_COLS.map(([k,l])=>`<th data-k="${k}" class="${k===PZ.sort?"sorted":""}">${l}${k===PZ.sort?`<span class="ar">${d<0?"▼":"▲"}</span>`:""}</th>`).join("")}</tr></thead>`;
+  const body=F.length?F.map(r=>`<tr data-pi="${r.pi}" class="${PZ.hi===r.pi?"on":""}">${PZ_COLS.map(c=>c[2](r)).join("")}</tr>`).join("")
+    :`<tr><td colspan="${PZ_COLS.length}" class="pz-empty" style="text-align:center">Ningún puesto con ese filtro.</td></tr>`;
+  const t=$("#pzTable");t.innerHTML=head+"<tbody>"+body+"</tbody>";
+  t.querySelectorAll("th").forEach(th=>th.onclick=()=>{const k=th.dataset.k;if(PZ.sort===k)PZ.dir*=-1;else{PZ.sort=k;PZ.dir=(k==="n"||k==="z"||k==="cat"||k==="pos")?1:-1;}pzTabla();});
+  t.querySelectorAll("tbody tr[data-pi]").forEach(tr=>tr.onclick=()=>{PZ.hi=+tr.dataset.pi;pzTabla();pzChart();});
+}
+function pzCsv(){
+  const c=PZ.c;if(!c)return;
+  const q=v=>{v=v==null?"":String(v);return /[";\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;};
+  const H=["Puesto","Zona","Tus votos","% de tu total","Votos del puesto","% en el puesto","Indice","Tipo","Posicion","Ganador del puesto","Diferencia con el rival","Votos del partido","Votos en juego"];
+  const L=pzFiltrados().sort((a,b)=>b.v-a.v).map(r=>[r.n,r.z,r.v,(r.pv*100).toFixed(2),Math.round(r.t),(r.sh*100).toFixed(2),Math.round(r.idx*100),PZ_CAT[r.cat].n,
+    r.pos||"",r.gan?c.n:(r.riv?r.riv.n:""),r.pos?r.dif:"",r.pp,r.juego]);
+  const csv="﻿"+[H,...L].map(f=>f.map(q).join(";")).join("\r\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));
+  a.download=("puestos_"+c.n+"_"+corp).replace(/[^\wÁÉÍÓÚÑáéíóúñ]+/g,"_")+".csv";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);
 }
 function renderUnidades(c,porU){
   const el=$("#locList");el.innerHTML="";const max=porU[0].v;
@@ -845,75 +1089,10 @@ function applyMeta(){
   $("#metaPill").innerHTML=`<span><b>${esc(T().nombre)}</b> · ${S.meta.anio} · ${fmt(n)} candidatos en ${esc(corpLabel(corp).toLowerCase())}</span>`;
 }
 
-/* ============ Pulso Social ============ */
-async function loadSentimientos() {
-  try {
-    const resp = await fetch('./data/sentimiento.json');
-    if (!resp.ok) { console.log("No hay análisis de sentimientos aún"); return; }
-    const datos = await resp.json();
-    renderPulso(datos);
-  } catch (err) { console.log("Error cargando sentimientos:", err); }
-}
-
-function renderPulso(datos) {
-  const el = document.getElementById("pulsoContent");
-  el.innerHTML = "";
-  
-  let html = `<div style="max-width:800px;margin:0 auto">
-    <p style="font-size:12px;color:#9A8CC0;margin-bottom:20px">Actualizado: ${datos.actualizado}</p>`;
-  
-  const cands = Object.entries(datos.candidatos).sort((a,b) => b[1].sentimiento_promedio - a[1].sentimiento_promedio);
-  
-  cands.forEach(([nombre, d]) => {
-    const score = d.sentimiento_promedio;
-    const color = score > 0.5 ? "#00C97B" : score < -0.5 ? "#FF2D6F" : "#9A8CC0";
-    const anchoPct = Math.abs(score) * 100;
-    
-    html += `<div style="margin-bottom:22px;padding:14px;background:#F6F4FF;border-radius:10px;border-left:3px solid ${color}">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <strong style="color:#150B3D">${esc(nombre)}</strong>
-        <span style="font-size:18px;font-weight:700;color:${color}">${score.toFixed(2)}</span>
-      </div>
-      <div style="height:8px;background:#E7DFFB;border-radius:4px;overflow:hidden;margin-bottom:8px">
-        <i style="display:block;height:100%;width:${anchoPct}%;background:${color};border-radius:4px"></i>
-      </div>
-      <div style="font-size:12px;color:#9A8CC0;margin-bottom:8px">${d.posts} posts analizados</div>`;
-    
-    if (d.temas && d.temas.length > 0) {
-      html += `<div style="font-size:11px">Temas: ${d.temas.map(t => `<span style="display:inline-block;background:#FFE8B0;padding:2px 6px;border-radius:3px;margin-right:4px">${esc(t.tema)} (${t.menciones})</span>`).join("")}</div>`;
-    }
-    
-    html += `</div>`;
-  });
-  
-  html += `</div>`;
-  el.innerHTML = html;
-}
-
-loadSentimientos();
-setInterval(loadSentimientos, 5 * 60 * 1000);
-
 /* ============ Inicio ============ */
 DATA=demoData();ANAL=demoAnal();terr="BOGOTA";setModo("cand");
 </script>
 <script src="js/analisis-modal.js"></script>
-<!-- Link a Dashboard Electoral 2027 -->
-<div style="position: fixed; top: 100px; right: 20px; z-index: 998;">
-    <a href="soacha-2027.html" style="
-        display: inline-block;
-        background: #FFB020;
-        color: white;
-        padding: 12px 18px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 12px;
-        box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
-        transition: all 0.3s ease;
-        font-family: 'Archivo', sans-serif;
-    " onmouseover="this.style.background='#E08A00'" onmouseout="this.style.background='#FFB020'">
-        Electoral 2027
-    </a>
-</div><script src="js/analisis-soacha.js" defer></script>
+<script src="js/analisis-soacha.js" defer></script>
 <a href="index.html" style="position:fixed;left:20px;bottom:20px;z-index:9999;background:#150B3D;color:#fff;border:1px solid #FFB020;padding:10px 16px;border-radius:8px;font:600 13px Inter,Segoe UI,sans-serif;text-decoration:none">&larr; Inicio</a></body>
 </html>
