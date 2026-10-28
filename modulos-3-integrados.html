@@ -543,9 +543,25 @@ window.VFI_LOCAL = (function () {
     const alertas = [...porDoc.values()].map(p => {
       const casos = [...p.casos.values()].sort((a, b) => (orden[a.nivel] ?? 9) - (orden[b.nivel] ?? 9));
       const ctos = [...p.contratos.values()].sort((a, b) => valorNum(b.valor) - valorNum(a.valor));
+      // ¿Qué lo inhabilita HOY? Una inhabilidad SIRI con fin calculado posterior a
+      // hoy, o figurar en el boletín (inhabilita mientras no pague).
+      const inhab = casos.filter(c => c.vigente === "SI" &&
+        (c.fuente.startsWith("Bol") || c.fin_inhabilidad));
+      const desdeSiri = inhab.filter(c => c.fuente.startsWith("SIRI"))
+        .map(c => fecha(c.fecha_sancion)).filter(Boolean).sort((x, y) => x - y)[0] || null;
+      ctos.forEach(c => {
+        c.vigente = contratoVigente(c.estado);
+        const ff = fecha(c.fecha_firma);
+        c.firmado_despues = !!(desdeSiri && ff && ff >= desdeSiri);
+      });
+      const vigentes = ctos.filter(c => c.vigente);
       return { documento: p.documento, proveedor_secop: p.proveedor_secop,
         nivel: casos.reduce((n, c) => peor(c.nivel, n), "INFO"),
         fuentes: [...new Set(casos.map(c => c.fuente))], casos, contratos: ctos,
+        inhabilitado_hoy: inhab.length > 0, contratos_vigentes: vigentes.length,
+        con_contrato_vigente: inhab.length > 0 && vigentes.length > 0,
+        motivo_hoy: inhab.map(c => c.fuente.startsWith("Bol") ? "Responsable fiscal en el boletín (" + c.lugar + ")"
+          : c.sancion + " hasta " + c.fin_inhabilidad).join(" · "),
         valor_total: ctos.reduce((t, c) => t + valorNum(c.valor), 0) };
     });
     alertas.sort((a, b) => (orden[a.nivel] ?? 9) - (orden[b.nivel] ?? 9) || b.valor_total - a.valor_total);
@@ -556,9 +572,15 @@ window.VFI_LOCAL = (function () {
       total_contratos: contratos.length, registros_siri: B.siri.meta.registros,
       registros_boletin: B.boletin.meta.registros, boletin_meta: B.boletin.meta,
       total_alertas: alertas.length, total_casos: alertas.reduce((t, a) => t + a.casos.length, 0),
-      criticas: n("CRITICA"), altas: n("ALTA"), medias: n("MEDIA"), info: n("INFO"), alertas
+      criticas: n("CRITICA"), altas: n("ALTA"), medias: n("MEDIA"), info: n("INFO"),
+      hoy: alertas.filter(a => a.con_contrato_vigente).length, alertas
     };
   }
+  // Estados de SECOP II en que el contrato sigue corriendo. Terminado, cerrado,
+  // liquidado, cancelado o cedido ya no cuentan.
+  const contratoVigente = e => { const t = sinTilde(e);
+    if (/TERMINADO|CERRADO|LIQUIDADO|CANCELADO|CEDIDO|ANULADO|BORRADOR/.test(t)) return false;
+    return /EJECUCION|ACTIVO|MODIFICADO|FIRMADO|SUSPENDIDO|PRORROG|APROBADO|EN CURSO/.test(t); };
   const valorNum = v => { const x = parseInt(String(v || "0").replace(/[^\d-]/g, ""), 10); return isNaN(x) ? 0 : x; };
 
   // ---- Daño a la entidad: fallos y sanciones cuya entidad afectada es la elegida ----
@@ -826,8 +848,9 @@ window.VFI_LOCAL = (function () {
       tarjeta("Contratos analizados", RES.total_contratos, "#2563EB", "Entidad: " + (RES.entidad||"")) +
       tarjeta("Proveedores con antecedentes", RES.total_alertas, "#150B3D",
               miles(RES.total_casos) + " casos distintos · " + (RES.fecha_analisis||"")) +
-      tarjeta("Críticos", RES.criticas, COLOR.CRITICA, "Proveedores con contrato posterior a la inhabilidad") +
-      tarjeta("Altos", RES.altas, COLOR.ALTA, "Proveedores con inhabilidad vigente o fallo fiscal") +
+      tarjeta("Críticos", RES.criticas, COLOR.CRITICA, "Contrato firmado después de la inhabilidad") +
+      tarjeta("Inhabilitados con contrato vigente", RES.hoy, COLOR.CRITICA,
+              "Sanción o fallo vigente hoy y contrato aún en ejecución") +
       '</div>';
 
     if (hayAlertas) {
@@ -839,10 +862,11 @@ window.VFI_LOCAL = (function () {
 
     h += '<div class="panel">' +
       '<div class="vfi-pills">' +
-        ["TODAS","CRITICA","ALTA","MEDIA","INFO"].map(n =>
+        ["HOY","TODAS","CRITICA","ALTA","MEDIA","INFO"].map(n =>
           '<button class="vfi-pill'+(filtro===n?" on":"")+'" data-n="'+n+'"'+
-          (filtro===n?' style="background:'+(COLOR[n]||"#150B3D")+'"':"")+'>'+
-          (n==="TODAS"?"Todas":n)+'</button>').join("") +
+          (filtro===n?' style="background:'+(n==="HOY"?COLOR.CRITICA:(COLOR[n]||"#150B3D"))+'"':
+            (n==="HOY"?' style="border:1.5px solid '+COLOR.CRITICA+';color:'+COLOR.CRITICA+'"':""))+'>'+
+          (n==="TODAS"?"Todas":n==="HOY"?"⚠ Inhabilitado con contrato vigente · "+miles(RES.hoy||0):n)+'</button>').join("") +
       '</div>' +
       '<input id="vfi-busca" placeholder="Buscar por proveedor, documento, sanción, entidad u objeto…" ' +
       'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:13px;' +
@@ -966,7 +990,8 @@ window.VFI_LOCAL = (function () {
   function filtradas() {
     const q = (($("vfi-busca")||{}).value || "").toLowerCase().trim();
     return (RES.alertas||[]).filter(a => {
-      if (filtro !== "TODAS" && a.nivel !== filtro) return false;
+      if (filtro === "HOY") { if (!a.con_contrato_vigente) return false; }
+      else if (filtro !== "TODAS" && a.nivel !== filtro) return false;
       if (!q) return true;
       return [a.proveedor_secop, a.documento,
               ...a.casos.flatMap(c => [c.sancion, c.lugar, c.autoridad, c.nombre_fuente]),
@@ -990,7 +1015,10 @@ window.VFI_LOCAL = (function () {
         '<td><span class="vfi-nivel" style="background:'+(COLOR[a.nivel]||"#5C4F82")+'">'+esc(a.nivel)+'</span></td>' +
         '<td><b>'+esc(a.proveedor_secop)+'</b><span class="vf-sub" style="display:block;font-size:11px;color:var(--muted)">'+esc(a.documento)+'</span>' +
         '<span style="display:block;font-size:11px;color:var(--muted)">Contrata con: ' +
-          esc([...new Set(a.contratos.map(c => c.entidad))].join(" · ")) + '</span></td>' +
+          esc([...new Set(a.contratos.map(c => c.entidad))].join(" · ")) + '</span>' +
+        (a.con_contrato_vigente ? '<span class="vfi-nivel" style="background:'+COLOR.CRITICA+';display:inline-block;margin-top:5px">' +
+          '⚠ INHABILITADO · ' + a.contratos_vigentes + ' CONTRATO' + (a.contratos_vigentes===1?"":"S") + ' VIGENTE' +
+          (a.contratos_vigentes===1?"":"S") + '</span>' : "") + '</td>' +
         '<td>'+resumenCasos(a)+'</td>' +
         '<td style="font-size:12px">'+a.fuentes.map(esc).join("<br>")+'</td>' +
         '<td class="vfi-mono">'+esc(cop(a.valor_total))+'<span style="display:block;font-size:11px;' +
@@ -1033,11 +1061,21 @@ window.VFI_LOCAL = (function () {
         '<td style="font-size:12px">'+esc(c.fecha_sancion||"—")+
         (c.fin_inhabilidad ? peq("Hasta " + c.fin_inhabilidad + (c.vigente==="SI"?" (vigente)":"")) : "")+'</td></tr>').join("") +
       '</tbody></table></div>';
+    if (a.con_contrato_vigente) h += '<div class="vfi-aviso" style="margin:14px 0 0;border-color:'+COLOR.CRITICA+'">' +
+      '<b>Inhabilitado hoy y con contrato vigente.</b> Motivo: ' + esc(a.motivo_hoy) + '. ' +
+      'Revise en SECOP el estado real del contrato y pida el certificado oficial: si se confirma, la entidad ' +
+      'debe evaluar la terminación o cesión del contrato (Ley 80 de 1993, art. 9) y puede haber falta disciplinaria.</div>';
+    else if (a.inhabilitado_hoy) h += '<div class="vfi-msg" style="margin:14px 0 0">Tiene inhabilidad o fallo vigente, ' +
+      'pero <b>ningún contrato en ejecución</b> con esta entidad: hoy no hay un contrato que revisar, solo vigilar que no le adjudiquen otro.</div>';
     h += '<div style="height:14px"></div>' + sub(a.contratos.length + ' contrato' + (a.contratos.length===1?"":"s") +
          ' en SECOP II · ' + esc(cop(a.valor_total)));
     h += '<div style="overflow-x:auto"><table class="vfi-sub"><thead><tr><th>Entidad contratante</th><th>Estado</th>' +
          '<th>Firma</th><th class="r">Valor</th><th>Objeto</th></tr></thead><tbody>' +
-      a.contratos.map(c => '<tr><td>'+esc(c.entidad)+peq(c.id)+'</td><td>'+esc(c.estado||"—")+'</td>' +
+      a.contratos.map(c => '<tr><td>'+esc(c.entidad)+peq(c.id)+'</td><td>'+esc(c.estado||"—")+
+        (c.vigente ? '<span class="vfi-nivel" style="background:'+(a.inhabilitado_hoy?COLOR.CRITICA:"#2563EB")+
+          ';display:inline-block;margin-top:3px">VIGENTE</span>' : peq("ya no corre"))+
+        (c.firmado_despues ? '<span style="display:block;font-size:11px;font-weight:700;color:'+COLOR.CRITICA+
+          '">Firmado después de la sanción</span>' : "")+'</td>' +
         '<td style="white-space:nowrap">'+esc(c.fecha_firma||"—")+'</td><td class="vfi-mono">'+esc(cop(c.valor))+'</td>' +
         '<td style="font-size:12px">'+esc(c.objeto)+'</td></tr>').join("") +
       '</tbody></table></div>';
