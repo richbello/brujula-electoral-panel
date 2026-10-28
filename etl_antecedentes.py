@@ -12,7 +12,11 @@ en el navegador contra SECOP II, sin depender de ningun servidor.
 Uso
 ---
     python etl_antecedentes.py --siri siri_antecedentes.csv \
-                               --boletin boletin_responsables_fiscales.csv
+                               --boletin-pdf Boletin_Trimestre_Julio_Agosto_Septiembre_2026.pdf
+
+    --boletin-pdf (recomendado) lee el PDF trimestral oficial de la CGR: trae
+    TODOS los casos, uno por fallo. --boletin lee el CSV de datos.gov.co, que
+    solo trae una fila por responsable y pierde los fallos adicionales.
 
 Produce:
     data/vigilancia/siri.json
@@ -24,7 +28,10 @@ Formato (por documento normalizado, solo digitos):
                   entidad_sancionado], ...]}}
     boletin.json {"meta": {...}, "docs": {"<doc>": [i, ...]},
                   "filas": [[nombre, ente_que_reporta, entidad_afectada,
-                  departamento, municipio], ...]}
+                  departamento, municipio, tr, r, tipo_y_documento], ...]}
+                 Con --boletin-pdf hay una fila por caso; tr = I (individual)
+                 o S (solidario) y r = registros de ese caso. Departamento y
+                 municipio son la sede del ente que reporta, no el lugar del dano.
 
 El Boletin trae los NIT con el digito de verificacion pegado
 ("NIT 8020062581") y SECOP II suele traerlos sin el ("802006258"). Cuando el
@@ -122,6 +129,33 @@ def construir_boletin(ruta: Path) -> dict:
             "docs": docs, "filas": filas}
 
 
+def construir_boletin_pdf(ruta: Path) -> dict:
+    from boletin_pdf import leer, validar
+
+    meta, casos = leer(ruta)
+    errores = validar(casos)
+    if errores:
+        raise SystemExit("El PDF no se leyo bien:\n  " + "\n  ".join(errores[:20]))
+    filas: list[list] = []
+    docs: dict[str, list] = {}
+    for c in casos:
+        i = len(filas)
+        documento = (c["tipo_doc"] + " " + c["documento"]).strip()
+        filas.append([limpio(c["nombre"]), limpio(c["ente"]), limpio(c["entidad"]),
+                      limpio(c["depto"]), limpio(c["municipio"]), c["tr"], int(c["r"]),
+                      documento])
+        for k in claves_boletin(documento) if c["documento"].isdigit() else []:
+            docs.setdefault(k, []).append(i)
+    return {"meta": {"fuente": "Boletin de Responsables Fiscales - Contraloria General",
+                     "origen": "PDF trimestral oficial (SIBOR)",
+                     "numero": meta.get("numero"), "corte": meta.get("corte"),
+                     "registros": len(filas),
+                     "responsables": len({f[7] for f in filas if f[7]}),
+                     "sin_documento": sum(1 for f in filas if not f[7]),
+                     "generado": dt.date.today().isoformat()},
+            "docs": docs, "filas": filas}
+
+
 def escribir(nombre: str, datos: dict) -> None:
     SALIDA.mkdir(parents=True, exist_ok=True)
     p = SALIDA / nombre
@@ -132,11 +166,14 @@ def escribir(nombre: str, datos: dict) -> None:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--siri", type=Path)
-    ap.add_argument("--boletin", type=Path)
+    ap.add_argument("--boletin", type=Path, help="CSV de datos.gov.co (resumido)")
+    ap.add_argument("--boletin-pdf", type=Path, help="PDF trimestral oficial (completo)")
     a = ap.parse_args()
-    if not (a.siri or a.boletin):
-        ap.error("indique --siri y/o --boletin")
+    if not (a.siri or a.boletin or a.boletin_pdf):
+        ap.error("indique --siri, --boletin o --boletin-pdf")
     if a.siri:
         escribir("siri.json", construir_siri(a.siri))
-    if a.boletin:
+    if a.boletin_pdf:
+        escribir("boletin.json", construir_boletin_pdf(a.boletin_pdf))
+    elif a.boletin:
         escribir("boletin.json", construir_boletin(a.boletin))

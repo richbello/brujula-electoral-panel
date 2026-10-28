@@ -84,6 +84,8 @@ tr:last-child td{border-bottom:0}
 .vfi-mono{font-family:ui-monospace,monospace;font-weight:700;text-align:right;white-space:nowrap}
 .vfi-det{background:#F8F6FF}
 .vfi-det td{padding:16px 20px!important}
+.vfi-det table.vfi-sub{width:100%;font-size:12.5px;background:#fff;border-radius:8px}
+.vfi-det table.vfi-sub th,.vfi-det table.vfi-sub td{padding:8px 10px!important;vertical-align:top}
 .vfi-campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px 20px}
 .vfi-campo .k{font-size:10.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
 .vfi-campo .v{font-size:13px;color:var(--navy);line-height:1.45}
@@ -374,7 +376,34 @@ window.VFI_LOCAL = (function () {
   }
   function boletinDe(B, doc) {
     return (B.boletin.docs[doc] || []).map(i => { const r = B.boletin.filas[i];
-      return { nombre: r[0], autoridad: r[1], entidad: r[2], depto: r[3], municipio: r[4] }; });
+      return { nombre: r[0], autoridad: r[1], entidad: r[2], depto: r[3], municipio: r[4],
+               tr: r[5] || "", r: r[6] || 1, documento: r[7] || "" }; });
+  }
+  const TR = { I: "Individual", S: "Solidario" };
+  const trTxt = b => b.tr ? (TR[b.tr] || b.tr) + (b.r > 1 ? " · " + b.r + " registros" : "") : "";
+
+  // SIRI repite la misma sanción una vez por cada autoridad que la tramitó
+  // (primera y segunda instancia). Se agrupa en un solo caso.
+  function siriCasos(B, doc) {
+    const m = new Map();
+    siriDe(B, doc).forEach(s => {
+      const k = [s.sancion, s.fecha, s.entidad, s.anos, s.meses, s.dias].join("|");
+      if (!m.has(k)) m.set(k, Object.assign({}, s, { autoridades: [] }));
+      if (s.autoridad && !m.get(k).autoridades.includes(s.autoridad)) m.get(k).autoridades.push(s.autoridad);
+    });
+    return [...m.values()].map(s => Object.assign(s, { autoridad: s.autoridades.join(" · ") }));
+  }
+  // El NIT puede llegar con o sin dígito de verificación; un caso del boletín
+  // se identifica por responsable + entidad afectada + TR + ente que reporta.
+  function boletinCasos(B, doc) {
+    const claves = [doc];
+    if (doc.length === 10) claves.push(doc.slice(0, 9));
+    const vistos = new Set(), out = [];
+    claves.forEach(k => boletinDe(B, k).forEach(b => {
+      const id = [b.documento || b.nombre, b.entidad, b.tr, b.autoridad].join("|");
+      if (vistos.has(id)) return; vistos.add(id); out.push(b);
+    }));
+    return out;
   }
 
   // Misma respuesta que POST /api/vfi/buscar del backend.
@@ -382,19 +411,12 @@ window.VFI_LOCAL = (function () {
     const B = await cargar();
     const doc = norm(docTxt);
     const hallazgos = [];
-    siriDe(B, doc).forEach(s => hallazgos.push({ fuente: "SIRI (Procuraduria)", nombre: s.nombre,
+    siriCasos(B, doc).forEach(s => hallazgos.push({ fuente: "SIRI (Procuraduria)", nombre: s.nombre,
       tipo: s.tipo, sancion: s.sancion, fecha: s.fecha, autoridad: s.autoridad, entidad: s.entidad }));
-    // El NIT puede llegar con o sin dígito de verificación.
-    const claves = [doc];
-    if (doc.length === 10) claves.push(doc.slice(0, 9));
-    const vistos = new Set();
-    claves.forEach(k => boletinDe(B, k).forEach(b => {
-      const id = b.nombre + "|" + b.entidad + "|" + b.autoridad;
-      if (vistos.has(id)) return; vistos.add(id);
-      hallazgos.push({ fuente: "Boletin (Contraloria)", nombre: b.nombre, tipo: "FISCAL",
-        sancion: "RESPONSABILIDAD FISCAL", fecha: "", autoridad: b.autoridad,
-        entidad: b.entidad ? "Entidad afectada: " + b.entidad : "" });
-    }));
+    boletinCasos(B, doc).forEach(b => hallazgos.push({ fuente: "Boletin (Contraloria)", nombre: b.nombre,
+      tipo: "FISCAL" + (b.tr ? " · " + trTxt(b) : ""), sancion: "RESPONSABILIDAD FISCAL", fecha: "",
+      autoridad: b.autoridad + (b.municipio ? " (" + b.municipio + ")" : ""),
+      entidad: b.entidad ? "Entidad afectada: " + b.entidad : "" }));
     return { documento: doc, total: hallazgos.length, hallazgos };
   }
 
@@ -429,7 +451,9 @@ window.VFI_LOCAL = (function () {
     log("[SIRI] Procuraduría (SIRI) y Boletín: cargando índices…");
     const B = await cargar();
     log("[SIRI] SIRI cargado: " + B.siri.meta.registros.toLocaleString("es-CO") + " registros");
-    log("[Boletín] Boletín cargado: " + B.boletin.meta.registros.toLocaleString("es-CO") + " registros");
+    const bm = B.boletin.meta;
+    log("[Boletín] Boletín cargado: " + bm.registros.toLocaleString("es-CO") + " casos" +
+        (bm.numero ? " (N° " + bm.numero + ", corte " + bm.corte + ")" : ""));
 
     // Un "like '%USME%'" sobre todo SECOP II obliga a recorrer millones de filas y
     // datos.gov.co lo corta por tiempo. Primero se usa el buscador indexado ($q)
@@ -456,18 +480,36 @@ window.VFI_LOCAL = (function () {
     }
     log("[SECOP] Total contratos SECOP: " + contratos.length.toLocaleString("es-CO") + ". Cruzando…");
 
-    const hoy = new Date(), alertas = [];
+    // Una fila por proveedor. Dentro van todos sus casos (cada antecedente
+    // distinto) y todos sus contratos, sin repetir combinaciones.
+    const hoy = new Date(), porDoc = new Map();
+    const orden = { CRITICA: 0, ALTA: 1, MEDIA: 2, INFO: 3 };
+    const peor = (x, y) => (orden[x] ?? 9) <= (orden[y] ?? 9) ? x : y;
+
     contratos.forEach(c => {
       const doc = norm(c.documento_proveedor);
       if (!doc) return;
+      const siri = siriCasos(B, doc), bol = boletinCasos(B, doc);
+      if (!siri.length && !bol.length) return;
       const ff = fecha(c.fecha_de_firma);
-      const base = { documento: doc, proveedor_secop: c.proveedor_adjudicado || "",
-        entidad: c.nombre_entidad || "", valor: c.valor_del_contrato || "",
-        estado: c.estado_contrato || "",
+      let p = porDoc.get(doc);
+      if (!p) {
+        p = { documento: doc, proveedor_secop: c.proveedor_adjudicado || "", nivel: "INFO",
+              casos: new Map(), contratos: new Map() };
+        porDoc.set(doc, p);
+      }
+      const idc = c.id_contrato || [c.nombre_entidad, c.fecha_de_firma, c.valor_del_contrato].join("|");
+      p.contratos.set(idc, { id: c.id_contrato || "", entidad: c.nombre_entidad || "",
+        valor: c.valor_del_contrato || "", estado: c.estado_contrato || "",
         fecha_firma: c.fecha_de_firma ? String(c.fecha_de_firma).split("T")[0] : "",
-        objeto: String(c.objeto_del_contrato || "").slice(0, 200) };
+        objeto: String(c.objeto_del_contrato || "").slice(0, 200) });
 
-      siriDe(B, doc).forEach(s => {
+      const sumar = (k, caso, nivel, motivo) => {
+        const prev = p.casos.get(k);
+        if (!prev) p.casos.set(k, Object.assign(caso, { nivel, motivo }));
+        else if (peor(nivel, prev.nivel) !== prev.nivel) Object.assign(prev, { nivel, motivo });
+      };
+      siri.forEach(s => {
         const fi = fecha(s.fecha), fin = finInhab(fi, s.anos, s.meses, s.dias);
         const tiene = /INHABILIDAD/i.test(s.sancion || "") || !!fin;
         const vigente = !!(fin && fin > hoy);
@@ -477,28 +519,38 @@ window.VFI_LOCAL = (function () {
           else { nivel = "ALTA"; motivo = "Inhabilidad vigente (contrato anterior; vigilar renovacion)"; }
         } else if (tiene) { nivel = "MEDIA"; motivo = "Antecedente con inhabilidad vencida"; }
         else { nivel = "INFO"; motivo = "Antecedente sin inhabilidad (multa/amonestacion)"; }
-        alertas.push(Object.assign({}, base, { fuente: "SIRI (Procuraduria)", nivel, motivo,
-          nombre_fuente: s.nombre, tipo: s.tipo, sancion: s.sancion, fecha_sancion: s.fecha,
-          fin_inhabilidad: dmy(fin), vigente: vigente ? "SI" : "NO", autoridad: s.autoridad }));
+        sumar("S|" + [s.sancion, s.fecha, s.entidad, s.anos, s.meses, s.dias].join("|"), {
+          fuente: "SIRI (Procuraduria)", nombre_fuente: s.nombre, tipo: s.tipo, sancion: s.sancion,
+          fecha_sancion: s.fecha, fin_inhabilidad: dmy(fin), vigente: vigente ? "SI" : "NO",
+          autoridad: s.autoridad, lugar: s.entidad }, nivel, motivo);
       });
-
-      boletinDe(B, doc).forEach(b => alertas.push(Object.assign({}, base, {
-        fuente: "Boletin (Contraloria)", nivel: "ALTA", motivo: "Responsable fiscal con contrato publico",
-        nombre_fuente: b.nombre, tipo: "FISCAL", sancion: "RESPONSABILIDAD FISCAL", fecha_sancion: "",
-        fin_inhabilidad: "", vigente: "SI", autoridad: b.autoridad })));
+      bol.forEach(b => sumar("B|" + [b.entidad, b.tr, b.autoridad].join("|"), {
+        fuente: "Boletin (Contraloria)", nombre_fuente: b.nombre, tipo: "FISCAL",
+        sancion: "RESPONSABILIDAD FISCAL", fecha_sancion: "", fin_inhabilidad: "", vigente: "SI",
+        autoridad: b.autoridad + (b.municipio ? " (" + b.municipio + ")" : ""),
+        lugar: b.entidad, responsabilidad: trTxt(b) }, "ALTA", "Responsable fiscal con contrato publico"));
     });
 
-    const orden = { CRITICA: 0, ALTA: 1, MEDIA: 2, INFO: 3 };
-    alertas.sort((a, b) => (orden[a.nivel] ?? 9) - (orden[b.nivel] ?? 9));
+    const alertas = [...porDoc.values()].map(p => {
+      const casos = [...p.casos.values()].sort((a, b) => (orden[a.nivel] ?? 9) - (orden[b.nivel] ?? 9));
+      const ctos = [...p.contratos.values()].sort((a, b) => valorNum(b.valor) - valorNum(a.valor));
+      return { documento: p.documento, proveedor_secop: p.proveedor_secop,
+        nivel: casos.reduce((n, c) => peor(c.nivel, n), "INFO"),
+        fuentes: [...new Set(casos.map(c => c.fuente))], casos, contratos: ctos,
+        valor_total: ctos.reduce((t, c) => t + valorNum(c.valor), 0) };
+    });
+    alertas.sort((a, b) => (orden[a.nivel] ?? 9) - (orden[b.nivel] ?? 9) || b.valor_total - a.valor_total);
     const n = k => alertas.filter(a => a.nivel === k).length;
     const ahora = new Date();
     return {
       entidad, fecha_analisis: ahora.toISOString().slice(0, 10) + " " + ahora.toTimeString().slice(0, 5),
       total_contratos: contratos.length, registros_siri: B.siri.meta.registros,
-      registros_boletin: B.boletin.meta.registros, total_alertas: alertas.length,
+      registros_boletin: B.boletin.meta.registros, boletin_meta: B.boletin.meta,
+      total_alertas: alertas.length, total_casos: alertas.reduce((t, a) => t + a.casos.length, 0),
       criticas: n("CRITICA"), altas: n("ALTA"), medias: n("MEDIA"), info: n("INFO"), alertas
     };
   }
+  const valorNum = v => { const x = parseInt(String(v || "0").replace(/[^\d-]/g, ""), 10); return isNaN(x) ? 0 : x; };
 
   return { cargar, buscar, analizar, norm };
 })();
@@ -669,7 +721,10 @@ window.VFI_LOCAL = (function () {
   function pintarResultado() {
     if (!RES) return;
     if (RES.registros_siri)    $("vfi-n-siri").textContent = miles(RES.registros_siri) + " registros disciplinarios";
-    if (RES.registros_boletin) $("vfi-n-bol").textContent  = miles(RES.registros_boletin) + " responsables fiscales · trimestral";
+    if (RES.registros_boletin) { const bm = RES.boletin_meta || {};
+      $("vfi-n-bol").textContent = miles(RES.registros_boletin) + " casos" +
+        (bm.responsables ? " de " + miles(bm.responsables) + " responsables" : "") +
+        (bm.numero ? " · boletín N° " + bm.numero + ", corte " + bm.corte : " · trimestral"); }
 
     const hayAlertas = (RES.total_alertas || 0) > 0;
     let h = "";
@@ -682,15 +737,16 @@ window.VFI_LOCAL = (function () {
 
     h += '<div class="vfi-tarjetas">' +
       tarjeta("Contratos analizados", RES.total_contratos, "#2563EB", "Entidad: " + (RES.entidad||"")) +
-      tarjeta("Alertas totales", RES.total_alertas, "#150B3D", "Análisis: " + (RES.fecha_analisis||"")) +
-      tarjeta("Críticas", RES.criticas, COLOR.CRITICA, "Contrato posterior a la inhabilidad") +
-      tarjeta("Altas", RES.altas, COLOR.ALTA, "Inhabilidad vigente") +
+      tarjeta("Proveedores con antecedentes", RES.total_alertas, "#150B3D",
+              miles(RES.total_casos) + " casos distintos · " + (RES.fecha_analisis||"")) +
+      tarjeta("Críticos", RES.criticas, COLOR.CRITICA, "Proveedores con contrato posterior a la inhabilidad") +
+      tarjeta("Altos", RES.altas, COLOR.ALTA, "Proveedores con inhabilidad vigente o fallo fiscal") +
       '</div>';
 
     if (hayAlertas) {
       h += '<div class="cols">' +
         '<div class="panel"><h3>Distribución por nivel de riesgo</h3><canvas id="vfi-g-nivel"></canvas></div>' +
-        '<div class="panel"><h3>Alertas por fuente oficial</h3><canvas id="vfi-g-fuente"></canvas></div>' +
+        '<div class="panel"><h3>Casos por fuente oficial</h3><canvas id="vfi-g-fuente"></canvas></div>' +
         '</div>';
     }
 
@@ -705,8 +761,8 @@ window.VFI_LOCAL = (function () {
       'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:13px;' +
       'box-sizing:border-box;margin-bottom:14px;font-family:inherit">' +
       '<div style="overflow-x:auto"><table id="vfi-tabla"><thead><tr>' +
-      '<th style="width:28px"></th><th>Nivel</th><th>Proveedor</th><th>Antecedente</th>' +
-      '<th>Fuente</th><th class="r">Valor contrato</th>' +
+      '<th style="width:28px"></th><th>Nivel</th><th>Proveedor</th><th>Antecedentes</th>' +
+      '<th>Fuente</th><th class="r">Contratos</th>' +
       '</tr></thead><tbody></tbody></table></div></div>';
 
     $("vfi-resultado").innerHTML = h;
@@ -729,7 +785,9 @@ window.VFI_LOCAL = (function () {
     return (RES.alertas||[]).filter(a => {
       if (filtro !== "TODAS" && a.nivel !== filtro) return false;
       if (!q) return true;
-      return [a.proveedor_secop, a.documento, a.sancion, a.entidad, a.objeto]
+      return [a.proveedor_secop, a.documento,
+              ...a.casos.flatMap(c => [c.sancion, c.lugar, c.autoridad, c.nombre_fuente]),
+              ...a.contratos.flatMap(c => [c.entidad, c.objeto])]
         .some(v => String(v||"").toLowerCase().includes(q));
     });
   }
@@ -748,9 +806,10 @@ window.VFI_LOCAL = (function () {
         '<td style="color:var(--muted)">'+(ab?"▼":"▶")+'</td>' +
         '<td><span class="vfi-nivel" style="background:'+(COLOR[a.nivel]||"#5C4F82")+'">'+esc(a.nivel)+'</span></td>' +
         '<td><b>'+esc(a.proveedor_secop)+'</b><span class="vf-sub" style="display:block;font-size:11px;color:var(--muted)">'+esc(a.documento)+'</span></td>' +
-        '<td>'+esc(a.sancion)+'<span style="display:block;font-size:11px;color:var(--muted)">'+esc(a.tipo)+'</span></td>' +
-        '<td style="font-size:12px">'+esc(a.fuente)+'</td>' +
-        '<td class="vfi-mono">'+esc(cop(a.valor))+'</td></tr>';
+        '<td>'+resumenCasos(a)+'</td>' +
+        '<td style="font-size:12px">'+a.fuentes.map(esc).join("<br>")+'</td>' +
+        '<td class="vfi-mono">'+esc(cop(a.valor_total))+'<span style="display:block;font-size:11px;' +
+        'font-weight:400;color:var(--muted)">'+a.contratos.length+' contrato'+(a.contratos.length===1?"":"s")+'</span></td></tr>';
       if (ab) f += '<tr class="vfi-det"><td colspan="6">' + detalle(a) + '</td></tr>';
       return f;
     }).join("");
@@ -763,26 +822,41 @@ window.VFI_LOCAL = (function () {
       }));
   }
 
-  // El original marcaba la fila con ▶/▼ pero no mostraba nada al abrirla.
-  // Aquí la flecha sí despliega el detalle, que ya venía en la respuesta.
+  // Resumen de la fila: el caso más grave y cuántos más tiene.
+  function resumenCasos(a) {
+    const c = a.casos[0], mas = a.casos.length - 1;
+    return esc(c.sancion) +
+      '<span style="display:block;font-size:11px;color:var(--muted)">' +
+      esc(c.lugar ? c.lugar : c.tipo) + '</span>' +
+      (mas > 0 ? '<span style="display:block;font-size:11px;font-weight:700;color:var(--navy)">+ ' +
+        mas + ' caso' + (mas===1?"":"s") + ' más · ' + a.casos.length + ' en total</span>' : "");
+  }
+
+  // Al abrir la fila: todos los casos del proveedor y todos sus contratos.
   function detalle(a) {
-    const campo = (k, v, rojo) => !v ? "" :
-      '<div class="vfi-campo"><div class="k">'+esc(k)+'</div>' +
-      '<div class="v'+(rojo?" rojo":"")+'">'+esc(v)+'</div></div>';
-    return '<div class="vfi-campos">' +
-      campo("Nombre en la fuente oficial", a.nombre_fuente) +
-      campo("Motivo de la alerta", a.motivo, true) +
-      campo("Autoridad", a.autoridad) +
-      campo("Tipo de antecedente", a.tipo) +
-      campo("Fecha de la sanción", a.fecha_sancion) +
-      campo("Fin de la inhabilidad", a.fin_inhabilidad) +
-      campo("Vigente", a.vigente) +
-      campo("Entidad contratante", a.entidad) +
-      campo("Estado del contrato", a.estado) +
-      campo("Fecha de firma", a.fecha_firma) +
-      campo("Valor del contrato", cop(a.valor)) +
-      campo("Objeto del contrato", a.objeto) +
-      '</div>';
+    const sub = t => '<div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;' +
+      'letter-spacing:.05em;margin:4px 0 8px">'+t+'</div>';
+    const peq = t => '<span style="display:block;font-size:11px;color:var(--muted)">'+esc(t)+'</span>';
+    let h = sub(a.casos.length + ' caso' + (a.casos.length===1?"":"s") + ' · nombre en la fuente: ' +
+                esc(a.casos[0].nombre_fuente || "—"));
+    h += '<div style="overflow-x:auto"><table class="vfi-sub"><thead><tr><th>Nivel</th><th>Antecedente</th>' +
+         '<th>Entidad afectada / sancionadora</th><th>Autoridad que reporta</th><th>Fecha / vigencia</th></tr></thead><tbody>' +
+      a.casos.map(c => '<tr><td><span class="vfi-nivel" style="background:'+(COLOR[c.nivel]||"#5C4F82")+'">'+esc(c.nivel)+'</span></td>' +
+        '<td><b>'+esc(c.sancion)+'</b>'+peq(c.responsabilidad || c.tipo)+
+        '<span style="display:block;font-size:11px;color:var(--crit);font-weight:700">'+esc(c.motivo)+'</span></td>' +
+        '<td>'+esc(c.lugar||"—")+'</td><td style="font-size:12px">'+esc(c.autoridad||"—")+'</td>' +
+        '<td style="font-size:12px;white-space:nowrap">'+esc(c.fecha_sancion||"—")+
+        (c.fin_inhabilidad ? peq("Hasta " + c.fin_inhabilidad + (c.vigente==="SI"?" (vigente)":"")) : "")+'</td></tr>').join("") +
+      '</tbody></table></div>';
+    h += '<div style="height:14px"></div>' + sub(a.contratos.length + ' contrato' + (a.contratos.length===1?"":"s") +
+         ' en SECOP II · ' + esc(cop(a.valor_total)));
+    h += '<div style="overflow-x:auto"><table class="vfi-sub"><thead><tr><th>Entidad contratante</th><th>Estado</th>' +
+         '<th>Firma</th><th class="r">Valor</th><th>Objeto</th></tr></thead><tbody>' +
+      a.contratos.map(c => '<tr><td>'+esc(c.entidad)+peq(c.id)+'</td><td>'+esc(c.estado||"—")+'</td>' +
+        '<td style="white-space:nowrap">'+esc(c.fecha_firma||"—")+'</td><td class="vfi-mono">'+esc(cop(c.valor))+'</td>' +
+        '<td style="font-size:12px">'+esc(c.objeto)+'</td></tr>').join("") +
+      '</tbody></table></div>';
+    return h;
   }
 
   /* ---------------- gráficas ---------------- */
@@ -811,14 +885,14 @@ window.VFI_LOCAL = (function () {
 
   function graficaFuente() {
     const m = {};
-    (RES.alertas||[]).forEach(a => {
-      const k = String(a.fuente||"").includes("SIRI") ? "SIRI · Procuraduría" : "Boletín · Contraloría";
+    (RES.alertas||[]).forEach(a => a.casos.forEach(c => {
+      const k = String(c.fuente||"").includes("SIRI") ? "SIRI · Procuraduría" : "Boletín · Contraloría";
       m[k] = (m[k]||0) + 1;
-    });
+    }));
     const ks = Object.keys(m);
     dibujar("vfi-g-fuente", "bar", {
       labels: ks,
-      datasets: [{ label: "Alertas", data: ks.map(k => m[k]),
+      datasets: [{ label: "Casos", data: ks.map(k => m[k]),
                    backgroundColor: ks.map(k => k.includes("SIRI") ? "#7C3AED" : "#CA8A04"),
                    borderRadius: 6 }]
     }, { plugins: { legend: { display: false } },
