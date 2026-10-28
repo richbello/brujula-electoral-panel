@@ -28,7 +28,8 @@ Formato (por documento normalizado, solo digitos):
                   entidad_sancionado], ...]}}
     boletin.json {"meta": {...}, "docs": {"<doc>": [i, ...]},
                   "filas": [[nombre, ente_que_reporta, entidad_afectada,
-                  departamento, municipio, tr, r, tipo_y_documento], ...]}
+                  departamento, municipio, tr, r, tipo_y_documento,
+                  desde_boletin_n], ...]}
                  Con --boletin-pdf hay una fila por caso; tr = I (individual)
                  o S (solidario) y r = registros de ese caso. Departamento y
                  municipio son la sede del ente que reporta, no el lugar del dano.
@@ -129,7 +130,15 @@ def construir_boletin(ruta: Path) -> dict:
             "docs": docs, "filas": filas}
 
 
-def construir_boletin_pdf(ruta: Path) -> dict:
+def _clave_caso(f: list) -> str:
+    """Un caso = documento (o nombre) + entidad afectada + TR + ente que reporta."""
+    return "|".join([f[7] or f[0], f[2], f[5], f[1]])
+
+
+def construir_boletin_pdf(ruta: Path, anterior: Path | None = None) -> dict:
+    """Con --anterior (el boletin.json del trimestre previo) cada caso hereda
+    el numero de boletin en que aparecio por primera vez. El boletin no
+    publica la fecha del fallo; esto da al menos el trimestre de entrada."""
     from boletin_pdf import leer, validar
 
     meta, casos = leer(ruta)
@@ -146,12 +155,35 @@ def construir_boletin_pdf(ruta: Path) -> dict:
                       documento])
         for k in claves_boletin(documento) if c["documento"].isdigit() else []:
             docs.setdefault(k, []).append(i)
+
+    numero = meta.get("numero")
+    cortes = {str(numero): meta.get("corte")} if numero else {}
+    previo: dict[str, int] = {}
+    salieron = 0
+    if anterior:
+        ant = json.loads(Path(anterior).read_text(encoding="utf-8"))
+        n_ant = ant["meta"].get("numero")
+        cortes = {**ant["meta"].get("cortes", {}), **({str(n_ant): ant["meta"].get("corte")} if n_ant else {}), **cortes}
+        for f in ant["filas"]:
+            if len(f) >= 8:
+                previo.setdefault(_clave_caso(f), f[8] if len(f) > 8 and f[8] else n_ant)
+        actuales = {_clave_caso(f) for f in filas}
+        salieron = sum(1 for k in previo if k not in actuales)
+    for f in filas:
+        # Sin trimestre anterior no se sabe desde cuando figura: queda None.
+        f.append(previo.get(_clave_caso(f), numero if anterior else None))
+    nuevos = sum(1 for f in filas if anterior and f[8] == numero)
+
     return {"meta": {"fuente": "Boletin de Responsables Fiscales - Contraloria General",
                      "origen": "PDF trimestral oficial (SIBOR)",
                      "numero": meta.get("numero"), "corte": meta.get("corte"),
                      "registros": len(filas),
                      "responsables": len({f[7] for f in filas if f[7]}),
                      "sin_documento": sum(1 for f in filas if not f[7]),
+                     "cortes": cortes,
+                     "comparado_con": (ant["meta"].get("numero") if anterior else None),
+                     "casos_nuevos": nuevos if anterior else None,
+                     "casos_que_salieron": salieron if anterior else None,
                      "generado": dt.date.today().isoformat()},
             "docs": docs, "filas": filas}
 
@@ -168,12 +200,19 @@ if __name__ == "__main__":
     ap.add_argument("--siri", type=Path)
     ap.add_argument("--boletin", type=Path, help="CSV de datos.gov.co (resumido)")
     ap.add_argument("--boletin-pdf", type=Path, help="PDF trimestral oficial (completo)")
+    ap.add_argument("--anterior", type=Path, default=None,
+                    help="boletin.json del trimestre previo, para saber desde cuando figura cada caso "
+                         "(por defecto, el data/vigilancia/boletin.json actual)")
     a = ap.parse_args()
     if not (a.siri or a.boletin or a.boletin_pdf):
         ap.error("indique --siri, --boletin o --boletin-pdf")
     if a.siri:
         escribir("siri.json", construir_siri(a.siri))
     if a.boletin_pdf:
-        escribir("boletin.json", construir_boletin_pdf(a.boletin_pdf))
+        actual = SALIDA / "boletin.json"
+        anterior = a.anterior or (actual if actual.exists() else None)
+        if anterior and json.loads(anterior.read_text(encoding="utf-8"))["meta"].get("origen") is None:
+            anterior = None   # el corte viejo de datos.gov.co no sirve para comparar casos
+        escribir("boletin.json", construir_boletin_pdf(a.boletin_pdf, anterior))
     elif a.boletin:
         escribir("boletin.json", construir_boletin(a.boletin))

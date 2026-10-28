@@ -377,7 +377,16 @@ window.VFI_LOCAL = (function () {
   function boletinDe(B, doc) {
     return (B.boletin.docs[doc] || []).map(i => { const r = B.boletin.filas[i];
       return { nombre: r[0], autoridad: r[1], entidad: r[2], depto: r[3], municipio: r[4],
-               tr: r[5] || "", r: r[6] || 1, documento: r[7] || "" }; });
+               tr: r[5] || "", r: r[6] || 1, documento: r[7] || "", desde: r[8] || null }; });
+  }
+  // El boletín no publica la fecha del fallo. Comparando cortes trimestrales se
+  // sabe al menos en qué boletín apareció cada caso por primera vez.
+  function desdeTxt(B, b) {
+    const m = B.boletin.meta || {}, cortes = m.cortes || {};
+    if (!b.desde) return "Fecha del fallo: el boletín no la publica";
+    if (b.desde === m.numero && m.comparado_con)
+      return "NUEVO: entró en el boletín N° " + b.desde + " (corte " + (cortes[b.desde] || m.corte) + ")";
+    return "Ya figuraba en el boletín N° " + b.desde + " (corte " + (cortes[b.desde] || "") + ") o antes";
   }
   const TR = { I: "Individual", S: "Solidario" };
   const trTxt = b => b.tr ? (TR[b.tr] || b.tr) + (b.r > 1 ? " · " + b.r + " registros" : "") : "";
@@ -414,7 +423,7 @@ window.VFI_LOCAL = (function () {
     siriCasos(B, doc).forEach(s => hallazgos.push({ fuente: "SIRI (Procuraduria)", nombre: s.nombre,
       tipo: s.tipo, sancion: s.sancion, fecha: s.fecha, autoridad: s.autoridad, entidad: s.entidad }));
     boletinCasos(B, doc).forEach(b => hallazgos.push({ fuente: "Boletin (Contraloria)", nombre: b.nombre,
-      tipo: "FISCAL" + (b.tr ? " · " + trTxt(b) : ""), sancion: "RESPONSABILIDAD FISCAL", fecha: "",
+      tipo: "FISCAL" + (b.tr ? " · " + trTxt(b) : ""), sancion: "RESPONSABILIDAD FISCAL", fecha: desdeTxt(B, b),
       autoridad: b.autoridad + (b.municipio ? " (" + b.municipio + ")" : ""),
       entidad: b.entidad ? "Entidad afectada: " + b.entidad : "" }));
     return { documento: doc, total: hallazgos.length, hallazgos };
@@ -526,7 +535,7 @@ window.VFI_LOCAL = (function () {
       });
       bol.forEach(b => sumar("B|" + [b.entidad, b.tr, b.autoridad].join("|"), {
         fuente: "Boletin (Contraloria)", nombre_fuente: b.nombre, tipo: "FISCAL",
-        sancion: "RESPONSABILIDAD FISCAL", fecha_sancion: "", fin_inhabilidad: "", vigente: "SI",
+        sancion: "RESPONSABILIDAD FISCAL", fecha_sancion: desdeTxt(B, b), fin_inhabilidad: "", vigente: "SI",
         autoridad: b.autoridad + (b.municipio ? " (" + b.municipio + ")" : ""),
         lugar: b.entidad, responsabilidad: trTxt(b) }, "ALTA", "Responsable fiscal con contrato publico"));
     });
@@ -576,8 +585,10 @@ window.VFI_LOCAL = (function () {
       const doc = norm(f[7] || ""), p = de(doc, f[0]);
       const k = "B|" + [f[2], f[5], f[1]].join("|");
       if (!p.casos.has(k)) p.casos.set(k, { fuente: "Boletin (Contraloria)", sancion: "RESPONSABILIDAD FISCAL",
-        detalle: trTxt({ tr: f[5], r: f[6] }), entidad: f[2],
-        autoridad: f[1] + (f[4] ? " (" + f[4] + ")" : ""), fecha: "" });
+        detalle: trTxt({ tr: f[5], r: f[6] }), entidad: f[2], tr: f[5], r: f[6], nombre_fuente: f[0],
+        tipo_doc: f[7] || "", ente: f[1], sede: [f[4], f[3]].filter(Boolean).join(", "),
+        autoridad: f[1] + (f[4] ? " (" + f[4] + ")" : ""),
+        fecha: desdeTxt(B, { desde: f[8] || null }), nuevo: !!(f[8] && f[8] === B.boletin.meta.numero && B.boletin.meta.comparado_con) });
     });
     Object.entries(B.siri.docs).forEach(([doc, filas]) => filas.forEach(r => {
       if (!ok(r[8])) return;
@@ -587,12 +598,16 @@ window.VFI_LOCAL = (function () {
       const fi = fecha(r[3]), fin = finInhab(fi, r[4], r[5], r[6]);
       p.casos.set(k, { fuente: "SIRI (Procuraduria)", sancion: r[2], detalle: r[1] +
         (fin ? " · inhabilidad hasta " + dmy(fin) + (fin > new Date() ? " (vigente)" : "") : ""),
-        entidad: r[8], autoridades: r[7] ? [r[7]] : [], fecha: r[3] });
+        entidad: r[8], autoridades: r[7] ? [r[7]] : [], fecha: r[3], nombre_fuente: r[0], tipo: r[1],
+        anos: r[4], meses: r[5], dias: r[6], fin: dmy(fin), vigente: fin ? (fin > new Date() ? "SI" : "NO") : "" });
     }));
     const lista = [...personas.values()].map(p => ({ documento: p.documento, nombre: p.nombre,
-      casos: [...p.casos.values()].map(c => c.autoridades ? Object.assign(c, { autoridad: c.autoridades.join(" · ") }) : c) }));
+      casos: [...p.casos.values()].map(c => c.autoridades ? Object.assign(c, { autoridad: c.autoridades.join(" · ") }) : c)
+        // Primero lo que pesa hoy: inhabilidad vigente, luego fallos fiscales, luego lo demás.
+        .sort((x, y) => (x.vigente === "SI" ? 0 : x.fuente.startsWith("Bol") ? 1 : 2) -
+                        (y.vigente === "SI" ? 0 : y.fuente.startsWith("Bol") ? 1 : 2)) }));
     lista.sort((a, b) => b.casos.length - a.casos.length || a.nombre.localeCompare(b.nombre));
-    return { lugar, personas: lista, casos: lista.reduce((t, p) => t + p.casos.length, 0),
+    return { lugar, meta: B.boletin.meta, personas: lista, casos: lista.reduce((t, p) => t + p.casos.length, 0),
       fiscales: lista.reduce((t, p) => t + p.casos.filter(c => c.fuente.startsWith("Bol")).length, 0) };
   }
 
@@ -790,6 +805,9 @@ window.VFI_LOCAL = (function () {
     if (vista === "dano") {
       $("vfi-resultado").innerHTML = h + pintarDano();
       enlazarVista();
+      $("vfi-resultado").querySelectorAll("#vfi-dano .vfi-f").forEach(tr =>
+        tr.addEventListener("click", () => { const i = Number(tr.dataset.i);
+          abiertaDano = abiertaDano === i ? null : i; pintarResultado(); }));
       return;
     }
 
@@ -848,7 +866,7 @@ window.VFI_LOCAL = (function () {
 
   function enlazarVista() {
     $("vfi-resultado").querySelectorAll(".vfi-vista").forEach(b =>
-      b.addEventListener("click", () => { vista = b.dataset.v; abierta = null; pintarResultado(); }));
+      b.addEventListener("click", () => { vista = b.dataset.v; abierta = null; abiertaDano = null; pintarResultado(); }));
   }
 
   function pintarDano() {
@@ -869,17 +887,75 @@ window.VFI_LOCAL = (function () {
     if (!DANO.personas.length)
       return h + '<div class="vfi-msg"><b>Sin fallos ni sanciones registrados para esta entidad.</b>' +
         'Ninguna fila del boletín ni de SIRI la menciona como entidad afectada.</div>';
-    h += '<div class="panel"><div style="overflow-x:auto"><table><thead><tr><th>Persona o empresa</th>' +
-      '<th>Casos</th><th>Entidad afectada / autoridad</th><th>Fecha</th></tr></thead><tbody>' +
-      DANO.personas.map(p => p.casos.map((c, i) => '<tr>' +
-        (i === 0 ? '<td rowspan="'+p.casos.length+'"><b>'+esc(p.nombre)+'</b>'+peq(p.documento || "sin documento en la fuente")+
+    h += '<div class="panel"><div style="overflow-x:auto"><table id="vfi-dano"><thead><tr>' +
+      '<th style="width:28px"></th><th>Persona o empresa</th><th>Casos</th><th>Entidad afectada</th>' +
+      '<th>Fecha</th></tr></thead><tbody>' +
+      DANO.personas.map((p, i) => {
+        const ab = abiertaDano === i, c = p.casos[0], mas = p.casos.length - 1;
+        let f = '<tr class="vfi-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
+          '<td style="color:var(--muted)">'+(ab?"▼":"▶")+'</td>' +
+          '<td><b>'+esc(p.nombre)+'</b>'+peq(p.documento || "sin documento en la fuente")+
           (contratistas.has(p.documento) ? '<span class="vfi-nivel" style="background:'+COLOR.CRITICA+
-            ';margin-top:4px;display:inline-block">SIGUE CONTRATANDO</span>' : "")+'</td>' : "") +
-        '<td><span class="vfi-nivel" style="background:'+(c.fuente.startsWith("SIRI")?"#7C3AED":"#CA8A04")+'">'+
-          (c.fuente.startsWith("SIRI")?"SIRI":"BOLETÍN")+'</span> <b>'+esc(c.sancion)+'</b>'+peq(c.detalle)+'</td>' +
-        '<td>'+esc(c.entidad)+peq(c.autoridad)+'</td>' +
-        '<td style="white-space:nowrap;font-size:12px">'+esc(c.fecha||"—")+'</td></tr>').join("")).join("") +
-      '</tbody></table></div></div>';
+            ';margin-top:4px;display:inline-block">SIGUE CONTRATANDO</span>' : "")+'</td>' +
+          '<td>'+fuenteChip(c)+' <b>'+esc(c.sancion)+'</b>'+peq(c.detalle)+
+          (mas>0 ? '<span style="display:block;font-size:11px;font-weight:700;color:var(--navy)">+ '+mas+
+            ' caso'+(mas===1?"":"s")+' más · '+p.casos.length+' en total</span>' : "")+'</td>' +
+          '<td>'+esc(c.entidad)+'</td>' +
+          '<td style="font-size:12px">'+(c.fuente.startsWith("SIRI") ? esc(c.fecha||"—") :
+            '<span style="color:var(--muted)">'+(c.nuevo?'<b style="color:'+COLOR.CRITICA+'">Nuevo en el N° '+esc((DANO.meta||{}).numero)+'</b>':"Sin fecha en el boletín")+'</span>')+'</td></tr>';
+        if (ab) f += '<tr class="vfi-det"><td colspan="5">' + detalleDano(p) + '</td></tr>';
+        return f;
+      }).join("") + '</tbody></table></div></div>';
+    return h;
+  }
+  let abiertaDano = null;
+  const fuenteChip = c => '<span class="vfi-nivel" style="background:'+(c.fuente.startsWith("SIRI")?"#7C3AED":"#CA8A04")+'">'+
+    (c.fuente.startsWith("SIRI")?"SIRI":"BOLETÍN")+'</span>';
+  const CERT_PGN = "https://www.procuraduria.gov.co/";
+  const CERT_CGR = "https://www.contraloria.gov.co/control-fiscal/responsabilidad-fiscal/certificado-de-antecedentes-fiscales";
+
+  // Todo lo que publica la fuente sobre cada caso, y cómo verificarlo.
+  function detalleDano(p) {
+    const campo = (k, v, rojo) => !v ? "" :
+      '<div class="vfi-campo"><div class="k">'+esc(k)+'</div><div class="v'+(rojo?" rojo":"")+'">'+esc(v)+'</div></div>';
+    const m = DANO.meta || {};
+    let h = p.casos.map((c, j) => {
+      const siri = c.fuente.startsWith("SIRI");
+      const dur = siri ? [c.anos && c.anos+" años", c.meses && c.meses+" meses", c.dias && c.dias+" días"].filter(Boolean).join(", ") : "";
+      return '<div style="background:#fff;border-radius:10px;padding:14px 16px;margin-bottom:10px;border-left:4px solid '+
+        (siri?"#7C3AED":"#CA8A04")+'">' +
+        '<div style="margin-bottom:10px">'+fuenteChip(c)+' <b>Caso '+(j+1)+' de '+p.casos.length+' · '+esc(c.sancion)+'</b></div>' +
+        '<div class="vfi-campos">' +
+        (siri ?
+          campo("Nombre en SIRI", c.nombre_fuente) + campo("Tipo de proceso", c.tipo) +
+          campo("Sanción", c.sancion) + campo("Fecha de efectos jurídicos", c.fecha) +
+          campo("Duración de la inhabilidad", dur || "No registrada en SIRI") +
+          campo("Fin de la inhabilidad (calculado)", c.fin || "No calculable: SIRI no trae duración") +
+          campo("¿Vigente hoy?", c.vigente === "SI" ? "SÍ — no puede contratar ni ejercer cargo público" :
+                 c.vigente === "NO" ? "No, ya venció" : "", c.vigente === "SI") +
+          campo("Entidad donde trabajaba", c.entidad) +
+          campo("Autoridad que sancionó" + (c.autoridades.length > 1 ? " (" + c.autoridades.length + " instancias)" : ""),
+                c.autoridades.join("  →  "))
+        :
+          campo("Nombre en el boletín", c.nombre_fuente) + campo("Documento", c.tipo_doc) +
+          campo("Entidad afectada (donde fue el daño)", c.entidad) +
+          campo("Tipo de responsabilidad", c.tr === "S" ? "Solidaria — responde junto con otros por el mismo daño" :
+                c.tr === "I" ? "Individual — responde solo por el daño" : c.tr) +
+          campo("Registros de este caso (R)", String(c.r || 1)) +
+          campo("Quién lo reporta", c.ente) + campo("Sede de quien reporta", c.sede) +
+          campo("Desde cuándo figura", c.fecha, c.nuevo) +
+          campo("Situación", "Fallo en firme sin pagar: inhabilitado para contratar con el Estado mientras figure en el boletín", true) +
+          campo("Lo que el boletín NO publica", "Fecha del fallo, monto del daño ni número del proceso. " +
+                "Se obtienen con el certificado de la CGR o un derecho de petición a " + c.ente + ".")
+        ) + '</div></div>';
+    }).join("");
+    const doc = esc(p.documento || "");
+    h += '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:4px">' +
+      '<span style="font-size:12px;color:var(--muted)">Verificar ' + (doc ? 'el documento <b>'+doc+'</b>' : 'por nombre') + ' en la fuente oficial:</span>' +
+      '<a class="vfi-btn" style="text-decoration:none;padding:7px 12px;font-size:12px;background:#7C3AED;color:#fff;border-radius:8px" target="_blank" rel="noopener" href="'+CERT_PGN+'">Certificado Procuraduría ↗</a>' +
+      '<a class="vfi-btn" style="text-decoration:none;padding:7px 12px;font-size:12px;background:#CA8A04;color:#fff;border-radius:8px" target="_blank" rel="noopener" href="'+CERT_CGR+'">Certificado Contraloría ↗</a>' +
+      (m.numero ? '<span style="font-size:11px;color:var(--muted)">Boletín N° '+esc(m.numero)+', corte '+esc(m.corte)+'</span>' : "") +
+      '</div>';
     return h;
   }
 
@@ -954,7 +1030,7 @@ window.VFI_LOCAL = (function () {
         '<td><b>'+esc(c.sancion)+'</b>'+peq(c.responsabilidad || c.tipo)+
         '<span style="display:block;font-size:11px;color:var(--crit);font-weight:700">'+esc(c.motivo)+'</span></td>' +
         '<td>'+esc(c.lugar||"—")+'</td><td style="font-size:12px">'+esc(c.autoridad||"—")+'</td>' +
-        '<td style="font-size:12px;white-space:nowrap">'+esc(c.fecha_sancion||"—")+
+        '<td style="font-size:12px">'+esc(c.fecha_sancion||"—")+
         (c.fin_inhabilidad ? peq("Hasta " + c.fin_inhabilidad + (c.vigente==="SI"?" (vigente)":"")) : "")+'</td></tr>').join("") +
       '</tbody></table></div>';
     h += '<div style="height:14px"></div>' + sub(a.contratos.length + ' contrato' + (a.contratos.length===1?"":"s") +
