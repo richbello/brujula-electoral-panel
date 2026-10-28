@@ -552,7 +552,51 @@ window.VFI_LOCAL = (function () {
   }
   const valorNum = v => { const x = parseInt(String(v || "0").replace(/[^\d-]/g, ""), 10); return isNaN(x) ? 0 : x; };
 
-  return { cargar, buscar, analizar, norm };
+  // ---- Daño a la entidad: fallos y sanciones cuya entidad afectada es la elegida ----
+  const DEPTOS = ["AMAZONAS","ANTIOQUIA","ARAUCA","ATLANTICO","BOLIVAR","BOYACA","CALDAS","CAQUETA",
+    "CASANARE","CAUCA","CESAR","CHOCO","CORDOBA","GUAINIA","GUAVIARE","HUILA","GUAJIRA","MAGDALENA",
+    "META","NARINO","NORTE DE SANTANDER","PUTUMAYO","QUINDIO","RISARALDA","SAN ANDRES","SANTANDER",
+    "SUCRE","TOLIMA","VALLE","VAUPES","VICHADA"];
+  const canon = t => " " + sinTilde(t).replace(/[^A-Z0-9 ]/g, " ")
+    .replace(/\bALCALDIA( MUNICIPAL| MUNICIPIO)?( DE)?\b/g, "MUNICIPIO DE")
+    .replace(/\bMUNICIPIO( DE)?\b/g, "MUNICIPIO DE").replace(/\s+/g, " ").trim() + " ";
+  function coincide(lugar) {
+    const buscado = canon(lugar);
+    const otros = DEPTOS.filter(d => !buscado.includes(" " + d + " "));
+    return texto => { const t = canon(texto);
+      return t.includes(buscado) && !otros.some(d => t.includes(" " + d + " ")); };
+  }
+  async function danos(lugar) {
+    const B = await cargar(), ok = coincide(lugar), personas = new Map();
+    const de = (doc, nombre) => { const k = doc || "nom:" + nombre;
+      if (!personas.has(k)) personas.set(k, { documento: doc, nombre, casos: new Map() });
+      return personas.get(k); };
+    B.boletin.filas.forEach(f => {
+      if (!ok(f[2])) return;
+      const doc = norm(f[7] || ""), p = de(doc, f[0]);
+      const k = "B|" + [f[2], f[5], f[1]].join("|");
+      if (!p.casos.has(k)) p.casos.set(k, { fuente: "Boletin (Contraloria)", sancion: "RESPONSABILIDAD FISCAL",
+        detalle: trTxt({ tr: f[5], r: f[6] }), entidad: f[2],
+        autoridad: f[1] + (f[4] ? " (" + f[4] + ")" : ""), fecha: "" });
+    });
+    Object.entries(B.siri.docs).forEach(([doc, filas]) => filas.forEach(r => {
+      if (!ok(r[8])) return;
+      const p = de(doc, r[0]), k = "S|" + [r[2], r[3], r[8], r[4], r[5], r[6]].join("|");
+      const c = p.casos.get(k);
+      if (c) { if (r[7] && !c.autoridades.includes(r[7])) c.autoridades.push(r[7]); return; }
+      const fi = fecha(r[3]), fin = finInhab(fi, r[4], r[5], r[6]);
+      p.casos.set(k, { fuente: "SIRI (Procuraduria)", sancion: r[2], detalle: r[1] +
+        (fin ? " · inhabilidad hasta " + dmy(fin) + (fin > new Date() ? " (vigente)" : "") : ""),
+        entidad: r[8], autoridades: r[7] ? [r[7]] : [], fecha: r[3] });
+    }));
+    const lista = [...personas.values()].map(p => ({ documento: p.documento, nombre: p.nombre,
+      casos: [...p.casos.values()].map(c => c.autoridades ? Object.assign(c, { autoridad: c.autoridades.join(" · ") }) : c) }));
+    lista.sort((a, b) => b.casos.length - a.casos.length || a.nombre.localeCompare(b.nombre));
+    return { lugar, personas: lista, casos: lista.reduce((t, p) => t + p.casos.length, 0),
+      fiscales: lista.reduce((t, p) => t + p.casos.filter(c => c.fuente.startsWith("Bol")).length, 0) };
+  }
+
+  return { cargar, buscar, analizar, danos, norm };
 })();
 
 /* ============================================================
@@ -629,6 +673,8 @@ window.VFI_LOCAL = (function () {
 
   let RES = null;          // último resultado del análisis
   let filtro = "TODAS";
+  let vista = "contratistas";   // o "dano"
+  let DANO = null;
   let abierta = null;
   let graficas = {};
   let corrida = 0;         // invalida análisis anteriores al relanzar
@@ -642,6 +688,10 @@ window.VFI_LOCAL = (function () {
     g.items.forEach(([etiqueta, busca]) => {
       const o = document.createElement("option");
       o.value = busca; o.textContent = etiqueta;
+      // Para "Daño a la entidad" se busca por el nombre del lugar, no por el
+      // texto que sirve para SECOP (que a veces es un fragmento como "FACATATIV").
+      o.dataset.lugar = busca === "JULIO CESAR" ? "JULIO CESAR PENALOZA" :
+        g.grupo === "Cundinamarca · municipios" ? etiqueta : busca;
       og.appendChild(o);
     });
     sel.appendChild(og);
@@ -657,7 +707,9 @@ window.VFI_LOCAL = (function () {
   function analizar() {
     cerrarStream();
     const entidad = sel.value;
-    RES = null; abierta = null; filtro = "TODAS";
+    RES = null; abierta = null; filtro = "TODAS"; DANO = null;
+    const lugar = sel.selectedOptions[0] ? sel.selectedOptions[0].dataset.lugar : entidad;
+    const etiqueta = sel.selectedOptions[0] ? sel.selectedOptions[0].textContent : entidad;
     $("vfi-resultado").innerHTML = "";
     $("vfi-analizar").disabled = true;
     $("vfi-analizar").textContent = "Analizando…";
@@ -673,6 +725,8 @@ window.VFI_LOCAL = (function () {
     const anotar = m => { if (id !== corrida) return; log.push(m);
       pintarProgreso(log, Math.floor((Date.now()-t0)/1000)); };
 
+    VFI_LOCAL.danos(lugar).then(d => { if (id === corrida) { DANO = Object.assign(d, { etiqueta });
+      if (RES) pintarResultado(); } }).catch(() => {});
     VFI_LOCAL.analizar(entidad, anotar).then(r => {
       if (id !== corrida) return;
       RES = r; terminar(); pintarResultado();
@@ -727,7 +781,17 @@ window.VFI_LOCAL = (function () {
         (bm.numero ? " · boletín N° " + bm.numero + ", corte " + bm.corte : " · trimestral"); }
 
     const hayAlertas = (RES.total_alertas || 0) > 0;
-    let h = "";
+    let h = '<div class="vfi-pills" style="margin-bottom:14px">' +
+      [["contratistas", "Contratistas con antecedentes", RES.total_alertas],
+       ["dano", "Daño a la entidad", DANO ? DANO.personas.length : null]].map(([k, t, n]) =>
+        '<button class="vfi-pill vfi-vista'+(vista===k?" on":"")+'" data-v="'+k+'"'+
+        (vista===k?' style="background:#150B3D"':"")+'>'+t+(n==null?"":" · "+miles(n))+'</button>').join("") +
+      '</div>';
+    if (vista === "dano") {
+      $("vfi-resultado").innerHTML = h + pintarDano();
+      enlazarVista();
+      return;
+    }
 
     h += '<div class="vfi-aviso"><b>Estas alertas no prueban una inhabilidad.</b> ' +
          'Son coincidencias por número de documento entre SECOP II y los registros de la ' +
@@ -771,14 +835,52 @@ window.VFI_LOCAL = (function () {
       '</tr></thead><tbody></tbody></table></div></div>';
 
     $("vfi-resultado").innerHTML = h;
+    enlazarVista();
 
-    $("vfi-resultado").querySelectorAll(".vfi-pill").forEach(b =>
+    $("vfi-resultado").querySelectorAll(".vfi-pill:not(.vfi-vista)").forEach(b =>
       b.addEventListener("click", () => { filtro = b.dataset.n; abierta = null; pintarResultado(); }));
     const bi = $("vfi-busca");
     if (bi) bi.addEventListener("input", () => { abierta = null; pintarFilas(); });
 
     pintarFilas();
     if (hayAlertas) { graficaNivel(); graficaFuente(); }
+  }
+
+  function enlazarVista() {
+    $("vfi-resultado").querySelectorAll(".vfi-vista").forEach(b =>
+      b.addEventListener("click", () => { vista = b.dataset.v; abierta = null; pintarResultado(); }));
+  }
+
+  function pintarDano() {
+    if (!DANO) return '<div class="vfi-msg">Cargando fallos y sanciones de la entidad…</div>';
+    const contratistas = new Set((RES.alertas || []).map(a => a.documento));
+    const peq = t => '<span style="display:block;font-size:11px;color:var(--muted)">'+esc(t)+'</span>';
+    let h = '<div class="vfi-aviso" style="background:#F1EEFF;border-color:#5C4F82;color:var(--navy)">' +
+      '<b>Quién le causó daño a ' + esc(DANO.etiqueta) + '.</b> Fallos con responsabilidad fiscal cuya ' +
+      '<b>entidad afectada</b> es esta, y sanciones de la Procuraduría a personas que trabajaban en ella, ' +
+      'contraten hoy o no. Puede haber municipios homónimos de otros departamentos que se colaron, ' +
+      'y el boletín solo trae fallos aún no pagados: verifique antes de publicar.</div>';
+    h += '<div class="vfi-tarjetas">' +
+      tarjeta("Personas o empresas", DANO.personas.length, "#150B3D", "Lugar buscado: " + DANO.lugar) +
+      tarjeta("Fallos fiscales", DANO.fiscales, "#CA8A04", "Boletín de Responsables Fiscales") +
+      tarjeta("Sanciones SIRI", DANO.casos - DANO.fiscales, "#7C3AED", "Procuraduría") +
+      tarjeta("Siguen contratando", DANO.personas.filter(p => contratistas.has(p.documento)).length,
+              COLOR.CRITICA, "Con contrato en SECOP con la entidad") + '</div>';
+    if (!DANO.personas.length)
+      return h + '<div class="vfi-msg"><b>Sin fallos ni sanciones registrados para esta entidad.</b>' +
+        'Ninguna fila del boletín ni de SIRI la menciona como entidad afectada.</div>';
+    h += '<div class="panel"><div style="overflow-x:auto"><table><thead><tr><th>Persona o empresa</th>' +
+      '<th>Casos</th><th>Entidad afectada / autoridad</th><th>Fecha</th></tr></thead><tbody>' +
+      DANO.personas.map(p => p.casos.map((c, i) => '<tr>' +
+        (i === 0 ? '<td rowspan="'+p.casos.length+'"><b>'+esc(p.nombre)+'</b>'+peq(p.documento || "sin documento en la fuente")+
+          (contratistas.has(p.documento) ? '<span class="vfi-nivel" style="background:'+COLOR.CRITICA+
+            ';margin-top:4px;display:inline-block">SIGUE CONTRATANDO</span>' : "")+'</td>' : "") +
+        '<td><span class="vfi-nivel" style="background:'+(c.fuente.startsWith("SIRI")?"#7C3AED":"#CA8A04")+'">'+
+          (c.fuente.startsWith("SIRI")?"SIRI":"BOLETÍN")+'</span> <b>'+esc(c.sancion)+'</b>'+peq(c.detalle)+'</td>' +
+        '<td>'+esc(c.entidad)+peq(c.autoridad)+'</td>' +
+        '<td style="white-space:nowrap;font-size:12px">'+esc(c.fecha||"—")+'</td></tr>').join("")).join("") +
+      '</tbody></table></div></div>';
+    return h;
   }
 
   const tarjeta = (l, v, c, s) =>
@@ -957,7 +1059,7 @@ window.VFI_LOCAL = (function () {
   function limpiar() {
     cerrarStream();
     terminar();
-    RES = null; filtro = "TODAS"; abierta = null;
+    RES = null; filtro = "TODAS"; abierta = null; DANO = null; vista = "contratistas";
     $("vfi-resultado").innerHTML = "";
     $("vfi-doc-res").innerHTML = "";
     $("vfi-doc").value = "";
