@@ -735,6 +735,11 @@ window.VFI_LOCAL = (function () {
          'sanciones ya levantadas. Verifique cada caso en el certificado oficial de la entidad ' +
          'que corresponda antes de afirmarlo en público.</div>';
 
+    h += '<div class="vfi-aviso" style="background:#F1EEFF;border-color:#5C4F82;color:var(--navy)">' +
+         '<b>Cómo leer la tabla.</b> Se listan los contratistas que firmaron contratos con <b>' + esc(RES.entidad) +
+         '</b>. El antecedente puede haber ocurrido en cualquier otra entidad o municipio: ' +
+         'es justamente lo que se busca, quién le contrata a la entidad teniendo fallos en otra parte.</div>';
+
     h += '<div class="vfi-tarjetas">' +
       tarjeta("Contratos analizados", RES.total_contratos, "#2563EB", "Entidad: " + (RES.entidad||"")) +
       tarjeta("Proveedores con antecedentes", RES.total_alertas, "#150B3D",
@@ -761,7 +766,7 @@ window.VFI_LOCAL = (function () {
       'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;font-size:13px;' +
       'box-sizing:border-box;margin-bottom:14px;font-family:inherit">' +
       '<div style="overflow-x:auto"><table id="vfi-tabla"><thead><tr>' +
-      '<th style="width:28px"></th><th>Nivel</th><th>Proveedor</th><th>Antecedentes</th>' +
+      '<th style="width:28px"></th><th>Nivel</th><th>Proveedor (contratista de la entidad)</th><th>Antecedente (donde fue el fallo)</th>' +
       '<th>Fuente</th><th class="r">Contratos</th>' +
       '</tr></thead><tbody></tbody></table></div></div>';
 
@@ -805,7 +810,9 @@ window.VFI_LOCAL = (function () {
       let f = '<tr class="vfi-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
         '<td style="color:var(--muted)">'+(ab?"▼":"▶")+'</td>' +
         '<td><span class="vfi-nivel" style="background:'+(COLOR[a.nivel]||"#5C4F82")+'">'+esc(a.nivel)+'</span></td>' +
-        '<td><b>'+esc(a.proveedor_secop)+'</b><span class="vf-sub" style="display:block;font-size:11px;color:var(--muted)">'+esc(a.documento)+'</span></td>' +
+        '<td><b>'+esc(a.proveedor_secop)+'</b><span class="vf-sub" style="display:block;font-size:11px;color:var(--muted)">'+esc(a.documento)+'</span>' +
+        '<span style="display:block;font-size:11px;color:var(--muted)">Contrata con: ' +
+          esc([...new Set(a.contratos.map(c => c.entidad))].join(" · ")) + '</span></td>' +
         '<td>'+resumenCasos(a)+'</td>' +
         '<td style="font-size:12px">'+a.fuentes.map(esc).join("<br>")+'</td>' +
         '<td class="vfi-mono">'+esc(cop(a.valor_total))+'<span style="display:block;font-size:11px;' +
@@ -827,7 +834,7 @@ window.VFI_LOCAL = (function () {
     const c = a.casos[0], mas = a.casos.length - 1;
     return esc(c.sancion) +
       '<span style="display:block;font-size:11px;color:var(--muted)">' +
-      esc(c.lugar ? c.lugar : c.tipo) + '</span>' +
+      esc(c.lugar ? (c.fuente.includes("SIRI") ? "Sancionado en: " : "Fallo en: ") + c.lugar : c.tipo) + '</span>' +
       (mas > 0 ? '<span style="display:block;font-size:11px;font-weight:700;color:var(--navy)">+ ' +
         mas + ' caso' + (mas===1?"":"s") + ' más · ' + a.casos.length + ' en total</span>' : "");
   }
