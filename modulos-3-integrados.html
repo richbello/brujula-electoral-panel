@@ -152,6 +152,14 @@ tr:last-child td{border-bottom:0}
 #fin-tabla tbody tr{cursor:pointer}
 #fin-tabla tbody tr:hover{background:#FAF9FF}
 #fin-tabla tbody tr.abierta{background:#F8F6FF}
+#fin23-contenido td{vertical-align:top}
+#fin23-contenido .meter{width:90px}
+.fin23-lista{margin:0;padding-left:20px;font-size:13.5px;line-height:1.7}
+.fin23-lista li{margin-bottom:4px}
+.fin23-split{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:6px 0 10px}
+.fin23-split i{display:block;height:100%}
+.fin23-ley{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--muted)}
+.fin23-ley span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--c);margin-right:6px;vertical-align:-1px}
 .fin-bloque{margin-bottom:18px}
 .fin-bloque:last-child{margin-bottom:0}
 .fin-bloque h4{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
@@ -258,8 +266,15 @@ th.cun-sort:hover{color:var(--navy)}
 <section class="pane" id="financiadores">
 <h2>Financiadores y contratos</h2>
 <p class="sub">Quién financió la campaña y qué contrató después · Ley 1474 de 2011, art. 2</p>
+<div class="terr-tabs" id="fin-vistas"><button class="terr-tab on" data-v="2023">Balance Territoriales 2023</button><button class="terr-tab" data-v="2019">Soacha · cruce 2019 con contratos</button></div>
+<div id="fin-vista-2023">
+<div id="fin23-estado" class="vfi-msg">Cargando el balance 2023…</div>
+<div id="fin23-contenido" hidden></div>
+</div>
+<div id="fin-vista-2019" hidden>
 <div id="fin-estado" class="vfi-msg">Cargando el último corte…</div>
 <div id="fin-contenido" hidden></div>
+</div>
 </section>
 
 <section class="pane" id="territorio">
@@ -297,7 +312,7 @@ th.cun-sort:hover{color:var(--navy)}
 const ORIGEN = {
   ficha: {real:true, txt:'<strong>Datos reales.</strong> Reúne lo que ya producen los otros módulos sobre una misma persona. Las coincidencias por documento no prueban nada por sí solas: verifique antes de afirmar.'},
   territorio: {real:true, txt:'<strong>Datos reales.</strong> Contratos de SECOP II cuya fecha de fin ya pasó y siguen en ejecución, más el valor por lugar nombrado en el objeto. La cobertura de los sectores es parcial y la pestaña la muestra.'},
-  financiadores: {real:true, txt:'<strong>Datos reales.</strong> Cruce de los aportes reportados al CNE contra los contratos obtenidos después. Señala posibles inhabilidades del artículo 2 de la Ley 1474 de 2011, que deben verificarse caso por caso.'},
+  financiadores: {real:true, txt:'<strong>Datos reales.</strong> Balance 2023: cifras nacionales de Cuentas Claras publicadas por Transparencia por Colombia (corte 29 de enero de 2024). Cruce 2019: aportes reportados al CNE en Soacha contra los contratos obtenidos después; señala posibles inhabilidades del artículo 2 de la Ley 1474 de 2011, que deben verificarse caso por caso.'},
   vigilancia: {real:true, txt:'<strong>Datos reales.</strong> Cruce en vivo de SECOP II contra SIRI (Procuraduría) y el Boletín de Responsables Fiscales (Contraloría). Las coincidencias requieren verificación antes de hacerse públicas.'}
 };
 function show(id){
@@ -1415,12 +1430,162 @@ window.VFI_LOCAL = (function () {
     return h;
   }
 
+  /* ---------- BALANCE TERRITORIALES 2023 ----------
+     Lee data/modulos/financiacion_2023.json: cifras transcritas del
+     "Balance de la financiacion de campanas electorales 2023" de
+     Transparencia por Colombia (Cuentas Claras, corte 29-ene-2024).
+     Son agregados nacionales: no hay financiadores por documento,
+     asi que esta vista informa pero no cruza contra SECOP. */
+  const FUENTE23 = "data/modulos/financiacion_2023.json";
+  let cargado23 = false, vistaFin = "2023";
+
+  async function cargar23() {
+    if (cargado23) return;
+    cargado23 = true;
+    const caja = $("fin23-estado"), cont = $("fin23-contenido");
+    try {
+      const r = await fetch(FUENTE23, { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const D = await r.json();
+      if (!D || !D.meta || !D.kpis) throw new Error("El archivo no tiene la estructura esperada.");
+      cont.innerHTML = pintar23(D);
+      cont.hidden = false;
+      caja.style.display = "none";
+    } catch (err) {
+      cargado23 = false;
+      caja.className = "vfi-msg";
+      caja.innerHTML = "<b>No se pudo cargar el balance 2023.</b>" + esc(err.message) +
+        "<br><br>Si abrió el archivo con doble clic, el navegador bloquea la lectura de datos " +
+        "locales. Levante un servidor: <code>python -m http.server</code>.";
+    }
+  }
+
+  const pc = (v, d=1) => Number(v).toLocaleString("es-CO",{minimumFractionDigits:d,maximumFractionDigits:d}) + " %";
+  const barra = (p, max=100) => '<div class="pct"><div class="meter"><i style="width:' +
+    Math.min(100, p / max * 100).toFixed(1) + '%"></i></div><span>' + pc(p, p < 1 ? 2 : 1) + "</span></div>";
+
+  function pintar23(D) {
+    const m = D.meta, k = D.kpis, f = m.fuente || {};
+    const crec = (k.ingresos - k.ingresos_2019) / k.ingresos_2019 * 100;
+    let h = "";
+
+    h += '<div class="vf-corte"><b>' + esc(m.eleccion) + " · " + esc(m.ambito) + "</b>" +
+      "<span>Cuentas Claras con corte al " + esc(fecha(m.corte_cuentas_claras + "T12:00:00")) + "</span>" +
+      "<span>Fuente: " + esc(f.entidad) + "</span></div>";
+
+    h += '<div class="fin-ley"><b>Qué muestra esta vista</b><p>' + esc(m.alcance) +
+      ' Para el cruce persona por persona vaya a <a href="#" id="fin23-ir2019">Soacha · cruce 2019</a>.</p></div>';
+
+    h += '<div class="kpis">' +
+      kpi("Ingresos reportados", corto(k.ingresos)) +
+      kpi("Gastos reportados", corto(k.gastos)) +
+      kpi("Frente a 2019", "+" + pc(crec)) +
+      kpi("Candidaturas inscritas", miles(k.candidaturas)) +
+      kpi("Reportaron en Cuentas Claras", pc(k.pct_reporte, 2)) +
+      kpi("Aportes de particulares", corto(k.particulares)) +
+      "</div>";
+
+    // Cundinamarca primero: es lo que mas le sirve al candidato de Soacha
+    h += '<div class="panel"><h3>Cundinamarca en el balance 2023</h3><ul class="fin23-lista">' +
+      (D.cundinamarca||[]).map(t => "<li>" + esc(t) + "</li>").join("") +
+      '</ul><p class="note">El informe no desagrega Soacha. Para el detalle del municipio hace falta ' +
+      "la base de Cuentas Claras 2023 con los aportantes.</p></div>";
+
+    h += '<div class="panel"><h3>Por cargo</h3><table><thead><tr><th>Cargo</th>' +
+      '<th class="r">Curules</th><th class="r">Candidaturas</th><th>Reportaron</th>' +
+      '<th class="r">Ingresos</th><th class="r">Gastos</th></tr></thead><tbody>' +
+      (D.por_cargo||[]).map(c => "<tr><td><b>" + esc(c.cargo) + "</b></td>" +
+        '<td class="r">' + miles(c.cargos) + '</td><td class="r">' + miles(c.candidaturas) + "</td>" +
+        "<td>" + barra(c.pct_reporte) + "</td>" +
+        '<td class="vfi-mono">' + esc(corto(c.ingresos)) + '</td><td class="vfi-mono">' + esc(corto(c.gastos)) + "</td></tr>"
+      ).join("") + "</tbody></table></div>";
+
+    const maxIng = Math.max(...(D.ingresos_por_codigo||[]).map(x => x.pct));
+    h += '<div class="panel"><h3>De dónde salió la plata</h3><table><thead><tr><th>Código</th><th>Origen</th>' +
+      '<th class="r">Total</th><th>% del total</th><th class="r">Alcaldías</th><th class="r">Concejos</th></tr></thead><tbody>' +
+      (D.ingresos_por_codigo||[]).map(x => '<tr><td style="color:var(--muted)">' + esc(x.codigo) + "</td><td>" + esc(x.concepto) + "</td>" +
+        '<td class="vfi-mono">' + esc(corto(x.valor)) + "</td><td>" + barra(x.pct, maxIng) + "</td>" +
+        '<td class="vfi-mono">' + esc(corto(x.alcaldias)) + '</td><td class="vfi-mono">' + esc(corto(x.concejos)) + "</td></tr>"
+      ).join("") + '</tbody></table><p class="note">La plata propia del candidato y su familia pesa más que ' +
+      "cualquier otra fuente. En gobernaciones, en cambio, la principal fuente fueron los particulares.</p></div>";
+
+    const p = D.particulares || {};
+    const tot1 = p.personas_naturales + p.personas_juridicas;
+    const tot2 = p.donaciones_dinero + p.donaciones_especie + p.creditos;
+    const seg = (v, t, c) => '<i style="width:' + (v / t * 100).toFixed(1) + "%;background:" + c + '"></i>';
+    const ley = (txt, v, t, c) => '<span style="--c:' + c + '">' + esc(txt) + " · " + esc(corto(v)) +
+      " (" + Math.round(v / t * 100) + " %)</span>";
+    h += '<div class="panel"><h3>Aportes de particulares (código 102)</h3>' +
+      '<div class="fin23-split">' + seg(p.personas_naturales, tot1, "#7C4DFF") + seg(p.personas_juridicas, tot1, "#FFB020") + "</div>" +
+      '<div class="fin23-ley">' + ley("Personas naturales", p.personas_naturales, tot1, "#7C4DFF") +
+        ley("Personas jurídicas", p.personas_juridicas, tot1, "#FFB020") + "</div>" +
+      '<div class="fin23-split" style="margin-top:18px">' + seg(p.donaciones_dinero, tot2, "#00C97B") +
+        seg(p.donaciones_especie, tot2, "#2563EB") + seg(p.creditos, tot2, "#EA6A0A") + "</div>" +
+      '<div class="fin23-ley">' + ley("Donaciones en dinero", p.donaciones_dinero, tot2, "#00C97B") +
+        ley("Donaciones en especie", p.donaciones_especie, tot2, "#2563EB") +
+        ley("Créditos", p.creditos, tot2, "#EA6A0A") + "</div>" +
+      '<p class="note">' + miles(p.candidatos_con_naturales) + " candidaturas recibieron aportes de personas naturales y solo " +
+      miles(p.candidatos_con_juridicas) + " de personas jurídicas. Según el informe, los créditos no activan la " +
+      "inhabilidad del artículo 2 de la Ley 1474, aunque deben pagarse.</p></div>";
+
+    const topTabla = (titulo, filas) => '<div class="panel"><h3>' + esc(titulo) + "</h3><table>" +
+      '<thead><tr><th>Persona jurídica</th><th>A quiénes</th><th class="r">Valor</th></tr></thead><tbody>' +
+      filas.map(x => "<tr><td><b>" + esc(x.nombre) + '</b></td><td style="color:var(--muted)">' + esc(x.candidatos) +
+        '</td><td class="vfi-mono">' + esc(corto(x.valor)) + "</td></tr>").join("") + "</tbody></table></div>";
+    h += '<div class="cols">' + topTabla("Mayores donaciones de empresas y fundaciones", D.top_donaciones_juridicas||[]) +
+      topTabla("Mayores créditos de empresas", D.top_creditos_juridicas||[]) + "</div>";
+
+    h += '<div class="panel"><h3>Partidos que más aportaron a sus candidatos</h3><table><thead><tr><th>Partido</th>' +
+      '<th class="r">Donaciones</th><th class="r">Créditos</th><th class="r">Total</th><th class="r">Candidatos</th></tr></thead><tbody>' +
+      (D.top_partidos||[]).map(x => "<tr><td><b>" + esc(x.partido) + '</b></td><td class="vfi-mono">' + esc(corto(x.donaciones)) +
+        '</td><td class="vfi-mono">' + (x.creditos ? esc(corto(x.creditos)) : "—") + '</td><td class="vfi-mono">' +
+        esc(corto(x.total)) + '</td><td class="r">' + miles(x.candidatos) + "</td></tr>").join("") +
+      '</tbody></table><p class="note">"Candidatos" suma los que recibieron donación y los que recibieron crédito. ' +
+      "Los aportes de partidos son apenas el 2,26 % de todos los ingresos.</p></div>";
+
+    const maxG = Math.max(...(D.gastos_por_codigo||[]).map(x => x.pct));
+    h += '<div class="cols"><div class="panel"><h3>En qué se gastó</h3><table><thead><tr><th>Concepto</th>' +
+      '<th class="r">Total</th><th>%</th></tr></thead><tbody>' +
+      (D.gastos_por_codigo||[]).map(x => "<tr><td>" + esc(x.concepto) + '<span class="vf-sub">Código ' + esc(x.codigo) +
+        '</span></td><td class="vfi-mono">' + esc(corto(x.valor)) + "</td><td>" + barra(x.pct, maxG) + "</td></tr>").join("") +
+      '</tbody></table></div><div class="panel"><h3>Propaganda electoral</h3><ul class="fin23-lista">' +
+      (D.propaganda||[]).map(t => "<li>" + esc(t) + "</li>").join("") + "</ul></div></div>";
+
+    h += '<div class="panel"><h3>Tope de gastos frente a la campaña que más gastó</h3><table><thead><tr>' +
+      '<th>Territorio</th><th>Cargo</th><th class="r">Tope CNE</th><th class="r">Mayor gasto</th><th>% del tope</th></tr></thead><tbody>' +
+      (D.topes||[]).map(x => { const q = x.mayor_gasto / x.tope * 100;
+        return "<tr" + (x.territorio === "Cundinamarca" ? ' style="background:#FFF8EC"' : "") + "><td><b>" +
+          esc(x.territorio) + "</b></td><td>" + esc(x.tipo) + '</td><td class="vfi-mono">' + esc(corto(x.tope)) +
+          '</td><td class="vfi-mono">' + esc(corto(x.mayor_gasto)) + "</td><td>" + barra(q) + "</td></tr>"; }).join("") +
+      '</tbody></table><p class="note">Territorios que siguió la Alianza para el Control Ciudadano al Financiamiento de ' +
+      "Campañas. Topes según la Resolución 0670 de 2023 del CNE.</p></div>";
+
+    h += '<div class="vf-fuentes"><b>Fuente de esta vista</b><br>· ' + esc(f.nombre) + " — " + esc(f.entidad) +
+      ", con base en " + esc(f.base) + "." +
+      (f.tablero ? '<br>· <a href="' + esc(f.tablero) + '" target="_blank" rel="noopener">Tablero de Monitor Ciudadano 2023</a>' : "") +
+      (m.notas||[]).map(n => "<br>· " + esc(n)).join("") +
+      "<br>Cargado al panel el " + esc(fecha(m.cargado_en + "T12:00:00")) + ".</div>";
+    return h;
+  }
+
+  function vista(v) {
+    vistaFin = v === "2019" ? "2019" : "2023";
+    $("fin-vista-2023").hidden = vistaFin !== "2023";
+    $("fin-vista-2019").hidden = vistaFin !== "2019";
+    document.querySelectorAll("#fin-vistas .terr-tab").forEach(b => b.classList.toggle("on", b.dataset.v === vistaFin));
+    if (vistaFin === "2019") cargar(); else cargar23();
+  }
+  document.querySelectorAll("#fin-vistas .terr-tab").forEach(b => b.addEventListener("click", () => vista(b.dataset.v)));
+  document.addEventListener("click", e => {
+    if (e.target && e.target.id === "fin23-ir2019") { e.preventDefault(); vista("2019"); }
+  });
+
   // Sin barra de pestanas, se entra por el enlace del indice: el hash manda.
-  const siToca = () => { if (location.hash.slice(1) === "financiadores") cargar(); };
+  const siToca = () => { if (location.hash.slice(1) === "financiadores") vista(vistaFin); };
   siToca();
   window.addEventListener("hashchange", siToca);
   const btn = document.querySelector('.tabs button[data-t="financiadores"]');
-  if (btn) btn.addEventListener("click", cargar);
+  if (btn) btn.addEventListener("click", () => vista(vistaFin));
 })();
 
 /* ============================================================
