@@ -1,0 +1,20 @@
+# Archivos que Cloudflare NO debe publicar.
+# El sitio solo necesita las paginas .html, js/ y data/.
+.git
+.github
+.gitignore
+.assetsignore
+wrangler.*
+__pycache__
+*.py
+*.ps1
+/diagnostico_word.js
+*.txt
+*.csv
+*.md
+*.docx
+*.pdf
+diagnosticos_pdf
+diagnosticos_word
+_backup_*
+* (*).html
