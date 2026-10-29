@@ -21,3 +21,4 @@ _backup_*
 /src
 node_modules
 .wrangler
+.cache_policia

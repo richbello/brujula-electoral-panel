@@ -46,3 +46,4 @@ _backup*/
 
 data/cundinamarca/*.csv
 data/cundinamarca/*.parquet
+.cache_policia
