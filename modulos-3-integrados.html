@@ -225,7 +225,7 @@ th.cun-sort:hover{color:var(--navy)}
 <h2>Vigilancia Fiscal IA</h2>
 <p class="sub">Cruce en tiempo real · SECOP II × SIRI (Procuraduría) × Boletín (Contraloría)</p>
 
-<div class="terr-tabs" id="vfi-vistas"><button class="terr-tab on" data-v="cruce">Cruce por entidad o documento</button><button class="terr-tab" data-v="cun">Municipios de Cundinamarca</button></div>
+<div class="terr-tabs" id="vfi-vistas"><button class="terr-tab on" data-v="cruce">Cruce por entidad o documento</button><button class="terr-tab" data-v="cun" hidden>Municipios de Cundinamarca</button></div>
 <div id="vfi-vista-cruce">
 
 <div class="vfi-chips">
@@ -315,6 +315,27 @@ const ORIGEN = {
   financiadores: {real:true, txt:'<strong>Datos reales.</strong> Balance 2023: cifras nacionales de Cuentas Claras publicadas por Transparencia por Colombia (corte 29 de enero de 2024). Cruce 2019: aportes reportados al CNE en Soacha contra los contratos obtenidos después; señala posibles inhabilidades del artículo 2 de la Ley 1474 de 2011, que deben verificarse caso por caso.'},
   vigilancia: {real:true, txt:'<strong>Datos reales.</strong> Cruce en vivo de SECOP II contra SIRI (Procuraduría) y el Boletín de Responsables Fiscales (Contraloría). Las coincidencias requieren verificación antes de hacerse públicas.'}
 };
+/* ---------- Alcance por usuario ----------
+   Cloudflare Access dice con que correo entro la persona. Los clientes solo
+   ven Soacha; los correos de ADMINS ven todo (Cundinamarca y Bogota).
+   Por defecto, y ante cualquier error, el alcance es solo Soacha. */
+const ADMINS = ["richbello@gmail.com"];
+window.ES_ADMIN = false;
+window.ALCANCE = (async () => {
+  if (["localhost", "127.0.0.1"].includes(location.hostname)) return "todo";
+  // Primero se le pregunta al Worker, que verifica la firma de Access.
+  try {
+    const r = await fetch("/api/yo", { credentials: "include", cache: "no-store" });
+    if (r.ok) { const j = await r.json(); if (j && "admin" in j) return j.admin ? "todo" : "soacha"; }
+  } catch (e) {}
+  try {
+    const r = await fetch("/cdn-cgi/access/get-identity", { credentials: "include" });
+    if (!r.ok) return "soacha";
+    const j = await r.json();
+    return ADMINS.includes(String(j.email || "").toLowerCase().trim()) ? "todo" : "soacha";
+  } catch (e) { return "soacha"; }
+})().then(a => { window.ES_ADMIN = a === "todo"; return a; });
+
 function show(id){
   const sub = id==='cundinamarca';
   if(sub) id='vigilancia';
@@ -734,7 +755,10 @@ window.VFI_LOCAL = (function () {
 
   /* ---------------- inicialización ---------------- */
   const sel = $("vfi-entidad");
-  ENTIDADES.forEach(g => {
+  // Primero solo Soacha; el resto se agrega si el usuario es administrador.
+  const llenarEntidades = todo => {
+    sel.innerHTML = "";
+    ENTIDADES.filter(g => todo || g.grupo === "Soacha").forEach(g => {
     const og = document.createElement("optgroup");
     og.label = g.grupo;
     g.items.forEach(([etiqueta, busca]) => {
@@ -747,8 +771,16 @@ window.VFI_LOCAL = (function () {
       og.appendChild(o);
     });
     sel.appendChild(og);
-  });
+    });
+  };
+  llenarEntidades(false);
   sel.value = "SOACHA";
+  window.ALCANCE.then(a => {
+    if (a !== "todo") return;
+    const actual = sel.value;
+    llenarEntidades(true);
+    sel.value = actual;
+  });
 
   $("vfi-analizar").addEventListener("click", analizar);
   $("vfi-buscar").addEventListener("click", buscarDoc);
@@ -1880,6 +1912,7 @@ window.VFI_LOCAL = (function () {
   async function llenarMunicipios() {
     if (listaLista) return;
     listaLista = true;
+    if (await window.ALCANCE !== "todo") return;   // clientes: solo Soacha
     try {
       const r = await fetch(CUN + "indice.json");
       if (!r.ok) return;
@@ -2241,12 +2274,21 @@ window.VFI_LOCAL = (function () {
 
   /* ---------- sub-pestañas de Vigilancia ---------- */
   function vista(v) {
+    // Sin permiso se muestra el cruce, pero sin reescribir el enlace: el permiso
+    // puede confirmarse un instante despues y entonces se abre la vista pedida.
+    const sinPermiso = v === "cun" && !window.ES_ADMIN;
+    if (sinPermiso) {
+      v = "cruce";
+      // Solo cuenta como intento cuando ya se sabe que el usuario no es admin.
+      window.ALCANCE.then(a => { if (a !== "todo" && window.xirinRestringido)
+        window.xirinRestringido("Municipios de Cundinamarca (vista restringida)"); });
+    }
     $("vfi-vista-cruce").hidden = v !== "cruce";
     $("vfi-vista-cun").hidden = v !== "cun";
     document.querySelectorAll("#vfi-vistas .terr-tab").forEach(b => b.classList.toggle("on", b.dataset.v === v));
     if (v === "cun") cargarIndice();
     const h = v === "cun" ? "#cundinamarca" : "#vigilancia";
-    if (location.hash !== h && (location.hash === "#vigilancia" || location.hash === "#cundinamarca" || !location.hash))
+    if (!sinPermiso && location.hash !== h && (location.hash === "#vigilancia" || location.hash === "#cundinamarca" || !location.hash))
       history.replaceState(null, "", h);
   }
   document.querySelectorAll("#vfi-vistas .terr-tab").forEach(b => b.addEventListener("click", () => vista(b.dataset.v)));
@@ -2597,9 +2639,17 @@ window.VFI_LOCAL = (function () {
 
   segunHash();
   window.addEventListener("hashchange", segunHash);
+  // La sub-pestaña de Cundinamarca solo existe para administradores.
+  window.ALCANCE.then(a => {
+    if (a !== "todo") return;
+    const b = document.querySelector('#vfi-vistas .terr-tab[data-v="cun"]');
+    if (b) b.hidden = false;
+    segunHash();
+  });
 })();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 
+<script src="/js/auditoria.js" defer></script>
 </body>
 </html>

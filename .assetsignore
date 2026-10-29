@@ -18,3 +18,5 @@ diagnosticos_pdf
 diagnosticos_word
 _backup_*
 * (*).html
+/src
+node_modules

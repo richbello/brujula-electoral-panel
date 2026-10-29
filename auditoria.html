@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Auditoría de accesos · Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00C97B;--bad:#FF2D6F;--warn:#EA6A0A;--crit:#C8003C}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff}
+.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
+.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px}
+main{max-width:1200px;margin:0 auto;padding:32px}
+h2{font-size:22px;margin-bottom:4px}.sub{color:var(--muted);font-size:14px;margin-bottom:22px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-bottom:20px;overflow-x:auto}
+.panel h3{font-size:15px;margin-bottom:12px}
+.filtros{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.filtros label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:6px}
+.filtros input{padding:10px 12px;border:1.5px solid var(--line);border-radius:9px;font:14px Inter,sans-serif;color:var(--navy)}
+.btn{background:var(--navy);color:#fff;border:0;border-radius:9px;padding:11px 20px;font:700 14px Inter,sans-serif;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.gris{background:#F1EEFB;color:var(--muted);border:1.5px solid var(--line)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.kpi b{font-size:24px}
+.kpi.alerta b{color:var(--crit)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:11.5px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sub2{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.ses{cursor:pointer}.ses:hover{background:#FAF9FF}
+.det td{background:#F8F6FF}
+.mods{display:flex;flex-wrap:wrap;gap:6px}
+.mod{background:#EFEBFF;border-radius:999px;padding:3px 10px;font-size:11.5px}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#FFDEE8;color:var(--crit)}
+.msg{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;color:var(--muted);line-height:1.6}
+.msg b{color:var(--navy);display:block;margin-bottom:6px}
+.nota{font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:10px}
+@media(max-width:800px){.bar,main{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>X-<em>irin</em> Technologies S.A.S.</b><small>Estrategia Electoral 2027 · Auditoría de accesos</small></div><a class="back" href="/">&larr; Inicio</a></div></header>
+<main>
+<h2>Auditoría de accesos</h2>
+<p class="sub">Quién entró, cuándo, a qué módulos, cuánto tiempo y qué intentó ver sin permiso. Horas en zona horaria de Bogotá.</p>
+
+<div class="panel">
+  <div class="filtros">
+    <div><label for="f-desde">Desde</label><input type="date" id="f-desde"></div>
+    <div><label for="f-hasta">Hasta</label><input type="date" id="f-hasta"></div>
+    <div style="flex:1;min-width:220px"><label for="f-email">Usuario (correo, opcional)</label><input id="f-email" style="width:100%" placeholder="cliente@correo.com"></div>
+    <button class="btn" id="f-ver">Consultar</button>
+    <a class="btn gris" id="f-csv" href="#">Descargar CSV</a>
+  </div>
+</div>
+
+<div id="estado" class="msg">Cargando…</div>
+<div id="res" hidden></div>
+</main>
+<script>
+(function () {
+  "use strict";
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g,
+    c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const hoy = new Date(), hace30 = new Date(Date.now() - 30 * 864e5);
+  const iso = d => d.toLocaleDateString("en-CA", { timeZone: "America/Bogota" });
+  $("f-desde").value = iso(hace30); $("f-hasta").value = iso(hoy);
+
+  const fh = ts => ts ? new Date(ts).toLocaleString("es-CO", { timeZone: "America/Bogota",
+    day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "—";
+  const dur = s => { s = Math.round(Number(s) || 0);
+    const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+    return h ? h + " h " + m + " min" : m ? m + " min " + x + " s" : x + " s"; };
+  const navegador = a => { a = String(a || "");
+    const b = /Edg\//.test(a) ? "Edge" : /Chrome\//.test(a) ? "Chrome" : /Firefox\//.test(a) ? "Firefox" : /Safari\//.test(a) ? "Safari" : "Otro";
+    const so = /Windows/.test(a) ? "Windows" : /Android/.test(a) ? "Android" : /iPhone|iPad/.test(a) ? "iOS" : /Mac OS/.test(a) ? "macOS" : /Linux/.test(a) ? "Linux" : "";
+    return b + (so ? " · " + so : ""); };
+  const kpi = (t, v, alerta) => '<div class="kpi' + (alerta ? " alerta" : "") + '"><small>' + esc(t) + "</small><b>" + esc(v) + "</b></div>";
+
+  function params() {
+    const p = new URLSearchParams({ desde: $("f-desde").value, hasta: $("f-hasta").value });
+    const e = $("f-email").value.trim(); if (e) p.set("email", e);
+    return p;
+  }
+
+  async function ver() {
+    const est = $("estado"), res = $("res");
+    est.hidden = false; est.className = "msg"; est.textContent = "Cargando…"; res.hidden = true;
+    $("f-csv").href = "/api/auditoria.csv?" + params().toString();
+    try {
+      const r = await fetch("/api/auditoria?" + params().toString(), { cache: "no-store" });
+      if (r.status === 403) { est.innerHTML = "<b>Acceso restringido</b>Solo los administradores pueden ver la auditoría. El intento quedó registrado."; return; }
+      const d = await r.json();
+      if (!r.ok) throw new Error(d.error || ("HTTP " + r.status));
+      pintar(d); est.hidden = true; res.hidden = false;
+    } catch (e) {
+      est.innerHTML = "<b>No se pudo cargar la auditoría.</b>" + esc(e.message);
+    }
+  }
+
+  function pintar(d) {
+    const tot = d.sesiones.reduce((a, s) => a + (s.segundos || 0), 0);
+    let h = '<div class="kpis">' +
+      kpi("Usuarios", d.usuarios.length) +
+      kpi("Sesiones", d.sesiones.length) +
+      kpi("Tiempo activo total", dur(tot)) +
+      kpi("Intentos a información restringida", d.restringidos.length, d.restringidos.length > 0) + "</div>";
+
+    h += '<div class="panel"><h3>Por usuario</h3><table><thead><tr><th>Usuario</th><th class="r">Sesiones</th>' +
+      '<th class="r">Tiempo activo</th><th>Primer ingreso</th><th>Último movimiento</th><th class="r">Intentos restringidos</th></tr></thead><tbody>' +
+      (d.usuarios.length ? d.usuarios.map(u => "<tr><td><b>" + esc(u.email) + '</b></td><td class="r">' + (u.sesiones || 0) +
+        '</td><td class="r">' + dur(u.segundos) + "</td><td>" + fh(u.primera) + "</td><td>" + fh(u.ultima) +
+        '</td><td class="r">' + (u.restringidos ? '<span class="pill">' + u.restringidos + "</span>" : "0") + "</td></tr>").join("")
+        : '<tr><td colspan="6">Sin actividad en el período.</td></tr>') + "</tbody></table></div>";
+
+    h += '<div class="panel"><h3>Sesiones</h3><table id="t-ses"><thead><tr><th></th><th>Usuario</th><th>Entrada</th><th>Último movimiento</th>' +
+      '<th class="r">Tiempo activo</th><th>Módulos</th><th>Origen</th></tr></thead><tbody>' +
+      (d.sesiones.length ? d.sesiones.map((s, i) => '<tr class="ses" data-i="' + i + '"><td>▶</td><td><b>' + esc(s.email) + "</b></td><td>" +
+        fh(s.inicio) + "</td><td>" + fh(s.fin) + '</td><td class="r">' + dur(s.segundos) + "</td><td>" + (s.modulos || []).length +
+        "</td><td>" + esc([s.ciudad, s.pais].filter(Boolean).join(", ") || "—") + '<span class="sub2">' + esc(s.ip || "") + " · " +
+        esc(navegador(s.agente)) + "</span></td></tr>" +
+        '<tr class="det" data-d="' + i + '" hidden><td></td><td colspan="6"><div class="mods">' +
+        ((s.modulos || []).map(m => '<span class="mod">' + esc(m.modulo) + " · " + dur(m.segundos) + "</span>").join("") || "Sin módulos registrados") +
+        "</div></td></tr>").join("")
+        : '<tr><td colspan="7">Sin sesiones en el período.</td></tr>') + "</tbody></table>" +
+      '<p class="nota">Una sesión es una pestaña del navegador desde que la persona entra hasta que la cierra. El tiempo activo cuenta solo mientras la pestaña está a la vista, en tramos de 30 segundos.</p></div>';
+
+    h += '<div class="panel"><h3>Intentos de ingreso a información restringida</h3><table><thead><tr><th>Fecha y hora</th><th>Usuario</th>' +
+      "<th>Qué intentó</th><th>Origen</th></tr></thead><tbody>" +
+      (d.restringidos.length ? d.restringidos.map(x => "<tr><td>" + fh(x.ts) + "</td><td><b>" + esc(x.email) + "</b></td><td>" +
+        esc(x.detalle || "") + '<span class="sub2">' + esc(x.ruta || x.modulo || "") + "</span></td><td>" + esc(x.ip || "") +
+        (x.pais ? " · " + esc(x.pais) : "") + "</td></tr>").join("")
+        : '<tr><td colspan="4">Ningún intento en el período.</td></tr>') + "</tbody></table>" +
+      '<p class="nota">Los intentos de inicio de sesión con un correo no autorizado no llegan al panel: quedan en Cloudflare, en Zero Trust → Insights &amp; Logs → Access authentication logs, durante 24 horas en el plan gratuito.</p></div>';
+
+    $("res").innerHTML = h;
+    document.querySelectorAll("#t-ses .ses").forEach(tr => tr.addEventListener("click", () => {
+      const det = document.querySelector('#t-ses .det[data-d="' + tr.dataset.i + '"]');
+      det.hidden = !det.hidden; tr.firstChild.textContent = det.hidden ? "▶" : "▼";
+    }));
+  }
+
+  $("f-ver").addEventListener("click", ver);
+  ver();
+})();
+</script>
+<script src="/js/auditoria.js" defer></script>
+</body>
+</html>
