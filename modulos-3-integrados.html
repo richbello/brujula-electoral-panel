@@ -1885,12 +1885,13 @@ window.VFI_LOCAL = (function () {
       if (!r.ok) return;
       const sel = $("terr-muni");
       const g = document.createElement("optgroup");
-      g.label = "Municipios de Cundinamarca · desde 2024";
+      g.label = "Municipios de Cundinamarca";
       (await r.json()).municipios.forEach(m => {
         if (m.archivo === "soacha.json") return;
         const o = document.createElement("option");
         o.value = m.archivo;
-        o.textContent = m.municipio + " · " + miles(m.obras_vencidas) + " obras vencidas";
+        o.textContent = m.municipio + " · " + miles(m.obras_vencidas) + " obras vencidas" +
+          (m.desde ? " · desde " + String(m.desde).slice(0, 4) : " · desde 2024");
         g.appendChild(o);
       });
       sel.appendChild(g);

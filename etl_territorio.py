@@ -458,13 +458,22 @@ def por_sector(contratos: list[dict]) -> tuple[list[dict], dict]:
 # Orquestacion
 # --------------------------------------------------------------------------
 
+def _soql(s: str) -> str:
+    return str(s).replace("'", "''")
+
+
 def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
-              minimo: float, limite: int | None, hoy: dt.date | None = None) -> dict:
+              minimo: float, limite: int | None, hoy: dt.date | None = None,
+              departamento: str | None = None) -> dict:
     ahora = dt.datetime.now().astimezone()
     hoy = hoy or ahora.date()
 
     print(f"[1/2] SECOP II  ->  contratos de {municipio} entre {desde} y {hasta}")
-    where = (f"upper(ciudad) like upper('%{municipio}%') "
+    # Con departamento el municipio se busca por nombre exacto: "La Vega" o
+    # "Granada" existen en varios departamentos, y un LIKE los mezclaria.
+    lugar = (f"ciudad = '{_soql(municipio)}' AND departamento = '{_soql(departamento)}' "
+             if departamento else f"upper(ciudad) like upper('%{_soql(municipio)}%') ")
+    where = (lugar +
              f"AND fecha_de_firma >= '{desde}T00:00:00' "
              f"AND fecha_de_firma <= '{hasta}T23:59:59'")
     contratos = consultar(DATASET, where=where, order="fecha_de_firma DESC",
@@ -484,6 +493,7 @@ def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
         "meta": {
             "generado_en": ahora.isoformat(timespec="seconds"),
             "municipio": municipio,
+            "departamento": departamento or "",
             "ventana": {"desde": desde, "hasta": hasta},
             "minimo_obra": minimo,
             "cobertura": cobertura,

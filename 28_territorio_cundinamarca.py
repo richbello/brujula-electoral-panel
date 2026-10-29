@@ -115,6 +115,19 @@ def main() -> int:
     for ruta in sorted(ORIGEN.glob("*.json")):
         d = json.loads(ruta.read_text(encoding="utf-8"))
         hoy = dt.date.fromisoformat(str(d.get("generado") or dt.date.today())[:10])
+        # Si 31_territorio_cundinamarca_gobiernos.py ya dejo un corte que arranca
+        # antes (2020, con los dos gobiernos), no se reemplaza por uno mas corto.
+        actual = DESTINO / ruta.name
+        if actual.exists():
+            previo = json.loads(actual.read_text(encoding="utf-8"))
+            ini_previo = (previo.get("meta", {}).get("ventana") or {}).get("desde") or "9999"
+            if ini_previo < (d.get("periodo_desde") or "0000"):
+                k = previo["kpis"]
+                indice.append({"municipio": d["municipio"], "archivo": ruta.name,
+                               "contratos": k["contratos"], "obras_vencidas": k["obras_vencidas"],
+                               "desde": ini_previo})
+                print(f"{d['municipio']:<28} conserva su corte desde {ini_previo}")
+                continue
         t = construir(d, hoy)
         (DESTINO / ruta.name).write_text(
             json.dumps(t, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

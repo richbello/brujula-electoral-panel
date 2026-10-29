@@ -1,0 +1,87 @@
+name: Actualizar territorio Cundinamarca por gobierno
+
+# Genera data/cundinamarca/territorio/<municipio>.json para cada municipio de
+# Cundinamarca con contratos de SECOP II desde 2020, separados por el gobierno
+# que los firmo (2020-2023 y 2024-2027). Misma logica que el corte de Soacha.
+#
+# Se ejecuta a mano desde la pestana Actions. Recorre todos los municipios,
+# asi que tarda bastante mas que el de Soacha.
+
+on:
+  workflow_dispatch:
+    inputs:
+      desde:
+        description: "Desde que fecha de firma"
+        required: true
+        default: "2020-01-01"
+      solo:
+        description: "Opcional: municipios separados por coma (vacio = todos)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: territorio-cundinamarca
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install --quiet requests
+      - name: Verificar la logica
+        run: python test_etl_territorio.py
+      - name: Generar los cortes
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+          DESDE: ${{ github.event.inputs.desde || '2020-01-01' }}
+          SOLO: ${{ github.event.inputs.solo }}
+        run: |
+          if [ -n "$SOLO" ]; then
+            IFS=',' read -ra LISTA <<< "$SOLO"
+            for i in "${!LISTA[@]}"; do LISTA[$i]="$(echo "${LISTA[$i]}" | xargs)"; done
+            python 31_territorio_cundinamarca_gobiernos.py --desde "$DESDE" --solo "${LISTA[@]}"
+          else
+            python 31_territorio_cundinamarca_gobiernos.py --desde "$DESDE"
+          fi
+      - name: Resumen
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          d = pathlib.Path("data/cundinamarca/territorio")
+          filas = []
+          for m in json.loads((d / "indice.json").read_text(encoding="utf-8"))["municipios"]:
+              f = d / m["archivo"]
+              if not f.exists():
+                  continue
+              t = json.loads(f.read_text(encoding="utf-8"))
+              g = {x["clave"]: x for x in t.get("por_gobierno", [])}
+              a, b = g.get("2020-2023", {}), g.get("2024-2027", {})
+              filas.append((m["municipio"], t["meta"]["ventana"]["desde"], t["kpis"]["contratos"],
+                            a.get("obras_vencidas", "—"), b.get("obras_vencidas", "—")))
+          print("## Territorio Cundinamarca por gobierno\n")
+          print("| Municipio | Desde | Contratos | Vencidas 2020-2023 | Vencidas 2024-2027 |")
+          print("|---|---|---:|---:|---:|")
+          for f in filas:
+              print(f"| {f[0]} | {f[1]} | {f[2]:,} | {f[3]} | {f[4]} |")
+          PY
+      - name: Publicar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add data/cundinamarca/territorio
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+          else
+            git commit -m "Territorio Cundinamarca por gobierno $(date +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push
+          fi
