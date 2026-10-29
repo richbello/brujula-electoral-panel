@@ -3,338 +3,394 @@
   {
    "municipio": "Agua De Dios",
    "archivo": "agua_de_dios.json",
-   "contratos": 1016,
-   "obras_vencidas": 45
+   "contratos": 1067,
+   "obras_vencidas": 50,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Albán",
    "archivo": "alban.json",
-   "contratos": 609,
-   "obras_vencidas": 26
+   "contratos": 644,
+   "obras_vencidas": 44,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Anapoima",
    "archivo": "anapoima.json",
-   "contratos": 118,
-   "obras_vencidas": 1
+   "contratos": 121,
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Anolaima",
    "archivo": "anolaima.json",
-   "contratos": 601,
-   "obras_vencidas": 84
+   "contratos": 813,
+   "obras_vencidas": 136,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Apulo",
    "archivo": "apulo.json",
-   "contratos": 495,
-   "obras_vencidas": 77
+   "contratos": 588,
+   "obras_vencidas": 83,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Arbeláez",
    "archivo": "arbelaez.json",
-   "contratos": 3,
-   "obras_vencidas": 2
+   "contratos": 8,
+   "obras_vencidas": 7,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Beltrán",
    "archivo": "beltran.json",
-   "contratos": 67,
-   "obras_vencidas": 2
+   "contratos": 98,
+   "obras_vencidas": 2,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Bituima",
    "archivo": "bituima.json",
    "contratos": 4,
-   "obras_vencidas": 3
+   "obras_vencidas": 3,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Bojacá",
    "archivo": "bojaca.json",
-   "contratos": 893,
-   "obras_vencidas": 101
+   "contratos": 907,
+   "obras_vencidas": 102,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Cajicá",
    "archivo": "cajica.json",
-   "contratos": 3955,
-   "obras_vencidas": 198
+   "contratos": 6633,
+   "obras_vencidas": 330,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Caparrapí",
    "archivo": "caparrapi.json",
-   "contratos": 465,
-   "obras_vencidas": 11
+   "contratos": 477,
+   "obras_vencidas": 11,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Caqueza",
    "archivo": "caqueza.json",
-   "contratos": 4541,
-   "obras_vencidas": 622
+   "contratos": 5115,
+   "obras_vencidas": 655,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Chaguaní",
    "archivo": "chaguani.json",
    "contratos": 5,
-   "obras_vencidas": 3
+   "obras_vencidas": 3,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Choachí",
    "archivo": "choachi.json",
-   "contratos": 32,
-   "obras_vencidas": 5
+   "contratos": 72,
+   "obras_vencidas": 5,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Chocontá",
    "archivo": "choconta.json",
-   "contratos": 780,
-   "obras_vencidas": 49
+   "contratos": 842,
+   "obras_vencidas": 47,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Chía",
    "archivo": "chia.json",
-   "contratos": 6615,
-   "obras_vencidas": 536
+   "contratos": 12119,
+   "obras_vencidas": 844,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Cogua",
    "archivo": "cogua.json",
-   "contratos": 1152,
-   "obras_vencidas": 46
+   "contratos": 1208,
+   "obras_vencidas": 59,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Cota",
    "archivo": "cota.json",
-   "contratos": 5533,
-   "obras_vencidas": 222
+   "contratos": 9182,
+   "obras_vencidas": 752,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Cucunubá",
    "archivo": "cucunuba.json",
-   "contratos": 571,
-   "obras_vencidas": 21
+   "contratos": 894,
+   "obras_vencidas": 31,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "El Colegio",
    "archivo": "el_colegio.json",
-   "contratos": 3151,
-   "obras_vencidas": 179
+   "contratos": 4061,
+   "obras_vencidas": 171,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "El Peñón",
    "archivo": "el_penon.json",
    "contratos": 6,
-   "obras_vencidas": 4
+   "obras_vencidas": 4,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "El Rosal",
    "archivo": "el_rosal.json",
-   "contratos": 736,
-   "obras_vencidas": 42
+   "contratos": 774,
+   "obras_vencidas": 42,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Facatativá",
    "archivo": "facatativa.json",
-   "contratos": 4601,
-   "obras_vencidas": 401
+   "contratos": 8649,
+   "obras_vencidas": 585,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Fomeque",
    "archivo": "fomeque.json",
    "contratos": 9,
-   "obras_vencidas": 6
+   "obras_vencidas": 6,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Fosca",
    "archivo": "fosca.json",
    "contratos": 6,
-   "obras_vencidas": 0
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Funza",
    "archivo": "funza.json",
-   "contratos": 6888,
-   "obras_vencidas": 772
+   "contratos": 11747,
+   "obras_vencidas": 1469,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Fusagasugá",
    "archivo": "fusagasuga.json",
-   "contratos": 4713,
-   "obras_vencidas": 474
+   "contratos": 10589,
+   "obras_vencidas": 815,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Fúquene",
    "archivo": "fuquene.json",
-   "contratos": 309,
-   "obras_vencidas": 34
+   "contratos": 318,
+   "obras_vencidas": 33,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Gachala",
    "archivo": "gachala.json",
-   "contratos": 1862,
-   "obras_vencidas": 58
+   "contratos": 2485,
+   "obras_vencidas": 56,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Gachancipá",
    "archivo": "gachancipa.json",
-   "contratos": 782,
-   "obras_vencidas": 28
+   "contratos": 798,
+   "obras_vencidas": 30,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Gachetá",
    "archivo": "gacheta.json",
-   "contratos": 997,
-   "obras_vencidas": 129
+   "contratos": 1023,
+   "obras_vencidas": 130,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Gama",
    "archivo": "gama.json",
-   "contratos": 546,
-   "obras_vencidas": 60
+   "contratos": 610,
+   "obras_vencidas": 74,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Girardot",
    "archivo": "girardot.json",
-   "contratos": 6388,
-   "obras_vencidas": 446
+   "contratos": 11892,
+   "obras_vencidas": 926,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Granada",
    "archivo": "granada.json",
-   "contratos": 33,
-   "obras_vencidas": 4
+   "contratos": 34,
+   "obras_vencidas": 5,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Guachetá",
    "archivo": "guacheta.json",
-   "contratos": 485,
-   "obras_vencidas": 42
+   "contratos": 499,
+   "obras_vencidas": 50,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Guaduas",
    "archivo": "guaduas.json",
-   "contratos": 2413,
-   "obras_vencidas": 404
+   "contratos": 2674,
+   "obras_vencidas": 407,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Guasca",
    "archivo": "guasca.json",
-   "contratos": 363,
-   "obras_vencidas": 30
+   "contratos": 365,
+   "obras_vencidas": 27,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Guatavita",
    "archivo": "guatavita.json",
-   "contratos": 10,
-   "obras_vencidas": 0
+   "contratos": 18,
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Guayabal De Siquima",
    "archivo": "guayabal_de_siquima.json",
-   "contratos": 11,
-   "obras_vencidas": 0
+   "contratos": 13,
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Gutiérrez",
    "archivo": "gutierrez.json",
    "contratos": 3,
-   "obras_vencidas": 0
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Jerusalén",
    "archivo": "jerusalen.json",
-   "contratos": 11,
-   "obras_vencidas": 0
+   "contratos": 12,
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "La Calera",
    "archivo": "la_calera.json",
-   "contratos": 1872,
-   "obras_vencidas": 120
+   "contratos": 3328,
+   "obras_vencidas": 268,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "La Mesa",
    "archivo": "la_mesa.json",
-   "contratos": 1254,
-   "obras_vencidas": 179
+   "contratos": 1329,
+   "obras_vencidas": 179,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "La Palma",
    "archivo": "la_palma.json",
-   "contratos": 5,
-   "obras_vencidas": 0
+   "contratos": 8,
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "La Peña",
    "archivo": "la_pena.json",
-   "contratos": 11,
-   "obras_vencidas": 1
+   "contratos": 20,
+   "obras_vencidas": 3,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "La Vega",
    "archivo": "la_vega.json",
-   "contratos": 1110,
-   "obras_vencidas": 32
+   "contratos": 1139,
+   "obras_vencidas": 42,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Lenguazaque",
    "archivo": "lenguazaque.json",
-   "contratos": 604,
-   "obras_vencidas": 99
+   "contratos": 644,
+   "obras_vencidas": 109,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Macheta",
    "archivo": "macheta.json",
-   "contratos": 491,
-   "obras_vencidas": 51
+   "contratos": 496,
+   "obras_vencidas": 52,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Madrid",
    "archivo": "madrid.json",
-   "contratos": 3981,
-   "obras_vencidas": 348
+   "contratos": 6972,
+   "obras_vencidas": 671,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Manta",
    "archivo": "manta.json",
-   "contratos": 423,
-   "obras_vencidas": 46
+   "contratos": 459,
+   "obras_vencidas": 46,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Medina",
    "archivo": "medina.json",
    "contratos": 10,
-   "obras_vencidas": 0
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Mosquera",
    "archivo": "mosquera.json",
-   "contratos": 6448,
-   "obras_vencidas": 555
+   "contratos": 11730,
+   "obras_vencidas": 1067,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Nariño",
    "archivo": "narino.json",
    "contratos": 3,
-   "obras_vencidas": 1
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Nemocón",
    "archivo": "nemocon.json",
-   "contratos": 764,
-   "obras_vencidas": 56
+   "contratos": 793,
+   "obras_vencidas": 56,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Nilo",
    "archivo": "nilo.json",
-   "contratos": 1018,
-   "obras_vencidas": 181
+   "contratos": 2295,
+   "obras_vencidas": 336,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Nimaima",
    "archivo": "nimaima.json",
-   "contratos": 48,
-   "obras_vencidas": 1
+   "contratos": 103,
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "No Definido",
@@ -345,104 +401,121 @@
   {
    "municipio": "Nocaima",
    "archivo": "nocaima.json",
-   "contratos": 620,
-   "obras_vencidas": 36
+   "contratos": 665,
+   "obras_vencidas": 43,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Pacho",
    "archivo": "pacho.json",
-   "contratos": 1041,
-   "obras_vencidas": 105
+   "contratos": 1130,
+   "obras_vencidas": 106,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Pandi",
    "archivo": "pandi.json",
    "contratos": 3,
-   "obras_vencidas": 0
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Paratebueno",
    "archivo": "paratebueno.json",
-   "contratos": 1,
-   "obras_vencidas": 1
+   "contratos": 763,
+   "obras_vencidas": 7,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Pasca",
    "archivo": "pasca.json",
    "contratos": 1,
-   "obras_vencidas": 0
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Puerto Salgar",
    "archivo": "puerto_salgar.json",
-   "contratos": 1627,
-   "obras_vencidas": 143
+   "contratos": 1905,
+   "obras_vencidas": 166,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Pulí",
    "archivo": "puli.json",
-   "contratos": 79,
-   "obras_vencidas": 8
+   "contratos": 80,
+   "obras_vencidas": 6,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Quebradanegra",
    "archivo": "quebradanegra.json",
-   "contratos": 11,
-   "obras_vencidas": 1
+   "contratos": 17,
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Ricaurte",
    "archivo": "ricaurte.json",
-   "contratos": 2332,
-   "obras_vencidas": 64
+   "contratos": 3777,
+   "obras_vencidas": 75,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "San Antonio Del Tequendama",
    "archivo": "san_antonio_del_tequendama.json",
-   "contratos": 724,
-   "obras_vencidas": 78
+   "contratos": 1104,
+   "obras_vencidas": 78,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "San Bernardo",
    "archivo": "san_bernardo.json",
-   "contratos": 9,
-   "obras_vencidas": 0
+   "contratos": 10,
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "San Francisco",
    "archivo": "san_francisco.json",
-   "contratos": 611,
-   "obras_vencidas": 47
+   "contratos": 644,
+   "obras_vencidas": 49,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Sasaima",
    "archivo": "sasaima.json",
-   "contratos": 715,
-   "obras_vencidas": 108
+   "contratos": 730,
+   "obras_vencidas": 110,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Sesquilé",
    "archivo": "sesquile.json",
-   "contratos": 797,
-   "obras_vencidas": 39
+   "contratos": 913,
+   "obras_vencidas": 38,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Sibaté",
    "archivo": "sibate.json",
-   "contratos": 1968,
-   "obras_vencidas": 246
+   "contratos": 3823,
+   "obras_vencidas": 499,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Silvania",
    "archivo": "silvania.json",
-   "contratos": 355,
-   "obras_vencidas": 58
+   "contratos": 456,
+   "obras_vencidas": 65,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Simijaca",
    "archivo": "simijaca.json",
-   "contratos": 820,
-   "obras_vencidas": 104
+   "contratos": 831,
+   "obras_vencidas": 104,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Soacha",
@@ -453,164 +526,191 @@
   {
    "municipio": "Sopó",
    "archivo": "sopo.json",
-   "contratos": 1649,
-   "obras_vencidas": 40
+   "contratos": 3365,
+   "obras_vencidas": 68,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Subachoque",
    "archivo": "subachoque.json",
-   "contratos": 830,
-   "obras_vencidas": 93
+   "contratos": 852,
+   "obras_vencidas": 96,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Suesca",
    "archivo": "suesca.json",
-   "contratos": 422,
-   "obras_vencidas": 56
+   "contratos": 439,
+   "obras_vencidas": 56,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Supatá",
    "archivo": "supata.json",
-   "contratos": 35,
-   "obras_vencidas": 0
+   "contratos": 56,
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Susa",
    "archivo": "susa.json",
-   "contratos": 17,
-   "obras_vencidas": 2
+   "contratos": 20,
+   "obras_vencidas": 5,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Sutatausa",
    "archivo": "sutatausa.json",
-   "contratos": 380,
-   "obras_vencidas": 66
+   "contratos": 385,
+   "obras_vencidas": 66,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tabio",
    "archivo": "tabio.json",
-   "contratos": 1420,
-   "obras_vencidas": 68
+   "contratos": 2615,
+   "obras_vencidas": 106,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tausa",
    "archivo": "tausa.json",
-   "contratos": 619,
-   "obras_vencidas": 88
+   "contratos": 659,
+   "obras_vencidas": 102,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tena",
    "archivo": "tena.json",
-   "contratos": 7,
-   "obras_vencidas": 3
+   "contratos": 24,
+   "obras_vencidas": 3,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tenjo",
    "archivo": "tenjo.json",
-   "contratos": 2509,
-   "obras_vencidas": 150
+   "contratos": 2543,
+   "obras_vencidas": 155,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tibacuy",
    "archivo": "tibacuy.json",
-   "contratos": 5,
-   "obras_vencidas": 0
+   "contratos": 6,
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tibirita",
    "archivo": "tibirita.json",
-   "contratos": 82,
-   "obras_vencidas": 15
+   "contratos": 89,
+   "obras_vencidas": 15,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tocaima",
    "archivo": "tocaima.json",
-   "contratos": 12,
-   "obras_vencidas": 6
+   "contratos": 24,
+   "obras_vencidas": 12,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Tocancipá",
    "archivo": "tocancipa.json",
-   "contratos": 2892,
-   "obras_vencidas": 233
+   "contratos": 5040,
+   "obras_vencidas": 376,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Ubalá",
    "archivo": "ubala.json",
    "contratos": 1,
-   "obras_vencidas": 1
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Ubaque",
    "archivo": "ubaque.json",
    "contratos": 7,
-   "obras_vencidas": 2
+   "obras_vencidas": 2,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Une",
    "archivo": "une.json",
-   "contratos": 5,
-   "obras_vencidas": 1
+   "contratos": 27,
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Venecia",
    "archivo": "venecia.json",
-   "contratos": 21,
-   "obras_vencidas": 13
+   "contratos": 27,
+   "obras_vencidas": 14,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Vianí",
    "archivo": "viani.json",
    "contratos": 4,
-   "obras_vencidas": 0
+   "obras_vencidas": 0,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Villa De San Diego De Ubate",
    "archivo": "villa_de_san_diego_de_ubate.json",
-   "contratos": 1553,
-   "obras_vencidas": 70
+   "contratos": 3226,
+   "obras_vencidas": 164,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Villagómez",
    "archivo": "villagomez.json",
-   "contratos": 171,
-   "obras_vencidas": 8
+   "contratos": 187,
+   "obras_vencidas": 10,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Villapinzón",
    "archivo": "villapinzon.json",
-   "contratos": 984,
-   "obras_vencidas": 16
+   "contratos": 1386,
+   "obras_vencidas": 25,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Villeta",
    "archivo": "villeta.json",
-   "contratos": 2659,
-   "obras_vencidas": 661
+   "contratos": 5182,
+   "obras_vencidas": 1093,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Viotá",
    "archivo": "viota.json",
-   "contratos": 434,
-   "obras_vencidas": 56
+   "contratos": 447,
+   "obras_vencidas": 56,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Yacopí",
    "archivo": "yacopi.json",
-   "contratos": 11,
-   "obras_vencidas": 1
+   "contratos": 12,
+   "obras_vencidas": 1,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Zipacón",
    "archivo": "zipacon.json",
    "contratos": 11,
-   "obras_vencidas": 4
+   "obras_vencidas": 4,
+   "desde": "2020-01-01"
   },
   {
    "municipio": "Zipaquirá",
    "archivo": "zipaquira.json",
-   "contratos": 4169,
-   "obras_vencidas": 189
+   "contratos": 7484,
+   "obras_vencidas": 412,
+   "desde": "2020-01-01"
   }
  ]
 }
