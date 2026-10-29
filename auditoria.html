@@ -39,7 +39,10 @@ tr:last-child td{border-bottom:0}
 .ses{cursor:pointer}.ses:hover{background:#FAF9FF}
 .det td{background:#F8F6FF}
 .mods{display:flex;flex-wrap:wrap;gap:6px}
-.mod{background:#EFEBFF;border-radius:999px;padding:3px 10px;font-size:11.5px}
+.mod{background:#EFEBFF;border-radius:999px;padding:3px 10px;font-size:11.5px;white-space:nowrap}
+.mod b{font-weight:600}
+.barra{height:7px;background:#EFEBFF;border-radius:4px;overflow:hidden}
+.barra i{display:block;height:100%;background:var(--gold)}
 .pill{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#FFDEE8;color:var(--crit)}
 .msg{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;color:var(--muted);line-height:1.6}
 .msg b{color:var(--navy);display:block;margin-bottom:6px}
@@ -128,16 +131,33 @@ tr:last-child td{border-bottom:0}
         '</td><td class="r">' + (u.restringidos ? '<span class="pill">' + u.restringidos + "</span>" : "0") + "</td></tr>").join("")
         : '<tr><td colspan="6">Sin actividad en el período.</td></tr>') + "</tbody></table></div>";
 
-    h += '<div class="panel"><h3>Sesiones</h3><table id="t-ses"><thead><tr><th></th><th>Usuario</th><th>Entrada</th><th>Último movimiento</th>' +
-      '<th class="r">Tiempo activo</th><th>Módulos</th><th>Origen</th></tr></thead><tbody>' +
-      (d.sesiones.length ? d.sesiones.map((s, i) => '<tr class="ses" data-i="' + i + '"><td>▶</td><td><b>' + esc(s.email) + "</b></td><td>" +
-        fh(s.inicio) + "</td><td>" + fh(s.fin) + '</td><td class="r">' + dur(s.segundos) + "</td><td>" + (s.modulos || []).length +
-        "</td><td>" + esc([s.ciudad, s.pais].filter(Boolean).join(", ") || "—") + '<span class="sub2">' + esc(s.ip || "") + " · " +
-        esc(navegador(s.agente)) + "</span></td></tr>" +
-        '<tr class="det" data-d="' + i + '" hidden><td></td><td colspan="6"><div class="mods">' +
-        ((s.modulos || []).map(m => '<span class="mod">' + esc(m.modulo) + " · " + dur(m.segundos) + "</span>").join("") || "Sin módulos registrados") +
-        "</div></td></tr>").join("")
-        : '<tr><td colspan="7">Sin sesiones en el período.</td></tr>') + "</tbody></table>" +
+    // Tiempo por modulo y por usuario, sumando todas las sesiones del periodo.
+    const MODS = {}, USRS = [];
+    d.sesiones.forEach(s => (s.modulos || []).forEach(m => {
+      if (!USRS.includes(s.email)) USRS.push(s.email);
+      const fila = MODS[m.modulo] ||= { modulo: m.modulo, total: 0, visitas: 0, por: {} };
+      fila.total += m.segundos || 0; fila.visitas++;
+      fila.por[s.email] = (fila.por[s.email] || 0) + (m.segundos || 0);
+    }));
+    const filasMod = Object.values(MODS).sort((a, b) => b.total - a.total);
+    const maxMod = Math.max(1, ...filasMod.map(f => f.total));
+    h += '<div class="panel"><h3>Tiempo por módulo</h3><table><thead><tr><th>Módulo</th><th class="r">Tiempo total</th><th></th>' +
+      '<th class="r">Sesiones</th>' + USRS.map(u => '<th class="r">' + esc(u.split("@")[0]) + "</th>").join("") + "</tr></thead><tbody>" +
+      (filasMod.length ? filasMod.map(f => "<tr><td><b>" + esc(f.modulo) + '</b></td><td class="r">' + dur(f.total) +
+        '</td><td style="width:120px"><div class="barra"><i style="width:' + (f.total / maxMod * 100).toFixed(1) + '%"></i></div></td>' +
+        '<td class="r">' + f.visitas + "</td>" +
+        USRS.map(u => '<td class="r">' + (f.por[u] ? dur(f.por[u]) : '<span style="color:#B4A6DB">—</span>') + "</td>").join("") + "</tr>").join("")
+        : '<tr><td colspan="4">Sin actividad por módulo en el período.</td></tr>') + "</tbody></table></div>";
+
+    h += '<div class="panel"><h3>Sesiones</h3><table id="t-ses"><thead><tr><th>Usuario</th><th>Entrada</th><th>Último movimiento</th>' +
+      '<th class="r">Tiempo activo</th><th>Módulos visitados (tiempo en cada uno)</th><th>Origen</th></tr></thead><tbody>' +
+      (d.sesiones.length ? d.sesiones.map(s => "<tr><td><b>" + esc(s.email) + "</b></td><td>" +
+        fh(s.inicio) + "</td><td>" + fh(s.fin) + '</td><td class="r">' + dur(s.segundos) + '</td><td><div class="mods">' +
+        ((s.modulos || []).map(m => '<span class="mod">' + esc(m.modulo) + " · <b>" + dur(m.segundos) + "</b></span>").join("") ||
+          '<span style="color:var(--muted)">Sin módulos registrados</span>') +
+        "</div></td><td>" + esc([s.ciudad, s.pais].filter(Boolean).join(", ") || "—") + '<span class="sub2">' + esc(s.ip || "") + " · " +
+        esc(navegador(s.agente)) + "</span></td></tr>").join("")
+        : '<tr><td colspan="6">Sin sesiones en el período.</td></tr>') + "</tbody></table>" +
       '<p class="nota">Una sesión es una pestaña del navegador desde que la persona entra hasta que la cierra. El tiempo activo cuenta solo mientras la pestaña está a la vista, en tramos de 30 segundos.</p></div>';
 
     h += '<div class="panel"><h3>Intentos de ingreso a información restringida</h3><table><thead><tr><th>Fecha y hora</th><th>Usuario</th>' +
@@ -149,10 +169,6 @@ tr:last-child td{border-bottom:0}
       '<p class="nota">Los intentos de inicio de sesión con un correo no autorizado no llegan al panel: quedan en Cloudflare, en Zero Trust → Insights &amp; Logs → Access authentication logs, durante 24 horas en el plan gratuito.</p></div>';
 
     $("res").innerHTML = h;
-    document.querySelectorAll("#t-ses .ses").forEach(tr => tr.addEventListener("click", () => {
-      const det = document.querySelector('#t-ses .det[data-d="' + tr.dataset.i + '"]');
-      det.hidden = !det.hidden; tr.firstChild.textContent = det.hidden ? "▶" : "▼";
-    }));
   }
 
   $("f-ver").addEventListener("click", ver);
