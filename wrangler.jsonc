@@ -1,30 +1,16 @@
-﻿{
-  // Panel Estrategia Electoral 2027 Â· X-irin Technologies S.A.S.
-  // El Worker (src/worker.js) verifica la identidad de Cloudflare Access,
-  // bloquea lo restringido, registra la auditoria en D1 y sirve el sitio.
-  "$schema": "node_modules/wrangler/config-schema.json",
+{
+  // Panel Estrategia Electoral 2027 - X-irin Technologies S.A.S.
+  // Sin base D1 conectada, la auditoria muestra datos de demostracion.
   "name": "brujula-electoral-panel",
   "main": "src/worker.js",
   "compatibility_date": "2026-10-01",
   "workers_dev": true,
   "preview_urls": true,
-  "assets": {
-    "directory": ".",
-    "binding": "ASSETS",
-    "run_worker_first": true
-  },
+  "assets": { "directory": ".", "binding": "ASSETS", "run_worker_first": true },
   "vars": {
     "TEAM_DOMAIN": "xirin-technologies.cloudflareaccess.com",
     "ACCESS_AUD": "26bba0559fa6af59a946545ea412f615989850cb6dd87ebd99bdad2c47e741dd",
-    // Correos con acceso completo y a la auditoria, separados por coma.
     "ADMINS": "richbello@gmail.com"
   },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "xirin-auditoria",
-      "database_id": "TU-ID-AQUI"
-    }
-  ],
   "observability": { "enabled": true }
 }

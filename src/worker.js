@@ -188,6 +188,102 @@ async function csv(env, url) {
     "Cache-Control": "no-store" } });
 }
 
+/* ---------------------------------------------------------- demostracion
+   Sin base D1 conectada, la auditoria muestra datos FICTICIOS para ver como
+   funciona. Se generan siempre iguales (semilla fija) y fechados en los
+   ultimos 14 dias. Al conectar D1 (binding DB) esto deja de usarse. */
+function demoEventos() {
+  let semilla = 20271027;
+  const azar = () => (semilla = (semilla * 1103515245 + 12345) % 2147483648) / 2147483648;
+  const elegir = l => l[Math.floor(azar() * l.length)];
+  const USUARIOS = [
+    { email: "candidato.demo@ejemplo.com", ip: "190.24.18.7", ciudad: "Soacha", dias: [0, 1, 2, 4, 6, 8, 11],
+      agente: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130.0 Safari/537.36", curioso: true },
+    { email: "gerente.campana@ejemplo.com", ip: "181.51.33.90", ciudad: "Bogotá", dias: [0, 1, 3, 5, 9, 12],
+      agente: "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) Safari/604.1", curioso: false },
+    { email: "asesor.juridico@ejemplo.com", ip: "186.155.4.21", ciudad: "Bogotá", dias: [2, 7, 10],
+      agente: "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) Safari/605.1.15", curioso: true },
+    { email: "richbello@gmail.com", ip: "190.85.102.44", ciudad: "Soacha", dias: [0, 1, 2, 3, 4, 5, 6, 7],
+      agente: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130.0 Safari/537.36", curioso: false }
+  ];
+  const MODULOS = ["Inicio", "01 Resultados históricos", "02 Pulso social", "03 Vigilancia fiscal",
+    "04 Financiadores y contratos", "05 Territorio y obras", "06 Ficha del contendor"];
+  const INTENTOS = [
+    ["/modulos-3-integrados#cundinamarca", "Municipios de Cundinamarca (vista restringida)"],
+    ["/data/cundinamarca/territorio/funza.json", "archivo o pagina restringida"],
+    ["/municipios.html", "archivo o pagina restringida"],
+    ["/api/auditoria", "consulta de auditoria"]
+  ];
+  const ev = [], hoy = new Date();
+  for (const u of USUARIOS) {
+    for (const d of u.dias) {
+      const ini = new Date(hoy); ini.setUTCDate(ini.getUTCDate() - d);
+      ini.setUTCHours(12 + Math.floor(azar() * 10), Math.floor(azar() * 60), 0, 0);   // 7 a. m. a 5 p. m. Bogota
+      if (ini > hoy) ini.setUTCDate(ini.getUTCDate() - 1);
+      const sesion = "demo-" + u.email.split("@")[0] + "-" + d;
+      let t = ini.getTime();
+      const base = { email: u.email, sesion, ip: u.ip, pais: "CO", ciudad: u.ciudad, agente: u.agente, detalle: "" };
+      const push = (tipo, modulo, segundos, ruta, detalle) => t <= hoy.getTime() &&
+        ev.push({ ...base, ts: new Date(t).toISOString(), tipo, modulo, segundos, ruta: ruta || "", detalle: detalle || "" });
+      push("inicio_sesion", "Inicio", 0, "/");
+      const recorrido = ["Inicio"].concat(Array.from({ length: 2 + Math.floor(azar() * 4) }, () => elegir(MODULOS.slice(1))));
+      for (const m of recorrido) {
+        push("modulo", m, 0, "/");
+        const tramos = 1 + Math.floor(azar() * (m === "Inicio" ? 3 : 18));
+        for (let i = 0; i < tramos; i++) { t += 30000; push("latido", m, 30, "/"); }
+        if (u.curioso && m !== "Inicio" && azar() < 0.3) {
+          const [ruta, det] = elegir(INTENTOS); t += 5000; push("restringido", m, 0, ruta, det);
+        }
+      }
+      t += 10000; push("salida", recorrido[recorrido.length - 1], 8, "/");
+    }
+  }
+  return ev.sort((a, b) => a.ts < b.ts ? -1 : 1);
+}
+
+function agregarDemo(url) {
+  const desde = url.searchParams.get("desde") || new Date(Date.now() - 30 * 864e5).toISOString().slice(0, 10);
+  const hasta = url.searchParams.get("hasta") || new Date().toISOString().slice(0, 10);
+  const email = (url.searchParams.get("email") || "").toLowerCase().trim();
+  const fin = new Date(hasta + "T00:00:00Z"); fin.setUTCDate(fin.getUTCDate() + 1);
+  const ev = demoEventos().filter(e => e.ts >= desde && e.ts < fin.toISOString() && (!email || e.email === email));
+  const ses = {}, usu = {};
+  for (const e of ev) {
+    const s = ses[e.sesion] ||= { sesion: e.sesion, email: e.email, inicio: e.ts, fin: e.ts, segundos: 0,
+      ip: e.ip, pais: e.pais, ciudad: e.ciudad, agente: e.agente, mods: {} };
+    s.fin = e.ts; s.segundos += e.segundos;
+    if (e.modulo) { const m = s.mods[e.modulo] ||= { sesion: e.sesion, modulo: e.modulo, segundos: 0, primera: e.ts }; m.segundos += e.segundos; }
+    const u = usu[e.email] ||= { email: e.email, ses: new Set(), segundos: 0, primera: e.ts, ultima: e.ts, restringidos: 0 };
+    u.ses.add(e.sesion); u.segundos += e.segundos; u.ultima = e.ts;
+    if (e.tipo === "restringido") u.restringidos++;
+  }
+  return {
+    demo: true, desde, hasta, email,
+    usuarios: Object.values(usu).map(u => ({ email: u.email, sesiones: u.ses.size, segundos: u.segundos,
+      primera: u.primera, ultima: u.ultima, restringidos: u.restringidos })).sort((a, b) => a.ultima < b.ultima ? 1 : -1),
+    sesiones: Object.values(ses).map(s => ({ sesion: s.sesion, email: s.email, inicio: s.inicio, fin: s.fin,
+      segundos: s.segundos, ip: s.ip, pais: s.pais, ciudad: s.ciudad, agente: s.agente,
+      modulos: Object.values(s.mods).sort((a, b) => a.primera < b.primera ? -1 : 1) }))
+      .sort((a, b) => a.inicio < b.inicio ? 1 : -1),
+    restringidos: ev.filter(e => e.tipo === "restringido").reverse()
+      .map(({ ts, email, sesion, modulo, ruta, detalle, ip, pais }) => ({ ts, email, sesion, modulo, ruta, detalle, ip, pais }))
+  };
+}
+
+function csvDemo(url) {
+  const desde = url.searchParams.get("desde") || "2000-01-01";
+  const hasta = url.searchParams.get("hasta") || "2999-12-31";
+  const fin = new Date(hasta + "T00:00:00Z"); fin.setUTCDate(fin.getUTCDate() + 1);
+  const filas = demoEventos().filter(e => e.ts >= desde && e.ts < fin.toISOString());
+  const cols = ["ts", "email", "sesion", "tipo", "modulo", "segundos", "ruta", "ip", "pais", "ciudad", "agente", "detalle"];
+  const q = v => '"' + String(v ?? "").replace(/"/g, '""') + '"';
+  return new Response("﻿# DATOS DE DEMOSTRACION - FICTICIOS\n" + cols.join(";") + "\n" +
+    filas.map(x => cols.map(c => q(x[c])).join(";")).join("\n"), { headers: {
+    "Content-Type": "text/csv; charset=utf-8",
+    "Content-Disposition": `attachment; filename="auditoria_DEMO_${desde}_${hasta}.csv"`,
+    "Cache-Control": "no-store" } });
+}
+
 /* ---------------------------------------------------------- entrada */
 export default {
   async fetch(req, env, ctx) {
@@ -211,7 +307,7 @@ export default {
         ctx.waitUntil(registrar(env, req, yo, { tipo: "restringido", ruta, detalle: "consulta de auditoria" }));
         return json({ error: "restringido" }, 403);
       }
-      if (!env.DB) return json({ error: "Falta conectar la base de datos D1 (binding DB)." }, 500);
+      if (!env.DB) return ruta.endsWith(".csv") ? csvDemo(url) : json(agregarDemo(url));
       return ruta.endsWith(".csv") ? csv(env, url) : json(await auditoria(env, url));
     }
 
