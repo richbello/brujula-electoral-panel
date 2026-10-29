@@ -23,6 +23,7 @@
     "auditoria": "Auditoría" };
 
   function modulo() {
+    if (/^\/presupuesto(\/|$)/.test(location.pathname)) return "07 Análisis presupuestal";
     var p = location.pathname.replace(/\/+$/, "").split("/").pop().replace(/\.html$/, "");
     if (p === "modulos-3-integrados") return HASH[location.hash.slice(1)] || HASH.vigilancia;
     return PAGINA[p] || p;
