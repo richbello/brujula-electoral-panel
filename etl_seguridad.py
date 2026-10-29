@@ -71,8 +71,9 @@ CATEGORIAS = [
     ("Delitos sexuales", r"SEXUAL|ACCESO CARNAL|ACTO SEXUAL|ACOSO SEXUAL|PORNOGRAF|PROXENET|ESTIMULO A LA PROSTITUCION"),
     ("Hurto a residencias", r"HURTO.*RESIDENCIA|RESIDENCIA"),
     ("Hurto a comercio", r"HURTO.*COMERCIO|COMERCIO"),
-    ("Hurto de motocicletas", r"HURTO.*MOTO|MOTOCICLETA"),
-    ("Hurto de automotores", r"HURTO.*AUTOMOTOR|AUTOMOTOR|HURTO.*VEHICULO"),
+    # automotores va antes que motocicletas: "AUTOMOTORES" contiene "MOTO"
+    ("Hurto de automotores", r"AUTOMOTOR|HURTO.*VEHICULO|HURTO.*CARRO"),
+    ("Hurto de motocicletas", r"\bMOTO|MOTOCICLETA"),
     ("Hurto a entidades financieras", r"FINANCIERA|BANCO"),
     ("Abigeato", r"ABIGEATO|CABEZAS DE GANADO|SEMOVIENTE"),
     ("Piratería terrestre", r"PIRATERIA"),
