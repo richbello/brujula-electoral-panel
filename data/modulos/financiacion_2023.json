@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "eleccion": "Territoriales 2023",
+    "ambito": "Nacional",
+    "corte_cuentas_claras": "2024-01-29",
+    "cargado_en": "2026-10-29",
+    "fuente": {
+      "nombre": "Balance de la financiación de campañas electorales 2023",
+      "entidad": "Transparencia por Colombia",
+      "base": "Aplicativo Cuentas Claras del Consejo Nacional Electoral, corte 29 de enero de 2024",
+      "tablero": "https://www.monitorciudadano.co/elecciones-contratos/financiacion-politica-territoriales-2023/",
+      "sitio": "https://transparenciacolombia.org.co/"
+    },
+    "alcance": "Cifras agregadas del país. El informe no publica el listado de financiadores por documento ni el desglose por municipio, así que con él no se puede cruzar aportes contra contratos 2024-2027 como sí se hace para 2019.",
+    "notas": [
+      "Las cifras se transcriben tal como las publica el informe; los totales por cargo de la Tabla 4 y de la Tabla 6 difieren levemente (alcaldías $291.232.726.929 frente a $291.493.565.577). Aquí se usan las Tablas 6 y 10 porque desglosan por código.",
+      "En la Tabla 7 el valor de Centro de Sistemas de Antioquia S.A.S. aparece como \"$482.709.66\"; se lee como $482.709.660.",
+      "Según el informe, la inhabilidad del artículo 2 de la Ley 1474 de 2011 no aplica a los créditos, solo a contribuciones que superen el 2% del tope."
+    ]
+  },
+  "kpis": {
+    "ingresos": 671545713190,
+    "gastos": 664213452602,
+    "ingresos_2019": 530501896927,
+    "candidaturas": 128423,
+    "reportaron": 114606,
+    "pct_reporte": 89.24,
+    "cargos": 20509,
+    "particulares": 231014747029
+  },
+  "por_cargo": [
+    {"cargo":"Gobernaciones","cargos":32,"candidaturas":246,"reportaron":230,"pct_reporte":93.50,"ingresos":110789626609,"gastos":112686046602},
+    {"cargo":"Alcaldías","cargos":1102,"candidaturas":6166,"reportaron":5748,"pct_reporte":93.22,"ingresos":291493565577,"gastos":287747957557},
+    {"cargo":"Asambleas","cargos":418,"candidaturas":3749,"reportaron":3345,"pct_reporte":89.22,"ingresos":78605822509,"gastos":78135071753},
+    {"cargo":"Concejos","cargos":12072,"candidaturas":103371,"reportaron":92894,"pct_reporte":89.86,"ingresos":177012248451,"gastos":172450155488},
+    {"cargo":"JAL","cargos":6885,"candidaturas":14891,"reportaron":12391,"pct_reporte":83.21,"ingresos":13644450044,"gastos":13194221203}
+  ],
+  "ingresos_por_codigo": [
+    {"codigo":"101","concepto":"Recursos del candidato o sus familiares","valor":391335419789,"pct":58.27,"alcaldias":182673295789,"concejos":119533654082},
+    {"codigo":"102","concepto":"Contribuciones, donaciones y créditos de particulares","valor":231014747029,"pct":34.40,"alcaldias":92589098413,"concejos":50602694878},
+    {"codigo":"103","concepto":"Créditos de entidades financieras","valor":24860305137,"pct":3.70,"alcaldias":6276681329,"concejos":1078385040},
+    {"codigo":"106","concepto":"Aportes de partidos y movimientos","valor":15179269601,"pct":2.26,"alcaldias":4898653753,"concejos":4590074921},
+    {"codigo":"104","concepto":"Actos públicos y actividades del partido","valor":5215882934,"pct":0.78,"alcaldias":2490745524,"concejos":284726810},
+    {"codigo":"105","concepto":"Anticipos estatales","valor":2716903172,"pct":0.40,"alcaldias":2162893491,"concejos":323000000},
+    {"codigo":"107","concepto":"Rendimientos financieros","valor":1223185528,"pct":0.18,"alcaldias":402197278,"concejos":599712719}
+  ],
+  "particulares": {
+    "personas_naturales": 165479182605,
+    "personas_juridicas": 65535563424,
+    "candidatos_con_juridicas": 1969,
+    "candidatos_con_naturales": 44334,
+    "donaciones_dinero": 107575141274,
+    "donaciones_especie": 78636198935,
+    "creditos": 44803406821
+  },
+  "top_donaciones_juridicas": [
+    {"nombre":"Fundación Propublica","valor":1160000000,"candidatos":"18 candidatos: 17 alcaldías, 1 concejo"},
+    {"nombre":"Corporación para la Responsabilidad Social Empresarial","valor":576000000,"candidatos":"19 candidatos: 1 gobernación, 9 alcaldías, 8 concejos, 1 JAL"},
+    {"nombre":"Fundación Grupo Argos","valor":530000000,"candidatos":"14 candidatos: 1 gobernación, 5 alcaldías, 8 concejos"},
+    {"nombre":"Fundación Despierta Valle","valor":491080590,"candidatos":"6 candidatos: 1 gobernación, 1 asamblea, 2 concejos, 2 JAL"},
+    {"nombre":"Bavaria & Cía S.C.A.","valor":484000000,"candidatos":"9 candidatos: 4 alcaldías, 2 asambleas, 3 concejos"},
+    {"nombre":"Centro de Sistemas de Antioquia S.A.S.","valor":482709660,"candidatos":"1 alcaldía, 1 concejo"},
+    {"nombre":"Inversiones Quebrada Seca S.A.S.","valor":434300000,"candidatos":"5 candidatos: 1 alcaldía, 1 asamblea, 3 concejos"},
+    {"nombre":"Manuelita S.A.","valor":380000000,"candidatos":"8 candidatos: 1 gobernación, 1 alcaldía, 2 asambleas, 4 concejos"},
+    {"nombre":"Ingenio del Cauca S.A.S.","valor":350000000,"candidatos":"1 alcaldía"},
+    {"nombre":"Fundación Respirar","valor":315000000,"candidatos":"1 gobernación"},
+    {"nombre":"Inversiones Nazca Eder S.A.S.","valor":310000000,"candidatos":"2 candidatos: alcaldía y asamblea"}
+  ],
+  "top_creditos_juridicas": [
+    {"nombre":"Pagafx S.A.S.","valor":1097900303,"candidatos":"1 gobernación (Juan Diego Gómez, Antioquia)"},
+    {"nombre":"Cpt Expres S.A.S.","valor":732134628,"candidatos":"3 candidatos: 1 gobernación, 1 alcaldía, 1 asamblea"},
+    {"nombre":"Agropecuaria Toro Caicedo S.A.S.","valor":702000000,"candidatos":"1 gobernación (Dilian Francisca Toro, Valle)"},
+    {"nombre":"Noa Experience S.A.S.","valor":651488721,"candidatos":"2 alcaldías"},
+    {"nombre":"Bsn Ingeniería y Consultorías S.A.S.","valor":500000000,"candidatos":"1 gobernación (Rafael Alejandro Martínez)"},
+    {"nombre":"Optima Tm S.A.S.","valor":368558015,"candidatos":"1 alcaldía"},
+    {"nombre":"Digital Printing S.A.S.","valor":361073483,"candidatos":"1 gobernación"},
+    {"nombre":"Du Brands S.A.S.","valor":350244049,"candidatos":"1 gobernación, 1 alcaldía"},
+    {"nombre":"Intrasoft S.A.S.","valor":348327861,"candidatos":"1 alcaldía"},
+    {"nombre":"Fundación por la Vida y la Equidad","valor":300000000,"candidatos":"1 gobernación"}
+  ],
+  "top_partidos": [
+    {"partido":"Partido Conservador","donaciones":1721083468,"creditos":19413000,"total":1740496468,"candidatos":208},
+    {"partido":"Centro Democrático","donaciones":1277450562,"creditos":56700000,"total":1334150562,"candidatos":181},
+    {"partido":"Cambio Radical","donaciones":1182905427,"creditos":0,"total":1182905427,"candidatos":181},
+    {"partido":"Partido de la U","donaciones":716078174,"creditos":65270000,"total":781348174,"candidatos":218},
+    {"partido":"Alianza Verde","donaciones":731935201,"creditos":10000000,"total":741935201,"candidatos":260},
+    {"partido":"Dignidad & Compromiso","donaciones":166464198,"creditos":85000000,"total":251464198,"candidatos":41},
+    {"partido":"Alianza Social Independiente","donaciones":238581303,"creditos":1000000,"total":239591303,"candidatos":103},
+    {"partido":"Partido Liberal","donaciones":220038268,"creditos":200000,"total":220238268,"candidatos":175},
+    {"partido":"Colombia Renaciente","donaciones":219230134,"creditos":0,"total":219230134,"candidatos":48},
+    {"partido":"La Fuerza de la Paz","donaciones":214621260,"creditos":200000,"total":214821260,"candidatos":24}
+  ],
+  "gastos_por_codigo": [
+    {"codigo":"208","concepto":"Propaganda electoral","valor":231956732115,"pct":34.92},
+    {"codigo":"201","concepto":"Administración (honorarios, sede, servicios)","valor":112797193596,"pct":16.98},
+    {"codigo":"204","concepto":"Actos públicos","valor":83779197303,"pct":12.61},
+    {"codigo":"207","concepto":"Judiciales y rendición de cuentas","valor":82196403001,"pct":12.37},
+    {"codigo":"205","concepto":"Transporte y correo","valor":73266220538,"pct":11.03},
+    {"codigo":"203","concepto":"Materiales y publicaciones","valor":40953774040,"pct":6.17},
+    {"codigo":"202","concepto":"Oficina y adquisiciones","valor":15250459977,"pct":2.30},
+    {"codigo":"211","concepto":"Otros gastos","valor":13353177082,"pct":2.01},
+    {"codigo":"206","concepto":"Capacitación e investigación política","valor":8916619624,"pct":1.34},
+    {"codigo":"209","concepto":"Costos financieros","valor":1738411225,"pct":0.26},
+    {"codigo":"210","concepto":"Gastos por encima del tope del CNE","valor":5264100,"pct":0.001}
+  ],
+  "propaganda": [
+    "El material impreso (pendones, vallas, avisos, volantes y pasacalles) concentra el 69% del gasto en propaganda.",
+    "Los medios de comunicación social suman el 30%: redes sociales 11%, cuñas radiales 10%, televisión 3%, prensa 3%, perifoneo 1%.",
+    "Por primera vez en unas territoriales, el gasto en redes sociales supera al de cuñas radiales."
+  ],
+  "topes": [
+    {"territorio":"Cundinamarca","tipo":"Gobernación","tope":5231370405,"mayor_gasto":3028281335},
+    {"territorio":"Bogotá","tipo":"Alcaldía","tope":5257463395,"mayor_gasto":4551629472},
+    {"territorio":"Antioquia","tipo":"Gobernación","tope":5414104758,"mayor_gasto":5003413433},
+    {"territorio":"Valle del Cauca","tipo":"Gobernación","tope":5268036560,"mayor_gasto":4604599139},
+    {"territorio":"Santander","tipo":"Gobernación","tope":5231370405,"mayor_gasto":3492670355},
+    {"territorio":"Bolívar","tipo":"Gobernación","tope":5231370405,"mayor_gasto":3043366362},
+    {"territorio":"Atlántico","tipo":"Gobernación","tope":5231370405,"mayor_gasto":2625590685},
+    {"territorio":"Córdoba","tipo":"Gobernación","tope":2669942415,"mayor_gasto":2354886904},
+    {"territorio":"Caldas","tipo":"Gobernación","tope":2236352944,"mayor_gasto":1152040746},
+    {"territorio":"Risaralda","tipo":"Gobernación","tope":2236352944,"mayor_gasto":812668451},
+    {"territorio":"Cali","tipo":"Alcaldía","tope":2630764028,"mayor_gasto":1942046586},
+    {"territorio":"Medellín","tipo":"Alcaldía","tope":2630764028,"mayor_gasto":1899876180},
+    {"territorio":"Barranquilla","tipo":"Alcaldía","tope":2630764028,"mayor_gasto":1611842834},
+    {"territorio":"Cartagena","tipo":"Alcaldía","tope":2465931344,"mayor_gasto":1499728389},
+    {"territorio":"Pereira","tipo":"Alcaldía","tope":1862410015,"mayor_gasto":1225046639},
+    {"territorio":"Montería","tipo":"Alcaldía","tope":1862410015,"mayor_gasto":1184955304},
+    {"territorio":"Bucaramanga","tipo":"Alcaldía","tope":2465931344,"mayor_gasto":956683886},
+    {"territorio":"Manizales","tipo":"Alcaldía","tope":1862410015,"mayor_gasto":445066000}
+  ],
+  "cundinamarca": [
+    "Cundinamarca fue el tercer departamento con mayor rendición de cuentas: 93,50% de sus candidaturas reportó en Cuentas Claras.",
+    "Gobernación: el tope de gastos fue $5.231.370.405 y la campaña que más gastó reportó $3.028.281.335 (58% del tope).",
+    "La mayor donación en dinero del país la dio el partido Colombia Renaciente a la campaña de Jorge Emilio Rey a la gobernación de Cundinamarca: $454 millones.",
+    "La Vega: Fabio Nelson Bermúdez, elegido alcalde, financió el 90% de su campaña con dos créditos de Traumed Implentes S.A.S.",
+    "Facatativá: Oscar Alberto Villalba, candidato a la alcaldía, financió el 89% de su campaña con un crédito de Inmobiliaria e Inversiones Chico S.A.S."
+  ]
+}
