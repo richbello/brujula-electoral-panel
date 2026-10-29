@@ -269,6 +269,7 @@ def procesar(archivos: list[Path], municipio: str, desde: int, inspeccionar: boo
     horas = defaultdict(Counter)                    # delito -> franja -> n
     cund = defaultdict(lambda: defaultdict(Counter))     # delito -> año -> municipio -> n
     col_vistas, sin_categoria, fechas = {}, Counter(), []
+    textos = Counter()                              # (texto del delito, categoría) en el municipio
 
     for ruta in archivos:
         for nombre, datos in libros(ruta):
@@ -311,6 +312,7 @@ def procesar(archivos: list[Path], municipio: str, desde: int, inspeccionar: boo
                     if obj not in norm(get("municipio")):
                         continue
                     serie[cat][anio] += n
+                    textos[(limpiar(get("delito")) if "delito" in C else hoja, cat)] += n
                     if f:
                         mensual[cat][f"{f.year}-{f.month:02d}"] += n
                         fechas.append(f)
@@ -330,7 +332,7 @@ def procesar(archivos: list[Path], municipio: str, desde: int, inspeccionar: boo
                         except (ValueError, TypeError):
                             pass
                 print(f"  {nombre} › {hoja}: {n_hoja:,} registros de Cundinamarca")
-    return serie, mensual, perfil, barrios, horas, cund, col_vistas, sin_categoria, fechas
+    return serie, mensual, perfil, barrios, horas, cund, col_vistas, sin_categoria, fechas, textos
 
 
 def top(counter: Counter, n: int = 12) -> list:
@@ -354,7 +356,7 @@ def main():
     if not archivos:
         sys.exit("No hay archivos para procesar.")
 
-    serie, mensual, perfil, barrios, horas, cund, cols, sin_cat, fechas = procesar(
+    serie, mensual, perfil, barrios, horas, cund, cols, sin_cat, fechas, textos = procesar(
         archivos, a.municipio, a.desde, a.inspeccionar)
     if a.inspeccionar:
         return
@@ -387,6 +389,7 @@ def main():
                 "Solo se publican cifras agregadas; los registros individuales no salen del procesamiento.",
         "archivos": [p.name for p in archivos],
         "columnas_detectadas": cols,
+        "clasificacion": [[t, c, n] for (t, c), n in textos.most_common()],
     }
     (SALIDA / "soacha.json").write_text(json.dumps({**meta, "delitos": delitos}, ensure_ascii=False, indent=1), "utf-8")
 
