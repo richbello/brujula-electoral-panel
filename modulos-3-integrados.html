@@ -1675,6 +1675,8 @@ window.VFI_LOCAL = (function () {
       kpi("Sectores nombrados", miles(k.sectores)) +
       "</div>";
 
+    h += panelGobiernos();
+
     h += '<div class="terr-tabs">' +
       '<button class="terr-tab'+(vista==="vencidas"?" on":"")+'" data-v="vencidas">' +
         "Obras vencidas · " + miles(k.obras_vencidas) + "</button>" +
@@ -1697,6 +1699,44 @@ window.VFI_LOCAL = (function () {
 
   const kpi = (t,v) => '<div class="kpi"><small>'+esc(t)+"</small><b>"+esc(v)+"</b></div>";
 
+  /* ---------- obras vencidas por gobierno ----------
+     El ETL asigna cada contrato al gobierno que lo FIRMO y totaliza sobre
+     todas las obras, no sobre el listado recortado de la pagina. */
+  let gob = "todos";
+  const GOB_TXT = { "2020-2023": "Gobierno 2020–2023", "2024-2027": "Gobierno 2024–2027" };
+  const enGob = (o, g) => g === "todos" || String(o.firma || "").slice(0, 4) >= g.slice(0, 4) &&
+    String(o.firma || "").slice(0, 4) <= g.slice(5, 9);
+
+  function panelGobiernos() {
+    const pg = DATOS.por_gobierno;
+    if (!Array.isArray(pg) || !pg.length) {
+      const desde = (DATOS.meta.ventana || {}).desde || "";
+      if (desde >= "2024") return "";   // corte que ya es de un solo gobierno
+      return '<div class="fin-ley"><b>Separación por gobierno</b><p>Este corte se generó antes de ' +
+        "que el ETL separara las obras por el gobierno que las firmó. Aparece con el próximo corte " +
+        "(Actions → Actualizar territorio y obras).</p></div>";
+    }
+    const card = g => {
+      const pct = g.obras_vencidas ? Math.round(g.vencidas_con_pago_reportado / g.obras_vencidas * 100) : 0;
+      return '<div class="panel" style="margin:0"><h3>' + esc(GOB_TXT[g.clave] || g.nombre) +
+        '<span class="vf-sub">Contratos firmados entre ' + esc(g.desde) + " y " +
+        esc(g.hasta < (DATOS.meta.ventana||{}).hasta ? g.hasta : (DATOS.meta.ventana||{}).hasta) + "</span></h3>" +
+        '<div class="kpis" style="margin:0;grid-template-columns:repeat(2,1fr)">' +
+        kpi("Contratos firmados", miles(g.contratos)) +
+        kpi("Valor contratado", corto(g.valor_total)) +
+        kpi("Obras vencidas", miles(g.obras_vencidas)) +
+        kpi("Valor vencido", corto(g.valor_vencido)) +
+        kpi("Vencidas hace más de 2 años", miles(g.vencidas_mas_2_anios)) +
+        kpi("Con pago reportado", miles(g.vencidas_con_pago_reportado) + " (" + pct + " %)") +
+        "</div></div>";
+    };
+    return '<div class="cols" style="margin-bottom:12px">' + pg.map(card).join("") + "</div>" +
+      '<p class="note" style="margin:0 0 22px">Cada obra cuenta para el gobierno que firmó el contrato, ' +
+      "aunque haya vencido después. Los contratos más antiguos han tenido más tiempo para vencerse, " +
+      "así que comparar solo el número de obras favorece al gobierno más reciente; mire también el " +
+      "valor y cuántas llevan más de dos años vencidas.</p>";
+  }
+
   function pintarVista() {
     $("terr-vista").innerHTML = vista === "vencidas" ? vistaVencidas() : vistaSectores();
     if (vista === "vencidas") {
@@ -1709,15 +1749,19 @@ window.VFI_LOCAL = (function () {
     }
     const bi = $("terr-busca");
     if (bi) bi.addEventListener("input", () => { abierta = null; pintarVista(); });
+    document.querySelectorAll("#terr-vista .terr-gob").forEach(b =>
+      b.addEventListener("click", () => { gob = b.dataset.g; abierta = null; pintarVista(); }));
   }
 
   /* ---------- obras vencidas: el dato firme ---------- */
   function vistaVencidas() {
     const todas = DATOS.obras_vencidas || [];
     const q = (($("terr-busca")||{}).value || "").toLowerCase().trim();
-    const filas = todas.filter(o => !q ||
+    const conGob = Array.isArray(DATOS.por_gobierno) && DATOS.por_gobierno.length > 1;
+    if (!conGob) gob = "todos";
+    const filas = todas.filter(o => enGob(o, gob) && (!q ||
       [o.contratista, o.entidad, o.objeto, o.referencia]
-        .some(v => String(v||"").toLowerCase().includes(q)));
+        .some(v => String(v||"").toLowerCase().includes(q))));
 
     let h = '<div class="panel">' +
       '<p class="note" style="margin:0 0 12px">Contratos cuya fecha de terminación ya pasó y ' +
@@ -1728,6 +1772,14 @@ window.VFI_LOCAL = (function () {
       (DATOS.meta.advertencia_pagos
         ? '<p class="note" style="margin:0 0 12px"><b>Sobre la columna de pagos.</b> ' +
           esc(DATOS.meta.advertencia_pagos) + "</p>" : "") +
+      (conGob ? '<div class="vfi-pills">' + [["todos","Todos"]].concat(DATOS.por_gobierno.map(g =>
+          [g.clave, (GOB_TXT[g.clave] || g.nombre) + " · " + miles(g.obras_vencidas)])).map(([v,t]) =>
+          '<button class="vfi-pill terr-gob'+(gob===v?" on":"")+'" data-g="'+esc(v)+'"' +
+          (gob===v ? ' style="background:#150B3D"' : "") + ">" + esc(t) + "</button>").join("") +
+        "</div>" +
+        (gob !== "todos" ? '<p class="note" style="margin:0 0 12px">El listado muestra las obras ' +
+          "vencidas de mayor valor de este gobierno; el total del período está en el recuadro de arriba.</p>" : "")
+        : "") +
       '<input id="terr-busca" value="'+esc(q)+'" placeholder="Buscar por contratista, entidad u objeto…" ' +
       'style="width:100%;padding:10px 14px;border:1.5px solid var(--line);border-radius:9px;' +
       'font-size:13px;box-sizing:border-box;margin-bottom:14px;font-family:inherit">';
@@ -1750,7 +1802,8 @@ window.VFI_LOCAL = (function () {
       h += '<tr class="terr-f'+(ab?" abierta":"")+'" data-i="'+i+'">' +
         '<td style="color:var(--muted)">'+(ab?"▼":"▶")+"</td>" +
         "<td><b>"+esc(o.objeto.slice(0,90))+(o.objeto.length>90?"…":"")+"</b>" +
-          '<span class="vf-sub">'+esc(o.entidad)+" · "+esc(o.referencia)+"</span></td>" +
+          '<span class="vf-sub">'+esc(o.entidad)+" · "+esc(o.referencia)+
+            (o.firma ? " · firmado " + esc(o.firma) : "")+"</span></td>" +
         "<td>"+esc(o.contratista)+"</td>" +
         '<td class="vfi-mono">'+esc(corto(o.valor))+"</td>" +
         '<td class="vfi-mono">'+(o.pago_reportado
@@ -1764,6 +1817,7 @@ window.VFI_LOCAL = (function () {
           campo("Entidad", o.entidad) +
           campo("Contratista", o.contratista + (o.documento ? " · " + o.documento : "")) +
           campo("Tipo", o.tipo) +
+          campo("Firma", o.firma) +
           campo("Inicio", o.inicio) +
           campo("Fin pactado", o.fin, true) +
           campo("Estado en SECOP", o.estado) +

@@ -232,6 +232,46 @@ check("y publica el porcentaje con pago",
 check("ya no publica un saldo vencido global falso",
       "pendiente_vencido" not in dp["kpis"])
 
+print("\n[13] Separacion por gobierno (segun la fecha de firma)")
+def contrato(ref, firma, valor, fin="2025-01-31", estado="En ejecución"):
+    return {"referencia_del_contrato": ref, "nombre_entidad": "MUNICIPIO DE SOACHA.",
+            "proveedor_adjudicado": "CONSTRUCTORA X", "documento_proveedor": "900",
+            "objeto_del_contrato": "OBRA " + ref, "valor_del_contrato": str(valor),
+            "fecha_de_firma": firma + "T00:00:00.000", "fecha_de_fin_del_contrato": fin + "T00:00:00.000",
+            "estado_contrato": estado}
+gob = [contrato("V1", "2021-03-10", 900_000_000, fin="2022-06-30"),
+       contrato("V2", "2023-12-31", 300_000_000),
+       contrato("V3", "2024-01-01", 200_000_000),
+       contrato("V4", "2025-05-05", 100_000_000),
+       contrato("C1", "2024-08-01", 50_000_000, fin="2027-12-31")]
+etl.consultar = lambda *a, **k: gob
+dg = etl.construir("Soacha", "2020-01-01", "2026-10-09", token=None,
+                   minimo=20_000_000, limite=None, hoy=HOY)
+pg = {g["clave"]: g for g in dg["por_gobierno"]}
+check("publica los dos gobiernos", set(pg) == {"2020-2023", "2024-2027"}, str(sorted(pg)))
+check("el 31-dic-2023 cuenta para el gobierno anterior", pg["2020-2023"]["obras_vencidas"] == 2,
+      str(pg["2020-2023"]["obras_vencidas"]))
+check("el 1-ene-2024 cuenta para el gobierno actual", pg["2024-2027"]["obras_vencidas"] == 2,
+      str(pg["2024-2027"]["obras_vencidas"]))
+check("cuenta los contratos no vencidos del periodo", pg["2024-2027"]["contratos"] == 3,
+      str(pg["2024-2027"]["contratos"]))
+check("suma el valor vencido de cada gobierno",
+      pg["2020-2023"]["valor_vencido"] == 1_200_000_000 and pg["2024-2027"]["valor_vencido"] == 300_000_000)
+check("cuenta las vencidas hace mas de 2 anios", pg["2020-2023"]["vencidas_mas_2_anios"] == 1,
+      str(pg["2020-2023"]["vencidas_mas_2_anios"]))
+check("los periodos suman el total de vencidas",
+      sum(g["obras_vencidas"] for g in dg["por_gobierno"]) == dg["kpis"]["obras_vencidas"])
+check("cada obra publicada trae su fecha de firma",
+      all(o.get("firma") for o in dg["obras_vencidas"]))
+muchas = [{"referencia": f"A{i}", "entidad": "E", "contratista": "C", "valor": 1e9 - i,
+           "dias_vencido": 10, "firma": "2021-01-01"} for i in range(100)] + \
+         [{"referencia": f"B{i}", "entidad": "E", "contratista": "C", "valor": 1e6 - i,
+           "dias_vencido": 10, "firma": "2025-01-01"} for i in range(5)]
+lp = etl.listado_publicado(muchas)
+check("el listado no deja vacio al gobierno con obras pequenas",
+      sum(1 for o in lp if o["firma"].startswith("2025")) == 5, str(len(lp)))
+check("y no repite obras", len(lp) == len({o["referencia"] for o in lp}))
+
 print("\n" + "=" * 60)
 if fallos:
     print(f"FALLARON {len(fallos)}:")

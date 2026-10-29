@@ -251,6 +251,7 @@ def obras_vencidas(contratos: list[dict], hoy: dt.date, *, minimo: float) -> lis
             "pagado": pagado,
             "pago_reportado": reportado,
             "pendiente": max(valor - pagado, 0.0) if reportado else None,
+            "firma": firma.isoformat() if (firma := a_fecha(c.get("fecha_de_firma"))) else "",
             "inicio": str(c.get("fecha_de_inicio_del_contrato") or "")[:10],
             "fin": fin.isoformat(),
             "dias_vencido": (hoy - fin).days,
@@ -260,6 +261,65 @@ def obras_vencidas(contratos: list[dict], hoy: dt.date, *, minimo: float) -> lis
         })
     salida.sort(key=lambda x: (-x["valor"], -x["dias_vencido"]))
     return salida
+
+
+# Periodos de gobierno municipal: el alcalde se posesiona el 1 de enero
+# siguiente a la eleccion. La obra se asigna al gobierno que la FIRMO.
+GOBIERNOS = [
+    ("2020-2023", "Gobierno 2020-2023", dt.date(2020, 1, 1), dt.date(2023, 12, 31)),
+    ("2024-2027", "Gobierno 2024-2027", dt.date(2024, 1, 1), dt.date(2027, 12, 31)),
+]
+
+
+def gobierno_de(firma: dt.date | None) -> str:
+    if not firma:
+        return ""
+    for clave, _, ini, fin in GOBIERNOS:
+        if ini <= firma <= fin:
+            return clave
+    return ""
+
+
+def por_gobierno(contratos: list[dict], vencidas: list[dict]) -> list[dict]:
+    """Totales por gobierno sobre TODOS los contratos y TODAS las vencidas,
+    no sobre el listado recortado que se publica."""
+    salida = []
+    for clave, nombre, ini, fin in GOBIERNOS:
+        cs = [c for c in contratos if gobierno_de(a_fecha(c.get("fecha_de_firma"))) == clave]
+        vs = [v for v in vencidas if gobierno_de(a_fecha(v.get("firma"))) == clave]
+        if not cs and not vs:
+            continue
+        salida.append({
+            "clave": clave,
+            "nombre": nombre,
+            "desde": ini.isoformat(),
+            "hasta": fin.isoformat(),
+            "contratos": len(cs),
+            "valor_total": sum(a_numero(c.get("valor_del_contrato")) for c in cs),
+            "obras_vencidas": len(vs),
+            "valor_vencido": sum(v["valor"] for v in vs),
+            "vencidas_con_pago_reportado": sum(1 for v in vs if v["pago_reportado"]),
+            "vencidas_mas_2_anios": sum(1 for v in vs if v["dias_vencido"] >= 730),
+        })
+    return salida
+
+
+def listado_publicado(vencidas: list[dict], *, total: int = 80, por_periodo: int = 60) -> list[dict]:
+    """Las mayores obras vencidas en general mas las mayores de cada gobierno,
+    para que el filtro por gobierno no quede vacio cuando un periodo domina
+    el top por valor."""
+    elegidas, vistas = [], set()
+    grupos = [vencidas[:total]] + [
+        [v for v in vencidas if gobierno_de(a_fecha(v.get("firma"))) == g[0]][:por_periodo]
+        for g in GOBIERNOS]
+    for grupo in grupos:
+        for v in grupo:
+            k = (v["referencia"], v["entidad"], v["contratista"], v["valor"])
+            if k not in vistas:
+                vistas.add(k)
+                elegidas.append(v)
+    elegidas.sort(key=lambda x: (-x["valor"], -x["dias_vencido"]))
+    return elegidas
 
 
 def indice_contratistas(contratos: list[dict], hoy: dt.date, *, tope: int = 1500) -> list[dict]:
@@ -463,7 +523,8 @@ def construir(municipio: str, desde: str, hasta: str, *, token: str | None,
             "cobertura_valor": cobertura["pct_valor"],
             "contratistas": len(contratistas),
         },
-        "obras_vencidas": vencidas[:80],
+        "por_gobierno": por_gobierno(contratos, vencidas),
+        "obras_vencidas": listado_publicado(vencidas),
         "sectores": sectores[:60],
         "contratistas": contratistas,
     }
