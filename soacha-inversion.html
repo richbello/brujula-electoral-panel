@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soacha: inversión departamental y nacional · Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00C97B;--bad:#FF2D6F;--warn:#EA6A0A;--crit:#C8003C;--soft:#F8F6FF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff}
+.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
+.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px;white-space:nowrap}
+.back:hover{border-color:var(--gold);color:var(--gold)}
+main{max-width:1200px;margin:0 auto;padding:32px}
+.aviso{background:#D6FBEC;color:#065F46;border:1px solid #A7F3D0;border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.55;margin-bottom:24px}
+.aviso.pend{background:#FFF0CC;color:#8A5A00;border-color:#FFE3A3}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button.on{color:var(--navy);border-color:var(--gold)}
+.pane{display:none}.pane.on{display:block}
+h2{font-size:22px;margin-bottom:4px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px;line-height:1.55}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:24px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:8px}
+.kpi b{font-size:23px;font-weight:700}
+.kpi span{display:block;font-size:11.5px;color:var(--muted);margin-top:4px}
+.kpi.alerta b{color:var(--crit)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:20px;overflow-x:auto}
+.panel h3{font-size:15px;margin-bottom:14px}
+.panel h4{font-size:13px;margin:16px 0 8px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.r{text-align:right;white-space:nowrap}
+.meter{height:7px;width:100%;min-width:90px;background:#EFEBFF;border-radius:4px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--gold)}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.p-ok{background:#D6FBEC;color:#047857}.p-alto{background:#FFDCE7;color:var(--crit)}.p-medio{background:#FFF0CC;color:#9A5B00}.p-gris{background:#F1EEFB;color:var(--muted)}
+.note{font-size:13px;color:var(--muted);line-height:1.6;margin-top:12px}
+ul.lista{padding-left:18px;font-size:14px;line-height:1.7}
+.fuentes{font-size:12px;color:var(--muted);line-height:1.8;margin-top:14px}
+.fuentes a{color:var(--muted)}
+.mp-cab{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-bottom:10px}
+.mp-cab h3{margin:0;font-size:18px}
+.mp-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.avance{display:flex;align-items:flex-end;gap:14px;height:150px;padding:6px 0 0;border-bottom:1px solid var(--line);margin-bottom:6px}
+.avance div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.avance b{font-size:12px;margin-bottom:4px}
+.avance i{display:block;width:100%;max-width:70px;background:linear-gradient(180deg,var(--gold),#F59E0B);border-radius:6px 6px 0 0}
+.avance-l{display:flex;gap:14px}.avance-l span{flex:1;text-align:center;font-size:11px;color:var(--muted)}
+.cofi{display:flex;height:28px;border-radius:7px;overflow:hidden;margin:6px 0 10px}
+.cofi span{display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
+.campana{background:var(--soft);border-left:4px solid var(--gold);border-radius:8px;padding:14px 18px;margin-top:6px}
+.campana b{display:block;font-size:13px;margin-bottom:6px}
+.fila{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.fila input,.fila select{padding:10px 13px;border:1.5px solid var(--line);border-radius:9px;font:14px Inter,"Segoe UI",sans-serif;background:#fff;color:var(--navy)}
+.fila input:focus,.fila select:focus{outline:none;border-color:var(--gold)}
+.btn{background:var(--navy);color:#fff;border:none;border-radius:9px;padding:11px 20px;font:700 14px Inter,"Segoe UI",sans-serif;cursor:pointer;white-space:nowrap}
+.btn:hover:not(:disabled){background:#241160}.btn:disabled{background:#A99CC9;cursor:default}
+.btn.gris{background:#F1EEFB;color:var(--navy);border:1.5px solid var(--line)}
+.btn.gris:hover:not(:disabled){background:#E7E2F7}
+.lbl{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}
+.ents{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:6px 18px;max-height:260px;overflow-y:auto;border:1px solid var(--line);border-radius:9px;padding:12px 14px;background:var(--soft);margin:10px 0 14px}
+.ents label{font-size:12.5px;display:flex;gap:8px;align-items:flex-start;line-height:1.35;cursor:pointer}
+.ents label em{font-style:normal;color:var(--muted)}
+.log{font:12px ui-monospace,monospace;line-height:1.65;background:var(--soft);border:1px solid var(--line);border-radius:9px;padding:10px 14px;max-height:140px;overflow-y:auto;margin-top:14px}
+.log:empty{display:none}
+.vacio{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 28px;font-size:14px;line-height:1.75;color:var(--muted)}
+.vacio b{color:var(--navy);display:block;margin-bottom:8px;font-size:15px}
+.vacio code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:12.5px;color:var(--navy)}
+.vacio pre{background:var(--navy);color:#E8E2FF;border-radius:8px;padding:12px 16px;font-size:12.5px;overflow-x:auto;margin:10px 0;line-height:1.5}
+.obj{max-width:420px;font-size:12.5px;line-height:1.45}
+.mini{font-size:11.5px;color:var(--muted)}
+a.ext{color:var(--navy);font-weight:600}
+footer{max-width:1200px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color:var(--muted);line-height:1.6}
+@media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main,footer{padding-left:16px;padding-right:16px}.tabs{gap:16px}.back{padding:8px 10px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>X-<em>irin</em> Technologies S.A.S.</b><small>Estrategia Electoral 2027 · 08 Soacha: inversión departamental y nacional</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
+<main>
+<div class="aviso" id="aviso"></div>
+<nav class="tabs">
+  <button data-t="megaproyectos">Megaproyectos</button>
+  <button data-t="contratos">Contratos departamentales</button>
+  <button data-t="regalias">Regalías</button>
+  <button data-t="finanzas">Finanzas del municipio</button>
+</nav>
+
+<!-- ======================================================= 1 MEGAPROYECTOS -->
+<section class="pane" id="megaproyectos">
+  <h2>Megaproyectos en Soacha</h2>
+  <p class="sub">TransMilenio Fases II y III y el Corredor Férreo del Sur: avance, cofinanciación, contratistas y lo que significan para la campaña.</p>
+  <div id="mp-cuerpo"><div class="vacio">Cargando…</div></div>
+</section>
+
+<!-- ======================================================= 2 CONTRATOS -->
+<section class="pane" id="contratos">
+  <h2>Contratos de entidades departamentales ejecutados en Soacha</h2>
+  <p class="sub">Consulta en vivo a SECOP II (datos.gov.co). Se buscan los contratos de la Gobernación y sus entidades cuyo objeto menciona Soacha, y todos los de las entidades con sede en Soacha que aparezcan marcadas.</p>
+
+  <div class="panel">
+    <div class="fila">
+      <div><span class="lbl">Firmados desde</span><select id="ct-desde"></select></div>
+      <div style="flex:1;min-width:220px"><span class="lbl">Texto a buscar en el objeto</span><input id="ct-texto" value="SOACHA" style="width:100%"></div>
+      <div><span class="lbl">&nbsp;</span><button class="btn gris" id="ct-buscar-ent">1 · Buscar entidades</button></div>
+    </div>
+    <div id="ct-ents-caja" hidden>
+      <div class="ents" id="ct-ents"></div>
+      <div class="fila">
+        <button class="btn gris" id="ct-marcar">Marcar departamentales</button>
+        <button class="btn gris" id="ct-ninguna">Desmarcar todas</button>
+        <span style="flex:1"></span>
+        <button class="btn" id="ct-consultar">2 · Consultar contratos</button>
+      </div>
+    </div>
+    <div class="log" id="ct-log"></div>
+  </div>
+  <div id="ct-resultado"></div>
+</section>
+
+<!-- ======================================================= 3 REGALÍAS -->
+<section class="pane" id="regalias">
+  <h2>Regalías (SGR) en Soacha</h2>
+  <p class="sub">Proyectos financiados con el Sistema General de Regalías ubicados en Soacha o ejecutados por el municipio o el departamento en su territorio, con su estado y avance.</p>
+  <div id="rg-cuerpo"><div class="vacio">Cargando…</div></div>
+</section>
+
+<!-- ======================================================= 4 FINANZAS -->
+<section class="pane" id="finanzas">
+  <h2>Finanzas del municipio de Soacha</h2>
+  <p class="sub">Contratación de las entidades municipales en SECOP II y ejecución presupuestal reportada en CHIP (FUT).</p>
+  <div id="fn-cuerpo"><div class="vacio">Cargando…</div></div>
+</section>
+</main>
+
+<footer>Fuentes: Empresa Férrea Regional y Gobernación de Cundinamarca, SECOP II (Colombia Compra Eficiente, datos.gov.co), Mapa Inversiones y MapaRegalías (DNP) y CHIP (Contaduría General de la Nación). Las alertas de este módulo señalan patrones en datos públicos, no prueban irregularidades: verifique cada caso en el expediente oficial antes de hacerlo público.</footer>
+
+<script>
+(function () {
+"use strict";
+const BASE = "data/soacha/inversion/";
+const SECOP = "https://www.datos.gov.co/resource/jbjy-vk9h.json";
+
+/* ------------------------------------------------------------ utilidades */
+const $ = id => document.getElementById(id);
+const esc = v => String(v == null ? "" : v).replace(/[&<>"']/g, c =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const num = v => { const n = Number(v); return isFinite(n) ? n : 0; };
+const fmt = n => num(n).toLocaleString("es-CO", { maximumFractionDigits: 0 });
+function plata(n) {
+  n = num(n); const a = Math.abs(n);
+  if (a >= 1e12) { const b = n / 1e12; return "$" + b.toLocaleString("es-CO", { maximumFractionDigits: 2 }) + (Math.abs(b) < 1.005 ? " billón" : " billones"); }
+  if (a >= 1e9) return "$" + (n / 1e9).toLocaleString("es-CO", { maximumFractionDigits: 1 }) + " mil millones";
+  if (a >= 1e6) return "$" + (n / 1e6).toLocaleString("es-CO", { maximumFractionDigits: 0 }) + " millones";
+  return "$" + fmt(n);
+}
+const pct = (a, b) => b ? (100 * a / b) : 0;
+const p1 = n => num(n).toLocaleString("es-CO", { maximumFractionDigits: 1 }) + " %";
+const sinTilde = t => String(t || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase().replace(/\s+/g, " ").trim();
+function fecha(v) {
+  if (!v) return null;
+  const s = String(v).trim().split("T")[0];
+  let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/); if (m) return new Date(+m[1], +m[2] - 1, +m[3]);
+  m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/); if (m) return new Date(+m[3], +m[2] - 1, +m[1]);
+  return null;
+}
+const dmy = d => d ? d.toLocaleDateString("es-CO", { day: "2-digit", month: "short", year: "numeric" }) : "";
+const iso2 = s => dmy(fecha(s));
+async function leer(nombre) {
+  const r = await fetch(BASE + nombre, { cache: "no-store" });
+  if (!r.ok) throw new Error(nombre + ": HTTP " + r.status);
+  return r.json();
+}
+
+/* ------------------------------------------------------------ pestañas */
+const AVISO = {
+  megaproyectos: ["", "<b>Datos verificados en fuentes oficiales y prensa.</b> Cada cifra trae su fuente y fecha de corte."],
+  contratos: ["", "<b>Datos reales en vivo.</b> Consulta directa a SECOP II desde su navegador; nada pasa por servidores de terceros."],
+  regalias: ["pend", "<b>Datos de Mapa Inversiones / MapaRegalías (DNP).</b> Se cargan desde una exportación del portal; revise la fecha de corte."],
+  finanzas: ["", "<b>Datos reales.</b> Contratación municipal en SECOP II y, cuando está cargada, ejecución reportada en CHIP."]
+};
+const cargadas = {};
+function mostrar(id) {
+  if (!AVISO[id]) id = "megaproyectos";
+  document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === id));
+  document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.id === id));
+  const a = $("aviso"); a.className = "aviso " + AVISO[id][0]; a.innerHTML = AVISO[id][1];
+  if (!cargadas[id]) { cargadas[id] = true; ({ megaproyectos: megaproyectos, contratos: contratosInit,
+    regalias: regalias, finanzas: finanzas })[id](); }
+}
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  if (location.hash !== "#" + b.dataset.t) location.hash = b.dataset.t; else mostrar(b.dataset.t);
+}));
+window.addEventListener("hashchange", () => mostrar(location.hash.slice(1)));
+
+function fuentesHtml(claves, F) {
+  const l = (claves || []).filter(k => F[k]).map(k =>
+    '<a href="' + esc(F[k].url) + '" target="_blank" rel="noopener">' + esc(F[k].titulo) + "</a>");
+  return l.length ? '<div class="fuentes"><b>Fuentes:</b><br>' + l.join("<br>") + "</div>" : "";
+}
+
+/* ======================================================= 1 MEGAPROYECTOS */
+async function megaproyectos() {
+  const caja = $("mp-cuerpo");
+  let d;
+  try { d = await leer("megaproyectos.json"); }
+  catch (e) { caja.innerHTML = '<div class="vacio"><b>No se pudo cargar la ficha.</b>' + esc(e.message) + "</div>"; return; }
+  const F = d.fuentes || {};
+  const COL = ["#4A5BAE", "#A65A80", "#2E8B62", "#C68A2E"];
+  caja.innerHTML = d.proyectos.map(p => {
+    const ultimo = p.avance.length ? p.avance[p.avance.length - 1] : null;
+    const estadoCls = /constru|ejecu/i.test(p.estado) ? "p-medio" : "p-gris";
+    let h = '<div class="panel"><div class="mp-cab"><h3>' + esc(p.nombre) + '</h3><span class="pill ' + estadoCls + '">' + esc(p.estado) + "</span></div>";
+    h += '<p class="mp-desc">' + esc(p.descripcion) + '<br><span class="mini">Ente gestor: ' + esc(p.ente_gestor) + "</span></p>";
+
+    const k = [];
+    if (ultimo) k.push(["Avance general", p1(ultimo.pct), "Corte " + iso2(ultimo.corte)]);
+    if (p.valor_estimado_cop) k.push(["Valor estimado", plata(p.valor_estimado_cop), p.valor_nota || ""]);
+    if (p.tramos.length) k.push(["Longitud", p.tramos.reduce((s, t) => s + t.km, 0).toLocaleString("es-CO") + " km",
+      p.tramos.reduce((s, t) => s + t.estaciones.length, 0) + " estaciones sencillas + estación intermedia"]);
+    if (p.cofinanciacion.length && p.valor_estimado_cop) {
+      const s = p.cofinanciacion.find(c => /soacha/i.test(c.aportante));
+      if (s) k.push(["Aporte de Soacha", s.pct + " %", "≈ " + plata(p.valor_estimado_cop * s.pct / 100) + " sobre el valor estimado"]);
+    }
+    if (!k.length) k.push(["Valor", "Sin definir", p.valor_nota || ""]);
+    h += '<div class="kpis">' + k.map(x => '<div class="kpi"><small>' + esc(x[0]) + "</small><b>" + esc(x[1]) +
+      "</b><span>" + esc(x[2]) + "</span></div>").join("") + "</div>";
+
+    if (p.avance.length) {
+      h += '<div class="cols"><div><h4>Evolución del avance reportado</h4><div class="avance">' +
+        p.avance.map(a => '<div><b>' + p1(a.pct) + '</b><i style="height:' + Math.max(4, a.pct) + '%"></i></div>').join("") +
+        '</div><div class="avance-l">' + p.avance.map(a => "<span>" + esc(iso2(a.corte)) + "</span>").join("") + "</div>" +
+        '<p class="note">Pasar de 72,8 % a 80 % tomó casi seis meses de 2026. A ese ritmo, conviene contrastar la fecha anunciada de entrada en operación.</p></div>';
+      h += "<div><h4>Cofinanciación</h4>";
+      if (p.cofinanciacion.length) {
+        h += '<div class="cofi">' + p.cofinanciacion.map((c, i) => '<span style="width:' + c.pct + "%;background:" + COL[i % 4] + '">' + c.pct + "%</span>").join("") + "</div>";
+        h += "<table>" + p.cofinanciacion.map((c, i) => '<tr><td><span class="pill" style="background:' + COL[i % 4] + ';color:#fff">' + c.pct + " %</span> " + esc(c.aportante) +
+          '</td><td class="r">' + (p.valor_estimado_cop ? plata(p.valor_estimado_cop * c.pct / 100) : "") + "</td></tr>").join("") + "</table>";
+      }
+      h += "</div></div>";
+    }
+
+    if (p.tramos.length) {
+      h += "<h4>Tramos</h4><table><tr><th>Tramo</th><th>Recorrido</th><th class=r>Km</th><th>Estaciones</th></tr>" +
+        p.tramos.map(t => "<tr><td><b>" + esc(t.nombre) + "</b></td><td>" + esc(t.desde) + " → " + esc(t.hasta) +
+          '</td><td class="r">' + esc(t.km.toLocaleString("es-CO")) + "</td><td>" + esc(t.estaciones.join(", ")) + "</td></tr>").join("") + "</table>";
+    }
+    if (p.componentes.length) h += '<h4>Componentes</h4><ul class="lista">' + p.componentes.map(c => "<li>" + esc(c) + "</li>").join("") + "</ul>";
+    if (p.contratos.length) {
+      h += "<h4>Contratos de obra</h4><table><tr><th>Contrato</th><th>Contratista</th><th>Interventoría</th><th>Adjudicación</th></tr>" +
+        p.contratos.map(c => "<tr><td><b>" + esc(c.numero) + "</b></td><td>" + esc(c.contratista) + "</td><td>" + esc(c.interventoria) +
+          "</td><td>" + esc(c.adjudicacion) + "</td></tr>").join("") + "</table>" +
+        '<div class="fila" style="margin-top:12px"><button class="btn gris" data-efr="1">Ver en SECOP II los contratos de la EFR en Soacha →</button>' +
+        '<a class="btn gris" style="text-decoration:none" href="modulos-3-integrados.html#ficha">Revisar contratistas en la Ficha del Contendor →</a></div>';
+    }
+    if (p.hitos.length || p.operacion_anunciada.length) {
+      h += '<h4>Hitos y anuncios</h4><ul class="lista">' +
+        p.hitos.map(x => "<li>" + esc(x.texto) + ' <span class="mini">(' + esc(/^\d{4}-/.test(x.corte) ? iso2(x.corte) : x.corte) + ")</span></li>").join("") +
+        p.operacion_anunciada.map(x => "<li><b>Operación anunciada:</b> " + esc(x.texto) + "</li>").join("") + "</ul>";
+    }
+    if (p.lectura_campana.length) h += '<div class="campana"><b>Lectura para la campaña</b><ul class="lista">' +
+      p.lectura_campana.map(x => "<li>" + esc(x) + "</li>").join("") + "</ul></div>";
+    h += fuentesHtml(p.fuentes, F);
+    return h + "</div>";
+  }).join("") + '<p class="note">Ficha actualizada el ' + esc(iso2(d.actualizado)) + ". " + esc(d.nota) + "</p>";
+
+  caja.querySelectorAll("[data-efr]").forEach(b => b.addEventListener("click", () => {
+    PRESELECCION = /FERREA REGIONAL/; location.hash = "contratos";
+    if (cargadas.contratos) buscarEntidades(true);
+  }));
+}
+
+/* ======================================================= 2 CONTRATOS */
+const DEPTO = /GOBERNACION DE CUNDINAMARCA|DEPARTAMENTO DE CUNDINAMARCA|SECRETARIA .*CUNDINAMARCA|FERREA REGIONAL|INFRAESTRUCTURA Y CONCESIONES DE CUNDINAMARCA|\bICCU\b|EMPRESAS PUBLICAS DE CUNDINAMARCA|INDEPORTES|\bIDACO\b|ACCION COMUNAL .*CUNDINAMARCA|LOTERIA DE CUNDINAMARCA|BENEFICENCIA DE CUNDINAMARCA|CULTURA Y TURISMO DE CUNDINAMARCA|INSTITUTO DEPARTAMENTAL|UNIDAD ADMINISTRATIVA ESPECIAL .*CUNDINAMARCA|AGENCIA .*CUNDINAMARCA|INMOBILIARIA CUNDINAMARQUESA|ASAMBLEA DEPARTAMENTAL DE CUNDINAMARCA|CONTRALORIA DE CUNDINAMARCA|MARIO GAITAN/;
+const MUNICIPAL = /MUNICIPIO|ALCALDIA|CONCEJO MUNICIPAL|PERSONERIA|^EMPRESA.*(DE|DEL) MUNICIPIO/;
+const TERMINOS = ["CUNDINAMARCA", "FERREA REGIONAL", "MARIO GAITAN"];
+let PRESELECCION = null, ENTIDADES = [], ULTIMO = null;
+
+function log(t) { const l = $("ct-log"); l.insertAdjacentHTML("beforeend", "<div>" + esc(t) + "</div>"); l.scrollTop = l.scrollHeight; }
+
+async function pedir(params, etiqueta) {
+  const url = SECOP + "?" + new URLSearchParams(params);
+  for (let i = 1; i <= 3; i++) {
+    const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 60000);
+    try {
+      const r = await fetch(url, { signal: ctl.signal });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return await r.json();
+    } catch (e) {
+      if (i === 3) throw new Error("datos.gov.co no respondió (" + e.message + ")");
+      log("SECOP II tardó en responder (" + etiqueta + "); reintento " + i + "/2…");
+    } finally { clearTimeout(t); }
+  }
+}
+
+function contratosInit() {
+  const s = $("ct-desde"), y = new Date().getFullYear();
+  for (let a = y; a >= 2016; a--) s.insertAdjacentHTML("beforeend", '<option value="' + a + '"' + (a === 2020 ? " selected" : "") + ">" + a + "</option>");
+  $("ct-buscar-ent").addEventListener("click", () => buscarEntidades(false));
+  $("ct-marcar").addEventListener("click", () => marcar(n => DEPTO.test(n) && !MUNICIPAL.test(n)));
+  $("ct-ninguna").addEventListener("click", () => marcar(() => false));
+  $("ct-consultar").addEventListener("click", consultar);
+  if (PRESELECCION) buscarEntidades(true);
+}
+
+function marcar(f) { $("ct-ents").querySelectorAll("input").forEach(i => { i.checked = f(sinTilde(i.value)); }); }
+
+async function buscarEntidades(yConsultar) {
+  const btn = $("ct-buscar-ent"); btn.disabled = true; $("ct-log").innerHTML = "";
+  try {
+    if (!ENTIDADES.length) {
+      const vistos = new Map();
+      for (const t of TERMINOS) {
+        log("Buscando entidades de SECOP II que contengan «" + t + "»…");
+        const filas = await pedir({ $q: t, $select: "nombre_entidad,count(*)", $group: "nombre_entidad",
+          $order: "count(*) DESC", $limit: 5000 }, t) || [];
+        filas.forEach(f => { const n = f.nombre_entidad; if (n && sinTilde(n).includes(t)) vistos.set(n, num(f.count || f.count_1 || f["count(*)"])); });
+      }
+      ENTIDADES = [...vistos.entries()].sort((a, b) => {
+        const da = DEPTO.test(sinTilde(a[0])) && !MUNICIPAL.test(sinTilde(a[0])), db = DEPTO.test(sinTilde(b[0])) && !MUNICIPAL.test(sinTilde(b[0]));
+        return (db - da) || (b[1] - a[1]);
+      });
+      log(ENTIDADES.length + " entidades encontradas.");
+    }
+    $("ct-ents").innerHTML = ENTIDADES.map(([n, c]) => {
+      const N = sinTilde(n), on = PRESELECCION ? PRESELECCION.test(N) : (DEPTO.test(N) && !MUNICIPAL.test(N));
+      return '<label><input type="checkbox" value="' + esc(n) + '"' + (on ? " checked" : "") + "> <span>" + esc(n) +
+        " <em>· " + fmt(c) + " contratos en SECOP II" + (/SOACHA/.test(N) ? " · sede en Soacha: se traen todos" : "") + "</em></span></label>";
+    }).join("");
+    $("ct-ents-caja").hidden = false;
+    PRESELECCION = null;
+    if (yConsultar) consultar();
+  } catch (e) {
+    log("Error: " + e.message);
+  } finally { btn.disabled = false; }
+}
+
+async function consultar() {
+  const sel = [...$("ct-ents").querySelectorAll("input:checked")].map(i => i.value);
+  if (!sel.length) { log("Marque al menos una entidad."); return; }
+  const btn = $("ct-consultar"); btn.disabled = true;
+  const res = $("ct-resultado"); res.innerHTML = "";
+  const texto = sinTilde($("ct-texto").value || "SOACHA").replace(/'/g, "''");
+  const desde = $("ct-desde").value + "-01-01T00:00:00";
+  const lista = a => a.map(n => "'" + n.replace(/'/g, "''") + "'").join(",");
+  const enSoacha = sel.filter(n => /SOACHA/.test(sinTilde(n))), resto = sel.filter(n => !/SOACHA/.test(sinTilde(n)));
+  const partes = [];
+  if (resto.length) partes.push("(nombre_entidad in(" + lista(resto) + ") AND upper(objeto_del_contrato) like '%" + texto + "%')");
+  if (enSoacha.length) partes.push("nombre_entidad in(" + lista(enSoacha) + ")");
+  const where = "(" + partes.join(" OR ") + ") AND fecha_de_firma >= '" + desde + "'";
+  const filas = [], MAX = 6000;
+  try {
+    log("Consultando contratos de " + sel.length + " entidad" + (sel.length === 1 ? "" : "es") + " desde " + $("ct-desde").value + "…");
+    for (let off = 0; off < MAX; off += 1000) {
+      const l = await pedir({ $where: where, $limit: 1000, $offset: off, $order: "fecha_de_firma DESC" }, "offset " + off) || [];
+      filas.push(...l); log("  " + filas.length + " contratos descargados…");
+      if (l.length < 1000) break;
+    }
+    if (filas.length >= MAX) log("Se alcanzó el tope de " + fmt(MAX) + " contratos (los firmados más recientemente). Acote el año para ver el resto.");
+    ULTIMO = analizar(filas);
+    pintarContratos(ULTIMO);
+  } catch (e) {
+    log("Error: " + e.message);
+    res.innerHTML = '<div class="vacio"><b>No se pudo completar la consulta.</b>SECOP II no respondió a tiempo. Intente de nuevo o acote el año de firma.</div>';
+  } finally { btn.disabled = false; }
+}
+
+const ABIERTO = /EJECU|ACTIVO|CELEBRADO|FIRMADO|EN APROBACION|MODIFICADO/;
+const CERRADO = /TERMINAD|LIQUIDAD|CERRADO|CEDIDO|ANULAD/;
+function analizar(filas) {
+  const hoy = new Date(); const vistos = new Set();
+  const cs = [];
+  filas.forEach(c => {
+    const id = c.id_contrato || c.referencia_del_contrato; if (vistos.has(id)) return; vistos.add(id);
+    const fin = fecha(c.fecha_de_fin_del_contrato), est = sinTilde(c.estado_contrato);
+    const valor = num(c.valor_del_contrato), pagado = num(c.valor_pagado);
+    const vencido = !!(fin && fin < hoy && ABIERTO.test(est) && !CERRADO.test(est));
+    cs.push({
+      id, ref: c.referencia_del_contrato || id, entidad: c.nombre_entidad || "", proveedor: c.proveedor_adjudicado || "",
+      doc: String(c.documento_proveedor || "").replace(/\D/g, ""), objeto: c.objeto_del_contrato || "",
+      modalidad: c.modalidad_de_contratacion || "", estado: c.estado_contrato || "", valor, pagado,
+      firma: fecha(c.fecha_de_firma), fin, vencido, dias: vencido ? Math.round((hoy - fin) / 864e5) : 0,
+      adicion: num(c.dias_adicionados) > 0, directa: /DIRECTA/.test(sinTilde(c.modalidad_de_contratacion)),
+      url: (c.urlproceso && c.urlproceso.url) || ""
+    });
+  });
+  const total = cs.reduce((s, c) => s + c.valor, 0);
+  const grupo = (k) => { const m = new Map(); cs.forEach(c => { const g = m.get(c[k]) || { n: c[k], doc: c.doc, c: 0, v: 0, venc: 0 };
+    g.c++; g.v += c.valor; if (c.vencido) g.venc++; m.set(c[k], g); }); return [...m.values()].sort((a, b) => b.v - a.v); };
+  const prov = grupo("proveedor");
+  const hhi = prov.reduce((s, p) => s + Math.pow(pct(p.v, total), 2), 0);
+  return { cs, total, pagado: cs.reduce((s, c) => s + c.pagado, 0), ent: grupo("entidad"), prov, hhi,
+    directa: cs.filter(c => c.directa), vencidos: cs.filter(c => c.vencido).sort((a, b) => b.valor - a.valor),
+    adicion: cs.filter(c => c.adicion) };
+}
+
+function pintarContratos(A) {
+  const res = $("ct-resultado");
+  if (!A.cs.length) { res.innerHTML = '<div class="vacio"><b>Sin contratos.</b>No hay contratos de esas entidades con ese texto en el objeto desde el año elegido.</div>'; return; }
+  const vDir = A.directa.reduce((s, c) => s + c.valor, 0), vVen = A.vencidos.reduce((s, c) => s + c.valor, 0);
+  const top1 = A.prov[0] ? pct(A.prov[0].v, A.total) : 0;
+  const k = [
+    ["Contratos", fmt(A.cs.length), A.ent.length + " entidades · " + fmt(A.prov.length) + " contratistas", false],
+    ["Valor contratado", plata(A.total), "Pagado reportado: " + plata(A.pagado), false],
+    ["Contratación directa", p1(pct(vDir, A.total)), fmt(A.directa.length) + " contratos · " + plata(vDir) + " del valor", pct(vDir, A.total) > 40],
+    ["Vencidos y abiertos", fmt(A.vencidos.length), plata(vVen) + " con fecha de fin pasada", A.vencidos.length > 0],
+    ["Con días adicionados", fmt(A.adicion.length), p1(pct(A.adicion.length, A.cs.length)) + " de los contratos", pct(A.adicion.length, A.cs.length) > 30],
+    ["Concentración (HHI)", fmt(A.hhi), "Mayor contratista: " + p1(top1) + " del valor", A.hhi > 1500]
+  ];
+  let h = '<div class="kpis">' + k.map(x => '<div class="kpi' + (x[3] ? " alerta" : "") + '"><small>' + esc(x[0]) + "</small><b>" + esc(x[1]) + "</b><span>" + esc(x[2]) + "</span></div>").join("") + "</div>";
+
+  const barra = (v) => '<div class="meter"><i style="width:' + Math.min(100, pct(v, A.ent[0] ? Math.max(A.ent[0].v, A.prov[0].v) : 1)) + '%"></i></div>';
+  h += '<div class="cols"><div class="panel"><h3>Por entidad</h3><table><tr><th>Entidad</th><th class=r>Contratos</th><th class=r>Valor</th><th class=r>Vencidos</th></tr>' +
+    A.ent.slice(0, 15).map(e => "<tr><td>" + esc(e.n) + barra(e.v) + '</td><td class="r">' + fmt(e.c) + '</td><td class="r">' + plata(e.v) + '</td><td class="r">' + (e.venc ? '<span class="pill p-alto">' + e.venc + "</span>" : "0") + "</td></tr>").join("") + "</table></div>";
+  h += '<div class="panel"><h3>Mayores contratistas</h3><table><tr><th>Contratista</th><th class=r>Contratos</th><th class=r>% del valor</th></tr>' +
+    A.prov.slice(0, 12).map(p => "<tr><td>" + esc(p.n) + '<div class="mini">Doc. ' + esc(p.doc || "s/d") + "</div>" + barra(p.v) + '</td><td class="r">' + fmt(p.c) + '</td><td class="r">' + p1(pct(p.v, A.total)) + "<div class=mini>" + plata(p.v) + "</div></td></tr>").join("") +
+    '</table><p class="note">Para ver antecedentes en SIRI y el Boletín, copie el documento en la <a class="ext" href="modulos-3-integrados.html#ficha">Ficha del Contendor</a>.</p></div></div>';
+
+  if (A.vencidos.length) {
+    h += '<div class="panel"><h3>Contratos vencidos que siguen abiertos</h3><table><tr><th>Contrato</th><th>Entidad / contratista</th><th>Objeto</th><th class=r>Valor</th><th class=r>Días vencido</th></tr>' +
+      A.vencidos.slice(0, 40).map(filaContrato).join("") + "</table></div>";
+  }
+  h += '<div class="panel"><div class="mp-cab"><h3>Contratos de mayor valor</h3><button class="btn gris" id="ct-csv">Descargar CSV (' + fmt(A.cs.length) + ")</button></div><table><tr><th>Contrato</th><th>Entidad / contratista</th><th>Objeto</th><th class=r>Valor</th><th class=r>Estado</th></tr>" +
+    A.cs.slice().sort((a, b) => b.valor - a.valor).slice(0, 40).map(c => filaContrato(c, true)).join("") + "</table>" +
+    '<p class="note">Un contrato «vencido y abierto» tiene fecha de terminación pasada y sigue en un estado de ejecución en SECOP II. Puede ser un atraso real o un registro sin actualizar: verifique en el expediente.</p></div>';
+  res.innerHTML = h;
+  $("ct-csv").addEventListener("click", () => descargarCsv(A.cs));
+}
+
+function filaContrato(c, conEstado) {
+  const ref = c.url ? '<a class="ext" href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.ref) + "</a>" : esc(c.ref);
+  const ult = conEstado
+    ? '<span class="pill ' + (c.vencido ? "p-alto" : CERRADO.test(sinTilde(c.estado)) ? "p-ok" : "p-gris") + '">' + esc(c.estado || "s/d") + "</span>" + (c.directa ? '<div class="mini">Directa</div>' : "")
+    : '<span class="pill p-alto">' + fmt(c.dias) + "</span><div class=mini>Fin " + esc(dmy(c.fin)) + "</div>";
+  return "<tr><td>" + ref + '<div class="mini">Firma ' + esc(dmy(c.firma)) + "</div></td><td>" + esc(c.entidad) + '<div class="mini">' + esc(c.proveedor) +
+    '</div></td><td class="obj">' + esc(c.objeto.slice(0, 260)) + (c.objeto.length > 260 ? "…" : "") + '</td><td class="r">' + plata(c.valor) + '</td><td class="r">' + ult + "</td></tr>";
+}
+
+function descargarCsv(cs) {
+  const cols = [["Referencia", c => c.ref], ["Entidad", c => c.entidad], ["Contratista", c => c.proveedor], ["Documento", c => c.doc],
+    ["Objeto", c => c.objeto], ["Modalidad", c => c.modalidad], ["Estado", c => c.estado], ["Valor", c => Math.round(c.valor)],
+    ["Pagado", c => Math.round(c.pagado)], ["Firma", c => c.firma ? c.firma.toISOString().slice(0, 10) : ""],
+    ["Fin", c => c.fin ? c.fin.toISOString().slice(0, 10) : ""], ["Vencido abierto", c => c.vencido ? "SI" : ""], ["Dias vencido", c => c.dias || ""],
+    ["Con adicion", c => c.adicion ? "SI" : ""], ["URL", c => c.url]];
+  const q = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+  const txt = "﻿" + cols.map(c => q(c[0])).join(";") + "\n" + cs.map(c => cols.map(k => q(k[1](c))).join(";")).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([txt], { type: "text/csv;charset=utf-8" }));
+  a.download = "contratos_departamentales_soacha.csv"; document.body.appendChild(a); a.click(); a.remove();
+}
+
+/* ======================================================= 3 REGALÍAS */
+async function regalias() {
+  const caja = $("rg-cuerpo");
+  let d = null;
+  try { d = await leer("regalias.json"); } catch (e) { /* sin archivo: se muestran las instrucciones */ }
+  const P = (d && d.proyectos) || [];
+  if (!P.length) {
+    caja.innerHTML = '<div class="vacio"><b>Aún no se han cargado los proyectos de regalías de Soacha.</b>' +
+      "Descargue la lista de proyectos de Soacha desde " +
+      '<a class="ext" href="https://mapainversiones.dnp.gov.co/" target="_blank" rel="noopener">Mapa Inversiones</a> o ' +
+      '<a class="ext" href="https://www.sgr.gov.co/" target="_blank" rel="noopener">el portal del SGR</a> en formato CSV y genere el archivo del panel:' +
+      "<pre>python etl_soacha_inversion.py --regalias proyectos_soacha.csv</pre>" +
+      "El script reconoce las columnas de BPIN, nombre, sector, ejecutor, estado, valor y avances aunque cambien de nombre, y deja solo los proyectos que mencionan Soacha.</div>";
+    return;
+  }
+  const total = P.reduce((s, p) => s + num(p.valor), 0);
+  const est = new Map(); P.forEach(p => { const k = p.estado || "Sin estado"; const g = est.get(k) || { n: k, c: 0, v: 0 }; g.c++; g.v += num(p.valor); est.set(k, g); });
+  const conAlerta = P.filter(p => p.alerta && !/^(NO|NINGUNA|SIN)/i.test(p.alerta));
+  const rezago = P.filter(p => p.avance_fisico != null && p.avance_financiero != null && p.avance_financiero - p.avance_fisico >= 20);
+  const k = [["Proyectos", fmt(P.length), "", false], ["Valor total", plata(total), "", false],
+    ["Con alerta del DNP", fmt(conAlerta.length), plata(conAlerta.reduce((s, p) => s + num(p.valor), 0)), conAlerta.length > 0],
+    ["Pago adelantado a la obra", fmt(rezago.length), "Avance financiero ≥ 20 puntos sobre el físico", rezago.length > 0]];
+  let h = '<div class="kpis">' + k.map(x => '<div class="kpi' + (x[3] ? " alerta" : "") + '"><small>' + esc(x[0]) + "</small><b>" + esc(x[1]) + "</b><span>" + esc(x[2]) + "</span></div>").join("") + "</div>";
+  h += '<div class="panel"><h3>Por estado</h3><table><tr><th>Estado</th><th class=r>Proyectos</th><th class=r>Valor</th></tr>' +
+    [...est.values()].sort((a, b) => b.v - a.v).map(e => "<tr><td>" + esc(e.n) + '</td><td class="r">' + fmt(e.c) + '</td><td class="r">' + plata(e.v) + "</td></tr>").join("") + "</table></div>";
+  h += '<div class="panel"><h3>Proyectos</h3><table><tr><th>BPIN / proyecto</th><th>Sector · ejecutor</th><th>Estado</th><th class=r>Valor</th><th class=r>Físico</th><th class=r>Financiero</th></tr>' +
+    P.map(p => {
+      const alerta = conAlerta.includes(p) || rezago.includes(p);
+      return "<tr><td><b>" + esc(p.bpin) + '</b><div class="obj">' + esc(p.nombre) + "</div></td><td>" + esc(p.sector) + '<div class="mini">' + esc(p.ejecutor) + "</div></td><td>" +
+        '<span class="pill ' + (alerta ? "p-alto" : /TERMIN|CERRAD/i.test(p.estado) ? "p-ok" : "p-gris") + '">' + esc(p.estado || "s/d") + "</span>" + (p.alerta ? '<div class="mini">' + esc(p.alerta) + "</div>" : "") +
+        '</td><td class="r">' + plata(p.valor) + '</td><td class="r">' + (p.avance_fisico == null ? "—" : p1(p.avance_fisico)) + '</td><td class="r">' + (p.avance_financiero == null ? "—" : p1(p.avance_financiero)) + "</td></tr>";
+    }).join("") + "</table>" +
+    '<p class="note">Archivo cargado: ' + esc((d.fuente && d.fuente.archivo) || "") + " · generado el " + esc(iso2(d.generado)) +
+    '. Consulte cada proyecto por su BPIN en <a class="ext" href="https://mapainversiones.dnp.gov.co/" target="_blank" rel="noopener">Mapa Inversiones</a>.</p></div>';
+  caja.innerHTML = h;
+}
+
+/* ======================================================= 4 FINANZAS */
+async function finanzas() {
+  const caja = $("fn-cuerpo");
+  let d;
+  try { d = await leer("finanzas.json"); }
+  catch (e) { caja.innerHTML = '<div class="vacio"><b>No se pudo cargar el archivo de finanzas.</b>' + esc(e.message) + "</div>"; return; }
+  let h = "";
+  const C = d.contratacion_municipal;
+  if (C && C.resumen) {
+    const I = C.indicadores || {}, R = C.resumen;
+    const nivelCls = { alto: "p-alto", medio: "p-medio", bajo: "p-ok" }[String(C.nivel || "").toLowerCase()] || "p-gris";
+    h += '<div class="panel"><div class="mp-cab"><h3>Contratación de las entidades municipales (SECOP II)</h3><span class="pill ' + nivelCls + '">Índice de alertas ' + esc(C.indice_alertas) + " · nivel " + esc(C.nivel) + "</span></div>" +
+      '<p class="mp-desc">Contratos firmados desde el ' + esc(iso2(C.periodo_desde)) + " por " + fmt(R.entidades) + " entidades de Soacha. Puesto " + fmt(C.posicion) + " de " + fmt(C.total_rankeados) +
+      " municipios de Cundinamarca por índice de alertas (1 = más alertas).</p>";
+    const k = [["Contratos", fmt(R.contratos), fmt(R.proveedores) + " contratistas", false], ["Valor contratado", plata(R.valor_total), "", false],
+      ["Contratación directa", p1(I.pct_contratos_directa), p1(I.pct_directa_valor) + " del valor", I.pct_contratos_directa > 40],
+      ["Con adiciones", p1(I.pct_con_adicion), "de los contratos", I.pct_con_adicion > 30],
+      ["Mayor contratista", p1(I.top1_proveedor_pct), "Top 5: " + p1(I.top5_proveedores_pct) + " del valor", I.top1_proveedor_pct > 10],
+      ["Concentración (HHI)", fmt(I.hhi), "Por debajo de 1.500 se considera baja", I.hhi > 1500]];
+    h += '<div class="kpis">' + k.map(x => '<div class="kpi' + (x[3] ? " alerta" : "") + '"><small>' + esc(x[0]) + "</small><b>" + esc(x[1]) + "</b><span>" + esc(x[2]) + "</span></div>").join("") + "</div>";
+    if ((C.top_proveedores || []).length) {
+      const max = C.top_proveedores[0].participacion_pct || 1;
+      h += "<h4>Mayores contratistas del municipio</h4><table><tr><th>Contratista</th><th class=r>Contratos</th><th class=r>Valor</th><th class=r>% del valor</th></tr>" +
+        C.top_proveedores.map(p => "<tr><td>" + esc(p.proveedor) + '<div class="mini">Doc. ' + esc(p.documento) + '</div><div class="meter"><i style="width:' + Math.min(100, 100 * p.participacion_pct / max) + '%"></i></div></td><td class="r">' + fmt(p.contratos) +
+          '</td><td class="r">' + plata(p.valor) + '</td><td class="r">' + p1(p.participacion_pct) + "</td></tr>").join("") + "</table>";
+    }
+    h += '<p class="note">Corte del análisis: ' + esc(iso2(C.generado)) + ". Las obras vencidas del municipio se detallan en el módulo 05 <a class=\"ext\" href=\"modulos-3-integrados.html#territorio\">Territorio y obras</a>.</p></div>";
+  } else {
+    h += '<div class="vacio"><b>Sin resumen de contratación municipal.</b>Ejecute <code>python etl_soacha_inversion.py</code> después de actualizar el análisis fiscal de Soacha.</div>';
+  }
+
+  const E = d.ejecucion || [];
+  if (E.length) {
+    const vig = [...new Set(E.map(e => e.vigencia))].sort((a, b) => b - a);
+    h += '<div class="panel"><div class="mp-cab"><h3>Ejecución presupuestal (CHIP · FUT)</h3><select id="fn-vig" class="pill p-gris" style="border:1px solid var(--line);padding:6px 10px">' +
+      vig.map(v => "<option>" + v + "</option>").join("") + '</select></div><div id="fn-ejec"></div><p class="note">Fuente: ' + esc(d.fuente_ejecucion) + ".</p></div>";
+  } else {
+    h += '<div class="vacio" style="margin-top:4px"><b>Ejecución presupuestal pendiente de cargar.</b>' +
+      'Descargue de <a class="ext" href="https://www.chip.gov.co/" target="_blank" rel="noopener">CHIP</a> los formularios FUT de ingresos y gastos de Soacha, consolide los conceptos en el formato de ' +
+      '<a class="ext" href="data/soacha/inversion/plantilla_chip.csv">plantilla_chip.csv</a> y ejecute:<pre>python etl_soacha_inversion.py --chip ejecucion_soacha.csv</pre>' +
+      "Con eso la pestaña muestra, por vigencia, el recaudo frente al presupuesto, la dependencia del SGP, la cofinanciación departamental y el peso del funcionamiento, la deuda y la inversión.</div>";
+  }
+  caja.innerHTML = h;
+  if (E.length) { const s = $("fn-vig"); const pinta = () => pintarEjecucion(E.filter(e => String(e.vigencia) === s.value)); s.addEventListener("change", pinta); pinta(); }
+}
+
+function pintarEjecucion(E) {
+  const tabla = (tipo, titulo, verbo) => {
+    const f = E.filter(e => e.tipo === tipo); if (!f.length) return "";
+    const def = f.reduce((s, e) => s + e.definitivo, 0), eje = f.reduce((s, e) => s + e.ejecutado, 0);
+    return "<div><h4>" + titulo + "</h4><table><tr><th>Concepto</th><th class=r>Definitivo</th><th class=r>" + verbo + "</th><th class=r>% del total</th><th class=r>Ejecución</th></tr>" +
+      f.map(e => "<tr><td>" + esc(e.concepto) + '</td><td class="r">' + plata(e.definitivo) + '</td><td class="r">' + plata(e.ejecutado) + '</td><td class="r">' + p1(pct(e.ejecutado, eje)) +
+        '</td><td class="r">' + p1(pct(e.ejecutado, e.definitivo)) + "</td></tr>").join("") +
+      '<tr><td><b>Total</b></td><td class="r"><b>' + plata(def) + '</b></td><td class="r"><b>' + plata(eje) + '</b></td><td class="r">100 %</td><td class="r"><b>' + p1(pct(eje, def)) + "</b></td></tr></table></div>";
+  };
+  $("fn-ejec").innerHTML = '<div class="cols">' + tabla("ingreso", "Ingresos", "Recaudado") + tabla("gasto", "Gastos", "Comprometido") + "</div>";
+}
+
+mostrar(location.hash.slice(1));
+})();
+</script>
+<script src="/js/auditoria.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+{
+  "actualizado": "2026-10-29",
+  "nota": "Ficha armada a mano con fuentes oficiales y de prensa. Cada dato lleva su fuente; las cifras de avance son las que reportó cada fuente en su fecha de corte. Actualizar cuando la EFR publique un nuevo corte.",
+  "proyectos": [
+    {
+      "id": "tm-fases-2-3",
+      "nombre": "TransMilenio a Soacha · Fases II y III",
+      "estado": "En construcción",
+      "ente_gestor": "Empresa Férrea Regional S.A.S. (EFR) · Gobernación de Cundinamarca",
+      "descripcion": "Extensión de la troncal NQS desde la estación San Mateo hasta el Patio Portal Colsubsidio-Maiporé (El Vínculo), con 4,4 km de troncal, estación intermedia, puentes vehiculares y peatonales y el paso deprimido de 3M.",
+      "valor_estimado_cop": 1000000000000,
+      "valor_nota": "Valor estimado del proyecto al abrir la licitación (aprox. 1 billón de pesos).",
+      "cofinanciacion": [
+        {
+          "aportante": "Nación (vigencias futuras a 10 años)",
+          "pct": 68
+        },
+        {
+          "aportante": "Gobernación de Cundinamarca",
+          "pct": 19
+        },
+        {
+          "aportante": "Municipio de Soacha",
+          "pct": 13
+        }
+      ],
+      "tramos": [
+        {
+          "nombre": "Fase II",
+          "km": 1.3,
+          "desde": "Estación San Mateo",
+          "hasta": "Estación Intermedia Universidades (sector 3M)",
+          "estaciones": [
+            "Estadio Luis Carlos Galán",
+            "Soacha Centro"
+          ]
+        },
+        {
+          "nombre": "Fase III",
+          "km": 3.1,
+          "desde": "Estación Intermedia Universidades",
+          "hasta": "Patio Portal Colsubsidio-Maiporé",
+          "estaciones": [
+            "El Altico",
+            "Compartir"
+          ]
+        }
+      ],
+      "componentes": [
+        "Patio Portal de 110.000 m² con capacidad para 296 buses",
+        "Estación Intermedia Universidades de 10.495 m²",
+        "Paso deprimido de 3M que conecta las comunas 2 y 6",
+        "Puente vehicular de la calle 22",
+        "Puente peatonal Ducales (Autopista Sur con calle 5.ª)"
+      ],
+      "contratos": [
+        {
+          "numero": "060-EFR-2019",
+          "contratista": "Consorcio Vial de Soacha (CVS)",
+          "interventoria": "Consorcio TPF - ICEACSA",
+          "adjudicacion": "Resolución 080 del 29 de noviembre de 2019"
+        },
+        {
+          "numero": "061-EFR-2019",
+          "contratista": "Constructora Conconcreto S.A.",
+          "interventoria": "Interdiseños Internacional S.A.S.",
+          "adjudicacion": "Resolución 080 del 29 de noviembre de 2019"
+        }
+      ],
+      "avance": [
+        {
+          "corte": "2026-03-06",
+          "pct": 72.76,
+          "fuente": "gob-izaje"
+        },
+        {
+          "corte": "2026-07-02",
+          "pct": 75,
+          "fuente": "gob-3m"
+        },
+        {
+          "corte": "2026-08-19",
+          "pct": 77,
+          "fuente": "gob-ducales"
+        },
+        {
+          "corte": "2026-08-29",
+          "pct": 80,
+          "fuente": "gob-80"
+        }
+      ],
+      "hitos": [
+        {
+          "texto": "Puente vehicular de la calle 22 al 81 % de ejecución",
+          "corte": "2026-08-19",
+          "fuente": "gob-ducales"
+        },
+        {
+          "texto": "Puente peatonal Ducales en etapa final; servicio previsto en el último trimestre de 2026",
+          "corte": "2026-08-19",
+          "fuente": "gob-ducales"
+        }
+      ],
+      "operacion_anunciada": [
+        {
+          "texto": "Entrada en operación entre junio y agosto, según el alcalde Julián Sánchez Perico",
+          "fuente": "valora-entrega"
+        },
+        {
+          "texto": "Operación hasta el portal El Vínculo antes de terminar 2026, según declaraciones recogidas por Las2orillas",
+          "fuente": "las2orillas"
+        }
+      ],
+      "lectura_campana": [
+        "La fecha de entrada en operación cambia según quién la anuncie: el retraso o la inauguración caerán en plena campaña 2027.",
+        "Soacha aporta el 13 %: conviene verificar en el presupuesto municipal y en el marco fiscal cuánto de ese aporte está pagado y cuánto queda comprometido en vigencias futuras.",
+        "Los dos contratistas e interventores se pueden pasar por la Ficha del Contendor (módulo 06) para revisar antecedentes en SIRI y el Boletín."
+      ],
+      "fuentes": [
+        "gob-80",
+        "valora-80",
+        "valora-cofinanciacion",
+        "efr-participacion",
+        "efr-rendicion",
+        "gob-izaje",
+        "gob-3m",
+        "gob-ducales",
+        "valora-entrega",
+        "las2orillas"
+      ]
+    },
+    {
+      "id": "corredor-ferreo-sur",
+      "nombre": "Corredor Férreo del Sur (RegioTram del Sur)",
+      "estado": "Prefactibilidad",
+      "ente_gestor": "Distrito, Nación y Gobernación (estructuración)",
+      "descripcion": "Tren de pasajeros entre Bogotá y Soacha. La alternativa seleccionada en los estudios va por Soacha, la Avenida Bosa, la Autopista Sur y el Corredor Férreo del Sur hasta la Estación Central.",
+      "valor_estimado_cop": null,
+      "valor_nota": "Sin valor de obra definido: el proyecto no tiene cierre financiero.",
+      "cofinanciacion": [],
+      "tramos": [],
+      "componentes": [],
+      "contratos": [],
+      "avance": [],
+      "hitos": [
+        {
+          "texto": "Sigue en etapa de prefactibilidad",
+          "corte": "2026",
+          "fuente": "diariodelsur"
+        }
+      ],
+      "operacion_anunciada": [],
+      "lectura_campana": [
+        "Es una promesa recurrente. Un candidato que la ofrezca debería explicar de dónde sale la cofinanciación de Nación, Distrito, Gobernación y Soacha.",
+        "Sirve para contrastar promesas con estado real: un proyecto en prefactibilidad no se construye en un cuatrienio."
+      ],
+      "fuentes": [
+        "diariodelsur",
+        "steer"
+      ]
+    }
+  ],
+  "fuentes": {
+    "gob-izaje": {
+      "titulo": "Gobernación de Cundinamarca · Izaje de vigas del puente de la calle 22 (11 mar 2026)",
+      "url": "https://www.cundinamarca.gov.co/noticias/-inicia-izaje-de-vigas-del-puente-de-la-calle-22-en-soacha-obra-clave-para-la-extension-de-transmilenio"
+    },
+    "gob-3m": {
+      "titulo": "Gobernación de Cundinamarca · Deprimido de 3M (2 jul 2026)",
+      "url": "https://www.cundinamarca.gov.co/noticias/con-el-deprimido-de-3m-eliminaremos-los-semaforos-que-frenan-la-movilidad-de-soacha-y-se-garantizara-transito-continuo-sobre-la-autopista-sur-gobernador-jorge-rey"
+    },
+    "gob-ducales": {
+      "titulo": "Gobernación de Cundinamarca · Puente peatonal Ducales (19 ago 2026)",
+      "url": "https://www.cundinamarca.gov.co/noticias/puente-peatonal-ducales-estara-al-servicio-de-soacha-en-el-ultimo-trimestre-de-2026"
+    },
+    "gob-80": {
+      "titulo": "Gobernación de Cundinamarca · EFR presenta a Soacha el 80 % de ejecución (29 ago 2026)",
+      "url": "https://www.cundinamarca.gov.co/noticias/empresa-ferrea-regional-presenta-a-soacha-su-nueva-conexion-con-transmilenio-que-alcanza-el-80--de-ejecucion"
+    },
+    "efr-participacion": {
+      "titulo": "EFR · Informe plan de participación, I trimestre 2026 (contratos e interventorías)",
+      "url": "https://efr-cundinamarca.gov.co/sites/default/files/Informe-plan-de-participacion-I-trim-2026.pdf"
+    },
+    "efr-rendicion": {
+      "titulo": "EFR · Informe de rendición de cuentas 2025",
+      "url": "https://www.efr-cundinamarca.gov.co/sites/default/files/informe-rendicion-de-cuentas-2025-.pdf"
+    },
+    "valora-cofinanciacion": {
+      "titulo": "Valora Analitik · Oferentes y cofinanciación de las fases II y III",
+      "url": "https://www.valoraanalitik.com/?p=57509"
+    },
+    "valora-80": {
+      "titulo": "Valora Analitik · Megaproyecto de 4,4 km con 80 % de avance",
+      "url": "https://www.valoraanalitik.com/?p=609338"
+    },
+    "valora-entrega": {
+      "titulo": "Valora Analitik · Fecha de entrega anunciada por el alcalde",
+      "url": "https://www.valoraanalitik.com/megaobra-que-mejorara-el-transporte-entre-soacha-y-bogota-ya-tiene-fecha-de-entrega-ahorro-en-viaje-sera-de-1-hora/"
+    },
+    "las2orillas": {
+      "titulo": "Las2orillas · Servicio de alimentación y operación de las fases II y III",
+      "url": "https://www.las2orillas.co/?p=1001125"
+    },
+    "diariodelsur": {
+      "titulo": "Diario del Sur · Estado de los corredores férreos (Corredor Férreo del Sur en prefactibilidad)",
+      "url": "https://www.diariodelsur.com.co/?p=466375"
+    },
+    "steer": {
+      "titulo": "Steer · Expansión del sistema de transporte de Bogotá (alternativa Corredor Férreo del Sur)",
+      "url": "https://la.steergroup.com/es/projects/expansion-del-sistema-de-transporte-de-bogota-proyectos-que-transformaran-la-movilidad"
+    }
+  }
+}

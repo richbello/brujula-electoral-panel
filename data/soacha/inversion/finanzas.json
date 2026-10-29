@@ -1,0 +1,108 @@
+{
+  "generado": "2026-10-29",
+  "municipio": "Soacha",
+  "contratacion_municipal": {
+    "periodo_desde": "2024-01-01",
+    "generado": "2026-10-14T11:13:56",
+    "resumen": {
+      "contratos": 21773,
+      "valor_total": 1980107290953.77,
+      "entidades": 10,
+      "proveedores": 7410
+    },
+    "indice_alertas": 60.5,
+    "nivel": "medio",
+    "posicion": 19.0,
+    "total_rankeados": 71,
+    "indicadores": {
+      "pct_contratos_directa": 55.5137,
+      "pct_directa_valor": 46.7713,
+      "hhi": 233.72827981207405,
+      "top1_proveedor_pct": 11.622941273899814,
+      "top5_proveedores_pct": 26.472838550409207,
+      "pct_con_adicion": 28.406742295503605
+    },
+    "top_proveedores": [
+      {
+        "proveedor": "EPUXUA E.I.C.E.",
+        "documento": "901511522",
+        "valor": 182568430996.1,
+        "contratos": 36,
+        "participacion_pct": 11.6229
+      },
+      {
+        "proveedor": "SERVICIO DE ALIMENTOS Y LOGISTICA S.A.S",
+        "documento": "901084024",
+        "valor": 95103793366.8,
+        "contratos": 6,
+        "participacion_pct": 6.0546
+      },
+      {
+        "proveedor": "BANCO BILBAO VIZCAYA ARGENTARIA S.A. (OFICIAL)",
+        "documento": "860003020",
+        "valor": 59433962263.0,
+        "contratos": 1,
+        "participacion_pct": 3.7838
+      },
+      {
+        "proveedor": "FONDO DE DESARROLLO DE PROYECTOS DE CUNDINAMARCA",
+        "documento": "900258772",
+        "valor": 40269533557.97,
+        "contratos": 6,
+        "participacion_pct": 2.5637
+      },
+      {
+        "proveedor": "Banco Davivienda",
+        "documento": "8600343137",
+        "valor": 38448853327.0,
+        "contratos": 4,
+        "participacion_pct": 2.4478
+      },
+      {
+        "proveedor": "CAJA DE COMPENSACION FAMILIAR COMPENSAR",
+        "documento": "860066942",
+        "valor": 33697258042.0,
+        "contratos": 7,
+        "participacion_pct": 2.1453
+      },
+      {
+        "proveedor": "Laboratorio Clínico Santa Lucia IPS S.A.S.",
+        "documento": "900434332",
+        "valor": 31408560867.0,
+        "contratos": 11,
+        "participacion_pct": 1.9996
+      },
+      {
+        "proveedor": "BANCOLOMBIA",
+        "documento": "890903938",
+        "valor": 30000000000.0,
+        "contratos": 1,
+        "participacion_pct": 1.9099
+      },
+      {
+        "proveedor": "CAJA COLOMBIANA DE SUBSIDIO FAMILIAR COLSUBSIDIO",
+        "documento": "860007336",
+        "valor": 25091668100.0,
+        "contratos": 18,
+        "participacion_pct": 1.5974
+      },
+      {
+        "proveedor": "CONSORCIO PLAN VIAL SOACHA 26",
+        "documento": "902085422",
+        "valor": 22133299442.62,
+        "contratos": 1,
+        "participacion_pct": 1.4091
+      }
+    ],
+    "obras": {
+      "contratos_obra": 27,
+      "valor_obras": 275876371586.47,
+      "obras_vencidas_abiertas": 15,
+      "valor_obras_vencidas_abiertas": 18528932065.6,
+      "pct_obras_vencidas_abiertas": 55.55555555555556,
+      "pct_pagado_obras_vencidas_abiertas": 0.1929
+    }
+  },
+  "ejecucion": [],
+  "fuente_ejecucion": ""
+}
