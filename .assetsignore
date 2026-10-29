@@ -20,3 +20,4 @@ _backup_*
 * (*).html
 /src
 node_modules
+.wrangler

@@ -632,7 +632,7 @@ async function finanzas() {
   } else {
     h += '<div class="vacio" style="margin-top:4px"><b>Ejecución presupuestal pendiente de cargar.</b>' +
       'Descargue de <a class="ext" href="https://www.chip.gov.co/" target="_blank" rel="noopener">CHIP</a> los formularios FUT de ingresos y gastos de Soacha, consolide los conceptos en el formato de ' +
-      '<a class="ext" href="data/soacha/inversion/plantilla_chip.csv">plantilla_chip.csv</a> y ejecute:<pre>python etl_soacha_inversion.py --chip ejecucion_soacha.csv</pre>' +
+      '<code>data/soacha/inversion/plantilla_chip.csv</code> (está en el repositorio) y ejecute:<pre>python etl_soacha_inversion.py --chip ejecucion_soacha.csv</pre>' +
       "Con eso la pestaña muestra, por vigencia, el recaudo frente al presupuesto, la dependencia del SGP, la cofinanciación departamental y el peso del funcionamiento, la deuda y la inversión.</div>";
   }
   caja.innerHTML = h;
