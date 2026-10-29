@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seguridad y convivencia · Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00A86B;--bad:#E11D48;--warn:#EA6A0A;--soft:#F8F6FF;--c1:#4A5BAE;--c2:#A65A80}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff}
+.bar{max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
+.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px;white-space:nowrap}
+.back:hover{border-color:var(--gold);color:var(--gold)}
+main{max-width:1200px;margin:0 auto;padding:32px}
+.aviso{background:#D6FBEC;color:#065F46;border:1px solid #A7F3D0;border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.55;margin-bottom:24px}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button.on{color:var(--navy);border-color:var(--gold)}
+.pane{display:none}.pane.on{display:block}
+h2{font-size:22px;margin-bottom:4px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px;line-height:1.55}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:20px;overflow-x:auto}
+.panel h3{font-size:15px;margin-bottom:14px}
+.panel h4{font-size:12px;margin:18px 0 8px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.cab{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.cab h3{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:22px}
+.dl{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;cursor:pointer;transition:box-shadow .25s,transform .25s,border-color .25s;text-align:left;font:inherit;color:inherit}
+.dl:hover{border-color:#C9BDF2;box-shadow:0 14px 30px -14px rgba(74,91,174,.55);transform:translateY(-2px)}
+.dl small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.dl b{display:block;font-size:26px;margin:6px 0 2px}
+.dl .s{font-size:11.5px;color:var(--muted)}
+.spark{display:flex;align-items:flex-end;gap:3px;height:34px;margin-top:10px}
+.spark i{flex:1;background:#D9D2F7;border-radius:2px 2px 0 0;min-height:2px}
+.spark i:last-child{background:var(--gold)}
+.var{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:6px}
+.var.sube{background:#FFE4EA;color:var(--bad)}.var.baja{background:#DCFCE7;color:#047857}.var.igual{background:#F1EEFB;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:18px}
+.kpi{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.kpi b{font-size:22px}
+.kpi>span{display:block;font-size:11.5px;color:var(--muted);margin-top:4px}
+.lectura{background:var(--soft);border-left:4px solid var(--gold);border-radius:8px;padding:13px 17px;font-size:14px;line-height:1.65;margin-bottom:16px}
+select{padding:9px 12px;border:1.5px solid var(--line);border-radius:9px;font:600 14px Inter,"Segoe UI",sans-serif;background:#fff;color:var(--navy)}
+select:focus{outline:none;border-color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+tr.yo td{background:#FFF7E6;font-weight:700}
+.r{text-align:right;white-space:nowrap}
+.barras div{display:grid;grid-template-columns:minmax(120px,1.2fr) 3fr 70px;gap:10px;align-items:center;font-size:13px;margin-bottom:7px}
+.barras i{display:block;height:10px;border-radius:5px;background:linear-gradient(90deg,var(--c1),#8D7BE0)}
+.barras em{font-style:normal;text-align:right;color:var(--muted);font-size:12px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.chart{position:relative;height:280px}
+.note{font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:12px}
+.vacio{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 28px;font-size:14px;line-height:1.75;color:var(--muted)}
+.vacio b{color:var(--navy);display:block;margin-bottom:8px;font-size:15px}
+.vacio code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:12.5px;color:var(--navy)}
+footer{max-width:1200px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color:var(--muted);line-height:1.6}
+footer a{color:var(--muted)}
+@media(max-width:800px){.cols{grid-template-columns:1fr}.bar,main,footer{padding-left:16px;padding-right:16px}.tabs{gap:16px}.barras div{grid-template-columns:1fr 2fr 56px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>X-<em>irin</em> Technologies S.A.S.</b><small>Estrategia Electoral 2027 · 09 Seguridad y convivencia</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
+<main>
+<div class="aviso" id="aviso"><b>Datos reales.</b> Estadística delictiva de la Policía Nacional (SIEDCO). Solo se muestran cifras agregadas, nunca registros de personas.</div>
+<nav class="tabs">
+  <button data-t="panorama">Panorama</button>
+  <button data-t="delito">Por delito</button>
+  <button data-t="perfil">Perfil y modalidad</button>
+  <button data-t="cundinamarca">Comparación Cundinamarca</button>
+</nav>
+
+<section class="pane" id="panorama">
+  <h2 id="pn-titulo">Seguridad y convivencia</h2>
+  <p class="sub" id="pn-sub">Cargando…</p>
+  <div id="pn-cuerpo"></div>
+</section>
+
+<section class="pane" id="delito">
+  <div class="cab"><div><h2>Evolución por delito</h2><p class="sub" style="margin:0">Serie anual y mensual, y comparación del año en curso con el mismo periodo del año anterior.</p></div><select id="dl-sel"></select></div>
+  <div id="dl-cuerpo"></div>
+</section>
+
+<section class="pane" id="perfil">
+  <div class="cab"><div><h2>Perfil y modalidad</h2><p class="sub" style="margin:0">Cómo, cuándo y a quién: arma o medio, sexo y edad de la víctima, zona, sitio, día y franja horaria.</p></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><select id="pf-sel"></select><select id="pf-anio"></select></div></div>
+  <div id="pf-cuerpo"></div>
+</section>
+
+<section class="pane" id="cundinamarca">
+  <div class="cab"><div><h2>Comparación con Cundinamarca</h2><p class="sub" style="margin:0">Casos por municipio del departamento y participación de Soacha.</p></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><select id="cu-sel"></select><select id="cu-anio"></select></div></div>
+  <div id="cu-cuerpo"></div>
+</section>
+</main>
+
+<footer id="pie">Fuente: Policía Nacional, <a href="https://www.policia.gov.co/estadistica-delictiva" target="_blank" rel="noopener">estadística delictiva</a> · Sistema de Información Estadístico, Delincuencial, Contravencional y Operativo (SIEDCO), según la orientación de la Policía Metropolitana de Soacha (oficio GS-2026-054022-MESOA). Cifras sujetas a variación, en proceso de unificación con otros organismos del Estado. Son estadísticas: no constituyen antecedentes de ninguna persona.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<script>
+(function () {
+"use strict";
+const $ = id => document.getElementById(id);
+const esc = v => String(v == null ? "" : v).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = n => Number(n || 0).toLocaleString("es-CO");
+const p1 = n => (n > 0 ? "+" : "") + n.toLocaleString("es-CO", { maximumFractionDigits: 1 }) + " %";
+const MES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+let D = null, CU = null;
+const graficas = {};
+
+function variacion(actual, anterior) {
+  if (!anterior) return null;
+  return 100 * (actual - anterior) / anterior;
+}
+function pillVar(v, txt) {
+  if (v == null) return "";
+  const cls = Math.abs(v) < 2 ? "igual" : v > 0 ? "sube" : "baja";
+  return '<span class="var ' + cls + '">' + (v > 0 ? "▲ " : v < 0 ? "▼ " : "") + p1(v) + (txt ? " " + esc(txt) : "") + "</span>";
+}
+// Año en curso frente al mismo periodo del año anterior, hasta el mes del corte.
+function corrido(d) {
+  if (!D.corte) return null;
+  const [ya, ma] = D.corte.split("-").map(Number);
+  let act = 0, ant = 0;
+  for (let m = 1; m <= ma; m++) {
+    act += d.mensual[ya + "-" + String(m).padStart(2, "0")] || 0;
+    ant += d.mensual[(ya - 1) + "-" + String(m).padStart(2, "0")] || 0;
+  }
+  return { anio: ya, mes: ma, act, ant, v: variacion(act, ant), rango: "ene–" + MES[ma - 1] };
+}
+const anioCompleto = () => { const ya = D.corte ? Number(D.corte.slice(0, 4)) : D.anios[D.anios.length - 1]; return D.anios.filter(a => a < ya).pop(); };
+
+/* ---------------------------------------------------------- pestañas */
+const hechas = {};
+function mostrar(id) {
+  if (!["panorama", "delito", "perfil", "cundinamarca"].includes(id)) id = "panorama";
+  document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === id));
+  document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.id === id));
+  if (!D) return;
+  if (!hechas[id]) { hechas[id] = true; ({ panorama, delito: delitoInit, perfil: perfilInit, cundinamarca: cundInit })[id](); }
+}
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  if (location.hash !== "#" + b.dataset.t) location.hash = b.dataset.t; else mostrar(b.dataset.t);
+}));
+window.addEventListener("hashchange", () => mostrar(location.hash.slice(1)));
+
+function ir(id, delito) {
+  ["dl-sel", "pf-sel", "cu-sel"].forEach(s => { if ($(s).querySelector('option[value="' + CSS.escape(delito) + '"]')) $(s).value = delito; });
+  location.hash = id;
+  if (hechas[id]) $({ delito: "dl-sel", perfil: "pf-sel", cundinamarca: "cu-sel" }[id]).dispatchEvent(new Event("change"));
+}
+
+function grafica(id, cfg) {
+  if (graficas[id]) graficas[id].destroy();
+  if (!window.Chart) return;
+  cfg.options = Object.assign({ animation: { duration: 350 } }, cfg.options);
+  graficas[id] = new Chart($(id), cfg);
+}
+
+/* ---------------------------------------------------------- panorama */
+function panorama() {
+  const ac = anioCompleto();
+  $("pn-titulo").textContent = "Seguridad y convivencia en " + D.municipio;
+  $("pn-sub").innerHTML = "Casos reportados por la Policía Nacional entre " + D.anios[0] + " y " + D.anios[D.anios.length - 1] +
+    (D.corte ? ", con corte al " + esc(new Date(D.corte + "T12:00").toLocaleDateString("es-CO", { day: "numeric", month: "long", year: "numeric" })) : "") +
+    ". Toque un delito para ver su detalle.";
+  const orden = Object.entries(D.delitos).sort((a, b) => (b[1].anual[ac] || 0) - (a[1].anual[ac] || 0));
+  let h = '<div class="grid">' + orden.map(([k, d]) => {
+    const vals = D.anios.map(a => d.anual[a] || 0), max = Math.max(1, ...vals), c = corrido(d);
+    const va = variacion(d.anual[ac] || 0, d.anual[ac - 1] || 0);
+    return '<button class="dl" data-d="' + esc(k) + '"><small>' + esc(k) + "</small><b>" + fmt(d.anual[ac]) + '</b><div class="s">casos en ' + ac + "</div>" +
+      pillVar(va, "vs " + (ac - 1)) + (c ? '<div class="s" style="margin-top:6px">' + c.anio + " (" + c.rango + "): " + fmt(c.act) + " " + pillVar(c.v) + "</div>" : "") +
+      '<div class="spark" title="' + esc(D.anios.join(" · ")) + '">' + vals.map(v => '<i style="height:' + (100 * v / max) + '%"></i>').join("") + "</div></button>";
+  }).join("") + "</div>";
+
+  const sube = orden.map(([k, d]) => ({ k, c: corrido(d) })).filter(x => x.c && x.c.v != null && x.c.ant >= 10).sort((a, b) => b.c.v - a.c.v);
+  if (sube.length) {
+    const c0 = sube[0].c;
+    h += '<div class="lectura"><b>Lectura para la campaña.</b> En lo corrido de ' + c0.anio + " (" + c0.rango + ") " +
+      sube.filter(x => x.c.v > 2).slice(0, 3).map(x => "<b>" + esc(x.k.toLowerCase()) + "</b> " + (x.c.v > 0 ? "sube" : "baja") + " " + p1(x.c.v).replace("+", "")).join(", ") +
+      (sube.some(x => x.c.v > 2) ? " frente al mismo periodo del año anterior. " : "no hay delitos con aumentos frente al mismo periodo del año anterior. ") +
+      (sube.filter(x => x.c.v < -2).length ? "Bajan " + sube.filter(x => x.c.v < -2).slice(-3).reverse().map(x => esc(x.k.toLowerCase()) + " (" + p1(x.c.v) + ")").join(", ") + "." : "") + "</div>";
+  }
+  h += '<div class="panel"><h3>Tendencia anual de los delitos con más casos</h3><div class="chart"><canvas id="g-pn"></canvas></div>' +
+    (D.corte ? '<p class="note">El último año va hasta el mes del corte, por eso aparece más bajo: para compararlo use la variación del año corrido.</p>' : "") + "</div>";
+  $("pn-cuerpo").innerHTML = h;
+  $("pn-cuerpo").querySelectorAll("[data-d]").forEach(b => b.addEventListener("click", () => ir("delito", b.dataset.d)));
+  const PAL = ["#4A5BAE", "#A65A80", "#2E8B62", "#C68A2E", "#3E9BBF", "#6B5A9E"];
+  grafica("g-pn", { type: "line", data: { labels: D.anios.map(String), datasets: orden.slice(0, 6).map(([k, d], i) => ({
+      label: k, data: D.anios.map(a => d.anual[a] || 0), borderColor: PAL[i], backgroundColor: PAL[i], tension: .3, borderWidth: 2.5, pointRadius: 3 })) },
+    options: { maintainAspectRatio: false, plugins: { legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } } }, scales: { y: { beginAtZero: true } } } });
+}
+
+/* ---------------------------------------------------------- por delito */
+function opciones(sel) {
+  const ac = anioCompleto();
+  $(sel).innerHTML = Object.entries(D.delitos).sort((a, b) => (b[1].anual[ac] || 0) - (a[1].anual[ac] || 0))
+    .map(([k]) => '<option value="' + esc(k) + '">' + esc(k) + "</option>").join("");
+}
+function delitoInit() { opciones("dl-sel"); $("dl-sel").addEventListener("change", delito); delito(); }
+function delito() {
+  const k = $("dl-sel").value, d = D.delitos[k], ac = anioCompleto(), c = corrido(d);
+  const tot = D.anios.reduce((s, a) => s + (d.anual[a] || 0), 0);
+  const pico = D.anios.filter(a => a <= ac).reduce((m, a) => (d.anual[a] || 0) > (d.anual[m] || 0) ? a : m, D.anios[0]);
+  let h = '<div class="kpis"><div class="kpi"><small>Casos en ' + ac + "</small><b>" + fmt(d.anual[ac]) + "</b><span>" + pillVar(variacion(d.anual[ac] || 0, d.anual[ac - 1] || 0), "vs " + (ac - 1)) + "</span></div>";
+  if (c) h += '<div class="kpi"><small>' + c.anio + " (" + c.rango + ")</small><b>" + fmt(c.act) + "</b><span>" + fmt(c.ant) + " en el mismo periodo de " + (c.anio - 1) + " " + pillVar(c.v) + "</span></div>";
+  h += '<div class="kpi"><small>Total ' + D.anios[0] + "–" + D.anios[D.anios.length - 1] + "</small><b>" + fmt(tot) + '</b></div><div class="kpi"><small>Año con más casos</small><b>' + pico + "</b><span>" + fmt(d.anual[pico]) + " casos</span></div></div>";
+  if (c && c.v != null) h += '<div class="lectura">En ' + c.anio + ", entre enero y " + ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"][c.mes - 1] +
+    ", " + esc(D.municipio) + " registra <b>" + fmt(c.act) + "</b> casos de " + esc(k.toLowerCase()) + ", " + (Math.abs(c.v) < 2 ? "prácticamente lo mismo que" : (c.v > 0 ? "<b>" + p1(c.v).replace("+", "") + " más</b> que" : "<b>" + p1(-c.v) + " menos</b> que")) +
+    " en el mismo periodo de " + (c.anio - 1) + " (" + fmt(c.ant) + ").</div>";
+  h += '<div class="cols"><div class="panel"><h3>Casos por año</h3><div class="chart"><canvas id="g-an"></canvas></div></div><div class="panel"><h3>Casos por mes (últimos 36 meses)</h3><div class="chart"><canvas id="g-me"></canvas></div></div></div>';
+  h += '<div class="panel"><h3>Serie anual</h3><table><tr><th>Año</th><th class=r>Casos</th><th class=r>Variación</th><th class=r>Promedio mensual</th></tr>' +
+    D.anios.map((a, i) => { const meses = Object.keys(d.mensual).filter(m => m.startsWith(a + "-")).length || 12;
+      return "<tr><td>" + a + (D.corte && a === Number(D.corte.slice(0, 4)) ? ' <span class="note">(parcial)</span>' : "") + '</td><td class="r">' + fmt(d.anual[a]) + '</td><td class="r">' +
+        (D.corte && a === Number(D.corte.slice(0, 4)) ? '<span class="note">ver año corrido</span>' : i ? pillVar(variacion(d.anual[a] || 0, d.anual[D.anios[i - 1]] || 0)) : "") + '</td><td class="r">' + fmt(Math.round((d.anual[a] || 0) / meses)) + "</td></tr>"; }).join("") +
+    '</table><div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap"><button class="dl" style="padding:9px 14px" id="dl-pf">Ver perfil y modalidad →</button><button class="dl" style="padding:9px 14px" id="dl-cu">Comparar con Cundinamarca →</button></div></div>';
+  $("dl-cuerpo").innerHTML = h;
+  $("dl-pf").addEventListener("click", () => ir("perfil", k));
+  $("dl-cu").addEventListener("click", () => ir("cundinamarca", k));
+  grafica("g-an", { type: "bar", data: { labels: D.anios.map(String), datasets: [{ label: k, data: D.anios.map(a => d.anual[a] || 0),
+      backgroundColor: D.anios.map((a, i) => i === D.anios.length - 1 ? "#FFB020" : "#4A5BAE"), borderRadius: 6 }] },
+    options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } } });
+  const ms = Object.keys(d.mensual).sort().slice(-36);
+  grafica("g-me", { type: "line", data: { labels: ms.map(m => MES[Number(m.slice(5)) - 1] + " " + m.slice(2, 4)), datasets: [{ label: k, data: ms.map(m => d.mensual[m]),
+      borderColor: "#A65A80", backgroundColor: "rgba(166,90,128,.12)", fill: true, tension: .3, pointRadius: 2 }] },
+    options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } } });
+}
+
+/* ---------------------------------------------------------- perfil */
+const CAMPOS = { arma: "Arma o medio", genero: "Sexo de la víctima", edad: "Grupo de edad", zona: "Zona", sitio: "Clase de sitio",
+  modalidad: "Modalidad", movil_agresor: "Móvil del agresor", movil_victima: "Móvil de la víctima", dia: "Día de la semana" };
+function perfilInit() {
+  opciones("pf-sel");
+  $("pf-anio").innerHTML = '<option value="">Todo el periodo</option>';
+  $("pf-anio").disabled = true; $("pf-anio").title = "El perfil se calcula sobre todo el periodo";
+  $("pf-sel").addEventListener("change", perfil); perfil();
+}
+function barras(lista) {
+  const max = Math.max(1, ...lista.map(x => x[1])), tot = lista.reduce((s, x) => s + x[1], 0);
+  return '<div class="barras">' + lista.map(([n, v]) => "<div><span>" + esc(n) + '</span><i style="width:' + (100 * v / max) + '%"></i><em>' + fmt(v) + " · " + Math.round(100 * v / tot) + " %</em></div>").join("") + "</div>";
+}
+function perfil() {
+  const k = $("pf-sel").value, d = D.delitos[k], P = d.perfil || {};
+  const campos = Object.keys(CAMPOS).filter(c => (P[c] || []).length > 1 || ((P[c] || []).length === 1 && P[c][0][0] !== "No reportado"));
+  let h = "";
+  if (!campos.length && !(d.barrios || []).length && !Object.keys(d.franjas || {}).length) {
+    h = '<div class="vacio"><b>La Policía no publica variables de perfil para este delito.</b>Solo están disponibles los conteos por fecha.</div>';
+  } else {
+    const destacado = [];
+    ["arma", "genero", "edad"].forEach(c => { if (P[c] && P[c].length) { const t = P[c].reduce((s, x) => s + x[1], 0), x = P[c].find(y => y[0] !== "No reportado") || P[c][0];
+      destacado.push("<b>" + Math.round(100 * x[1] / t) + " %</b> " + esc(CAMPOS[c].toLowerCase()) + ": " + esc(x[0].toLowerCase())); } });
+    if (destacado.length) h += '<div class="lectura">En ' + esc(k.toLowerCase()) + " en " + esc(D.municipio) + ", " + destacado.join(" · ") + ".</div>";
+    h += '<div class="cols">' + campos.map(c => '<div class="panel"><h3>' + esc(CAMPOS[c]) + "</h3>" + barras(P[c]) + "</div>").join("");
+    if (Object.keys(d.franjas || {}).length) h += '<div class="panel"><h3>Franja horaria</h3>' + barras(Object.entries(d.franjas)) + "</div>";
+    if ((d.barrios || []).length) h += '<div class="panel"><h3>Barrios con más casos</h3>' + barras(d.barrios.slice(0, 15)) + "</div>";
+    h += "</div>";
+  }
+  $("pf-cuerpo").innerHTML = h + '<p class="note">El perfil suma todos los años del periodo. «No reportado» agrupa los registros sin ese dato.</p>';
+}
+
+/* ---------------------------------------------------------- cundinamarca */
+async function cundInit() {
+  $("cu-cuerpo").innerHTML = '<div class="vacio">Cargando…</div>';
+  try { CU = await (await fetch("data/seguridad/cundinamarca.json", { cache: "no-store" })).json(); }
+  catch (e) { $("cu-cuerpo").innerHTML = '<div class="vacio"><b>No se pudo cargar la comparación departamental.</b></div>'; return; }
+  opciones("cu-sel");
+  const ac = anioCompleto();
+  $("cu-anio").innerHTML = D.anios.slice().reverse().map(a => '<option value="' + a + '"' + (a === ac ? " selected" : "") + ">" + a + (D.corte && a === Number(D.corte.slice(0, 4)) ? " (parcial)" : "") + "</option>").join("");
+  $("cu-sel").addEventListener("change", cund); $("cu-anio").addEventListener("change", cund); cund();
+}
+function cund() {
+  const k = $("cu-sel").value, a = $("cu-anio").value, m = ((CU.delitos[k] || {})[a]) || {};
+  const filas = Object.entries(m).sort((x, y) => y[1] - x[1]), tot = filas.reduce((s, x) => s + x[1], 0);
+  const yo = sinT(D.municipio), pos = filas.findIndex(x => sinT(x[0]).includes(yo)), mio = pos >= 0 ? filas[pos][1] : 0;
+  if (!filas.length) { $("cu-cuerpo").innerHTML = '<div class="vacio"><b>Sin datos de ese delito para ese año.</b></div>'; return; }
+  let h = '<div class="kpis"><div class="kpi"><small>Casos en Cundinamarca (' + a + ")</small><b>" + fmt(tot) + "</b><span>" + fmt(filas.length) + " municipios con casos</span></div>" +
+    '<div class="kpi"><small>Casos en ' + esc(D.municipio) + "</small><b>" + fmt(mio) + "</b><span>" + (pos >= 0 ? "Puesto " + (pos + 1) + " de " + filas.length : "Sin casos") + "</span></div>" +
+    '<div class="kpi"><small>Participación de ' + esc(D.municipio) + "</small><b>" + (tot ? Math.round(1000 * mio / tot) / 10 : 0).toLocaleString("es-CO") + " %</b><span>del total departamental</span></div></div>";
+  h += '<div class="panel"><h3>Municipios con más casos de ' + esc(k.toLowerCase()) + " · " + esc(a) + "</h3><table><tr><th>#</th><th>Municipio</th><th class=r>Casos</th><th class=r>% del departamento</th></tr>" +
+    filas.slice(0, 25).map((x, i) => '<tr class="' + (i === pos ? "yo" : "") + '"><td>' + (i + 1) + "</td><td>" + esc(x[0]) + '</td><td class="r">' + fmt(x[1]) + '</td><td class="r">' + (Math.round(1000 * x[1] / tot) / 10).toLocaleString("es-CO") + " %</td></tr>").join("") +
+    (pos >= 25 ? '<tr class="yo"><td>' + (pos + 1) + "</td><td>" + esc(filas[pos][0]) + '</td><td class="r">' + fmt(mio) + '</td><td class="r">' + (Math.round(1000 * mio / tot) / 10).toLocaleString("es-CO") + " %</td></tr>" : "") +
+    '</table><p class="note">Son conteos absolutos: un municipio más poblado tiende a tener más casos. Para comparar el riesgo entre municipios conviene usar la tasa por 100.000 habitantes con las proyecciones de población del DANE.</p></div>';
+  $("cu-cuerpo").innerHTML = h;
+}
+const sinT = t => String(t || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase();
+
+/* ---------------------------------------------------------- arranque */
+fetch("data/seguridad/soacha.json", { cache: "no-store" }).then(r => r.ok ? r.json() : Promise.reject(r.status)).then(d => {
+  D = d;
+  D.anios = D.anios.map(Number);
+  if (D.corte) $("aviso").innerHTML += " Corte al " + esc(D.corte) + ".";
+  mostrar(location.hash.slice(1));
+}).catch(() => {
+  mostrar("panorama");
+  $("pn-sub").textContent = "";
+  $("pn-cuerpo").innerHTML = '<div class="vacio"><b>Las cifras de seguridad aún no se han generado.</b>Se generan con el workflow «Actualizar seguridad y convivencia» del repositorio, que descarga los archivos de la Policía Nacional y publica <code>data/seguridad/soacha.json</code>.</div>';
+});
+})();
+</script>
+<script src="/js/auditoria.js" defer></script>
+</body>
+</html>
