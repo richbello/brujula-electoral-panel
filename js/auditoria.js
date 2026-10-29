@@ -78,6 +78,29 @@
     }
   });
 
+  // Boton "Auditoria" en el encabezado, solo para administradores. El permiso
+  // real lo decide el Worker: aunque alguien fuerce el boton, /api/auditoria
+  // le responde "restringido" y deja constancia del intento.
+  if (!/\/auditoria(\.html)?$/.test(location.pathname)) {
+    fetch("/api/yo", { credentials: "include", cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (yo) {
+        if (!yo || !yo.admin) return;
+        var bar = document.querySelector("header .bar");
+        if (!bar || bar.querySelector(".xirin-aud")) return;
+        var a = document.createElement("a");
+        a.href = "/auditoria.html";
+        a.className = "xirin-aud";
+        a.textContent = "Auditoría";
+        a.title = "Auditoría de accesos (solo administradores)";
+        a.style.cssText = "margin-left:auto;color:#FFB020;text-decoration:none;font:600 13px Inter,'Segoe UI',sans-serif;" +
+          "border:1px solid rgba(255,176,32,.55);padding:9px 14px;border-radius:8px;white-space:nowrap";
+        var back = bar.querySelector(".back");
+        if (back) { back.style.marginLeft = "10px"; bar.insertBefore(a, back); } else bar.appendChild(a);
+      })
+      .catch(function () {});
+  }
+
   // Para que las paginas registren un intento bloqueado en pantalla.
   window.xirinRestringido = function (detalle) {
     enviar({ tipo: "restringido", modulo: actual, detalle: String(detalle || "") });
