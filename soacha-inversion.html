@@ -186,7 +186,7 @@ async function leer(nombre) {
 const AVISO = {
   megaproyectos: ["", "<b>Datos verificados en fuentes oficiales y prensa.</b> Cada cifra trae su fuente y fecha de corte."],
   contratos: ["", "<b>Datos reales en vivo.</b> Consulta directa a SECOP II desde su navegador; nada pasa por servidores de terceros."],
-  regalias: ["pend", "<b>Datos de Mapa Inversiones / MapaRegalías (DNP).</b> Se cargan desde una exportación del portal; revise la fecha de corte."],
+  regalias: ["", "<b>Datos reales en vivo.</b> Proyectos del Sistema General de Regalías publicados por el DNP en datos.gov.co. Si la consulta falla, se usa la última exportación cargada."],
   finanzas: ["", "<b>Datos reales.</b> Contratación municipal en SECOP II y, cuando está cargada, ejecución reportada en CHIP."]
 };
 const cargadas = {};
@@ -460,10 +460,52 @@ function descargarCsv(cs) {
 }
 
 /* ======================================================= 3 REGALÍAS */
+/* Proyectos SGR publicados por el DNP en datos.gov.co (dataset mzgh-shtp).
+   Las columnas no se fijan en el código: se toman de la respuesta y se
+   reconocen por nombre, así el módulo sigue funcionando si el DNP las cambia. */
+const SGR_ID = "mzgh-shtp", SGR = "https://www.datos.gov.co/resource/" + SGR_ID + ".json";
+async function regaliasEnVivo() {
+  const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 60000);
+  let filas;
+  try {
+    const r = await fetch(SGR + "?" + new URLSearchParams({ $q: "SOACHA", $limit: 5000 }), { signal: ctl.signal });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    filas = await r.json();
+  } finally { clearTimeout(t); }
+  if (!Array.isArray(filas) || !filas.length) return { proyectos: [] };
+  const claves = [...new Set(filas.flatMap(f => Object.keys(f)))];
+  const col = (...re) => { for (const x of re) { const k = claves.find(c => x.test(c)); if (k) return k; } return null; };
+  const C = {
+    bpin: col(/bpin/, /codigo/), nombre: col(/nombre.*proyecto/, /^proyecto$/, /nombre/),
+    sector: col(/sector/), ejecutor: col(/ejecutor/, /entidad/), estado: col(/estado/),
+    valor: col(/valor_?total/, /valor_?proyecto/, /valor_?aprobado/, /^valor/, /valor/),
+    sgr: col(/(valor|recurso).*sgr/, /sgr.*valor/, /regalia/), fisico: col(/fisic/), financiero: col(/financ/),
+    ubic: col(/municip/, /ubicaci/, /localiz/), alerta: col(/alerta/, /riesgo/), fecha: col(/fecha.*aprob/, /fecha/)
+  };
+  const txt = (f, k) => k && f[k] != null ? String(f[k]).trim() : "";
+  const av = (f, k) => { if (!k || f[k] == null || f[k] === "") return null; let x = parseFloat(String(f[k]).replace(",", ".")); if (!isFinite(x)) return null; return x > 0 && x <= 1 ? x * 100 : x; };
+  // $q busca en todo el registro; si hay columna de ubicación o ejecutor se exige que diga Soacha.
+  const filtro = C.ubic || C.ejecutor ? f => /SOACHA/.test(sinTilde(txt(f, C.ubic) + " " + txt(f, C.ejecutor))) : () => true;
+  const vistos = new Set();
+  const proyectos = filas.filter(filtro).map(f => ({
+    bpin: txt(f, C.bpin), nombre: txt(f, C.nombre), sector: txt(f, C.sector), ejecutor: txt(f, C.ejecutor),
+    estado: txt(f, C.estado), valor: num(String(txt(f, C.valor)).replace(/[^\d.\-]/g, "")),
+    valor_sgr: C.sgr ? num(String(txt(f, C.sgr)).replace(/[^\d.\-]/g, "")) : null,
+    avance_fisico: av(f, C.fisico), avance_financiero: av(f, C.financiero), alerta: txt(f, C.alerta), fecha: txt(f, C.fecha).slice(0, 10)
+  })).filter(p => { const k = p.bpin || p.nombre; if (!k || vistos.has(k)) return false; vistos.add(k); return true; })
+    .sort((a, b) => b.valor - a.valor);
+  return { generado: new Date().toISOString().slice(0, 10), vivo: true,
+    fuente: { titulo: "DNP · Proyectos SGR (datos.gov.co, en vivo)", archivo: SGR_ID }, proyectos };
+}
+
 async function regalias() {
   const caja = $("rg-cuerpo");
+  caja.innerHTML = '<div class="vacio"><b>Consultando el DNP…</b>Buscando en vivo los proyectos de regalías que mencionan Soacha en datos.gov.co.</div>';
   let d = null;
-  try { d = await leer("regalias.json"); } catch (e) { /* sin archivo: se muestran las instrucciones */ }
+  try { d = await regaliasEnVivo(); } catch (e) { console.log("SGR en vivo:", e.message); }
+  if (!d || !d.proyectos.length) {
+    try { d = await leer("regalias.json"); } catch (e) { /* sin archivo: se muestran las instrucciones */ }
+  }
   const P = (d && d.proyectos) || [];
   if (!P.length) {
     caja.innerHTML = '<div class="vacio"><b>Aún no se han cargado los proyectos de regalías de Soacha.</b>' +
@@ -491,7 +533,8 @@ async function regalias() {
         '<span class="pill ' + (alerta ? "p-alto" : /TERMIN|CERRAD/i.test(p.estado) ? "p-ok" : "p-gris") + '">' + esc(p.estado || "s/d") + "</span>" + (p.alerta ? '<div class="mini">' + esc(p.alerta) + "</div>" : "") +
         '</td><td class="r">' + plata(p.valor) + '</td><td class="r">' + (p.avance_fisico == null ? "—" : p1(p.avance_fisico)) + '</td><td class="r">' + (p.avance_financiero == null ? "—" : p1(p.avance_financiero)) + "</td></tr>";
     }).join("") + "</table>" +
-    '<p class="note">Archivo cargado: ' + esc((d.fuente && d.fuente.archivo) || "") + " · generado el " + esc(iso2(d.generado)) +
+    '<p class="note">' + (d.vivo ? 'Consulta en vivo al dataset <a class="ext" href="https://www.datos.gov.co/d/' + SGR_ID + '" target="_blank" rel="noopener">DNP-ProyectosSGR</a> de datos.gov.co el ' + esc(iso2(d.generado)) + ". Revise en la ficha del dataset su fecha de última actualización"
+      : "Archivo cargado: " + esc((d.fuente && d.fuente.archivo) || "") + " · generado el " + esc(iso2(d.generado))) +
     '. Consulte cada proyecto por su BPIN en <a class="ext" href="https://mapainversiones.dnp.gov.co/" target="_blank" rel="noopener">Mapa Inversiones</a>.</p></div>';
   caja.innerHTML = h;
 }
