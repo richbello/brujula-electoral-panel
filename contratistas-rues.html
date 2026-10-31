@@ -93,7 +93,7 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
   <button data-t="resumen" class="on">Resumen y alertas</button>
   <button data-t="tabla">Todos los contratistas</button>
   <button data-t="reps">Representantes legales</button>
-  <button data-t="consulta">Consulta libre RUES</button>
+  <button data-t="consulta">Ficha del contratista</button>
   <button data-t="metodo">Cómo se calcula</button>
 </nav>
 
@@ -131,8 +131,8 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
 </section>
 
 <section class="pane" id="p-consulta">
-  <h2>Consulta libre en el RUES</h2>
-  <p class="sub">Escriba un NIT (sin dígito de verificación) o una cédula. Con un NIT se trae la matrícula; con una cédula, las empresas donde esa persona es representante legal y su matrícula como comerciante. En los dos casos se muestran sus contratos en SECOP II en todo el país desde el año elegido arriba.</p>
+  <h2>Ficha del contratista</h2>
+  <p class="sub">Escriba un NIT (sin dígito de verificación) o una cédula. Se buscan sus contratos en todo el país desde el año elegido arriba: SECOP II (objeto, valor, pagado, fechas de inicio y fin, estado, días adicionados y supervisor), SECOP I y los consorcios o uniones temporales que integra. Además, su registro en el RUES, las multas y sanciones contractuales de SECOP I, el SIRI de la Procuraduría y el Boletín de Responsables Fiscales.</p>
   <div class="filtros"><input type="text" id="cq" placeholder="NIT o cédula" inputmode="numeric" style="min-width:240px"><button class="btn" id="cbtn">Consultar</button></div>
   <div id="cres"></div>
 </section>
@@ -143,9 +143,10 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
     <li><b>Contratos:</b> SECOP II (datos.gov.co, jbjy-vk9h), consultado en vivo. Bogotá son las entidades con departamento Distrito Capital; "Cundinamarca, todos los municipios" son las entidades con departamento Cundinamarca; un municipio son las entidades con esa ciudad en Cundinamarca. SECOP ubica el contrato por la sede de la entidad contratante, no por el lugar de ejecución.</li>
     <li><b>Contratistas:</b> proveedores con tipo de documento NIT y número de 9 dígitos que empieza por 8 o 9 (si trae dígito de verificación se le quita). Se toman los de mayor valor contratado según el tope elegido.</li>
     <li><b>RUES:</b> conjunto de datos abiertos de Confecámaras (c82u-588k), consultado en vivo. Si la consulta falla se usa una copia guardada que cubre solo los contratistas más grandes de Soacha.</li>
-    <li><b>Consorcios, uniones temporales y entidades públicas</b> no tienen matrícula mercantil propia y no se consultan. Para un consorcio, consulte a sus integrantes en la Consulta libre.</li>
+    <li><b>Consorcios, uniones temporales y entidades públicas</b> no tienen matrícula mercantil propia y no se consultan. Para un consorcio, consulte a sus integrantes en la Ficha del contratista.</li>
     <li><b>Cámara de Comercio de Soacha:</b> las matrículas que pasaron de la Cámara de Bogotá a la de Soacha aparecen canceladas en Bogotá y activas en Soacha. Eso no cuenta como alerta ni como traslado.</li>
     <li><b>Alertas:</b> no aparece en el RUES; sin matrícula activa; no ha renovado la matrícula del año en curso (después del 31 de marzo); en liquidación, reorganización o intervención; menos de un año de matriculada al firmar su primer contrato del periodo en el territorio; traslado de domicilio entre cámaras; entidad sin ánimo de lucro con más de $1.000 millones; representante legal con contratos como persona natural en el territorio; el mismo representante en varios contratistas; dos apellidos compartidos entre representantes.</li>
+    <li><b>Ficha del contratista:</b> SECOP II (jbjy-vk9h), SECOP I (f789-7hwg), Grupos de Proveedores de SECOP II (ceth-n4bn) para consorcios y uniones temporales, Multas y Sanciones SECOP I (4n4q-k399), SIRI y Boletín de Responsables Fiscales. "Vencido sin cerrar" es un contrato cuya fecha de fin ya pasó y que SECOP no reporta como terminado, cerrado o liquidado. Las sanciones que las entidades registran en SECOP II no se publican como datos abiertos; aparecen en el certificado del RUP.</li>
     <li><b>Socios y accionistas:</b> los datos abiertos del RUES solo traen al representante legal. Los accionistas de una SAS no se inscriben en la cámara; los socios de una Ltda. y las juntas de las ESAL aparecen en el certificado de existencia y representación.</li>
     <li>Las alertas son indicios para revisar, no conclusiones. Antes de hacer pública cualquier coincidencia, verifíquela en el certificado oficial.</li>
   </ul></div>
@@ -469,11 +470,12 @@ async function detalle(tr) {
     <table><tr><th>Cámara</th><th>N° matrícula</th><th>Estado</th><th>Fecha matrícula</th><th>Renovación</th><th>Representante</th></tr>` +
     e.filas.map(f => `<tr><td>${esc(f.camara_comercio)}</td><td>${esc(f.matricula)}</td><td>${esc(f.estado_matricula)}</td><td>${fecha(f.fecha_matricula)}</td><td>${fecha(f.fecha_renovacion)}</td><td>${esc(f.representante_legal)} ${f.num_identificacion_representante_legal ? '<span class="mini">' + esc(f.num_identificacion_representante_legal) + "</span>" : ""}</td></tr>`).join("") + "</table>";
   } else if (c.clase === "privado") h += `<h4>Registro en el RUES</h4><p class="mini">${c.consultado ? "El NIT no aparece en el RUES." : "Aún no se ha consultado."}</p>`;
-  else h += `<p class="mini">${c.clase === "asociacion" ? "Los consorcios y uniones temporales no tienen matrícula; consulte a sus integrantes en la pestaña Consulta libre." : "Entidad pública: no se inscribe en la cámara de comercio."}</p>`;
+  else h += `<p class="mini">${c.clase === "asociacion" ? "Los consorcios y uniones temporales no tienen matrícula; consulte a sus integrantes en la pestaña Ficha del contratista." : "Entidad pública: no se inscribe en la cámara de comercio."}</p>`;
   const ents = Object.entries(c.entidades).sort((a, b) => b[1] - a[1]);
   h += `<h4>Contratos en ${esc(T.nombre)} desde ${T.anio} (${c.n}, ${mill(c.valor)}; ${c.directa} por contratación directa)</h4>` +
     (ents.length ? `<div class="mini" style="margin-bottom:6px">${ents.slice(0, 6).map(([k, v]) => esc(k) + ": " + mill(v)).join(" · ")}</div>` : "") + `<div class="cdet"><p class="mini">Cargando contratos…</p></div>`;
   if (c.repOps && c.repOps.length) h += `<h4>Contratos de ${esc(e.rep)} como persona natural en ${esc(T.nombre)}</h4>` + tablaC(c.repOps);
+  h = `<div class="filtros" style="margin-bottom:10px"><button class="btn" data-ficha="${c.nit}">Ficha completa del contratista</button>${e && e.repId ? `<button class="btn sec" data-ficha="${esc(e.repId)}">Ficha del representante legal</button>` : ""}</div>` + h;
   const n = document.createElement("tr"); n.className = "det"; n.innerHTML = `<td colspan="6">${h}</td>`; tr.after(n);
   if (!c.contratos) {
     try {
@@ -520,30 +522,170 @@ $("#csv").onclick = () => {
   a.download = "contratistas_rues_" + (T ? T.nombre : "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "_") + ".csv"; a.click();
 };
 
-/* ---------- consulta libre ---------- */
-async function consultaLibre() {
-  const v = docN($("#cq").value); if (!v) return;
-  const out = $("#cres"); out.innerHTML = '<p class="note">Consultando el RUES y SECOP II…</p>';
-  const esNit = /^[89]\d{8,9}$/.test(v), nit = v.slice(0, 9), desde = $("#desde").value + "-01-01T00:00:00";
-  let filas = [], cont = null;
-  try {
-    [filas, cont] = await Promise.all([
-      esNit ? rues(`nit='${nit}'`) : rues(`num_identificacion_representante_legal='${v}' OR numero_identificacion='${v}'`),
-      api(SECOP, { select: "proveedor_adjudicado,nombre_entidad,departamento,ciudad,tipo_de_contrato,valor_del_contrato,fecha_de_firma,urlproceso",
-        where: (esNit ? `starts_with(documento_proveedor,'${nit}')` : `documento_proveedor='${v}'`) + ` AND fecha_de_firma>='${desde}'`, order: "fecha_de_firma DESC", limit: 200 }, 60000).catch(() => null)]);
-  } catch (e) { out.innerHTML = '<div class="aviso err">El RUES (datos.gov.co) no respondió. Intente de nuevo.</div>'; return; }
-  let h = "";
-  if (!filas.length) h += `<div class="panel"><p class="note">No hay registros en el RUES para ${esc(v)}.</p></div>`;
-  else h += `<div class="panel"><h3>${esNit ? "Matrícula del NIT " + esc(nit) : "Registros del RUES donde aparece la cédula " + esc(v)}</h3><table><tr><th>NIT</th><th>Razón social</th><th>Cámara</th><th>Estado</th><th>Matrícula</th><th>Renovado</th><th>CIIU</th><th>Representante</th></tr>` +
-    filas.map(f => `<tr><td>${esc(f.nit)}</td><td>${esc(f.razon_social)}<div class="mini">${esc(f.organizacion_juridica)}</div></td><td>${esc(f.camara_comercio)}</td><td>${esc(f.estado_matricula)}</td><td>${fecha(f.fecha_matricula)}</td><td>${esc(f.ultimo_ano_renovado)}</td><td>${esc(f.cod_ciiu_act_econ_pri)}</td><td>${esc(f.representante_legal)} <span class="mini">${esc(f.num_identificacion_representante_legal)}</span></td></tr>`).join("") + "</table></div>";
-  if (cont === null) h += '<div class="panel"><p class="note">SECOP II no respondió para los contratos.</p></div>';
-  else if (!cont.length) h += `<div class="panel"><p class="note">Sin contratos en SECOP II desde ${$("#desde").value} para ${esc(esNit ? nit : v)}.</p></div>`;
-  else h += `<div class="panel"><h3>Contratos en SECOP II desde ${$("#desde").value} (${cont.length}${cont.length === 200 ? "+" : ""}, ${mill(cont.reduce((s, r) => s + (+r.valor_del_contrato || 0), 0))})</h3><table><tr><th>Entidad</th><th>Lugar</th><th>Tipo</th><th class="r">Valor</th><th>Firma</th><th></th></tr>` +
-    cont.map(r => `<tr><td>${esc(r.nombre_entidad)}</td><td>${esc(r.ciudad)}<div class="mini">${esc(r.departamento)}</div></td><td>${esc(r.tipo_de_contrato)}</td><td class="r">${peso(r.valor_del_contrato)}</td><td>${fecha(r.fecha_de_firma)}</td><td>${urlSecop(r.urlproceso) ? `<a href="${esc(urlSecop(r.urlproceso))}" target="_blank" rel="noopener">SECOP</a>` : ""}</td></tr>`).join("") + "</table></div>";
-  out.innerHTML = h;
+/* ---------- ficha del contratista ---------- */
+const DS = { secop1: "https://www.datos.gov.co/resource/f789-7hwg.json", grupos: "https://www.datos.gov.co/resource/ceth-n4bn.json",
+  multas: "https://www.datos.gov.co/resource/4n4q-k399.json" };
+const C2 = "id_contrato,referencia_del_contrato,nombre_entidad,departamento,ciudad,proveedor_adjudicado,documento_proveedor,objeto_del_contrato,tipo_de_contrato,modalidad_de_contratacion,estado_contrato,valor_del_contrato,valor_pagado,fecha_de_firma,fecha_de_inicio_del_contrato,fecha_de_fin_del_contrato,dias_adicionados,nombre_supervisor,nombre_ordenador_del_gasto,urlproceso,codigo_proveedor";
+let VIG = null, FICHA = null, FPAG = 0;
+const cerrado = e => /terminad|cerrad|liquidad|cancelad|anulad/i.test(e || "");
+const mismoDoc = (x, v, esNit) => { const d = docN(x); return esNit ? d === v || (d.length === 10 && d.slice(0, 9) === v) : d === v; };
+const filtroDoc = (campo, v, esNit) => esNit ? `starts_with(${campo},'${v}')` : `${campo}='${v}'`;
+
+function vigilancia() {
+  if (!VIG) VIG = Promise.all(["siri", "boletin"].map(k => fetch("data/vigilancia/" + k + ".json").then(r => r.ok ? r.json() : null).catch(() => null)))
+    .then(([siri, boletin]) => ({ siri, boletin }));
+  return VIG;
 }
-$("#cbtn").onclick = consultaLibre;
-$("#cq").addEventListener("keydown", e => { if (e.key === "Enter") consultaLibre(); });
+function antecedentes(B, v) {
+  const claves = [v]; if (v.length === 10) claves.push(v.slice(0, 9));
+  const siri = [], bol = [], vs = new Set(), vb = new Set();
+  claves.forEach(k => {
+    ((B.siri && B.siri.docs[k]) || []).forEach(r => { const id = [r[2], r[3], r[8]].join("|"); if (vs.has(id)) return; vs.add(id);
+      siri.push({ nombre: r[0], tipo: r[1], sancion: r[2], fecha: r[3], duracion: [r[4] && r[4] + " años", r[5] && r[5] + " meses", r[6] && r[6] + " días"].filter(Boolean).join(" "), autoridad: r[7], entidad: r[8] }); });
+    ((B.boletin && B.boletin.docs[k]) || []).forEach(i => { const r = B.boletin.filas[i]; const id = [r[0], r[2], r[5], r[1]].join("|"); if (vb.has(id)) return; vb.add(id);
+      bol.push({ nombre: r[0], autoridad: r[1], entidad: r[2], depto: r[3], municipio: r[4] }); });
+  });
+  return { siri, bol, corte: B.boletin && B.boletin.meta ? B.boletin.meta.corte : "", siriFecha: B.siri && B.siri.meta ? B.siri.meta.generado : "" };
+}
+function contrato2(r, origen) {
+  const fin = fecha(r.fecha_de_fin_del_contrato), est = r.estado_contrato || "";
+  const c = { origen, entidad: r.nombre_entidad, depto: r.departamento, ciudad: r.ciudad, ref: r.referencia_del_contrato || r.id_contrato,
+    objeto: r.objeto_del_contrato, tipo: r.tipo_de_contrato, modalidad: r.modalidad_de_contratacion, estado: est,
+    valor: +r.valor_del_contrato || 0, pagado: +r.valor_pagado || 0, firma: fecha(r.fecha_de_firma), inicio: fecha(r.fecha_de_inicio_del_contrato), fin,
+    dias: +r.dias_adicionados || 0, supervisor: r.nombre_supervisor || "", ordenador: r.nombre_ordenador_del_gasto || "", url: urlSecop(r.urlproceso), proveedor: r.proveedor_adjudicado };
+  c.alertas = [];
+  if (/suspend/i.test(est)) c.alertas.push(["alta", "Suspendido"]);
+  const f = aFecha(fin); if (f && f < HOY && !cerrado(est) && !/suspend/i.test(est)) c.alertas.push(["media", "Vencido sin cerrar (" + Math.round((HOY - f) / 864e5) + " días)"]);
+  if (c.dias > 0) c.alertas.push(["baja", "+" + c.dias + " días adicionados"]);
+  return c;
+}
+function contrato1(r) {
+  const ruta = r.ruta_proceso_en_secop_i; const url = ruta && (ruta.url || ruta) || "";
+  const c = { origen: "SECOP I", entidad: r.nombre_entidad, depto: r.departamento_entidad, ciudad: r.municipio_entidad, ref: r.numero_de_contrato || r.numero_de_proceso,
+    objeto: r.detalle_del_objeto_a_contratar || r.objeto_a_contratar || "", tipo: r.tipo_de_contrato, modalidad: r.modalidad_de_contratacion, estado: r.estado_del_proceso || "",
+    valor: +(r.valor_contrato_con_adiciones || r.cuantia_contrato) || 0, pagado: 0, firma: fecha(r.fecha_de_firma_del_contrato), inicio: fecha(r.fecha_ini_ejec_contrato), fin: fecha(r.fecha_fin_ejec_contrato),
+    dias: +r.tiempo_adiciones_en_dias || 0, supervisor: "", ordenador: "", url: typeof url === "string" ? url : "", proveedor: r.nom_razon_social_contratista };
+  c.alertas = c.dias > 0 ? [["baja", "+" + c.dias + " días adicionados"]] : [];
+  return c;
+}
+
+async function ficha(valor) {
+  const v0 = docN(valor); if (!v0) return;
+  const esNit = /^[89]\d{8,9}$/.test(v0), v = esNit ? v0.slice(0, 9) : v0;
+  const desde = $("#desde").value + "-01-01T00:00:00";
+  const out = $("#cres"); out.innerHTML = '<div class="aviso">Consultando RUES, SECOP II, SECOP I, consorcios, multas, SIRI y Boletín Fiscal…</div>';
+  const nada = () => [];
+  const [rf, c2, grupos, c1, multas, B] = await Promise.all([
+    (esNit ? rues(`nit='${v}'`) : rues(`num_identificacion_representante_legal='${v}' OR numero_identificacion='${v}'`)).catch(() => null),
+    api(SECOP, { select: C2, where: filtroDoc("documento_proveedor", v, esNit) + ` AND fecha_de_firma>='${desde}'`, order: "fecha_de_firma DESC", limit: 3000 }, 90000).catch(() => null),
+    api(DS.grupos, { select: "codigo_grupo,nombre_grupo,nit_grupo,participacion,es_lider_del_grupo,nit_participante", where: filtroDoc("nit_participante", v, esNit), limit: 500 }, 60000).catch(() => null),
+    api(DS.secop1, { where: filtroDoc("identificacion_del_contratista", v, esNit) + ` AND fecha_de_firma_del_contrato>='${desde}'`, order: "fecha_de_firma_del_contrato DESC", limit: 1000 }, 90000).catch(() => null),
+    api(DS.multas, { where: filtroDoc("documento_contratista", v, esNit), limit: 300 }, 60000).catch(() => null),
+    vigilancia()]);
+  const gr = (grupos || []).filter(g => mismoDoc(g.nit_participante, v, esNit));
+  let cg = [];
+  const cods = [...new Set(gr.map(g => g.codigo_grupo).filter(Boolean))];
+  if (cods.length) {
+    try { cg = await api(SECOP, { select: C2, where: `codigo_proveedor in(${cods.slice(0, 150).map(q).join(",")}) AND fecha_de_firma>='${desde}'`, order: "fecha_de_firma DESC", limit: 3000 }, 90000); }
+    catch (e) { cg = null; }
+  }
+  const lista = [];
+  (c2 || []).filter(r => mismoDoc(r.documento_proveedor, v, esNit)).forEach(r => lista.push(contrato2(r, "SECOP II")));
+  (cg || []).forEach(r => { const c = contrato2(r, "Consorcio / UT"); const g = gr.find(x => x.codigo_grupo === r.codigo_proveedor); c.grupo = r.proveedor_adjudicado; c.participacion = g ? g.participacion : ""; lista.push(c); });
+  (c1 || []).filter(r => mismoDoc(r.identificacion_del_contratista, v, esNit)).forEach(r => lista.push(contrato1(r)));
+  const mul = (multas || []).filter(r => mismoDoc(r.documento_contratista, v, esNit));
+  const ant = B ? antecedentes(B, v) : { siri: [], bol: [] };
+  const nombre = (lista.find(c => c.origen !== "Consorcio / UT") || {}).proveedor || (rf && rf[0] && (esNit ? rf[0].razon_social : (rf.find(x => docN(x.numero_identificacion) === v) || {}).razon_social)) || (ant.siri[0] || ant.bol[0] || {}).nombre || "";
+  FICHA = { v, esNit, nombre, rues: rf, lista, grupos: gr, multas: mul, ant, fallos: [rf, c2, grupos, c1, multas].filter(x => x === null).length + (cg === null ? 1 : 0) };
+  FPAG = 0; pintarFicha();
+}
+
+function pintarFicha() {
+  const F = FICHA, L = F.lista, out = $("#cres"), anio = $("#desde").value;
+  const tot = L.reduce((s, c) => s + c.valor, 0);
+  const munis = new Set(L.map(c => c.ciudad + "|" + c.depto)), ents = new Set(L.map(c => c.entidad));
+  const susp = L.filter(c => c.alertas.some(a => a[1] === "Suspendido")), venc = L.filter(c => c.alertas.some(a => /^Vencido/.test(a[1]))), adic = L.filter(c => c.dias > 0);
+  const sanc = F.multas.length + F.ant.siri.length + F.ant.bol.length;
+  let h = `<div class="panel" style="background:var(--navy);color:#fff;border:0"><div style="font-size:21px;font-weight:700">${esc(F.nombre || "Sin nombre registrado")}</div>
+    <div style="color:#B4A6DB;font-size:13px;margin-top:2px">${F.esNit ? "NIT" : "Cédula"} ${esc(F.v)} · contratos firmados desde ${anio} en todo el país</div>
+    <div class="kpis" style="margin:16px 0 0">${[["Contratos", L.length], ["Valor", mill(tot)], ["Entidades", ents.size], ["Municipios", munis.size], ["Suspendidos", susp.length], ["Vencidos sin cerrar", venc.length], ["Con adiciones de tiempo", adic.length], ["Sanciones y antecedentes", sanc]]
+      .map(([a, b]) => `<div class="kpi" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15)"><small style="color:#B4A6DB">${a}</small><b>${b}</b></div>`).join("")}</div></div>`;
+  if (F.fallos) h += `<div class="aviso err">${F.fallos} de las fuentes no respondieron; el resultado puede estar incompleto. Vuelva a consultar en unos minutos.</div>`;
+
+  // sanciones
+  h += `<div class="panel"><h3>Sanciones y antecedentes</h3>`;
+  if (!sanc) h += `<p class="note">Sin registros en Multas y Sanciones de SECOP I, SIRI (Procuraduría${F.ant.siriFecha ? ", corte " + esc(F.ant.siriFecha) : ""}) ni el Boletín de Responsables Fiscales (Contraloría${F.ant.corte ? ", corte " + esc(F.ant.corte) : ""}). Las sanciones registradas en SECOP II no se publican como datos abiertos; para verlas consulte el certificado del RUP.</p>`;
+  if (F.multas.length) h += `<h4 style="font-size:12px;color:var(--muted);text-transform:uppercase;margin:8px 0">Multas y sanciones contractuales (SECOP I)</h4><table><tr><th>Entidad</th><th>Municipio</th><th>Resolución</th><th>Contrato</th><th class="r">Valor</th><th>En firme</th><th></th></tr>` +
+    F.multas.map(m => `<tr><td>${esc(m.nombre_entidad)}</td><td>${esc(m.municipio)}</td><td>${esc(m.numero_de_resolucion)}</td><td>${esc(m.numero_de_contrato)}</td><td class="r">${peso(m.valor_sancion)}</td><td>${fecha(m.fecha_de_firmeza)}</td><td>${m.ruta_de_proceso ? `<a href="${esc(m.ruta_de_proceso.url || m.ruta_de_proceso)}" target="_blank" rel="noopener">SECOP I</a>` : ""}</td></tr>`).join("") + "</table>";
+  if (F.ant.siri.length) h += `<h4 style="font-size:12px;color:var(--muted);text-transform:uppercase;margin:12px 0 8px">SIRI · Procuraduría</h4><table><tr><th>Tipo</th><th>Sanción</th><th>Fecha</th><th>Duración</th><th>Entidad</th></tr>` +
+    F.ant.siri.map(s => `<tr><td>${esc(s.tipo)}</td><td>${esc(s.sancion)}</td><td>${esc(s.fecha)}</td><td>${esc(s.duracion)}</td><td>${esc(s.entidad)}<div class="mini">${esc(s.autoridad)}</div></td></tr>`).join("") + "</table>";
+  if (F.ant.bol.length) h += `<h4 style="font-size:12px;color:var(--muted);text-transform:uppercase;margin:12px 0 8px">Boletín de Responsables Fiscales · Contraloría</h4><table><tr><th>Entidad afectada</th><th>Lugar</th><th>Reporta</th></tr>` +
+    F.ant.bol.map(b => `<tr><td>${esc(b.entidad)}</td><td>${esc(b.municipio)} ${esc(b.depto)}</td><td>${esc(b.autoridad)}</td></tr>`).join("") + "</table>";
+  h += "</div>";
+
+  // RUES
+  const rf = F.rues;
+  h += `<div class="panel"><h3>Registro en el RUES</h3>` + (rf === null ? '<p class="note">El RUES no respondió.</p>' : !rf.length ? `<p class="note">Sin registros en el RUES para ${esc(F.v)}.</p>` :
+    `<table><tr><th>NIT</th><th>Razón social</th><th>Cámara</th><th>Estado</th><th>Matrícula</th><th>Renovado</th><th>CIIU</th><th>Representante</th></tr>` +
+    rf.map(f => `<tr><td>${esc(f.nit)}</td><td>${esc(f.razon_social)}<div class="mini">${esc(f.organizacion_juridica)}</div></td><td>${esc(f.camara_comercio)}</td><td>${esc(f.estado_matricula)}</td><td>${fecha(f.fecha_matricula)}</td><td>${esc(f.ultimo_ano_renovado)}</td><td>${esc(f.cod_ciiu_act_econ_pri)}</td><td>${esc(f.representante_legal)} <span class="mini">${esc(f.num_identificacion_representante_legal)}</span></td></tr>`).join("") + "</table>") + "</div>";
+
+  // consorcios
+  if (F.grupos.length) h += `<div class="panel"><h3>Consorcios y uniones temporales que integra (${F.grupos.length})</h3><table><tr><th>Grupo</th><th>NIT del grupo</th><th class="r">Participación</th><th>Líder</th><th class="r">Contratos desde ${anio}</th><th class="r">Valor</th></tr>` +
+    F.grupos.map(g => { const cs = L.filter(c => c.origen === "Consorcio / UT" && c.grupo && c.grupo.toUpperCase() === String(g.nombre_grupo || "").toUpperCase());
+      return `<tr><td>${esc(g.nombre_grupo)}</td><td>${esc(g.nit_grupo)}</td><td class="r">${esc(g.participacion)}${g.participacion ? "%" : ""}</td><td>${esc(g.es_lider_del_grupo)}</td><td class="r">${cs.length}</td><td class="r">${mill(cs.reduce((s, c) => s + c.valor, 0))}</td></tr>`; }).join("") + "</table></div>";
+
+  // relacion por municipio y entidad
+  const rel = {};
+  L.forEach(c => { const k = (c.ciudad || "") + "|" + (c.depto || "") + "|" + (c.entidad || ""); const x = rel[k] || (rel[k] = { ciudad: c.ciudad, depto: c.depto, entidad: c.entidad, n: 0, v: 0, desde: c.firma, hasta: c.firma, al: 0 });
+    x.n++; x.v += c.valor; if (c.firma && c.firma < x.desde) x.desde = c.firma; if (c.firma > x.hasta) x.hasta = c.firma; if (c.alertas.some(a => a[0] !== "baja")) x.al++; });
+  const R = Object.values(rel).sort((a, b) => b.v - a.v);
+  h += `<div class="panel"><h3>Relación por municipio y entidad (${R.length})</h3>` + (R.length ? `<table><tr><th>Municipio</th><th>Entidad</th><th class="r">Contratos</th><th class="r">Valor</th><th>Primer contrato</th><th>Último contrato</th><th class="r">Suspendidos o vencidos</th></tr>` +
+    R.map(x => `<tr><td>${esc(x.ciudad)}<div class="mini">${esc(x.depto)}</div></td><td>${esc(x.entidad)}</td><td class="r">${x.n}</td><td class="r">${mill(x.v)}</td><td>${esc(x.desde)}</td><td>${esc(x.hasta)}</td><td class="r">${x.al || ""}</td></tr>`).join("") + "</table>"
+    : `<p class="note">Sin contratos desde ${anio}.</p>`) + "</div>";
+
+  // contratos
+  const opt = (arr, t) => `<option value="">${t}</option>` + [...new Set(arr)].filter(Boolean).sort().map(x => `<option>${esc(x)}</option>`).join("");
+  h += `<div class="panel"><div class="filtros" style="justify-content:space-between"><h3 style="margin:0">Contratos (${L.length})</h3><button class="btn sec" id="fcsv">Descargar CSV</button></div>
+    <div class="filtros"><select id="ffMun">${opt(L.map(c => c.ciudad), "Todos los municipios")}</select><select id="ffEnt">${opt(L.map(c => c.entidad), "Todas las entidades")}</select>
+    <select id="ffEst"><option value="">Todos los estados</option><option value="al">Suspendidos o vencidos sin cerrar</option><option value="ad">Con días adicionados</option>${[...new Set(L.map(c => c.estado))].filter(Boolean).sort().map(x => `<option value="e:${esc(x)}">${esc(x)}</option>`).join("")}</select>
+    <select id="ffOri">${opt(L.map(c => c.origen), "SECOP I, II y consorcios")}</select><input type="search" id="ffQ" placeholder="Buscar en el objeto o la referencia"></div>
+    <div id="fTabla"></div><div class="pag"><span id="fInfo"></span><button class="btn sec" id="fPrev">&larr;</button><button class="btn sec" id="fNext">&rarr;</button></div></div>`;
+  out.innerHTML = h;
+  ["#ffMun", "#ffEnt", "#ffEst", "#ffOri", "#ffQ"].forEach(s => $(s).addEventListener("input", () => { FPAG = 0; tablaFicha(); }));
+  $("#fPrev").onclick = () => { FPAG--; tablaFicha(); }; $("#fNext").onclick = () => { FPAG++; tablaFicha(); };
+  $("#fcsv").onclick = csvFicha;
+  tablaFicha();
+}
+function filtrarFicha() {
+  const m = $("#ffMun").value, e = $("#ffEnt").value, s = $("#ffEst").value, o = $("#ffOri").value, t = $("#ffQ").value.trim().toUpperCase();
+  return FICHA.lista.filter(c => (!m || c.ciudad === m) && (!e || c.entidad === e) && (!o || c.origen === o)
+    && (!s || (s === "al" ? c.alertas.some(a => a[0] !== "baja") : s === "ad" ? c.dias > 0 : c.estado === s.slice(2)))
+    && (!t || ((c.objeto || "") + " " + (c.ref || "")).toUpperCase().includes(t)));
+}
+function tablaFicha() {
+  const v = filtrarFicha(), pags = Math.max(1, Math.ceil(v.length / 40)); FPAG = Math.max(0, Math.min(FPAG, pags - 1));
+  $("#fTabla").innerHTML = v.length ? `<table><tr><th>Entidad</th><th>Contrato y objeto</th><th class="r">Valor</th><th class="r">Pagado</th><th>Firma</th><th>Inicio</th><th>Fin</th><th>Estado</th><th></th></tr>` +
+    v.slice(FPAG * 40, FPAG * 40 + 40).map(c => `<tr><td>${esc(c.entidad)}<div class="mini">${esc(c.ciudad)} · ${esc(c.origen)}${c.grupo ? " · " + esc(c.grupo) + (c.participacion ? " (" + esc(c.participacion) + "%)" : "") : ""}</div></td>
+      <td style="min-width:260px"><b style="font-size:12.5px">${esc(c.ref)}</b> <span class="mini">${esc(c.tipo)} · ${esc(c.modalidad)}</span><div class="mini" title="${esc(c.objeto)}">${esc(String(c.objeto || "").slice(0, 220))}${String(c.objeto || "").length > 220 ? "…" : ""}</div>${c.supervisor ? `<div class="mini">Supervisor: ${esc(c.supervisor)}</div>` : ""}</td>
+      <td class="r">${peso(c.valor)}</td><td class="r">${c.origen === "SECOP I" ? '<span class="mini">—</span>' : peso(c.pagado)}</td><td style="white-space:nowrap">${esc(c.firma)}</td><td style="white-space:nowrap">${esc(c.inicio)}</td><td style="white-space:nowrap">${esc(c.fin)}</td>
+      <td>${esc(c.estado)}${c.alertas.map(([n, t]) => `<div><span class="chip ${n === "media" ? "" : n}">${esc(t)}</span></div>`).join("")}</td>
+      <td>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${c.origen === "SECOP I" ? "SECOP I" : "SECOP"}</a>` : ""}</td></tr>`).join("") + "</table>"
+    : '<p class="note">Sin contratos con estos filtros.</p>';
+  $("#fInfo").textContent = `${v.length} contratos · ${mill(v.reduce((s, c) => s + c.valor, 0))} · página ${FPAG + 1} de ${pags}`;
+  $("#fPrev").disabled = FPAG === 0; $("#fNext").disabled = FPAG >= pags - 1;
+}
+function csvFicha() {
+  const cq = x => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
+  const cab = ["Documento", "Contratista", "Fuente", "Consorcio", "Participación %", "Entidad", "Departamento", "Municipio", "Referencia", "Objeto", "Tipo", "Modalidad", "Estado", "Valor", "Pagado", "Firma", "Inicio", "Fin", "Días adicionados", "Supervisor", "Ordenador del gasto", "Alertas", "Enlace"];
+  const filas = filtrarFicha().map(c => [FICHA.v, FICHA.nombre, c.origen, c.grupo, c.participacion, c.entidad, c.depto, c.ciudad, c.ref, c.objeto, c.tipo, c.modalidad, c.estado, Math.round(c.valor), Math.round(c.pagado), c.firma, c.inicio, c.fin, c.dias, c.supervisor, c.ordenador, c.alertas.map(a => a[1]).join(" | "), c.url].map(cq).join(";"));
+  const b = new Blob(["﻿" + cab.map(cq).join(";") + "\n" + filas.join("\n")], { type: "text/csv;charset=utf-8" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "ficha_" + FICHA.v + ".csv"; a.click();
+}
+function abrirFicha(doc) { $("#cq").value = doc; document.querySelector('.tabs button[data-t="consulta"]').click(); ficha(doc); window.scrollTo(0, 0); }
+$("#cbtn").onclick = () => ficha($("#cq").value);
+$("#cq").addEventListener("keydown", e => { if (e.key === "Enter") ficha($("#cq").value); });
+document.addEventListener("click", e => { const b = e.target.closest("[data-ficha]"); if (b) { e.stopPropagation(); abrirFicha(b.dataset.ficha); } }, true);
+
 
 const pre = new URLSearchParams(location.search).get("t");
 if (pre) { const o = [...terr.options].find(x => x.value === pre || x.value === "m:" + pre); if (o) terr.value = o.value; }
