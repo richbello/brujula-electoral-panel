@@ -5,8 +5,10 @@
   "desde": "2020-01-01",
   "hasta": "2023-12-31"
  },
- "actualizado": null,
- "aportes_sin_municipio": {},
+ "actualizado": "2026-10-31",
+ "aportes_sin_municipio": {
+  "NO APLICA": 693
+ },
  "municipios": [
   {
    "municipio": "Agua de Dios",
@@ -141,7 +143,13 @@
   {
    "municipio": "Facatativá",
    "archivo": "facatativa.json",
-   "pendiente": true
+   "financiadores": 289,
+   "con_contrato": 16,
+   "terceros": 1,
+   "posible_inhabilidad": 0,
+   "contratos": 4025,
+   "tope": null,
+   "generado": "2026-10-31"
   },
   {
    "municipio": "Fómeque",
