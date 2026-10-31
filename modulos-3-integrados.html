@@ -266,12 +266,13 @@ th.cun-sort:hover{color:var(--navy)}
 <section class="pane" id="financiadores">
 <h2>Financiadores y contratos</h2>
 <p class="sub">Quién financió la campaña y qué contrató después · Ley 1474 de 2011, art. 2</p>
-<div class="terr-tabs" id="fin-vistas"><button class="terr-tab on" data-v="2023">Balance Territoriales 2023</button><button class="terr-tab" data-v="2019">Soacha · cruce 2019 con contratos</button></div>
+<div class="terr-tabs" id="fin-vistas"><button class="terr-tab on" data-v="2023">Balance Territoriales 2023</button><button class="terr-tab" data-v="2019">Cruce 2019 con contratos · por municipio</button></div>
 <div id="fin-vista-2023">
 <div id="fin23-estado" class="vfi-msg">Cargando el balance 2023…</div>
 <div id="fin23-contenido" hidden></div>
 </div>
 <div id="fin-vista-2019" hidden>
+<div class="vfi-fila" style="margin-bottom:18px"><label for="fin-muni" class="vfi-lbl" style="margin:0">Municipio</label><select id="fin-muni" style="max-width:460px"><option value="">Soacha · corte propio</option></select></div>
 <div id="fin-estado" class="vfi-msg">Cargando el último corte…</div>
 <div id="fin-contenido" hidden></div>
 </div>
@@ -1231,14 +1232,18 @@ window.VFI_LOCAL = (function () {
 
 /* ============================================================
    FINANCIADORES Y CONTRATOS
-   Lee data/modulos/financiadores.json, que produce
-   etl_financiadores.py cruzando Cuentas Claras contra SECOP II.
+   Lee data/modulos/financiadores.json (Soacha, etl_financiadores.py)
+   o data/cundinamarca/financiadores/<municipio>.json (los demas
+   municipios, 32_financiadores_cundinamarca.py). Ambos cruzan
+   Cuentas Claras contra SECOP II y tienen el mismo formato.
    La pagina no calcula nada: solo muestra el corte, con la
    base legal y los limites del cruce a la vista.
    ============================================================ */
 (function () {
   "use strict";
-  const FUENTE = "data/modulos/financiadores.json";
+  const SOACHA = "data/modulos/financiadores.json";
+  const CUN = "data/cundinamarca/financiadores/";
+  let FUENTE = SOACHA, MUNI = "";
   const DIAS_VIEJO = 90;   // la base de aportes es historica, envejece lento
   let cargado = false, DATOS = null, abierta = null, filtro = "todos";
 
@@ -1290,6 +1295,15 @@ window.VFI_LOCAL = (function () {
 
   function vacio(caja) {
     caja.className = "vf-vacio";
+    if (FUENTE !== SOACHA) {
+      caja.innerHTML =
+        "<b>" + esc(MUNI || "Este municipio") + " todavía no tiene un corte generado.</b>" +
+        "Se genera con el workflow <b style=\"display:inline\">Actualizar financiadores Cundinamarca</b> " +
+        "en la pestaña Actions del repositorio (todos los municipios, o solo este en el campo " +
+        "<i>solo</i>), o desde la consola:" +
+        "<pre>python 32_financiadores_cundinamarca.py --solo \"" + esc(MUNI) + "\"</pre>";
+      return;
+    }
     caja.innerHTML =
       "<b>Todavía no hay un corte generado.</b>" +
       "Esta pestaña cruza los aportes reportados al CNE en Cuentas Claras contra los " +
@@ -1506,7 +1520,7 @@ window.VFI_LOCAL = (function () {
       "<span>Fuente: " + esc(f.entidad) + "</span></div>";
 
     h += '<div class="fin-ley"><b>Qué muestra esta vista</b><p>' + esc(m.alcance) +
-      ' Para el cruce persona por persona vaya a <a href="#" id="fin23-ir2019">Soacha · cruce 2019</a>.</p></div>';
+      ' Para el cruce persona por persona, por municipio, vaya a <a href="#" id="fin23-ir2019">Cruce 2019 con contratos</a>.</p></div>';
 
     h += '<div class="kpis">' +
       kpi("Ingresos reportados", corto(k.ingresos)) +
@@ -1600,12 +1614,53 @@ window.VFI_LOCAL = (function () {
     return h;
   }
 
+  /* Selector de municipio: Soacha (corte propio, lo ven los clientes) o
+     cualquiera de los 116 de Cundinamarca (solo administradores, igual que
+     Territorio: el Worker bloquea data/cundinamarca/ a los demas). */
+  let listaLista = false;
+  async function llenarMunicipios() {
+    if (listaLista) return;
+    listaLista = true;
+    if (await window.ALCANCE !== "todo") return;   // clientes: solo Soacha
+    try {
+      const r = await fetch(CUN + "indice.json", { cache: "no-store" });
+      if (!r.ok) { listaLista = false; return; }
+      const sel = $("fin-muni");
+      const listos = document.createElement("optgroup"), pend = document.createElement("optgroup");
+      listos.label = "Cundinamarca · con corte";
+      pend.label = "Cundinamarca · sin corte todavía";
+      (await r.json()).municipios.forEach(m => {
+        if (m.archivo === "soacha.json") return;
+        const o = document.createElement("option");
+        o.value = m.archivo;
+        o.dataset.nombre = m.municipio;
+        if (m.pendiente) { o.textContent = m.municipio + " · sin corte"; pend.appendChild(o); return; }
+        o.textContent = m.municipio + " · " + miles(m.financiadores) + " financiadores · " +
+          miles(m.terceros) + " de terceros con contrato" +
+          (m.posible_inhabilidad ? " · " + miles(m.posible_inhabilidad) + " posible inhabilidad" : "");
+        listos.appendChild(o);
+      });
+      if (listos.children.length) sel.appendChild(listos);
+      if (pend.children.length) sel.appendChild(pend);
+    } catch (e) { listaLista = false; }
+  }
+  $("fin-muni").addEventListener("change", e => {
+    const o = e.target.selectedOptions[0];
+    FUENTE = e.target.value ? CUN + encodeURIComponent(e.target.value) : SOACHA;
+    MUNI = e.target.value ? (o && o.dataset.nombre) || "" : "Soacha";
+    cargado = false; abierta = null; filtro = "todos"; DATOS = null;
+    const caja = $("fin-estado");
+    caja.className = "vfi-msg"; caja.textContent = "Cargando…"; caja.style.display = "";
+    $("fin-contenido").hidden = true;
+    cargar();
+  });
+
   function vista(v) {
     vistaFin = v === "2019" ? "2019" : "2023";
     $("fin-vista-2023").hidden = vistaFin !== "2023";
     $("fin-vista-2019").hidden = vistaFin !== "2019";
     document.querySelectorAll("#fin-vistas .terr-tab").forEach(b => b.classList.toggle("on", b.dataset.v === vistaFin));
-    if (vistaFin === "2019") cargar(); else cargar23();
+    if (vistaFin === "2019") { cargar(); llenarMunicipios(); } else cargar23();
   }
   document.querySelectorAll("#fin-vistas .terr-tab").forEach(b => b.addEventListener("click", () => vista(b.dataset.v)));
   document.addEventListener("click", e => {

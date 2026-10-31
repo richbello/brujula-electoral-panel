@@ -1,0 +1,105 @@
+name: Actualizar financiadores Cundinamarca
+
+# Genera data/cundinamarca/financiadores/<municipio>.json para los 116
+# municipios de Cundinamarca: aportes de Cuentas Claras 2019 cruzados contra
+# los contratos de SECOP II que esos aportantes obtuvieron despues
+# (inhabilidad del articulo 2 de la Ley 1474 de 2011). Misma logica que el
+# corte de Soacha.
+#
+# Se ejecuta a mano desde la pestana Actions con "Run workflow". Recorre todos
+# los municipios, asi que tarda bastante mas que el de Soacha.
+
+on:
+  workflow_dispatch:
+    inputs:
+      solo:
+        description: "Opcional: municipios separados por coma (vacio = todos menos Soacha)"
+        required: false
+        default: ""
+      desde:
+        description: "Inicio de la ventana de contratos (posesion de los elegidos en 2019)"
+        required: true
+        default: "2020-01-01"
+      hasta:
+        description: "Fin del periodo de los elegidos"
+        required: true
+        default: "2023-12-31"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: financiadores-cundinamarca
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: pip install --quiet requests
+      - name: Verificar la logica del cruce
+        # Si la logica esta rota, no se publica un corte que senala personas con nombre propio.
+        run: |
+          python test_etl_financiadores.py
+          python test_financiadores_cundinamarca.py
+      - name: Generar los cortes
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+          SOLO: ${{ github.event.inputs.solo }}
+          DESDE: ${{ github.event.inputs.desde || '2020-01-01' }}
+          HASTA: ${{ github.event.inputs.hasta || '2023-12-31' }}
+        run: |
+          args=(--desde "$DESDE" --hasta "$HASTA")
+          # Si existe un CSV con los topes del CNE por municipio, se usa para el umbral del 2%.
+          [ -f data/cundinamarca/financiadores/topes_2019.csv ] && args+=(--topes data/cundinamarca/financiadores/topes_2019.csv)
+          if [ -n "$SOLO" ]; then
+            IFS=',' read -ra LISTA <<< "$SOLO"
+            for i in "${!LISTA[@]}"; do LISTA[$i]="$(echo "${LISTA[$i]}" | xargs)"; done
+            python 32_financiadores_cundinamarca.py "${args[@]}" --solo "${LISTA[@]}"
+          else
+            python 32_financiadores_cundinamarca.py "${args[@]}"
+          fi
+      - name: Resumen
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          d = json.loads(pathlib.Path("data/cundinamarca/financiadores/indice.json").read_text("utf-8"))
+          print(f"## Financiadores Cundinamarca — aportes {d['eleccion']}\n")
+          print(f"Contratos entre {d['ventana_contratos']['desde']} y {d['ventana_contratos']['hasta']}\n")
+          print("| Municipio | Financiadores | Con contrato | De terceros | Posible inhabilidad | Corte |")
+          print("|---|---:|---:|---:|---:|---|")
+          pendientes = [m["municipio"] for m in d["municipios"] if m.get("pendiente")]
+          for m in d["municipios"]:
+              if m.get("pendiente"):
+                  continue
+              print(f"| {m['municipio']} | {m['financiadores']:,} | {m['con_contrato']:,} | "
+                    f"{m['terceros']:,} | {m['posible_inhabilidad']:,} | {m['generado']} |")
+          if pendientes:
+              print(f"\n**Sin corte todavia ({len(pendientes)}):** {', '.join(pendientes)}")
+          if d.get("aportes_sin_municipio"):
+              print("\n**Aportes sin municipio reconocido** (gobernacion, asamblea o nombre distinto):\n")
+              for k, v in d["aportes_sin_municipio"].items():
+                  print(f"- {k}: {v:,} filas")
+          print("\n> Coincidir por documento **no prueba** la inhabilidad. Verifique cada caso antes de afirmarlo.")
+          PY
+      - name: Publicar
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cundinamarca/financiadores
+          if git diff --staged --quiet; then
+            echo "Los cortes no cambiaron; no hay nada que publicar."
+            exit 0
+          fi
+          git commit -m "Corte de financiadores Cundinamarca $(date -u +%Y-%m-%d)
+
+          Generado automaticamente por el workflow Actualizar financiadores Cundinamarca.
+          Fuentes: Cuentas Claras (jgra-rz2t) y SECOP II (jbjy-vk9h)."
+          git pull --rebase
+          git push

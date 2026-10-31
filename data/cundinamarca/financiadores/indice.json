@@ -1,0 +1,587 @@
+{
+ "departamento": "Cundinamarca",
+ "eleccion": "Territoriales 2019",
+ "ventana_contratos": {
+  "desde": "2020-01-01",
+  "hasta": "2023-12-31"
+ },
+ "actualizado": null,
+ "aportes_sin_municipio": {},
+ "municipios": [
+  {
+   "municipio": "Agua de Dios",
+   "archivo": "agua_de_dios.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Albán",
+   "archivo": "alban.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Anapoima",
+   "archivo": "anapoima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Anolaima",
+   "archivo": "anolaima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Apulo",
+   "archivo": "apulo.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Arbeláez",
+   "archivo": "arbelaez.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Beltrán",
+   "archivo": "beltran.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Bituima",
+   "archivo": "bituima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Bojacá",
+   "archivo": "bojaca.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Cabrera",
+   "archivo": "cabrera.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Cachipay",
+   "archivo": "cachipay.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Cajicá",
+   "archivo": "cajica.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Caparrapí",
+   "archivo": "caparrapi.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Cáqueza",
+   "archivo": "caqueza.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Carmen de Carupa",
+   "archivo": "carmen_de_carupa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Chaguaní",
+   "archivo": "chaguani.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Chía",
+   "archivo": "chia.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Chipaque",
+   "archivo": "chipaque.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Choachí",
+   "archivo": "choachi.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Chocontá",
+   "archivo": "choconta.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Cogua",
+   "archivo": "cogua.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Cota",
+   "archivo": "cota.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Cucunubá",
+   "archivo": "cucunuba.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "El Colegio",
+   "archivo": "el_colegio.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "El Peñón",
+   "archivo": "el_penon.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "El Rosal",
+   "archivo": "el_rosal.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Facatativá",
+   "archivo": "facatativa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Fómeque",
+   "archivo": "fomeque.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Fosca",
+   "archivo": "fosca.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Funza",
+   "archivo": "funza.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Fúquene",
+   "archivo": "fuquene.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Fusagasugá",
+   "archivo": "fusagasuga.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Gachalá",
+   "archivo": "gachala.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Gachancipá",
+   "archivo": "gachancipa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Gachetá",
+   "archivo": "gacheta.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Gama",
+   "archivo": "gama.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Girardot",
+   "archivo": "girardot.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Granada",
+   "archivo": "granada.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Guachetá",
+   "archivo": "guacheta.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Guaduas",
+   "archivo": "guaduas.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Guasca",
+   "archivo": "guasca.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Guataquí",
+   "archivo": "guataqui.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Guatavita",
+   "archivo": "guatavita.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Guayabal de Síquima",
+   "archivo": "guayabal_de_siquima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Guayabetal",
+   "archivo": "guayabetal.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Gutiérrez",
+   "archivo": "gutierrez.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Jerusalén",
+   "archivo": "jerusalen.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Junín",
+   "archivo": "junin.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "La Calera",
+   "archivo": "la_calera.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "La Mesa",
+   "archivo": "la_mesa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "La Palma",
+   "archivo": "la_palma.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "La Peña",
+   "archivo": "la_pena.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "La Vega",
+   "archivo": "la_vega.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Lenguazaque",
+   "archivo": "lenguazaque.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Machetá",
+   "archivo": "macheta.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Madrid",
+   "archivo": "madrid.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Manta",
+   "archivo": "manta.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Medina",
+   "archivo": "medina.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Mosquera",
+   "archivo": "mosquera.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Nariño",
+   "archivo": "narino.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Nemocón",
+   "archivo": "nemocon.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Nilo",
+   "archivo": "nilo.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Nimaima",
+   "archivo": "nimaima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Nocaima",
+   "archivo": "nocaima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Pacho",
+   "archivo": "pacho.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Paime",
+   "archivo": "paime.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Pandi",
+   "archivo": "pandi.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Paratebueno",
+   "archivo": "paratebueno.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Pasca",
+   "archivo": "pasca.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Puerto Salgar",
+   "archivo": "puerto_salgar.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Pulí",
+   "archivo": "puli.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Quebradanegra",
+   "archivo": "quebradanegra.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Quetame",
+   "archivo": "quetame.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Quipile",
+   "archivo": "quipile.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Ricaurte",
+   "archivo": "ricaurte.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "San Antonio del Tequendama",
+   "archivo": "san_antonio_del_tequendama.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "San Bernardo",
+   "archivo": "san_bernardo.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "San Cayetano",
+   "archivo": "san_cayetano.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "San Francisco",
+   "archivo": "san_francisco.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "San Juan de Rioseco",
+   "archivo": "san_juan_de_rioseco.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Sasaima",
+   "archivo": "sasaima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Sesquilé",
+   "archivo": "sesquile.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Sibaté",
+   "archivo": "sibate.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Silvania",
+   "archivo": "silvania.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Simijaca",
+   "archivo": "simijaca.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Sopó",
+   "archivo": "sopo.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Subachoque",
+   "archivo": "subachoque.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Suesca",
+   "archivo": "suesca.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Supatá",
+   "archivo": "supata.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Susa",
+   "archivo": "susa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Sutatausa",
+   "archivo": "sutatausa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tabio",
+   "archivo": "tabio.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tausa",
+   "archivo": "tausa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tena",
+   "archivo": "tena.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tenjo",
+   "archivo": "tenjo.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tibacuy",
+   "archivo": "tibacuy.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tibirita",
+   "archivo": "tibirita.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tocaima",
+   "archivo": "tocaima.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Tocancipá",
+   "archivo": "tocancipa.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Topaipí",
+   "archivo": "topaipi.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Ubalá",
+   "archivo": "ubala.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Ubaque",
+   "archivo": "ubaque.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Une",
+   "archivo": "une.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Útica",
+   "archivo": "utica.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Venecia",
+   "archivo": "venecia.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Vergara",
+   "archivo": "vergara.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Vianí",
+   "archivo": "viani.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Villa de San Diego de Ubaté",
+   "archivo": "villa_de_san_diego_de_ubate.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Villagómez",
+   "archivo": "villagomez.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Villapinzón",
+   "archivo": "villapinzon.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Villeta",
+   "archivo": "villeta.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Viotá",
+   "archivo": "viota.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Yacopí",
+   "archivo": "yacopi.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Zipacón",
+   "archivo": "zipacon.json",
+   "pendiente": true
+  },
+  {
+   "municipio": "Zipaquirá",
+   "archivo": "zipaquira.json",
+   "pendiente": true
+  }
+ ]
+}
