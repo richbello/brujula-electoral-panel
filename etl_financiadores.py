@@ -61,6 +61,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -156,6 +157,18 @@ def traer_contratos(municipio: str | None, departamento: str | None,
 # Cruce
 # --------------------------------------------------------------------------
 
+def norm_lugar(texto: Any) -> str:
+    """FACATATIVÁ, Facatativa y "facatativá " son el mismo lugar.
+
+    Cuentas Claras escribe los municipios en mayusculas y casi siempre sin
+    tilde; SECOP los escribe con tilde y en tipo titulo. Para decidir si un
+    contrato es del mismo territorio del aporte hay que compararlos sin tildes.
+    """
+    t = unicodedata.normalize("NFKD", str(texto or ""))
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", t).strip().upper()
+
+
 def indexar_contratos(contratos: list[dict]) -> dict[str, list[dict]]:
     idx: dict[str, list[dict]] = defaultdict(list)
     for c in contratos:
@@ -230,7 +243,7 @@ def cruzar(financiadores: dict[str, dict], idx: dict[str, list[dict]],
             continue
 
         # el territorio del aporte, para saber si el contrato es del mismo nivel
-        municipios_aporte = {str(a["municipio"]).upper() for a in ficha["aportes"]}
+        municipios_aporte = {norm_lugar(a["municipio"]) for a in ficha["aportes"]}
 
         detalle, exceptuados = [], []
         valor_contratos = 0.0
@@ -245,7 +258,7 @@ def cruzar(financiadores: dict[str, dict], idx: dict[str, list[dict]],
                 "valor": a_numero(c.get("valor_del_contrato")),
                 "firma": str(c.get("fecha_de_firma") or "")[:10],
                 "estado": c.get("estado_contrato") or "",
-                "mismo_territorio": str(c.get("ciudad") or "").upper() in municipios_aporte,
+                "mismo_territorio": norm_lugar(c.get("ciudad")) in municipios_aporte,
                 "url": (c.get("urlproceso") or {}).get("url", "") if isinstance(c.get("urlproceso"), dict) else "",
             }
             if es_servicios_profesionales(c):
@@ -319,7 +332,6 @@ def cruzar(financiadores: dict[str, dict], idx: dict[str, list[dict]],
 def construir(municipio: str | None, departamento: str | None, *, desde: str,
               hasta: str, tope: float | None, token: str | None,
               limite: int | None) -> dict:
-    ahora = dt.datetime.now().astimezone()
     objetivo = municipio or departamento or "todo el pais"
 
     print(f"[1/3] Cuentas Claras  ->  aportes en {objetivo}")
@@ -329,6 +341,20 @@ def construir(municipio: str | None, departamento: str | None, *, desde: str,
     contratos = traer_contratos(municipio, departamento, desde, hasta, token, limite)
 
     print("[3/3] Cruzando financiadores con contratistas")
+    return armar(ingresos, contratos, municipio=municipio, departamento=departamento,
+                 desde=desde, hasta=hasta, tope=tope)
+
+
+def armar(ingresos: list[dict], contratos: list[dict], *, municipio: str | None,
+          departamento: str | None, desde: str, hasta: str,
+          tope: float | None) -> dict:
+    """Cruza filas ya descargadas y arma el corte que lee la pagina.
+
+    Separado de la descarga para que el lote de Cundinamarca (que baja los
+    aportes de todo el departamento una sola vez) produzca exactamente el
+    mismo formato que el corte de Soacha.
+    """
+    ahora = dt.datetime.now().astimezone()
     financiadores = agrupar_aportes(ingresos)
     idx = indexar_contratos(contratos)
     hallazgos = cruzar(financiadores, idx, tope)
