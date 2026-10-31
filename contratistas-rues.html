@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contratistas y RUES · Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00A86B;--bad:#E11D48;--warn:#EA6A0A;--soft:#F8F6FF;--c1:#4A5BAE;--c2:#A65A80}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff}
+.bar{max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
+.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px;white-space:nowrap}
+.back:hover{border-color:var(--gold);color:var(--gold)}
+main{max-width:1240px;margin:0 auto;padding:32px}
+.aviso{background:#D6FBEC;color:#065F46;border:1px solid #A7F3D0;border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.55;margin-bottom:24px}
+.aviso.err{background:#FFF1E6;color:#7C2D12;border-color:#FED7AA}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button.on{color:var(--navy);border-color:var(--gold)}
+.pane{display:none}.pane.on{display:block}
+h2{font-size:22px;margin-bottom:4px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px;line-height:1.55}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:20px;overflow-x:auto}
+.panel h3{font-size:15px;margin-bottom:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:20px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.kpi b{font-size:22px}
+.kpi>span{display:block;font-size:11.5px;color:var(--muted);margin-top:4px}
+.prog{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:10px}
+.prog i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+.alertas{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;margin-bottom:20px}
+.al{background:#fff;border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:10px;padding:14px 16px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.al.alta{border-left-color:var(--bad)}.al.baja{border-left-color:var(--c1)}
+.al:hover{box-shadow:0 12px 26px -14px rgba(74,91,174,.55)}
+.al b{font-size:24px;display:block}.al small{font-size:13px;font-weight:600}.al span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.45}
+.filtros label{font-weight:600}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+input[type=search],input[type=text],select{padding:9px 12px;border:1.5px solid var(--line);border-radius:9px;font:500 14px Inter,"Segoe UI",sans-serif;background:#fff;color:var(--navy)}
+input[type=search]{min-width:260px;flex:1}
+input:focus,select:focus{outline:none;border-color:var(--gold)}
+.btn{background:var(--navy);color:#fff;border:0;border-radius:9px;padding:10px 16px;font:600 13.5px Inter,"Segoe UI",sans-serif;cursor:pointer}
+.btn.sec{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn:disabled{opacity:.5;cursor:default}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.fila{cursor:pointer}tr.fila:hover td{background:var(--soft)}
+tr.det td{background:#FBFAFF;padding:16px 18px}
+.r{text-align:right;white-space:nowrap}
+.mini{font-size:12px;color:var(--muted)}
+.chip{display:inline-block;font-size:11px;font-weight:600;padding:3px 8px;border-radius:999px;margin:2px 4px 2px 0;background:#FFF1E6;color:#9A3412}
+.chip.alta{background:#FFE4EA;color:#BE123C}.chip.baja{background:#EEF0FB;color:#3B4A9A}.chip.ok{background:#DCFCE7;color:#047857}
+.est{font-size:12px;font-weight:600}
+.est.act{color:var(--ok)}.est.can{color:var(--bad)}.est.na{color:var(--muted)}
+.det h4{font-size:12px;margin:14px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.det h4:first-child{margin-top:0}
+.det table{font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:8px}
+.det td,.det th{padding:7px 9px}
+a{color:var(--c1)}
+.lectura{background:var(--soft);border-left:4px solid var(--gold);border-radius:8px;padding:13px 17px;font-size:14px;line-height:1.65;margin-bottom:16px}
+.pag{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:12px;font-size:13px;color:var(--muted)}
+.note{font-size:12.5px;color:var(--muted);line-height:1.65}
+.note li{margin:0 0 6px 18px}
+footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color:var(--muted);line-height:1.6}
+@media(max-width:800px){.bar,main,footer{padding-left:16px;padding-right:16px}.tabs{gap:16px}input[type=search]{min-width:0}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>X-<em>irin</em> Technologies S.A.S.</b><small>Estrategia Electoral 2027 · 10 Contratistas y RUES</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
+
+<main>
+<div class="panel" style="padding:16px 20px">
+  <div class="filtros" style="margin:0">
+    <label class="mini" for="terr">Territorio</label>
+    <select id="terr" style="min-width:260px"></select>
+    <label class="mini" for="desde">Contratos desde</label>
+    <select id="desde"><option>2020</option><option>2022</option><option selected>2024</option><option>2025</option><option>2026</option></select>
+    <label class="mini" for="tope">Contratistas</label>
+    <select id="tope"><option value="200">200 de mayor valor</option><option value="500" selected>500 de mayor valor</option><option value="1000">1.000 de mayor valor</option><option value="2000">2.000 de mayor valor</option></select>
+    <button class="btn" id="ir">Consultar</button>
+  </div>
+</div>
+<div class="aviso" id="estado">Elija un territorio y presione Consultar.</div>
+
+<nav class="tabs">
+  <button data-t="resumen" class="on">Resumen y alertas</button>
+  <button data-t="tabla">Todos los contratistas</button>
+  <button data-t="reps">Representantes legales</button>
+  <button data-t="consulta">Consulta libre RUES</button>
+  <button data-t="metodo">Cómo se calcula</button>
+</nav>
+
+<section class="pane on" id="p-resumen">
+  <h2 id="titulo">Contratistas frente al RUES</h2>
+  <p class="sub">Los contratistas con NIT del territorio elegido (SECOP II) se consultan en el Registro Único Empresarial y Social de Confecámaras. Se revisa el estado de la matrícula, la renovación, la antigüedad, los traslados de domicilio y quién es el representante legal, y la cédula de ese representante se cruza con los contratos que firmó como persona natural en el mismo territorio.</p>
+  <div class="kpis" id="kpis"></div>
+  <div class="lectura" id="lectura" hidden></div>
+  <div class="alertas" id="tarjetas"></div>
+  <div class="panel"><h3>Contratistas con más alertas</h3><div id="top"><p class="note">Aún no hay resultados.</p></div></div>
+</section>
+
+<section class="pane" id="p-tabla">
+  <h2>Todos los contratistas con NIT</h2>
+  <p class="sub">Haga clic en una fila para ver el historial de matrículas, los contratos en el territorio y los contratos del representante legal.</p>
+  <div class="filtros">
+    <input type="search" id="q" placeholder="Buscar por nombre, NIT o representante">
+    <select id="fClase"><option value="privado">Empresas y ESAL</option><option value="">Todos (incluye consorcios y entidades públicas)</option><option value="asociacion">Solo consorcios y uniones temporales</option><option value="publica">Solo entidades públicas</option></select>
+    <select id="fAlerta"><option value="">Todas las alertas</option><option value="con">Solo con alertas</option></select>
+    <select id="fEnt"><option value="">Todas las entidades contratantes</option></select>
+    <button class="btn sec" id="csv">Descargar CSV</button>
+  </div>
+  <div class="panel" style="padding:0"><table id="tabla"><thead><tr>
+    <th data-o="nombre">Contratista</th><th data-o="valor" class="r">Valor contratado</th><th data-o="n" class="r">Contratos</th>
+    <th data-o="estado">Estado RUES</th><th data-o="rep">Representante legal</th><th data-o="nal">Alertas</th></tr></thead><tbody></tbody></table></div>
+  <div class="pag"><span id="pagInfo"></span><button class="btn sec" id="prev">&larr;</button><button class="btn sec" id="next">&rarr;</button></div>
+</section>
+
+<section class="pane" id="p-reps">
+  <h2>Representantes legales</h2>
+  <p class="sub">Representantes de los contratistas que además firmaron contratos como persona natural con entidades del mismo territorio, que representan a más de un contratista o que comparten apellidos con el representante de otro contratista.</p>
+  <div class="panel"><h3>Con contratos como persona natural en el territorio</h3><div id="repOps"></div></div>
+  <div class="panel"><h3>Representan a más de un contratista</h3><div id="repMulti"></div></div>
+  <div class="panel"><h3>Comparten dos apellidos con otro representante</h3><div id="repApe"></div><p class="note" style="margin-top:10px">Coincidir en apellidos no prueba parentesco. Confírmelo con el certificado de existencia y representación o el registro civil antes de usarlo.</p></div>
+</section>
+
+<section class="pane" id="p-consulta">
+  <h2>Consulta libre en el RUES</h2>
+  <p class="sub">Escriba un NIT (sin dígito de verificación) o una cédula. Con un NIT se trae la matrícula; con una cédula, las empresas donde esa persona es representante legal y su matrícula como comerciante. En los dos casos se muestran sus contratos en SECOP II en todo el país desde el año elegido arriba.</p>
+  <div class="filtros"><input type="text" id="cq" placeholder="NIT o cédula" inputmode="numeric" style="min-width:240px"><button class="btn" id="cbtn">Consultar</button></div>
+  <div id="cres"></div>
+</section>
+
+<section class="pane" id="p-metodo">
+  <h2>Cómo se calcula</h2>
+  <div class="panel note"><ul>
+    <li><b>Contratos:</b> SECOP II (datos.gov.co, jbjy-vk9h), consultado en vivo. Bogotá son las entidades con departamento Distrito Capital; "Cundinamarca, todos los municipios" son las entidades con departamento Cundinamarca; un municipio son las entidades con esa ciudad en Cundinamarca. SECOP ubica el contrato por la sede de la entidad contratante, no por el lugar de ejecución.</li>
+    <li><b>Contratistas:</b> proveedores con tipo de documento NIT y número de 9 dígitos que empieza por 8 o 9 (si trae dígito de verificación se le quita). Se toman los de mayor valor contratado según el tope elegido.</li>
+    <li><b>RUES:</b> conjunto de datos abiertos de Confecámaras (c82u-588k), consultado en vivo. Si la consulta falla se usa una copia guardada que cubre solo los contratistas más grandes de Soacha.</li>
+    <li><b>Consorcios, uniones temporales y entidades públicas</b> no tienen matrícula mercantil propia y no se consultan. Para un consorcio, consulte a sus integrantes en la Consulta libre.</li>
+    <li><b>Cámara de Comercio de Soacha:</b> las matrículas que pasaron de la Cámara de Bogotá a la de Soacha aparecen canceladas en Bogotá y activas en Soacha. Eso no cuenta como alerta ni como traslado.</li>
+    <li><b>Alertas:</b> no aparece en el RUES; sin matrícula activa; no ha renovado la matrícula del año en curso (después del 31 de marzo); en liquidación, reorganización o intervención; menos de un año de matriculada al firmar su primer contrato del periodo en el territorio; traslado de domicilio entre cámaras; entidad sin ánimo de lucro con más de $1.000 millones; representante legal con contratos como persona natural en el territorio; el mismo representante en varios contratistas; dos apellidos compartidos entre representantes.</li>
+    <li><b>Socios y accionistas:</b> los datos abiertos del RUES solo traen al representante legal. Los accionistas de una SAS no se inscriben en la cámara; los socios de una Ltda. y las juntas de las ESAL aparecen en el certificado de existencia y representación.</li>
+    <li>Las alertas son indicios para revisar, no conclusiones. Antes de hacer pública cualquier coincidencia, verifíquela en el certificado oficial.</li>
+  </ul></div>
+</section>
+</main>
+
+<footer>Fuentes: SECOP II (Colombia Compra Eficiente) y RUES (Confecámaras), ambos en datos.gov.co. Las coincidencias por número de documento no prueban una irregularidad y requieren verificación en el certificado oficial.</footer>
+
+<script>
+(function () {
+"use strict";
+const SECOP = "https://www.datos.gov.co/resource/jbjy-vk9h.json";
+const RUES = "https://www.datos.gov.co/resource/c82u-588k.json";
+const CAMPOS = "nit,razon_social,camara_comercio,matricula,tipo_sociedad,organizacion_juridica,categoria_matricula,estado_matricula,fecha_matricula,fecha_renovacion,ultimo_ano_renovado,cod_ciiu_act_econ_pri,cod_ciiu_act_econ_sec,representante_legal,num_identificacion_representante_legal,numero_identificacion";
+const MUNICIPIOS = ["Agua De Dios", "Albán", "Anapoima", "Anolaima", "Apulo", "Arbeláez", "Beltrán", "Bituima", "Bojacá", "Cajicá", "Caparrapí", "Caqueza", "Chaguaní", "Choachí", "Chocontá", "Chía", "Cogua", "Cota", "Cucunubá", "El Colegio", "El Peñón", "El Rosal", "Facatativá", "Fomeque", "Fosca", "Funza", "Fusagasugá", "Fúquene", "Gachala", "Gachancipá", "Gachetá", "Gama", "Girardot", "Granada", "Guachetá", "Guaduas", "Guasca", "Guatavita", "Guayabal De Siquima", "Gutiérrez", "Jerusalén", "La Calera", "La Mesa", "La Palma", "La Peña", "La Vega", "Lenguazaque", "Macheta", "Madrid", "Manta", "Medina", "Mosquera", "Nariño", "Nemocón", "Nilo", "Nimaima", "Nocaima", "Pacho", "Pandi", "Paratebueno", "Pasca", "Puerto Salgar", "Pulí", "Quebradanegra", "Ricaurte", "San Antonio Del Tequendama", "San Bernardo", "San Francisco", "Sasaima", "Sesquilé", "Sibaté", "Silvania", "Simijaca", "Soacha", "Sopó", "Subachoque", "Suesca", "Supatá", "Susa", "Sutatausa", "Tabio", "Tausa", "Tena", "Tenjo", "Tibacuy", "Tibirita", "Tocaima", "Tocancipá", "Ubalá", "Ubaque", "Une", "Venecia", "Vianí", "Villa De San Diego De Ubate", "Villagómez", "Villapinzón", "Villeta", "Viotá", "Yacopí", "Zipacón", "Zipaquirá"];
+const HOY = new Date(), ANIO = HOY.getFullYear();
+const NOMBRES = new Set("JUAN CARLOS ANDRES FELIPE JOSE LUIS MARIA ANA PAULA CAMILO ALEJANDRO DANIEL DAVID MIGUEL ANGEL JORGE ENRIQUE NELSON EDWIN JAVIER OSCAR MAURICIO DIEGO FERNANDO SANDRA MILENA CLAUDIA PATRICIA DIANA MARCELA CAROLINA ALEXANDRA ADRIANA LUZ MARINA MARTHA LUCIA ANGELA JULIETH JOHANNA YENNY YESENIA LAURA NATALIA CRISTIAN JULIAN SEBASTIAN NICOLAS SANTIAGO RICARDO ALBERTO ANTONIO MANUEL FRANCISCO EDUARDO GUSTAVO HERNANDO HUGO IVAN JAIME JHON JOHN JULIO CESAR PEDRO PABLO RAFAEL RAMON ROBERTO SERGIO WILLIAM WILSON ALEXANDER ALEJANDRA ESPERANZA GLORIA INES ISABEL JULIANA LILIANA LORENA MONICA NANCY OLGA ROCIO RUTH SONIA STELLA TERESA VIVIANA XIMENA YOLANDA FABIO GERMAN GUILLERMO HECTOR HERNAN JESUS LEONARDO MARIO RODRIGO VICTOR ALFONSO ARMANDO ARTURO CARMEN CECILIA CONSUELO ELIZABETH FERNANDA GABRIELA JIMENA KAREN LEIDY LINA LIZETH MARGARITA MERCEDES MIRIAM PILAR ROSA SOFIA TATIANA VANESSA DEL DE LA LOS LAS Y".split(" "));
+const ASOC = /CONSORCIO|UNION TEMPORAL|UNIÓN TEMPORAL|\bU\.?T\.?\b/;
+const PUB = /MUNICIPIO|DEPARTAMENTO|GOBERNACI|ALCALD|SECRETAR|\bE\.?S\.?E\b|EMPRESA SOCIAL DEL ESTADO|INSTITUTO MUNICIPAL|INSTITUTO DISTRITAL|INSTITUTO DE |EPUXUA|FONDO DE DESARROLLO|E\.?I\.?C\.?E|AGENCIA NACIONAL|AGENCIA DISTRITAL|MINISTERIO|POLICIA|EJERCITO|UNIVERSIDAD NACIONAL|UNIVERSIDAD DISTRITAL|UNIVERSIDAD DE CUNDINAMARCA|\bSENA\b|SUBRED|AGUAS DE BOGOTA|EMPRESA DE ACUEDUCTO|EMPRESA DE TELECOMUNICACIONES DE BOGOTA|EMPRESA DE RENOVACION|EMPRESA METRO|TRANSMILENIO|CAJA DE VIVIENDA|UNIDAD ADMINISTRATIVA|REGISTRADUR|CONTRALOR|PERSONER|VEEDURIA DISTRITAL|CONCEJO|NOTARIA|RTVC|SERVICIOS POSTALES|IMPRENTA NACIONAL|ENTERRITORIO|FINDETER|CAJA DE COMPENSACION|COMPENSAR|COLSUBSIDIO|CAFAM/;
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const peso = v => "$" + Math.round(v || 0).toLocaleString("es-CO");
+const mill = v => v >= 1e12 ? "$" + (v / 1e12).toLocaleString("es-CO", { maximumFractionDigits: 2 }) + " billones"
+  : "$" + Math.round((v || 0) / 1e6).toLocaleString("es-CO") + " M";
+const fecha = f => !f ? "" : /^\d{8}$/.test(f) ? f.slice(0, 4) + "-" + f.slice(4, 6) + "-" + f.slice(6) : String(f).slice(0, 10);
+const aFecha = f => { const s = fecha(f); const d = s ? new Date(s) : null; return d && !isNaN(d) ? d : null; };
+const docN = x => String(x || "").replace(/\D/g, "").replace(/^0+/, "");
+const nitDe = x => { const d = docN(x); return /^[89]\d{8}\d?$/.test(d) ? d.slice(0, 9) : null; };
+const q = s => "'" + String(s).replace(/'/g, "''") + "'";
+const clase = n => { const u = String(n || "").toUpperCase(); return ASOC.test(u) ? "asociacion" : PUB.test(u) ? "publica" : "privado"; };
+const urlSecop = u => (u && (u.url || u)) || "";
+
+let T = null, LISTA = [], EMP = {}, ENTS = [], SNAP = null, ORDEN = { k: "valor", d: -1 }, PAG = 0, CORRIENDO = 0;
+const TAM = 50;
+
+/* ---------- territorio ---------- */
+const terr = $("#terr");
+terr.innerHTML = `<option value="bog">Bogotá D.C.</option><option value="cun">Cundinamarca · todos los municipios</option><optgroup label="Municipios de Cundinamarca">` +
+  MUNICIPIOS.map(m => `<option value="m:${esc(m)}"${m === "Soacha" ? " selected" : ""}>${esc(m)}</option>`).join("") + "</optgroup>";
+function territorio() {
+  const v = terr.value, desde = $("#desde").value + "-01-01T00:00:00";
+  let lugar, nombre;
+  if (v === "bog") { lugar = "departamento='Distrito Capital de Bogotá'"; nombre = "Bogotá D.C."; }
+  else if (v === "cun") { lugar = "departamento='Cundinamarca'"; nombre = "Cundinamarca (todos los municipios)"; }
+  else { const m = v.slice(2); lugar = `ciudad=${q(m)} AND departamento='Cundinamarca'`; nombre = m; }
+  return { v, lugar, nombre, desde, anio: $("#desde").value, tope: +$("#tope").value, where: `${lugar} AND fecha_de_firma>='${desde}'` };
+}
+
+/* ---------- tabs ---------- */
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.id === "p-" + b.dataset.t));
+});
+
+/* ---------- API ---------- */
+async function api(base, params, ms) {
+  const url = base + "?" + Object.entries(params).map(([k, v]) => "$" + k + "=" + encodeURIComponent(v)).join("&");
+  const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), ms || 60000);
+  try {
+    const r = await fetch(url, { signal: ctl.signal });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return await r.json();
+  } finally { clearTimeout(t); }
+}
+const rues = where => api(RUES, { select: CAMPOS, where, limit: 5000 }, 30000);
+
+function agrupar(filas) {
+  const g = {};
+  filas.forEach(f => { const n = docN(f.nit).slice(0, 9); if (n) (g[n] = g[n] || []).push(f); });
+  return g;
+}
+function empresa(filas) {
+  if (!filas || !filas.length) return null;
+  const ord = filas.slice().sort((a, b) => String(b.fecha_renovacion || "").localeCompare(String(a.fecha_renovacion || ""))
+    || String(b.fecha_matricula || "").localeCompare(String(a.fecha_matricula || "")));
+  const activa = x => /^ACTIVA/.test(x.estado_matricula || "") || /NUEVA/.test(x.estado_matricula || "");
+  const princ = ord.find(activa) || ord[0];
+  const conRep = ord.find(x => x.num_identificacion_representante_legal && x.representante_legal);
+  const origen = filas.map(x => x.fecha_matricula).filter(Boolean).sort()[0];
+  const anio = Math.max(...filas.map(x => +x.ultimo_ano_renovado || 0));
+  const migrada = filas.some(x => /SOACHA/.test(x.camara_comercio || "") && activa(x)) && filas.some(x => /BOGOTA/.test(x.camara_comercio || "") && !activa(x));
+  const ruta = [];
+  filas.slice().sort((a, b) => String(a.fecha_renovacion || "").localeCompare(String(b.fecha_renovacion || ""))
+    || String(a.fecha_matricula || "").localeCompare(String(b.fecha_matricula || "")))
+    .forEach(x => { if (ruta[ruta.length - 1] !== x.camara_comercio) ruta.push(x.camara_comercio); });
+  return {
+    razon: princ.razon_social, camara: princ.camara_comercio, estado: princ.estado_matricula, activa: filas.some(activa),
+    tipo: princ.tipo_sociedad, org: princ.organizacion_juridica, ciiu: princ.cod_ciiu_act_econ_pri, ciiu2: princ.cod_ciiu_act_econ_sec,
+    origen, anio, migrada, traslado: filas.some(x => /TRASLADO/.test(x.estado_matricula || "")), ruta: ruta.join(" → "),
+    rep: conRep ? conRep.representante_legal.replace(/\s+/g, " ").trim() : "", repId: conRep ? docN(conRep.num_identificacion_representante_legal) : "",
+    filas: ord
+  };
+}
+
+/* ---------- alertas ---------- */
+const TIPOS = {
+  sin_rues: ["alta", "No aparece en el RUES", "Empresas o ESAL con contratos cuyo NIT no aparece en el registro de las cámaras."],
+  inactiva: ["alta", "Matrícula cancelada o inactiva", "Ninguna de sus matrículas está activa en el RUES."],
+  rep_ops: ["alta", "Representante con contratos personales", "Su representante legal también contrató como persona natural en el mismo territorio."],
+  rep_multi: ["alta", "Mismo representante en varios contratistas", "La misma cédula representa a dos o más contratistas del territorio."],
+  joven: ["alta", "Menos de un año al primer contrato", "Se matriculó menos de un año antes de firmar su primer contrato del periodo en el territorio."],
+  no_renovo: ["media", "Sin renovar la matrícula " + ANIO, "El último año renovado es anterior a " + ANIO + "."],
+  liquidacion: ["media", "En liquidación, reorganización o intervención", "La razón social lo indica."],
+  esal: ["media", "ESAL con más de $1.000 millones", "Fundaciones, corporaciones o asociaciones con contratos por más de $1.000 millones."],
+  apellidos: ["media", "Apellidos compartidos entre representantes", "Su representante comparte dos apellidos con el de otro contratista."],
+  traslado: ["baja", "Traslado de domicilio entre cámaras", "Cambió de cámara de comercio (no cuenta el paso de Bogotá a la Cámara de Soacha)."]
+};
+
+function calcular() {
+  const repIdx = {}, ape = {};
+  LISTA.forEach(c => {
+    const e = c.rues;
+    if (e && e.repId) (repIdx[e.repId] = repIdx[e.repId] || []).push(c);
+    if (e && e.rep) {
+      const t = e.rep.toUpperCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^A-ZÑ ]/g, "").split(" ").filter(Boolean);
+      for (let i = 0; i < t.length - 1; i++) {
+        if (NOMBRES.has(t[i]) || NOMBRES.has(t[i + 1]) || t[i] === t[i + 1]) continue;
+        const k = t[i] + " " + t[i + 1];
+        (ape[k] = ape[k] || new Map()).set(e.repId, c);
+      }
+    }
+  });
+  LISTA.forEach(c => {
+    const a = [], e = c.rues;
+    c.parientes = [];
+    if (c.clase === "privado") {
+      if (!e) { if (c.consultado) a.push(["sin_rues"]); }
+      else {
+        if (!e.activa) a.push(["inactiva", e.estado]);
+        else if (e.anio && e.anio < ANIO && HOY > new Date(ANIO, 2, 31)) a.push(["no_renovo", "último año renovado: " + e.anio]);
+        if (/LIQUIDACI|REORGANIZA|INTERVENCI/i.test(e.razon + " " + c.nombre)) a.push(["liquidacion"]);
+        const o = aFecha(e.origen), p = aFecha(c.primera);
+        if (o && p && p >= o && (p - o) / 864e5 < 365) a.push(["joven", "matriculada " + fecha(e.origen) + ", primer contrato " + fecha(c.primera)]);
+        if (e.traslado) a.push(["traslado", e.ruta]);
+        if (/SIN ANIMO/.test(e.tipo || "") && c.valor >= 1e9) a.push(["esal", mill(c.valor)]);
+        if (c.repOps && c.repOps.length) a.push(["rep_ops", c.repOps.length + " contrato(s) por " + mill(c.repOps.reduce((s, x) => s + x.valor, 0))]);
+        if (e.repId && repIdx[e.repId] && repIdx[e.repId].length > 1)
+          a.push(["rep_multi", repIdx[e.repId].filter(x => x !== c).map(x => x.nombre).join("; ")]);
+        Object.entries(ape).forEach(([k, m]) => { if (m.size > 1 && m.has(e.repId)) m.forEach((o, id) => { if (id !== e.repId) c.parientes.push([k, o]); }); });
+        if (c.parientes.length) a.push(["apellidos", c.parientes.map(([k, o]) => k + ": " + o.nombre).join("; ")]);
+      }
+    }
+    c.alertas = a;
+    c.nal = a.reduce((s, x) => s + (TIPOS[x[0]][0] === "alta" ? 3 : TIPOS[x[0]][0] === "media" ? 2 : 1), 0);
+  });
+  pintar();
+}
+
+/* ---------- carga ---------- */
+function estado(t, p) { $("#estado").className = "aviso"; $("#estado").innerHTML = esc(t) + (p != null ? `<div class="prog"><i style="width:${Math.round(p * 100)}%"></i></div>` : ""); }
+function error(t) { $("#estado").className = "aviso err"; $("#estado").textContent = t; }
+
+async function cargar() {
+  const id = ++CORRIENDO; T = territorio();
+  const vivo = () => id === CORRIENDO;
+  $("#titulo").textContent = "Contratistas de " + T.nombre + " frente al RUES";
+  LISTA = []; EMP = {}; ENTS = []; PAG = 0; pintar();
+  estado(`Buscando en SECOP II los contratistas con NIT de ${T.nombre} desde ${T.anio}… (Bogotá y Cundinamarca completo pueden tardar hasta un minuto)`, 0.02);
+
+  // 1. contratistas con NIT, por valor
+  let agg;
+  try {
+    agg = await api(SECOP, { select: "documento_proveedor as d,max(proveedor_adjudicado) as p,sum(valor_del_contrato) as v,count(*) as n,min(fecha_de_firma) as f",
+      where: T.where + " AND tipodocproveedor='NIT'", group: "d", order: "v DESC", limit: Math.round(T.tope * 1.3) + 50 }, 120000);
+  } catch (e) { if (vivo()) error("SECOP II (datos.gov.co) no respondió. Intente de nuevo en unos minutos o elija un territorio más pequeño."); return; }
+  if (!vivo()) return;
+  agg.forEach(r => {
+    const nit = nitDe(r.d); if (!nit) return;
+    const c = EMP[nit] || (EMP[nit] = { nit, nombre: r.p || "", n: 0, valor: 0, primera: r.f, entidades: {}, directa: 0, contratos: null, rues: null, consultado: false, repOps: null, alertas: [], nal: 0, parientes: [] });
+    c.n += +r.n || 0; c.valor += +r.v || 0; if (r.f && (!c.primera || r.f < c.primera)) c.primera = r.f;
+  });
+  LISTA = Object.values(EMP).sort((a, b) => b.valor - a.valor).slice(0, T.tope);
+  EMP = {}; LISTA.forEach(c => { c.clase = clase(c.nombre); EMP[c.nit] = c; });
+  if (!LISTA.length) { error(`SECOP II no tiene contratistas con NIT para ${T.nombre} desde ${T.anio}.`); pintar(); return; }
+  calcular();
+
+  // 2. entidades contratantes y modalidad
+  const nits = LISTA.map(c => c.nit), pasos = Math.ceil(nits.length / 80) + Math.ceil(nits.length / 40) + 1;
+  let paso = 0;
+  for (let i = 0; i < nits.length; i += 80) {
+    const parte = nits.slice(i, i + 80);
+    estado(`Leyendo entidades contratantes de ${T.nombre}… ${Math.min(i + 80, nits.length)} de ${nits.length}`, 0.05 + 0.25 * (++paso / pasos));
+    try {
+      const filas = await api(SECOP, { select: "documento_proveedor as d,nombre_entidad as e,modalidad_de_contratacion as m,sum(valor_del_contrato) as v,count(*) as n",
+        where: T.where + " AND (" + parte.map(n => `starts_with(documento_proveedor,'${n}')`).join(" OR ") + ")", group: "d,e,m", limit: 50000 }, 90000);
+      if (!vivo()) return;
+      filas.forEach(r => { const c = EMP[nitDe(r.d)]; if (!c) return; c.entidades[r.e] = (c.entidades[r.e] || 0) + (+r.v || 0); if (/irecta/.test(r.m || "")) c.directa += +r.n || 0; });
+    } catch (e) { /* las entidades son complementarias */ }
+  }
+  ENTS = [...new Set(LISTA.flatMap(c => Object.keys(c.entidades)))].sort();
+  $("#fEnt").innerHTML = '<option value="">Todas las entidades contratantes</option>' + ENTS.map(e => `<option>${esc(e)}</option>`).join("");
+
+  // 3. RUES
+  if (!SNAP) SNAP = await fetch("data/soacha/rues/snapshot.json").then(r => r.ok ? r.json() : null).catch(() => null);
+  const snapG = SNAP ? agrupar(SNAP.filas) : {};
+  const priv = LISTA.filter(c => c.clase === "privado").map(c => c.nit);
+  let hechos = 0, fallos = 0, copia = 0;
+  for (let i = 0; i < priv.length; i += 40) {
+    const parte = priv.slice(i, i + 40);
+    let filas = null;
+    try { filas = await rues("nit in(" + parte.map(q).join(",") + ")"); } catch (e) { fallos++; }
+    if (!vivo()) return;
+    const g = filas ? agrupar(filas) : {};
+    parte.forEach(n => {
+      const c = EMP[n];
+      if (filas) { c.rues = empresa(g[n]); c.consultado = true; }
+      else if (snapG[n]) { c.rues = empresa(snapG[n]); c.consultado = true; c.desdeCopia = true; copia++; }
+    });
+    hechos += parte.length;
+    estado(`Consultando el RUES en vivo: ${hechos} de ${priv.length} NIT…`, 0.3 + 0.5 * hechos / priv.length);
+    if ((i / 40) % 4 === 0) calcular();
+  }
+  calcular();
+
+  // 4. representantes con contratos como persona natural en el territorio
+  const ids = [...new Set(LISTA.filter(c => c.rues && c.rues.repId).map(c => c.rues.repId))];
+  const porId = {};
+  for (let i = 0; i < ids.length; i += 50) {
+    const parte = ids.slice(i, i + 50);
+    estado(`Cruzando representantes legales con los contratos de persona natural en ${T.nombre}: ${Math.min(i + 50, ids.length)} de ${ids.length}`, 0.8 + 0.2 * (i + 50) / Math.max(ids.length, 1));
+    try {
+      const filas = await api(SECOP, { select: "documento_proveedor,proveedor_adjudicado,nombre_entidad,tipo_de_contrato,valor_del_contrato,fecha_de_firma,urlproceso",
+        where: T.where + " AND documento_proveedor in(" + parte.map(q).join(",") + ")", limit: 5000 }, 60000);
+      if (!vivo()) return;
+      filas.forEach(r => (porId[docN(r.documento_proveedor)] = porId[docN(r.documento_proveedor)] || []).push({
+        entidad: r.nombre_entidad, tipo: r.tipo_de_contrato, valor: +r.valor_del_contrato || 0, fecha: fecha(r.fecha_de_firma), url: urlSecop(r.urlproceso), nombre: r.proveedor_adjudicado }));
+    } catch (e) { fallos++; }
+  }
+  LISTA.forEach(c => { c.repOps = c.rues && c.rues.repId ? (porId[c.rues.repId] || null) : null; });
+  calcular();
+
+  const ok = LISTA.filter(c => c.consultado).length;
+  if (fallos && !ok) error("El RUES (datos.gov.co) no respondió. Intente de nuevo en unos minutos.");
+  else $("#estado").className = "aviso", $("#estado").innerHTML = `${esc(T.nombre)} · contratos SECOP II desde ${T.anio} · ${LISTA.length} contratistas con NIT de mayor valor. RUES consultado en vivo el ${HOY.toLocaleString("es-CO")} para ${ok} de ${priv.length} empresas y ESAL.` +
+    (copia ? ` ${copia} se tomaron de la copia guardada porque la consulta en vivo falló.` : "") + (fallos && ok ? " Algunas consultas fallaron; vuelva a consultar para completarlas." : "");
+}
+
+/* ---------- pintar ---------- */
+function chips(c, todas) {
+  if (!c.alertas.length) return c.clase !== "privado" ? '<span class="chip baja">No aplica RUES</span>' : (c.rues ? '<span class="chip ok">Sin alertas</span>' : "");
+  return c.alertas.slice(0, todas ? 99 : 3).map(([k, d]) => `<span class="chip ${TIPOS[k][0]}" title="${esc(d || TIPOS[k][2])}">${esc(TIPOS[k][1])}</span>`).join("")
+    + (!todas && c.alertas.length > 3 ? `<span class="mini">+${c.alertas.length - 3}</span>` : "");
+}
+function estadoTxt(c) {
+  if (c.clase === "asociacion") return '<span class="est na">Consorcio / UT</span>';
+  if (c.clase === "publica") return '<span class="est na">Entidad pública</span>';
+  if (!c.consultado) return '<span class="est na">Consultando…</span>';
+  if (!c.rues) return '<span class="est can">No aparece</span>';
+  return `<span class="est ${c.rues.activa ? "act" : "can"}">${c.rues.activa ? "Activa" : esc(c.rues.estado)}</span><div class="mini">${esc(c.rues.camara)}${c.rues.migrada ? " (migrada a Soacha)" : ""}${c.desdeCopia ? " · copia" : ""}</div>`;
+}
+const ir = (sel, abrir) => { document.querySelector('.tabs button[data-t="tabla"]').click(); tabla(abrir); };
+
+function pintar() {
+  const priv = LISTA.filter(c => c.clase === "privado"), cons = priv.filter(c => c.consultado);
+  const conAl = priv.filter(c => c.alertas.length), vT = LISTA.reduce((s, c) => s + c.valor, 0);
+  $("#kpis").innerHTML = !LISTA.length ? "" : [
+    ["Contratistas con NIT analizados", LISTA.length.toLocaleString("es-CO"), mill(vT) + " contratados"],
+    ["Empresas y ESAL consultadas", cons.length + " / " + priv.length, (LISTA.length - priv.length) + " consorcios y entidades públicas no aplican"],
+    ["Con al menos una alerta", conAl.length.toLocaleString("es-CO"), mill(conAl.reduce((s, c) => s + c.valor, 0)) + " contratados"],
+    ["Representantes con contratos personales", priv.filter(c => c.repOps && c.repOps.length).length, "en el mismo territorio"]
+  ].map(([a, b, s]) => `<div class="kpi"><small>${a}</small><b>${b}</b><span>${s}</span></div>`).join("");
+
+  const cuenta = {};
+  priv.forEach(c => c.alertas.forEach(([k]) => { cuenta[k] = cuenta[k] || { n: 0, v: 0 }; cuenta[k].n++; cuenta[k].v += c.valor; }));
+  $("#tarjetas").innerHTML = Object.keys(TIPOS).filter(k => cuenta[k]).map(k =>
+    `<button class="al ${TIPOS[k][0]}" data-k="${k}"><b>${cuenta[k].n}</b><small>${esc(TIPOS[k][1])}</small><span>${esc(TIPOS[k][2])} ${mill(cuenta[k].v)}.</span></button>`).join("");
+  document.querySelectorAll("#tarjetas .al").forEach(b => b.onclick = () => { $("#fAlerta").value = b.dataset.k; $("#fClase").value = "privado"; $("#q").value = ""; PAG = 0; ir(); });
+  if ($("#fAlerta").options.length < 3) Object.keys(TIPOS).forEach(k => $("#fAlerta").add(new Option(TIPOS[k][1], k)));
+
+  const top = priv.filter(c => c.nal).sort((a, b) => b.nal - a.nal || b.valor - a.valor).slice(0, 15);
+  $("#top").innerHTML = top.length ? `<table><tr><th>Contratista</th><th class="r">Valor contratado</th><th>Representante</th><th>Alertas</th></tr>` +
+    top.map(c => `<tr class="fila" data-nit="${c.nit}"><td><b>${esc(c.nombre)}</b><div class="mini">NIT ${c.nit}</div></td><td class="r">${mill(c.valor)}</td><td>${esc(c.rues && c.rues.rep)}</td><td>${chips(c, true)}</td></tr>`).join("") + "</table>"
+    : '<p class="note">Aún no hay resultados.</p>';
+  document.querySelectorAll("#top tr.fila").forEach(tr => tr.onclick = () => { $("#q").value = tr.dataset.nit; $("#fClase").value = ""; $("#fAlerta").value = ""; $("#fEnt").value = ""; PAG = 0; ir(null, true); });
+
+  const lect = [];
+  const ops = priv.filter(c => c.repOps && c.repOps.length), multi = priv.filter(c => c.alertas.some(a => a[0] === "rep_multi"));
+  if (ops.length) lect.push(`<b>${ops.length}</b> contratista(s) tienen un representante legal que también contrató como persona natural en ${esc(T.nombre)}.`);
+  if (multi.length) lect.push(`<b>${multi.length}</b> contratista(s) comparten representante legal con otro contratista.`);
+  const inact = priv.filter(c => c.alertas.some(a => a[0] === "inactiva" || a[0] === "sin_rues"));
+  if (inact.length) lect.push(`<b>${inact.length}</b> NIT con contratos no tienen matrícula activa o no aparecen en el RUES (${mill(inact.reduce((s, c) => s + c.valor, 0))}).`);
+  $("#lectura").hidden = !lect.length; $("#lectura").innerHTML = lect.join(" ");
+  reps(); tabla();
+}
+
+function filtrar() {
+  const qq = $("#q").value.trim().toUpperCase(), cl = $("#fClase").value, fa = $("#fAlerta").value, fe = $("#fEnt").value;
+  return LISTA.filter(c => (!cl || c.clase === cl)
+    && (!fa || (fa === "con" ? c.alertas.length : c.alertas.some(a => a[0] === fa)))
+    && (!fe || c.entidades[fe])
+    && (!qq || (c.nombre + " " + c.nit + " " + (c.rues ? c.rues.rep + " " + c.rues.repId + " " + c.rues.razon : "")).toUpperCase().includes(qq)));
+}
+function tabla(abrir) {
+  const v = filtrar(), k = ORDEN.k, d = ORDEN.d;
+  const val = c => k === "estado" ? (c.rues ? (c.rues.activa ? 1 : 0) : -1) : k === "rep" ? (c.rues ? c.rues.rep : "") : c[k];
+  v.sort((a, b) => { const x = val(a), y = val(b); return (typeof x === "string" ? String(x).localeCompare(y) : (x || 0) - (y || 0)) * d; });
+  const pags = Math.max(1, Math.ceil(v.length / TAM)); PAG = Math.max(0, Math.min(PAG, pags - 1));
+  $("#tabla tbody").innerHTML = v.slice(PAG * TAM, PAG * TAM + TAM).map(c =>
+    `<tr class="fila" data-nit="${c.nit}"><td><b>${esc(c.nombre)}</b><div class="mini">NIT ${c.nit}${c.rues && c.rues.razon && c.rues.razon.toUpperCase() !== c.nombre.toUpperCase() ? " · RUES: " + esc(c.rues.razon) : ""}</div></td>
+     <td class="r">${mill(c.valor)}</td><td class="r">${c.n}</td><td>${estadoTxt(c)}</td>
+     <td>${c.rues && c.rues.rep ? esc(c.rues.rep) + `<div class="mini">C.C. ${esc(c.rues.repId)}</div>` : '<span class="mini">—</span>'}</td><td>${chips(c)}</td></tr>`).join("")
+    || `<tr><td colspan="6" class="mini">${LISTA.length ? "Sin resultados con estos filtros." : "Elija un territorio y presione Consultar."}</td></tr>`;
+  $("#pagInfo").textContent = `${v.length.toLocaleString("es-CO")} contratistas · página ${PAG + 1} de ${pags}`;
+  $("#prev").disabled = PAG === 0; $("#next").disabled = PAG >= pags - 1;
+  document.querySelectorAll("#tabla tr.fila").forEach(tr => tr.onclick = () => detalle(tr));
+  if (abrir && v.length === 1) detalle(document.querySelector("#tabla tr.fila"));
+}
+
+const filaC = x => `<tr><td>${esc(x.entidad)}</td><td>${esc(x.tipo)}</td><td class="r">${peso(x.valor)}</td><td>${esc(x.fecha)}</td><td>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">SECOP</a>` : ""}</td></tr>`;
+const tablaC = l => `<table><tr><th>Entidad</th><th>Tipo</th><th class="r">Valor</th><th>Firma</th><th></th></tr>${l.map(filaC).join("")}</table>`;
+
+async function detalle(tr) {
+  const sig = tr.nextElementSibling;
+  if (sig && sig.classList.contains("det")) { sig.remove(); return; }
+  const c = EMP[tr.dataset.nit], e = c.rues;
+  let h = "";
+  if (c.alertas.length) h += `<h4>Alertas</h4>` + c.alertas.map(([k, d]) => `<div style="margin-bottom:4px"><span class="chip ${TIPOS[k][0]}">${esc(TIPOS[k][1])}</span> <span class="mini">${esc(d || TIPOS[k][2])}</span></div>`).join("");
+  if (e) {
+    h += `<h4>Registro en el RUES</h4><div class="mini" style="margin-bottom:6px">${esc(e.tipo)} · ${esc(e.org)} · CIIU ${esc(e.ciiu)}${e.ciiu2 ? " / " + esc(e.ciiu2) : ""} · matriculada desde ${fecha(e.origen)} · último año renovado ${e.anio || "—"}</div>
+    <table><tr><th>Cámara</th><th>N° matrícula</th><th>Estado</th><th>Fecha matrícula</th><th>Renovación</th><th>Representante</th></tr>` +
+    e.filas.map(f => `<tr><td>${esc(f.camara_comercio)}</td><td>${esc(f.matricula)}</td><td>${esc(f.estado_matricula)}</td><td>${fecha(f.fecha_matricula)}</td><td>${fecha(f.fecha_renovacion)}</td><td>${esc(f.representante_legal)} ${f.num_identificacion_representante_legal ? '<span class="mini">' + esc(f.num_identificacion_representante_legal) + "</span>" : ""}</td></tr>`).join("") + "</table>";
+  } else if (c.clase === "privado") h += `<h4>Registro en el RUES</h4><p class="mini">${c.consultado ? "El NIT no aparece en el RUES." : "Aún no se ha consultado."}</p>`;
+  else h += `<p class="mini">${c.clase === "asociacion" ? "Los consorcios y uniones temporales no tienen matrícula; consulte a sus integrantes en la pestaña Consulta libre." : "Entidad pública: no se inscribe en la cámara de comercio."}</p>`;
+  const ents = Object.entries(c.entidades).sort((a, b) => b[1] - a[1]);
+  h += `<h4>Contratos en ${esc(T.nombre)} desde ${T.anio} (${c.n}, ${mill(c.valor)}; ${c.directa} por contratación directa)</h4>` +
+    (ents.length ? `<div class="mini" style="margin-bottom:6px">${ents.slice(0, 6).map(([k, v]) => esc(k) + ": " + mill(v)).join(" · ")}</div>` : "") + `<div class="cdet"><p class="mini">Cargando contratos…</p></div>`;
+  if (c.repOps && c.repOps.length) h += `<h4>Contratos de ${esc(e.rep)} como persona natural en ${esc(T.nombre)}</h4>` + tablaC(c.repOps);
+  const n = document.createElement("tr"); n.className = "det"; n.innerHTML = `<td colspan="6">${h}</td>`; tr.after(n);
+  if (!c.contratos) {
+    try {
+      const f = await api(SECOP, { select: "nombre_entidad,tipo_de_contrato,valor_del_contrato,fecha_de_firma,urlproceso,objeto_del_contrato",
+        where: T.where + ` AND starts_with(documento_proveedor,'${c.nit}')`, order: "valor_del_contrato DESC", limit: 25 }, 60000);
+      c.contratos = f.map(r => ({ entidad: r.nombre_entidad, tipo: r.tipo_de_contrato, valor: +r.valor_del_contrato || 0, fecha: fecha(r.fecha_de_firma), url: urlSecop(r.urlproceso), objeto: r.objeto_del_contrato }));
+    } catch (er) { c.contratos = null; }
+  }
+  const box = n.querySelector(".cdet");
+  if (box) box.innerHTML = c.contratos ? tablaC(c.contratos) + (c.n > c.contratos.length ? `<p class="mini">Se muestran los ${c.contratos.length} de mayor valor.</p>` : "") +
+    (c.contratos[0] && c.contratos[0].objeto ? `<p class="mini" style="margin-top:6px">Objeto del contrato más grande: ${esc(String(c.contratos[0].objeto).slice(0, 300))}</p>` : "")
+    : '<p class="mini">SECOP II no respondió.</p>';
+}
+
+function reps() {
+  const priv = LISTA.filter(c => c.clase === "privado");
+  const ops = priv.filter(c => c.repOps && c.repOps.length).sort((a, b) => b.valor - a.valor);
+  $("#repOps").innerHTML = ops.length ? `<table><tr><th>Representante</th><th>Contratista que representa</th><th class="r">Valor del contratista</th><th>Sus contratos como persona natural</th></tr>` +
+    ops.map(c => `<tr><td><b>${esc(c.rues.rep)}</b><div class="mini">C.C. ${esc(c.rues.repId)}</div></td><td>${esc(c.nombre)}<div class="mini">NIT ${c.nit}</div></td><td class="r">${mill(c.valor)}</td><td>${c.repOps.slice(0, 6).map(x => `${esc(x.entidad)}: ${peso(x.valor)} (${esc(x.fecha)}) <span class="mini">${esc(x.tipo)}</span>`).join("<br>")}${c.repOps.length > 6 ? `<div class="mini">y ${c.repOps.length - 6} más</div>` : ""}</td></tr>`).join("") + "</table>"
+    : '<p class="note">Ninguno, entre los contratistas consultados.</p>';
+  const vis = new Set(), multi = [];
+  priv.forEach(c => { if (c.rues && c.rues.repId && !vis.has(c.rues.repId)) { const g = priv.filter(o => o.rues && o.rues.repId === c.rues.repId); if (g.length > 1) multi.push(g); vis.add(c.rues.repId); } });
+  $("#repMulti").innerHTML = multi.length ? `<table><tr><th>Representante</th><th>Contratistas</th><th class="r">Valor conjunto</th></tr>` +
+    multi.map(g => `<tr><td><b>${esc(g[0].rues.rep)}</b><div class="mini">C.C. ${esc(g[0].rues.repId)}</div></td><td>${g.map(c => esc(c.nombre) + ' <span class="mini">' + mill(c.valor) + "</span>").join("<br>")}</td><td class="r">${mill(g.reduce((s, c) => s + c.valor, 0))}</td></tr>`).join("") + "</table>"
+    : '<p class="note">Ninguno, entre los contratistas consultados.</p>';
+  const pares = new Set(), filas = [];
+  priv.forEach(c => c.parientes.forEach(([k, o]) => { const id = [c.nit, o.nit].sort().join("-") + k; if (!pares.has(id)) { pares.add(id); filas.push([k, c, o]); } }));
+  $("#repApe").innerHTML = filas.length ? `<table><tr><th>Apellidos</th><th>Representante y contratista</th><th>Representante y contratista</th></tr>` +
+    filas.map(([k, a, b]) => `<tr><td><b>${esc(k)}</b></td><td>${esc(a.rues.rep)}<div class="mini">${esc(a.nombre)} · ${mill(a.valor)}</div></td><td>${esc(b.rues.rep)}<div class="mini">${esc(b.nombre)} · ${mill(b.valor)}</div></td></tr>`).join("") + "</table>"
+    : '<p class="note">Ninguno, entre los contratistas consultados.</p>';
+}
+
+/* ---------- eventos ---------- */
+$("#ir").onclick = cargar;
+["#q", "#fClase", "#fAlerta", "#fEnt"].forEach(s => $(s).addEventListener("input", () => { PAG = 0; tabla(); }));
+$("#prev").onclick = () => { PAG--; tabla(); }; $("#next").onclick = () => { PAG++; tabla(); };
+document.querySelectorAll("#tabla th").forEach(th => th.onclick = () => { const k = th.dataset.o; ORDEN = { k, d: ORDEN.k === k ? -ORDEN.d : (k === "nombre" || k === "rep" ? 1 : -1) }; tabla(); });
+$("#csv").onclick = () => {
+  const cq = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+  const cab = ["Territorio", "NIT", "Contratista", "Clase", "Contratos", "Valor", "Contratación directa", "Primer contrato", "Entidades", "Razón social RUES", "Estado", "Cámara", "Tipo", "CIIU", "Fecha matrícula", "Último año renovado", "Representante", "C.C. representante", "Alertas"];
+  const filas = filtrar().map(c => { const e = c.rues || {}; return [T ? T.nombre : "", c.nit, c.nombre, c.clase, c.n, Math.round(c.valor), c.directa, fecha(c.primera), Object.keys(c.entidades).join(" | "), e.razon, e.estado, e.camara, e.tipo, e.ciiu, fecha(e.origen), e.anio, e.rep, e.repId, c.alertas.map(a => TIPOS[a[0]][1] + (a[1] ? " (" + a[1] + ")" : "")).join(" | ")].map(cq).join(";"); });
+  const b = new Blob(["﻿" + cab.map(cq).join(";") + "\n" + filas.join("\n")], { type: "text/csv;charset=utf-8" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(b);
+  a.download = "contratistas_rues_" + (T ? T.nombre : "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "_") + ".csv"; a.click();
+};
+
+/* ---------- consulta libre ---------- */
+async function consultaLibre() {
+  const v = docN($("#cq").value); if (!v) return;
+  const out = $("#cres"); out.innerHTML = '<p class="note">Consultando el RUES y SECOP II…</p>';
+  const esNit = /^[89]\d{8,9}$/.test(v), nit = v.slice(0, 9), desde = $("#desde").value + "-01-01T00:00:00";
+  let filas = [], cont = null;
+  try {
+    [filas, cont] = await Promise.all([
+      esNit ? rues(`nit='${nit}'`) : rues(`num_identificacion_representante_legal='${v}' OR numero_identificacion='${v}'`),
+      api(SECOP, { select: "proveedor_adjudicado,nombre_entidad,departamento,ciudad,tipo_de_contrato,valor_del_contrato,fecha_de_firma,urlproceso",
+        where: (esNit ? `starts_with(documento_proveedor,'${nit}')` : `documento_proveedor='${v}'`) + ` AND fecha_de_firma>='${desde}'`, order: "fecha_de_firma DESC", limit: 200 }, 60000).catch(() => null)]);
+  } catch (e) { out.innerHTML = '<div class="aviso err">El RUES (datos.gov.co) no respondió. Intente de nuevo.</div>'; return; }
+  let h = "";
+  if (!filas.length) h += `<div class="panel"><p class="note">No hay registros en el RUES para ${esc(v)}.</p></div>`;
+  else h += `<div class="panel"><h3>${esNit ? "Matrícula del NIT " + esc(nit) : "Registros del RUES donde aparece la cédula " + esc(v)}</h3><table><tr><th>NIT</th><th>Razón social</th><th>Cámara</th><th>Estado</th><th>Matrícula</th><th>Renovado</th><th>CIIU</th><th>Representante</th></tr>` +
+    filas.map(f => `<tr><td>${esc(f.nit)}</td><td>${esc(f.razon_social)}<div class="mini">${esc(f.organizacion_juridica)}</div></td><td>${esc(f.camara_comercio)}</td><td>${esc(f.estado_matricula)}</td><td>${fecha(f.fecha_matricula)}</td><td>${esc(f.ultimo_ano_renovado)}</td><td>${esc(f.cod_ciiu_act_econ_pri)}</td><td>${esc(f.representante_legal)} <span class="mini">${esc(f.num_identificacion_representante_legal)}</span></td></tr>`).join("") + "</table></div>";
+  if (cont === null) h += '<div class="panel"><p class="note">SECOP II no respondió para los contratos.</p></div>';
+  else if (!cont.length) h += `<div class="panel"><p class="note">Sin contratos en SECOP II desde ${$("#desde").value} para ${esc(esNit ? nit : v)}.</p></div>`;
+  else h += `<div class="panel"><h3>Contratos en SECOP II desde ${$("#desde").value} (${cont.length}${cont.length === 200 ? "+" : ""}, ${mill(cont.reduce((s, r) => s + (+r.valor_del_contrato || 0), 0))})</h3><table><tr><th>Entidad</th><th>Lugar</th><th>Tipo</th><th class="r">Valor</th><th>Firma</th><th></th></tr>` +
+    cont.map(r => `<tr><td>${esc(r.nombre_entidad)}</td><td>${esc(r.ciudad)}<div class="mini">${esc(r.departamento)}</div></td><td>${esc(r.tipo_de_contrato)}</td><td class="r">${peso(r.valor_del_contrato)}</td><td>${fecha(r.fecha_de_firma)}</td><td>${urlSecop(r.urlproceso) ? `<a href="${esc(urlSecop(r.urlproceso))}" target="_blank" rel="noopener">SECOP</a>` : ""}</td></tr>`).join("") + "</table></div>";
+  out.innerHTML = h;
+}
+$("#cbtn").onclick = consultaLibre;
+$("#cq").addEventListener("keydown", e => { if (e.key === "Enter") consultaLibre(); });
+
+const pre = new URLSearchParams(location.search).get("t");
+if (pre) { const o = [...terr.options].find(x => x.value === pre || x.value === "m:" + pre); if (o) terr.value = o.value; }
+pintar();
+cargar();
+})();
+</script>
+<script src="/js/auditoria.js" defer></script>
+</body>
+</html>

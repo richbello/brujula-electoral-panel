@@ -21,7 +21,7 @@
     "vigilancia-fiscal-soacha": "03 Vigilancia fiscal (Soacha)",
     "analisis-electoral-2027": "Análisis electoral 2027", "analisis-electoral-2027-embed": "Análisis electoral 2027",
     "auditoria": "Auditoría", "soacha-inversion": "08 Soacha: inversión", "soacha-seguridad": "09 Seguridad y convivencia",
-    "soacha-rues": "10 Contratistas y RUES" };
+    "soacha-rues": "10 Contratistas y RUES", "contratistas-rues": "10 Contratistas y RUES" };
 
   function modulo() {
     if (/^\/presupuesto(\/|$)/.test(location.pathname)) return "07 Análisis presupuestal";
