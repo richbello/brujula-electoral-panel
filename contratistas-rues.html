@@ -92,6 +92,7 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
 <nav class="tabs">
   <button data-t="resumen" class="on">Resumen y alertas</button>
   <button data-t="tabla">Todos los contratistas</button>
+  <button data-t="ranking">Ranking</button>
   <button data-t="reps">Representantes legales</button>
   <button data-t="consulta">Ficha del contratista</button>
   <button data-t="metodo">Cómo se calcula</button>
@@ -120,6 +121,16 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
     <th data-o="nombre">Contratista</th><th data-o="valor" class="r">Valor contratado</th><th data-o="n" class="r">Contratos</th>
     <th data-o="estado">Estado RUES</th><th data-o="rep">Representante legal</th><th data-o="nal">Alertas</th></tr></thead><tbody></tbody></table></div>
   <div class="pag"><span id="pagInfo"></span><button class="btn sec" id="prev">&larr;</button><button class="btn sec" id="next">&rarr;</button></div>
+</section>
+
+<section class="pane" id="p-ranking">
+  <h2>Ranking de contratistas</h2>
+  <p class="sub">Quiénes tienen más contratos y quiénes se han llevado más plata en el territorio elegido arriba, sobre todos los contratos de SECOP II del periodo. Incluye personas naturales.</p>
+  <div class="filtros">
+    <select id="rkTipo"><option value="">Empresas y personas</option><option value="nit">Solo con NIT (empresas, ESAL, consorcios)</option><option value="per">Solo personas naturales</option></select>
+    <span id="rkOrden" style="display:flex;gap:8px"><button class="btn" data-o="v">Más beneficiados (valor)</button><button class="btn sec" data-o="n">Más contratos</button></span>
+  </div>
+  <div id="rkRes"><p class="note">Abriendo…</p></div>
 </section>
 
 <section class="pane" id="p-reps">
@@ -302,6 +313,7 @@ function error(t) { $("#estado").className = "aviso err"; $("#estado").textConte
 
 async function cargar() {
   const id = ++CORRIENDO; T = territorio();
+  if ($("#p-ranking").classList.contains("on")) setTimeout(ranking, 0);
   const vivo = () => id === CORRIENDO;
   $("#titulo").textContent = "Contratistas de " + T.nombre + " frente al RUES";
   LISTA = []; EMP = {}; ENTS = []; PAG = 0; pintar();
@@ -521,6 +533,71 @@ $("#csv").onclick = () => {
   const a = document.createElement("a"); a.href = URL.createObjectURL(b);
   a.download = "contratistas_rues_" + (T ? T.nombre : "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "_") + ".csv"; a.click();
 };
+
+/* ---------- ranking ---------- */
+let RK = { clave: null, datos: null, orden: "v" };
+async function ranking() {
+  const t = territorio(), tipo = $("#rkTipo").value, clave = t.where + "|" + tipo;
+  if (RK.clave === clave && RK.datos) return pintarRanking();
+  RK.clave = clave; RK.datos = null;
+  const out = $("#rkRes"); out.innerHTML = `<div class="aviso">Calculando el ranking de ${esc(t.nombre)} desde ${t.anio} en SECOP II… (Bogotá y Cundinamarca completo pueden tardar hasta un minuto)</div>`;
+  const base = t.where + " AND documento_proveedor!='No Definido'" + (tipo === "nit" ? " AND tipodocproveedor='NIT'" : tipo === "per" ? " AND tipodocproveedor!='NIT'" : "");
+  const sel = "documento_proveedor as d,max(proveedor_adjudicado) as p,max(tipodocproveedor) as t,sum(valor_del_contrato) as v,count(*) as n";
+  try {
+    const sinDoc = t.where + " AND documento_proveedor='No Definido'";
+    const [tot, porV, porN, sdV, sdN] = await Promise.all([
+      api(SECOP, { select: "sum(valor_del_contrato) as v,count(*) as n,count(documento_proveedor) as c", where: base }, 120000),
+      api(SECOP, { select: sel, where: base, group: "d", order: "v DESC", limit: 80 }, 120000),
+      api(SECOP, { select: sel, where: base, group: "d", order: "n DESC", limit: 80 }, 120000),
+      tipo === "per" ? [] : api(SECOP, { select: "proveedor_adjudicado as p,sum(valor_del_contrato) as v,count(*) as n", where: sinDoc, group: "p", order: "v DESC", limit: 30 }, 120000).catch(() => []),
+      tipo === "per" ? [] : api(SECOP, { select: "proveedor_adjudicado as p,sum(valor_del_contrato) as v,count(*) as n", where: sinDoc, group: "p", order: "n DESC", limit: 30 }, 120000).catch(() => [])]);
+    if (RK.clave !== clave) return;
+    const unir = filas => { const m = {}; filas.forEach(r => { const k = nitDe(r.d) || docN(r.d) || r.d; const x = m[k] || (m[k] = { doc: k, nombre: r.p, tipo: r.t, v: 0, n: 0, crudos: [] });
+      x.v += +r.v || 0; x.n += +r.n || 0; x.crudos.push(r.d); }); return m; };
+    const mV = unir(porV), mN = unir(porN), todos = Object.assign({}, mN, mV);
+    const sd = (filas, m) => filas.forEach(r => { m["sd:" + r.p] = { doc: "", nombre: r.p, tipo: "Sin documento en SECOP", v: +r.v || 0, n: +r.n || 0, crudos: [] }; });
+    sd(sdV, mV); sd(sdN, mN);
+    const totSd = tipo === "per" ? [] : await api(SECOP, { select: "sum(valor_del_contrato) as v,count(*) as n", where: sinDoc }, 120000).catch(() => []);
+    if (totSd[0]) { tot[0].v = (+tot[0].v || 0) + (+totSd[0].v || 0); tot[0].n = (+tot[0].n || 0) + (+totSd[0].n || 0); }
+    const docs = [...new Set(Object.values(todos).flatMap(x => x.crudos))];
+    const det = {};
+    for (let i = 0; i < docs.length; i += 60) {
+      const parte = docs.slice(i, i + 60);
+      try {
+        const f = await api(SECOP, { select: "documento_proveedor as d,nombre_entidad as e,modalidad_de_contratacion as m,sum(valor_del_contrato) as v,count(*) as n",
+          where: t.where + " AND documento_proveedor in(" + parte.map(q).join(",") + ")", group: "d,e,m", limit: 50000 }, 120000);
+        f.forEach(r => { const k = nitDe(r.d) || docN(r.d) || r.d; const x = det[k] || (det[k] = { ents: new Set(), dv: 0, dn: 0 });
+          x.ents.add(r.e); if (/irecta/i.test(r.m || "")) { x.dv += +r.v || 0; x.dn += +r.n || 0; } });
+      } catch (e) { /* complementario */ }
+      if (RK.clave !== clave) return;
+    }
+    RK.datos = { t, tipo, total: +tot[0].v || 0, contratos: +tot[0].n || 0, porV: Object.values(mV), porN: Object.values(mN), det };
+    pintarRanking();
+  } catch (e) { if (RK.clave === clave) { RK.clave = null; out.innerHTML = '<div class="aviso err">SECOP II (datos.gov.co) no respondió. Intente de nuevo o elija un territorio más pequeño.</div>'; } }
+}
+function pintarRanking() {
+  const D = RK.datos, out = $("#rkRes"); if (!D) return;
+  const lista = (RK.orden === "v" ? D.porV.slice().sort((a, b) => b.v - a.v) : D.porN.slice().sort((a, b) => b.n - a.n || b.v - a.v)).slice(0, 50);
+  const top = D.porV.slice().sort((a, b) => b.v - a.v), s10 = top.slice(0, 10).reduce((s, x) => s + x.v, 0), pct = x => D.total ? (x / D.total * 100) : 0;
+  const pf = x => x.toLocaleString("es-CO", { maximumFractionDigits: 1 }) + "%";
+  const quien = { "": "contratistas", nit: "empresas, ESAL, consorcios y entidades con NIT", per: "personas naturales" }[D.tipo];
+  let h = `<div class="kpis">${[
+    ["Contratos en el territorio", D.contratos.toLocaleString("es-CO"), quien + " · desde " + D.t.anio],
+    ["Valor contratado", mill(D.total), esc(D.t.nombre)],
+    ["Se lleva el primero", top[0] ? pf(pct(top[0].v)) : "—", top[0] ? esc(top[0].nombre) : ""],
+    ["Se llevan los 10 primeros", pf(pct(s10)), mill(s10)]].map(([a, b, s]) => `<div class="kpi"><small>${a}</small><b>${b}</b><span>${s}</span></div>`).join("")}</div>`;
+  h += `<div class="panel" style="padding:0"><table><tr><th class="r">#</th><th>Contratista</th><th class="r">Contratos</th><th class="r">Valor</th><th class="r">% del total</th><th class="r">Por contratación directa</th><th class="r">Entidades</th><th></th></tr>` +
+    lista.map((x, i) => { const d = D.det[x.doc] || { ents: new Set(), dv: 0, dn: 0 }; const pd = x.v ? d.dv / x.v * 100 : 0;
+      return `<tr><td class="r">${i + 1}</td><td><b>${esc(x.nombre)}</b><div class="mini">${esc(x.tipo)} ${esc(x.doc)}</div></td><td class="r">${x.n.toLocaleString("es-CO")}</td><td class="r">${mill(x.v)}</td>
+        <td class="r">${pf(pct(x.v))}</td><td class="r">${d.ents.size ? pf(pd) + `<div class="mini">${d.dn} contratos</div>` : '<span class="mini">—</span>'}</td><td class="r">${d.ents.size || "—"}</td>
+        <td>${x.doc ? `<button class="btn sec" style="padding:6px 10px;font-size:12px" data-ficha="${esc(x.doc)}">Ficha</button>` : ""}</td></tr>`; }).join("") + "</table></div>";
+  h += `<p class="note">Calculado sobre todos los contratos de SECOP II de ${esc(D.t.nombre)} firmados desde ${D.t.anio}. Un NIT con y sin dígito de verificación se suma como un solo contratista. Los contratistas que SECOP registra sin documento (casi siempre consorcios) se agrupan por nombre y no tienen ficha. "Por contratación directa" es la parte del valor del contratista que se adjudicó por contratación directa.</p>`;
+  out.innerHTML = h;
+}
+$("#rkTipo").addEventListener("input", ranking);
+document.querySelectorAll("#rkOrden button").forEach(b => b.onclick = () => {
+  RK.orden = b.dataset.o; document.querySelectorAll("#rkOrden button").forEach(x => x.className = "btn" + (x === b ? "" : " sec")); pintarRanking(); });
+document.querySelector('.tabs button[data-t="ranking"]').addEventListener("click", ranking);
 
 /* ---------- ficha del contratista ---------- */
 const DS = { secop1: "https://www.datos.gov.co/resource/f789-7hwg.json", grupos: "https://www.datos.gov.co/resource/ceth-n4bn.json",
