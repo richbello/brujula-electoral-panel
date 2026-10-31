@@ -12,6 +12,14 @@
     nueva = true;
     try { sessionStorage.setItem(CLAVE, s); } catch (e) {}
   }
+  // Identificador del navegador (no de la pestana): sirve para la sesion unica por dispositivo.
+  var disp = null;
+  try { disp = localStorage.getItem("xirin_disp"); } catch (e) {}
+  if (!disp) {
+    disp = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+      : "d" + Date.now().toString(36) + Math.random().toString(36).slice(2);
+    try { localStorage.setItem("xirin_disp", disp); } catch (e) {}
+  }
 
   var HASH = { vigilancia: "03 Vigilancia fiscal", cundinamarca: "03 Vigilancia · Cundinamarca",
     financiadores: "04 Financiadores y contratos", territorio: "05 Territorio y obras",
@@ -21,7 +29,8 @@
     "vigilancia-fiscal-soacha": "03 Vigilancia fiscal (Soacha)",
     "analisis-electoral-2027": "Análisis electoral 2027", "analisis-electoral-2027-embed": "Análisis electoral 2027",
     "auditoria": "Auditoría", "soacha-inversion": "08 Soacha: inversión", "soacha-seguridad": "09 Seguridad y convivencia",
-    "soacha-rues": "10 Contratistas y RUES", "contratistas-rues": "10 Contratistas y RUES" };
+    "soacha-rues": "10 Contratistas y RUES", "contratistas-rues": "10 Contratistas y RUES",
+    "ciberseguridad": "11 Ciberseguridad" };
 
   function modulo() {
     if (/^\/presupuesto(\/|$)/.test(location.pathname)) return "07 Análisis presupuestal";
@@ -32,6 +41,7 @@
 
   function enviar(ev) {
     ev.sesion = s;
+    ev.disp = disp;
     ev.ruta = location.pathname + location.hash;
     var cuerpo = JSON.stringify(ev);
     try {
@@ -236,8 +246,103 @@
         botonAuditoria();
       } else {
         vigilarMarca(yo && yo.email);
+        if (yo && yo.email) controles(yo.politica || {});
       }
     });
+
+  /* ---------- Modulo 11: controles de sesion para clientes ---------- */
+  var bloqueoPantalla = false;
+  function pantalla(titulo, texto, botones) {
+    var v = document.getElementById("xirin-velo");
+    if (!v) {
+      v = document.createElement("div"); v.id = "xirin-velo";
+      v.style.cssText = "position:fixed;inset:0;z-index:2147483647;background:rgba(21,11,61,.82);display:grid;place-items:center;padding:20px";
+      document.body.appendChild(v);
+    }
+    v.innerHTML = '<div style="background:#fff;color:#150B3D;max-width:560px;width:100%;border-radius:12px;padding:26px 28px;' +
+      "font:14px/1.6 Inter,'Segoe UI',sans-serif;box-shadow:0 20px 60px rgba(0,0,0,.35);border-top:4px solid #FFB020;max-height:90vh;overflow:auto\">" +
+      '<h2 style="font-size:19px;margin:0 0 10px"></h2><div class="xv-t" style="color:#3C3260"></div>' +
+      '<div class="xv-b" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px"></div></div>';
+    v.querySelector("h2").textContent = titulo;
+    v.querySelector(".xv-t").innerHTML = texto;
+    (botones || []).forEach(function (b) {
+      var x = document.createElement("button");
+      x.textContent = b.t;
+      x.style.cssText = "border:0;border-radius:9px;padding:11px 18px;font:700 14px Inter,'Segoe UI',sans-serif;cursor:pointer;" +
+        (b.sec ? "background:#F1EEFB;color:#5C4F82" : "background:#150B3D;color:#fff");
+      x.onclick = b.f;
+      v.querySelector(".xv-b").appendChild(x);
+    });
+    v.hidden = false;
+    return v;
+  }
+  function quitarPantalla() { var v = document.getElementById("xirin-velo"); if (v) v.hidden = true; }
+  function salir() { location.href = "/cdn-cgi/access/logout"; }
+
+  function controles(pol) {
+    // 1. Aviso de privacidad (Ley 1581 de 2012): una vez por navegador y version del texto.
+    var ver = pol.aviso_version || "1", aceptado = null;
+    try { aceptado = localStorage.getItem("xirin_aviso"); } catch (e) {}
+    if (aceptado !== ver) {
+      bloqueoPantalla = true;
+      pantalla("Aviso de privacidad y seguridad",
+        "<p>Este panel es información confidencial de <b>X-irin Technologies S.A.S.</b> Para protegerla, la plataforma registra " +
+        "<b>su correo, la fecha y hora de ingreso, los módulos que consulta, el tiempo en cada uno, la dirección IP, la ciudad " +
+        "y el navegador</b>, así como los intentos de copiar, descargar o abrir información no autorizada.</p>" +
+        "<p style=\"margin-top:10px\">Estos datos se usan solo para la seguridad del servicio y el control de acceso, se conservan " +
+        (pol.retencion_dias || 365) + " días y luego se borran. Usted puede conocerlos, actualizarlos o pedir su supresión " +
+        "(Ley 1581 de 2012) escribiendo al administrador de la plataforma.</p>" +
+        "<p style=\"margin-top:10px\">Las pantallas llevan su correo como marca de agua. El usuario es personal: si se abre en otro " +
+        "dispositivo, la sesión anterior se cierra.</p>",
+        [{ t: "Entiendo y acepto", f: function () {
+            try { localStorage.setItem("xirin_aviso", ver); } catch (e) {}
+            enviar({ tipo: "aviso_aceptado", modulo: actual, detalle: "Aviso de privacidad v" + ver });
+            bloqueoPantalla = false; quitarPantalla();
+          } },
+         { t: "Salir", sec: true, f: salir }]);
+    }
+
+    // 2. Cierre por inactividad.
+    var minutos = Number(pol.inactividad_min) || 30, ultimoMov = Date.now();
+    ["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(function (t) {
+      window.addEventListener(t, function () { ultimoMov = Date.now(); }, { passive: true, capture: true });
+    });
+    var tInac = setInterval(function () {
+      if (Date.now() - ultimoMov < minutos * 60000) return;
+      clearInterval(tInac);
+      enviar({ tipo: "salida", modulo: actual, segundos: 0, detalle: "Cierre por inactividad" });
+      pantalla("Sesión cerrada por inactividad",
+        "<p>Pasaron " + minutos + " minutos sin actividad. Por seguridad se cerró la sesión.</p>",
+        [{ t: "Volver a entrar", f: salir }]);
+    }, 30000);
+
+    // 3. Suspension y sesion unica: el servidor dice si este dispositivo sigue siendo el vigente.
+    function revisar() {
+      fetch("/api/estado?disp=" + encodeURIComponent(disp), { credentials: "include", cache: "no-store" })
+        .then(function (r) { return r.ok || r.status === 403 ? r.json() : null; })
+        .catch(function () { return null; })
+        .then(function (e) {
+          if (!e) return;
+          if (bloqueoPantalla && !e.bloqueado && e.error !== "suspendido") return;   // primero el aviso de privacidad
+          if (e.bloqueado || e.error === "suspendido") {
+            pantalla("Usuario suspendido", "<p>El acceso de este usuario al panel fue suspendido por el administrador.</p>",
+              [{ t: "Cerrar sesión", f: salir }]);
+          } else if (e.desplazado) {
+            pantalla("Su usuario se abrió en otro dispositivo",
+              "<p>El usuario es personal y solo puede estar activo en un dispositivo a la vez. Por seguridad, esta sesión se cerró " +
+              "y el administrador fue notificado.</p><p style=\"margin-top:10px\">Si fue usted, puede seguir aquí; " +
+              "la sesión del otro dispositivo se cerrará.</p>",
+              [{ t: "Seguir en este dispositivo", f: function () {
+                  enviar({ tipo: "inicio_sesion", modulo: actual, detalle: "Retoma la sesión en este dispositivo" });
+                  if (!bloqueoPantalla) quitarPantalla();
+                } },
+               { t: "Cerrar sesión", sec: true, f: salir }]);
+          }
+        });
+    }
+    setTimeout(revisar, 5000);
+    setInterval(revisar, 60000);
+  }
 
   // Para que las paginas registren un intento bloqueado en pantalla.
   window.xirinRestringido = function (detalle) {

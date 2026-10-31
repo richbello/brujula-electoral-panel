@@ -10,7 +10,13 @@
   "vars": {
     "TEAM_DOMAIN": "xirin-technologies.cloudflareaccess.com",
     "ACCESS_AUD": "26bba0559fa6af59a946545ea412f615989850cb6dd87ebd99bdad2c47e741dd",
-    "ADMINS": "richbello@gmail.com"
+    "ADMINS": "richbello@gmail.com",
+    // Modulo 11 Ciberseguridad
+    "INACTIVIDAD_MIN": "30",   // cierre de sesion de clientes por inactividad
+    "RETENCION_DIAS": "365",   // registros de auditoria mas antiguos se borran (Ley 1581 de 2012)
+    "LIMITE_MIN": "120"        // consultas de datos por minuto y usuario antes de bloquear
   },
+  // Limpieza diaria de registros vencidos (3:17 a. m. de Bogota).
+  "triggers": { "crons": ["17 8 * * *"] },
   "observability": { "enabled": true }
 }

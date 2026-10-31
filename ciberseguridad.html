@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ciberseguridad · Estrategia Electoral 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#150B3D;--gold:#FFB020;--bg:#F3F1FF;--muted:#5C4F82;--line:#E0D9F7;--ok:#00A86B;--bad:#E11D48;--warn:#EA6A0A;--soft:#F8F6FF;--c1:#4A5BAE;--c2:#A65A80}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--navy)}
+header{background:var(--navy);color:#fff}
+.bar{max-width:1240px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:14px}
+.mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center}
+.mark span{width:2px;height:16px;background:var(--gold);transform:rotate(25deg);border-radius:2px}
+.brand{flex:1}.brand b{font-size:18px;font-weight:700}.brand em{font-style:normal;color:var(--gold)}
+.brand small{display:block;font-size:12px;color:#B4A6DB;margin-top:2px}
+.back{color:#fff;text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,.25);padding:9px 14px;border-radius:8px;white-space:nowrap}
+.back:hover{border-color:var(--gold);color:var(--gold)}
+main{max-width:1240px;margin:0 auto;padding:32px}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
+.tabs button{background:none;border:0;padding:12px 0;font:600 14px Inter,"Segoe UI",sans-serif;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabs button.on{color:var(--navy);border-color:var(--gold)}
+.tabs button[hidden]{display:none}
+.pane{display:none}.pane.on{display:block}
+h2{font-size:22px;margin-bottom:4px}
+.sub{color:var(--muted);font-size:14px;margin-bottom:22px;line-height:1.55;max-width:900px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:20px;overflow-x:auto}
+.panel h3{font-size:15px;margin-bottom:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:20px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.kpi small{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.kpi b{font-size:22px}.kpi.alta b{color:var(--bad)}.kpi.media b{color:var(--warn)}.kpi.ok b{color:var(--ok)}
+.kpi>span{display:block;font-size:11.5px;color:var(--muted);margin-top:4px}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:flex-end}
+.filtros label{display:block;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+input[type=text],input[type=date],input[type=email],select{padding:9px 12px;border:1.5px solid var(--line);border-radius:9px;font:500 14px Inter,"Segoe UI",sans-serif;background:#fff;color:var(--navy)}
+input:focus,select:focus{outline:none;border-color:var(--gold)}
+.btn{background:var(--navy);color:#fff;border:0;border-radius:9px;padding:10px 16px;font:600 13.5px Inter,"Segoe UI",sans-serif;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.sec{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn.peligro{background:#fff;color:var(--bad);border:1.5px solid #FBC4D2}
+.btn:disabled{opacity:.5;cursor:default}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.r{text-align:right;white-space:nowrap}
+.mini{font-size:12px;color:var(--muted)}
+.chip{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.chip.alta{background:#FFE4EA;color:#BE123C}.chip.media{background:#FFF1E6;color:#9A3412}.chip.baja{background:#EEF0FB;color:#3B4A9A}
+.chip.ok{background:#DCFCE7;color:#047857}.chip.na{background:#F1EEFB;color:var(--muted)}
+.aviso{background:#D6FBEC;color:#065F46;border:1px solid #A7F3D0;border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.55;margin-bottom:20px}
+.aviso.demo{background:#FFF0CC;color:#8A5A00;border-color:#FFE3A3;border-left:4px solid var(--warn)}
+.aviso.err{background:#FFF1E6;color:#7C2D12;border-color:#FED7AA}
+.lectura{background:var(--soft);border-left:4px solid var(--gold);border-radius:8px;padding:13px 17px;font-size:14px;line-height:1.65;margin-bottom:16px}
+.note{font-size:12.5px;color:var(--muted);line-height:1.65}
+.note li{margin:0 0 6px 18px}
+.ctrl{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.ctrl div{border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-size:13px;line-height:1.5;background:#fff}
+.ctrl b{display:block;font-size:13.5px;margin-bottom:3px}
+.ctrl .s{float:right;margin-left:8px}
+.grupo{margin-bottom:18px}.grupo h4{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.item{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;cursor:pointer}
+.item input{margin-top:4px;width:17px;height:17px;accent-color:var(--navy);flex:none}
+.medidor{height:10px;background:var(--line);border-radius:5px;overflow:hidden;margin:8px 0 4px}
+.medidor i{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+.hash{font:600 12.5px ui-monospace,Consolas,monospace;word-break:break-all;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cargando{color:var(--muted);font-size:14px;padding:6px 0}
+a{color:var(--c1)}
+footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color:var(--muted);line-height:1.6}
+@media(max-width:900px){.dos{grid-template-columns:1fr}}
+@media(max-width:800px){.bar,main,footer{padding-left:16px;padding-right:16px}.tabs{gap:16px}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="mark"><span></span></div><div class="brand"><b>X-<em>irin</em> Technologies S.A.S.</b><small>Estrategia Electoral 2027 · 11 Ciberseguridad</small></div><a class="back" href="index.html">&larr; Inicio</a></div></header>
+
+<main>
+<div id="aviso-base" class="aviso demo" hidden></div>
+
+<nav class="tabs" id="tabs">
+  <button data-t="resumen" data-admin hidden>Resumen</button>
+  <button data-t="auditoria" data-admin hidden>Auditoría de accesos</button>
+  <button data-t="alertas" data-admin hidden>Alertas</button>
+  <button data-t="usuarios" data-admin hidden>Usuarios y sesiones</button>
+  <button data-t="suplantacion">Suplantación del candidato</button>
+  <button data-t="higiene">Higiene digital</button>
+  <button data-t="evidencia" data-admin hidden>Evidencia</button>
+  <button data-t="privacidad">Privacidad</button>
+</nav>
+
+<!-- ============================================================ RESUMEN -->
+<section class="pane" id="p-resumen">
+  <h2>Ciberseguridad del panel y de la campaña</h2>
+  <p class="sub">Cómo está protegida la información del panel y qué ha pasado en los últimos días. Las alertas de nivel alto y medio también llegan por Telegram cuando el bot está configurado.</p>
+  <div class="kpis" id="r-kpis"><div class="cargando">Cargando…</div></div>
+  <div class="panel"><h3>Últimas alertas</h3><div id="r-alertas"><div class="cargando">Cargando…</div></div></div>
+  <div class="panel"><h3>Controles activos</h3><div class="ctrl" id="r-ctrl"></div></div>
+</section>
+
+<!-- ============================================================ AUDITORIA -->
+<section class="pane" id="p-auditoria">
+  <h2>Auditoría de accesos</h2>
+  <p class="sub">Quién entró, cuándo, a qué módulos, cuánto tiempo y qué intentó ver sin permiso. Es la base del módulo: cada alerta y cada evidencia sale de estos registros.</p>
+  <div class="kpis" id="a-kpis"><div class="cargando">Cargando…</div></div>
+  <a class="btn" href="/auditoria.html">Abrir la auditoría completa &rarr;</a>
+</section>
+
+<!-- ============================================================ ALERTAS -->
+<section class="pane" id="p-alertas">
+  <h2>Alertas de seguridad</h2>
+  <p class="sub">Se generan solas con la actividad de los usuarios clientes. Una misma alerta para el mismo usuario no se repite antes de 10 minutos.</p>
+  <div class="panel" style="padding:16px 20px">
+    <div class="filtros" style="margin:0">
+      <div><label for="al-desde">Desde</label><input type="date" id="al-desde"></div>
+      <div><label for="al-hasta">Hasta</label><input type="date" id="al-hasta"></div>
+      <div><label for="al-nivel">Nivel</label><select id="al-nivel"><option value="">Todos</option><option value="alta">Alta</option><option value="media">Media</option><option value="baja">Baja</option></select></div>
+      <button class="btn" id="al-ver">Consultar</button>
+    </div>
+  </div>
+  <div class="kpis" id="al-kpis"></div>
+  <div class="panel"><div id="al-tabla"><div class="cargando">Cargando…</div></div></div>
+  <div class="panel"><h3>Qué dispara cada alerta</h3><ul class="note">
+    <li><span class="chip alta">Alta</span> Ingreso desde otro país · posible extracción masiva (más consultas por minuto de las permitidas) · intento sin identidad válida.</li>
+    <li><span class="chip media">Media</span> Ingreso desde una ciudad nueva · ingreso entre las 11 p. m. y las 5 a. m. · el mismo usuario entra desde otro dispositivo (contraseña compartida) · intento de ver información restringida, copiar, imprimir, descargar o quitar la marca de agua.</li>
+    <li><span class="chip baja">Baja</span> Primer ingreso de un usuario · suspensión o reactivación hecha por el administrador.</li>
+  </ul></div>
+</section>
+
+<!-- ============================================================ USUARIOS -->
+<section class="pane" id="p-usuarios">
+  <h2>Usuarios y sesiones</h2>
+  <p class="sub">Cada cliente tiene un usuario personal. Desde aquí se suspende al instante a quien deje de pagar o salga del equipo; el bloqueo también corta las sesiones abiertas en menos de un minuto.</p>
+  <div class="panel"><div id="u-tabla"><div class="cargando">Cargando…</div></div></div>
+  <div class="panel"><h3>Reglas de sesión para clientes</h3><div class="ctrl" id="u-reglas"></div>
+  <p class="note" style="margin-top:12px">Para crear o retirar un usuario del todo se usa la política de Cloudflare Access (Zero Trust → Access → Applications). La suspensión de aquí es inmediata y no requiere entrar a Cloudflare.</p></div>
+</section>
+
+<!-- ============================================================ SUPLANTACION -->
+<section class="pane" id="p-suplantacion">
+  <h2>Suplantación del candidato</h2>
+  <p class="sub">Busca páginas web que usan el nombre del candidato. Revisa los certificados de seguridad (HTTPS) emitidos en el mundo con ese nombre, que son públicos, y prueba si ya están registrados dominios parecidos al oficial: con otra terminación, con palabras como "oficial" o "2027", o con una letra cambiada.</p>
+  <div class="panel" style="padding:16px 20px">
+    <div class="filtros" style="margin:0">
+      <div style="flex:1;min-width:200px"><label for="s-term">Nombre a vigilar (sin espacios)</label><input type="text" id="s-term" style="width:100%" placeholder="dannycaicedo"></div>
+      <div style="flex:1;min-width:200px"><label for="s-ofi">Dominio oficial (si existe)</label><input type="text" id="s-ofi" style="width:100%" placeholder="dannycaicedo.com"></div>
+      <div><label for="s-afi">Municipio (opcional)</label><input type="text" id="s-afi" placeholder="soacha" style="width:150px"></div>
+      <button class="btn" id="s-ir">Revisar</button>
+    </div>
+  </div>
+  <div id="s-res"></div>
+  <div class="panel"><h3>Si aparece un sitio falso</h3><ul class="note">
+    <li>Guarde la prueba: dirección exacta, captura de pantalla con fecha y, si se puede, el certificado que aparece aquí.</li>
+    <li>Repórtelo al proveedor del dominio o del alojamiento (sale en la consulta WHOIS del dominio) pidiendo la baja por suplantación.</li>
+    <li>Denúncielo en el CAI Virtual de la Policía Nacional y, si es propaganda engañosa, informe al Consejo Nacional Electoral.</li>
+    <li>Avise en las redes oficiales del candidato cuál es el único sitio verdadero.</li>
+  </ul></div>
+</section>
+
+<!-- ============================================================ HIGIENE -->
+<section class="pane" id="p-higiene">
+  <h2>Higiene digital de la campaña</h2>
+  <p class="sub">Lo básico que evita la mayoría de los ataques a una campaña: cuentas robadas, WhatsApp clonado y correos falsos a nombre del candidato.</p>
+  <div class="dos">
+    <div class="panel">
+      <h3>Correo del dominio de la campaña</h3>
+      <p class="note" style="margin-bottom:12px">Revisa si alguien podría enviar correos haciéndose pasar por la campaña.</p>
+      <div class="filtros"><input type="text" id="h-dom" placeholder="dannycaicedo.com" style="flex:1;min-width:180px"><button class="btn" id="h-ir">Revisar dominio</button></div>
+      <div id="h-res"></div>
+    </div>
+    <div class="panel">
+      <h3>Nivel de protección del equipo</h3>
+      <div style="display:flex;align-items:baseline;gap:10px"><b id="h-pct" style="font-size:30px">0 %</b><span class="mini" id="h-cuenta"></span></div>
+      <div class="medidor"><i id="h-bar"></i></div>
+      <p class="note" id="h-lectura" style="margin-top:8px"></p>
+      <p class="mini" id="h-guardado" style="margin-top:8px"></p>
+    </div>
+  </div>
+  <div class="panel"><h3>Lista de chequeo</h3><div id="h-lista"></div></div>
+</section>
+
+<!-- ============================================================ EVIDENCIA -->
+<section class="pane" id="p-evidencia">
+  <h2>Evidencia con huella digital</h2>
+  <p class="sub">Exporta los registros de un período junto con su huella SHA-256 y deja constancia en el panel. Si después alguien altera el archivo, aunque sea una coma, la huella deja de coincidir. Sirve para soportar una denuncia por acceso abusivo o violación de datos (Ley 1273 de 2009).</p>
+  <div class="panel" style="padding:16px 20px">
+    <div class="filtros" style="margin:0">
+      <div><label for="e-desde">Desde</label><input type="date" id="e-desde"></div>
+      <div><label for="e-hasta">Hasta</label><input type="date" id="e-hasta"></div>
+      <button class="btn" id="e-ir">Generar evidencia</button>
+    </div>
+  </div>
+  <div id="e-res"></div>
+  <div class="dos">
+    <div class="panel"><h3>Verificar un archivo</h3>
+      <p class="note" style="margin-bottom:12px">Elija un CSV de evidencia descargado antes. Se calcula su huella en este computador (el archivo no se sube) y se busca en las constancias.</p>
+      <input type="file" id="e-file" accept=".csv,text/csv"><div id="e-ver" style="margin-top:12px"></div></div>
+    <div class="panel"><h3>Constancias generadas</h3><div id="e-lista"><div class="cargando">Cargando…</div></div></div>
+  </div>
+</section>
+
+<!-- ============================================================ PRIVACIDAD -->
+<section class="pane" id="p-privacidad">
+  <h2>Privacidad y retención de datos</h2>
+  <p class="sub">El panel registra la actividad de sus usuarios por seguridad. Esto es lo que se registra, para qué y por cuánto tiempo.</p>
+  <div class="panel"><h3>Aviso de privacidad</h3><div class="note" id="pv-texto" style="font-size:14px;color:var(--navy)"></div></div>
+  <div class="panel" id="pv-admin" hidden><h3>Usuarios que aceptaron el aviso</h3><div id="pv-tabla"><div class="cargando">Cargando…</div></div></div>
+</section>
+</main>
+
+<footer>Módulo 11 · Ciberseguridad. Fuentes: registros propios del panel, Cloudflare Access, Certificate Transparency (crt.sh) y DNS público de Cloudflare. La revisión de suplantación muestra coincidencias de nombre: un sitio con el nombre del candidato no es por sí solo una suplantación y debe verificarse antes de denunciarlo.</footer>
+
+<script>
+(function () {
+  "use strict";
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const iso = d => d.toLocaleDateString("en-CA", { timeZone: "America/Bogota" });
+  const fh = ts => ts ? new Date(ts).toLocaleString("es-CO", { timeZone: "America/Bogota",
+    day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) : "—";
+  const fd = ts => ts ? new Date(String(ts).replace(" ", "T") + (/[zZ]|[+-]\d\d:?\d\d$/.test(ts) ? "" : "Z"))
+    .toLocaleDateString("es-CO", { day: "2-digit", month: "short", year: "numeric" }) : "—";
+  const dur = s => { s = Math.round(Number(s) || 0); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60);
+    return h ? h + " h " + m + " min" : m ? m + " min" : s + " s"; };
+  const navegador = a => { a = String(a || "");
+    const b = /Edg\//.test(a) ? "Edge" : /Chrome\//.test(a) ? "Chrome" : /Firefox\//.test(a) ? "Firefox" : /Safari\//.test(a) ? "Safari" : "Otro";
+    const so = /Windows/.test(a) ? "Windows" : /Android/.test(a) ? "Android" : /iPhone|iPad/.test(a) ? "iOS" : /Mac OS/.test(a) ? "macOS" : /Linux/.test(a) ? "Linux" : "";
+    return b + (so ? " · " + so : ""); };
+  const kpi = (t, v, cls, nota) => '<div class="kpi ' + (cls || "") + '"><small>' + esc(t) + "</small><b>" + esc(v) + "</b>" + (nota ? "<span>" + esc(nota) + "</span>" : "") + "</div>";
+  const chipNivel = n => '<span class="chip ' + esc(n) + '">' + esc(n === "alta" ? "Alta" : n === "media" ? "Media" : "Baja") + "</span>";
+  async function api(ruta, opc) {
+    const r = await fetch(ruta, Object.assign({ credentials: "include", cache: "no-store" }, opc || {}));
+    let d = null; try { d = await r.json(); } catch (e) {}
+    if (!r.ok) throw new Error((d && d.error) || ("HTTP " + r.status));
+    return d;
+  }
+  const hace = dias => iso(new Date(Date.now() - dias * 864e5));
+  let YO = { admin: false, politica: {} };
+
+  /* ------------------------------------------------ pestañas */
+  const cargado = {};
+  function abrir(t) {
+    const b = document.querySelector('#tabs button[data-t="' + t + '"]');
+    if (!b || b.hidden) t = YO.admin ? "resumen" : "suplantacion";
+    document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x.dataset.t === t));
+    document.querySelectorAll(".pane").forEach(p => p.classList.toggle("on", p.id === "p-" + t));
+    if (location.hash !== "#" + t) history.replaceState(null, "", "#" + t);
+    if (!cargado[t] && CARGAR[t]) { cargado[t] = true; CARGAR[t](); }
+  }
+  $("tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (b) abrir(b.dataset.t); });
+
+  /* ------------------------------------------------ controles (resumen y usuarios) */
+  function controles() {
+    const p = YO.politica || {}, base = p.base;
+    const c = (ok, t, d) => "<div><span class=\"s chip " + (ok === true ? "ok" : ok === "demo" ? "media" : "na") + "\">" +
+      (ok === true ? "Activo" : ok === "demo" ? "Requiere D1" : "Sin configurar") + "</span><b>" + esc(t) + "</b>" + d + "</div>";
+    return [
+      c(true, "Identidad verificada", "Cloudflare Access firma el correo de cada usuario; el panel comprueba la firma en cada consulta."),
+      c(true, "Marca de agua personal", "Cada pantalla lleva el correo del usuario, la fecha y la hora."),
+      c(true, "Bloqueo de copia, impresión y descargas", "Para clientes. Cada intento queda registrado y genera alerta."),
+      c(true, "Cierre por inactividad", "Tras " + (p.inactividad_min || 30) + " minutos sin actividad."),
+      c(true, "Límite de consultas", "Más de " + (p.limite_min || 120) + " consultas de datos por minuto se bloquean como posible extracción masiva."),
+      c(base ? true : "demo", "Sesión única por dispositivo", "Si el usuario entra desde otro equipo, el anterior se cierra y se avisa al administrador."),
+      c(base ? true : "demo", "Suspensión inmediata", "El administrador corta el acceso de un usuario desde la pestaña Usuarios."),
+      c(base ? true : "demo", "Retención de " + (p.retencion_dias || 365) + " días", "Los registros más antiguos se borran solos cada madrugada."),
+      c(p.telegram ? true : false, "Alertas por Telegram", p.telegram ? "Las alertas altas y medias llegan al celular." :
+        "Falta crear el bot y guardar TELEGRAM_TOKEN y TELEGRAM_CHAT_ID como secretos del Worker.")
+    ].join("");
+  }
+
+  /* ------------------------------------------------ RESUMEN */
+  async function resumen() {
+    try {
+      const [al, au, us] = await Promise.all([
+        api("/api/ciber/alertas?desde=" + hace(7) + "&hasta=" + hace(0)),
+        api("/api/auditoria?desde=" + hace(30) + "&hasta=" + hace(0)),
+        api("/api/ciber/usuarios")]);
+      const n = k => al.alertas.filter(a => a.nivel === k).length;
+      const susp = us.usuarios.filter(u => u.bloqueado).length;
+      $("r-kpis").innerHTML = kpi("Alertas altas · 7 días", n("alta"), n("alta") ? "alta" : "ok") +
+        kpi("Alertas medias · 7 días", n("media"), n("media") ? "media" : "ok") +
+        kpi("Intentos restringidos · 30 días", au.restringidos.length, au.restringidos.length ? "media" : "ok") +
+        kpi("Usuarios activos · 30 días", au.usuarios.length) +
+        kpi("Usuarios suspendidos", susp);
+      $("r-alertas").innerHTML = tablaAlertas(al.alertas.slice(0, 6)) +
+        (al.alertas.length > 6 ? '<p class="note" style="margin-top:10px"><a href="#alertas" data-ir="alertas">Ver las ' + al.alertas.length + " alertas &rarr;</a></p>" : "");
+    } catch (e) {
+      $("r-kpis").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>";
+      $("r-alertas").innerHTML = "";
+    }
+    $("r-ctrl").innerHTML = controles();
+  }
+  document.addEventListener("click", e => { const a = e.target.closest("[data-ir]"); if (a) { e.preventDefault(); abrir(a.dataset.ir); } });
+
+  /* ------------------------------------------------ AUDITORIA */
+  async function auditoria() {
+    try {
+      const d = await api("/api/auditoria?desde=" + hace(30) + "&hasta=" + hace(0));
+      const tot = d.sesiones.reduce((a, s) => a + (s.segundos || 0), 0);
+      $("a-kpis").innerHTML = kpi("Usuarios · 30 días", d.usuarios.length) + kpi("Sesiones", d.sesiones.length) +
+        kpi("Tiempo activo total", dur(tot)) + kpi("Intentos a información restringida", d.restringidos.length, d.restringidos.length ? "alta" : "ok");
+    } catch (e) { $("a-kpis").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+  }
+
+  /* ------------------------------------------------ ALERTAS */
+  function tablaAlertas(l) {
+    if (!l.length) return '<p class="note">Sin alertas en el período.</p>';
+    return "<table><thead><tr><th>Fecha y hora</th><th>Nivel</th><th>Alerta</th><th>Usuario</th><th>Origen</th></tr></thead><tbody>" +
+      l.map(a => "<tr><td style=\"white-space:nowrap\">" + fh(a.ts) + "</td><td>" + chipNivel(a.nivel) + "</td><td><b>" + esc(a.tipo) +
+        '</b><span class="mini" style="display:block">' + esc(a.detalle || "") + "</span></td><td>" + esc(a.email) + "</td><td>" +
+        esc([a.ciudad, a.pais].filter(Boolean).join(", ") || "—") + '<span class="mini" style="display:block">' + esc(a.ip || "") +
+        (a.notificada ? " · enviada a Telegram" : "") + "</span></td></tr>").join("") + "</tbody></table>";
+  }
+  $("al-desde").value = hace(30); $("al-hasta").value = hace(0);
+  async function alertas() {
+    $("al-tabla").innerHTML = '<div class="cargando">Cargando…</div>';
+    try {
+      const p = new URLSearchParams({ desde: $("al-desde").value, hasta: $("al-hasta").value });
+      if ($("al-nivel").value) p.set("nivel", $("al-nivel").value);
+      const d = await api("/api/ciber/alertas?" + p);
+      const n = k => d.alertas.filter(a => a.nivel === k).length;
+      $("al-kpis").innerHTML = kpi("Total", d.alertas.length) + kpi("Altas", n("alta"), n("alta") ? "alta" : "") +
+        kpi("Medias", n("media"), n("media") ? "media" : "") + kpi("Bajas", n("baja"));
+      $("al-tabla").innerHTML = tablaAlertas(d.alertas);
+    } catch (e) { $("al-tabla").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+  }
+  $("al-ver").addEventListener("click", alertas);
+
+  /* ------------------------------------------------ USUARIOS */
+  async function usuarios() {
+    $("u-reglas").innerHTML = controles();
+    try {
+      const d = await api("/api/ciber/usuarios");
+      $("u-tabla").innerHTML = d.usuarios.length ? "<table><thead><tr><th>Usuario</th><th>Último movimiento</th><th class=\"r\">Sesiones</th>" +
+        "<th class=\"r\">Tiempo activo</th><th>Dispositivo vigente</th><th>Aviso de privacidad</th><th class=\"r\">Intentos</th><th>Estado</th><th></th></tr></thead><tbody>" +
+        d.usuarios.map(u => "<tr><td><b>" + esc(u.email) + "</b>" + (u.admin ? ' <span class="chip baja">Administrador</span>' : "") +
+          "</td><td>" + fh(u.ultima) + '</td><td class="r">' + (u.sesiones || 0) + '</td><td class="r">' + dur(u.segundos) + "</td><td>" +
+          (u.dispositivo ? esc(navegador(u.dispositivo.agente)) + '<span class="mini" style="display:block">' + esc([u.dispositivo.ciudad, u.dispositivo.ip].filter(Boolean).join(" · ")) +
+            " · desde " + fh(u.dispositivo.ts) + "</span>" : '<span class="mini">—</span>') + "</td><td>" +
+          (u.admin ? '<span class="mini">No aplica</span>' : u.aviso ? '<span class="chip ok">Aceptado</span><span class="mini" style="display:block">' + fh(u.aviso) + "</span>" : '<span class="chip media">Pendiente</span>') +
+          '</td><td class="r">' + (u.restringidos ? '<span class="chip alta">' + u.restringidos + "</span>" : "0") + "</td><td>" +
+          (u.bloqueado ? '<span class="chip alta">Suspendido</span><span class="mini" style="display:block">' + fh(u.bloqueado.ts) + (u.bloqueado.motivo ? " · " + esc(u.bloqueado.motivo) : "") + "</span>"
+            : '<span class="chip ok">Activo</span>') + "</td><td>" +
+          (u.admin ? "" : u.bloqueado ? '<button class="btn sec" data-reactivar="' + esc(u.email) + '">Reactivar</button>'
+            : '<button class="btn peligro" data-suspender="' + esc(u.email) + '">Suspender</button>') + "</td></tr>").join("") + "</tbody></table>"
+        : '<p class="note">Aún no hay usuarios con actividad.</p>';
+    } catch (e) { $("u-tabla").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+  }
+  $("u-tabla").addEventListener("click", async e => {
+    const s = e.target.closest("[data-suspender]"), r = e.target.closest("[data-reactivar]");
+    if (!s && !r) return;
+    const email = (s || r).dataset[s ? "suspender" : "reactivar"];
+    let motivo = "";
+    if (s) { motivo = prompt("¿Suspender a " + email + "? Escriba el motivo (por ejemplo: no pago, salió del equipo):", ""); if (motivo === null) return; }
+    else if (!confirm("¿Reactivar el acceso de " + email + "?")) return;
+    try {
+      await api("/api/ciber/" + (s ? "bloquear" : "desbloquear"), { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, motivo }) });
+      usuarios();
+    } catch (err) { alert(err.message); }
+  });
+
+  /* ------------------------------------------------ SUPLANTACION */
+  const S_CLAVE = "xirin_suplantacion";
+  try { const g = JSON.parse(localStorage.getItem(S_CLAVE) || "{}"); $("s-term").value = g.t || ""; $("s-ofi").value = g.o || ""; $("s-afi").value = g.a || ""; } catch (e) {}
+  async function suplantacion() {
+    const t = $("s-term").value.trim(), o = $("s-ofi").value.trim(), a = $("s-afi").value.trim();
+    if (!t) { $("s-res").innerHTML = '<div class="aviso">Escriba el nombre del candidato sin espacios (por ejemplo, dannycaicedo) y presione Revisar.</div>'; return; }
+    try { localStorage.setItem(S_CLAVE, JSON.stringify({ t, o, a })); } catch (e) {}
+    $("s-ir").disabled = true;
+    $("s-res").innerHTML = '<div class="aviso">Consultando certificados públicos y dominios parecidos. Puede tardar hasta 30 segundos…</div>';
+    try {
+      const d = await api("/api/ciber/suplantacion?" + new URLSearchParams({ termino: t, oficial: o, afijo: a }));
+      const ajenos = d.certificados.filter(c => !c.oficial);
+      const mes = Date.now() - 30 * 864e5;
+      const nuevos = ajenos.filter(c => new Date(String(c.desde) + "Z").getTime() > mes);
+      const reg = d.variantes.filter(v => v.registrado === true), libres = d.variantes.filter(v => v.registrado === false);
+      let h = '<div class="kpis">' +
+        kpi("Sitios con el nombre (no oficiales)", ajenos.length, ajenos.length ? "media" : "ok", "con certificado vigente") +
+        kpi("Aparecieron en los últimos 30 días", nuevos.length, nuevos.length ? "alta" : "ok") +
+        kpi("Dominios parecidos ya registrados", reg.length, reg.length ? "media" : "ok", "de " + d.variantes.length + " probados") +
+        kpi("Parecidos todavía libres", libres.length, "", "conviene registrar los más obvios") + "</div>";
+      h += '<div class="lectura">' + (ajenos.length || reg.length
+        ? "Hay <b>" + (ajenos.length + reg.length) + "</b> sitios o dominios con el nombre que no son el oficial. No todos son suplantaciones: pueden ser homónimos, medios o simpatizantes. Revise primero los marcados como <b>nuevos</b> y los que imitan el dominio oficial."
+        : "No aparecen sitios con certificado ni dominios parecidos registrados por terceros. Repita la revisión cada semana y antes de fechas clave de campaña.") + "</div>";
+      h += '<div class="dos"><div class="panel"><h3>Sitios con certificado que usan el nombre</h3>' +
+        (d.certificados_error ? '<div class="aviso err">La fuente de certificados (crt.sh) no respondió: ' + esc(d.certificados_error) + ". Intente de nuevo en unos minutos.</div>" : "") +
+        (d.certificados.length ? "<table><thead><tr><th>Dominio</th><th>Emitido</th><th>Emisor</th></tr></thead><tbody>" +
+          d.certificados.map(c => "<tr><td><b>" + esc(c.dominio) + "</b> " + (c.oficial ? '<span class="chip ok">Oficial</span>' :
+            new Date(String(c.desde) + "Z").getTime() > mes ? '<span class="chip alta">Nuevo</span>' : "") + "</td><td style=\"white-space:nowrap\">" +
+            fd(c.desde) + '</td><td class="mini">' + esc(c.emisor) + "</td></tr>").join("") + "</tbody></table>"
+          : d.certificados_error ? "" : '<p class="note">Ningún certificado vigente contiene ese nombre.</p>') + "</div>";
+      h += '<div class="panel"><h3>Dominios parecidos</h3><table><thead><tr><th>Dominio</th><th>Estado</th></tr></thead><tbody>' +
+        d.variantes.slice().sort((x, y) => (y.registrado === true) - (x.registrado === true)).map(v => "<tr><td>" + esc(v.dominio) + "</td><td>" +
+          (v.registrado === true ? '<span class="chip media">Registrado por alguien</span>' : v.registrado === false ? '<span class="chip ok">Libre</span>' : '<span class="chip na">Sin respuesta</span>') +
+          "</td></tr>").join("") + "</tbody></table></div></div>";
+      h += '<p class="mini" style="margin-bottom:20px">Revisado ' + fh(d.revisado) + ".</p>";
+      $("s-res").innerHTML = h;
+    } catch (e) { $("s-res").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+    $("s-ir").disabled = false;
+  }
+  $("s-ir").addEventListener("click", suplantacion);
+  function primeraSuplantacion() { if ($("s-term").value) suplantacion(); else $("s-res").innerHTML = '<div class="aviso">Escriba el nombre del candidato sin espacios (por ejemplo, dannycaicedo) y presione Revisar.</div>'; }
+
+  /* ------------------------------------------------ HIGIENE */
+  const LISTA = [
+    ["Cuentas", [
+      ["c1", "Verificación en dos pasos en el correo del candidato y de todo el equipo."],
+      ["c2", "Verificación en dos pasos en Facebook, Instagram, TikTok, X y YouTube."],
+      ["c3", "Administradores de las páginas oficiales revisados: solo personas activas del equipo."],
+      ["c4", "Contraseñas distintas en cada cuenta, guardadas en un gestor de contraseñas."],
+      ["c5", "Correos y celulares de recuperación de las cuentas bajo control de la campaña."]]],
+    ["WhatsApp", [
+      ["w1", "PIN de verificación en dos pasos activado en el WhatsApp del candidato y de los voceros."],
+      ["w2", "Revisión semanal de «Dispositivos vinculados» para cerrar sesiones que nadie reconoce."],
+      ["w3", "Grupos de campaña con solo administradores autorizados para cambiar datos y agregar personas."]]],
+    ["Equipos", [
+      ["d1", "Celulares y computadores con bloqueo de pantalla y actualizaciones al día."],
+      ["d2", "Copias de seguridad de bases de datos y documentos de la campaña, fuera del equipo principal."]]],
+    ["Dominio y correo", [
+      ["m1", "SPF y DMARC configurados en el dominio de la campaña (revíselo arriba)."],
+      ["m2", "Variantes obvias del dominio registradas a nombre de la campaña (.com, .co, .com.co)."]]],
+    ["Equipo humano", [
+      ["e1", "Protocolo escrito ante suplantación o hackeo: quién avisa, a quién y en cuánto tiempo."],
+      ["e2", "Cuando alguien sale del equipo, se le retiran todos los accesos el mismo día."],
+      ["e3", "Equipo capacitado para reconocer correos, mensajes y enlaces de phishing."]]]
+  ];
+  const TOTAL = LISTA.reduce((a, g) => a + g[1].length, 0);
+  let marcas = {}, sinBase = false;
+  function pintarLista() {
+    $("h-lista").innerHTML = LISTA.map(g => '<div class="grupo"><h4>' + esc(g[0]) + "</h4>" + g[1].map(i =>
+      '<label class="item"><input type="checkbox" data-k="' + i[0] + '"' + (marcas[i[0]] ? " checked" : "") + "><span>" + esc(i[1]) + "</span></label>").join("") + "</div>").join("");
+    medir();
+  }
+  function medir() {
+    const n = Object.keys(marcas).filter(k => marcas[k]).length, pct = Math.round(n / TOTAL * 100);
+    $("h-pct").textContent = pct + " %"; $("h-cuenta").textContent = n + " de " + TOTAL + " medidas";
+    $("h-bar").style.width = pct + "%";
+    $("h-bar").style.background = pct >= 80 ? "var(--ok)" : pct >= 50 ? "var(--gold)" : "var(--bad)";
+    $("h-lectura").textContent = pct >= 80 ? "Buen nivel. Mantenga la revisión semanal de dispositivos y administradores."
+      : pct >= 50 ? "Nivel medio. Priorice la verificación en dos pasos en todas las cuentas y en WhatsApp."
+      : "Nivel bajo. Una sola cuenta sin verificación en dos pasos basta para que roben las redes del candidato.";
+  }
+  let tGuardar = null;
+  $("h-lista").addEventListener("change", e => {
+    const k = e.target.dataset && e.target.dataset.k; if (!k) return;
+    marcas[k] = e.target.checked; medir();
+    clearTimeout(tGuardar);
+    tGuardar = setTimeout(async () => {
+      if (sinBase) { try { localStorage.setItem("xirin_checklist", JSON.stringify(marcas)); } catch (er) {}
+        $("h-guardado").textContent = "Guardado en este navegador."; return; }
+      try { await api("/api/ciber/checklist", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ items: marcas }) });
+        $("h-guardado").textContent = "Guardado " + fh(new Date().toISOString()) + "."; }
+      catch (er) { $("h-guardado").textContent = "No se pudo guardar: " + er.message; }
+    }, 600);
+  });
+  async function higiene() {
+    try {
+      const d = await api("/api/ciber/checklist");
+      sinBase = !!d.sinBase;
+      if (sinBase) { try { marcas = JSON.parse(localStorage.getItem("xirin_checklist") || "{}"); } catch (e) { marcas = {}; } }
+      else { marcas = d.items || {}; if (d.ts) $("h-guardado").textContent = "Última actualización " + fh(d.ts) + "."; }
+    } catch (e) { marcas = {}; }
+    pintarLista();
+    try { const g = JSON.parse(localStorage.getItem(S_CLAVE) || "{}"); if (g.o && !$("h-dom").value) $("h-dom").value = g.o; } catch (e) {}
+  }
+  const EXPLICA = {
+    spf: { ok: "Solo los servidores autorizados pueden enviar correo con el dominio.", parcial: "Existe, pero termina en «~all»: los correos falsos se marcan, no se rechazan. Cámbielo a «-all» cuando confirme que todos los envíos legítimos están incluidos.",
+      debil: "El registro permite que cualquiera envíe correo a nombre del dominio.", falta: "No existe. Cualquiera puede enviar correos con @ este dominio. Pida a quien administra el dominio crear el registro SPF." },
+    dmarc: { ok: "Los correos falsificados se rechazan.", parcial: "Los correos falsificados van a spam (quarantine). Puede subir a «p=reject».",
+      debil: "Solo se monitorea (p=none): los correos falsificados todavía llegan a la bandeja.", falta: "No existe. Los proveedores de correo no saben qué hacer con correos falsos a nombre de la campaña." },
+    mx: { ok: "El dominio recibe correo.", info: "El dominio no recibe correo. Si tampoco envía, conviene un SPF «v=spf1 -all» y DMARC «p=reject» para que nadie lo use." },
+    dnssec: { ok: "El dominio está firmado: es más difícil desviar a los visitantes a un sitio falso.", parcial: "No está activo. Se activa en el proveedor del dominio (en Cloudflare es un clic)." },
+    caa: { ok: "Solo las entidades autorizadas pueden emitir certificados HTTPS para el dominio.", parcial: "No está definido. Es opcional; limita quién puede emitir certificados para el dominio." }
+  };
+  async function revisarDominio() {
+    const dom = $("h-dom").value.trim();
+    if (!dom) return;
+    $("h-res").innerHTML = '<div class="cargando">Revisando…</div>';
+    try {
+      const d = await api("/api/ciber/dns?dominio=" + encodeURIComponent(dom));
+      if (!d.existe) { $("h-res").innerHTML = '<div class="aviso err">El dominio ' + esc(d.dominio) + " no existe o no tiene registros públicos.</div>"; return; }
+      const etq = { ok: ["ok", "Bien"], parcial: ["media", "Mejorable"], debil: ["alta", "Débil"], falta: ["alta", "Falta"], info: ["na", "Informativo"] };
+      $("h-res").innerHTML = "<table><tbody>" + d.chequeos.map(c => "<tr><td><b>" + esc(c.nombre) + '</b><span class="mini" style="display:block">' +
+        esc((EXPLICA[c.clave] || {})[c.estado] || "") + "</span>" + (c.valor ? '<span class="mini" style="display:block;font-family:ui-monospace,Consolas,monospace;word-break:break-all;margin-top:3px">' + esc(c.valor) + "</span>" : "") +
+        '</td><td class="r"><span class="chip ' + etq[c.estado][0] + '">' + etq[c.estado][1] + "</span></td></tr>").join("") + "</tbody></table>" +
+        '<p class="mini" style="margin-top:8px">' + esc(d.dominio) + " · revisado " + fh(d.revisado) + "</p>";
+    } catch (e) { $("h-res").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+  }
+  $("h-ir").addEventListener("click", revisarDominio);
+
+  /* ------------------------------------------------ EVIDENCIA */
+  $("e-desde").value = hace(30); $("e-hasta").value = hace(0);
+  function bajar(nombre, texto, tipo) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([texto], { type: tipo }));
+    a.download = nombre; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  }
+  let ULTIMA = null;
+  async function generar() {
+    $("e-ir").disabled = true;
+    $("e-res").innerHTML = '<div class="aviso">Generando…</div>';
+    try {
+      const d = await api("/api/ciber/evidencia?" + new URLSearchParams({ desde: $("e-desde").value, hasta: $("e-hasta").value }));
+      ULTIMA = d;
+      $("e-res").innerHTML = '<div class="panel">' + (d.demo ? '<div class="aviso demo"><b>Datos de demostración.</b> Esta evidencia sale de registros ficticios y no queda guardada como constancia.</div>' : "") +
+        "<h3>Evidencia del " + esc(d.desde) + " al " + esc(d.hasta) + "</h3>" +
+        '<div class="kpis">' + kpi("Registros", d.registros.toLocaleString("es-CO")) + kpi("Generada", fh(d.generado)) + kpi("Por", d.por) + "</div>" +
+        '<p class="mini" style="margin-bottom:6px">Huella SHA-256 del archivo CSV</p><div class="hash">' + esc(d.sha256) + "</div>" +
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><button class="btn" id="e-csv">Descargar CSV</button><button class="btn sec" id="e-const">Descargar constancia</button></div></div>';
+      $("e-csv").onclick = () => bajar(d.archivo, d.csv, "text/csv;charset=utf-8");
+      $("e-const").onclick = () => bajar(d.archivo.replace(/\.csv$/, "_constancia.txt"), constancia(d), "text/plain;charset=utf-8");
+      if (!d.demo) evidencias();
+    } catch (e) { $("e-res").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+    $("e-ir").disabled = false;
+  }
+  function constancia(d) {
+    return ["CONSTANCIA DE EXPORTACIÓN DE REGISTROS DE AUDITORÍA",
+      "X-irin Technologies S.A.S. · Panel Estrategia Electoral 2027", "",
+      "Archivo:           " + d.archivo,
+      "Período:           " + d.desde + " a " + d.hasta + " (fechas UTC)",
+      "Registros:         " + d.registros,
+      "Generado:          " + fh(d.generado) + " (hora de Bogotá) · " + d.generado + " UTC",
+      "Generado por:      " + d.por,
+      "Algoritmo:         SHA-256",
+      "Huella:            " + d.sha256, "",
+      d.demo ? "ATENCIÓN: DATOS DE DEMOSTRACIÓN, FICTICIOS. SIN VALOR PROBATORIO." :
+        "La huella quedó registrada en el panel en el momento de la exportación.",
+      "Para verificar la integridad del archivo calcule su SHA-256 y compárelo con la huella anterior:",
+      "  Windows (PowerShell):  Get-FileHash -Algorithm SHA256 \"" + d.archivo + "\"",
+      "  macOS / Linux:         shasum -a 256 \"" + d.archivo + "\"",
+      "Si las huellas no coinciden, el archivo fue modificado después de su exportación.", "",
+      "Los registros identifican al usuario con la identidad verificada por Cloudflare Access",
+      "(token firmado), con fecha y hora en UTC, dirección IP, ciudad y navegador."].join("\r\n");
+  }
+  async function evidencias() {
+    try {
+      const d = await api("/api/ciber/evidencias");
+      $("e-lista").innerHTML = d.demo ? '<p class="note">Las constancias se guardan cuando la base de datos D1 está conectada.</p>'
+        : d.evidencias.length ? "<table><thead><tr><th>Generada</th><th>Período</th><th class=\"r\">Registros</th><th>Huella</th></tr></thead><tbody>" +
+          d.evidencias.map(x => "<tr><td>" + fh(x.ts) + '<span class="mini" style="display:block">' + esc(x.por) + "</span></td><td>" + esc(x.desde) + " a " + esc(x.hasta) +
+            '</td><td class="r">' + x.registros + '</td><td class="mini" style="font-family:ui-monospace,Consolas,monospace">' + esc(x.sha256.slice(0, 16)) + "…</td></tr>").join("") + "</tbody></table>"
+        : '<p class="note">Todavía no se ha generado ninguna evidencia.</p>';
+    } catch (e) { $("e-lista").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+  }
+  $("e-ir").addEventListener("click", generar);
+  $("e-file").addEventListener("change", async e => {
+    const f = e.target.files[0]; if (!f) return;
+    $("e-ver").innerHTML = '<div class="cargando">Calculando huella…</div>';
+    try {
+      const sha = [...new Uint8Array(await crypto.subtle.digest("SHA-256", await f.arrayBuffer()))].map(b => b.toString(16).padStart(2, "0")).join("");
+      const d = await api("/api/ciber/evidencias?sha=" + sha);
+      const ok = d.evidencias.length || (ULTIMA && ULTIMA.sha256 === sha);
+      $("e-ver").innerHTML = '<div class="hash" style="margin-bottom:10px">' + sha + "</div>" + (ok
+        ? '<div class="aviso"><b>Íntegro.</b> La huella coincide con una constancia' + (d.evidencias[0] ? " generada el " + fh(d.evidencias[0].ts) + " por " + esc(d.evidencias[0].por) : " de esta sesión") + ". El archivo no ha sido modificado.</div>"
+        : '<div class="aviso err"><b>No coincide.</b> Ninguna constancia tiene esta huella: el archivo fue modificado o no salió de este panel.</div>');
+    } catch (er) { $("e-ver").innerHTML = '<div class="aviso err">' + esc(er.message) + "</div>"; }
+  });
+
+  /* ------------------------------------------------ PRIVACIDAD */
+  async function privacidad() {
+    const p = YO.politica || {};
+    $("pv-texto").innerHTML =
+      "<p><b>Responsable:</b> X-irin Technologies S.A.S.</p>" +
+      "<p style=\"margin-top:8px\"><b>Qué se registra:</b> correo del usuario, fecha y hora de ingreso y salida, módulos consultados y tiempo en cada uno, dirección IP, ciudad y país aproximados, navegador y sistema operativo, e intentos de ver información no autorizada, copiar, imprimir o descargar.</p>" +
+      "<p style=\"margin-top:8px\"><b>Para qué:</b> exclusivamente para la seguridad del servicio, el control de acceso por usuario y la evidencia en caso de uso indebido de la información. No se usa con fines comerciales ni se comparte con terceros, salvo requerimiento de autoridad competente.</p>" +
+      "<p style=\"margin-top:8px\"><b>Por cuánto tiempo:</b> " + (p.retencion_dias || 365) + " días. Después se borran automáticamente. Las constancias de evidencia conservan solo la huella digital del archivo exportado.</p>" +
+      "<p style=\"margin-top:8px\"><b>Derechos del titular (Ley 1581 de 2012):</b> conocer, actualizar y rectificar sus datos, pedir prueba de la autorización, ser informado del uso, presentar quejas ante la Superintendencia de Industria y Comercio y pedir la supresión cuando no exista un deber legal o contractual de conservarlos. Para ejercerlos, escriba al administrador de la plataforma.</p>" +
+      "<p style=\"margin-top:8px\"><b>Aceptación:</b> cada usuario acepta este aviso al entrar por primera vez desde un navegador; la aceptación queda registrada con fecha y hora.</p>";
+    if (!YO.admin) return;
+    $("pv-admin").hidden = false;
+    try {
+      const d = await api("/api/ciber/privacidad");
+      $("pv-tabla").innerHTML = (d.demo ? '<div class="aviso demo">Datos de demostración.</div>' : "") + (d.aceptaciones.length
+        ? "<table><thead><tr><th>Usuario</th><th>Primera aceptación</th><th>Última</th><th class=\"r\">Veces</th></tr></thead><tbody>" +
+          d.aceptaciones.map(a => "<tr><td><b>" + esc(a.email) + "</b></td><td>" + fh(a.primera) + "</td><td>" + fh(a.ultima) + '</td><td class="r">' + a.veces + "</td></tr>").join("") + "</tbody></table>"
+        : '<p class="note">Ningún usuario ha aceptado el aviso todavía. Se pide la próxima vez que cada cliente entre.</p>');
+    } catch (e) { $("pv-tabla").innerHTML = '<div class="aviso err">' + esc(e.message) + "</div>"; }
+  }
+
+  const CARGAR = { resumen, auditoria, alertas, usuarios, suplantacion: primeraSuplantacion, higiene, evidencia: evidencias, privacidad };
+
+  /* ------------------------------------------------ inicio */
+  fetch("/api/yo", { credentials: "include", cache: "no-store" })
+    .then(r => r.ok ? r.json() : null).catch(() => null)
+    .then(yo => {
+      YO = yo || YO; YO.politica = YO.politica || {};
+      if (YO.admin) {
+        document.querySelectorAll("#tabs [data-admin]").forEach(b => b.hidden = false);
+        if (!YO.politica.base) {
+          $("aviso-base").hidden = false;
+          $("aviso-base").innerHTML = "<b>Modo demostración.</b> El Worker no tiene la base de datos D1 conectada: auditoría, alertas y usuarios muestran datos ficticios, " +
+            "y la sesión única, la suspensión y las constancias de evidencia no se guardan. Al conectar D1 todo pasa a datos reales.";
+        }
+      }
+      abrir(location.hash.slice(1));
+    });
+})();
+</script>
+<script src="/js/auditoria.js" defer></script>
+</body>
+</html>
