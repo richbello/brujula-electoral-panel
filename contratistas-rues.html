@@ -41,6 +41,7 @@ h2{font-size:22px;margin-bottom:4px}
 .al:hover{box-shadow:0 12px 26px -14px rgba(74,91,174,.55)}
 .al b{font-size:24px;display:block}.al small{font-size:13px;font-weight:600}.al span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.45}
 .filtros label{font-weight:600}
+.exp{display:inline-flex;gap:6px;flex-wrap:wrap}.exp .btn{padding:8px 12px;font-size:12.5px}
 .filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
 input[type=search],input[type=text],select{padding:9px 12px;border:1.5px solid var(--line);border-radius:9px;font:500 14px Inter,"Segoe UI",sans-serif;background:#fff;color:var(--navy)}
 input[type=search]{min-width:260px;flex:1}
@@ -101,6 +102,7 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
 <section class="pane on" id="p-resumen">
   <h2 id="titulo">Contratistas frente al RUES</h2>
   <p class="sub">Los contratistas con NIT del territorio elegido (SECOP II) se consultan en el Registro Único Empresarial y Social de Confecámaras. Se revisa el estado de la matrícula, la renovación, la antigüedad, los traslados de domicilio y quién es el representante legal, y la cédula de ese representante se cruza con los contratos que firmó como persona natural en el mismo territorio.</p>
+  <div class="filtros"><span class="mini" style="font-weight:600">Descargar informe completo:</span><span data-expslot="resumen"></span></div>
   <div class="kpis" id="kpis"></div>
   <div class="lectura" id="lectura" hidden></div>
   <div class="alertas" id="tarjetas"></div>
@@ -115,7 +117,7 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
     <select id="fClase"><option value="privado">Empresas y ESAL</option><option value="">Todos (incluye consorcios y entidades públicas)</option><option value="asociacion">Solo consorcios y uniones temporales</option><option value="publica">Solo entidades públicas</option></select>
     <select id="fAlerta"><option value="">Todas las alertas</option><option value="con">Solo con alertas</option></select>
     <select id="fEnt"><option value="">Todas las entidades contratantes</option></select>
-    <button class="btn sec" id="csv">Descargar CSV</button>
+    <span data-expslot="tabla"></span>
   </div>
   <div class="panel" style="padding:0"><table id="tabla"><thead><tr>
     <th data-o="nombre">Contratista</th><th data-o="valor" class="r">Valor contratado</th><th data-o="n" class="r">Contratos</th>
@@ -129,12 +131,14 @@ footer{max-width:1240px;margin:0 auto;padding:8px 32px 44px;font-size:12px;color
   <div class="filtros">
     <select id="rkTipo"><option value="">Empresas y personas</option><option value="nit">Solo con NIT (empresas, ESAL, consorcios)</option><option value="per">Solo personas naturales</option></select>
     <span id="rkOrden" style="display:flex;gap:8px"><button class="btn" data-o="v">Más beneficiados (valor)</button><button class="btn sec" data-o="n">Más contratos</button></span>
+    <span data-expslot="ranking"></span>
   </div>
   <div id="rkRes"><p class="note">Abriendo…</p></div>
 </section>
 
 <section class="pane" id="p-reps">
   <h2>Representantes legales</h2>
+  <div class="filtros" style="justify-content:flex-end"><span data-expslot="reps"></span></div>
   <p class="sub">Representantes de los contratistas que además firmaron contratos como persona natural con entidades del mismo territorio, que representan a más de un contratista o que comparten apellidos con el representante de otro contratista.</p>
   <div class="panel"><h3>Con contratos como persona natural en el territorio</h3><div id="repOps"></div></div>
   <div class="panel"><h3>Representan a más de un contratista</h3><div id="repMulti"></div></div>
@@ -525,14 +529,7 @@ $("#ir").onclick = cargar;
 ["#q", "#fClase", "#fAlerta", "#fEnt"].forEach(s => $(s).addEventListener("input", () => { PAG = 0; tabla(); }));
 $("#prev").onclick = () => { PAG--; tabla(); }; $("#next").onclick = () => { PAG++; tabla(); };
 document.querySelectorAll("#tabla th").forEach(th => th.onclick = () => { const k = th.dataset.o; ORDEN = { k, d: ORDEN.k === k ? -ORDEN.d : (k === "nombre" || k === "rep" ? 1 : -1) }; tabla(); });
-$("#csv").onclick = () => {
-  const cq = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
-  const cab = ["Territorio", "NIT", "Contratista", "Clase", "Contratos", "Valor", "Contratación directa", "Primer contrato", "Entidades", "Razón social RUES", "Estado", "Cámara", "Tipo", "CIIU", "Fecha matrícula", "Último año renovado", "Representante", "C.C. representante", "Alertas"];
-  const filas = filtrar().map(c => { const e = c.rues || {}; return [T ? T.nombre : "", c.nit, c.nombre, c.clase, c.n, Math.round(c.valor), c.directa, fecha(c.primera), Object.keys(c.entidades).join(" | "), e.razon, e.estado, e.camara, e.tipo, e.ciiu, fecha(e.origen), e.anio, e.rep, e.repId, c.alertas.map(a => TIPOS[a[0]][1] + (a[1] ? " (" + a[1] + ")" : "")).join(" | ")].map(cq).join(";"); });
-  const b = new Blob(["﻿" + cab.map(cq).join(";") + "\n" + filas.join("\n")], { type: "text/csv;charset=utf-8" });
-  const a = document.createElement("a"); a.href = URL.createObjectURL(b);
-  a.download = "contratistas_rues_" + (T ? T.nombre : "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "_") + ".csv"; a.click();
-};
+
 
 /* ---------- ranking ---------- */
 let RK = { clave: null, datos: null, orden: "v" };
@@ -722,7 +719,7 @@ function pintarFicha() {
 
   // contratos
   const opt = (arr, t) => `<option value="">${t}</option>` + [...new Set(arr)].filter(Boolean).sort().map(x => `<option>${esc(x)}</option>`).join("");
-  h += `<div class="panel"><div class="filtros" style="justify-content:space-between"><h3 style="margin:0">Contratos (${L.length})</h3><button class="btn sec" id="fcsv">Descargar CSV</button></div>
+  h += `<div class="panel"><div class="filtros" style="justify-content:space-between"><h3 style="margin:0">Contratos (${L.length})</h3>${botonesExp("ficha")}</div>
     <div class="filtros"><select id="ffMun">${opt(L.map(c => c.ciudad), "Todos los municipios")}</select><select id="ffEnt">${opt(L.map(c => c.entidad), "Todas las entidades")}</select>
     <select id="ffEst"><option value="">Todos los estados</option><option value="al">Suspendidos o vencidos sin cerrar</option><option value="ad">Con días adicionados</option>${[...new Set(L.map(c => c.estado))].filter(Boolean).sort().map(x => `<option value="e:${esc(x)}">${esc(x)}</option>`).join("")}</select>
     <select id="ffOri">${opt(L.map(c => c.origen), "SECOP I, II y consorcios")}</select><input type="search" id="ffQ" placeholder="Buscar en el objeto o la referencia"></div>
@@ -730,7 +727,6 @@ function pintarFicha() {
   out.innerHTML = h;
   ["#ffMun", "#ffEnt", "#ffEst", "#ffOri", "#ffQ"].forEach(s => $(s).addEventListener("input", () => { FPAG = 0; tablaFicha(); }));
   $("#fPrev").onclick = () => { FPAG--; tablaFicha(); }; $("#fNext").onclick = () => { FPAG++; tablaFicha(); };
-  $("#fcsv").onclick = csvFicha;
   tablaFicha();
 }
 function filtrarFicha() {
@@ -751,18 +747,177 @@ function tablaFicha() {
   $("#fInfo").textContent = `${v.length} contratos · ${mill(v.reduce((s, c) => s + c.valor, 0))} · página ${FPAG + 1} de ${pags}`;
   $("#fPrev").disabled = FPAG === 0; $("#fNext").disabled = FPAG >= pags - 1;
 }
-function csvFicha() {
-  const cq = x => '"' + String(x == null ? "" : x).replace(/"/g, '""') + '"';
-  const cab = ["Documento", "Contratista", "Fuente", "Consorcio", "Participación %", "Entidad", "Departamento", "Municipio", "Referencia", "Objeto", "Tipo", "Modalidad", "Estado", "Valor", "Pagado", "Firma", "Inicio", "Fin", "Días adicionados", "Supervisor", "Ordenador del gasto", "Alertas", "Enlace"];
-  const filas = filtrarFicha().map(c => [FICHA.v, FICHA.nombre, c.origen, c.grupo, c.participacion, c.entidad, c.depto, c.ciudad, c.ref, c.objeto, c.tipo, c.modalidad, c.estado, Math.round(c.valor), Math.round(c.pagado), c.firma, c.inicio, c.fin, c.dias, c.supervisor, c.ordenador, c.alertas.map(a => a[1]).join(" | "), c.url].map(cq).join(";"));
-  const b = new Blob(["﻿" + cab.map(cq).join(";") + "\n" + filas.join("\n")], { type: "text/csv;charset=utf-8" });
-  const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "ficha_" + FICHA.v + ".csv"; a.click();
-}
+
 function abrirFicha(doc) { $("#cq").value = doc; document.querySelector('.tabs button[data-t="consulta"]').click(); ficha(doc); window.scrollTo(0, 0); }
 $("#cbtn").onclick = () => ficha($("#cq").value);
 $("#cq").addEventListener("keydown", e => { if (e.key === "Enter") ficha($("#cq").value); });
 document.addEventListener("click", e => { const b = e.target.closest("[data-ficha]"); if (b) { e.stopPropagation(); abrirFicha(b.dataset.ficha); } }, true);
 
+
+/* ---------- exportar a Excel, PDF y CSV ---------- */
+const LIBS = { xlsx: ["js/vendor/xlsx.full.min.js"], pdf: ["js/vendor/jspdf.umd.min.js", "js/vendor/jspdf.plugin.autotable.min.js"] };
+const cargadas = {};
+function cargarLib(k) {
+  if (!cargadas[k]) cargadas[k] = LIBS[k].reduce((p, src) => p.then(() => new Promise((ok, mal) => {
+    const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = () => mal(new Error("No se pudo cargar " + src)); document.head.appendChild(s);
+  })), Promise.resolve()).catch(e => { cargadas[k] = null; throw e; });
+  return cargadas[k];
+}
+const slug = t => String(t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
+const ahora = () => HOY.toLocaleString("es-CO");
+const filtrosTxt = () => {
+  const f = [];
+  if ($("#q").value.trim()) f.push("búsqueda: " + $("#q").value.trim());
+  const cl = $("#fClase"); f.push(cl.options[cl.selectedIndex].text);
+  if ($("#fAlerta").value) f.push("alerta: " + $("#fAlerta").options[$("#fAlerta").selectedIndex].text);
+  if ($("#fEnt").value) f.push("entidad: " + $("#fEnt").value);
+  return f.join(" · ");
+};
+const terrTxt = () => T ? `${T.nombre} · contratos SECOP II desde ${T.anio}` : "";
+const alertasTxt = c => c.alertas.map(a => TIPOS[a[0]][1] + (a[1] ? " (" + a[1] + ")" : "")).join(" | ");
+
+/* cada vista devuelve { titulo, subtitulo, hojas: [{ nombre, columnas: [[titulo, tipo, ancho]], filas }] }
+   tipo: t texto, m pesos, n numero, p porcentaje, f fecha */
+function vistaTabla() {
+  const v = filtrar();
+  return { titulo: "Contratistas frente al RUES · " + (T ? T.nombre : ""), subtitulo: terrTxt() + " · " + filtrosTxt(), hojas: [{ nombre: "Contratistas",
+    columnas: [["NIT", "t", 11], ["Contratista", "t", 34], ["Clase", "t", 11], ["Contratos", "n", 9], ["Valor", "m", 16], ["Contratación directa", "n", 10], ["Primer contrato", "f", 11],
+      ["Estado RUES", "t", 14], ["Cámara", "t", 14], ["Tipo", "t", 18], ["CIIU", "t", 7], ["Fecha matrícula", "f", 11], ["Último año renovado", "t", 9], ["Representante legal", "t", 26], ["C.C. representante", "t", 13], ["Alertas", "t", 50], ["Entidades contratantes", "t", 40]],
+    filas: v.map(c => { const e = c.rues || {}; return [c.nit, c.nombre, { privado: "Empresa / ESAL", asociacion: "Consorcio / UT", publica: "Entidad pública" }[c.clase], c.n, Math.round(c.valor), c.directa, fecha(c.primera),
+      c.clase !== "privado" ? "No aplica" : !c.consultado ? "Sin consultar" : !c.rues ? "No aparece" : e.activa ? "Activa" : e.estado, e.camara, e.tipo, e.ciiu, fecha(e.origen), e.anio ? String(e.anio) : "", e.rep, e.repId, alertasTxt(c), Object.keys(c.entidades).join(" | ")]; }) }] };
+}
+function vistaRanking() {
+  const D = RK.datos; if (!D) return null;
+  const hoja = (nombre, lista) => ({ nombre, columnas: [["#", "n", 5], ["Contratista", "t", 38], ["Tipo de documento", "t", 16], ["Documento", "t", 13], ["Contratos", "n", 10], ["Valor", "m", 17], ["% del total", "p", 9], ["% por contratación directa", "p", 11], ["Contratos directos", "n", 9], ["Entidades", "n", 9]],
+    filas: lista.slice(0, 50).map((x, i) => { const d = D.det[x.doc] || { ents: new Set(), dv: 0, dn: 0 }; return [i + 1, x.nombre, x.tipo, x.doc, x.n, Math.round(x.v), D.total ? x.v / D.total : 0, x.v && d.ents.size ? d.dv / x.v : "", d.ents.size ? d.dn : "", d.ents.size || ""]; }) });
+  const quien = { "": "empresas y personas", nit: "solo con NIT", per: "solo personas naturales" }[D.tipo];
+  const top = D.porV.slice().sort((a, b) => b.v - a.v), s10 = top.slice(0, 10).reduce((s, x) => s + x.v, 0);
+  return { titulo: "Ranking de contratistas · " + D.t.nombre, subtitulo: `${D.t.nombre} · SECOP II desde ${D.t.anio} · ${quien} · ${D.contratos.toLocaleString("es-CO")} contratos por ${mill(D.total)} · los 10 primeros se llevan ${(D.total ? s10 / D.total * 100 : 0).toLocaleString("es-CO", { maximumFractionDigits: 1 })}%`,
+    hojas: [hoja("Más beneficiados", top), hoja("Más contratos", D.porN.slice().sort((a, b) => b.n - a.n || b.v - a.v))] };
+}
+function vistaReps() {
+  const priv = LISTA.filter(c => c.clase === "privado");
+  const ops = [], multi = [], ape = [];
+  priv.filter(c => c.repOps && c.repOps.length).forEach(c => c.repOps.forEach(x => ops.push([c.rues.rep, c.rues.repId, c.nombre, c.nit, Math.round(c.valor), x.entidad, x.tipo, Math.round(x.valor), x.fecha, x.url])));
+  const vis = new Set();
+  priv.forEach(c => { if (c.rues && c.rues.repId && !vis.has(c.rues.repId)) { vis.add(c.rues.repId); const g = priv.filter(o => o.rues && o.rues.repId === c.rues.repId); if (g.length > 1) g.forEach(o => multi.push([c.rues.rep, c.rues.repId, o.nombre, o.nit, Math.round(o.valor)])); } });
+  const pares = new Set();
+  priv.forEach(c => c.parientes.forEach(([k, o]) => { const id = [c.nit, o.nit].sort().join("-") + k; if (!pares.has(id)) { pares.add(id); ape.push([k, c.rues.rep, c.nombre, Math.round(c.valor), o.rues.rep, o.nombre, Math.round(o.valor)]); } }));
+  return { titulo: "Representantes legales · " + (T ? T.nombre : ""), subtitulo: terrTxt() + " · coincidir en apellidos no prueba parentesco", hojas: [
+    { nombre: "Contratos personales", columnas: [["Representante", "t", 28], ["C.C.", "t", 12], ["Contratista que representa", "t", 32], ["NIT", "t", 11], ["Valor del contratista", "m", 16], ["Entidad (contrato personal)", "t", 32], ["Tipo", "t", 16], ["Valor", "m", 14], ["Firma", "f", 11], ["Enlace SECOP", "t", 30]], filas: ops },
+    { nombre: "Varios contratistas", columnas: [["Representante", "t", 28], ["C.C.", "t", 12], ["Contratista", "t", 36], ["NIT", "t", 11], ["Valor", "m", 16]], filas: multi },
+    { nombre: "Apellidos compartidos", columnas: [["Apellidos", "t", 18], ["Representante A", "t", 28], ["Contratista A", "t", 30], ["Valor A", "m", 14], ["Representante B", "t", 28], ["Contratista B", "t", 30], ["Valor B", "m", 14]], filas: ape }] };
+}
+function vistaResumen() {
+  const priv = LISTA.filter(c => c.clase === "privado"), cuenta = {};
+  priv.forEach(c => c.alertas.forEach(([k]) => { cuenta[k] = cuenta[k] || { n: 0, v: 0 }; cuenta[k].n++; cuenta[k].v += c.valor; }));
+  const conAl = priv.filter(c => c.alertas.length);
+  const t = vistaTabla(), r = vistaReps();
+  const top = priv.filter(c => c.nal).sort((a, b) => b.nal - a.nal || b.valor - a.valor).slice(0, 30);
+  return { titulo: "Informe de contratistas y RUES · " + (T ? T.nombre : ""), subtitulo: terrTxt(), hojas: [
+    { nombre: "Resumen", columnas: [["Indicador", "t", 46], ["Cantidad", "n", 12], ["Valor", "m", 18]], filas: [
+      ["Contratistas con NIT analizados", LISTA.length, Math.round(LISTA.reduce((s, c) => s + c.valor, 0))],
+      ["Empresas y ESAL consultadas en el RUES", priv.filter(c => c.consultado).length, Math.round(priv.reduce((s, c) => s + c.valor, 0))],
+      ["Con al menos una alerta", conAl.length, Math.round(conAl.reduce((s, c) => s + c.valor, 0))],
+      ...Object.keys(TIPOS).filter(k => cuenta[k]).map(k => ["Alerta: " + TIPOS[k][1], cuenta[k].n, Math.round(cuenta[k].v)])] },
+    { nombre: "Más alertas", columnas: [["Contratista", "t", 36], ["NIT", "t", 11], ["Valor", "m", 16], ["Representante legal", "t", 28], ["Alertas", "t", 70]],
+      filas: top.map(c => [c.nombre, c.nit, Math.round(c.valor), c.rues && c.rues.rep, alertasTxt(c)]) },
+    ...t.hojas, ...r.hojas] };
+}
+function vistaFicha() {
+  const F = FICHA; if (!F) return null;
+  const L = F.lista, rel = {};
+  L.forEach(c => { const k = [c.ciudad, c.depto, c.entidad].join("|"); const x = rel[k] || (rel[k] = [c.ciudad, c.depto, c.entidad, 0, 0, c.firma, c.firma, 0]);
+    x[3]++; x[4] += c.valor; if (c.firma && c.firma < x[5]) x[5] = c.firma; if (c.firma > x[6]) x[6] = c.firma; if (c.alertas.some(a => a[0] !== "baja")) x[7]++; });
+  const sanc = [...F.multas.map(m => ["Multa SECOP I", m.nombre_entidad, m.municipio, "Resolución " + (m.numero_de_resolucion || "") + " · contrato " + (m.numero_de_contrato || ""), +m.valor_sancion || "", fecha(m.fecha_de_firmeza)]),
+    ...F.ant.siri.map(s => ["SIRI " + (s.tipo || ""), s.entidad, "", s.sancion + (s.duracion ? " · " + s.duracion : ""), "", s.fecha]),
+    ...F.ant.bol.map(b => ["Boletín de Responsables Fiscales", b.entidad, [b.municipio, b.depto].filter(Boolean).join(" "), "Reporta: " + b.autoridad, "", ""])];
+  return { titulo: "Ficha del contratista · " + (F.nombre || F.v), subtitulo: `${F.esNit ? "NIT" : "Cédula"} ${F.v} · contratos firmados desde ${$("#desde").value} en todo el país · ${L.length} contratos por ${mill(L.reduce((s, c) => s + c.valor, 0))}`, hojas: [
+    { nombre: "Contratos", columnas: [["Fuente", "t", 12], ["Entidad", "t", 30], ["Municipio", "t", 13], ["Departamento", "t", 13], ["Referencia", "t", 16], ["Objeto", "t", 60], ["Tipo", "t", 16], ["Modalidad", "t", 18], ["Estado", "t", 12], ["Valor", "m", 16], ["Pagado", "m", 15], ["Firma", "f", 11], ["Inicio", "f", 11], ["Fin", "f", 11], ["Días adicionados", "n", 9], ["Alertas", "t", 26], ["Consorcio", "t", 28], ["Participación %", "n", 8], ["Supervisor", "t", 24], ["Ordenador del gasto", "t", 24], ["Enlace", "t", 30]],
+      filas: filtrarFicha().map(c => [c.origen, c.entidad, c.ciudad, c.depto, c.ref, c.objeto, c.tipo, c.modalidad, c.estado, Math.round(c.valor), c.origen === "SECOP I" ? "" : Math.round(c.pagado), c.firma, c.inicio, c.fin, c.dias || "", c.alertas.map(a => a[1]).join(" | "), c.grupo || "", c.participacion ? +c.participacion : "", c.supervisor, c.ordenador, c.url]) },
+    { nombre: "Por municipio y entidad", columnas: [["Municipio", "t", 16], ["Departamento", "t", 16], ["Entidad", "t", 40], ["Contratos", "n", 10], ["Valor", "m", 17], ["Primer contrato", "f", 12], ["Último contrato", "f", 12], ["Suspendidos o vencidos", "n", 11]],
+      filas: Object.values(rel).sort((a, b) => b[4] - a[4]).map(x => (x[4] = Math.round(x[4]), x[7] = x[7] || "", x)) },
+    { nombre: "Sanciones", columnas: [["Fuente", "t", 26], ["Entidad", "t", 36], ["Lugar", "t", 18], ["Detalle", "t", 50], ["Valor", "m", 15], ["Fecha", "f", 12]], filas: sanc.length ? sanc : [["Sin registros en Multas SECOP I, SIRI ni Boletín Fiscal", "", "", "Las sanciones de SECOP II no se publican como datos abiertos; consulte el certificado del RUP.", "", ""]] },
+    { nombre: "Consorcios", columnas: [["Grupo", "t", 40], ["NIT del grupo", "t", 14], ["Participación %", "n", 10], ["Líder", "t", 8]], filas: F.grupos.map(g => [g.nombre_grupo, g.nit_grupo, g.participacion ? +g.participacion : "", g.es_lider_del_grupo]) },
+    { nombre: "RUES", columnas: [["NIT", "t", 11], ["Razón social", "t", 38], ["Cámara", "t", 14], ["Estado", "t", 22], ["Matrícula", "f", 11], ["Renovado", "t", 9], ["CIIU", "t", 7], ["Representante", "t", 28], ["C.C.", "t", 13]],
+      filas: (F.rues || []).map(f => [f.nit, f.razon_social, f.camara_comercio, f.estado_matricula, fecha(f.fecha_matricula), f.ultimo_ano_renovado, f.cod_ciiu_act_econ_pri, f.representante_legal, f.num_identificacion_representante_legal]) }] };
+}
+const VISTAS = { resumen: vistaResumen, tabla: vistaTabla, ranking: vistaRanking, reps: vistaReps, ficha: vistaFicha };
+
+function aExcel(V) {
+  const wb = XLSX.utils.book_new();
+  const portada = [["X-irin Technologies S.A.S. · Estrategia Electoral 2027"], [V.titulo], [V.subtitulo], ["Generado: " + ahora()], [],
+    ["Fuentes: SECOP II y SECOP I (Colombia Compra Eficiente), RUES (Confecámaras), SIRI (Procuraduría) y Boletín de Responsables Fiscales (Contraloría), vía datos.gov.co."],
+    ["Las alertas son indicios para revisar, no conclusiones. Verifique cada caso en el documento oficial antes de usarlo."]];
+  const wp = XLSX.utils.aoa_to_sheet(portada); wp["!cols"] = [{ wch: 120 }]; XLSX.utils.book_append_sheet(wb, wp, "Portada");
+  V.hojas.forEach(h => {
+    const ws = XLSX.utils.aoa_to_sheet([h.columnas.map(c => c[0]), ...h.filas.map(f => f.map(x => x == null ? "" : x))]);
+    ws["!cols"] = h.columnas.map(c => ({ wch: c[2] || 14 }));
+    ws["!autofilter"] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: Math.max(h.filas.length, 1), c: h.columnas.length - 1 } }) };
+    ws["!freeze"] = { xSplit: 0, ySplit: 1 };
+    h.columnas.forEach((c, j) => {
+      const z = c[1] === "m" ? '"$"#,##0' : c[1] === "n" ? "#,##0" : c[1] === "p" ? "0.0%" : null; if (!z) return;
+      for (let i = 1; i <= h.filas.length; i++) { const cell = ws[XLSX.utils.encode_cell({ r: i, c: j })]; if (cell && cell.t === "n") cell.z = z; }
+    });
+    XLSX.utils.book_append_sheet(wb, ws, h.nombre.slice(0, 31));
+  });
+  XLSX.writeFile(wb, slug(V.titulo) + ".xlsx");
+}
+function aPdf(V) {
+  const { jsPDF } = window.jspdf; const doc = new jsPDF({ orientation: "landscape", unit: "pt", format: "a4" });
+  const W = doc.internal.pageSize.getWidth(), H = doc.internal.pageSize.getHeight();
+  const fmt = (x, t) => x === "" || x == null ? "" : t === "m" ? peso(x) : t === "n" ? (+x).toLocaleString("es-CO") : t === "p" ? (x * 100).toLocaleString("es-CO", { maximumFractionDigits: 1 }) + "%" : String(x);
+  doc.setFillColor(21, 11, 61); doc.rect(0, 0, W, 64, "F");
+  doc.setTextColor(255, 255, 255); doc.setFont("helvetica", "bold"); doc.setFontSize(15); doc.text("X-irin Technologies S.A.S.", 32, 28);
+  doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(180, 166, 219); doc.text("Estrategia Electoral 2027 · Generado " + ahora(), 32, 46);
+  doc.setTextColor(21, 11, 61); doc.setFont("helvetica", "bold"); doc.setFontSize(14); doc.text(doc.splitTextToSize(V.titulo, W - 64), 32, 92);
+  doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.setTextColor(92, 79, 130); doc.text(doc.splitTextToSize(V.subtitulo, W - 64), 32, 110);
+  let y = 132;
+  V.hojas.forEach(h => {
+    if (y > H - 120) { doc.addPage(); y = 48; }
+    doc.setFont("helvetica", "bold"); doc.setFontSize(11); doc.setTextColor(21, 11, 61); doc.text(h.nombre + " (" + h.filas.length + ")", 32, y);
+    // en PDF se omiten columnas muy largas o de enlaces
+    const cols = h.columnas.map((c, j) => [c, j]).filter(([c]) => !/^Enlace|^Entidades contratantes|^Ordenador|^Departamento|^Participación|^Clase$|^Contratación directa$|^Supervisor/.test(c[0]));
+    const anchoTot = cols.reduce((s, [c]) => s + Math.max(c[2] || 12, c[1] === "f" ? 13 : c[0] === "NIT" ? 12 : 8), 0), fs = cols.length > 12 ? 6.5 : 7.5;
+    doc.autoTable({ startY: y + 8, margin: { left: 32, right: 32, bottom: 40 }, head: [cols.map(([c]) => c[0])],
+      body: h.filas.length ? h.filas.map(f => cols.map(([c, j]) => { const v = fmt(f[j], c[1]); return /Objeto|Alertas|Detalle/.test(c[0]) && v.length > 180 ? v.slice(0, 180) + "…" : v; }))
+        : [[{ content: "Sin registros.", colSpan: cols.length }]],
+      styles: { font: "helvetica", fontSize: fs, cellPadding: 3, overflow: "linebreak", textColor: [21, 11, 61], lineColor: [224, 217, 247], lineWidth: 0.5 },
+      headStyles: { fillColor: [21, 11, 61], textColor: [255, 255, 255], fontStyle: "bold", fontSize: fs }, alternateRowStyles: { fillColor: [248, 246, 255] },
+      columnStyles: Object.fromEntries(cols.map(([c], k) => [k, Object.assign({ cellWidth: Math.max(c[2] || 12, c[1] === "f" ? 13 : c[0] === "NIT" ? 12 : 8) / anchoTot * (W - 64) }, c[1] === "m" || c[1] === "n" || c[1] === "p" ? { halign: "right" } : {})])) });
+    y = doc.lastAutoTable.finalY + 26;
+  });
+  const n = doc.getNumberOfPages();
+  for (let i = 1; i <= n; i++) {
+    doc.setPage(i); doc.setFontSize(7); doc.setTextColor(92, 79, 130);
+    doc.text("Fuentes: SECOP II y I, RUES, SIRI y Boletín de Responsables Fiscales (datos.gov.co). Las alertas son indicios para revisar, no conclusiones.", 32, H - 18);
+    doc.text("Página " + i + " de " + n, W - 32, H - 18, { align: "right" });
+  }
+  doc.save(slug(V.titulo) + ".pdf");
+}
+function aCsv(V) {
+  const cq = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+  V.hojas.forEach((h, i) => {
+    if (!h.filas.length && V.hojas.length > 1) return;
+    const b = new Blob(["﻿" + h.columnas.map(c => cq(c[0])).join(";") + "\n" + h.filas.map(f => f.map((x, j) => h.columnas[j][1] === "p" && x !== "" ? cq((x * 100).toFixed(1).replace(".", ",")) : cq(x)).join(";")).join("\n")], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = slug(V.titulo + (V.hojas.length > 1 ? " " + h.nombre : "")) + ".csv";
+    setTimeout(() => a.click(), i * 400);
+  });
+}
+async function exportar(vista, formato, btn) {
+  const V = VISTAS[vista] && VISTAS[vista]();
+  if (!V || !V.hojas.some(h => h.filas.length)) { alert("Todavía no hay datos para exportar en esta vista."); return; }
+  const txt = btn ? btn.textContent : ""; if (btn) { btn.disabled = true; btn.textContent = "Generando…"; }
+  try {
+    if (formato === "xlsx") { await cargarLib("xlsx"); aExcel(V); }
+    else if (formato === "pdf") { await cargarLib("pdf"); aPdf(V); }
+    else aCsv(V);
+  } catch (e) { alert("No se pudo generar el archivo: " + e.message); }
+  finally { if (btn) { btn.disabled = false; btn.textContent = txt; } }
+}
+const botonesExp = v => `<span class="exp"><button class="btn sec" data-exp="${v}" data-f="xlsx">Excel</button><button class="btn sec" data-exp="${v}" data-f="pdf">PDF</button><button class="btn sec" data-exp="${v}" data-f="csv">CSV</button></span>`;
+document.addEventListener("click", e => { const b = e.target.closest("[data-exp]"); if (b) { e.preventDefault(); exportar(b.dataset.exp, b.dataset.f, b); } });
+document.querySelectorAll("[data-expslot]").forEach(s => s.outerHTML = botonesExp(s.dataset.expslot));
 
 const pre = new URLSearchParams(location.search).get("t");
 if (pre) { const o = [...terr.options].find(x => x.value === pre || x.value === "m:" + pre); if (o) terr.value = o.value; }
