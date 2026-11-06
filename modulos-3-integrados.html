@@ -307,6 +307,7 @@ th.cun-sort:hover{color:var(--navy)}
 
 
 </main>
+<script src="/js/exportar.js"></script>
 <script>
 // Cada pestaña declara de dónde salen sus cifras. Si una deja de ser
 // demostración, se cambia aquí y el aviso deja de mentir.
@@ -749,6 +750,7 @@ window.VFI_LOCAL = (function () {
   let filtro = "TODAS";
   let vista = "contratistas";   // o "dano"
   let DANO = null;
+  let BUSQ = null;         // ultima busqueda por documento
   let abierta = null;
   let graficas = {};
   let corrida = 0;         // invalida análisis anteriores al relanzar
@@ -900,6 +902,7 @@ window.VFI_LOCAL = (function () {
       tarjeta("Inhabilitados con contrato vigente", RES.hoy, COLOR.CRITICA,
               "Sanción o fallo vigente hoy y contrato aún en ejecución") +
       '</div>';
+    if (window.XEXP) h += '<div style="margin:0 0 16px">' + XEXP.botones("vfi-analisis", "Descargar informe (respeta el filtro y la búsqueda):") + '</div>';
 
     if (hayAlertas) {
       h += '<div class="cols">' +
@@ -955,7 +958,8 @@ window.VFI_LOCAL = (function () {
       tarjeta("Fallos fiscales", DANO.fiscales, "#CA8A04", "Boletín de Responsables Fiscales") +
       tarjeta("Sanciones SIRI", DANO.casos - DANO.fiscales, "#7C3AED", "Procuraduría") +
       tarjeta("Siguen contratando", DANO.personas.filter(p => contratistas.has(p.documento)).length,
-              COLOR.CRITICA, "Con contrato en SECOP con la entidad") + '</div>';
+              COLOR.CRITICA, "Con contrato en SECOP con la entidad") + '</div>' +
+      (window.XEXP && DANO.personas.length ? '<div style="margin:0 0 16px">' + XEXP.botones("vfi-dano", "Descargar:") + '</div>' : "");
     if (!DANO.personas.length)
       return h + '<div class="vfi-msg"><b>Sin fallos ni sanciones registrados para esta entidad.</b>' +
         'Ninguna fila del boletín ni de SIRI la menciona como entidad afectada.</div>';
@@ -1179,7 +1183,8 @@ window.VFI_LOCAL = (function () {
     btn.disabled = true; btn.textContent = "Buscando…";
     caja.innerHTML = '<div class="vfi-msg">Consultando SIRI y el Boletín…</div>';
     try {
-      caja.innerHTML = pintarBusqueda(await VFI_LOCAL.buscar(doc));
+      BUSQ = await VFI_LOCAL.buscar(doc);
+      caja.innerHTML = pintarBusqueda(BUSQ);
     } catch (err) {
       caja.innerHTML = '<div class="vfi-msg"><b>No se pudo consultar el documento.</b>' +
         esc(err.message) + ' No se pudieron cargar los índices de SIRI y del Boletín; ' +
@@ -1199,6 +1204,7 @@ window.VFI_LOCAL = (function () {
             ' para el documento ' + esc(d.documento) + '.</b> ' +
             'Confirme en el certificado oficial antes de usar esta información: puede tratarse de ' +
             'un homónimo o de una sanción ya levantada.</div>';
+    if (window.XEXP) h += '<div style="margin:0 0 12px">' + XEXP.botones("vfi-doc", "Descargar:") + '</div>';
     h += '<div style="overflow-x:auto"><table><thead><tr>' +
          '<th>Fuente</th><th>Nombre</th><th>Antecedente</th><th>Autoridad</th><th>Fecha</th>' +
          '</tr></thead><tbody>';
@@ -1215,6 +1221,52 @@ window.VFI_LOCAL = (function () {
            '<td style="font-size:12px;white-space:nowrap">' + esc(x.fecha||"—") + '</td></tr>';
     });
     return h + '</tbody></table></div>';
+  }
+
+
+  /* ---------------- exportar (Excel, PDF, CSV) ---------------- */
+  const vnum = v => { const n = parseInt(String(v || "0").replace(/[^\d-]/g, ""), 10); return isNaN(n) ? 0 : n; };
+  if (window.XEXP) {
+    XEXP.registrar("vfi-analisis", () => {
+      if (!RES) return null;
+      const L = filtradas(), q = (($("vfi-busca") || {}).value || "").trim();
+      const filtroTxt = filtro === "HOY" ? "Inhabilitados con contrato vigente" : filtro === "TODAS" ? "Todos los niveles" : "Nivel " + filtro;
+      return { titulo: "Vigilancia Fiscal · " + RES.entidad,
+        subtitulo: "Cruce SECOP II × SIRI × Boletín de Responsables Fiscales · análisis del " + (RES.fecha_analisis || "") + " · " + filtroTxt + (q ? " · búsqueda: " + q : "") +
+          " · coincidencias por número de documento: pueden existir homónimos, documentos mal digitados o sanciones levantadas",
+        hojas: [
+          { nombre: "Resumen", columnas: [["Indicador", "t", 50], ["Cantidad", "n", 14]], filas: [
+            ["Contratos analizados", RES.total_contratos], ["Proveedores con antecedentes", RES.total_alertas], ["Casos distintos", RES.total_casos],
+            ["Nivel crítico (contrato firmado después de la inhabilidad)", RES.criticas], ["Nivel alto", RES.altas], ["Nivel medio", RES.medias], ["Informativo", RES.info],
+            ["Inhabilitados con contrato vigente", RES.hoy], ["Proveedores en este informe (filtro actual)", L.length]] },
+          { nombre: "Contratistas", columnas: [["Nivel", "t", 9], ["Documento", "t", 13], ["Proveedor", "t", 36], ["Inhabilitado hoy", "t", 10], ["Contratos vigentes", "n", 9],
+              ["Contratos con la entidad", "n", 9], ["Valor total", "m", 16], ["Por qué está inhabilitado hoy", "t", 44], ["Fuentes", "t", 24], ["Casos", "n", 7]],
+            filas: L.map(a => [a.nivel, a.documento, a.proveedor_secop, a.inhabilitado_hoy ? "SI" : "NO", a.contratos_vigentes, a.contratos.length, a.valor_total, a.motivo_hoy, a.fuentes.join(" · "), a.casos.length]) },
+          { nombre: "Antecedentes", columnas: [["Documento", "t", 13], ["Proveedor", "t", 30], ["Nivel", "t", 9], ["Motivo de la alerta", "t", 34], ["Fuente", "t", 18],
+              ["Nombre en la fuente", "t", 26, true], ["Tipo", "t", 14], ["Sanción", "t", 26], ["Fecha", "t", 14], ["Fin de la inhabilidad", "t", 12], ["Vigente", "t", 8], ["Autoridad", "t", 28], ["Lugar del fallo", "t", 28]],
+            filas: L.flatMap(a => a.casos.map(c => [a.documento, a.proveedor_secop, c.nivel, c.motivo, c.fuente, c.nombre_fuente, c.tipo, c.sancion, c.fecha_sancion, c.fin_inhabilidad, c.vigente, c.autoridad, c.lugar])) },
+          { nombre: "Contratos", columnas: [["Documento", "t", 13], ["Proveedor", "t", 28], ["Nivel", "t", 9], ["ID contrato", "t", 20], ["Entidad", "t", 30], ["Valor", "m", 16],
+              ["Estado", "t", 12], ["Firma", "f", 11], ["Vigente", "t", 8], ["Firmado después de la sanción", "t", 10], ["Objeto", "t", 60]],
+            filas: L.flatMap(a => a.contratos.map(c => [a.documento, a.proveedor_secop, a.nivel, c.id, c.entidad, vnum(c.valor), c.estado, c.fecha_firma, c.vigente ? "SI" : "NO", c.firmado_despues ? "SI" : "NO", c.objeto])) }] };
+    });
+    XEXP.registrar("vfi-dano", () => {
+      if (!DANO) return null;
+      const contratistas = new Set(((RES || {}).alertas || []).map(a => a.documento));
+      return { titulo: "Daño a la entidad · " + (DANO.etiqueta || DANO.lugar),
+        subtitulo: "Fallos con responsabilidad fiscal cuya entidad afectada es esta y sanciones de la Procuraduría a personas que trabajaban en ella · lugar buscado: " + DANO.lugar +
+          " · puede haber municipios homónimos de otros departamentos y el boletín solo trae fallos no pagados",
+        hojas: [
+          { nombre: "Personas", columnas: [["Persona o empresa", "t", 36], ["Documento", "t", 14], ["Casos", "n", 7], ["Sigue contratando con la entidad", "t", 12]],
+            filas: DANO.personas.map(p => [p.nombre, p.documento, p.casos.length, contratistas.has(p.documento) ? "SI" : "NO"]) },
+          { nombre: "Casos", columnas: [["Persona o empresa", "t", 30], ["Documento", "t", 13], ["Fuente", "t", 18], ["Sanción", "t", 26], ["Detalle", "t", 36], ["Entidad afectada", "t", 30], ["Autoridad", "t", 30], ["Fecha", "t", 16], ["Vigente", "t", 8]],
+            filas: DANO.personas.flatMap(p => p.casos.map(c => [p.nombre, p.documento, c.fuente, c.sancion, c.detalle, c.entidad, c.autoridad, c.fecha, c.vigente || ""])) }] };
+    });
+    XEXP.registrar("vfi-doc", () => {
+      if (!BUSQ) return null;
+      return { titulo: "Antecedentes del documento " + BUSQ.documento, subtitulo: "SIRI (Procuraduría) y Boletín de Responsables Fiscales (Contraloría) · confirme en el certificado oficial: puede tratarse de un homónimo o de una sanción ya levantada",
+        hojas: [{ nombre: "Antecedentes", columnas: [["Fuente", "t", 20], ["Nombre", "t", 32], ["Tipo", "t", 18], ["Antecedente", "t", 30], ["Autoridad", "t", 32], ["Entidad", "t", 32], ["Fecha", "t", 22]],
+          filas: (BUSQ.hallazgos || []).map(x => [x.fuente, x.nombre, x.tipo, x.sancion, x.autoridad, x.entidad, x.fecha]) }] };
+    });
   }
 
   /* ---------------- limpiar ---------------- */
@@ -2403,7 +2455,8 @@ window.VFI_LOCAL = (function () {
         .map(([k, t, c]) => '<button class="vfi-pill' + (R.nivel === k ? " on" : "") + '" data-n="' + k + '" style="' + (R.nivel === k ? "background:" + c : "") + '" data-c="' + c + '">' + t + "</button>").join("") +
       "</div></div>";
 
-    h += '<div class="panel"><h3>Ranking de alertas por municipio</h3>' +
+    h += '<div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px"><h3 style="margin:0">Ranking de alertas por municipio</h3>' +
+      (window.XEXP ? XEXP.botones("cun-ranking", "Descargar:") : "") + '</div>' +
       '<table id="cun-rank"><thead><tr><th>Pos.</th><th>Municipio</th><th class="r">Contratos</th><th class="r">Valor</th>' +
       '<th class="r">% directa</th><th class="r">HHI</th><th class="r">Top 1 prov.</th><th class="r">Obras vencidas</th>' +
       '<th class="r">Índice</th><th>Nivel</th></tr></thead><tbody id="cun-rank-body"></tbody></table>' +
@@ -2473,7 +2526,9 @@ window.VFI_LOCAL = (function () {
     $("vfi-vistas").scrollIntoView({behavior: "smooth", block: "start"});
   }
 
+  let MUN = null;
   function pintarMunicipio(d, fila, archivo) {
+    MUN = { d, fila, archivo };
     const res = d.resumen || {}, m4 = d.modulo_04_contratos || {}, m5 = d.modulo_05_obras || {};
     const pos = nada(d.posicion) ? fila.posicion : d.posicion;
     const total = d.total_rankeados || R.todos.filter(x => !nada(x.posicion)).length;
@@ -2481,7 +2536,8 @@ window.VFI_LOCAL = (function () {
     const idx = nada(d.indice_alertas) ? fila.indice_alertas : d.indice_alertas;
     const chip = (l, v, on) => '<div class="ficha-chip' + (on ? " on" : "") + '"><small>' + l + "</small><b>" + v + "</b></div>";
 
-    let h = '<button class="vfi-btn gris cun-volver" id="cun-volver">&larr; Volver al ranking</button>';
+    let h = '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><button class="vfi-btn gris cun-volver" id="cun-volver">&larr; Volver al ranking</button>' +
+      (window.XEXP ? XEXP.botones("cun-municipio", "Descargar informe del municipio:") : "") + '</div>';
     h += '<div class="ficha-cab"><div class="ficha-nom">' + esc(fila.municipio || d.municipio || archivo) + "</div>" +
       '<div class="ficha-doc">Cundinamarca · contratos desde ' + esc(fecha(d.periodo_desde || R.meta.periodo_desde)) + "</div>" +
       '<div class="ficha-chips">' +
@@ -2572,7 +2628,7 @@ window.VFI_LOCAL = (function () {
       '<div class="cun-ctrl" style="margin-top:10px">' +
       '<label class="cun-chk"><input type="checkbox" id="cun-pr"> Con prórroga</label>' +
       '<label class="cun-chk"><input type="checkbox" id="cun-ve"> Vencidos sin cerrar</label>' +
-      '<span style="flex:1"></span><button class="vfi-btn verde" id="cun-csv">Descargar CSV</button></div>' +
+      '<span style="flex:1"></span>' + (window.XEXP ? XEXP.botones("cun-contratos", "Descargar contratos filtrados:") : '<button class="vfi-btn verde" id="cun-csv">Descargar CSV</button>') + '</div>' +
       '<div class="cun-res" id="cun-res"></div>' +
       '<div style="overflow-x:auto"><table id="cun-ctab"><thead><tr>' +
       th(null, "N.º contrato") + th(null, "Objeto · entidad") + th(null, "Contratista") + th("valor", "Valor", true) +
@@ -2582,7 +2638,7 @@ window.VFI_LOCAL = (function () {
 
     $("cun-cq").addEventListener("input", filtrar);
     ["cun-tipo", "cun-estado-c", "cun-modalidad", "cun-entidad", "cun-pr", "cun-ve"].forEach(id => $(id).addEventListener("change", filtrar));
-    $("cun-csv").addEventListener("click", csv);
+    if ($("cun-csv")) $("cun-csv").addEventListener("click", csv);
     document.querySelectorAll("#cun-ctab th[data-k]").forEach(t => t.addEventListener("click", () => {
       const k = t.dataset.k;
       C.dir = C.orden === k ? -C.dir : -1;
@@ -2690,6 +2746,54 @@ window.VFI_LOCAL = (function () {
     a.download = "contratos_" + C.archivo.replace(".json", "") + ".csv";
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+
+  /* ---------- exportar (Excel, PDF, CSV) ---------- */
+  if (window.XEXP) {
+    const corte = () => R.meta ? "SECOP II · contratos firmados desde " + fecha(R.meta.periodo_desde) + " · generado " + fecha((R.meta.generado || "").slice(0, 10)) : "";
+    const pct = v => nada(v) ? "" : v / 100;
+    const hojaContratos = () => ({ nombre: "Contratos", columnas: [["N.º contrato", "t", 16], ["Entidad", "t", 28], ["Contratista", "t", 30], ["Documento", "t", 13], ["Modalidad", "t", 18, true],
+        ["Tipo", "t", 16], ["Estado", "t", 12], ["Objeto", "t", 60], ["Valor", "m", 16], ["Pagado", "m", 15], ["Firma", "f", 11, true], ["Inicio", "f", 11], ["Terminación", "f", 11],
+        ["Días adicionados", "n", 9], ["Vencido sin cerrar", "t", 9], ["Enlace SECOP", "t", 30, true]],
+      filas: C.vista.map(o => [o.numero, o.entidad, o.proveedor, o.doc_prov, o.modalidad, o.tipo, o.estado, o.objeto, o.valor, o.pagado, o.fecha_firma, o.fecha_inicio, o.fecha_fin,
+        o.dias_adic || "", o.vencido_abierto ? "SI" : "NO", o.url]) });
+    XEXP.registrar("cun-ranking", () => {
+      if (!R.meta) return null;
+      const q = sinTildes(R.q.trim());
+      const f = R.todos.filter(m => (!q || sinTildes(m.municipio).includes(q)) && (R.nivel === "todos" || m.nivel === R.nivel));
+      return { titulo: "Ranking de alertas · municipios de Cundinamarca", subtitulo: corte() + (R.nivel !== "todos" ? " · nivel " + R.nivel : "") + (R.q ? " · búsqueda: " + R.q : "") +
+          " · el índice prioriza la revisión; no prueba irregularidades",
+        hojas: [{ nombre: "Ranking", columnas: [["Posición", "n", 8], ["Municipio", "t", 22], ["Contratos", "n", 10], ["Valor", "m", 18], ["% directa (valor)", "p", 10], ["HHI", "n", 8],
+            ["Top 1 proveedor", "p", 10], ["Obras vencidas abiertas", "n", 10], ["Índice de alertas", "d", 10], ["Nivel", "t", 10]],
+          filas: f.map(m => [nada(m.posicion) ? "" : m.posicion, m.municipio, m.contratos, m.valor_total, pct(m.pct_directa_valor), nada(m.hhi) ? "" : Math.round(m.hhi),
+            pct(m.top1_proveedor_pct), m.obras_vencidas_abiertas, nada(m.indice_alertas) ? "" : Math.round(m.indice_alertas * 10) / 10, m.nivel || "sin ranking"]) }] };
+    });
+    XEXP.registrar("cun-municipio", () => {
+      if (!MUN) return null;
+      const { d, fila } = MUN, res = d.resumen || {}, m4 = d.modulo_04_contratos || {}, m5 = d.modulo_05_obras || {};
+      const nombre = fila.municipio || d.municipio || MUN.archivo;
+      const pos = nada(d.posicion) ? fila.posicion : d.posicion, idx = nada(d.indice_alertas) ? fila.indice_alertas : d.indice_alertas;
+      return { titulo: "Vigilancia Fiscal · " + nombre + " (Cundinamarca)", subtitulo: corte() + " · posición " + (nada(pos) ? "sin ranking" : pos) + " · índice de alertas " +
+          (nada(idx) ? "—" : num(idx)) + " · nivel " + (d.nivel || fila.nivel || "—") + (C.vista.length !== C.todos.length ? " · contratos con los filtros aplicados" : ""),
+        hojas: [
+          { nombre: "Indicadores", columnas: [["Indicador", "t", 50], ["Valor", "t", 22]], filas: [
+            ["Contratos", miles(res.contratos)], ["Valor contratado", pesos(res.valor_total)], ["Entidades", miles(res.entidades)], ["Proveedores", miles(res.proveedores)],
+            ["Contratos por contratación directa", num(m4.pct_contratos_directa) + " %"], ["Valor por contratación directa", num(m4.pct_directa_valor) + " %"],
+            ["Concentración de proveedores (HHI)", miles(m4.hhi)], ["Participación del primer proveedor", num(m4.top1_proveedor_pct) + " %"],
+            ["Participación de los cinco primeros", num(m4.top5_proveedores_pct) + " %"], ["Proveedores que suman el 80 % del valor", miles(m4.pareto_proveedores_80pct_valor)],
+            ["Contratos con adición o prórroga", num(m4.pct_con_adicion) + " %"], ["Contratos de obra", miles(m5.contratos_obra)], ["Valor de las obras", pesos(m5.valor_obras)],
+            ["Obras vencidas que siguen abiertas", miles(m5.obras_vencidas_abiertas)], ["Proporción de obras vencidas abiertas", num(m5.pct_obras_vencidas_abiertas) + " %"],
+            ["Valor de las obras vencidas abiertas", pesos(m5.valor_obras_vencidas_abiertas)], ["Pagado de las obras vencidas abiertas", num(m5.pct_pagado_obras_vencidas_abiertas) + " %"]] },
+          { nombre: "Principales proveedores", columnas: [["#", "n", 5], ["Proveedor", "t", 40], ["Documento", "t", 14], ["Contratos", "n", 10], ["Valor", "m", 18], ["Participación", "p", 11]],
+            filas: (m4.top_proveedores || []).map((p, i) => [i + 1, p.proveedor, p.documento, p.contratos, p.valor, pct(p.participacion_pct)]) },
+          hojaContratos()] };
+    });
+    XEXP.registrar("cun-contratos", () => {
+      if (!MUN || !C.vista.length) return null;
+      const nombre = MUN.fila.municipio || MUN.d.municipio || MUN.archivo;
+      return { titulo: "Contratos · " + nombre + " (Cundinamarca)", subtitulo: corte() + " · " + miles(C.vista.length) + " de " + miles(C.todos.length) + " contratos con los filtros aplicados", hojas: [hojaContratos()] };
+    });
   }
 
   segunHash();
