@@ -98,10 +98,12 @@
   }
 
   async function exportar(clave, formato, btn) {
-    let V = null;
-    try { V = vistas[clave] && vistas[clave](); } catch (e) { V = null; }
-    if (!V || !V.hojas || !V.hojas.some(h => h.filas.length)) { alert("Todavía no hay datos para exportar aquí."); return; }
     const txt = btn ? btn.textContent : ""; if (btn) { btn.disabled = true; btn.textContent = "Generando…"; }
+    let V = null;
+    try { V = vistas[clave] && await vistas[clave](); } catch (e) { V = null; }
+    if (!V || !V.hojas || !V.hojas.some(h => h.filas.length)) {
+      if (btn) { btn.disabled = false; btn.textContent = txt; }
+      alert("Todavía no hay datos para exportar aquí."); return; }
     try {
       if (formato === "xlsx") { await cargarLib("xlsx"); aExcel(V); }
       else if (formato === "pdf") { await cargarLib("pdf"); aPdf(V); }

@@ -240,8 +240,9 @@ th.cun-sort:hover{color:var(--navy)}
     <select id="vfi-entidad"></select>
     <button id="vfi-analizar" class="vfi-btn">Analizar</button>
   </div>
+  <div id="vfi-exp-ent" style="margin-top:12px"></div>
   <div id="vfi-progreso" hidden></div>
-  <p style="font-size:12px;color:var(--muted);margin-top:10px">Al terminar el análisis aparecen, debajo de las tarjetas de resultados, los botones para descargar el informe en <b>Excel, PDF o CSV</b>.</p>
+  <p style="font-size:12px;color:var(--muted);margin-top:8px">Si todavía no ha analizado la entidad elegida, el botón de descarga hace el análisis primero (puede tardar uno o dos minutos) y luego genera el archivo.</p>
 </div>
 
 <div class="panel">
@@ -251,7 +252,7 @@ th.cun-sort:hover{color:var(--navy)}
     <button id="vfi-buscar" class="vfi-btn verde">Buscar documento</button>
     <button id="vfi-limpiar" class="vfi-btn gris">Limpiar</button>
   </div>
-  <p style="font-size:12px;color:var(--muted);margin-top:10px">Si el documento tiene antecedentes, arriba de la tabla aparecen los botones para descargarlos en Excel, PDF o CSV.</p>
+  <div id="vfi-exp-doc" style="margin-top:12px"></div>
   <div id="vfi-doc-res"></div>
 </div>
 
@@ -1229,7 +1230,7 @@ window.VFI_LOCAL = (function () {
   /* ---------------- exportar (Excel, PDF, CSV) ---------------- */
   const vnum = v => { const n = parseInt(String(v || "0").replace(/[^\d-]/g, ""), 10); return isNaN(n) ? 0 : n; };
   if (window.XEXP) {
-    XEXP.registrar("vfi-analisis", () => {
+    const XEXP_VFI = () => {
       if (!RES) return null;
       const L = filtradas(), q = (($("vfi-busca") || {}).value || "").trim();
       const filtroTxt = filtro === "HOY" ? "Inhabilitados con contrato vigente" : filtro === "TODAS" ? "Todos los niveles" : "Nivel " + filtro;
@@ -1250,7 +1251,8 @@ window.VFI_LOCAL = (function () {
           { nombre: "Contratos", columnas: [["Documento", "t", 13], ["Proveedor", "t", 28], ["Nivel", "t", 9], ["ID contrato", "t", 20], ["Entidad", "t", 30], ["Valor", "m", 16],
               ["Estado", "t", 12], ["Firma", "f", 11], ["Vigente", "t", 8], ["Firmado después de la sanción", "t", 10], ["Objeto", "t", 60]],
             filas: L.flatMap(a => a.contratos.map(c => [a.documento, a.proveedor_secop, a.nivel, c.id, c.entidad, vnum(c.valor), c.estado, c.fecha_firma, c.vigente ? "SI" : "NO", c.firmado_despues ? "SI" : "NO", c.objeto])) }] };
-    });
+    };
+    XEXP.registrar("vfi-analisis", XEXP_VFI);
     XEXP.registrar("vfi-dano", () => {
       if (!DANO) return null;
       const contratistas = new Set(((RES || {}).alertas || []).map(a => a.documento));
@@ -1263,12 +1265,34 @@ window.VFI_LOCAL = (function () {
           { nombre: "Casos", columnas: [["Persona o empresa", "t", 30], ["Documento", "t", 13], ["Fuente", "t", 18], ["Sanción", "t", 26], ["Detalle", "t", 36], ["Entidad afectada", "t", 30], ["Autoridad", "t", 30], ["Fecha", "t", 16], ["Vigente", "t", 8]],
             filas: DANO.personas.flatMap(p => p.casos.map(c => [p.nombre, p.documento, c.fuente, c.sancion, c.detalle, c.entidad, c.autoridad, c.fecha, c.vigente || ""])) }] };
     });
-    XEXP.registrar("vfi-doc", () => {
+    const XEXP_DOC = () => {
       if (!BUSQ) return null;
       return { titulo: "Antecedentes del documento " + BUSQ.documento, subtitulo: "SIRI (Procuraduría) y Boletín de Responsables Fiscales (Contraloría) · confirme en el certificado oficial: puede tratarse de un homónimo o de una sanción ya levantada",
         hojas: [{ nombre: "Antecedentes", columnas: [["Fuente", "t", 20], ["Nombre", "t", 32], ["Tipo", "t", 18], ["Antecedente", "t", 30], ["Autoridad", "t", 32], ["Entidad", "t", 32], ["Fecha", "t", 22]],
           filas: (BUSQ.hallazgos || []).map(x => [x.fuente, x.nombre, x.tipo, x.sancion, x.autoridad, x.entidad, x.fecha]) }] };
+    };
+    XEXP.registrar("vfi-doc", XEXP_DOC);
+    // Botones siempre visibles: si no hay resultado para lo elegido, primero se consulta.
+    const esperar = (listo, max) => new Promise(ok => { const t0 = Date.now();
+      const v = () => listo() || Date.now() - t0 > max ? ok() : setTimeout(v, 400); v(); });
+    XEXP.registrar("vfi-ent", async () => {
+      if (!RES || RES.entidad !== sel.value) {
+        analizar(); const id = corrida;
+        await esperar(() => RES || id !== corrida || !$("vfi-analizar").disabled, 300000);
+        if (!RES) return null;
+      }
+      vista = "contratistas";
+      return XEXP_VFI();
     });
+    XEXP.registrar("vfi-doc-ya", async () => {
+      const doc = $("vfi-doc").value.trim();
+      if (!doc) { alert("Escriba primero una cédula o NIT."); return null; }
+      if (!BUSQ || VFI_LOCAL.norm(doc) !== BUSQ.documento) await buscarDoc();
+      return BUSQ && (BUSQ.hallazgos || []).length ? XEXP_DOC() : { titulo: "Antecedentes del documento " + doc, subtitulo: "Sin antecedentes en SIRI ni en el Boletín de Responsables Fiscales publicados en este panel. Esto no reemplaza el certificado oficial.",
+        hojas: [{ nombre: "Antecedentes", columnas: [["Resultado", "t", 80]], filas: [["El documento " + doc + " no aparece en SIRI ni en el Boletín de Responsables Fiscales."]] }] };
+    });
+    $("vfi-exp-ent").innerHTML = XEXP.botones("vfi-ent", "Descargar el informe de la entidad elegida:");
+    $("vfi-exp-doc").innerHTML = XEXP.botones("vfi-doc-ya", "Descargar los antecedentes del documento:");
   }
 
   /* ---------------- limpiar ---------------- */
